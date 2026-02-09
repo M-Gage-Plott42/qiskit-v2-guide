@@ -1,3 +1,14 @@
+# Project-specific hygiene
+.env
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*~
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
