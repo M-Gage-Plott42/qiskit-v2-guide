@@ -1,0 +1,36 @@
+name: Local Smoke Notebooks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  local-smoke:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Run local smoke notebooks
+        run: |
+          bash scripts/smoke_local.sh artifacts/executed-local-smoke
+
+      - name: Upload executed notebooks
+        uses: actions/upload-artifact@v4
+        with:
+          name: local-smoke-executed-notebooks
+          path: artifacts/executed-local-smoke
+          if-no-files-found: error

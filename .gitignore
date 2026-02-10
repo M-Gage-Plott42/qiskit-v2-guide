@@ -8,6 +8,7 @@ __pycache__/
 .idea/
 *.swp
 *~
+artifacts/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

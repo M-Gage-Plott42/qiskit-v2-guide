@@ -8,7 +8,7 @@ Minimal Qiskit 2.x smoke-test repo for reproducible workflow checks: local exact
 python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
-pip install qiskit qiskit-aer qiskit-ibm-runtime jupyter
+pip install -r requirements.txt
 ```
 
 Run notebooks:
@@ -20,7 +20,9 @@ jupyter lab
 Then open:
 - `notebooks/00_local_statevector_smoke.ipynb`
 - `notebooks/01_local_aer_smoke.ipynb`
+- `notebooks/03_runtime_local_testing_mode.ipynb`
 - `notebooks/02_ibm_runtime_smoke.ipynb` (optional cloud path)
+- `notebooks/04_aer_gpu_smoke.ipynb` (optional GPU path)
 
 See `docs/Qiskit_v2_Environment_and_Runtime_Guide.md` for the full setup flow.
 
@@ -29,6 +31,7 @@ See `docs/Qiskit_v2_Environment_and_Runtime_Guide.md` for the full setup flow.
 These notebooks run fully local with no IBM credentials:
 - `notebooks/00_local_statevector_smoke.ipynb` for Qiskit SDK reference primitives (`StatevectorSampler`).
 - `notebooks/01_local_aer_smoke.ipynb` for Aer primitives (`SamplerV2`/`EstimatorV2`) plus transpilation to an `AerSimulator` target.
+- `notebooks/03_runtime_local_testing_mode.ipynb` for Runtime local testing mode with a fake backend (`SamplerV2(mode=fake_backend)`).
 
 This is the default smoke path for reproducibility and debugging.
 
@@ -50,5 +53,14 @@ The runtime notebook:
 - prints backend name, job ID, status, and a bitstring preview.
 
 Backend inventories and names change over time; this repo intentionally avoids hardcoded backend names and uses `least_busy()` for robustness.
+
+## Automation
+
+- Local one-command smoke test: `bash scripts/smoke_local.sh`
+- CI runs the same local smoke path (`00` and `01`) on pushes and pull requests.
+
+## Optional GPU smoke
+
+`notebooks/04_aer_gpu_smoke.ipynb` checks for Aer GPU support and runs a small GPU simulation if available. If GPU support is unavailable, it prints a skip message and exits cleanly.
 
 Tested with: Qiskit 2.3.x API patterns, last updated February 10, 2026.

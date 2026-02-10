@@ -1,0 +1,7 @@
+# Core stack for local and runtime smoke tests.
+qiskit~=2.3
+qiskit-aer~=0.17
+qiskit-ibm-runtime~=0.45
+jupyter~=1.1
+ipykernel~=7.2
+nbconvert~=7.17
