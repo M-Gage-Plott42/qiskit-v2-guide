@@ -22,6 +22,8 @@ Then open:
 - `notebooks/01_local_aer_smoke.ipynb`
 - `notebooks/02_ibm_runtime_smoke.ipynb` (optional cloud path)
 
+See `docs/Qiskit_v2_Environment_and_Runtime_Guide.md` for the full setup flow.
+
 ## No QPU required (run this first)
 
 These notebooks run fully local with no IBM credentials:
@@ -49,4 +51,4 @@ The runtime notebook:
 
 Backend inventories and names change over time; this repo intentionally avoids hardcoded backend names and uses `least_busy()` for robustness.
 
-Tested with: Qiskit 2.x API patterns, last updated February 9, 2026.
+Tested with: Qiskit 2.3.x API patterns, last updated February 10, 2026.
