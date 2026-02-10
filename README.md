@@ -17,6 +17,10 @@ Run notebooks:
 jupyter lab
 ```
 
+If Cursor/VS Code shows unresolved imports, select the project interpreter:
+- Linux/macOS/WSL: `.venv/bin/python`
+- Windows: `.venv\\Scripts\\python.exe`
+
 Then open:
 - `notebooks/00_local_statevector_smoke.ipynb`
 - `notebooks/01_local_aer_smoke.ipynb`
