@@ -1,5 +1,12 @@
 # qiskit-v2-guide
 
+[![License](https://img.shields.io/github/license/M-Gage-Plott42/qiskit-v2-guide?label=License)](LICENSE)
+[![local-smoke](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/workflows/local-smoke.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/workflows/local-smoke.yml)
+[![ruff](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/workflows/lint-python.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/workflows/lint-python.yml)
+[![markdownlint](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/workflows/lint-markdown.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/workflows/lint-markdown.yml)
+[![yamllint](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/workflows/lint-yaml.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/workflows/lint-yaml.yml)
+[![Release](https://img.shields.io/github/v/release/M-Gage-Plott42/qiskit-v2-guide?label=Release)](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases)
+
 Minimal Qiskit 2.x smoke-test repo for reproducible workflow checks: local exact simulation (reference primitives), local Aer simulation (Aer primitives), and optional IBM Runtime hardware execution in job mode.
 
 ## Quickstart
