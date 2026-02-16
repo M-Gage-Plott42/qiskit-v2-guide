@@ -18,10 +18,12 @@ jupyter lab
 ```
 
 If Cursor/VS Code shows unresolved imports, select the project interpreter:
+
 - Linux/macOS/WSL: `.venv/bin/python`
 - Windows: `.venv\\Scripts\\python.exe`
 
 Then open:
+
 - `notebooks/00_local_statevector_smoke.ipynb`
 - `notebooks/01_local_aer_smoke.ipynb`
 - `notebooks/03_runtime_local_testing_mode.ipynb`
@@ -33,6 +35,7 @@ See `docs/Qiskit_v2_Environment_and_Runtime_Guide.md` for the full setup flow.
 ## No QPU required (run this first)
 
 These notebooks run fully local with no IBM credentials:
+
 - `notebooks/00_local_statevector_smoke.ipynb` for Qiskit SDK reference primitives (`StatevectorSampler`).
 - `notebooks/01_local_aer_smoke.ipynb` for Aer primitives (`SamplerV2`/`EstimatorV2`) plus transpilation to an `AerSimulator` target.
 - `notebooks/03_runtime_local_testing_mode.ipynb` for Runtime local testing mode with a fake backend (`SamplerV2(mode=fake_backend)`).
@@ -50,6 +53,7 @@ This is the default smoke path for reproducibility and debugging.
 4. Run `notebooks/02_ibm_runtime_smoke.ipynb`.
 
 The runtime notebook:
+
 - initializes `QiskitRuntimeService` from environment or saved account,
 - discovers candidates with `service.backends(simulator=False, operational=True, min_num_qubits=5)`,
 - selects a target with `service.least_busy(...)`,

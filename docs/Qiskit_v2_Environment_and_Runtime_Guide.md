@@ -59,9 +59,10 @@ INSTANCE=YOUR_INSTANCE_CRN
 CHANNEL=ibm_quantum_platform
 ```
 
-4. Run `notebooks/02_ibm_runtime_smoke.ipynb`.
+1. Run `notebooks/02_ibm_runtime_smoke.ipynb`.
 
 This runtime path intentionally uses robust backend discovery (no hardcoded backend names):
+
 - `service.backends(simulator=False, operational=True, min_num_qubits=5)`
 - `service.least_busy(...)`
 
