@@ -145,8 +145,10 @@ def summarize_backends(backends: Iterable[object], limit: int = 10) -> List[str]
         qubits = getattr(backend, "num_qubits", "?")
         pending = "?"
         try:
-            status = backend.status()
-            pending = getattr(status, "pending_jobs", "?")
+            status_fn = getattr(backend, "status", None)
+            if callable(status_fn):
+                status = status_fn()
+                pending = getattr(status, "pending_jobs", "?")
         except Exception:  # noqa: BLE001
             pass
         lines.append(f"{name} | qubits={qubits} | pending_jobs={pending}")
