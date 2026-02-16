@@ -16,13 +16,10 @@ jobs:
   enable-automerge:
     if: >-
       github.actor == 'dependabot[bot]' &&
-      (
-        startsWith(github.event.pull_request.head.ref, 'dependabot/github_actions/') ||
-        startsWith(github.event.pull_request.head.ref, 'dependabot/pip/')
-      )
+      startsWith(github.event.pull_request.head.ref, 'dependabot/github_actions/')
     runs-on: ubuntu-latest
     steps:
-      - name: Enable auto-merge (squash) for Dependabot PRs
+      - name: Enable auto-merge (squash) for Dependabot Actions PRs
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
