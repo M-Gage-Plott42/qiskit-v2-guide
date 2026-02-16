@@ -66,6 +66,15 @@ Backend inventories and names change over time; this repo intentionally avoids h
 
 - Local one-command smoke test: `bash scripts/smoke_local.sh`
 - CI runs the same local smoke path (`00` and `01`) on pushes and pull requests.
+- Optional local hooks:
+
+```bash
+pip install pre-commit
+pre-commit install
+pre-commit run --all-files
+```
+
+See `CHANGELOG.md` for release history and `SECURITY.md` for vulnerability reporting.
 
 ## Optional GPU smoke
 
