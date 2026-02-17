@@ -59,7 +59,7 @@ QISKIT_IBM_CHANNEL=ibm_quantum_platform
 
 Legacy aliases (`API_KEY`, `INSTANCE`, `CHANNEL`) are also accepted by this repository for compatibility.
 
-4. Run `notebooks/02_ibm_runtime_smoke.ipynb`.
+1. Run `notebooks/02_ibm_runtime_smoke.ipynb`.
 
 This runtime path intentionally uses robust backend discovery (no hardcoded backend names):
 
