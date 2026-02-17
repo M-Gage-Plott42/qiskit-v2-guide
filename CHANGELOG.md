@@ -29,6 +29,7 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 - `smoke_local.sh` now resolves repo root and works when invoked outside the repository directory.
 - Documentation updated to current `docs.quantum.ibm.com` links and IBM Quantum Platform classic sunset date (July 1, 2025).
 - Branch ruleset now requires code-owner review and one approving review for pull requests.
+- GitHub code scanning switched from default setup to advanced workflow configuration (`.github/workflows/codeql.yml`).
 
 ## [0.2.1] - 2026-02-17
 

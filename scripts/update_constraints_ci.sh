@@ -12,6 +12,7 @@ cleanup() {
 trap cleanup EXIT
 
 python3 -m venv "${TMP_VENV}"
+# shellcheck source=/dev/null
 source "${TMP_VENV}/bin/activate"
 
 python -m pip install --upgrade pip
