@@ -5,6 +5,12 @@ All notable changes to this repository are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1] - 2026-02-17
+
+### Fixed
+
+- Corrected ordered-list numbering in `docs/Qiskit_v2_Environment_and_Runtime_Guide.md` to satisfy repository markdownlint policy.
+
 ## [0.2.0] - 2026-02-17
 
 ### Added
