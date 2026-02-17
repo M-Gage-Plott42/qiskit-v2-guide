@@ -1,7 +1,5 @@
 # Qiskit 2.x Environment and Runtime Guide
 
-Updated: February 10, 2026
-
 This guide replaces the older PDF setup notes and aligns with current IBM Quantum/Qiskit documentation.
 
 ## 1) Create and activate a virtual environment
@@ -54,12 +52,14 @@ Run these first to validate local setup without IBM credentials:
 3. Copy `.env.example` to `.env` and fill values:
 
 ```dotenv
-API_KEY=YOUR_IBM_QUANTUM_API_KEY
-INSTANCE=YOUR_INSTANCE_CRN
-CHANNEL=ibm_quantum_platform
+QISKIT_IBM_TOKEN=YOUR_IBM_QUANTUM_API_KEY
+QISKIT_IBM_INSTANCE=YOUR_INSTANCE_CRN
+QISKIT_IBM_CHANNEL=ibm_quantum_platform
 ```
 
-1. Run `notebooks/02_ibm_runtime_smoke.ipynb`.
+Legacy aliases (`API_KEY`, `INSTANCE`, `CHANNEL`) are also accepted by this repository for compatibility.
+
+4. Run `notebooks/02_ibm_runtime_smoke.ipynb`.
 
 This runtime path intentionally uses robust backend discovery (no hardcoded backend names):
 

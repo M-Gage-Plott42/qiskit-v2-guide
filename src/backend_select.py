@@ -33,14 +33,15 @@ class RuntimeConfig:
         """Build config from environment variables.
 
         Recognized variables:
-        - API_KEY or IBM_QUANTUM_API_KEY
-        - INSTANCE or IBM_QUANTUM_INSTANCE
-        - CHANNEL (optional, defaults to ibm_quantum_platform)
+        - QISKIT_IBM_TOKEN (preferred), API_KEY, or IBM_QUANTUM_API_KEY
+        - QISKIT_IBM_INSTANCE (preferred), INSTANCE, or IBM_QUANTUM_INSTANCE
+        - QISKIT_IBM_CHANNEL (preferred) or CHANNEL
+          (optional, defaults to ibm_quantum_platform)
         """
 
-        token = os.getenv("API_KEY") or os.getenv("IBM_QUANTUM_API_KEY")
-        instance = os.getenv("INSTANCE") or os.getenv("IBM_QUANTUM_INSTANCE")
-        channel = os.getenv("CHANNEL") or "ibm_quantum_platform"
+        token = os.getenv("QISKIT_IBM_TOKEN") or os.getenv("API_KEY") or os.getenv("IBM_QUANTUM_API_KEY")
+        instance = os.getenv("QISKIT_IBM_INSTANCE") or os.getenv("INSTANCE") or os.getenv("IBM_QUANTUM_INSTANCE")
+        channel = os.getenv("QISKIT_IBM_CHANNEL") or os.getenv("CHANNEL") or "ibm_quantum_platform"
         return cls(channel=channel, token=token, instance=instance)
 
 
@@ -91,14 +92,15 @@ def initialize_service(config: RuntimeConfig | None = None) -> Any:
         except Exception as exc:  # noqa: BLE001
             raise MissingCredentialsError(
                 "Could not initialize IBM Runtime from environment credentials. "
-                "Check API_KEY/INSTANCE values in .env."
+                "Check QISKIT_IBM_TOKEN/QISKIT_IBM_INSTANCE values in .env."
             ) from exc
 
     try:
         return runtime_service_cls()
     except Exception as exc:  # noqa: BLE001
         raise MissingCredentialsError(
-            "No usable IBM Runtime credentials found. Set API_KEY and INSTANCE in .env, "
+            "No usable IBM Runtime credentials found. Set QISKIT_IBM_TOKEN and "
+            "QISKIT_IBM_INSTANCE in .env, "
             "or save an account locally. For no-account testing, run "
             "notebooks/00_local_statevector_smoke.ipynb and notebooks/01_local_aer_smoke.ipynb."
         ) from exc

@@ -53,11 +53,12 @@ This is the default smoke path for reproducibility and debugging.
 
 1. Copy `.env.example` to `.env`.
 2. Fill placeholders only in `.env`:
-   - `API_KEY=...`
-   - `INSTANCE=...`
-   - `CHANNEL=ibm_quantum_platform`
-3. Never commit `.env` or real credentials.
-4. Run `notebooks/02_ibm_runtime_smoke.ipynb`.
+   - `QISKIT_IBM_TOKEN=...`
+   - `QISKIT_IBM_INSTANCE=...`
+   - `QISKIT_IBM_CHANNEL=ibm_quantum_platform`
+3. Legacy aliases (`API_KEY`, `INSTANCE`, `CHANNEL`) are also accepted for compatibility.
+4. Never commit `.env` or real credentials.
+5. Run `notebooks/02_ibm_runtime_smoke.ipynb`.
 
 The runtime notebook:
 
@@ -87,4 +88,4 @@ See `CHANGELOG.md` for release history and `SECURITY.md` for vulnerability repor
 
 `notebooks/04_aer_gpu_smoke.ipynb` checks for Aer GPU support and runs a small GPU simulation if available. If GPU support is unavailable, it prints a skip message and exits cleanly.
 
-Tested with: Qiskit 2.3.x API patterns, last updated February 10, 2026.
+Tested with Qiskit 2.3.x API patterns. See `CHANGELOG.md` and Releases for update history.
