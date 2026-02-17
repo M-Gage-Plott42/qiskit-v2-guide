@@ -5,6 +5,31 @@ All notable changes to this repository are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Repository governance and contributor standards:
+  - `CODEOWNERS`,
+  - `CONTRIBUTING.md`,
+  - `CODE_OF_CONDUCT.md`,
+  - pull request and issue templates.
+- New CI workflows:
+  - `actionlint` for GitHub Actions validation,
+  - `shellcheck` for shell script linting,
+  - explicit repository `CodeQL` workflow.
+- Reproducible dependency install files:
+  - `requirements-ci.txt`,
+  - generated `constraints-ci.txt`,
+  - `scripts/update_constraints_ci.sh`.
+
+### Changed
+
+- `local-smoke` workflow now uses full-SHA pinned actions and installs via `requirements-ci.txt`.
+- `smoke_local.sh` now resolves repo root and works when invoked outside the repository directory.
+- Documentation updated to current `docs.quantum.ibm.com` links and IBM Quantum Platform classic sunset date (July 1, 2025).
+- Branch ruleset now requires code-owner review and one approving review for pull requests.
+
 ## [0.2.1] - 2026-02-17
 
 ### Fixed

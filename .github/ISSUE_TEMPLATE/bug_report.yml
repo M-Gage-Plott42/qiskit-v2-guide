@@ -1,0 +1,49 @@
+name: Bug Report
+description: Report a reproducible problem in docs, scripts, or smoke workflows.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What failed?
+      placeholder: Briefly describe the failure.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction Steps
+      description: Provide exact commands and steps.
+      placeholder: |
+        1. Create env...
+        2. Run command...
+        3. Observe error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Python/OS/tool versions used.
+      placeholder: |
+        OS:
+        Python:
+        qiskit:
+        qiskit-aer:
+        qiskit-ibm-runtime:
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Traceback
+      description: Paste relevant output.
+      render: shell
+    validations:
+      required: false

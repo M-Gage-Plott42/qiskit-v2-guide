@@ -59,6 +59,7 @@ This is the default smoke path for reproducibility and debugging.
 3. Legacy aliases (`API_KEY`, `INSTANCE`, `CHANNEL`) are also accepted for compatibility.
 4. Never commit `.env` or real credentials.
 5. Run `notebooks/02_ibm_runtime_smoke.ipynb`.
+6. IBM Quantum Platform classic was sunset on July 1, 2025; use current IBM Quantum Platform and docs at <https://docs.quantum.ibm.com/>.
 
 The runtime notebook:
 
@@ -74,6 +75,7 @@ Backend inventories and names change over time; this repo intentionally avoids h
 
 - Local one-command smoke test: `bash scripts/smoke_local.sh`
 - CI runs the same local smoke path (`00` and `01`) on pushes and pull requests.
+- Reproducible CI-style dependency install: `python -m pip install -r requirements-ci.txt`
 - Optional local hooks:
 
 ```bash
@@ -82,7 +84,8 @@ pre-commit install
 pre-commit run --all-files
 ```
 
-See `CHANGELOG.md` for release history and `SECURITY.md` for vulnerability reporting.
+See `CHANGELOG.md` for release history, `SECURITY.md` for vulnerability reporting,
+`CONTRIBUTING.md` for contribution workflow, and `CODE_OF_CONDUCT.md` for community standards.
 
 ## Optional GPU smoke
 

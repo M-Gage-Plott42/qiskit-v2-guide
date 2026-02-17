@@ -25,6 +25,12 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
+For CI/release-aligned reproducible installs, use pinned constraints:
+
+```bash
+python -m pip install -r requirements-ci.txt
+```
+
 Optional extras used in broader workflows:
 
 ```bash
@@ -47,7 +53,7 @@ Run these first to validate local setup without IBM credentials:
 
 ## 5) IBM Runtime smoke test (optional cloud path)
 
-1. Create or sign in to IBM Quantum at <https://quantum.cloud.ibm.com/>.
+1. Create or sign in to IBM Quantum via <https://docs.quantum.ibm.com/>.
 2. Create/get an instance and API key in IBM Quantum Platform.
 3. Copy `.env.example` to `.env` and fill values:
 
@@ -60,6 +66,8 @@ QISKIT_IBM_CHANNEL=ibm_quantum_platform
 Legacy aliases (`API_KEY`, `INSTANCE`, `CHANNEL`) are also accepted by this repository for compatibility.
 
 1. Run `notebooks/02_ibm_runtime_smoke.ipynb`.
+
+IBM Quantum Platform classic was sunset on July 1, 2025. Use current IBM Quantum Platform endpoints and account flows.
 
 This runtime path intentionally uses robust backend discovery (no hardcoded backend names):
 
@@ -76,10 +84,11 @@ Run `notebooks/04_aer_gpu_smoke.ipynb` to test optional Aer GPU execution. It wi
 
 ## 8) Official references
 
-- IBM Quantum docs home: <https://quantum.cloud.ibm.com/docs/en>
-- Set up IBM channel: <https://quantum.cloud.ibm.com/docs/en/guides/set-up-channel>
-- Qiskit SDK primitives simulation: <https://quantum.cloud.ibm.com/docs/en/guides/simulate-with-qiskit-sdk-primitives>
-- Qiskit Aer simulation: <https://quantum.cloud.ibm.com/docs/en/guides/simulate-with-qiskit-aer>
-- Runtime primitives quickstart: <https://quantum.cloud.ibm.com/docs/en/guides/get-started-with-primitives>
-- Runtime local testing mode: <https://quantum.cloud.ibm.com/docs/en/guides/local-testing-mode>
+- IBM Quantum docs home: <https://docs.quantum.ibm.com/>
+- Set up IBM channel: <https://docs.quantum.ibm.com/guides/set-up-channel>
+- Qiskit install guide: <https://docs.quantum.ibm.com/guides/install-qiskit>
+- Qiskit SDK primitives simulation: <https://docs.quantum.ibm.com/guides/simulate-with-qiskit-sdk-primitives>
+- Qiskit Aer simulation: <https://docs.quantum.ibm.com/guides/simulate-with-qiskit-aer>
+- Runtime primitives quickstart: <https://docs.quantum.ibm.com/guides/get-started-with-primitives>
+- Runtime local testing mode: <https://docs.quantum.ibm.com/guides/local-testing-mode>
 - Aer GPU how-to: <https://qiskit.github.io/qiskit-aer/howtos/running_gpu.html>

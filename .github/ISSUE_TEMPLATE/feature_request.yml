@@ -1,0 +1,29 @@
+name: Feature Request
+description: Propose an improvement for workflows, docs, or examples.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What gap or pain point are you trying to solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Describe the desired behavior and scope.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What alternatives did you evaluate?
+    validations:
+      required: false

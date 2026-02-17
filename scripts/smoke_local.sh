@@ -1,9 +1,20 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-OUT_DIR="${1:-artifacts/executed-local-smoke}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+
+REQUESTED_OUT_DIR="${1:-artifacts/executed-local-smoke}"
+if [[ "${REQUESTED_OUT_DIR}" = /* ]]; then
+  OUT_DIR="${REQUESTED_OUT_DIR}"
+else
+  OUT_DIR="${REPO_ROOT}/${REQUESTED_OUT_DIR}"
+fi
+
 TIMEOUT="${NB_TIMEOUT:-300}"
 LOG_FILE="${OUT_DIR}/smoke_local.log"
+
+cd "${REPO_ROOT}"
 
 if ! command -v jupyter >/dev/null 2>&1; then
   echo "jupyter is not installed. Install dependencies first: pip install -r requirements.txt" >&2
