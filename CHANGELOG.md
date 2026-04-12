@@ -7,6 +7,17 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ## [Unreleased]
 
+### Added
+
+- GitHub dependency review for pull requests and merge-queue checks via
+  `.github/workflows/dependency-review.yml` and
+  `.github/dependency-review-config.yml`.
+
+### Changed
+
+- Existing CI and lint workflows now use workflow-level concurrency and
+  `merge_group` triggers so required checks remain stable in merge queues.
+
 ## [1.0.0] - 2026-02-17
 
 ### Added

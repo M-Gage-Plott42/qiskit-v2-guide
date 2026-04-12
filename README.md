@@ -5,6 +5,7 @@
 [![ruff](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/workflows/lint-python.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/workflows/lint-python.yml)
 [![markdownlint](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/workflows/lint-markdown.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/workflows/lint-markdown.yml)
 [![yamllint](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/workflows/lint-yaml.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/workflows/lint-yaml.yml)
+[![dependency-review](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/workflows/dependency-review.yml/badge.svg?branch=main)](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/workflows/dependency-review.yml)
 [![Release](https://img.shields.io/github/v/release/M-Gage-Plott42/qiskit-v2-guide?label=Release)](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases)
 
 Minimal Qiskit 2.x smoke-test repo for reproducible workflow checks: local exact simulation (reference primitives), local Aer simulation (Aer primitives), and optional IBM Runtime hardware execution in job mode.
@@ -75,6 +76,11 @@ Backend inventories and names change over time; this repo intentionally avoids h
 
 - Local one-command smoke test: `bash scripts/smoke_local.sh`
 - CI runs the same local smoke path (`00` and `01`) on pushes and pull requests.
+- Required workflows now use workflow-level concurrency and `merge_group`
+  triggers so checks stay reusable with merge queues.
+- Dependency review runs by default on public repos; private copies can enable
+  the same workflow after GitHub Code Security or GHAS is available by setting
+  `ENABLE_DEPENDENCY_REVIEW=true`.
 - Reproducible CI-style dependency install: `python -m pip install -r requirements-ci.txt`
 - Optional local hooks:
 
