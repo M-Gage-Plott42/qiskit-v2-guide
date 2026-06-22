@@ -34,7 +34,7 @@ fqdn==1.5.1
 h11==0.16.0
 httpcore==1.0.9
 httpx==0.28.1
-ibm-cloud-sdk-core==3.24.4
+ibm-cloud-sdk-core==3.25.0
 ibm-platform-services==0.75.1
 ibm-quantum-schemas==0.9.20260612
 idna==3.18
