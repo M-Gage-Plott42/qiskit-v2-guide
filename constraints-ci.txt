@@ -44,7 +44,7 @@ ipython_pygments_lexers==1.1.1
 ipywidgets==8.1.8
 isoduration==20.11.0
 jedi==0.20.0
-json5==0.14.0
+json5==0.15.0
 jsonpointer==3.1.1
 jsonschema-specifications==2025.9.1
 jsonschema==4.26.0
