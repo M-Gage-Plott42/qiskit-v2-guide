@@ -97,4 +97,4 @@ See `CHANGELOG.md` for release history, `SECURITY.md` for vulnerability reportin
 
 `notebooks/04_aer_gpu_smoke.ipynb` checks for Aer GPU support and runs a small GPU simulation if available. If GPU support is unavailable, it prints a skip message and exits cleanly.
 
-Tested with Qiskit 2.3.x API patterns. See `CHANGELOG.md` and Releases for update history.
+Tested with Qiskit 2.5.x API patterns. See `CHANGELOG.md` and Releases for update history.

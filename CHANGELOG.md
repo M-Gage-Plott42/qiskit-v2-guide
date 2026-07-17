@@ -15,6 +15,8 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ### Changed
 
+- Updated the tested Qiskit dependency and CI constraints from 2.4.2 to 2.5.0,
+  with the README compatibility wording synchronized to Qiskit 2.5.x.
 - Existing CI and lint workflows now use workflow-level concurrency and
   `merge_group` triggers so required checks remain stable in merge queues.
 
