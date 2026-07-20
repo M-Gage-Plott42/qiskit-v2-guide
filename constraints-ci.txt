@@ -107,7 +107,7 @@ setuptools==82.0.1
 six==1.17.0
 soupsieve==2.8.4
 stack-data==0.6.3
-stevedore==5.8.0
+stevedore==5.9.0
 terminado==0.18.1
 tinycss2==1.5.1
 tornado==6.5.7
