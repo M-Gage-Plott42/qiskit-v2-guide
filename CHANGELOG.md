@@ -19,6 +19,14 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
   with the README compatibility wording synchronized to Qiskit 2.5.x.
 - Existing CI and lint workflows now use workflow-level concurrency and
   `merge_group` triggers so required checks remain stable in merge queues.
+- CodeQL `init` and `analyze` now advance together at v4.37.3, future
+  Dependabot CodeQL updates are grouped, and the blanket Dependabot auto-merge
+  workflow is removed.
+- Python lint CI pins the last reviewed Ruff 0.15.22 release so a newly
+  published lint rule set cannot make unrelated dependency PRs fail.
+- The default-branch ruleset retains strict required checks and resolved review
+  conversations without requiring an independent approval or code-owner
+  review in this solo-maintainer repository.
 
 ## [1.0.0] - 2026-02-17
 
