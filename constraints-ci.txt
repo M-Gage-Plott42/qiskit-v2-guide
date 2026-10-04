@@ -99,7 +99,7 @@ requests_ntlm==1.3.0
 rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
 rfc3987-syntax==1.1.0
-rpds-py==2026.5.1
+rpds-py==2026.6.3
 rustworkx==0.18.0
 samplomatic==0.20.0
 scipy==1.18.1
