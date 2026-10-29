@@ -103,7 +103,7 @@ rpds-py==2026.6.3
 rustworkx==0.18.0
 samplomatic==0.20.0
 scipy==1.18.1
-setuptools==83.0.0
+setuptools==84.1.0
 six==1.17.0
 soupsieve==2.9
 stack-data==0.6.3
