@@ -37,7 +37,7 @@ httpx==0.28.1
 ibm-cloud-sdk-core==3.25.0
 ibm-platform-services==0.76.0
 ibm-quantum-schemas==0.12.20260921
-idna==3.18
+idna==3.20
 ipykernel==7.3.0
 ipython==9.16.1
 ipython_pygments_lexers==1.1.1
