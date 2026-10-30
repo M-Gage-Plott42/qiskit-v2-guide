@@ -1,25 +1,23 @@
 # PHYS 3810 status
 
-Current integration snapshot, October 30: this local documentation/PDF change
-is based on published main `3894391`. The original development checkout and
-index have a verified recovery checkpoint and remain intact. QFT code and its
-64-test/five-notebook evidence are outside this revision and will follow in a
-separate commit. Its runtime remains the published Grover 50-test/four-notebook
-scope. Older planning and validation entries below retain their dated context.
+As of October 30, 2026: **local Git integration is complete; QPE is next.**
+The integration branch `integration/phys3810-docs-qft-2026-10-30` starts at
+published main `3894391f2026d4fd9351b346b44b5eda453a17da`. Its first commit,
+`b16d235ca01ebc9c7f610dcfeb64f081d5d6b453`, integrates the verified v0.2 PDFs and
+Grover documentation. The subsequent QFT commit contains the existing source,
+tests, notebook, validator registration, and this status/evidence update.
+See [INTEGRATION_VALIDATION.md](INTEGRATION_VALIDATION.md) for checks and scope.
 
-As of October 30, 2026: **the Grover prerelease is published and its additional
-independent audit is reconciled; QFT remains locally validated.** QPE is the next
-implementation, after the planned Git integration. **Git preservation and local
-integration are the next Codex work item.** The PDF receipt is resolved and the
-first instructor review packet is ready. The latest policy update requires a
-copyable next-step instruction at the end of every response; only docs/plans
-changed, and integration has not started. See the [instructor review plan](INSTRUCTOR_REVIEW_PLAN.md),
-[release audit reconciliation](GROVER_RELEASE_RECONCILIATION.md) and
-[Git integration plan](GIT_INTEGRATION_PLAN.md).
-The [Grover preview](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-grover-v0.1.0-rc1)
-was published through [PR #112](https://github.com/M-Gage-Plott42/qiskit-v2-guide/pull/112).
-QFT development remains local on `feat/phys3810-m1-onboarding`. See [VALIDATION.md](VALIDATION.md) for the base, inventory, commands,
-installed versions, outcomes, and reviewer handoff.
+The original `feat/phys3810-m1-onboarding` checkout and index remain intact,
+with a successfully rehearsed recovery checkpoint. The durable integration
+worktree is under `artifacts/local-integration-2026-10-30/worktree` relative to
+the original repository. Continue implementation there. Its local commits
+have not been pushed or reviewed by remote CI. The published Grover rc1 tag,
+ZIP, and release assets remain unchanged; QFT is not in that public preview.
+
+The PDF receipt issue is resolved. The [instructor packet](INSTRUCTOR_REVIEW_PLAN.md)
+is ready; sending has not been confirmed. The response policy ends each turn
+with a copyable next instruction. No QPE implementation began during integration.
 
 Technical review and validation are owned by the implementation assistant;
 the user is not being asked to review code manually. The latest coordination
@@ -34,7 +32,7 @@ versioned preview is separate from QFT development; see [PREVIEW_PLAN.md](PREVIE
 The published Grover-only source is `3894391f2026d4fd9351b346b44b5eda453a17da`.
 All nine required PR checks passed before merging, and subsequent main workflows
 passed. The three release assets were downloaded anonymously and hash-verified.
-QFT is excluded from the release; its local evidence is in the preserved development checkout.
+QFT is excluded from the release; its local evidence is in [QFT_VALIDATION.md](QFT_VALIDATION.md).
 
 ## Deliverables
 
@@ -74,7 +72,8 @@ QFT is excluded from the release; its local evidence is in the preserved develop
   into the repository and locally inspected. The corrected delivered-file
   [receipt](handouts/README.md) matches both copies; the earlier hashes referred
   to their pre-delivery prefixes. Both existing PDFs are ready for instructor
-  review and remain unchanged, uncommitted, and unpublished. Final classroom PDFs
+  review and are tracked in the documentation commit with unchanged bytes. The
+  v0.2 editions are not yet public release assets. Final classroom PDFs
   still require platform validation and instructor feedback.
 
 ## Open teaching decisions
@@ -91,24 +90,20 @@ these facts do not establish the invited-session dates.
 
 ## Recommended next actions
 
-1. **Next Codex work item — reconcile Git locally:** preserve staged, unstaged, and untracked
-   work, then use a durable clean worktree based on current main. Separate the
-   documentation/PDF change from QFT carry-forward in coherent local commits.
-   Follow the integration plan and run required Python 3.12 validation;
-   report recovery evidence, the worktree, commit IDs, and clean status.
-   Preserve the original checkout/index and published Grover rc1 assets.
-2. **Then implement QPE:** use the validated QFT conventions and preserve
-   existing algorithm/runner regressions. Prepare the substantive QFT/QPE
-   review before HHL/Shor. None of this implementation began this turn.
+1. **Implement QPE in the integration worktree.** State its supported unitary,
+   eigenstate preparation, counting/target register roles, controlled powers,
+   precision, and bit-order contract before implementation. Use the tested QFT
+   conventions and independent asymmetric exact/nonexact phase distributions;
+   retain all existing Grover/QFT/runner regressions.
+2. **Then prepare the combined QFT/QPE review:** provide the standalone desktop
+   bundle and a separate GPT Pro prompt before HHL/Shor implementation.
 3. **In parallel, instructor feedback:** the user can send the two verified
-   v0.2 guides and existing Grover rc1 ZIP link using [the plan](INSTRUCTOR_REVIEW_PLAN.md).
-   State that the attached setup guide supersedes the older one in the ZIP.
-   Sending has not been confirmed in this thread; do not assume it happened.
-   Dates, platforms, and teaching feedback need not delay local Git integration.
-4. **Before teaching release:** confirm dates, platforms, preparation, and
-   assessment; validate native platforms and interactive setup, obtain the
-   matching ChatGPT-reviewed PDFs, and rehearse delivery. Publication and
-   instructor messages still require authorization covering those actions.
+   v0.2 guides and unchanged Grover rc1 ZIP link using the instructor plan.
+   Dates, platforms, classroom emphasis, and assessment remain open.
+4. **Publication and final teaching release:** local commits and verified PDF
+   tracking are ready for a separately scoped publication decision. Native
+   platform checks, interactive setup validation, and pacing rehearsal still
+   precede final classroom claims. No external action was taken during integration.
 
 Native Windows/macOS checks and instructor decisions can progress alongside
 Linux algorithm development. They limit portability and release claims; they
@@ -117,8 +112,7 @@ are still unknown. No implementation of QFT, QPE, HHL, or Shor was included in t
 Grover preview. Remote CI passed for Grover. A deliberately failed remote job's
 artifact-upload behavior and remote QFT checks remain untested.
 
-**GPT Pro sync: not needed now; the corrected receipt closes the PDF issue.**
-The next substantive review remains after QFT/QPE. Application tests/notebooks
-were not rerun for the documentation-only follow-up. Full-file/prefix hashes,
-the public ZIP download/integrity, and documentation checks are separate from
-the earlier 50-test and 64-test results. Git integration and QPE remain planned.
+**GPT Pro sync: not needed for this unchanged-source integration.** The next
+substantive review remains after QFT/QPE. The integrated checkout passed the
+64-test/five-notebook baseline plus the documented local checks; see the
+integration evidence for exact commands, versions, and limits.

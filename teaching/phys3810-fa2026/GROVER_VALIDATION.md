@@ -152,7 +152,7 @@ not change the established original rc1 ZIP identity or algorithm test results.
 - **Skipped:** IBM Runtime service, hardware jobs, and GPU execution. The
   earlier fake-backend smoke is not a new Grover or hardware validation result.
 - **Not included in this preview:** QFT, QPE, HHL, and Shor. QFT is locally
-  implemented with separate evidence in the preserved development checkout; QPE/HHL/Shor remain
+  implemented with [separate evidence](QFT_VALIDATION.md); QPE/HHL/Shor remain
   unimplemented.
 - **Pending:** final native-platform validation and timed classroom rehearsal.
   Grover's required PR checks and subsequent main workflows passed before

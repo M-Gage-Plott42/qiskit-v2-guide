@@ -34,7 +34,7 @@ PR #112's merged state and commit were rechecked through GitHub on October 30.
 Native Windows/macOS, interactive notebook/editor setup, hardware/GPU, live
 classroom timing, and deliberate remote failure-path upload remain unvalidated.
 The supplied review did not inspect local QFT work. Its recommendation to begin
-QFT is superseded by existing QFT evidence in the preserved development checkout: 64 tests
+QFT is superseded by [existing local QFT evidence](QFT_VALIDATION.md): 64 tests
 and five notebooks passed before this turn. QPE remains the next implementation.
 
 ## Findings and disposition
@@ -123,3 +123,12 @@ a later implementation turn. No manual user audit is needed.
 **GPT Pro sync: not needed now.** The delivered-file receipt issue is closed.
 The next substantive mathematical checkpoint remains after QFT/QPE and before
 HHL/Shor. Later Git integration and implementation were not started here.
+
+## Subsequent local integration, October 30
+
+Documentation and verified PDF bytes are tracked in local commit
+`b16d235ca01ebc9c7f610dcfeb64f081d5d6b453`. The following QFT commit carries
+forward the existing implementation and its evidence; see
+[INTEGRATION_VALIDATION.md](INTEGRATION_VALIDATION.md) for the new execution
+results. The original checkout/index and published Grover rc1 assets remain
+intact. QPE is next. No new release or instructor message was sent.

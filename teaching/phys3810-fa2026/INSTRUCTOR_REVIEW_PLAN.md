@@ -97,3 +97,12 @@ confirmed teaching arrangements. None of these steps was started here.
 **GPT Pro sync: not needed now.** The delivery receipt is resolved; the next
 substantive checkpoint is after QFT/QPE and before HHL/Shor. No extra technical
 audit is assigned to the user or instructor.
+
+## Subsequent local integration, October 30
+
+Documentation and verified PDF bytes are tracked in local commit
+`b16d235ca01ebc9c7f610dcfeb64f081d5d6b453`. The following QFT commit carries
+forward the existing implementation and its evidence; see
+[INTEGRATION_VALIDATION.md](INTEGRATION_VALIDATION.md) for the new execution
+results. The original checkout/index and published Grover rc1 assets remain
+intact. QPE is next. No new release or instructor message was sent.

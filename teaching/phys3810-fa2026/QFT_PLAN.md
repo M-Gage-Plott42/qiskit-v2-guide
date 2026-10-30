@@ -1,7 +1,7 @@
 # QFT milestone: exact transform contract
 
-The next local module follows the reviewed Grover lesson. This contract is the
-QFT portion of the planned QFT/QPE session; QPE remains a separate subsequent
+Implemented and locally validated; see [QFT_VALIDATION.md](QFT_VALIDATION.md).
+This contract is the QFT portion of the planned QFT/QPE session; QPE remains a separate subsequent
 implementation. A combined phase-convention review is due after both are tested,
 before HHL/Shor work.
 

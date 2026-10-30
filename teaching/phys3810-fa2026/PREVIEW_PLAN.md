@@ -111,3 +111,12 @@ unvalidated. State these limits in release notes. Session dates, student
 preparation, preferred meeting length, platforms, and assessments remain unknown.
 Draft feedback can improve later modules while QFT/QPE development continues;
 final materials must still be frozen and rehearsed before each confirmed session.
+
+## Subsequent local integration, October 30
+
+Documentation and verified PDF bytes are tracked in local commit
+`b16d235ca01ebc9c7f610dcfeb64f081d5d6b453`. The following QFT commit carries
+forward the existing implementation and its evidence; see
+[INTEGRATION_VALIDATION.md](INTEGRATION_VALIDATION.md) for the new execution
+results. The original checkout/index and published Grover rc1 assets remain
+intact. QPE is next. No new release or instructor message was sent.

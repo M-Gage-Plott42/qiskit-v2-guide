@@ -109,7 +109,7 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    the existing PDFs; integrate those exact bytes in the planned documentation change;
    see [the release audit](GROVER_RELEASE_RECONCILIATION.md). Further publication
    remains a separately authorized action through the normal repository workflow.
-3. **QFT validated in the preserved checkout; integration next, then QPE.** Compare the QFT operator with the full Fourier matrix;
+3. **QFT implemented; QPE next.** Compare the QFT operator with the full Fourier matrix;
    test QPE on asymmetric exact phases and a nonexact phase distribution.
    Document sign/bit conventions and verify SDK references and fresh kernels.
 4. **HHL/Shor lessons.** Specify supported small cases and limitations. For HHL,

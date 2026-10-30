@@ -1,12 +1,5 @@
 # PHYS 3810 implementation workflow
 
-Current integration snapshot, October 30: this local documentation/PDF change
-is based on published main `3894391`. The original development checkout and
-index have a verified recovery checkpoint and remain intact. QFT code and its
-64-test/five-notebook evidence are outside this revision and will follow in a
-separate commit. Its runtime remains the published Grover 50-test/four-notebook
-scope. Older planning and validation entries below retain their dated context.
-
 Updated October 30, 2026. This is maintainer guidance; the student entry point
 remains [README.md](README.md). The assistant owns technical review and tests.
 The user supplies teaching decisions and any external reviewer response that
@@ -22,26 +15,22 @@ recommended proceeding to Grover after an evidenced correction without another
 approval round. [REVIEW_RECONCILIATION.md](REVIEW_RECONCILIATION.md) records the
 subsequent local reproduction, fix, tests, and remaining limitations.
 
-Current position: milestone 1 and Grover reviews are reconciled after evidenced
-corrections. QFT is now locally validated and QPE is next. The versioned
-Grover-only preview is published for early feedback from merged commit
-`3894391f2026d4fd9351b346b44b5eda453a17da` through PR #112. QFT remains local
-and is not part of that prerelease; QPE is the next implementation after the
-planned Git integration. The additional published-Grover audit received on
-October 30 independently reports 50 tests/four notebooks passing. Its
-[reconciliation](GROVER_RELEASE_RECONCILIATION.md) distinguishes that snapshot
-from QFT's earlier local validation. The subsequently corrected PDF receipt
-matches the delivered bytes; the discrepancy is closed. The
-[first instructor review packet](INSTRUCTOR_REVIEW_PLAN.md) is ready for the
-user to send. Its review concerns teaching decisions, not another code audit.
-See [GROVER_VALIDATION.md](GROVER_VALIDATION.md). The handoff uses a standalone
-desktop ZIP and a separate copyable prompt in the chat response.
-Work remains on `feat/phys3810-m1-onboarding`, based on
-`fb41ae02f2ece3e093e60c9286ef72ae91686530`, with local uncommitted changes.
-The published main commit is 13 commits ahead of this base. The index still
-contains 28 earlier onboarding paths. Follow [GIT_INTEGRATION_PLAN.md](GIT_INTEGRATION_PLAN.md):
-preserve staged, unstaged, and untracked work before using a durable separate
-worktree from current main. Git integration is planned, not executed this turn.
+Current position: milestone 1 and Grover reviews are reconciled; the PDF
+receipt is resolved. Documentation/PDFs and the existing QFT work are now
+integrated locally in separate commits on
+`integration/phys3810-docs-qft-2026-10-30`, based on published main `3894391`.
+See [INTEGRATION_VALIDATION.md](INTEGRATION_VALIDATION.md). The original dirty
+checkout and index have a verified recovery checkpoint and remain intact.
+Continue development in the durable integration worktree recorded in status.
+QPE is next; no QPE work was part of integration. Grover rc1 remains the public
+50-test/four-notebook preview; integrated QFT has 64 tests/five notebooks locally.
+The new local commits have not run remote CI or been published.
+
+The [instructor review packet](INSTRUCTOR_REVIEW_PLAN.md) is ready for the user
+to send; sending is not assumed. Its feedback concerns teaching decisions,
+not another code audit. The next substantive GPT Pro checkpoint is after
+QFT/QPE and before HHL/Shor. The handoff remains one standalone desktop ZIP
+and a separate review prompt in chat.
 
 Keep responsibilities distinct: the course plan defines deliverables;
 `STATUS.md` records current evidence; `VALIDATION.md` records executed checks;
@@ -89,20 +78,18 @@ still need authorization covering those actions.
 
 ## Immediate next technical action
 
-Execute [GIT_INTEGRATION_PLAN.md](GIT_INTEGRATION_PLAN.md) in the next work turn:
-verify a recoverable checkpoint of staged, unstaged, and untracked work; leave
-the original checkout/index intact; create a durable worktree from refreshed
-main; and prepare separate coherent local commits for documentation/verified
-PDFs and the existing QFT implementation. Keep QFT-dependent documentation in
-the QFT change so each commit's links and availability claims remain correct.
+Implement QPE in the integration worktree, beginning with a precise supported
+input/register/phase contract and acceptance cases. Build canonical source,
+independent exact/nonexact outcome-distribution tests, a teaching notebook, and
+strict-validator integration. Preserve the 64-test/five-notebook baseline and
+fresh-kernel/error/skip safeguards. Use `phase_estimation()` as an additional
+SDK reference; independent mathematics remains the correctness criterion.
 
-Completion evidence includes the recovery location and verification, chosen
-base and local commit IDs, the new worktree's clean status, exact PDF hashes,
-and required Python 3.12 checks. The current development baseline is 64 tests
-and five required notebooks. Preserve the published Grover rc1 tag/ZIP/assets
-and newer upstream fixes. The next prompt covers local integration only;
-QPE implementation and external publication are subsequent actions. Instructor
-feedback can proceed in parallel without blocking this preservation work.
+Git integration is complete; [the plan](GIT_INTEGRATION_PLAN.md) and its linked
+evidence record recovery, the refreshed base, commit separation, and checks.
+Do not repeat the integration or reset the preserved original checkout.
+QPE remains a separate subsequent instruction; no external publication,
+instructor message, or hardware job is implied by this local next step.
 
 ## Ordered work and completion checks
 
@@ -137,9 +124,9 @@ feedback can proceed in parallel without blocking this preservation work.
    classical factor extraction separately, including unsuccessful cases.
    Identify any compiled small-instance shortcuts explicitly. Do not use removed
    HHL/Shor imports or imply a general scalable implementation.
-7. **Preview published; documentation integration next; final release later.**
-   Integrate the ChatGPT-supplied setup/instructor PDF editions using the
-   corrected delivered-file receipts. Preserve the original rc1 source and assets. Follow
+7. **Preview published; documentation integrated locally; final release later.**
+   The supplied PDF editions are tracked using corrected delivered-file receipts.
+   Preserve their bytes and the original rc1 source/assets. Follow
    [PREVIEW_PLAN.md](PREVIEW_PLAN.md), preserving the normal PR/check workflow
    and the local-only authorization boundary. Then validate the claimed native platforms and
    interactive kernel instructions, obtain the matching reviewed PDF from

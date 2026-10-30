@@ -16,6 +16,9 @@ setup, preflight notebook, proposed sessions, and current delivery status.
 The classroom environment uses CPython 3.12, Qiskit 2.6.1, and Aer 0.17.2.
 The first algorithm lab, [Grover search](teaching/phys3810-fa2026/notebooks/01_grover.ipynb),
 includes reusable source, independent tests, and 50/75-minute teaching activities.
+The [QFT introduction](teaching/phys3810-fa2026/notebooks/02_qft.ipynb) is also
+available in the development checkout as the first part of the QFT/QPE session.
+The versioned Grover preview intentionally excludes this later work.
 
 ## Quickstart
 
@@ -94,7 +97,7 @@ Backend inventories and names change over time; this repo intentionally avoids h
 - Cross-platform classroom validation: `python scripts/validate_classroom.py`.
 - Original local smoke test: `bash scripts/smoke_local.sh`.
 - CI retains the local smoke path (`00` and `01`) and runs offline unit tests,
-  classroom preflight, and the Grover lesson on pushes and pull requests.
+  classroom preflight, Grover, and QFT on pushes and pull requests.
 - Required workflows now use workflow-level concurrency and `merge_group`
   triggers so checks stay reusable with merge queues.
 - Dependency review runs by default on public repos; private copies can enable

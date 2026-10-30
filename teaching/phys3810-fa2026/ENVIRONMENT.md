@@ -21,7 +21,8 @@ support or compatibility with future Qiskit releases.
 recommends isolated environments and explains local simulation, visualization,
 and platform support. No IBM account is needed for this course's default path.
 Grover now has its own [implementation and validation evidence](GROVER_VALIDATION.md).
-QFT, QPE, HHL, and Shor remain future work; onboarding does not validate them.
+QFT also has [separate mathematical and notebook evidence](QFT_VALIDATION.md).
+QPE, HHL, and Shor remain future work; onboarding does not validate them.
 Reference interfaces for the algorithm milestones are `QFTGate`,
 `phase_estimation()`, and `grover_operator()` with V2 primitives.
 

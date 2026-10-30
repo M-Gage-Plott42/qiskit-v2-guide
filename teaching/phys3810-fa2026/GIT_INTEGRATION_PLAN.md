@@ -1,16 +1,13 @@
 # Preserving and integrating the local Git state
 
-Current integration snapshot, October 30: this local documentation/PDF change
-is based on published main `3894391`. The original development checkout and
-index have a verified recovery checkpoint and remain intact. QFT code and its
-64-test/five-notebook evidence are outside this revision and will follow in a
-separate commit. Its runtime remains the published Grover 50-test/four-notebook
-scope. Older planning and validation entries below retain their dated context.
+October 30, 2026. **Local integration completed.** The original checkout/index
+remain intact. Recovery was rehearsed, main was refreshed, and a durable
+integration worktree carries documentation/PDFs and QFT as separate local
+commits. See [INTEGRATION_VALIDATION.md](INTEGRATION_VALIDATION.md).
+No external publication or QPE implementation was part of this work.
 
-October 30, 2026. **Plan only; no staging, commit, stash, branch switch, reset,
-worktree cleanup, or publication was performed during this reconciliation.**
-The dirty tree is accumulated work, not a reason to discard files. The assistant
-owns comparison and technical review; the user is not assigned a manual audit.
+The starting-state audit and planned sequence below are retained as the
+recovery/integration procedure. They are historical context, not work to repeat.
 
 ## Observed starting state
 
@@ -36,7 +33,7 @@ owns comparison and technical review; the user is not assigned a manual audit.
   is absent. Its registration is prunable. The published commit is still
   available; do not confuse temporary-directory loss with lost committed work.
 
-## Recommended integration sequence for a later turn
+## Integration sequence used
 
 1. **Preserve the current state first.** Save a local recovery checkpoint with
    HEAD/branch identity, separate binary staged and unstaged patches, all
@@ -77,7 +74,7 @@ continues in the new clean worktree. Retiring it is a separate deliberate step
 after verifying every local change is preserved. Do not use `reset --hard`,
 `clean`, or an indiscriminate stash/pop sequence as the reconciliation plan.
 
-The next execution prompt covers steps 1-5 only. Return the verified recovery
+The completed integration scope covered steps 1-5 only. Evidence records the verified recovery
 location, refreshed base, durable worktree path, separate local commit IDs,
 validation outcomes, exact PDF hashes, and a clean integration worktree. Preserve
 the original checkout/index. Step 6, QPE implementation, follows separately;

@@ -1,12 +1,5 @@
 # Repository guidance
 
-Current integration snapshot, October 30: this local documentation/PDF change
-is based on published main `3894391`. The original development checkout and
-index have a verified recovery checkpoint and remain intact. QFT code and its
-64-test/five-notebook evidence are outside this revision and will follow in a
-separate commit. Its runtime remains the published Grover 50-test/four-notebook
-scope. Older planning and validation entries below retain their dated context.
-
 Read [CONTRIBUTING.md](CONTRIBUTING.md) before changing this repository. Keep
 changes scoped, preserve existing work, and retain required workflow/job names,
 checks, and the solo-maintainer contribution policy. Do not change repository
@@ -15,7 +8,7 @@ rulesets as part of instructional work.
 ## Source and notebook conventions
 
 - Canonical reusable algorithm code belongs in `src/phys3810/`; mathematical
-  tests belong in `tests/`. Grover is implemented here; preserve this layout for
+  tests belong in `tests/`. Grover and QFT are implemented there; extend this layout for
   the remaining algorithm milestones.
 - Course notebooks belong in `teaching/phys3810-fa2026/notebooks/`. Import
   canonical implementations instead of maintaining separate notebook copies.
@@ -143,11 +136,13 @@ The authorized Grover publication workflow is complete: PR #112 merged after
 all required checks, and `phys3810-fa2026-grover-v0.1.0-rc1` is published from
 `3894391f2026d4fd9351b346b44b5eda453a17da`. This does not authorize unrelated
 releases, instructor messages, or hardware jobs.
-QFT is locally validated in the preserved development checkout, outside this
-documentation-only revision. Its source, notebook, and evidence will follow in
-a separate integration commit. This revision retains 50 tests/four notebooks.
-For subsequent integration, start from the published main revision and carry
-the QFT development changes forward without resetting the original working tree.
+QFT is locally validated in the development checkout; its
+[evidence](teaching/phys3810-fa2026/QFT_VALIDATION.md) is separate from the
+50-test Grover-only preview. QPE is the next implementation.
+Local integration now carries the verified documentation/PDFs and QFT forward
+from published main in separate commits. The original development checkout and
+index remain intact; continue in the integration worktree and never reset the
+original checkout as a cleanup shortcut.
 An additional published-Grover audit was received on October 30, 2026; see the
 [release reconciliation](teaching/phys3810-fa2026/GROVER_RELEASE_RECONCILIATION.md).
 It independently reports 50 tests/four notebooks passing and closes the Grover
@@ -158,7 +153,8 @@ The [instructor review plan](teaching/phys3810-fa2026/INSTRUCTOR_REVIEW_PLAN.md)
 uses the two verified v0.2 guides plus the unchanged published rc1 ZIP. Sending
 remains the user's action; the audit does not authorize external messages.
 No additional GPT Pro round is needed now. The next substantial checkpoint
-remains after QFT/QPE and before HHL/Shor. Follow the
-[Git integration plan](teaching/phys3810-fa2026/GIT_INTEGRATION_PLAN.md) before QPE;
-the October 30 follow-up changes only docs/plans and preserves the staged state,
-source, PDFs, and original release assets.
+remains after QFT/QPE and before HHL/Shor. Local integration is complete; see
+[the integration evidence](teaching/phys3810-fa2026/INTEGRATION_VALIDATION.md).
+QPE is the next implementation, outside the completed integration scope.
+No push, PR, merge, release change, external message, or hardware job was part
+of this local integration. Preserve the verified PDFs and original rc1 assets.

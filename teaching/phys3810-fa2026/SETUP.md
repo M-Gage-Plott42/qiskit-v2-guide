@@ -9,10 +9,9 @@ yet validated for this milestone; see [STATUS.md](STATUS.md) for current
 evidence. These instructions use **64-bit CPython 3.12**, **Qiskit 2.6.1**, and
 **Aer 0.17.2**. IBM accounts, tokens, GPUs, and Git are not needed.
 
-This documentation revision includes onboarding and Grover: 50 tests and four
-required notebooks. QFT remains in the preserved development checkout until
-the separate integration commit. The Grover-only preview uses the same lesson
-scope with its own version-matched instructions.
+This page follows the development checkout, which now includes Grover and QFT.
+The Grover-only preview ships separate version-matched instructions and a
+review-draft PDF; its four-notebook validation intentionally excludes QFT.
 
 ## 1. Get the course folder and Python 3.12
 
@@ -90,7 +89,7 @@ packages during the labs.
 
 The validator prints your interpreter path, Python `3.12.x`, `qiskit: 2.6.1`,
 and `qiskit-aer: 0.17.2`. It checks dependencies, runs offline tests, and
-executes preflight, the two local smoke notebooks, and Grover in
+executes preflight, the two local smoke notebooks, Grover, and QFT in
 fresh kernels.
 Success ends with:
 
@@ -98,7 +97,7 @@ Success ends with:
 PASSED: classroom validation
 ```
 
-`SKIPPED` for optional IBM Runtime/GPU execution and `UNTESTED` for QFT, QPE,
+`SKIPPED` for optional IBM Runtime/GPU execution and `UNTESTED` for QPE,
 HHL, and Shor are expected and are not claims that those paths
 passed. A `FAILED` line or traceback needs attention. Executed notebook copies
 are saved under `artifacts/executed-classroom/`; source notebooks stay unchanged.
@@ -142,6 +141,8 @@ After preflight, open `teaching/phys3810-fa2026/notebooks/01_grover.ipynb` using
 the same kernel. Expect exact probability checks, a circuit, sampled counts,
 and an iteration-probability plot. The 75-minute expansion exercises also run
 during validation; optional discussion time does not mean skipped code cells.
+The development checkout also provides `teaching/phys3810-fa2026/notebooks/02_qft.ipynb`.
+It introduces the first 20 minutes of the combined QFT/QPE session; QPE is still pending.
 
 ## Focused troubleshooting
 
