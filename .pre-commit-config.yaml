@@ -3,7 +3,8 @@ repos:
     rev: v0.15.22
     hooks:
       - id: ruff
-        files: ^src/.*\.py$
+        files: ^((src|scripts|tests)/.*\.py|teaching/phys3810-fa2026/notebooks/.*\.ipynb|notebooks/0[01]_.*\.ipynb)$
+        types_or: [python, jupyter]
 
   - repo: https://github.com/adrienverge/yamllint.git
     rev: v1.38.0
@@ -16,4 +17,4 @@ repos:
     rev: v0.20.0
     hooks:
       - id: markdownlint-cli2
-        files: ^(README\.md|docs/.*\.md|SECURITY\.md|CHANGELOG\.md)$
+        files: \.md$

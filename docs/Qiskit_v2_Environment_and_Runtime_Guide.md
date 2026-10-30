@@ -2,45 +2,50 @@
 
 This guide replaces the older PDF setup notes and aligns with current IBM Quantum/Qiskit documentation.
 
+For UTC PHYS 3810, use the shorter [student setup guide](../teaching/phys3810-fa2026/SETUP.md).
+The supported classroom stack is CPython 3.12, Qiskit 2.6.1, and Aer 0.17.2;
+the [environment decision](../teaching/phys3810-fa2026/ENVIRONMENT.md) records
+resolution and platform limits.
+
 ## 1) Create and activate a virtual environment
 
 Windows PowerShell:
 
 ```powershell
-python -m venv .venv
+py -3.12 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
 macOS/Linux:
 
 ```bash
-python3 -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
 ```
 
 ## 2) Install core packages
 
 ```bash
-python -m pip install --upgrade pip
+python -m pip install --upgrade pip==26.2.2
 python -m pip install -r requirements.txt
 ```
 
-For CI/release-aligned reproducible installs, use pinned constraints:
+Both the default and CI installs use the complete pinned constraints:
 
 ```bash
 python -m pip install -r requirements-ci.txt
 ```
 
-Optional extras used in broader workflows:
+Runtime notebooks (`02`, `03`, and the legacy QPU example) additionally need:
 
 ```bash
-python -m pip install "qiskit-algorithms>=0.4.0" "qiskit-optimization>=0.7.0"
+python -m pip install -r requirements-runtime.txt
 ```
 
 ## 3) (Optional) Register a dedicated Jupyter kernel
 
 ```bash
-python -m ipykernel install --user --name qiskit2 --display-name "Python (qiskit2)"
+python -m ipykernel install --sys-prefix --name phys3810-fa2026 --display-name "Python (PHYS 3810)"
 ```
 
 ## 4) No-account local smoke tests (recommended first)
@@ -50,6 +55,10 @@ Run these first to validate local setup without IBM credentials:
 1. `notebooks/00_local_statevector_smoke.ipynb`
 2. `notebooks/01_local_aer_smoke.ipynb`
 3. `notebooks/03_runtime_local_testing_mode.ipynb`
+
+The third notebook requires the optional Runtime install; it is not part of the
+classroom default. Run `python scripts/validate_classroom.py` for unit tests and
+fresh-kernel preflight plus notebooks `00` and `01` without credentials.
 
 ## 5) IBM Runtime smoke test (optional cloud path)
 
@@ -65,7 +74,13 @@ QISKIT_IBM_CHANNEL=ibm_quantum_platform
 
 Legacy aliases (`API_KEY`, `INSTANCE`, `CHANNEL`) are also accepted by this repository for compatibility.
 
-1. Run `notebooks/02_ibm_runtime_smoke.ipynb`.
+`src/backend_select.py` reads `.env` from the repository root, independent of
+working directory. Nonempty process values take precedence over every file
+alias for the same setting; preferred names win within each source. Parsing does
+not modify `os.environ` or expand `${...}`. The classroom validator tests this
+with dummy values and mocked service construction only.
+
+1. Run `notebooks/02_ibm_runtime_smoke.ipynb` only when intending to submit a hardware job.
 
 IBM Quantum Platform classic was sunset on July 1, 2025. Use current IBM Quantum Platform endpoints and account flows.
 

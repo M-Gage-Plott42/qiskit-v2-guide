@@ -10,19 +10,27 @@
 
 Minimal Qiskit 2.x smoke-test repo for reproducible workflow checks: local exact simulation (reference primitives), local Aer simulation (Aer primitives), and optional IBM Runtime hardware execution in job mode.
 
+**UTC PHYS 3810 (Fall 2026):** start at the
+[student landing page](teaching/phys3810-fa2026/README.md) for the release-download
+setup, preflight notebook, proposed sessions, and current delivery status.
+The classroom environment uses CPython 3.12, Qiskit 2.6.1, and Aer 0.17.2.
+The first algorithm lab, [Grover search](teaching/phys3810-fa2026/notebooks/01_grover.ipynb),
+includes reusable source, independent tests, and 50/75-minute teaching activities.
+
 ## Quickstart
 
 ```bash
-python3 -m venv .venv
+python3.12 -m venv .venv
 source .venv/bin/activate
-pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install --upgrade pip==26.2.2
+python -m pip install -r requirements.txt
+python scripts/validate_classroom.py
 ```
 
 Run notebooks:
 
 ```bash
-jupyter lab
+python -m jupyterlab
 ```
 
 If Cursor/VS Code shows unresolved imports, select the project interpreter:
@@ -34,7 +42,7 @@ Then open:
 
 - `notebooks/00_local_statevector_smoke.ipynb`
 - `notebooks/01_local_aer_smoke.ipynb`
-- `notebooks/03_runtime_local_testing_mode.ipynb`
+- `notebooks/03_runtime_local_testing_mode.ipynb` (optional Runtime package)
 - `notebooks/02_ibm_runtime_smoke.ipynb` (optional cloud path)
 - `notebooks/04_aer_gpu_smoke.ipynb` (optional GPU path)
 
@@ -46,21 +54,30 @@ These notebooks run fully local with no IBM credentials:
 
 - `notebooks/00_local_statevector_smoke.ipynb` for Qiskit SDK reference primitives (`StatevectorSampler`).
 - `notebooks/01_local_aer_smoke.ipynb` for Aer primitives (`SamplerV2`/`EstimatorV2`) plus transpilation to an `AerSimulator` target.
-- `notebooks/03_runtime_local_testing_mode.ipynb` for Runtime local testing mode with a fake backend (`SamplerV2(mode=fake_backend)`).
+
+`notebooks/03_runtime_local_testing_mode.ipynb` additionally offers Runtime local
+testing with a fake backend (`SamplerV2(mode=fake_backend)`) after the optional
+install: `python -m pip install -r requirements-runtime.txt`.
 
 This is the default smoke path for reproducibility and debugging.
 
 ## IBM Runtime (optional cloud smoke test)
 
-1. Copy `.env.example` to `.env`.
-2. Fill placeholders only in `.env`:
+1. Install the optional package: `python -m pip install -r requirements-runtime.txt`.
+2. Copy `.env.example` to `.env` in the repository root.
+3. Fill placeholders only in `.env`:
    - `QISKIT_IBM_TOKEN=...`
    - `QISKIT_IBM_INSTANCE=...`
    - `QISKIT_IBM_CHANNEL=ibm_quantum_platform`
-3. Legacy aliases (`API_KEY`, `INSTANCE`, `CHANNEL`) are also accepted for compatibility.
-4. Never commit `.env` or real credentials.
-5. Run `notebooks/02_ibm_runtime_smoke.ipynb`.
-6. IBM Quantum Platform classic was sunset on July 1, 2025; use current IBM Quantum Platform and docs at <https://docs.quantum.ibm.com/>.
+4. Legacy aliases (`API_KEY`, `INSTANCE`, `CHANNEL`) are also accepted for compatibility.
+5. Never commit `.env` or real credentials.
+6. Run `notebooks/02_ibm_runtime_smoke.ipynb` only when intending to submit a hardware job.
+7. Use current IBM Quantum Platform and docs at <https://quantum.cloud.ibm.com/docs/>.
+
+The helper reads the repository-root `.env` regardless of the notebook working
+directory. Nonempty process variables take priority over file values, including
+legacy aliases. Parsing leaves the process environment unchanged and treats
+`${...}` literally. Local classroom validation never initializes the IBM service.
 
 The runtime notebook:
 
@@ -74,8 +91,10 @@ Backend inventories and names change over time; this repo intentionally avoids h
 
 ## Automation
 
-- Local one-command smoke test: `bash scripts/smoke_local.sh`
-- CI runs the same local smoke path (`00` and `01`) on pushes and pull requests.
+- Cross-platform classroom validation: `python scripts/validate_classroom.py`.
+- Original local smoke test: `bash scripts/smoke_local.sh`.
+- CI retains the local smoke path (`00` and `01`) and runs offline unit tests,
+  classroom preflight, and the Grover lesson on pushes and pull requests.
 - Required workflows now use workflow-level concurrency and `merge_group`
   triggers so checks stay reusable with merge queues.
 - Dependency review runs by default on public repos; private copies can enable
@@ -97,4 +116,7 @@ See `CHANGELOG.md` for release history, `SECURITY.md` for vulnerability reportin
 
 `notebooks/04_aer_gpu_smoke.ipynb` checks for Aer GPU support and runs a small GPU simulation if available. If GPU support is unavailable, it prints a skip message and exits cleanly.
 
-Tested with Qiskit 2.5.x API patterns. See `CHANGELOG.md` and Releases for update history.
+See the [environment decision](teaching/phys3810-fa2026/ENVIRONMENT.md) and
+[validation report](teaching/phys3810-fa2026/VALIDATION.md) for exact tested
+versions and platform limits, and the [Grover validation](teaching/phys3810-fa2026/GROVER_VALIDATION.md)
+for the first algorithm milestone. Releases records previously published versions.
