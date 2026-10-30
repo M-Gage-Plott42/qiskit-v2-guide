@@ -31,8 +31,8 @@ See [the authoritative PDF receipt](handouts/README.md).
 - Grover passed the recorded automated Linux checks: 50 tests/four notebooks.
   Its default path runs locally without an IBM account or quantum hardware.
   Internet is needed for package installation.
-- QFT is already implemented and locally validated, but is not in this
-  download. QPE is next after Git integration, followed by scoped HHL/Shor work.
+- QFT and QPE are implemented and locally validated, but are not in this
+  Grover download. Their combined independent review is pending before HHL/Shor work.
   Do not repeat the superseded instruction to begin QFT.
 - The **proposed** lesson has a 50-minute core and an expansion to 75 minutes;
   live pacing has not yet been rehearsed with this class.
@@ -88,14 +88,15 @@ unchanged. HEAD, staged content, PDFs, source, notebooks, tests, dependencies,
 and workflows match the turn's starting state. Detailed local evidence is in
 ignored `artifacts/instructor-review-audit-2026-10-30/`.
 
-After this initial review request, collect teaching decisions while performing
-the [planned Git integration](GIT_INTEGRATION_PLAN.md) in a later authorized
-turn, then implement QPE. A clean integration must preserve all current local
-work and upstream fixes. Native-platform checks and rehearsal follow the
-confirmed teaching arrangements. None of these steps was started here.
+Collect the instructor's teaching decisions alongside the QFT/QPE independent
+review. [Git integration](GIT_INTEGRATION_PLAN.md) is complete and preserved
+all original work and upstream fixes. QFT and QPE are now locally validated;
+HHL/Shor remain outside the current milestone. Native-platform checks and
+rehearsal follow confirmed teaching arrangements. The original Grover PDF
+editions remain unchanged as the first instructor packet.
 
-**GPT Pro sync: not needed now.** The delivery receipt is resolved; the next
-substantive checkpoint is after QFT/QPE and before HHL/Shor. No extra technical
+**GPT Pro sync: due for the completed QFT/QPE milestone.** The delivery receipt
+is resolved; the new review concerns phase conventions before HHL/Shor. No extra technical
 audit is assigned to the user or instructor.
 
 ## Subsequent local integration, October 30

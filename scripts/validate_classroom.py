@@ -19,14 +19,16 @@ ROOT = Path(__file__).resolve().parents[1]
 PREFLIGHT_NOTEBOOK = "teaching/phys3810-fa2026/notebooks/00_setup_preflight.ipynb"
 GROVER_NOTEBOOK = "teaching/phys3810-fa2026/notebooks/01_grover.ipynb"
 QFT_NOTEBOOK = "teaching/phys3810-fa2026/notebooks/02_qft.ipynb"
+QPE_NOTEBOOK = "teaching/phys3810-fa2026/notebooks/03_qpe.ipynb"
 NOTEBOOKS = (
     PREFLIGHT_NOTEBOOK,
     "notebooks/00_local_statevector_smoke.ipynb",
     "notebooks/01_local_aer_smoke.ipynb",
     GROVER_NOTEBOOK,
     QFT_NOTEBOOK,
+    QPE_NOTEBOOK,
 )
-REQUIRED_PNGS = {PREFLIGHT_NOTEBOOK: 2, GROVER_NOTEBOOK: 3, QFT_NOTEBOOK: 2}
+REQUIRED_PNGS = {PREFLIGHT_NOTEBOOK: 2, GROVER_NOTEBOOK: 3, QFT_NOTEBOOK: 2, QPE_NOTEBOOK: 3}
 EXPECTED = {"qiskit": "2.6.1", "qiskit-aer": "0.17.2"}
 
 
@@ -166,7 +168,7 @@ def main() -> int:
         failures += 1
         print(f"FAILED: notebook runner: {type(error).__name__}: {error}", flush=True)
     print("SKIPPED: optional IBM Runtime and GPU execution (outside classroom defaults).", flush=True)
-    print("UNTESTED: QPE, HHL, and Shor lessons (not implemented yet).", flush=True)
+    print("UNTESTED: HHL and Shor lessons (not implemented yet).", flush=True)
     print(f"{'FAILED' if failures else 'PASSED'}: classroom validation", flush=True)
     return int(failures != 0)
 

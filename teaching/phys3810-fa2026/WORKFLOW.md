@@ -15,22 +15,18 @@ recommended proceeding to Grover after an evidenced correction without another
 approval round. [REVIEW_RECONCILIATION.md](REVIEW_RECONCILIATION.md) records the
 subsequent local reproduction, fix, tests, and remaining limitations.
 
-Current position: milestone 1 and Grover reviews are reconciled; the PDF
-receipt is resolved. Documentation/PDFs and the existing QFT work are now
-integrated locally in separate commits on
-`integration/phys3810-docs-qft-2026-10-30`, based on published main `3894391`.
-See [INTEGRATION_VALIDATION.md](INTEGRATION_VALIDATION.md). The original dirty
-checkout and index have a verified recovery checkpoint and remain intact.
-Continue development in the durable integration worktree recorded in status.
-QPE is next; no QPE work was part of integration. Grover rc1 remains the public
-50-test/four-notebook preview; integrated QFT has 64 tests/five notebooks locally.
-The new local commits have not run remote CI or been published.
+Current position: milestone 1/Grover reviews and PDF receipts are reconciled.
+Git integration is complete, and QPE now completes the locally validated
+QFT/QPE milestone on `feat/phys3810-qpe`: 92 tests and six notebooks pass.
+See [QPE_VALIDATION.md](QPE_VALIDATION.md) and [QPE_PLAN.md](QPE_PLAN.md).
+The original checkout/index and Grover rc1 assets remain intact. No QFT/QPE
+publication or independent review response is claimed.
 
-The [instructor review packet](INSTRUCTOR_REVIEW_PLAN.md) is ready for the user
-to send; sending is not assumed. Its feedback concerns teaching decisions,
-not another code audit. The next substantive GPT Pro checkpoint is after
-QFT/QPE and before HHL/Shor. The handoff remains one standalone desktop ZIP
-and a separate review prompt in chat.
+The immediate checkpoint is the combined QFT/QPE review, using a standalone
+ZIP plus the separately supplied GPT Pro prompt. Reconcile the received response
+before HHL/Shor implementation. The Grover instructor packet remains available
+for teaching feedback; sending has not been confirmed. Its PDFs do not describe
+the larger QFT/QPE validation snapshot and are not included in this review ZIP.
 
 Keep responsibilities distinct: the course plan defines deliverables;
 `STATUS.md` records current evidence; `VALIDATION.md` records executed checks;
@@ -78,18 +74,17 @@ still need authorization covering those actions.
 
 ## Immediate next technical action
 
-Implement QPE in the integration worktree, beginning with a precise supported
-input/register/phase contract and acceptance cases. Build canonical source,
-independent exact/nonexact outcome-distribution tests, a teaching notebook, and
-strict-validator integration. Preserve the 64-test/five-notebook baseline and
-fresh-kernel/error/skip safeguards. Use `phase_estimation()` as an additional
-SDK reference; independent mathematics remains the correctness criterion.
+Transfer the prepared standalone QFT/QPE snapshot and its separate review prompt
+to GPT Pro. The reviewer should check full Fourier/QPE mathematics, controlled
+powers, target preparation, bit interpretation, SDK output normalization,
+finite-precision distributions, exercise variations, and scope claims.
+No HHL/Shor implementation begins during this checkpoint. Once the response
+returns, Codex reproduces and repairs actionable findings and records their
+disposition before proposing the next implementation contract.
 
-Git integration is complete; [the plan](GIT_INTEGRATION_PLAN.md) and its linked
-evidence record recovery, the refreshed base, commit separation, and checks.
-Do not repeat the integration or reset the preserved original checkout.
-QPE remains a separate subsequent instruction; no external publication,
-instructor message, or hardware job is implied by this local next step.
+Keep the original preserved checkout intact and continue any repairs in the
+integration worktree. The technical review archive is a new identified local
+snapshot, not a replacement for published Grover rc1 or a new student release.
 
 ## Ordered work and completion checks
 
@@ -110,7 +105,7 @@ instructor message, or hardware job is implied by this local next step.
 3. **QFT module and lab — locally validated.** Test the full complex operator against the Fourier
    matrix with declared sign and swap/bit conventions. Compare with `QFTGate`,
    exercise inversion, and execute the teaching notebook from a fresh kernel.
-4. **QPE module and lab — next.** Build on tested QFT conventions; compare with
+4. **QPE module and lab — locally validated; independent review due.** Build on tested QFT conventions; compare with
    `phase_estimation()`. Independently verify asymmetric exact phases and a
    nonexact phase distribution. Test counting-register interpretation, not
    merely a visually plausible histogram.
@@ -154,7 +149,7 @@ platform and teaching claims provisional.
   values; appended provenance explains the different full-file hashes.
   [The receipt](handouts/README.md) preserves both records and their disposition.
   No replacement files or further PDF sync are needed.
-- **Due after QFT/QPE, before HHL/Shor implementation:** review the shared phase
+- **Due now after QFT/QPE, before HHL/Shor implementation:** review the shared phase
   and bit conventions plus the proposed HHL/Shor restrictions and test contracts.
   This catches conceptual errors before they propagate to the harder modules.
 - **Recommended after HHL/Shor and before publication:** evaluate the combined
@@ -192,6 +187,14 @@ Hash the entire delivered file, including appended provenance; do not optimize
 or strip a supplied PDF. A pre-delivery checksum is not interchangeable with
 the delivered-file receipt. Preserve historical failed comparisons and record
 the corrected evidence that closes them.
+
+For the QFT/QPE technical review, include version-matched Markdown setup and
+concise phase-validation evidence. Exclude the Grover-only PDF editions and
+unrelated history/policy documents; do not regenerate PDFs for this handoff.
+Retain canonical source, tests, notebooks, dependencies, and technical contracts
+byte for byte from the identified commit. Validate the extracted final archive
+outside both checkouts and verify the single desktop ZIP's hash. Record any
+reused environment. This does not replace the published Grover student ZIP.
 
 Document v0.2 accompanies unchanged Grover code rc1. A later authorized update
 may add distinct v0.2 assets and link the documentation commit in release notes.

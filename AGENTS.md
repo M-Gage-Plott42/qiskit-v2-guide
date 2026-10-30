@@ -8,7 +8,7 @@ rulesets as part of instructional work.
 ## Source and notebook conventions
 
 - Canonical reusable algorithm code belongs in `src/phys3810/`; mathematical
-  tests belong in `tests/`. Grover and QFT are implemented there; extend this layout for
+  tests belong in `tests/`. Grover, QFT, and QPE are implemented there; extend this layout for
   the remaining algorithm milestones.
 - Course notebooks belong in `teaching/phys3810-fa2026/notebooks/`. Import
   canonical implementations instead of maintaining separate notebook copies.
@@ -138,7 +138,9 @@ all required checks, and `phys3810-fa2026-grover-v0.1.0-rc1` is published from
 releases, instructor messages, or hardware jobs.
 QFT is locally validated in the development checkout; its
 [evidence](teaching/phys3810-fa2026/QFT_VALIDATION.md) is separate from the
-50-test Grover-only preview. QPE is the next implementation.
+50-test Grover-only preview. QPE is now locally validated as well; see its
+[contract](teaching/phys3810-fa2026/QPE_PLAN.md) and
+[evidence](teaching/phys3810-fa2026/QPE_VALIDATION.md).
 Local integration now carries the verified documentation/PDFs and QFT forward
 from published main in separate commits. The original development checkout and
 index remain intact; continue in the integration worktree and never reset the
@@ -152,9 +154,13 @@ prefix hashes were verified locally. Keep those existing PDFs unchanged.
 The [instructor review plan](teaching/phys3810-fa2026/INSTRUCTOR_REVIEW_PLAN.md)
 uses the two verified v0.2 guides plus the unchanged published rc1 ZIP. Sending
 remains the user's action; the audit does not authorize external messages.
-No additional GPT Pro round is needed now. The next substantial checkpoint
-remains after QFT/QPE and before HHL/Shor. Local integration is complete; see
-[the integration evidence](teaching/phys3810-fa2026/INTEGRATION_VALIDATION.md).
-QPE is the next implementation, outside the completed integration scope.
-No push, PR, merge, release change, external message, or hardware job was part
-of this local integration. Preserve the verified PDFs and original rc1 assets.
+The combined QFT/QPE checkpoint is now due. Prepare one standalone runnable
+review ZIP on the desktop and a separate GPT Pro prompt; no independent review
+of the QPE snapshot has been received yet. Keep the final response block for
+the next instruction back to Codex. The QFT/QPE technical review bundle uses
+version-matched Markdown setup and excludes the Grover-only PDF editions;
+those reviewed PDF bytes remain unchanged in the repository. This review
+snapshot does not replace the Grover rc1 ZIP or publish a new student release.
+Stop before HHL/Shor implementation and reconcile the actual returned review.
+No push, PR, merge, release change, external message, or hardware job is part
+of this local milestone. Preserve the original checkout/index and rc1 assets.

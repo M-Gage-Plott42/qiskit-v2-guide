@@ -5,12 +5,13 @@ Information Science and Technology**. You will run small quantum circuits on
 your computer using Python and Qiskit. You do not need Git experience, an IBM
 account, a GPU, or access to a quantum computer.
 
-**Current status:** onboarding, [Grover](notebooks/01_grover.ipynb), and
-[QFT](notebooks/02_qft.ipynb) are implemented and tested locally. Grover's independent review was received
+**Current status:** onboarding, [Grover](notebooks/01_grover.ipynb),
+[QFT](notebooks/02_qft.ipynb), and [QPE](notebooks/03_qpe.ipynb) are implemented
+and tested locally. The combined QFT/QPE independent review is pending. Grover's independent review was received
 and its exercise correction was validated.
 The [Grover-only prerelease](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-grover-v0.1.0-rc1)
-and review-draft guides are published for early feedback. QFT is available only
-in the development checkout; QPE, HHL, Shor, and final classroom materials are
+and review-draft guides are published for early feedback. QFT/QPE are available
+in the development snapshot; HHL, Shor, and final classroom materials are
 still planned. Use the instructions included with your downloaded version.
 See [STATUS.md](STATUS.md) for validation results and remaining work.
 
@@ -32,7 +33,8 @@ See [STATUS.md](STATUS.md) for validation results and remaining work.
 4. Continue with [Grover search](notebooks/01_grover.ipynb): predict oracle and
    amplification behavior, inspect exact states, and sample a local circuit.
 5. In the development version, [QFT](notebooks/02_qft.ipynb) introduces the
-   Fourier matrix and phase conventions before the upcoming QPE lesson. The
+   Fourier matrix and phase conventions, followed by [QPE](notebooks/03_qpe.ipynb)
+   for controlled powers, counting-register decoding, and finite precision. The
    Grover-only preview has its own version-matched setup instructions.
 
 Package installation needs internet access. The classroom validation and local
@@ -43,8 +45,8 @@ not execute the code.
 ## Planned learning sequence
 
 - **Grover — available:** [phase marking and amplitude amplification](notebooks/01_grover.ipynb).
-- **QFT — available; QPE — next:** [Fourier transform introduction](notebooks/02_qft.ipynb),
-  followed by the upcoming phase-estimation lesson.
+- **QFT/QPE — available locally:** [Fourier transforms](notebooks/02_qft.ipynb)
+  followed by [phase estimation](notebooks/03_qpe.ipynb).
 - **HHL/Shor:** small examples of linear-system solving and order finding,
   including their assumptions and limitations.
 

@@ -16,7 +16,7 @@ prerequisites.
 Milestone 1 supplies a draft setup guide for validation. The verified v0.2
 setup/instructor PDFs are ready for initial feedback; final classroom editions
 follow platform validation and instructor feedback. Grover has since
-been implemented as milestone 2, followed by the QFT introduction; QPE, HHL,
+been implemented as milestone 2, followed by QFT and QPE; HHL
 and Shor are later work. See
 [STATUS.md](STATUS.md) for current validation and review state.
 
@@ -109,7 +109,7 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    the existing PDFs; integrate those exact bytes in the planned documentation change;
    see [the release audit](GROVER_RELEASE_RECONCILIATION.md). Further publication
    remains a separately authorized action through the normal repository workflow.
-3. **QFT implemented; QPE next.** Compare the QFT operator with the full Fourier matrix;
+3. **QFT/QPE implemented locally; independent review due.** Compare the QFT operator with the full Fourier matrix;
    test QPE on asymmetric exact phases and a nonexact phase distribution.
    Document sign/bit conventions and verify SDK references and fresh kernels.
 4. **HHL/Shor lessons.** Specify supported small cases and limitations. For HHL,
@@ -131,10 +131,11 @@ public-artifact conventions, and [STATUS.md](STATUS.md) for observed progress.
 Maintainer coordination, per-turn recommendations, and GPT Pro checkpoints are
 recorded in [WORKFLOW.md](WORKFLOW.md).
 
-Planning update, October 30: preserve and integrate the dirty local Git state
-before QPE, following [GIT_INTEGRATION_PLAN.md](GIT_INTEGRATION_PLAN.md).
+Planning update, October 30: Git integration is complete and QPE is locally
+validated under [QPE_PLAN.md](QPE_PLAN.md). The original checkout remains
+preserved under [GIT_INTEGRATION_PLAN.md](GIT_INTEGRATION_PLAN.md).
 The review's October 30-November 2 feedback window and November 2-6 QFT/QPE
 target are provisional planning targets, not confirmed sessions or commitments.
-QFT is already locally validated. Freeze each session's materials at least one
+QFT/QPE now await their combined independent review. Freeze each session's materials at least one
 week before its confirmed date, after platform checks and a pacing rehearsal;
 actual dates, preparation, platform, and assessment decisions remain open.

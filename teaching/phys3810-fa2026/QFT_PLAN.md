@@ -1,9 +1,9 @@
 # QFT milestone: exact transform contract
 
-Implemented and locally validated; see [QFT_VALIDATION.md](QFT_VALIDATION.md).
-This contract is the QFT portion of the planned QFT/QPE session; QPE remains a separate subsequent
-implementation. A combined phase-convention review is due after both are tested,
-before HHL/Shor work.
+Implemented and locally validated; see [combined phase validation](QPE_VALIDATION.md).
+This contract is the QFT portion of the QFT/QPE session. The
+[QPE milestone](QPE_PLAN.md) is now locally validated as well. A combined
+phase-convention review is due before HHL/Shor work.
 
 ## Supported API and conventions
 
@@ -48,7 +48,7 @@ Reference comparison uses current `QFTGate`, never the deprecated `QFT` class.
 
 The notebook covers the first **20 minutes of session 2**: a 5-minute phase/bit
 refresher followed by 15 minutes connecting QFT circuits with the Fourier matrix.
-QPE will complete the planned 50-minute core and 75-minute expansion. Extra QFT
+QPE completes the planned 50-minute core and 75-minute expansion. Extra QFT
 matrix exercises are follow-up practice, not uncounted scheduled minutes.
 
 The implementation uses explicit H, controlled-phase, and optional SWAP gates.

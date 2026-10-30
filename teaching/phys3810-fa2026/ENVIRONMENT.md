@@ -22,7 +22,9 @@ recommends isolated environments and explains local simulation, visualization,
 and platform support. No IBM account is needed for this course's default path.
 Grover now has its own [implementation and validation evidence](GROVER_VALIDATION.md).
 QFT also has [separate mathematical and notebook evidence](QFT_VALIDATION.md).
-QPE, HHL, and Shor remain future work; onboarding does not validate them.
+QPE has [its own phase/register contract](QPE_PLAN.md) and
+[validation evidence](QPE_VALIDATION.md). HHL and Shor remain future work;
+onboarding does not validate them.
 Reference interfaces for the algorithm milestones are `QFTGate`,
 `phase_estimation()`, and `grover_operator()` with V2 primitives.
 

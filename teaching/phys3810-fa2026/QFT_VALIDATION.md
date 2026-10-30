@@ -95,3 +95,10 @@ forward the existing implementation and its evidence; see
 [INTEGRATION_VALIDATION.md](INTEGRATION_VALIDATION.md) for the new execution
 results. The original checkout/index and published Grover rc1 assets remain
 intact. QPE is next. No new release or instructor message was sent.
+
+## Combined QFT/QPE checkpoint, October 30
+
+QPE is now locally validated with the shared Fourier convention and explicit
+SDK output-order normalization. The current suite passes 92 tests and six
+notebooks; see [QPE_VALIDATION.md](QPE_VALIDATION.md). This earlier QFT-only
+evidence remains historical. The combined independent review is now due.
