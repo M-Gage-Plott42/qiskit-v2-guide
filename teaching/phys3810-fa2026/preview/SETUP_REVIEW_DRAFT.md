@@ -1,8 +1,14 @@
 # Python and Qiskit setup
 
-PHYS 3810 | Grover preview | Review draft v0.1 | October 29, 2026
+PHYS 3810 | Grover code v0.1.0-rc1 | Document review draft v0.2 | October 29, 2026
 
-> {{DOWNLOAD_NOTE}}
+Prepared by Matthew Gage Plott, PhD. This Markdown companion retains the
+instructions in the [received student PDF](../handouts/PHYS3810_Student_Setup_Grover_RC1_v0.2.pdf).
+The PDF is a local draft pending publication; its receipt is recorded separately.
+
+Download the named [PHYS3810-Grover-v0.1.0-rc1.zip asset](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-grover-v0.1.0-rc1/PHYS3810-Grover-v0.1.0-rc1.zip).
+GitHub's automatic source archive has a different folder layout. Document v0.2
+does not change the rc1 code or replace its original ZIP.
 
 Use **64-bit CPython 3.12**, **Qiskit 2.6.1**, and **Aer 0.17.2**. You need internet access to install packages. The class notebooks then run locally without Git, an IBM account, credentials, or a GPU. Native Windows/macOS execution is not yet validated; this is a review draft, not a final platform guarantee.
 
@@ -13,7 +19,8 @@ Obtain the instructor-supplied standalone ZIP and extract the entire archive. Op
 **Windows:** check `py -3.12 --version`. If it is missing, install the [official Python install manager](https://docs.python.org/3/using/windows.html), run the command below, and reopen PowerShell.
 
 ```powershell
-py install 3.12
+pymanager install 3.12
+py -3.12 --version
 ```
 
 **Linux/macOS:** check `python3.12 --version`. Use an instructor-provided installation or your platform's approved Python 3.12 package. The expected output is `Python 3.12.x`, not another minor version.
@@ -48,7 +55,7 @@ That alternative already creates the environment; continue to step 3. If PowerSh
 
 ## Install, validate, and select the kernel
 
-Review draft v0.1 | Continue in the extracted phys3810-grover folder
+Review draft v0.2 | Continue in the extracted phys3810-grover folder
 
 ## 3. Install the pinned packages
 
@@ -63,7 +70,7 @@ python scripts/validate_classroom.py
 
 The requirements automatically use `constraints-ci.txt` and include notebook, circuit-drawing, and plotting dependencies. Keep both files together; do not upgrade individual class packages during the lab.
 
-**Expected verification:** Python `3.12.x`, Qiskit `2.6.1`, Aer `0.17.2`, {{TEST_SUMMARY}}, and four required notebooks executed in fresh kernels. Successful validation ends with:
+**Expected verification:** Python `3.12.x`, Qiskit `2.6.1`, Aer `0.17.2`, 50 passing tests, and four required notebooks executed in fresh kernels. Successful validation ends with:
 
 ```text
 PASSED: classroom validation
@@ -98,31 +105,32 @@ Choose **Kernel > Change Kernel > Python (PHYS 3810)**. The notebook's interpret
 
 ## Return to the lab and resolve common problems
 
-Review draft v0.1 | Retain the same extracted course folder
+Review draft v0.2 | Retain the same extracted course folder
 
 ## Reopen the environment later
 
-Open a terminal in `phys3810-grover`, activate the environment for your OS, and launch JupyterLab. You normally do not repeat installation or kernel registration.
+Open a terminal in `phys3810-grover` and launch JupyterLab with the environment's
+interpreter. This route needs no activation or reinstall. You normally do not
+repeat kernel registration for the same environment.
 
 Windows PowerShell:
 
 ```powershell
-.\.venv\Scripts\Activate.ps1
-python -m jupyterlab
+.\.venv\Scripts\python.exe -m jupyterlab
 ```
 
 Linux/macOS:
 
 ```bash
-source .venv/bin/activate
-python -m jupyterlab
+.venv/bin/python -m jupyterlab
 ```
 
 ## Focused troubleshooting
 
 - **Cannot find requirements or the validator:** change to the extracted folder containing `requirements.txt`, not the ZIP itself or the `teaching` subfolder. Check with `dir` on Windows or `ls` on Linux/macOS.
 - **Wrong version or missing package:** run `python -c "import sys; print(sys.executable)"`. It should point into `.venv`. Activate it or use its direct Python path. Recreate an environment made with the wrong Python minor version.
-- **Terminal validation passes but the notebook fails:** choose the class kernel and restart. Compare notebook and terminal interpreter paths. Register the kernel again after moving or recreating the environment.
+- **Terminal validation passes but the notebook fails:** choose the class kernel and restart. Compare notebook and terminal interpreter paths; also check the editor's notebook kernel picker.
+- **Course folder or environment was moved:** recreate `.venv` in its new location with Python 3.12, reinstall the pinned requirements, then register the class kernel again. Re-registering alone does not repair a moved environment, including when its parent folder moved. Repeat steps 2-4 for the new environment.
 - **Python or venv is missing:** complete step 1 and reopen the terminal. For Linux `venv` or `ensurepip` errors, use the matching Python 3.12 venv package or the documented uv alternative.
 - **Installation requests a compiler or cannot resolve packages:** check Python 3.12, 64-bit architecture, internet access, and the exact error. Retain the pins and ask the instructor for the approved setup.
 - **A plot or circuit fails:** install requirements using the notebook environment's Python, restart the kernel, and run all cells. The validator checks actual embedded figures, not only imports.
@@ -134,5 +142,10 @@ Provide your OS, Python version, failing command or cell, and error text. Do not
 ## Primary references
 
 - [Python virtual environments](https://docs.python.org/3.12/library/venv.html).
+- [Python on Windows](https://docs.python.org/3/using/windows.html).
 - [IBM Qiskit installation guidance](https://quantum.cloud.ibm.com/docs/en/guides/install-qiskit).
 - [Qiskit 2.6.1 release metadata](https://pypi.org/project/qiskit/2.6.1/).
+
+The independent review reports 50 tests/four notebooks passing on Linux
+CPython 3.12.14 in a reused pinned environment. Native Windows/macOS,
+interactive UI, hardware/GPU, and live classroom pacing remain unvalidated.

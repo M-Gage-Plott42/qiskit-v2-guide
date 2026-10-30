@@ -1,18 +1,25 @@
 # PHYS 3810 · Python and Qiskit setup
 
-**Draft for validation.** An early review-draft PDF can be prepared for feedback;
-the final linked PDF follows setup validation on the intended classroom
+**Draft for validation.** The [received Grover rc1 setup PDF v0.2](handouts/PHYS3810_Student_Setup_Grover_RC1_v0.2.pdf)
+is a local draft; its publication is pending. Its
+[Markdown companion](preview/SETUP_REVIEW_DRAFT.md) covers the same Grover-only
+download. The final classroom PDF follows setup validation on the intended
 platforms. Native Windows and macOS execution is not
 yet validated for this milestone; see [STATUS.md](STATUS.md) for current
 evidence. These instructions use **64-bit CPython 3.12**, **Qiskit 2.6.1**, and
 **Aer 0.17.2**. IBM accounts, tokens, GPUs, and Git are not needed.
 
+This documentation revision includes onboarding and Grover: 50 tests and four
+required notebooks. QFT remains in the preserved development checkout until
+the separate integration commit. The Grover-only preview uses the same lesson
+scope with its own version-matched instructions.
+
 ## 1. Get the course folder and Python 3.12
 
-Download [PHYS3810-Grover-v0.1.0-rc1.zip](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-grover-v0.1.0-rc1/PHYS3810-Grover-v0.1.0-rc1.zip)
-from the versioned course prerelease; the link activates when publication
-completes. Use this named asset instead of GitHub's automatic source archive.
-Extract it and open a terminal in `phys3810-grover`: it must contain
+The published [Grover standalone ZIP](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-grover-v0.1.0-rc1/PHYS3810-Grover-v0.1.0-rc1.zip)
+includes its own version-matched instructions. For additional development
+lessons, use the repository snapshot supplied by the instructor and this guide.
+Extract the complete folder and open a terminal there; it must contain
 `requirements.txt`, `scripts/`, and `teaching/`.
 For example, use `cd "path/to/extracted-folder"`, replacing the quoted path.
 Run commands in the terminal, not inside a Python prompt or notebook cell.
@@ -24,7 +31,7 @@ First check for Python 3.12 using your platform's command:
 
 Expected: `Python 3.12.x`. If it is missing, Windows users can install the
 [official Python install manager](https://docs.python.org/3/using/windows.html)
-and run `py install 3.12`, then reopen PowerShell. On macOS/Linux, use a
+and run `pymanager install 3.12`, then reopen PowerShell. On macOS/Linux, use a
 Python 3.12 installation provided by your instructor or operating-system
 package manager. An optional alternative is to
 [install uv](https://docs.astral.sh/uv/getting-started/installation/) and follow
@@ -83,7 +90,7 @@ packages during the labs.
 
 The validator prints your interpreter path, Python `3.12.x`, `qiskit: 2.6.1`,
 and `qiskit-aer: 0.17.2`. It checks dependencies, runs offline tests, and
-executes preflight, the two local smoke notebooks, and the Grover lesson in
+executes preflight, the two local smoke notebooks, and Grover in
 fresh kernels.
 Success ends with:
 
@@ -147,8 +154,12 @@ during validation; optional discussion time does not mean skipped code cells.
   created with another Python version, create a new environment with 3.12.
 - **Terminal validation passes but the notebook fails:** choose the registered
   class kernel and restart it. Compare the notebook's interpreter path with
-  the terminal path. Register the kernel again if you moved or recreated
-  the environment.
+  the terminal path.
+- **Course folder or environment was moved:** recreate `.venv` in its new
+  location using Python 3.12, reinstall the pinned requirements from step 3,
+  then register the class kernel from step 4. Re-registration alone does not
+  repair a moved environment. Python's [venv guidance](https://docs.python.org/3.12/library/venv.html)
+  applies even when only the parent course folder moved.
 - **`python3.12` or `py` is not found:** complete step 1 and reopen the terminal.
   For a Linux `venv`/`ensurepip` error, install your distribution's matching
   Python 3.12 venv package or use the documented uv alternative.

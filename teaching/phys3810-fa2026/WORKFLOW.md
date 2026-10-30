@@ -1,6 +1,13 @@
 # PHYS 3810 implementation workflow
 
-Updated October 29, 2026. This is maintainer guidance; the student entry point
+Current integration snapshot, October 30: this local documentation/PDF change
+is based on published main `3894391`. The original development checkout and
+index have a verified recovery checkpoint and remain intact. QFT code and its
+64-test/five-notebook evidence are outside this revision and will follow in a
+separate commit. Its runtime remains the published Grover 50-test/four-notebook
+scope. Older planning and validation entries below retain their dated context.
+
+Updated October 30, 2026. This is maintainer guidance; the student entry point
 remains [README.md](README.md). The assistant owns technical review and tests.
 The user supplies teaching decisions and any external reviewer response that
 is not accessible in the current workspace.
@@ -16,14 +23,25 @@ approval round. [REVIEW_RECONCILIATION.md](REVIEW_RECONCILIATION.md) records the
 subsequent local reproduction, fix, tests, and remaining limitations.
 
 Current position: milestone 1 and Grover reviews are reconciled after evidenced
-corrections. The next module is QFT; a versioned Grover-only preview is being
-prepared separately for instructor feedback.
+corrections. QFT is now locally validated and QPE is next. The versioned
+Grover-only preview is published for early feedback from merged commit
+`3894391f2026d4fd9351b346b44b5eda453a17da` through PR #112. QFT remains local
+and is not part of that prerelease; QPE is the next implementation after the
+planned Git integration. The additional published-Grover audit received on
+October 30 independently reports 50 tests/four notebooks passing. Its
+[reconciliation](GROVER_RELEASE_RECONCILIATION.md) distinguishes that snapshot
+from QFT's earlier local validation. The subsequently corrected PDF receipt
+matches the delivered bytes; the discrepancy is closed. The
+[first instructor review packet](INSTRUCTOR_REVIEW_PLAN.md) is ready for the
+user to send. Its review concerns teaching decisions, not another code audit.
 See [GROVER_VALIDATION.md](GROVER_VALIDATION.md). The handoff uses a standalone
 desktop ZIP and a separate copyable prompt in the chat response.
 Work remains on `feat/phys3810-m1-onboarding`, based on
 `fb41ae02f2ece3e093e60c9286ef72ae91686530`, with local uncommitted changes.
-The supplied audit commit is 12 commits ahead of this base. Preserve all local
-work and newer upstream fixes when preparing eventual integration.
+The published main commit is 13 commits ahead of this base. The index still
+contains 28 earlier onboarding paths. Follow [GIT_INTEGRATION_PLAN.md](GIT_INTEGRATION_PLAN.md):
+preserve staged, unstaged, and untracked work before using a durable separate
+worktree from current main. Git integration is planned, not executed this turn.
 
 Keep responsibilities distinct: the course plan defines deliverables;
 `STATUS.md` records current evidence; `VALIDATION.md` records executed checks;
@@ -45,6 +63,18 @@ correspondence. Reviewer suggestions require evaluation against code and tests.
 4. End with a short result, one recommended next action, GPT Pro sync status
    (`due`, `recommended`, or `not needed`) and its reason, plus any input needed
    from the user. Do not replace technical work with a request for manual review.
+5. Make the final content of every response a fenced `text` block containing
+   the recommended next instruction for the user to paste into this Codex
+   conversation. Include the relevant plan, scope, completion checks, and
+   authorization boundary. Keep it concise and actionable. Put explanation,
+   validation, GPT Pro status, and any needed user input before the block.
+
+This continuation format also applies to planning-only turns. Finish the
+current authorized scope before proposing subsequent work; do not stop routine
+work merely to obtain the next pasted prompt. A suggested prompt is not an
+action already performed or approval already received. When a GPT Pro review
+prompt is also needed, identify its recipient separately and keep the final
+block reserved for the next instruction to Codex.
 
 Routine implementation choices, review, and reversible local fixes stay with
 the assistant. The existing local-only boundary remains: publishing, pushing,
@@ -52,19 +82,36 @@ opening a PR, merging, messaging other people, and hardware jobs are separate
 actions requiring authorization that covers them. Do not repeatedly request
 authorization already given for an action.
 
-The Grover preview's push/PR, required-check merge, and prerelease publication
-were authorized on October 29, 2026. Complete that scoped workflow without
-another permission round. This authorization does not cover unrelated releases,
-instructor messages, or hardware jobs.
+The user authorized and the assistant completed the Grover preview's normal
+push/PR, required-check merge, and prerelease workflow. Do not request that
+authorization again. Other releases, instructor messages, and hardware jobs
+still need authorization covering those actions.
+
+## Immediate next technical action
+
+Execute [GIT_INTEGRATION_PLAN.md](GIT_INTEGRATION_PLAN.md) in the next work turn:
+verify a recoverable checkpoint of staged, unstaged, and untracked work; leave
+the original checkout/index intact; create a durable worktree from refreshed
+main; and prepare separate coherent local commits for documentation/verified
+PDFs and the existing QFT implementation. Keep QFT-dependent documentation in
+the QFT change so each commit's links and availability claims remain correct.
+
+Completion evidence includes the recovery location and verification, chosen
+base and local commit IDs, the new worktree's clean status, exact PDF hashes,
+and required Python 3.12 checks. The current development baseline is 64 tests
+and five required notebooks. Preserve the published Grover rc1 tag/ZIP/assets
+and newer upstream fixes. The next prompt covers local integration only;
+QPE implementation and external publication are subsequent actions. Instructor
+feedback can proceed in parallel without blocking this preservation work.
 
 ## Ordered work and completion checks
 
 1. **Milestone-1 review — completed.** The received review's required M1-01
    correction and optional O1/O2 improvements are recorded with evidence.
    Required cells cannot pass through skipped code or allowed errors. Remote
-   artifact-upload behavior still requires future CI execution; that disclosed
-   limitation does not block local Grover development.
-2. **Grover module and lab — reviewed, corrected, preview preparation.** Files are `src/phys3810/grover.py`,
+   success-path artifact upload is now observed in published Grover CI; deliberate
+   remote failure-path upload remains untested.
+2. **Grover module and lab — published and independently retested.** Files are `src/phys3810/grover.py`,
    `tests/test_grover.py`, and `notebooks/01_grover.ipynb` under this course
    directory. State supported small inputs and bit order; test phase-oracle
    action on all basis states and analytic amplification probabilities,
@@ -73,10 +120,10 @@ instructor messages, or hardware jobs.
    the classroom validator; update its unfinished-lesson reporting.
    [GROVER_PLAN.md](GROVER_PLAN.md) fixes the initial input contract and analytic
    fixtures before implementation.
-3. **QFT module and lab.** Test the full complex operator against the Fourier
+3. **QFT module and lab — locally validated.** Test the full complex operator against the Fourier
    matrix with declared sign and swap/bit conventions. Compare with `QFTGate`,
    exercise inversion, and execute the teaching notebook from a fresh kernel.
-4. **QPE module and lab.** Build on tested QFT conventions; compare with
+4. **QPE module and lab — next.** Build on tested QFT conventions; compare with
    `phase_estimation()`. Independently verify asymmetric exact phases and a
    nonexact phase distribution. Test counting-register interpretation, not
    merely a visually plausible histogram.
@@ -90,12 +137,13 @@ instructor messages, or hardware jobs.
    classical factor extraction separately, including unsuccessful cases.
    Identify any compiled small-instance shortcuts explicitly. Do not use removed
    HHL/Shor imports or imply a general scalable implementation.
-7. **Preview now; final teaching release later.** Prepare setup/instructor review
-   PDFs and a versioned Grover preview before all modules are complete. Follow
+7. **Preview published; documentation integration next; final release later.**
+   Integrate the ChatGPT-supplied setup/instructor PDF editions using the
+   corrected delivered-file receipts. Preserve the original rc1 source and assets. Follow
    [PREVIEW_PLAN.md](PREVIEW_PLAN.md), preserving the normal PR/check workflow
    and the local-only authorization boundary. Then validate the claimed native platforms and
-   interactive kernel instructions, render and inspect the short linked setup
-   PDF, test the final archive, and rehearse 50/75-minute delivery. Reconcile
+   interactive kernel instructions, obtain the matching reviewed PDF from
+   ChatGPT, test the final archive, and rehearse 50/75-minute delivery. Reconcile
    newer upstream changes in a protected local integration step, rerun affected
    checks, and prepare the publishable result before seeking publication action.
 
@@ -111,8 +159,14 @@ platform and teaching claims provisional.
   was demonstrated locally. The original [request](GPT_PRO_HANDOFF.md) is kept
   as history, with the current outcome in the reconciliation record.
 - **Completed after Grover:** review was received; its notebook exercise defect
-  was reproduced and corrected with five new regressions. No further GPT Pro
-  round is required solely for those demonstrated repairs.
+  was reproduced and corrected with five new regressions. The October 30 audit
+  independently reports the final 50-test/four-notebook result. No further
+  algorithm review is required solely for those repairs.
+- **Completed, PDF delivery receipt:** the corrected v0.2 hashes match both
+  existing PDFs. Local prefix hashes reproduce the superseded pre-delivery
+  values; appended provenance explains the different full-file hashes.
+  [The receipt](handouts/README.md) preserves both records and their disposition.
+  No replacement files or further PDF sync are needed.
 - **Due after QFT/QPE, before HHL/Shor implementation:** review the shared phase
   and bit conventions plus the proposed HHL/Shor restrictions and test contracts.
   This catches conceptual errors before they propagate to the harder modules.
@@ -140,6 +194,23 @@ block in the final chat response. No prompt text or prompt file goes in the ZIP.
 An intentional instructional setup PDF may be a preview asset. It is distinct
 from generated notebook output; label review drafts and preserve editable source.
 
+**PDF ownership:** ChatGPT authors, renders, visually reviews, OCR-checks, and
+supplies PDFs. Codex integrates the supplied bytes, verifies hashes/metadata/
+links, maintains Markdown companions, and performs authorized packaging and
+publication. Student PDFs belong under `handouts/`; instructor guides belong
+separately under `instructor/`. Do not silently regenerate a supplied edition
+using the existing maintainer renderer. Record discrepancies before publication;
+obtain corrected evidence or files rather than declaring a mismatch a pass.
+Hash the entire delivered file, including appended provenance; do not optimize
+or strip a supplied PDF. A pre-delivery checksum is not interchangeable with
+the delivered-file receipt. Preserve historical failed comparisons and record
+the corrected evidence that closes them.
+
+Document v0.2 accompanies unchanged Grover code rc1. A later authorized update
+may add distinct v0.2 assets and link the documentation commit in release notes.
+Do not overwrite the original rc1 tag, ZIP, or PDFs. A refreshed standalone ZIP
+requires a new candidate version and a matching ChatGPT-supplied guide.
+
 Exclude agent/policy/chat documents, unrelated historical reports, Git metadata,
 duplicate text exports, nested archives, logs, notebook outputs, caches, venvs,
 credentials, and student/account data. Bundle-specific setup/orientation prose
@@ -166,6 +237,22 @@ Use explicit source transfer between chats. Official
 describes sharing uploaded/connected project sources and keeping durable local
 guidance in repository docs. A chat's access to this working tree must be
 established, not inferred from use of the same account.
+
+## Instructor feedback
+
+Use [INSTRUCTOR_REVIEW_PLAN.md](INSTRUCTOR_REVIEW_PLAN.md) for the first packet:
+two verified v0.2 PDF attachments and the named unchanged rc1 ZIP link. Explain
+that the attached setup guide supersedes the older guide inside the ZIP.
+Repository PDF integration/publication can follow separately; a dirty local
+checkout does not invalidate the already-published preview.
+
+Ask for dates/durations/deadline, prior preparation/notation, classroom format
+and operating systems, algorithm emphasis/depth, and assessment expectations.
+The five requested implementations remain deliverables; their in-class coverage
+is still a teaching decision. Request feedback on clarity, level, emphasis, and
+proposed pacing without requiring installation or manual code review. Keep
+private correspondence and message drafts out of public repository documents.
+The user sends the email; this planning update does not authorize sending tools.
 
 ## User input, when available
 

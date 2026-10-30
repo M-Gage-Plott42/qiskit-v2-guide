@@ -1,5 +1,12 @@
 # Repository guidance
 
+Current integration snapshot, October 30: this local documentation/PDF change
+is based on published main `3894391`. The original development checkout and
+index have a verified recovery checkpoint and remain intact. QFT code and its
+64-test/five-notebook evidence are outside this revision and will follow in a
+separate commit. Its runtime remains the published Grover 50-test/four-notebook
+scope. Older planning and validation entries below retain their dated context.
+
 Read [CONTRIBUTING.md](CONTRIBUTING.md) before changing this repository. Keep
 changes scoped, preserve existing work, and retain required workflow/job names,
 checks, and the solo-maintainer contribution policy. Do not change repository
@@ -8,7 +15,7 @@ rulesets as part of instructional work.
 ## Source and notebook conventions
 
 - Canonical reusable algorithm code belongs in `src/phys3810/`; mathematical
-  tests belong in `tests/`. Grover is implemented there; extend this layout for
+  tests belong in `tests/`. Grover is implemented here; preserve this layout for
   the remaining algorithm milestones.
 - Course notebooks belong in `teaching/phys3810-fa2026/notebooks/`. Import
   canonical implementations instead of maintaining separate notebook copies.
@@ -80,6 +87,14 @@ data in public code, notebooks, documentation, outputs, or validation logs.
 - End each substantive turn with the outcome and validation status, one
   recommended next action, and `GPT Pro sync: due / recommended / not needed`
   with a reason. State any user input actually needed; otherwise say none.
+- End every final response with a copyable fenced `text` block containing the
+  recommended next instruction for the user to paste back into this Codex
+  conversation. Put all explanation, validation, sync status, and input needs
+  before that final block. Make the instruction concrete about scope and
+  completion criteria; distinguish it from prompts intended for GPT Pro.
+  Complete the currently authorized work before proposing the next turn;
+  the closing prompt is not a reason to stop early or repeat an existing
+  approval request. A planning prompt does not itself execute the proposed work.
 - Continue authorized routine local work without repeated approval requests.
   Ask only for missing decisions or actions outside the authorized scope.
   Preserve the current local-only boundary: no push, PR, merge, publication,
@@ -97,6 +112,18 @@ data in public code, notebooks, documentation, outputs, or validation logs.
 - Treat GPT Pro feedback as review input: reproduce actionable findings, fix
   them, and record disposition and test evidence. Self-review is not an
   independent GPT Pro review, and a model opinion is not an executed test.
+- ChatGPT authors, renders, visually reviews, OCR-checks, and supplies course
+  PDFs. Integrate its supplied bytes; do not silently regenerate them with the
+  local renderer. Verify hashes, metadata, links, and repository placement;
+  retain synchronized Markdown companions. Record mismatches and obtain a
+  corrected receipt or file before publishing the edition as independently
+  reviewed. Student PDFs belong under the course `handouts/` directory;
+  instructor PDFs belong separately under `instructor/`.
+  Hash the exact delivered bytes, including appended provenance. Do not
+  optimize, strip provenance from, or otherwise rewrite a supplied PDF.
+- Keep document editions distinct from code releases. Preserve the original
+  Grover rc1 tag, ZIP, and assets. A replacement standalone ZIP needs a new
+  candidate version and its matching ChatGPT-supplied guide.
 - Do not infer that another chat sees local files or that a sync has happened.
   Record the reviewed snapshot and actually received response. Keep private
   chat text out of public docs; retain only technical conclusions.
@@ -112,5 +139,26 @@ instructional PDF may accompany a standalone preview; this does not authorize
 including generated notebook outputs or prompts in a review bundle.
 The [Grover preview](teaching/phys3810-fa2026/PREVIEW_PLAN.md) is a separate,
 identified source revision; keep QFT development out of that first preview.
-No additional GPT Pro round is needed for the evidenced Grover repairs. The
-next substantial checkpoint remains after QFT/QPE and before HHL/Shor.
+The authorized Grover publication workflow is complete: PR #112 merged after
+all required checks, and `phys3810-fa2026-grover-v0.1.0-rc1` is published from
+`3894391f2026d4fd9351b346b44b5eda453a17da`. This does not authorize unrelated
+releases, instructor messages, or hardware jobs.
+QFT is locally validated in the preserved development checkout, outside this
+documentation-only revision. Its source, notebook, and evidence will follow in
+a separate integration commit. This revision retains 50 tests/four notebooks.
+For subsequent integration, start from the published main revision and carry
+the QFT development changes forward without resetting the original working tree.
+An additional published-Grover audit was received on October 30, 2026; see the
+[release reconciliation](teaching/phys3810-fa2026/GROVER_RELEASE_RECONCILIATION.md).
+It independently reports 50 tests/four notebooks passing and closes the Grover
+repairs. The v0.2 PDF discrepancy is closed: the corrected receipt identifies
+the delivered files including appended C2PA provenance; full-file and original
+prefix hashes were verified locally. Keep those existing PDFs unchanged.
+The [instructor review plan](teaching/phys3810-fa2026/INSTRUCTOR_REVIEW_PLAN.md)
+uses the two verified v0.2 guides plus the unchanged published rc1 ZIP. Sending
+remains the user's action; the audit does not authorize external messages.
+No additional GPT Pro round is needed now. The next substantial checkpoint
+remains after QFT/QPE and before HHL/Shor. Follow the
+[Git integration plan](teaching/phys3810-fa2026/GIT_INTEGRATION_PLAN.md) before QPE;
+the October 30 follow-up changes only docs/plans and preserves the staged state,
+source, PDFs, and original release assets.

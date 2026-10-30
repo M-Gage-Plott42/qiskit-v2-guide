@@ -13,10 +13,11 @@ Students will use this public repository. Downloading a release archive must
 be sufficient; Git knowledge, IBM accounts, credentials, and QPUs are not
 prerequisites.
 
-Milestone 1 supplies a draft setup guide for validation. Early setup/instructor
-review PDFs may be prepared now; produce the final classroom PDF after its
-instructions have been validated and feedback incorporated. Grover has since
-been implemented as milestone 2; QFT, QPE, HHL, and Shor are later work. See
+Milestone 1 supplies a draft setup guide for validation. The verified v0.2
+setup/instructor PDFs are ready for initial feedback; final classroom editions
+follow platform validation and instructor feedback. Grover has since
+been implemented as milestone 2, followed by the QFT introduction; QPE, HHL,
+and Shor are later work. See
 [STATUS.md](STATUS.md) for current validation and review state.
 
 ## Scheduling and preparation
@@ -28,16 +29,27 @@ on October 29, 2026. They do not establish dates for the invited sessions.
 
 Confirm with the instructor before finalizing lesson depth and exercises:
 
-- Session dates, room, and whether each meeting allows 50 or 75 minutes.
-- Students' Python/Jupyter experience and access to supported computers.
+- Session dates, room, meeting lengths, and the deadline for complete materials.
+- Students' Python/Jupyter experience, hands-on versus demonstration format,
+  personal computers versus a managed lab, required operating systems, and
+  installation restrictions.
 - Prior coverage of complex vectors, tensor products, eigenvalues, phase,
   measurement, and circuit notation.
+- Relevant lecture notes/textbook and notation or examples to follow.
+- Whether all five algorithms require treatment during the three visits or
+  some are supporting resources for the wider course. Five tested, commented
+  implementations remain required regardless of classroom emphasis.
+- Whether small, fully explained simulator examples meet the HHL/Shor goals,
+  and whether particular matrices or factoring examples are expected.
 - Assessment expectations: participation, submitted notebooks, graded problems,
   collaboration policy, and accommodations.
+  Clarify when solutions should be shared before preparing assessed variants.
 
 Proposed preparation is the setup/preflight notebook before session 1. Until
 background is known, include short refreshers and provide runnable examples
-alongside optional exercises. No grading scheme is assumed.
+alongside optional exercises. No grading scheme is assumed. The
+[first instructor review packet](INSTRUCTOR_REVIEW_PLAN.md) can establish these
+teaching decisions without asking the instructor to install or audit the code.
 
 ## Proposed sessions
 
@@ -87,16 +99,17 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    review before implementing algorithms. The assistant handles technical
    review and remediation using [WORKFLOW.md](WORKFLOW.md); the user is not
    expected to inspect the diff or run tests manually.
-2. **Grover lesson — reviewed and corrected; preview preparation underway.** Follow
+2. **Grover lesson — published and independently retested.** Follow
    [the explicit input and test contract](GROVER_PLAN.md).
    Add commented canonical source, notebook explanation and
    exercises, and independent tests of basis-state oracle action and analytic
    amplification probabilities. Check SDK reference agreement and fresh-kernel
    execution in the supported environment.
-   Prepare a clearly marked standalone preview and draft guides for instructor
-   feedback before all five algorithms are finished. Publication remains a
-   separately authorized action through the normal repository workflow.
-3. **QFT/QPE lessons — next implementation stage.** Compare the QFT operator with the full Fourier matrix;
+   The rc1 preview is published. The corrected v0.2 delivery receipts now match
+   the existing PDFs; integrate those exact bytes in the planned documentation change;
+   see [the release audit](GROVER_RELEASE_RECONCILIATION.md). Further publication
+   remains a separately authorized action through the normal repository workflow.
+3. **QFT validated in the preserved checkout; integration next, then QPE.** Compare the QFT operator with the full Fourier matrix;
    test QPE on asymmetric exact phases and a nonexact phase distribution.
    Document sign/bit conventions and verify SDK references and fresh kernels.
 4. **HHL/Shor lessons.** Specify supported small cases and limitations. For HHL,
@@ -106,7 +119,7 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    in fresh kernels; avoid removed HHL/Shor imports and unsupported advantage
    claims.
 5. **Teaching release.** Validate setup instructions on the claimed classroom
-   platforms, render and inspect the short linked PDF, rehearse the timed
+   platforms, obtain the matching ChatGPT-reviewed PDF, rehearse the timed
    sessions, and check every notebook from a downloaded archive. Record any
    intentionally unsupported platforms and unresolved teaching decisions.
    Publication requires a separate maintainer action after review.
@@ -117,3 +130,11 @@ directory's `notebooks/`. See [AGENTS.md](../../AGENTS.md) for validation and
 public-artifact conventions, and [STATUS.md](STATUS.md) for observed progress.
 Maintainer coordination, per-turn recommendations, and GPT Pro checkpoints are
 recorded in [WORKFLOW.md](WORKFLOW.md).
+
+Planning update, October 30: preserve and integrate the dirty local Git state
+before QPE, following [GIT_INTEGRATION_PLAN.md](GIT_INTEGRATION_PLAN.md).
+The review's October 30-November 2 feedback window and November 2-6 QFT/QPE
+target are provisional planning targets, not confirmed sessions or commitments.
+QFT is already locally validated. Freeze each session's materials at least one
+week before its confirmed date, after platform checks and a pacing rehearsal;
+actual dates, preparation, platform, and assessment decisions remain open.
