@@ -22,6 +22,11 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[1]
 COURSE = "teaching/phys3810-fa2026"
 ASSET_NAME = "PHYS3810-Grover-v0.1.0-rc1.zip"
+RELEASE_TAG = "phys3810-fa2026-grover-v0.1.0-rc1"
+DOWNLOAD_URL = (
+    "https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/"
+    f"{RELEASE_TAG}/{ASSET_NAME}"
+)
 METADATA_NAME = "PHYS3810-Grover-v0.1.0-rc1.metadata.json"
 CANONICAL_FILES = (
     "LICENSE",
@@ -95,11 +100,12 @@ def orientation_documents(commit: str, include_pdf: bool) -> dict[str, bytes]:
 
 Source commit: `{commit}`.
 
-This locally prepared, fixed-source preview contains a credential-free Grover
+This fixed-source preview contains a credential-free Grover
 lesson for 2–5 qubits, independent tests, and onboarding checks. It needs
-CPython 3.12 and the pinned packages. Git is not required to use it. Publication
-is not established by this archive; use the instructor-supplied ZIP rather
-than assuming GitHub main contains this snapshot.
+CPython 3.12 and the pinned packages. Git is not required to use it.
+Download this version's [standalone ZIP]({DOWNLOAD_URL}); the versioned link
+becomes available when the prerelease is published. Use this asset rather
+than GitHub's automatically generated source archive to retain this folder layout.
 
 1. Extract the complete ZIP and open its `phys3810-grover` folder.
 2. Follow [setup](teaching/phys3810-fa2026/SETUP.md).
@@ -193,6 +199,12 @@ curve. Counts may vary; exact assertions and statistical checks determine succes
 Native Windows/macOS execution remains untested. See
 [the validation record](GROVER_VALIDATION.md) for precise evidence and limits.
 """
+    setup = setup.replace(
+        "Use 64-bit",
+        f"Download the [versioned standalone ZIP]({DOWNLOAD_URL}) and extract it. "
+        "This link is activated by prerelease publication.\n\nUse 64-bit",
+        1,
+    )
     course_plan = """# PHYS 3810 course context for this preview
 
 This standalone export contains Grover, the first algorithm lesson. The planned

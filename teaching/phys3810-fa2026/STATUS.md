@@ -1,8 +1,9 @@
 # PHYS 3810 status
 
-As of October 29, 2026: **Grover's review is reconciled; a local preview is being prepared and QFT is next**.
-Work is local on `feat/phys3810-m1-onboarding`; nothing has been published or
-merged. See [VALIDATION.md](VALIDATION.md) for the base, inventory, commands,
+As of October 29, 2026: **Grover's review is reconciled; its prerelease workflow is authorized and QFT is next**.
+The [versioned release page](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-grover-v0.1.0-rc1)
+records publication availability. This source snapshot does not infer remote
+check results from local tests. See [VALIDATION.md](VALIDATION.md) for the base, inventory, commands,
 installed versions, outcomes, and reviewer handoff.
 
 Technical review and validation are owned by the implementation assistant;
@@ -44,9 +45,9 @@ versioned preview is separate from QFT development; see [PREVIEW_PLAN.md](PREVIE
   this does not validate hardware access.
 - **Not implemented / untested:** QFT, QPE, HHL, and Shor lessons.
   The original smoke notebooks do not count as those algorithm implementations.
-- **Drafts now, final later:** early setup and instructor review PDFs are being
-  prepared from editable sources. Final classroom PDFs still require feedback
-  and platform validation. No public preview has been published.
+- **Drafts now, final later:** setup and instructor review PDFs are prepared
+  from editable sources. Final classroom PDFs still require feedback and
+  platform validation; use the release page for the versioned review assets.
 
 ## Open teaching decisions
 
@@ -58,9 +59,9 @@ these facts do not establish the invited-session dates.
 
 ## Recommended next actions
 
-1. **Prepare the versioned Grover preview:** preserve upstream fixes and the
-   normal PR/check workflow; build/test assets from an identified local commit.
-   Publication requires authorization covering the external actions.
+1. **Complete the authorized Grover prerelease:** preserve upstream fixes and
+   the normal PR/check workflow; build/test assets from the merged revision.
+   Authorization covers this preview's push, PR, green-check merge, and prerelease.
 2. **Implement QFT:** follow [QFT_PLAN.md](QFT_PLAN.md), retaining the existing
    algorithm and notebook regressions. No manual code audit is assigned to the user.
 3. **Then QFT/QPE, then HHL/Shor:** follow the staged acceptance criteria in the

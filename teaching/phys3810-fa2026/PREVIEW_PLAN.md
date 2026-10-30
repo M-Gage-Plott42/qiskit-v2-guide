@@ -1,6 +1,7 @@
 # Grover preview preparation
 
-This is a local release proposal, not a published release. The proposed tag is
+Publication through the normal PR and required-check workflow was authorized
+on October 29, 2026. The course prerelease tag is
 `phys3810-fa2026-grover-v0.1.0-rc1`; it was absent on October 29, 2026 but has
 not been reserved. Existing repository releases use `vMAJOR.MINOR.PATCH`, with
 `v1.0.0` latest. The course-prefixed prerelease is a separate namespace and
@@ -50,13 +51,14 @@ Remote CI remains a separate requirement: `local-smoke`, `ruff`, `markdownlint`,
 and `Analyze (actions)`. Preserve the PR workflow, strict check requirements,
 and resolved-review-thread rule; do not use bypass privileges.
 
-The next external action requires authorization covering the push/PR and
-publication workflow. No PR, tag, release, merge, or message to an instructor
-is created merely by preparing these local assets. Once authorized, use the
-normal contribution workflow, wait for required checks, publish the identified
+Authorization covers this preview's push, PR, merge only after required checks
+pass, and prerelease publication. It does not authorize messages to instructors
+or unrelated releases. Use the normal contribution workflow, wait for required checks, publish the identified
 revision as a prerelease, attach validated assets, and set the real download
-link in the synchronized setup source/PDF. A review draft may use the
-instructor-supplied ZIP until a download actually exists.
+link in the synchronized setup source/PDF. The intended asset URL is
+[the versioned standalone ZIP](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-grover-v0.1.0-rc1/PHYS3810-Grover-v0.1.0-rc1.zip).
+Generate the release PDFs with that URL and `--tests 50` using the renderer from
+the merged revision. The link becomes live when the release is published.
 
 Native Windows/macOS, interactive Jupyter/editor use, and timed delivery remain
 unvalidated. State these limits in release notes. Session dates, student

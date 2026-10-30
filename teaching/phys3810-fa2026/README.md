@@ -8,16 +8,17 @@ account, a GPU, or access to a quantum computer.
 **Current status:** onboarding and the [Grover lesson](notebooks/01_grover.ipynb)
 are implemented and tested locally. Grover's independent review was received
 and its exercise correction was validated.
-There is no course release yet. QFT, QPE, HHL, Shor, and the final setup PDF are
-still planned; older repository releases may not contain this folder. A
-Grover-only preview and review-draft guides are being prepared for feedback;
-they are not yet public download links.
+The course prerelease is **Grover preview v0.1.0-rc1**, with review-draft guides
+for early feedback. QFT, QPE, HHL, Shor, and the final classroom PDF remain
+later work. The [versioned release page](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-grover-v0.1.0-rc1)
+is authoritative for availability; its links activate when publication completes.
 See [STATUS.md](STATUS.md) for validation results and remaining work.
 
 ## Before the first session
 
-1. When the instructor designates a course release, download its **Source code
-   (zip)** archive and extract it. Keep the whole extracted folder together.
+1. Download [PHYS3810-Grover-v0.1.0-rc1.zip](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-grover-v0.1.0-rc1/PHYS3810-Grover-v0.1.0-rc1.zip)
+   from that prerelease and extract its `phys3810-grover` folder. Keep the whole
+   folder together. Use the named asset, not GitHub's automatic source archive.
 2. Follow the [setup guide](SETUP.md) to create the Python 3.12 environment,
    install the pinned packages, and run the local validator.
 3. Open [the setup/preflight notebook](notebooks/00_setup_preflight.ipynb) in

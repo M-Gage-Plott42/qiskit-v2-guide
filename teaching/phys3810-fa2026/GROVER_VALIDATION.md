@@ -124,7 +124,7 @@ retested the correction. Current correction logs are in `artifacts/grover-review
 - **Skipped:** IBM Runtime service, hardware jobs, and GPU execution. The
   earlier fake-backend smoke is not a new Grover or hardware validation result.
 - **Not implemented:** QFT, QPE, HHL, and Shor.
-- **Pending:** remote preview CI, publication authorization, and final platform
+- **Pending at source preparation:** remote preview CI and final platform
   validation. A proposed preview is not an existing public release.
 
 The next development action is QFT, with a separate Grover-only preview prepared

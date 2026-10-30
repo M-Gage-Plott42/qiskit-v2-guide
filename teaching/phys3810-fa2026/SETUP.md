@@ -9,10 +9,11 @@ evidence. These instructions use **64-bit CPython 3.12**, **Qiskit 2.6.1**, and
 
 ## 1. Get the course folder and Python 3.12
 
-When the instructor supplies a course release link, download **Source code
-(zip)** and extract it. No course release has been published yet; an older
-release may lack these materials. Open a terminal in the extracted repository
-folder: it must contain `requirements.txt`, `scripts/`, and `teaching/`.
+Download [PHYS3810-Grover-v0.1.0-rc1.zip](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-grover-v0.1.0-rc1/PHYS3810-Grover-v0.1.0-rc1.zip)
+from the versioned course prerelease; the link activates when publication
+completes. Use this named asset instead of GitHub's automatic source archive.
+Extract it and open a terminal in `phys3810-grover`: it must contain
+`requirements.txt`, `scripts/`, and `teaching/`.
 For example, use `cd "path/to/extracted-folder"`, replacing the quoted path.
 Run commands in the terminal, not inside a Python prompt or notebook cell.
 

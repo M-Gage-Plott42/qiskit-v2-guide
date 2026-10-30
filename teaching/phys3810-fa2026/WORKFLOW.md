@@ -52,6 +52,11 @@ opening a PR, merging, messaging other people, and hardware jobs are separate
 actions requiring authorization that covers them. Do not repeatedly request
 authorization already given for an action.
 
+The Grover preview's push/PR, required-check merge, and prerelease publication
+were authorized on October 29, 2026. Complete that scoped workflow without
+another permission round. This authorization does not cover unrelated releases,
+instructor messages, or hardware jobs.
+
 ## Ordered work and completion checks
 
 1. **Milestone-1 review — completed.** The received review's required M1-01
