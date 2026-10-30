@@ -1,7 +1,7 @@
 """Backend discovery helpers for IBM Runtime smoke tests.
 
 This module intentionally avoids hardcoded backend names and supports:
-- Environment-based credentials (API_KEY + INSTANCE)
+- Process environment or repository-root .env credentials
 - Existing saved local account (QiskitRuntimeService default init)
 """
 
@@ -9,7 +9,10 @@ from __future__ import annotations
 
 import os
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any, Iterable, List
+
+from dotenv import dotenv_values
 
 
 class MissingCredentialsError(RuntimeError):
@@ -29,8 +32,15 @@ class RuntimeConfig:
     instance: str | None = None
 
     @classmethod
-    def from_env(cls) -> "RuntimeConfig":
-        """Build config from environment variables.
+    def from_env(cls, dotenv_path: str | Path | None = None) -> "RuntimeConfig":
+        """Read process variables, then the repository-root ``.env`` file.
+
+        A nonempty process value takes precedence over every file alias for
+        the same setting. Within each source the aliases below are checked
+        in order. Empty/whitespace-only values are ignored. The file path is
+        independent of the working directory; callers can supply an explicit
+        path instead. Parsing neither modifies ``os.environ`` nor expands
+        ``${...}`` expressions in credential values.
 
         Recognized variables:
         - QISKIT_IBM_TOKEN (preferred), API_KEY, or IBM_QUANTUM_API_KEY
@@ -39,9 +49,20 @@ class RuntimeConfig:
           (optional, defaults to ibm_quantum_platform)
         """
 
-        token = os.getenv("QISKIT_IBM_TOKEN") or os.getenv("API_KEY") or os.getenv("IBM_QUANTUM_API_KEY")
-        instance = os.getenv("QISKIT_IBM_INSTANCE") or os.getenv("INSTANCE") or os.getenv("IBM_QUANTUM_INSTANCE")
-        channel = os.getenv("QISKIT_IBM_CHANNEL") or os.getenv("CHANNEL") or "ibm_quantum_platform"
+        path = Path(dotenv_path) if dotenv_path is not None else Path(__file__).resolve().parents[1] / ".env"
+        file_values = dotenv_values(path, interpolate=False)
+
+        def setting(*names: str) -> str | None:
+            for source in (os.environ, file_values):
+                for name in names:
+                    value = _clean(source.get(name))
+                    if value is not None:
+                        return value
+            return None
+
+        token = setting("QISKIT_IBM_TOKEN", "API_KEY", "IBM_QUANTUM_API_KEY")
+        instance = setting("QISKIT_IBM_INSTANCE", "INSTANCE", "IBM_QUANTUM_INSTANCE")
+        channel = setting("QISKIT_IBM_CHANNEL", "CHANNEL") or "ibm_quantum_platform"
         return cls(channel=channel, token=token, instance=instance)
 
 
@@ -73,7 +94,7 @@ def initialize_service(config: RuntimeConfig | None = None) -> Any:
     """Initialize Runtime service safely.
 
     Precedence:
-    1) If environment credentials are present and non-placeholder, use them.
+    1) If process/.env credentials are present and non-placeholder, use them.
     2) Otherwise try existing saved account with ``QiskitRuntimeService()``.
     """
 
@@ -91,8 +112,10 @@ def initialize_service(config: RuntimeConfig | None = None) -> Any:
             return runtime_service_cls(channel=cfg.channel, token=token, instance=instance)
         except Exception as exc:  # noqa: BLE001
             raise MissingCredentialsError(
-                "Could not initialize IBM Runtime from environment credentials. "
-                "Check QISKIT_IBM_TOKEN/QISKIT_IBM_INSTANCE values in .env."
+                "Could not initialize IBM Runtime from supplied credentials. "
+                "Check explicit RuntimeConfig values, or QISKIT_IBM_TOKEN/QISKIT_IBM_INSTANCE "
+                "in the process environment and repository-root .env. "
+                "Nonempty process environment values take precedence over .env values."
             ) from exc
 
     try:

@@ -1,2 +1,2 @@
--c constraints-ci.txt
+# Same pinned, credential-free environment used by students.
 -r requirements.txt

@@ -9,6 +9,8 @@ __pycache__/
 *.swp
 *~
 artifacts/
+output/pdf/
+tmp/pdfs/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

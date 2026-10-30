@@ -11,6 +11,7 @@ This repository is focused on reproducible Qiskit 2.x smoke-test workflows:
 - local Statevector and Aer simulation paths,
 - local Runtime testing mode with fake backends,
 - optional IBM Runtime cloud execution.
+- UTC PHYS 3810 course materials and their offline mathematical validation.
 
 Keep changes tightly scoped and reviewer-friendly.
 
@@ -20,11 +21,17 @@ From the repo root:
 
 ```bash
 python -m pip install -r requirements-ci.txt
+python scripts/validate_classroom.py
 bash scripts/smoke_local.sh
 pre-commit run --all-files
 ```
 
 `requirements-ci.txt` uses `constraints-ci.txt` for pinned CI-aligned environments.
+Use CPython 3.12. The default and CI installs now share the same complete
+platform-marked constraints. Runtime is optional via `requirements-runtime.txt`.
+See [AGENTS.md](AGENTS.md) for source/notebook conventions and mathematical checks,
+and the [environment notes](teaching/phys3810-fa2026/ENVIRONMENT.md) for maintainer
+tools and lock regeneration. Existing required checks and scoped PR policy apply.
 
 ## Pull Request Guidance
 

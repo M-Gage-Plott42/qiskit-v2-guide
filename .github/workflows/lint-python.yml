@@ -32,4 +32,7 @@ jobs:
         run: python -m pip install --upgrade pip "ruff==0.15.22"
 
       - name: Run Ruff
-        run: ruff check src --output-format=github
+        run: >-
+          ruff check src scripts tests teaching/phys3810-fa2026/notebooks
+          notebooks/00_local_statevector_smoke.ipynb notebooks/01_local_aer_smoke.ipynb
+          --output-format=github
