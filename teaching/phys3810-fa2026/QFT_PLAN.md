@@ -3,7 +3,8 @@
 Implemented and locally validated; see [combined phase validation](QPE_VALIDATION.md).
 This contract is the QFT portion of the QFT/QPE session. The
 [QPE milestone](QPE_PLAN.md) is now locally validated as well. A combined
-phase-convention review is due before HHL/Shor work.
+phase-convention review is accepted; see
+[the reconciliation](QFT_QPE_REVIEW_RECONCILIATION.md). HHL/Shor contracts precede implementation.
 
 ## Supported API and conventions
 
@@ -55,5 +56,5 @@ The implementation uses explicit H, controlled-phase, and optional SWAP gates.
 Its circuit has quadratic controlled-phase gate count, while this small full
 matrix validation grows exponentially. Arbitrary data loading and full amplitude
 readout are not free; these examples do not demonstrate a general classical-FFT
-speedup or quantum advantage. The next substantive GPT Pro checkpoint remains
-after QFT/QPE, before HHL/Shor.
+speedup or quantum advantage. The combined QFT/QPE review is accepted;
+HHL/Shor design contracts are the next step before implementation.

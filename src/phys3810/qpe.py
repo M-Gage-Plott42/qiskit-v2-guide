@@ -35,9 +35,10 @@ def qpe_circuit(num_counting_qubits: int, unitary: QuantumCircuit | Gate) -> Qua
     Registers are count[0:m] followed by target[0:k]. count[j] controls U**2**j;
     count[0] is the least-significant output bit. The final inverse QFT includes
     swaps, so measuring count[j] into classical bit j needs no bit reversal.
-    The returned circuit has no state preparation, measurements, classical
-    bits, or extra ancillas. With an eigenstate input, full-state ordering is
-    |target>|count>, and the target is unchanged apart from its shared phase.
+    The returned circuit has no target-state preparation, measurements,
+    classical bits, or extra ancillas. With an eigenstate input, full-state
+    ordering is |target>|count>, and the target is unchanged apart from its
+    shared phase.
     """
     if isinstance(num_counting_qubits, bool) or not isinstance(num_counting_qubits, Integral):
         raise TypeError("num_counting_qubits must be an integer, not a boolean.")

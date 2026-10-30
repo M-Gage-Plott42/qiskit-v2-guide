@@ -32,7 +32,7 @@ See [the authoritative PDF receipt](handouts/README.md).
   Its default path runs locally without an IBM account or quantum hardware.
   Internet is needed for package installation.
 - QFT and QPE are implemented and locally validated, but are not in this
-  Grover download. Their combined independent review is pending before HHL/Shor work.
+  Grover download. Their combined independent review is accepted; HHL/Shor design is next.
   Do not repeat the superseded instruction to begin QFT.
 - The **proposed** lesson has a 50-minute core and an expansion to 75 minutes;
   live pacing has not yet been rehearsed with this class.
@@ -95,8 +95,8 @@ HHL/Shor remain outside the current milestone. Native-platform checks and
 rehearsal follow confirmed teaching arrangements. The original Grover PDF
 editions remain unchanged as the first instructor packet.
 
-**GPT Pro sync: due for the completed QFT/QPE milestone.** The delivery receipt
-is resolved; the new review concerns phase conventions before HHL/Shor. No extra technical
+**GPT Pro sync: not needed for the reconciled QFT/QPE follow-ups.** The delivery
+receipt and independent phase-convention checkpoint are resolved. No extra technical
 audit is assigned to the user or instructor.
 
 ## Subsequent local integration, October 30

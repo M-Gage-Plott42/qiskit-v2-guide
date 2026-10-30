@@ -2,7 +2,8 @@
 
 October 30, 2026. This contract precedes QPE implementation. It completes the
 planned QFT/QPE session using the existing exact QFT. It does not implement HHL
-or Shor. The combined phase-convention review is due after this milestone.
+or Shor. The combined phase-convention review has been accepted; see
+[the reconciliation](QFT_QPE_REVIEW_RECONCILIATION.md).
 Implementation and local checks are now complete; see [QPE_VALIDATION.md](QPE_VALIDATION.md).
 
 ## Supported interface

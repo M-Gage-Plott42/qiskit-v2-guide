@@ -120,6 +120,15 @@ data in public code, notebooks, documentation, outputs, or validation logs.
 - Do not infer that another chat sees local files or that a sync has happened.
   Record the reviewed snapshot and actually received response. Keep private
   chat text out of public docs; retain only technical conclusions.
+- At every sync, state which local files/attachments are actually accessible
+  and which reviewer files are only referenced. A screenshot, filename card,
+  private `sandbox:` link, or same-account login is not proof of file transfer.
+  For an unchanged-snapshot review, a report identifying the ZIP/manifest and
+  declaring no file changes is sufficient; no return ZIP is required. If GPT
+  Pro creates/edits files, request a real downloadable ZIP or patch with base
+  revision, relative paths, and hashes of the delivered bytes, then require
+  those bytes to be attached or made locally available before integrating them.
+  Never claim to have read or applied an inaccessible private-sandbox copy.
 
 Milestone 1's independent review was received and its required correction was
 demonstrated on October 29, 2026; see the
@@ -154,13 +163,19 @@ prefix hashes were verified locally. Keep those existing PDFs unchanged.
 The [instructor review plan](teaching/phys3810-fa2026/INSTRUCTOR_REVIEW_PLAN.md)
 uses the two verified v0.2 guides plus the unchanged published rc1 ZIP. Sending
 remains the user's action; the audit does not authorize external messages.
-The combined QFT/QPE checkpoint is now due. Prepare one standalone runnable
-review ZIP on the desktop and a separate GPT Pro prompt; no independent review
-of the QPE snapshot has been received yet. Keep the final response block for
+The independent QFT/QPE review has been received and accepted: no blocking
+defects, a fresh Linux CPython 3.12.14 install, and 92 tests/six notebooks passed.
+Four optional follow-ups were reconciled locally; see the
+[review disposition](teaching/phys3810-fa2026/QFT_QPE_REVIEW_RECONCILIATION.md).
+The current 97-test revision adds regression coverage and presentation/docstring
+clarity without changing QFT/QPE computational logic. No new GPT Pro round is
+needed solely for those evidenced updates. Keep the final response block for
 the next instruction back to Codex. The QFT/QPE technical review bundle uses
 version-matched Markdown setup and excludes the Grover-only PDF editions;
 those reviewed PDF bytes remain unchanged in the repository. This review
 snapshot does not replace the Grover rc1 ZIP or publish a new student release.
-Stop before HHL/Shor implementation and reconcile the actual returned review.
+The next action is HHL/Shor design contracts: declare HHL eigenvalue encoding
+and Shor target-register/oracle scope before implementation. The current QPE
+target bound remains unchanged. This reconciliation stops before implementation.
 No push, PR, merge, release change, external message, or hardware job is part
 of this local milestone. Preserve the original checkout/index and rc1 assets.

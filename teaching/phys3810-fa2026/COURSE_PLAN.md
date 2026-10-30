@@ -109,7 +109,7 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    the existing PDFs; integrate those exact bytes in the planned documentation change;
    see [the release audit](GROVER_RELEASE_RECONCILIATION.md). Further publication
    remains a separately authorized action through the normal repository workflow.
-3. **QFT/QPE implemented locally; independent review due.** Compare the QFT operator with the full Fourier matrix;
+3. **QFT/QPE independently accepted; optional follow-ups reconciled.** Compare the QFT operator with the full Fourier matrix;
    test QPE on asymmetric exact phases and a nonexact phase distribution.
    Document sign/bit conventions and verify SDK references and fresh kernels.
 4. **HHL/Shor lessons.** Specify supported small cases and limitations. For HHL,
@@ -136,6 +136,6 @@ validated under [QPE_PLAN.md](QPE_PLAN.md). The original checkout remains
 preserved under [GIT_INTEGRATION_PLAN.md](GIT_INTEGRATION_PLAN.md).
 The review's October 30-November 2 feedback window and November 2-6 QFT/QPE
 target are provisional planning targets, not confirmed sessions or commitments.
-QFT/QPE now await their combined independent review. Freeze each session's materials at least one
+QFT/QPE review is accepted; HHL/Shor design contracts are next. Freeze each session's materials at least one
 week before its confirmed date, after platform checks and a pacing rehearsal;
 actual dates, preparation, platform, and assessment decisions remain open.

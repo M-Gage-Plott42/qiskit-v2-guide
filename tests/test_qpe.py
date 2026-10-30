@@ -251,6 +251,37 @@ class QPEMathematicsTests(unittest.TestCase):
         np.testing.assert_allclose(state.probabilities([0, 1, 2]), expected_probabilities,
                                    rtol=0, atol=ATOL)
 
+    def test_nonexact_two_target_superposition_with_global_phase(self):
+        rng = np.random.default_rng(2026)
+        basis, _ = np.linalg.qr(rng.normal(size=(4, 4)) + 1j * rng.normal(size=(4, 4)))
+        coefficients = rng.normal(size=4) + 1j * rng.normal(size=4)
+        coefficients /= np.linalg.norm(coefficients)  # Normalize only the prepared input.
+        phases = np.array([0.071, 0.219, 0.487, 0.913])
+        phase_shift = 0.173
+        matrix = (basis * np.exp(2j * np.pi * phases)) @ basis.conj().T
+        unitary = QuantumCircuit(2, global_phase=2 * np.pi * phase_shift)
+        unitary.append(UnitaryGate(matrix), [0, 1])
+
+        for width in (2, 4, 6):
+            state = Statevector.from_instruction(prepared(width, unitary, basis @ coefficients))
+            # The controlled circuit's global phase shifts every eigenphase.
+            # The last phase wraps past one; both formulas handle that period.
+            expected_state = sum(
+                coefficients[j] * np.kron(basis[:, j], amplitudes(phi + phase_shift, width))
+                for j, phi in enumerate(phases)
+            )
+            expected_probabilities = sum(
+                abs(coefficients[j])**2 * sine_probabilities(phi + phase_shift, width)
+                for j, phi in enumerate(phases)
+            )
+            with self.subTest(width=width):
+                # Compare the coherent state and its marginal independently,
+                # without renormalizing results or fitting away a global phase.
+                np.testing.assert_allclose(state.data, expected_state, rtol=0, atol=ATOL)
+                np.testing.assert_allclose(state.probabilities(list(range(width))),
+                                           expected_probabilities, rtol=0, atol=ATOL)
+                np.testing.assert_allclose(np.vdot(state.data, state.data), 1, rtol=0, atol=ATOL)
+
     def test_sdk_reference_with_explicit_output_reversal(self):
         for targets in (1, 2):
             _, _, matrix = spectral_fixture(targets)

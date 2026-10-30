@@ -1,23 +1,28 @@
 # PHYS 3810 status
 
-As of October 30, 2026: **QPE is implemented and locally validated; the combined
-QFT/QPE independent review is due.** Work is on local branch
-`feat/phys3810-qpe`, following integration commit
-`f277e213ea44d0f119add543cabbeceda6e706d8`. The new milestone passes **92 tests
-and six required notebooks**. See [QPE_VALIDATION.md](QPE_VALIDATION.md) for
-commands, independent expectations, register conventions, and limits.
+As of October 30, 2026: **the independent QFT/QPE review is accepted and
+reconciled; HHL/Shor design contracts are next.** The review found no blocking
+defects in snapshot `e365d38c324444e3558bbd2d175c17c9c54ccf97`. It reports a
+fresh Linux CPython 3.12.14 install passing 92 tests and six notebooks. Four
+optional P3 follow-ups were adopted locally; the current revision passes
+**97 tests and six notebooks**. See [the review disposition](QFT_QPE_REVIEW_RECONCILIATION.md).
 
-The source/notebooks/tests form a standalone technical review snapshot, with
-version-matched Markdown setup. The exact commit, ZIP hash, extracted-run
-results, and desktop-copy verification are recorded in the local handoff
-receipt under `artifacts/qpe-2026-10-30/`. No GPT Pro response for this snapshot
-has yet been received. HHL/Shor remain unimplemented.
+Work continues on `feat/phys3810-qpe` in the established integration worktree.
+The QPE prediction now precedes the answer, its target-preparation wording is
+precise, and new QFT editable-cell and QPE mixed-state regressions preserve the
+reviewer's successful cases. Computational logic, the strict validator, pins,
+and QFT source are unchanged. HHL/Shor implementation has not begun.
 
-The original dirty checkout/index remain intact. Continue in the established
-integration worktree. Grover rc1 remains the published 50-test/four-notebook
-preview; its source, ZIP, and release PDFs have not changed. The verified v0.2
-PDFs also remain unchanged and are excluded from the QFT/QPE review ZIP because
-they describe Grover-only setup. No new PDF was generated or substituted.
+All eight files referenced by the review have accessible local copies. The
+reviewer reported an unchanged 33-file ZIP; no replacement files were supplied
+or needed. Its private sandbox paths are not directly accessible here. Future
+handoffs explicitly distinguish review reports from transferred changed files.
+
+The reviewed desktop ZIP remains immutable, with SHA-256
+`a8ed3ed9ece505d941adb84f054f8a1e17a79374336216bb9e4ef9470fea2832`.
+It contains the reviewed 92-test snapshot, not the subsequent 97-test changes.
+The original checkout/index, verified PDF bytes, and Grover rc1 assets remain
+preserved; no publication, external message, or hardware job occurred.
 
 Technical review and validation are owned by the implementation assistant;
 the user is not being asked to review code manually. The latest coordination
@@ -50,7 +55,8 @@ QFT is excluded from the release; its local evidence is in [QFT_VALIDATION.md](Q
   See the Grover evidence report for archive/path checks and precise limits.
 - **QFT implemented and tested locally:** canonical exact transform on 1–6
   qubits, 14 new tests, and a seven-code-cell teaching notebook. The development
-  validator passes **64 tests and five required notebooks**, including two QFT figures.
+  validator passed **64 tests and five required notebooks** at the QFT-only
+  checkpoint, including two QFT figures. The combined suite is now 97 tests/six notebooks.
 - **Independent review evidence:** GPT Pro reported another Linux install on
   CPython 3.12.14 with the same 114 application-package pins, all original 19
   tests and three notebooks passing, and reproduced M1-01. The correction was
@@ -66,9 +72,17 @@ QFT is excluded from the release; its local evidence is in [QFT_VALIDATION.md](Q
   A separate optional environment passed the Runtime fake-backend smoke locally;
   this does not validate hardware access.
 - **QPE implemented and tested locally:** numeric 1-2-qubit target unitaries,
-  1-6 counting qubits, 23 source tests, five editable-cell regressions, and an
-  eight-code-cell notebook. All 64 prior tests remain; the validator now runs
-  92 tests and six notebooks. The SDK output reversal is explicitly reconciled.
+  1-6 counting qubits, 24 source tests, five editable-cell regressions, and an
+  eight-code-cell notebook. The reviewed baseline contained 92 tests and six
+  notebooks; the P3 follow-up coverage now raises that to 97 tests. The SDK
+  output reversal is explicitly reconciled.
+- **Independent QFT/QPE review accepted:** fresh Linux x86_64/glibc 2.39,
+  CPython 3.12.14, 114 installed packages covered by active constraints matching
+  pins, 92 tests, six notebooks, 35 code cells, and ten figures. These are
+  reviewer-reported executions, distinct from local reused-environment evidence.
+- **Review follow-ups validated locally:** four QFT editable-cell regressions
+  and one nonexact two-target/global-phase QPE regression raise the suite to 97.
+  Prediction ordering and docstring wording changed without computational changes.
 - **Not implemented / untested:** HHL and Shor lessons.
   The original smoke notebooks do not count as those algorithm implementations.
 - **Drafts now, final later:** the original v0.1 guides remain published with
@@ -94,18 +108,19 @@ these facts do not establish the invited-session dates.
 
 ## Recommended next actions
 
-1. **Send the standalone QFT/QPE ZIP and chat-provided review prompt to GPT Pro.**
-   Review the exact transferred source, mathematics, editable exercises, and
-   sign/register conventions. The assistant owns technical review and repairs.
-2. **Return the actual review to Codex for reconciliation.** Reproduce actionable
-   findings, update evidence, and resolve the shared phase conventions before
-   starting HHL/Shor. Do not infer that another chat sees this local worktree.
-3. **In parallel, instructor feedback:** the user can send the unchanged Grover
-   review packet. Dates, platforms, classroom emphasis, and assessment remain
-   open; sending has not been confirmed in this thread.
-4. **Later teaching/publication work:** native-platform and interactive checks,
-   pacing rehearsal, and version-matched PDFs still precede final classroom
-   claims. Local implementation does not authorize publication or messages.
+1. **Prepare HHL/Shor design contracts only.** Specify HHL evolution sign,
+   time/scaling, spectral interval, phase/eigenvalue decoding, reciprocal
+   rotation, and uncomputation. Specify Shor's arithmetic or explicitly compiled
+   model and target-register scope; do not silently widen the current QPE bound.
+2. **Implement only after those contracts are explicit.** Preserve independent
+   mathematical expectations and the accepted QFT/QPE conventions. No HHL/Shor
+   implementation is part of this reconciliation.
+3. **In parallel, instructor feedback:** the unchanged Grover review packet is
+   ready. Dates, platforms, classroom emphasis, and assessment remain open;
+   sending has not been confirmed in this thread.
+4. **Later validation and publication:** native-platform and interactive checks,
+   pacing rehearsal, and matching PDFs still precede final classroom claims.
+   Further external actions require authorization covering them.
 
 Native Windows/macOS checks and instructor decisions can progress alongside
 Linux algorithm development. They limit portability and release claims; they
@@ -114,7 +129,8 @@ are still unknown. No implementation of QFT, QPE, HHL, or Shor was included in t
 Grover preview. Remote CI passed for Grover. A deliberately failed remote job's
 artifact-upload behavior and remote QFT checks remain untested.
 
-**GPT Pro sync: due now.** The combined QFT/QPE phase-convention checkpoint is
-ready for independent review; no such response has yet been received. User
-input needed next: transfer the prepared ZIP/prompt and return the review.
-No manual source or diff audit is assigned to the user.
+**GPT Pro sync: not needed for these evidenced P3 follow-ups.** The independent
+phase-convention checkpoint is closed. Sync sooner for a material QPE/environment
+scope change or unresolved mathematical disagreement; retain the later combined
+HHL/Shor review before publication. User input needed for this reconciliation:
+none. No manual code or diff audit is assigned to the user.

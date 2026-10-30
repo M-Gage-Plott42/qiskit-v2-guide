@@ -7,7 +7,8 @@ account, a GPU, or access to a quantum computer.
 
 **Current status:** onboarding, [Grover](notebooks/01_grover.ipynb),
 [QFT](notebooks/02_qft.ipynb), and [QPE](notebooks/03_qpe.ipynb) are implemented
-and tested locally. The combined QFT/QPE independent review is pending. Grover's independent review was received
+and tested locally. The combined QFT/QPE independent review is accepted,
+with its optional teaching/regression improvements applied. Grover's independent review was received
 and its exercise correction was validated.
 The [Grover-only prerelease](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-grover-v0.1.0-rc1)
 and review-draft guides are published for early feedback. QFT/QPE are available

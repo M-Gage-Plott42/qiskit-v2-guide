@@ -1,11 +1,12 @@
 # Combined QFT/QPE validation
 
-October 30, 2026. **QPE is implemented and locally validated; the combined
-QFT/QPE independent review is pending.** This milestone follows local
+October 30, 2026. **QFT/QPE is independently accepted and its optional follow-ups
+are reconciled.** The original 92-test record below identifies the reviewed
+snapshot; current evidence is in [the reconciliation](QFT_QPE_REVIEW_RECONCILIATION.md). This milestone follows local
 integration commit `f277e213ea44d0f119add543cabbeceda6e706d8`. No Grover release
 asset, dependency pin, or existing QFT implementation was changed.
 
-## Implemented scope
+## Original reviewed scope (92 tests)
 
 - `src/phys3810/qpe.py`: `qpe_circuit(m, unitary)` on 1-6 counting qubits and
   a numeric 1-2-qubit gate/circuit, with caller-supplied target preparation.
@@ -44,7 +45,7 @@ comparison. The notebook exposes that difference; no hidden bitstring reversal
 is built into canonical decoding. The SDK is an additional reference, not the
 source of the independent mathematical expectations.
 
-## Executed local checks
+## Original local checks before independent review
 
 Platform: Linux x86_64, glibc 2.43. The reused classroom environment contains
 CPython **3.12.15**, Qiskit **2.6.1**, Aer **0.17.2**, nbclient **0.11.0**, and
@@ -100,6 +101,24 @@ commits, and timed classroom delivery. **Unimplemented:** HHL and Shor.
 The published Grover-only rc1 remains a distinct 50-test/four-notebook snapshot.
 The original checkout/index, verified PDFs, and rc1 assets remain preserved.
 
-**GPT Pro sync: due now for the combined QFT/QPE milestone.** No independent
-review of this new snapshot has been received. Further HHL/Shor work is outside
-this milestone; the next action is review and reconciliation of its findings.
+## Independent review and subsequent reconciliation
+
+The received review accepted source `e365d38c324444e3558bbd2d175c17c9c54ccf97`,
+ZIP `a8ed3ed9ece505d941adb84f054f8a1e17a79374336216bb9e4ef9470fea2832`,
+with no blocking defects. It reports a **fresh** Linux x86_64/glibc 2.39,
+CPython 3.12.14 installation of the supplied pins, 114 active-constraint package
+matches, 92 tests/six notebooks, and additional successful numerical probes.
+This evidence is separate from Codex's reused CPython 3.12.15 environment.
+
+Local follow-ups move prediction text ahead of answer output, clarify target
+preparation wording, add four actual-cell QFT regression cases, and add one
+nonexact two-target/global-phase QPE test with three precision subtests.
+The current suite passes **97 tests and six notebooks**; all 35 code cells and
+ten figures remain required. The QPE computational AST and notebook code cells
+are unchanged; no QFT algorithm or validator logic changed. The original
+92-test archive remains preserved, not relabeled as the new revision.
+
+See [QFT_QPE_REVIEW_RECONCILIATION.md](QFT_QPE_REVIEW_RECONCILIATION.md) for each
+finding, access/transfer clarification, commands, and limits. **GPT Pro sync:
+not needed for these evidenced P3 follow-ups.** HHL/Shor design is next;
+implementation remains outside this reconciliation.

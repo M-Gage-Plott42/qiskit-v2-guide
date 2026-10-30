@@ -15,18 +15,18 @@ recommended proceeding to Grover after an evidenced correction without another
 approval round. [REVIEW_RECONCILIATION.md](REVIEW_RECONCILIATION.md) records the
 subsequent local reproduction, fix, tests, and remaining limitations.
 
-Current position: milestone 1/Grover reviews and PDF receipts are reconciled.
-Git integration is complete, and QPE now completes the locally validated
-QFT/QPE milestone on `feat/phys3810-qpe`: 92 tests and six notebooks pass.
-See [QPE_VALIDATION.md](QPE_VALIDATION.md) and [QPE_PLAN.md](QPE_PLAN.md).
-The original checkout/index and Grover rc1 assets remain intact. No QFT/QPE
-publication or independent review response is claimed.
+Current position: the independent QFT/QPE review has been received and accepted
+with no blocking defects. It executed the immutable 92-test/six-notebook snapshot
+in a fresh Linux CPython 3.12.14 environment. Four optional follow-ups are now
+locally reconciled with 97 tests/six notebooks. See
+[QFT_QPE_REVIEW_RECONCILIATION.md](QFT_QPE_REVIEW_RECONCILIATION.md).
+The new local revision is distinguished from the exact ZIP GPT Pro executed.
+No additional phase-algorithm implementation or dependency change was needed.
 
-The immediate checkpoint is the combined QFT/QPE review, using a standalone
-ZIP plus the separately supplied GPT Pro prompt. Reconcile the received response
-before HHL/Shor implementation. The Grover instructor packet remains available
-for teaching feedback; sending has not been confirmed. Its PDFs do not describe
-the larger QFT/QPE validation snapshot and are not included in this review ZIP.
+The next work is HHL/Shor design contracts, with HHL eigenvalue encoding and
+Shor register/oracle scope settled before implementation. The original
+checkout/index, PDF bytes, Grover release, and reviewed phase ZIP remain intact.
+The instructor packet can support pedagogical feedback; sending is not assumed.
 
 Keep responsibilities distinct: the course plan defines deliverables;
 `STATUS.md` records current evidence; `VALIDATION.md` records executed checks;
@@ -74,17 +74,17 @@ still need authorization covering those actions.
 
 ## Immediate next technical action
 
-Transfer the prepared standalone QFT/QPE snapshot and its separate review prompt
-to GPT Pro. The reviewer should check full Fourier/QPE mathematics, controlled
-powers, target preparation, bit interpretation, SDK output normalization,
-finite-precision distributions, exercise variations, and scope claims.
-No HHL/Shor implementation begins during this checkpoint. Once the response
-returns, Codex reproduces and repairs actionable findings and records their
-disposition before proposing the next implementation contract.
+Prepare the HHL/Shor design contracts before coding. HHL must fix evolution
+sign/time/scaling, spectral interval, phase wrapping and negative-eigenvalue
+policy, reciprocal rotation, and inversion of QPE during uncomputation.
+Shor must choose explicit reversible arithmetic or a disclosed compiled/reduced
+model. N=15 ordinarily needs four target qubits, beyond the current QPE helper's
+one/two-target limit. Do not widen that limit and substitute dense powers as
+an implicit claim of scalable modular arithmetic.
 
-Keep the original preserved checkout intact and continue any repairs in the
-integration worktree. The technical review archive is a new identified local
-snapshot, not a replacement for published Grover rc1 or a new student release.
+These are future design choices, not open defects in the accepted QFT/QPE
+milestone. The current reconciliation stops before HHL/Shor implementation.
+Continue in the integration worktree and preserve the original checkout.
 
 ## Ordered work and completion checks
 
@@ -105,7 +105,7 @@ snapshot, not a replacement for published Grover rc1 or a new student release.
 3. **QFT module and lab — locally validated.** Test the full complex operator against the Fourier
    matrix with declared sign and swap/bit conventions. Compare with `QFTGate`,
    exercise inversion, and execute the teaching notebook from a fresh kernel.
-4. **QPE module and lab — locally validated; independent review due.** Build on tested QFT conventions; compare with
+4. **QFT/QPE checkpoint — independently accepted and reconciled.** Build on tested QFT conventions; compare with
    `phase_estimation()`. Independently verify asymmetric exact phases and a
    nonexact phase distribution. Test counting-register interpretation, not
    merely a visually plausible histogram.
@@ -149,9 +149,11 @@ platform and teaching claims provisional.
   values; appended provenance explains the different full-file hashes.
   [The receipt](handouts/README.md) preserves both records and their disposition.
   No replacement files or further PDF sync are needed.
-- **Due now after QFT/QPE, before HHL/Shor implementation:** review the shared phase
-  and bit conventions plus the proposed HHL/Shor restrictions and test contracts.
-  This catches conceptual errors before they propagate to the harder modules.
+- **Completed after QFT/QPE:** the unchanged reviewed snapshot passed a fresh
+  Linux installation and 92 tests/six notebooks. No blocking defects were found;
+  four optional P3 updates were adopted and locally validated with 97 tests.
+  Shared phase/bit conventions are resolved. HHL eigenvalue encoding and Shor
+  register/oracle scope still require written contracts before implementation.
 - **Recommended after HHL/Shor and before publication:** evaluate the combined
   mathematical evidence, limitations, setup PDF, and teaching sequence. Do not
   label a release independently reviewed until an actual response is recorded.
@@ -227,6 +229,50 @@ Use explicit source transfer between chats. Official
 describes sharing uploaded/connected project sources and keeping durable local
 guidance in repository docs. A chat's access to this working tree must be
 established, not inferred from use of the same account.
+
+## Access and return-file protocol
+
+At every sync, state the source revision, exact archive/hash, what is actually
+available in the current workspace, and what the receiving chat must be given.
+Do not equate conversation history, filenames, screenshots, file cards, or a
+private `sandbox:` URL with accessible bytes. Inspect local attachments,
+explicit downloads, or connected sources before claiming a file was read.
+OpenAI's [project documentation](https://learn.chatgpt.com/docs/projects)
+distinguishes conversation synchronization from project-file access; this
+workflow verifies the actual sources/tools available in each session.
+
+There are two different kinds of return:
+
+1. **Review only, files unchanged:** request a disposition identifying the
+   exact input ZIP/manifest and explicitly stating whether files changed.
+   That report is sufficient when the reviewed source already exists locally;
+   no return ZIP is required. Verify its identity against retained bytes and
+   distinguish reviewer-reported execution from new local reproduction.
+2. **Changed/new files, patches, or generated artifacts:** request a real
+   downloadable ZIP or applicable patch, with base revision, relative paths,
+   actual delivered-file sizes/SHA-256 values, and a concise change summary.
+   State that the files must be attached in this conversation or downloaded to
+   an accessible local path. Private sandbox references or screenshots alone
+   are not delivery. Do not claim those changes are integrated before reading
+   and verifying the actual returned bytes. PDF receipts must cover delivered
+   bytes including provenance, not only pre-delivery originals.
+
+Every future outgoing GPT Pro prompt should explicitly ask it to say whether
+it changed files and which of these return formats applies. If it only supplies
+private links, explain exactly what is missing; continue independent local work
+that does not depend on those files. Do not make the user assemble evidence or
+perform a manual code audit. If reviewer probe scripts were not returned,
+label any local reproduction as an equivalent case unless exact inputs are known.
+
+For each new outgoing snapshot, refresh the canonical-file inventory, tests,
+and expected counts. Do not reuse an older export whitelist unchecked. In
+particular, the reconciled phase suite now includes `tests/test_qft_notebook.py`
+and 97 tests; the preserved 33-file review ZIP remains the earlier 92-test snapshot.
+
+For the received QFT/QPE review, all eight referenced files already exist
+locally and in the retained archive. GPT Pro reported all 33 exported files
+unchanged. Its private sandbox paths are not mounted here, but no changed-file
+transfer is needed for this review. The report and verified snapshot suffice.
 
 ## Instructor feedback
 

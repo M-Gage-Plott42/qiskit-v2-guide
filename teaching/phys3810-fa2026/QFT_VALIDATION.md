@@ -102,3 +102,12 @@ QPE is now locally validated with the shared Fourier convention and explicit
 SDK output-order normalization. The current suite passes 92 tests and six
 notebooks; see [QPE_VALIDATION.md](QPE_VALIDATION.md). This earlier QFT-only
 evidence remains historical. The combined independent review is now due.
+
+## Accepted review and regression coverage, October 30
+
+The combined 92-test/six-notebook snapshot was independently accepted after a
+fresh Linux installation. Four actual-cell QFT parameter-edit regressions now
+retain the reviewer's successful checks. Together with the additional QPE
+regression, the current suite passes 97 tests; see
+[the reconciliation](QFT_QPE_REVIEW_RECONCILIATION.md). Earlier validation and
+checkpoint statements above retain their historical scope.
