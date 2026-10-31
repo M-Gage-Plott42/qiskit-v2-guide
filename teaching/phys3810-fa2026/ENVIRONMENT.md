@@ -23,8 +23,12 @@ and platform support. No IBM account is needed for this course's default path.
 Grover now has its own [implementation and validation evidence](GROVER_VALIDATION.md).
 QFT also has [separate mathematical and notebook evidence](QFT_VALIDATION.md).
 QPE has [its own phase/register contract](QPE_PLAN.md) and
-[validation evidence](QPE_VALIDATION.md). HHL and Shor remain future work;
-onboarding does not validate them.
+[validation evidence](QPE_VALIDATION.md). HHL and the bounded N=15 Shor lesson
+are implemented and independently accepted; their
+[reconciliation](HHL_SHOR_REVIEW_RECONCILIATION.md) records the corrected
+160-test/eight-notebook baseline. Onboarding alone does not validate algorithms.
+The [readiness plan](RELEASE_READINESS_PLAN.md) separates that reused-environment
+evidence from fresh installation and native/interactive checks still needed.
 Reference interfaces for the algorithm milestones are `QFTGate`,
 `phase_estimation()`, and `grover_operator()` with V2 primitives.
 

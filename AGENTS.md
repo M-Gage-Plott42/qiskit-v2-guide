@@ -195,7 +195,10 @@ The current local suite passes 160 tests/eight notebooks; all prior regressions
 remain. Algorithm source and supported families are unchanged. Preserve the
 reviewed archive as historical evidence rather than relabeling it as this revision.
 No additional GPT Pro round is needed solely for these evidenced P3 follow-ups.
-Next prepare a local classroom-release readiness plan while instructor feedback
-and platform/UI/pacing evidence remain pending; do not begin publication.
+The [classroom-release readiness plan](teaching/phys3810-fa2026/RELEASE_READINESS_PLAN.md)
+now inventories the local commits and remaining gates. Next is a fresh Linux
+installation of the corrected revision in an isolated source export/environment,
+then actual interactive setup checks. Instructor/platform/pacing/PDF/publication
+gates remain open. Planning did not run these steps or authorize publication.
 No push, PR, merge, release change, external message, or hardware job is part
 of this local milestone. Preserve the original checkout/index and rc1 assets.

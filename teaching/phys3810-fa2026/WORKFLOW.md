@@ -84,12 +84,18 @@ still need authorization covering those actions.
 
 ## Immediate next technical action
 
-Prepare a local classroom-release readiness plan. Inventory the unpublished
-integration commits and distinguish technical acceptance from native-platform,
-interactive setup, pacing, and version-matched PDF/package readiness. Define
-concrete validation and integration steps without publishing, messaging, or
-inventing instructor decisions. Rick's reply remains pending. The assistant
-continues to own implementation review and checks; no manual audit is required.
+The [classroom-release readiness plan](RELEASE_READINESS_PLAN.md) is complete.
+Next execute R1: a fresh Linux Python 3.12 installation against an isolated
+source export of the corrected 160-test revision. Preserve current environments
+and both checkouts. Record exact source/environment identity, installed versions,
+strict execution, source cleanliness, and outcomes. This is internal validation
+staging, not a new student archive or PDF request.
+
+Then execute R2's actual interactive setup checks. The remaining plan gates cover
+native platforms, teaching feedback/rehearsal, protected upstream integration,
+matching PDFs, final packaging, and publication. Rick's reply remains pending;
+unknown teaching decisions do not block R1. The planning turn executed none of
+those gates and did not authorize external actions.
 
 Do not broaden QPE, support nonexact HHL spectra, or claim general Shor arithmetic.
 Changes to supported families require a revised contract and appropriate evidence.
@@ -120,13 +126,14 @@ them or replace the published Grover preview.
    `phase_estimation()`. Independently verify asymmetric exact phases and a
    nonexact phase distribution. Test counting-register interpretation, not
    merely a visually plausible histogram.
-5. **HHL implemented and locally validated.** Follow [HHL_PLAN.md](HHL_PLAN.md),
+5. **HHL independently accepted; follow-ups reconciled.** Follow [HHL_PLAN.md](HHL_PLAN.md),
    which fixes supported matrices, input preparation, phase precision, reciprocal rotation, and
    postselection procedure. Use a small, nontrivial example and independently
    check postselection probability, uncomputation, normalization, and relative
    sign against a classical solve. Restrictions belong in student explanations.
-   [HHL_VALIDATION.md](HHL_VALIDATION.md) records the completed local checks;
-   this is not yet an independent GPT Pro review of HHL.
+   [HHL_VALIDATION.md](HHL_VALIDATION.md) retains the original local evidence;
+   [the combined reconciliation](HHL_SHOR_REVIEW_RECONCILIATION.md) records
+   independent acceptance and the current 160-test follow-up.
 6. **Shor independently accepted; review follow-ups reconciled.** Follow [SHOR_PLAN.md](SHOR_PLAN.md)
    for the fixed modulus, bases, compiled full-domain model, and failure policy;
    implement and test the declared modular permutations, order recovery, and
@@ -134,7 +141,9 @@ them or replace the published Grover preview.
    Identify any compiled small-instance shortcuts explicitly. Do not use removed
    HHL/Shor imports or imply a general scalable implementation.
 7. **Preview published; documentation integrated locally; final release later.**
-   The supplied PDF editions are tracked using corrected delivered-file receipts.
+   Follow [RELEASE_READINESS_PLAN.md](RELEASE_READINESS_PLAN.md) for the explicit
+   remaining gates. The supplied PDF editions are tracked using corrected
+   delivered-file receipts.
    Preserve their bytes and the original rc1 source/assets. Follow
    [PREVIEW_PLAN.md](PREVIEW_PLAN.md), preserving the normal PR/check workflow
    and the local-only authorization boundary. Then validate the claimed native platforms and
@@ -349,3 +358,15 @@ comparison with pre-adaptation source is separately recorded local evidence.
 Preserve the old ZIP and label all later packets with their own revision/counts.
 The D1 correction belongs in any new distribution; do not present the unchanged
 review archive as though it contains that correction.
+
+## Planning versus readiness execution
+
+The eight-commit inventory is anchored to `ec07359` and cached `origin/main`;
+it is not a live upstream or ruleset audit. Keep new planning-only commits
+separate in the evidence. Do not repeat completed integration/review work or
+rewrite historical archives to hide the corrected revision. A fresh source
+export and environment for R1 are internal validation, distinct from a student
+release candidate that requires a new version and matching supplied guide.
+Application tests need not be rerun for prose-only planning changes; verify
+Markdown, links, scope, and preservation, and retain the actual prior execution
+identity. No plan entry itself grants push/PR/merge/publication authority.

@@ -134,7 +134,8 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    [reconciliation](HHL_SHOR_REVIEW_RECONCILIATION.md) records acceptance, the
    notebook status correction, and two optional improvements; current validation
    passes 160 tests and eight notebooks. Prepare release readiness next.
-5. **Teaching release.** Validate setup instructions on the claimed classroom
+5. **Teaching release.** Follow the staged
+   [readiness plan](RELEASE_READINESS_PLAN.md). Validate setup instructions on the claimed classroom
    platforms, obtain the matching ChatGPT-reviewed PDF, rehearse the timed
    sessions, and check every notebook from a downloaded archive. Record any
    intentionally unsupported platforms and unresolved teaching decisions.

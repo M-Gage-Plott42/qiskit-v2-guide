@@ -1,5 +1,11 @@
 # Grover preview publication
 
+This is the historical Grover-only publication record. Later implementation and
+review are complete; follow [STATUS.md](STATUS.md) and the
+[classroom-release readiness plan](RELEASE_READINESS_PLAN.md) for current work.
+Historical QPE-next/send-packet wording below is not an instruction to repeat
+completed work or send another message; Rick's reply is pending.
+
 Published October 29, 2026:
 [phys3810-fa2026-grover-v0.1.0-rc1](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-grover-v0.1.0-rc1).
 The course-prefixed release is explicitly a prerelease. Existing stable

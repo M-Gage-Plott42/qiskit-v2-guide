@@ -1,0 +1,266 @@
+# Classroom-release readiness plan
+
+October 30, 2026. **Planning only.** All five bounded lessons are implemented
+and their technical reviews are accepted. A complete classroom release is not
+yet ready: the corrected source needs fresh-install and interactive evidence,
+claimed native platforms need execution, teaching arrangements remain provisional,
+and new matching PDFs/package/publication checks remain outstanding.
+
+This plan does not execute those steps. No environment installation, runtime
+rerun, upstream fetch, new archive, PDF generation, push, PR, merge, release,
+message, or hardware job is part of this planning turn. The assistant owns
+technical review, repairs, packaging, and evidence; the user is not assigned
+manual code review. Rick's reply remains pending.
+
+## Source identity and unpublished local inventory
+
+The implementation baseline is `ec073599bb7c87019f957c129e8c6e4d66e9a61c` on
+`feat/phys3810-qpe` in the durable integration worktree
+`artifacts/local-integration-2026-10-30/worktree` relative to the original repo.
+Its recorded baseline is **160 tests, eight notebooks, 50 nonempty code cells,
+16 PNGs**. HHL and Shor each require three figures. Runtime/cloud/GPU remain
+excluded; supported algorithm inputs and QPE's one/two-target limit are fixed.
+
+Local refs show eight commits ahead and zero behind cached `origin/main`,
+`3894391f2026d4fd9351b346b44b5eda453a17da`, the Grover rc1 source. No remote query
+or fetch was performed here. These commits are treated as unpublished from the
+local-only session history and cached refs, not a new certification of GitHub's
+live state. The old local `main` is stale; do not use it as an integration base.
+
+1. `b16d235ca01ebc9c7f610dcfeb64f081d5d6b453`: documentation and verified Grover
+   document-v0.2 PDFs, with receipts; preserves the 50-test Grover code snapshot.
+2. `f277e213ea44d0f119add543cabbeceda6e706d8`: protected QFT integration,
+   mathematical tests, teaching notebook, and 64-test/five-notebook checkpoint.
+3. `e365d38c324444e3558bbd2d175c17c9c54ccf97`: QPE implementation and tests;
+   the independently reviewed 92-test/six-notebook snapshot.
+4. `695c425374444b3cdf860291b38eedc44682112a`: accepted phase-review follow-ups,
+   transfer policy clarification, and 97-test regression baseline.
+5. `6ed4d19d219db2eac3f2abccd7f53624c0c9c483`: bounded HHL/Shor design contracts.
+6. `234c6084c414664a33b6c5856f22b0aa322325ca`: exact-spectrum HHL, tests,
+   notebook, strict validation; 129 tests/seven notebooks.
+7. `a85a88aa1fa148b8e64c739444899d5882202973`: compiled full-domain N=15 Shor;
+   the independently reviewed 158-test/eight-notebook snapshot.
+8. `ec073599bb7c87019f957c129e8c6e4d66e9a61c`: accepted HHL/Shor reconciliation,
+   corrected lesson availability, three-figure gates, theoretical Shor recovery
+   probabilities, and the current 160-test baseline.
+
+This planning update is a separate documentation change after those eight
+commits. Its final local commit is recorded in the planning receipt; it does not
+create a new algorithm-validation result or supersede the execution baseline.
+
+## Completed evidence and its limits
+
+- **Passed locally:** corrected `ec07359`, reused Linux x86_64/glibc 2.43,
+  CPython 3.12.15, full required checks, 160 tests/eight fresh-kernel notebooks,
+  50 code cells/16 figures. Source outputs remain empty. See
+  [the reconciliation](HHL_SHOR_REVIEW_RECONCILIATION.md).
+- **Independent review accepted:** QFT/QPE's 92-test snapshot was installed
+  freshly on Linux/CPython 3.12.14; the later 158-test HHL/Shor snapshot reused
+  that environment. The latter passed all eight notebooks and mathematical
+  review. Neither is a fresh install of the corrected 160-test revision.
+- **Preserved and verified:** original checkout/index and recovery checkpoint,
+  Grover rc1 assets, delivered v0.2 PDFs, and immutable 92-/158-test review ZIPs.
+  The previous desktop review copies are absent; retained archives are intact.
+- **Not yet executed for the corrected classroom candidate:** fresh dependency
+  installation, native Windows/macOS, interactive Jupyter/editor setup, timed
+  classroom rehearsal, new student-package extraction, or remote CI.
+- **Not yet supplied:** full-course, version-matched student/instructor PDFs.
+  The existing v0.2 documents describe Grover-only rc1 (50 tests/four notebooks).
+  They remain valid for that edition, not the new eight-notebook course.
+
+Fresh kernels and a fresh virtual environment are different evidence. Wheel
+availability, lock resolution, WSL, or another OS's successful run cannot be
+reported as native Windows/macOS execution. No new algorithm review is needed
+solely for the already demonstrated P3 corrections.
+
+## Ordered readiness steps and completion criteria
+
+### R1. Fresh Linux installation of the corrected source — next action
+
+Can proceed without Rick's reply. Export an identified committed snapshot to a
+new local staging directory outside both checkouts and create a new isolated
+CPython 3.12 virtual environment, without system site packages. Preserve the
+existing classroom/tool environments. This is internal validation staging, not
+a replacement student ZIP or new GPT Pro packet; it requires no new PDF yet.
+
+Install with the documented pip version and unchanged requirements/constraints.
+Record the exact source commit, OS/architecture/libc, interpreter, installed
+versions, and correspondence with active constraints. A fresh virtual environment
+on the existing host is not a fresh operating-system installation.
+
+**Done when:** dependency installation and `pip check` pass; all 160 tests and
+eight notebooks pass from that isolated source with 50 code cells/16 PNGs;
+HHL/Shor each produce three required figures; the original smoke workflow passes;
+source/manifest bytes stay unchanged and notebooks stay output-free. Use the
+selected new interpreter for tests and kernels, and existing separate maintainer
+tools for applicable lint. Retain logs/failure artifacts outside tracked files.
+If a dependency repair is needed, scope it explicitly, regenerate evidence,
+and reassess review/platform implications; do not quietly upgrade the pins.
+
+### R2. Interactive setup and return workflow — after R1
+
+Actually launch JupyterLab from the validated environment, select the intended
+kernel, open preflight and the course lessons, restart/run all, and inspect
+plots/errors. Close and reopen the application and repeat the documented
+return-to-work steps. Exercise the intended editor's interpreter/kernel selection
+if its workflow will be claimed as supported. An automated nbclient run alone
+does not close this step.
+
+**Done when:** the observed UI, interpreter paths, kernel selection, lesson/figure
+rendering, restart/run behavior, and reopening steps are recorded against the
+snapshot and setup instructions. Record editor/browser versions where used.
+Correct instructions that fail. If UI access is unavailable, record **untested**
+and the specific unavailable surface; do not substitute headless execution or
+assign the user a code audit. Linux setup can progress independently of the
+remaining native-platform decisions.
+
+### R3. Native-platform coverage — conditional on claimed classroom targets
+
+Linux x86_64 is the demonstrated development platform. Windows x64 and macOS
+ARM64/Intel are candidate targets in [ENVIRONMENT.md](ENVIRONMENT.md), not passed
+platforms. Rick's student/platform feedback determines which are required.
+Windows ARM64 and 32-bit Python remain outside the stated target.
+
+**Done for each claimed OS/architecture when:** record OS version/architecture,
+use a fresh native Python 3.12 environment, follow the actual setup path, install
+unchanged pins, run `pip check` and the full strict validator, and complete R2's
+UI workflow. Bash smoke is additional where Bash is supported; the Python
+validator remains the cross-platform entry point. Record failures and repairs
+per platform. If a host is unavailable, preserve **untested** status; either
+obtain execution evidence later or explicitly agree a supported classroom
+alternative before final support claims. Do not assume one macOS architecture
+covers another or ask students to solve an unvalidated setup during class.
+
+### R4. Teaching decisions and pacing — provisional until feedback
+
+Pending: session count/dates/duration/deadline, five topics' in-class versus
+outside-class coverage, Python/Jupyter/quantum preparation, hands-on versus
+demonstration format, delivery responsibility, required platforms, assessment,
+and preferred notes/HHL/Shor examples. No answer or new outreach is assumed.
+All five tested implementations are available locally; eventual classroom
+emphasis does not remove that deliverable.
+
+The current proposal is three 50-minute cores with 75-minute expansions:
+Grover; QFT/QPE; HHL/Shor. Session 3 allocates 5 minutes QPE refresher, 20 HHL,
+20 Shor, and 5 limitations; expansion adds 15 HHL and 10 Shor minutes.
+
+**Done when:** record the agreed scope, prepare a presenter run sheet, and
+rehearse with prediction pauses, notebook transitions, demonstration execution,
+and exercise/debrief time. Record segment timings and revisions. The assistant
+can prepare materials and time executable demonstrations; that alone is not
+human classroom-pacing evidence. Arrange a presenter run-through when available,
+without assigning manual code review. Keep all required cells in validation even
+if only core discussion fits the session. Resolve solution distribution before
+shipping assessed variants; do not invent grading or duplicate notebooks now.
+
+### R5. Protected upstream integration and candidate identity — later local work
+
+Before freezing publication inputs, preserve this accepted history and recovery
+material, then refresh upstream during a separately authorized integration task.
+Inspect changes since cached `3894391`; do not assume it is still current.
+If reconciliation is needed, use a new durable worktree/branch, retaining the
+original checkout/index and reviewed commits. Record old-to-new commit mapping
+and rerun affected/full required checks after integration. Reassess any earlier
+platform/UI evidence against upstream changes; repeat affected native or
+interactive checks rather than carrying an invalidated result forward.
+
+Proposed ordered review groups are documentation/PDFs (`b16d235`), QFT/QPE with
+its reconciliation (`f277e21`, `e365d38`, `695c425`), then HHL/Shor contracts,
+implementations, and reconciliation (`6ed4d19`, `234c608`, `a85a88a`, `ec07359`).
+Keep each proposed change coherent and link-complete. The final reconciliation
+links earlier notebooks to later lessons, so do not detach it from those lessons.
+Readiness documentation belongs after the full chain, not in the initial
+Grover-only documentation group. Grouping is a plan, not PR creation authority.
+
+**Done when:** the resulting local candidate has a clean worktree, exact source
+identity, unchanged verified assets, updated acceptance evidence, and a concrete
+publication description. Choose a distinct full-course candidate version/name;
+check availability before publication. Do not reuse the Grover rc1 tag or
+pretend a 92-/158-test review ZIP contains the 160-test corrections.
+
+### R6. Matching student and instructor PDFs — when inputs stabilize
+
+Prepare synchronized Markdown companions using the agreed teaching scope,
+validated setup/platform claims, candidate version, notebook list, and current
+validation counts. Student instructions should omit maintainer coordination and
+internal review jargon; keep instructor answers separate when assessment needs it.
+
+**Done when:** ChatGPT supplies the matching PDFs after rendering, visual review,
+and OCR checks, and the delivered bytes are accessible locally. Verify exact
+full-file hashes/sizes including provenance, page counts, metadata, links, and
+placement under `handouts/` versus `instructor/`. Resolve receipt discrepancies
+before distribution. Do not rewrite or strip supplied bytes, and do not regenerate
+the existing v0.2 Grover PDFs. New document editions and code versions remain
+separate identities. A planned download URL must be labeled as such until live;
+verify it after publication. Avoid a PDF containing its enclosing ZIP's checksum,
+which would create a circular artifact identity.
+
+This is the next planned GPT Pro document/teaching sync, once the evidence and
+exact prompt can be prepared. No extra algorithm-review round is due merely to
+begin R1. Earlier unresolved mathematics or a scope/environment change may justify
+an earlier sync; prepare the concrete evidence first.
+
+### R7. New full-course package and extraction verification
+
+Build a new exact-revision package only after its source/version/setup inputs
+are fixed. A student-release candidate requires the matching supplied guide;
+an internal source export or technical review bundle is a distinct artifact.
+Refresh the export inventory and expected counts from **160**, not the old
+92-/158-test builder constants. Include every required test/helper and all eight
+notebooks; manifest every delivered payload file and record adaptations.
+
+Exclude prompts, policies/chat records, unrelated history, duplicate exports,
+Git metadata, generated outputs, caches, environments, credentials, and student
+information. Keep instructor answer documents outside a student-only package.
+For a future GPT Pro handoff, use one standalone desktop ZIP and a separate
+copyable chat prompt, following [WORKFLOW.md](WORKFLOW.md).
+
+**Done when:** unpack the sealed final archive outside both checkouts, verify its
+manifest, paths, exclusions, local links, output-free sources, imports, and exact
+version/count claims; run the full validator using the intended environment.
+Record fresh versus reused installation accurately. Require all 160 tests,
+eight notebooks, 50 cells, and 16 PNGs unless a separately documented change
+legitimately changes the baseline. Compare payload hashes after execution.
+Any edit to payload/setup/PDFs requires a new sealed archive and affected
+verification. Preserve the original reviewed ZIPs and Grover release unchanged.
+
+### R8. Normal publication and published-byte verification — not authorized now
+
+Prepare the complete candidate/evidence before requesting external publication
+authority. Verify the then-current repository rules and required checks without
+changing rulesets or the solo-maintainer policy. Local workflow contexts currently
+include `local-smoke`, `ruff`, `markdownlint`, `yamllint`, `actionlint`,
+`shellcheck`, `dependency-review`, `Analyze (python)`, and `Analyze (actions)`.
+This local inventory is not a live ruleset check; a conditional/skipped job is
+not a pass. Existing Ubuntu CI is not Windows/macOS evidence.
+
+**Done only after separate authorization:** push/open the scoped PRs, satisfy
+actual required checks and resolve findings, merge through the normal workflow,
+and identify the resulting source revision. If merging changes the revision,
+rebuild/revalidate the final package from it and confirm guide/version consistency
+before tagging/releasing. Publish under the new candidate identity, retaining
+Grover rc1 and its original assets. Anonymously download the final assets, verify
+hashes/manifests/links and release/tag targets, and retain publication receipts.
+No earlier Grover authorization covers this new release or instructor outreach.
+
+## Preservation and status reporting
+
+Keep the original recovery bundle, staged/unstaged patches, untracked archive,
+raw index, and restored-file/mode evidence at
+`artifacts/local-integration-2026-10-30/recovery` in the original repository.
+Never reset, clean, stash, or switch that dirty checkout as a cleanup shortcut.
+The verified student/instructor v0.2 full-file hashes remain recorded in
+[handouts/README.md](handouts/README.md); the Grover release receipt is in
+[PREVIEW_PLAN.md](PREVIEW_PLAN.md). Retain both earlier review archives unchanged.
+
+For every step record source identity, environment/platform, exact command or UI
+action, artifact location, outcome, and limitations. Use **passed**, **failed**,
+**skipped with reason**, or **untested** literally. No current gate is closed
+by this planning document. Its own validation covers Markdown, relative links,
+Git scope, and unchanged source/PDF/archive/index bytes only. The existing
+160-test/eight-notebook result remains prior execution evidence, not a rerun.
+
+**Recommended next task:** R1, fresh Linux installation from an isolated source
+export of the corrected revision. R2 follows with actual UI access; native-host,
+PDF, pacing, and publication steps remain explicit later gates. User decisions
+are not needed to start R1. **GPT Pro sync: not needed for this planning step.**
