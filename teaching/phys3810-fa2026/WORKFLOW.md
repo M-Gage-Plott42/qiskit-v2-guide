@@ -23,10 +23,13 @@ locally reconciled with 97 tests/six notebooks. See
 The new local revision is distinguished from the exact ZIP GPT Pro executed.
 No additional phase-algorithm implementation or dependency change was needed.
 
-The next work is HHL/Shor design contracts, with HHL eigenvalue encoding and
-Shor register/oracle scope settled before implementation. The original
-checkout/index, PDF bytes, Grover release, and reviewed phase ZIP remain intact.
-The instructor packet can support pedagogical feedback; sending is not assumed.
+The HHL/Shor design contracts are now complete: [HHL_PLAN.md](HHL_PLAN.md)
+fixes exact eigenvalue encoding, rotations, and postselection; [SHOR_PLAN.md](SHOR_PLAN.md)
+chooses a compiled full-domain N=15 model with a separate four-residue-qubit
+order finder. Neither is implemented. QPE remains bounded to one/two targets.
+The next work is HHL implementation only, then Shor as a separate milestone.
+The original checkout/index, PDFs, Grover release, and reviewed phase ZIP remain
+intact. The instructor packet can support teaching feedback; sending is not assumed.
 
 Keep responsibilities distinct: the course plan defines deliverables;
 `STATUS.md` records current evidence; `VALIDATION.md` records executed checks;
@@ -74,17 +77,19 @@ still need authorization covering those actions.
 
 ## Immediate next technical action
 
-Prepare the HHL/Shor design contracts before coding. HHL must fix evolution
-sign/time/scaling, spectral interval, phase wrapping and negative-eigenvalue
-policy, reciprocal rotation, and inversion of QPE during uncomputation.
-Shor must choose explicit reversible arithmetic or a disclosed compiled/reduced
-model. N=15 ordinarily needs four target qubits, beyond the current QPE helper's
-one/two-target limit. Do not widen that limit and substitute dense powers as
-an implicit claim of scalable modular arithmetic.
+Implement the exact-spectrum HHL milestone under [HHL_PLAN.md](HHL_PLAN.md).
+Preserve the declared positive evolution sign, three-bit decoding, full reciprocal
+lookup, and inversion of QPE without reversing target preparation. Verify count
+cleanup on both flag branches, unconditioned success probability, and the full
+normalized solution against independent classical expectations. The success flag
+is retained for postselection. Preserve the accepted phase source and all 97
+existing tests; register the HHL notebook with the unchanged strict runner.
 
-These are future design choices, not open defects in the accepted QFT/QPE
-milestone. The current reconciliation stops before HHL/Shor implementation.
-Continue in the integration worktree and preserve the original checkout.
+Shor follows separately under [SHOR_PLAN.md](SHOR_PLAN.md), with compiled
+full-domain N=15 multiplication, four residue qubits, and its own bounded order finder.
+Do not silently broaden QPE, support nonexact HHL spectra, or claim general
+Shor arithmetic. Any expanded scope requires a revised contract and appropriate
+new evidence before implementation. This design turn performed neither module.
 
 ## Ordered work and completion checks
 
@@ -109,13 +114,14 @@ Continue in the integration worktree and preserve the original checkout.
    `phase_estimation()`. Independently verify asymmetric exact phases and a
    nonexact phase distribution. Test counting-register interpretation, not
    merely a visually plausible histogram.
-5. **HHL design, then module/lab.** Before implementation, state the supported
-   matrices, input preparation, phase precision, reciprocal rotation, and
+5. **HHL contract ready; implementation next.** Follow [HHL_PLAN.md](HHL_PLAN.md),
+   which fixes supported matrices, input preparation, phase precision, reciprocal rotation, and
    postselection procedure. Use a small, nontrivial example and independently
    check postselection probability, uncomputation, normalization, and relative
    sign against a classical solve. Restrictions belong in student explanations.
-6. **Shor design, then module/lab.** State the supported composites and bases;
-   implement and test reversible modular arithmetic, order recovery, and
+6. **Shor contract ready; implementation follows HHL.** Follow [SHOR_PLAN.md](SHOR_PLAN.md)
+   for the fixed modulus, bases, compiled full-domain model, and failure policy;
+   implement and test the declared modular permutations, order recovery, and
    classical factor extraction separately, including unsuccessful cases.
    Identify any compiled small-instance shortcuts explicitly. Do not use removed
    HHL/Shor imports or imply a general scalable implementation.

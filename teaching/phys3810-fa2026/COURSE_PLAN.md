@@ -80,7 +80,10 @@ changes the answer. Students should connect resolution to counting qubits.
 **50-minute core:** 5 minutes recalling QPE; 20 minutes tracing a small HHL
 example, its postselection, and normalized solution state; 20 minutes tracing
 small-instance Shor order finding through classical factor extraction;
-5 minutes discussing assumptions and resource costs.
+5 minutes discussing assumptions and resource costs. The chosen HHL design is
+an exact-spectrum 2x2 demonstration; Shor uses compiled full-domain N=15
+permutations with four residue qubits. Each core traces one prepared example,
+not construction of a general solver or arithmetic network from scratch.
 
 **75-minute expansion:** add 15 minutes comparing HHL with a classical solve,
 including relative sign and uncomputation, and 10 minutes exploring successful
@@ -112,12 +115,13 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
 3. **QFT/QPE independently accepted; optional follow-ups reconciled.** Compare the QFT operator with the full Fourier matrix;
    test QPE on asymmetric exact phases and a nonexact phase distribution.
    Document sign/bit conventions and verify SDK references and fresh kernels.
-4. **HHL/Shor lessons.** Specify supported small cases and limitations. For HHL,
-   test postselection, uncomputation, normalization, and relative sign against
-   a classical solve. For Shor, independently test modular arithmetic, order
-   recovery, and factor extraction, including failure cases. Execute notebooks
-   in fresh kernels; avoid removed HHL/Shor imports and unsupported advantage
-   claims.
+4. **HHL/Shor contracts ready; implementation remains future work.** Follow
+   [HHL_PLAN.md](HHL_PLAN.md) for fixed positive evolution, exact eigenphases,
+   reciprocal rotations, postselection, and count cleanup. Follow
+   [SHOR_PLAN.md](SHOR_PLAN.md) for the explicitly compiled N=15 model,
+   full four-bit reversible action, verified order recovery, and factor failure
+   cases. Implement HHL first, then Shor, with independent tests and fresh-kernel
+   notebooks. The current QPE target-width limit remains unchanged.
 5. **Teaching release.** Validate setup instructions on the claimed classroom
    platforms, obtain the matching ChatGPT-reviewed PDF, rehearse the timed
    sessions, and check every notebook from a downloaded archive. Record any
@@ -136,6 +140,7 @@ validated under [QPE_PLAN.md](QPE_PLAN.md). The original checkout remains
 preserved under [GIT_INTEGRATION_PLAN.md](GIT_INTEGRATION_PLAN.md).
 The review's October 30-November 2 feedback window and November 2-6 QFT/QPE
 target are provisional planning targets, not confirmed sessions or commitments.
-QFT/QPE review is accepted; HHL/Shor design contracts are next. Freeze each session's materials at least one
+QFT/QPE review is accepted; HHL/Shor design contracts are now written and HHL
+implementation is next. No implementation evidence for either is claimed yet. Freeze each session's materials at least one
 week before its confirmed date, after platform checks and a pacing rehearsal;
 actual dates, preparation, platform, and assessment decisions remain open.

@@ -174,8 +174,13 @@ the next instruction back to Codex. The QFT/QPE technical review bundle uses
 version-matched Markdown setup and excludes the Grover-only PDF editions;
 those reviewed PDF bytes remain unchanged in the repository. This review
 snapshot does not replace the Grover rc1 ZIP or publish a new student release.
-The next action is HHL/Shor design contracts: declare HHL eigenvalue encoding
-and Shor target-register/oracle scope before implementation. The current QPE
-target bound remains unchanged. This reconciliation stops before implementation.
+The [HHL contract](teaching/phys3810-fa2026/HHL_PLAN.md) and
+[Shor contract](teaching/phys3810-fa2026/SHOR_PLAN.md) are now defined, not
+implemented. HHL uses exact three-bit eigenphases for bounded 2x2 positive
+Hermitian systems. Shor is explicitly a compiled full-domain N=15 example
+with four residue qubits and a separate order-finding builder. The existing
+QPE one/two-target contract remains unchanged. HHL implementation is the next
+scoped action; Shor follows separately. Design checks are not algorithm-test
+passes, and the existing 97-test/six-notebook baseline remains unchanged.
 No push, PR, merge, release change, external message, or hardware job is part
 of this local milestone. Preserve the original checkout/index and rc1 assets.
