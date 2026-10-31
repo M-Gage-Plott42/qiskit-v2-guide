@@ -26,9 +26,11 @@ No additional phase-algorithm implementation or dependency change was needed.
 The HHL implementation now follows [HHL_PLAN.md](HHL_PLAN.md), including raw
 success/failure amplitudes, exact-spectrum cleanup, and a strictly executed
 teaching notebook. See [HHL_VALIDATION.md](HHL_VALIDATION.md) for the executed
-checks and limitations. [SHOR_PLAN.md](SHOR_PLAN.md) remains design only: its
-compiled full-domain N=15 example uses a separate four-residue-qubit order finder.
-QPE stays bounded to one/two targets. The next scoped implementation is Shor.
+checks and limitations. [SHOR_PLAN.md](SHOR_PLAN.md) is now implemented with a
+compiled full-domain N=15 example and a separate four-residue-qubit order finder.
+QPE stays bounded to one/two targets. The current suite passes 158 tests and eight
+notebooks; see [SHOR_VALIDATION.md](SHOR_VALIDATION.md). The combined HHL/Shor
+independent review is the next checkpoint.
 The original checkout/index, PDFs, Grover release, and reviewed phase ZIP remain
 intact. The user sent the initial setup/Grover email on October 30 and is awaiting
 the instructor's reply; only the setup PDF attachment is confirmed by the
@@ -80,17 +82,17 @@ still need authorization covering those actions.
 
 ## Immediate next technical action
 
-Implement Shor separately under [SHOR_PLAN.md](SHOR_PLAN.md), with compiled
-full-domain N=15 multiplication, four residue qubits, and its own bounded order
-finder. Verify all basis images, independent full joint states, conservative
-exact-rational order recovery, and factor extraction including failure outcomes.
-Preserve the HHL regression suite and existing QPE one/two-target limit.
+Review the combined HHL/Shor snapshot using the prepared standalone desktop ZIP
+and separate GPT Pro prompt. Record the ZIP/manifest identity and actually
+received response; reproduce actionable findings and make scoped repairs before
+claiming independent acceptance. The assistant owns this reconciliation and all
+technical review. No user code audit is required.
 
-Do not silently broaden QPE, support nonexact HHL spectra, or claim general
-Shor arithmetic. Any expanded scope requires a revised contract and appropriate
-new evidence before implementation. After the complete Shor milestone, prepare
-and extract-test the combined HHL/Shor review ZIP and separate GPT Pro prompt
-before recommending that sync. The present HHL work does not implement Shor.
+Do not broaden QPE, support nonexact HHL spectra, or claim general Shor arithmetic.
+Changes to supported families require a revised contract and appropriate evidence.
+Instructor feedback remains pending. Publication, new PDFs, native-platform
+claims, and outreach are separate work; the local review packet does not perform
+them or replace the published Grover preview.
 
 ## Ordered work and completion checks
 
@@ -122,7 +124,7 @@ before recommending that sync. The present HHL work does not implement Shor.
    sign against a classical solve. Restrictions belong in student explanations.
    [HHL_VALIDATION.md](HHL_VALIDATION.md) records the completed local checks;
    this is not yet an independent GPT Pro review of HHL.
-6. **Shor contract ready; implementation next.** Follow [SHOR_PLAN.md](SHOR_PLAN.md)
+6. **Shor implemented and locally validated; independent review next.** Follow [SHOR_PLAN.md](SHOR_PLAN.md)
    for the fixed modulus, bases, compiled full-domain model, and failure policy;
    implement and test the declared modular permutations, order recovery, and
    classical factor extraction separately, including unsuccessful cases.
@@ -163,8 +165,8 @@ platform and teaching claims provisional.
   four optional P3 updates were adopted and locally validated with 97 tests.
   Shared phase/bit conventions are resolved. HHL eigenvalue encoding and Shor
   register/oracle scope now have written contracts; HHL is implemented locally
-  and Shor remains the next separate milestone.
-- **Recommended after HHL/Shor and before publication:** evaluate the combined
+  and Shor is now locally implemented as a separate bounded milestone.
+- **Due now, after HHL/Shor and before publication:** evaluate the combined
   mathematical evidence, limitations, setup PDF, and teaching sequence. Do not
   label a release independently reviewed until an actual response is recorded.
 - **Sync sooner when needed:** conflicting mathematical conclusions, unsupported
@@ -309,3 +311,23 @@ assessment expectations, and which native platforms must be supported. Ask
 for these together when their answers change implementation. Until then, use
 the documented 50-minute cores and optional 75-minute expansions with small,
 local, credential-free examples. Do not invent dates or a grading scheme.
+
+## Combined HHL/Shor technical packet
+
+Use exact committed bytes for source, tests, notebooks, dependencies, license,
+and validation runners. Include all earlier regression dependencies. Adapt
+setup, course orientation, and concise evidence to the eight-notebook snapshot.
+To exclude unrelated review history and avoid broken links, technical-plan
+exports may replace repository navigation/status headers and coordination tails;
+retain the complete mathematical/API/acceptance sections byte for byte. Record
+these adaptations and verify retained sections against their committed sources.
+Do not change a supported-input contract as an export convenience. This limited
+navigation adaptation applies to the combined packet; the earlier immutable
+QFT/QPE ZIP is unchanged. No policy documents or historical chat records belong
+in the bundle.
+
+Verify the manifest, exclusions, links, and output-free sources; execute the
+extracted final ZIP outside both checkouts using CPython 3.12. Label a reused
+environment honestly. Provide the exact ZIP hash and a separate prompt requesting
+either an unchanged-snapshot review report or actual delivered patch/ZIP bytes
+for changes. Keep the last response block for the next instruction back to Codex.

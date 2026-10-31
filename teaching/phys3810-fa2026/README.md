@@ -7,14 +7,14 @@ account, a GPU, or access to a quantum computer.
 
 **Current status:** onboarding, [Grover](notebooks/01_grover.ipynb),
 [QFT](notebooks/02_qft.ipynb), [QPE](notebooks/03_qpe.ipynb), and
-[HHL](notebooks/04_hhl.ipynb) are implemented
+[HHL](notebooks/04_hhl.ipynb), and [Shor](notebooks/05_shor.ipynb) are implemented
 and tested locally. The combined QFT/QPE independent review is accepted,
 with its optional teaching/regression improvements applied. Grover's independent review was received
 and its exercise correction was validated.
 The [Grover-only prerelease](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-grover-v0.1.0-rc1)
-and review-draft guides are published for early feedback. QFT/QPE/HHL are
-available in the development snapshot; Shor and final classroom materials
-remain planned. HHL has local validation; its independent review follows Shor. Use the instructions included with your downloaded version.
+and review-draft guides are published for early feedback. QFT/QPE/HHL/Shor are
+available in the development snapshot; final classroom materials remain planned.
+HHL/Shor have local validation; their combined independent review is pending. Use the instructions included with your downloaded version.
 See [STATUS.md](STATUS.md) for validation results and remaining work.
 
 ## Before the first session
@@ -41,6 +41,8 @@ See [STATUS.md](STATUS.md) for validation results and remaining work.
 6. Continue with [HHL](notebooks/04_hhl.ipynb): trace a five-qubit, exact-spectrum
    2x2 example, distinguish success probability from the conditioned solution,
    and check its relative sign.
+7. Follow [Shor](notebooks/05_shor.ipynb): predict counting outcomes, verify
+   candidate orders, and distinguish successful order recovery from factoring.
 
 Package installation needs internet access. The classroom validation and local
 notebooks run without internet after installation. If a check fails, keep the
@@ -54,7 +56,8 @@ not execute the code.
   followed by [phase estimation](notebooks/03_qpe.ipynb).
 - **HHL — available locally:** [linear-system state preparation](notebooks/04_hhl.ipynb)
   for a small exact-spectrum family, with postselection and limitations.
-- **Shor — planned:** compiled small-instance order finding and factor recovery.
+- **Shor — available locally:** [compiled N=15 order finding](notebooks/05_shor.ipynb)
+  with four residue qubits, conservative order recovery, and explicit failures.
 
 Session dates and assessment expectations are not confirmed. The
 [course plan](COURSE_PLAN.md) gives a 50-minute core and 75-minute expansion for

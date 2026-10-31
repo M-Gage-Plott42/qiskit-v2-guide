@@ -9,7 +9,7 @@ yet validated for this milestone; see [STATUS.md](STATUS.md) for current
 evidence. These instructions use **64-bit CPython 3.12**, **Qiskit 2.6.1**, and
 **Aer 0.17.2**. IBM accounts, tokens, GPUs, and Git are not needed.
 
-This page follows the development snapshot, which includes Grover, QFT, QPE, and HHL.
+This page follows the development snapshot, which includes Grover, QFT, QPE, HHL, and Shor.
 The Grover-only preview ships separate version-matched instructions and a
 review-draft PDF; its four-notebook validation intentionally excludes QFT/QPE.
 The QFT/QPE review ZIP uses its own Markdown setup instructions; the existing
@@ -91,8 +91,8 @@ packages during the labs.
 
 The validator prints your interpreter path, Python `3.12.x`, `qiskit: 2.6.1`,
 and `qiskit-aer: 0.17.2`. It checks dependencies, runs offline tests, and
-executes preflight, the two local smoke notebooks, Grover, QFT, QPE, and HHL in
-fresh kernels. The current development baseline is 129 tests and seven notebooks. The earlier
+executes preflight, the two local smoke notebooks, Grover, QFT, QPE, HHL, and Shor in
+fresh kernels. The current development baseline is 158 tests and eight notebooks. The earlier
 QFT/QPE review ZIP remains a distinct 92-test snapshot.
 Success ends with:
 
@@ -100,8 +100,8 @@ Success ends with:
 PASSED: classroom validation
 ```
 
-`SKIPPED` for optional IBM Runtime/GPU execution and `UNTESTED` for
-Shor are expected and are not claims that those paths passed. A `FAILED` line or traceback needs attention. Executed notebook copies
+`SKIPPED` for optional IBM Runtime/GPU execution is expected and does not mean
+those paths passed. All five bounded algorithm lessons are included. A `FAILED` line or traceback needs attention. Executed notebook copies
 are saved under `artifacts/executed-classroom/`; source notebooks stay unchanged.
 
 ## 4. Open JupyterLab and choose the kernel
@@ -149,7 +149,9 @@ It introduces the first 20 minutes of the combined session. Continue with
 25-minute expansion on nonexact outcomes and precision. Next,
 `teaching/phys3810-fa2026/notebooks/04_hhl.ipynb` supplies the 20-minute HHL core
 and 15-minute expansion on state preparation, success probability, and relative
-phase. Its supported matrices have exact eigenvalues in 1-7.
+phase. Its supported matrices have exact eigenvalues in 1-7. Finish with
+`teaching/phys3810-fa2026/notebooks/05_shor.ipynb`: a 20-minute compiled N=15
+core and 10-minute expansion on order/factor recovery failures.
 
 ## Focused troubleshooting
 

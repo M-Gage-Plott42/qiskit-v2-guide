@@ -102,8 +102,8 @@ ignored `artifacts/instructor-review-audit-2026-10-30/`.
 
 Await the instructor's reply; the QFT/QPE independent review is already accepted.
 [Git integration](GIT_INTEGRATION_PLAN.md) is complete and preserved
-all original work and upstream fixes. QFT, QPE, and HHL are now locally validated;
-Shor remains the next separate implementation. Native-platform checks and
+all original work and upstream fixes. QFT, QPE, HHL, and Shor are now locally
+validated; the combined HHL/Shor independent review is the next checkpoint. Native-platform checks and
 rehearsal follow confirmed teaching arrangements. The original Grover PDF
 editions remain unchanged as the first instructor packet.
 

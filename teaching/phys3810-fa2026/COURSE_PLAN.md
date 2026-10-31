@@ -17,7 +17,7 @@ Milestone 1 supplies a draft setup guide for validation. The verified v0.2
 setup/instructor PDFs are ready for initial feedback; final classroom editions
 follow platform validation and instructor feedback. Grover has since
 been implemented as milestone 2, followed by QFT, QPE, and the bounded HHL
-lesson; Shor is the next implementation. See
+lesson and compiled N=15 Shor example. See
 [STATUS.md](STATUS.md) for current validation and review state.
 
 ## Scheduling and preparation
@@ -122,14 +122,16 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
 3. **QFT/QPE independently accepted; optional follow-ups reconciled.** Compare the QFT operator with the full Fourier matrix;
    test QPE on asymmetric exact phases and a nonexact phase distribution.
    Document sign/bit conventions and verify SDK references and fresh kernels.
-4. **HHL locally validated; Shor contract ready for implementation.** Follow
+4. **HHL/Shor locally validated; combined independent review pending.** Follow
    [HHL_PLAN.md](HHL_PLAN.md) for fixed positive evolution, exact eigenphases,
    reciprocal rotations, postselection, and count cleanup. Follow
    [SHOR_PLAN.md](SHOR_PLAN.md) for the explicitly compiled N=15 model,
    full four-bit reversible action, verified order recovery, and factor failure
    cases. HHL source, tests, notebook, and strict validation are recorded in
-   [HHL_VALIDATION.md](HHL_VALIDATION.md). Implement Shor next with independent
-   tests and a fresh-kernel notebook. The QPE target-width limit remains unchanged.
+   [HHL_VALIDATION.md](HHL_VALIDATION.md); Shor and the complete 158-test,
+   eight-notebook suite are in [SHOR_VALIDATION.md](SHOR_VALIDATION.md).
+   The QPE target-width limit remains unchanged. Reconcile independent feedback
+   before preparing publication.
 5. **Teaching release.** Validate setup instructions on the claimed classroom
    platforms, obtain the matching ChatGPT-reviewed PDF, rehearse the timed
    sessions, and check every notebook from a downloaded archive. Record any
@@ -148,7 +150,7 @@ validated under [QPE_PLAN.md](QPE_PLAN.md). The original checkout remains
 preserved under [GIT_INTEGRATION_PLAN.md](GIT_INTEGRATION_PLAN.md).
 The review's October 30-November 2 feedback window and November 2-6 QFT/QPE
 target are provisional planning targets, not confirmed sessions or commitments.
-QFT/QPE review is accepted; HHL is now locally validated and Shor implementation
-is next under its written contract. Freeze each session's materials at least one
+QFT/QPE review is accepted; HHL/Shor are now locally validated under their
+written contracts, with a combined independent review pending. Freeze each session's materials at least one
 week before its confirmed date, after platform checks and a pacing rehearsal;
 actual dates, preparation, platform, and assessment decisions remain open.

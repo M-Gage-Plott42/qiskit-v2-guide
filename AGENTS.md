@@ -8,8 +8,8 @@ rulesets as part of instructional work.
 ## Source and notebook conventions
 
 - Canonical reusable algorithm code belongs in `src/phys3810/`; mathematical
-  tests belong in `tests/`. Grover, QFT, QPE, and HHL are implemented there; extend this layout for
-  the remaining algorithm milestones.
+  tests belong in `tests/`. Grover, QFT, QPE, HHL, and the
+  compiled N=15 Shor example are implemented there; retain their explicit bounds.
 - Course notebooks belong in `teaching/phys3810-fa2026/notebooks/`. Import
   canonical implementations instead of maintaining separate notebook copies.
   Keep explanations, parameter choices, exercises, and short demonstrations in
@@ -182,10 +182,14 @@ The [HHL contract](teaching/phys3810-fa2026/HHL_PLAN.md) is now implemented;
 seven fresh-kernel notebooks. All 97 phase-review regressions remain intact.
 HHL uses exact three-bit eigenphases for bounded 2x2 positive Hermitian systems;
 its raw success/failure amplitudes and both-branch count cleanup are tested.
-The [Shor contract](teaching/phys3810-fa2026/SHOR_PLAN.md) remains design only:
+The [Shor contract](teaching/phys3810-fa2026/SHOR_PLAN.md) is now implemented:
 a compiled full-domain N=15 example with four residue qubits and a separate
 order-finding builder. The existing QPE one/two-target contract is unchanged.
-Implement Shor next, then prepare the combined HHL/Shor GPT Pro checkpoint.
-Do not label HHL independently reviewed merely because local checks passed.
+[Combined validation](teaching/phys3810-fa2026/SHOR_VALIDATION.md) records
+158 tests and eight fresh-kernel notebooks. All 129 prior tests are retained.
+The combined HHL/Shor GPT Pro review packet is the next independent checkpoint;
+its exact snapshot, extracted-run evidence, and desktop ZIP receipt are local.
+Reconcile the actually received review before claiming independent acceptance.
+Do not begin publication or silently expand either algorithm's supported family.
 No push, PR, merge, release change, external message, or hardware job is part
 of this local milestone. Preserve the original checkout/index and rc1 assets.

@@ -1,9 +1,9 @@
 # Shor milestone: compiled full-domain N=15 contract
 
-October 30, 2026. **Design only; implementation and circuit acceptance tests
-are untested.** Choose a **compiled modular-permutation demonstration for N=15**,
+October 30, 2026. **Implemented and locally validated**; see
+[SHOR_VALIDATION.md](SHOR_VALIDATION.md). This is a **compiled modular-permutation demonstration for N=15**,
 with full four-qubit residue encoding. This is not a general reversible-arithmetic
-library or a scalable factoring implementation. Its future source belongs in
+library or a scalable factoring implementation. Its canonical source belongs in
 `src/phys3810/shor.py`, tests in `tests/`, and lesson in `notebooks/05_shor.ipynb`.
 
 ## Model and QPE boundary
@@ -23,7 +23,7 @@ IBM's [Shor tutorial](https://quantum.cloud.ibm.com/docs/en/tutorials/shors-algo
 discusses this permutation construction and its synthesis cost. Use its
 mathematics, not deprecated QFT imports or hardware-service examples.
 
-## Planned public interfaces and input behavior
+## Public interfaces and input behavior
 
 - `modular_multiplier_15(multiplier)` returns a four-qubit gate.
 - `order_finding_15(base, *, num_counting_qubits=4)` returns an unmeasured circuit
@@ -218,13 +218,15 @@ phase bins, verify one useful denominator, and extract the GCD factors. The
 base 14's factor failure. Deriving a general arithmetic network or a continued
 fraction approximation algorithm is not inside that time budget.
 
-Later implementation must import canonical code into `05_shor.ipynb`, put
+The implementation must import canonical code into `05_shor.ipynb`, put
 predictions before outputs, retain failed trials as honest outcomes, and add
 fresh-kernel validator coverage with at least two meaningful figures (compiled
 circuit and counting-distribution/recovery comparison). Keep sources output-free.
 
 Classical design checks confirmed all 128 domain images, 1,024 composition
-images, the listed orbits/GCDs, and exact-rational failure fixtures. No quantum
-circuit or factoring implementation was built or run. Scratch evidence is
-ignored under `artifacts/hhl-shor-design-2026-10-30/`. **Implementation tests
-remain untested.** The existing 97-test/six-notebook baseline is unchanged.
+images, the listed orbits/GCDs, and exact-rational failure fixtures. That design step built no quantum
+circuit or factoring implementation. Its scratch evidence remains ignored under
+`artifacts/hhl-shor-design-2026-10-30/`. Subsequent implementation checks are
+recorded in [SHOR_VALIDATION.md](SHOR_VALIDATION.md): all 129 existing tests
+are preserved, with 19 source and ten notebook tests added. The combined
+HHL/Shor independent review is the next checkpoint.
