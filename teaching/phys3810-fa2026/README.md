@@ -6,7 +6,7 @@ your computer using Python and Qiskit. You do not need Git experience, an IBM
 account, a GPU, or access to a quantum computer.
 
 **Current status:** onboarding, [Grover](notebooks/01_grover.ipynb),
-[QFT](notebooks/02_qft.ipynb), [QPE](notebooks/03_qpe.ipynb), and
+[QFT](notebooks/02_qft.ipynb), [QPE](notebooks/03_qpe.ipynb),
 [HHL](notebooks/04_hhl.ipynb), and [Shor](notebooks/05_shor.ipynb) are implemented
 and tested locally. The combined QFT/QPE independent review is accepted,
 with its optional teaching/regression improvements applied. Grover's independent review was received
@@ -14,7 +14,8 @@ and its exercise correction was validated.
 The [Grover-only prerelease](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-grover-v0.1.0-rc1)
 and review-draft guides are published for early feedback. QFT/QPE/HHL/Shor are
 available in the development snapshot; final classroom materials remain planned.
-HHL/Shor have local validation; their combined independent review is pending. Use the instructions included with your downloaded version.
+The HHL/Shor independent review is accepted and its small teaching corrections
+are applied. Use the instructions included with your downloaded version.
 See [STATUS.md](STATUS.md) for validation results and remaining work.
 
 ## Before the first session

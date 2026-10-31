@@ -77,6 +77,14 @@ class ShorNotebookExerciseTests(unittest.TestCase):
             expected_factor_shots += count if expected_factors else 0
         self.assertEqual(trial["order_shots"], expected_order_shots)
         self.assertEqual(trial["factor_shots"], expected_factor_shots)
+        expected_order_probability = 0.0 if order == 1 else 0.5
+        expected_factor_probability = 0.0 if base in (1, 14) else 0.5
+        self.assertEqual(self.namespace["theory_order"], expected_order_probability)
+        self.assertEqual(self.namespace["theory_factors"], expected_factor_probability)
+        self.assertIn(f"Order recovery: {expected_order_shots}/2048 "
+                      f"(theory per shot {expected_order_probability:.3f})", output)
+        self.assertIn(f"factors: {expected_factor_shots}/2048 "
+                      f"(theory per shot {expected_factor_probability:.3f})", output)
         if not expected_factor_shots:
             self.assertIn("no factors", output)
         axes = self.namespace["axes"]
@@ -90,6 +98,13 @@ class ShorNotebookExerciseTests(unittest.TestCase):
         self.assertEqual(len(self.figures), 2)
 
     def test_default_base_two(self):
+        # Literal independent finite fixtures cover every supported teaching base.
+        expected = {1: (0.0, 0.0), 2: (0.5, 0.5), 4: (0.5, 0.5),
+                    7: (0.5, 0.5), 8: (0.5, 0.5), 11: (0.5, 0.5),
+                    13: (0.5, 0.5), 14: (0.5, 0.0)}
+        for base, probabilities in expected.items():
+            with self.subTest(base=base):
+                self.assertEqual(self.namespace["theoretical_trial_probabilities"](base), probabilities)
         self.check_case(2, 4, [1, 2, 4, 8])
 
     def test_different_orbit_and_width_five(self):
@@ -112,7 +127,7 @@ class ShorNotebookExerciseTests(unittest.TestCase):
 
     def test_expansion_finite_budget_and_separate_success_metrics(self):
         self.check_case(2, 4, [1, 2, 4, 8])
-        self.execute_cell("shor-expansion-batches")
+        output = self.execute_cell("shor-expansion-batches")
         summaries = self.namespace["expansion_results"]
         self.assertEqual(set(summaries), {11, 14})
         self.assertEqual(self.namespace["trial"]["shots"]+sum(s["shots"] for s in summaries.values()), 6144)
@@ -121,9 +136,19 @@ class ShorNotebookExerciseTests(unittest.TestCase):
             self.assertGreater(summaries[base]["order_shots"], 0)
         self.assertEqual(summaries[11]["factor_shots"], summaries[11]["order_shots"])
         self.assertEqual(summaries[14]["factor_shots"], 0)
+        self.assertEqual(self.namespace["expansion_theory"], {11: (0.5, 0.5), 14: (0.5, 0.0)})
+        for base, factor_probability in ((11, 0.5), (14, 0.0)):
+            self.assertIn(f"base={base}: order recovery {summaries[base]['order_shots']}/2048 "
+                          "(theory per shot 0.500)", output)
+            self.assertIn(f"factors {summaries[base]['factor_shots']}/2048 "
+                          f"(theory per shot {factor_probability:.3f})", output)
         heights = [p.get_height() for p in self.namespace["axes"].patches]
         np.testing.assert_allclose(heights, [summaries[11]["order_shots"]/2048,
             summaries[14]["order_shots"]/2048, summaries[11]["order_shots"]/2048, 0], rtol=0, atol=2e-11)
+        np.testing.assert_allclose(self.namespace["axes"].lines[0].get_ydata(), [0.5, 0.5], rtol=0, atol=0)
+        np.testing.assert_allclose(self.namespace["axes"].lines[1].get_ydata(), [0.5, 0.0], rtol=0, atol=0)
+        np.testing.assert_allclose(self.namespace["axes"].lines[0].get_xdata(), [-0.18, 0.82], rtol=0, atol=1e-15)
+        np.testing.assert_allclose(self.namespace["axes"].lines[1].get_xdata(), [0.18, 1.18], rtol=0, atol=1e-15)
         self.assertEqual(len(self.figures), 3)
 
     def test_classical_failures_and_synthesis_diagnostic(self):

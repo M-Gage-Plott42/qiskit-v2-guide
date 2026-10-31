@@ -1,5 +1,12 @@
 # HHL local validation
 
+Current review status: the independent HHL/Shor review has been received and
+accepted. [The reconciliation](HHL_SHOR_REVIEW_RECONCILIATION.md) records the
+reviewed 158-test snapshot and subsequent 160-test local follow-up. The original
+milestone evidence below retains its historical counts and pre-review status.
+
+## Original milestone record
+
 October 30, 2026. **The exact-spectrum HHL milestone passes local validation:
 129 tests and seven required fresh-kernel notebooks.** This change follows
 local design commit `6ed4d19d219db2eac3f2abccd7f53624c0c9c483` and retains all

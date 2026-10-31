@@ -92,7 +92,7 @@ packages during the labs.
 The validator prints your interpreter path, Python `3.12.x`, `qiskit: 2.6.1`,
 and `qiskit-aer: 0.17.2`. It checks dependencies, runs offline tests, and
 executes preflight, the two local smoke notebooks, Grover, QFT, QPE, HHL, and Shor in
-fresh kernels. The current development baseline is 158 tests and eight notebooks. The earlier
+fresh kernels. The current development baseline is 160 tests and eight notebooks. The earlier
 QFT/QPE review ZIP remains a distinct 92-test snapshot.
 Success ends with:
 

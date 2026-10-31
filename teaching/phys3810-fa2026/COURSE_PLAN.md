@@ -122,7 +122,7 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
 3. **QFT/QPE independently accepted; optional follow-ups reconciled.** Compare the QFT operator with the full Fourier matrix;
    test QPE on asymmetric exact phases and a nonexact phase distribution.
    Document sign/bit conventions and verify SDK references and fresh kernels.
-4. **HHL/Shor locally validated; combined independent review pending.** Follow
+4. **HHL/Shor independently accepted; review follow-ups reconciled.** Follow
    [HHL_PLAN.md](HHL_PLAN.md) for fixed positive evolution, exact eigenphases,
    reciprocal rotations, postselection, and count cleanup. Follow
    [SHOR_PLAN.md](SHOR_PLAN.md) for the explicitly compiled N=15 model,
@@ -130,8 +130,10 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    cases. HHL source, tests, notebook, and strict validation are recorded in
    [HHL_VALIDATION.md](HHL_VALIDATION.md); Shor and the complete 158-test,
    eight-notebook suite are in [SHOR_VALIDATION.md](SHOR_VALIDATION.md).
-   The QPE target-width limit remains unchanged. Reconcile independent feedback
-   before preparing publication.
+   The QPE target-width limit remains unchanged. The
+   [reconciliation](HHL_SHOR_REVIEW_RECONCILIATION.md) records acceptance, the
+   notebook status correction, and two optional improvements; current validation
+   passes 160 tests and eight notebooks. Prepare release readiness next.
 5. **Teaching release.** Validate setup instructions on the claimed classroom
    platforms, obtain the matching ChatGPT-reviewed PDF, rehearse the timed
    sessions, and check every notebook from a downloaded archive. Record any
@@ -151,6 +153,7 @@ preserved under [GIT_INTEGRATION_PLAN.md](GIT_INTEGRATION_PLAN.md).
 The review's October 30-November 2 feedback window and November 2-6 QFT/QPE
 target are provisional planning targets, not confirmed sessions or commitments.
 QFT/QPE review is accepted; HHL/Shor are now locally validated under their
-written contracts, with a combined independent review pending. Freeze each session's materials at least one
+written contracts, and the combined independent review is accepted. Freeze each
+session's materials at least one
 week before its confirmed date, after platform checks and a pacing rehearsal;
 actual dates, preparation, platform, and assessment decisions remain open.

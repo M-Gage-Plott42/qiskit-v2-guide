@@ -220,8 +220,8 @@ fraction approximation algorithm is not inside that time budget.
 
 The implementation must import canonical code into `05_shor.ipynb`, put
 predictions before outputs, retain failed trials as honest outcomes, and add
-fresh-kernel validator coverage with at least two meaningful figures (compiled
-circuit and counting-distribution/recovery comparison). Keep sources output-free.
+fresh-kernel validator coverage with three required figures (compiled circuit,
+counting distribution, and order-versus-factor success comparison). Keep sources output-free.
 
 Classical design checks confirmed all 128 domain images, 1,024 composition
 images, the listed orbits/GCDs, and exact-rational failure fixtures. That design step built no quantum
@@ -229,4 +229,7 @@ circuit or factoring implementation. Its scratch evidence remains ignored under
 `artifacts/hhl-shor-design-2026-10-30/`. Subsequent implementation checks are
 recorded in [SHOR_VALIDATION.md](SHOR_VALIDATION.md): all 129 existing tests
 are preserved, with 19 source and ten notebook tests added. The combined
-HHL/Shor independent review is the next checkpoint.
+HHL/Shor independent review is now accepted; see the
+[reconciliation](HHL_SHOR_REVIEW_RECONCILIATION.md) for D1/O1/O2 and the
+current 160-test follow-up. The stricter figure requirement does not widen the
+algorithm contract.

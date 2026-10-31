@@ -1,5 +1,12 @@
 # Shor and combined HHL/Shor local validation
 
+Current review status: the independent HHL/Shor review has been received and
+accepted. [The reconciliation](HHL_SHOR_REVIEW_RECONCILIATION.md) records the
+reviewed 158-test snapshot and subsequent 160-test local follow-up. The original
+milestone evidence below retains its historical counts and pre-review status.
+
+## Original milestone record
+
 October 30, 2026. **158 tests and eight required fresh-kernel notebooks passed.**
 The compiled N=15 Shor milestone follows HHL commit
 `234c6084c414664a33b6c5856f22b0aa322325ca`, retaining all **129 existing tests**.

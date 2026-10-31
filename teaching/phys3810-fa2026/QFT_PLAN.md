@@ -4,7 +4,8 @@ Implemented and locally validated; see [combined phase validation](QPE_VALIDATIO
 This contract is the QFT portion of the QFT/QPE session. The
 [QPE milestone](QPE_PLAN.md) is now locally validated as well. A combined
 phase-convention review is accepted; see
-[the reconciliation](QFT_QPE_REVIEW_RECONCILIATION.md). HHL/Shor contracts precede implementation.
+[the reconciliation](QFT_QPE_REVIEW_RECONCILIATION.md). The later bounded
+HHL/Shor applications are also implemented and independently accepted.
 
 ## Supported API and conventions
 
@@ -57,4 +58,5 @@ Its circuit has quadratic controlled-phase gate count, while this small full
 matrix validation grows exponentially. Arbitrary data loading and full amplitude
 readout are not free; these examples do not demonstrate a general classical-FFT
 speedup or quantum advantage. The combined QFT/QPE review is accepted;
-HHL/Shor design contracts are the next step before implementation.
+the later HHL/Shor checkpoint is recorded in
+[its reconciliation](HHL_SHOR_REVIEW_RECONCILIATION.md).

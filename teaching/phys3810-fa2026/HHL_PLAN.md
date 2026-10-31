@@ -199,8 +199,8 @@ inside that slot. The shared session retains its five-minute QPE refresher,
 
 The implementation must import canonical source into `04_hhl.ipynb`, place
 predictions before answers, exercise editable parameters, and register fresh
-execution with at least two meaningful figures (circuit and conditioned-state/
-success comparison). Preserve the existing 97-test/six-notebook baseline and
+execution with three required figures (circuit, conditioned-state/success
+comparison, and postselected X/Y/Z observables). Preserve the existing 97-test/six-notebook baseline and
 all strict runner safeguards. Commit notebooks without outputs.
 
 Classical design checks confirmed the nine fixtures above and seven rotation

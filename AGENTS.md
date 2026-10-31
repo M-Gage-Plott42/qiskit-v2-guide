@@ -185,11 +185,17 @@ its raw success/failure amplitudes and both-branch count cleanup are tested.
 The [Shor contract](teaching/phys3810-fa2026/SHOR_PLAN.md) is now implemented:
 a compiled full-domain N=15 example with four residue qubits and a separate
 order-finding builder. The existing QPE one/two-target contract is unchanged.
-[Combined validation](teaching/phys3810-fa2026/SHOR_VALIDATION.md) records
-158 tests and eight fresh-kernel notebooks. All 129 prior tests are retained.
-The combined HHL/Shor GPT Pro review packet is the next independent checkpoint;
-its exact snapshot, extracted-run evidence, and desktop ZIP receipt are local.
-Reconcile the actually received review before claiming independent acceptance.
-Do not begin publication or silently expand either algorithm's supported family.
+The independent HHL/Shor review has been received and accepted: the unchanged
+158-test snapshot passed eight fresh-kernel notebooks in a reused Linux
+CPython 3.12.14 environment. See the
+[review reconciliation](teaching/phys3810-fa2026/HHL_SHOR_REVIEW_RECONCILIATION.md).
+The two stale notebook availability statements are corrected; all three HHL/Shor
+figures are now required, and Shor displays theoretical recovery probabilities.
+The current local suite passes 160 tests/eight notebooks; all prior regressions
+remain. Algorithm source and supported families are unchanged. Preserve the
+reviewed archive as historical evidence rather than relabeling it as this revision.
+No additional GPT Pro round is needed solely for these evidenced P3 follow-ups.
+Next prepare a local classroom-release readiness plan while instructor feedback
+and platform/UI/pacing evidence remain pending; do not begin publication.
 No push, PR, merge, release change, external message, or hardware job is part
 of this local milestone. Preserve the original checkout/index and rc1 assets.

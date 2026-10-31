@@ -1,10 +1,12 @@
 # PHYS 3810 status
 
-As of October 30, 2026: **all five bounded algorithm lessons are implemented
-locally. The combined suite passes 158 tests and eight required fresh-kernel
-notebooks.** Shor retains all 129 prior tests and adds 19 source tests plus ten
-actual-notebook regressions. See [SHOR_VALIDATION.md](SHOR_VALIDATION.md).
-The next checkpoint is the combined HHL/Shor GPT Pro review, not publication.
+As of October 30, 2026: **the HHL/Shor independent review is accepted and
+its follow-ups are reconciled. All five bounded algorithm lessons are implemented.**
+The reviewed snapshot passed 158 tests and eight notebooks on the reviewer's
+reused Python 3.12.14 environment. The current local revision passes **160 tests
+and eight fresh-kernel notebooks**, retaining all 158 prior tests and adding
+two figure-gate regressions. See [the review disposition](HHL_SHOR_REVIEW_RECONCILIATION.md).
+Next prepare a local classroom-release readiness plan; publication is not authorized.
 
 HHL remains the exact-spectrum 2x2 demonstration under [HHL_PLAN.md](HHL_PLAN.md).
 Shor now implements [SHOR_PLAN.md](SHOR_PLAN.md): compiled full-domain N=15
@@ -19,8 +21,10 @@ delivery of the rest of the recommended packet is not assumed. Session coverage,
 student preparation, format, assessment, teaching responsibility, and preferred
 examples remain open. See [INSTRUCTOR_REVIEW_PLAN.md](INSTRUCTOR_REVIEW_PLAN.md).
 
-The independent QFT/QPE review is accepted. HHL/Shor have local implementation review
-and execution evidence, not an independent GPT Pro review yet. The original
+The independent QFT/QPE and HHL/Shor reviews are accepted. The two stale
+notebook availability statements are corrected, all three HHL/Shor figures are
+required, and Shor displays theoretical recovery probabilities. Algorithm source
+and QPE supported inputs remain unchanged. The original
 checkout/index, reviewed phase ZIP, verified PDFs, and Grover rc1 assets remain
 intact. Work remains local; no external action was performed.
 
@@ -56,7 +60,7 @@ QFT is excluded from the release; its local evidence is in [QFT_VALIDATION.md](Q
 - **QFT implemented and tested locally:** canonical exact transform on 1–6
   qubits, 14 new tests, and a seven-code-cell teaching notebook. The development
   validator passed **64 tests and five required notebooks** at the QFT-only
-  checkpoint, including two QFT figures. The complete suite is now 158 tests/eight notebooks.
+  checkpoint, including two QFT figures. The complete suite is now 160 tests/eight notebooks.
 - **Independent review evidence:** GPT Pro reported another Linux install on
   CPython 3.12.14 with the same 114 application-package pins, all original 19
   tests and three notebooks passing, and reproduced M1-01. The correction was
@@ -94,7 +98,8 @@ QFT is excluded from the release; its local evidence is in [QFT_VALIDATION.md](Q
 - **Shor implemented and tested locally:** compiled full-domain N=15 source,
   19 mathematical tests, ten actual-cell regressions, and an eight-code-cell
   notebook with three figures. The full 158-test/eight-notebook suite passes.
-  Independent combined HHL/Shor review remains pending.
+  The independent review accepted that snapshot. Subsequent D1/O1/O2 updates
+  preserve the algorithms and raise the local test count to 160.
 - **Drafts now, final later:** the original v0.1 guides remain published with
   rc1. ChatGPT supplied new v0.2 student/instructor drafts, now copied unchanged
   into the repository and locally inspected. The corrected delivered-file
@@ -118,34 +123,33 @@ these facts do not establish the invited-session dates.
 
 ## Recommended next actions
 
-1. **Send the prepared combined HHL/Shor review ZIP and separate prompt to GPT Pro.**
-   The assistant prepares and verifies the standalone desktop archive; the user
-   transfers it to GPT Pro. Record its exact snapshot and the actually received
-   response. Unchanged-snapshot reports need no return ZIP; changed files require
-   accessible delivered bytes, hashes, and base revision before integration.
-2. **Reconcile that review locally.** Reproduce actionable findings, repair them,
-   rerun affected/required checks, and update disposition. No manual code audit
-   is assigned to the user. Local self-review is not independent acceptance.
-3. **Await instructor feedback in parallel.** The initial setup email is already
-   sent; no follow-up has been sent or scheduled. Teaching responsibility, scope,
-   dates, student preparation, platforms, and assessment remain provisional.
-4. **Then plan the teaching release.** Validate claimed platforms/UI, rehearse
-   pacing, obtain matching reviewed PDFs, and prepare integration/publication
-   through the normal workflow. Publication and messages need applicable
-   authorization; the technical review ZIP is not a new student release.
+1. **Prepare a local classroom-release readiness plan.** Inventory unpublished
+   integration commits and separate completed algorithm review from remaining
+   platform, UI, pacing, PDF, package, and publication checks. Propose concrete
+   completion criteria without publishing or expanding algorithm scope.
+2. **Await Rick's teaching decisions in parallel.** The initial setup email is
+   already sent; no reply or follow-up is assumed. Dates, platforms, preparation,
+   delivery responsibility, coverage, and assessment remain provisional.
+3. **Execute the agreed readiness work, then prepare publication.** Test the
+   claimed native platforms and interactive instructions, rehearse pacing,
+   obtain matching reviewed PDFs, verify a new exact-revision package, and use
+   the normal integration/check workflow. Publication needs applicable authority.
 
-**GPT Pro sync: due.** The five algorithms now have local execution evidence,
-and the planned HHL/Shor checkpoint is ready for independent review. The exact
-ZIP identity and extracted verification are recorded in the local handoff
-receipt and final response. User action needed: attach that ZIP and paste the
-separate review prompt into GPT Pro, then return its response here. No code
-review or evidence assembly is needed from the user.
+**GPT Pro sync: not needed now.** The HHL/Shor technical checkpoint is closed;
+D1 and the optional O1/O2 changes have direct local evidence. Sync again for
+unresolved mathematics, an expanded scope, or the matching final PDF/teaching
+checkpoint when its inputs are ready. User input needed for the next planning
+step: none. Share Rick's reply when received; no manual code audit is requested.
 
-Required Python 3.12 checks, Ruff, smoke, pre-commit, source notebook cleanliness,
-documentation links, and preservation checks passed. The combined package is
-verified from an extraction outside both checkouts using the reused pinned
-interpreter. Details are under `artifacts/shor-2026-10-30/`; public evidence is
-[SHOR_VALIDATION.md](SHOR_VALIDATION.md). No independent HHL/Shor response,
-fresh installation, native Windows/macOS execution, live teaching rehearsal,
+Current required Python 3.12, lint, smoke, pre-commit, notebook cleanliness,
+link, and preservation checks passed. Detailed current evidence is under
+`artifacts/hhl-shor-review-2026-10-30/`. The unchanged reviewed ZIP and original
+158-test extraction evidence remain under `artifacts/shor-2026-10-30/`; the prior
+desktop copy is no longer present. No replacement archive was needed or created.
+Do not distribute that historical ZIP as the corrected current student packet.
+
+The independent review reused an environment; no fresh installation for this
+snapshot, native Windows/macOS execution, interactive setup, timed teaching,
 or remote CI for these local commits is claimed. Runtime/cloud/GPU remain
-excluded. The original Grover release remains its separate published snapshot.
+excluded. Original checkout/index, verified PDFs, and Grover rc1 assets are
+preserved. No push, PR, merge, publication, message, or hardware job occurred.

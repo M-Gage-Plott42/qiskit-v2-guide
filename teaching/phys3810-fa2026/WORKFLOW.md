@@ -28,9 +28,11 @@ success/failure amplitudes, exact-spectrum cleanup, and a strictly executed
 teaching notebook. See [HHL_VALIDATION.md](HHL_VALIDATION.md) for the executed
 checks and limitations. [SHOR_PLAN.md](SHOR_PLAN.md) is now implemented with a
 compiled full-domain N=15 example and a separate four-residue-qubit order finder.
-QPE stays bounded to one/two targets. The current suite passes 158 tests and eight
-notebooks; see [SHOR_VALIDATION.md](SHOR_VALIDATION.md). The combined HHL/Shor
-independent review is the next checkpoint.
+QPE stays bounded to one/two targets. The HHL/Shor independent review is
+accepted and its D1/O1/O2 follow-ups are reconciled; see
+[HHL_SHOR_REVIEW_RECONCILIATION.md](HHL_SHOR_REVIEW_RECONCILIATION.md).
+The current suite passes 160 tests and eight notebooks. The original reviewed
+158-test ZIP remains unchanged; a later distribution must identify its own revision.
 The original checkout/index, PDFs, Grover release, and reviewed phase ZIP remain
 intact. The user sent the initial setup/Grover email on October 30 and is awaiting
 the instructor's reply; only the setup PDF attachment is confirmed by the
@@ -82,11 +84,12 @@ still need authorization covering those actions.
 
 ## Immediate next technical action
 
-Review the combined HHL/Shor snapshot using the prepared standalone desktop ZIP
-and separate GPT Pro prompt. Record the ZIP/manifest identity and actually
-received response; reproduce actionable findings and make scoped repairs before
-claiming independent acceptance. The assistant owns this reconciliation and all
-technical review. No user code audit is required.
+Prepare a local classroom-release readiness plan. Inventory the unpublished
+integration commits and distinguish technical acceptance from native-platform,
+interactive setup, pacing, and version-matched PDF/package readiness. Define
+concrete validation and integration steps without publishing, messaging, or
+inventing instructor decisions. Rick's reply remains pending. The assistant
+continues to own implementation review and checks; no manual audit is required.
 
 Do not broaden QPE, support nonexact HHL spectra, or claim general Shor arithmetic.
 Changes to supported families require a revised contract and appropriate evidence.
@@ -124,7 +127,7 @@ them or replace the published Grover preview.
    sign against a classical solve. Restrictions belong in student explanations.
    [HHL_VALIDATION.md](HHL_VALIDATION.md) records the completed local checks;
    this is not yet an independent GPT Pro review of HHL.
-6. **Shor implemented and locally validated; independent review next.** Follow [SHOR_PLAN.md](SHOR_PLAN.md)
+6. **Shor independently accepted; review follow-ups reconciled.** Follow [SHOR_PLAN.md](SHOR_PLAN.md)
    for the fixed modulus, bases, compiled full-domain model, and failure policy;
    implement and test the declared modular permutations, order recovery, and
    classical factor extraction separately, including unsuccessful cases.
@@ -166,9 +169,12 @@ platform and teaching claims provisional.
   Shared phase/bit conventions are resolved. HHL eigenvalue encoding and Shor
   register/oracle scope now have written contracts; HHL is implemented locally
   and Shor is now locally implemented as a separate bounded milestone.
-- **Due now, after HHL/Shor and before publication:** evaluate the combined
-  mathematical evidence, limitations, setup PDF, and teaching sequence. Do not
-  label a release independently reviewed until an actual response is recorded.
+- **Completed after HHL/Shor:** the unchanged 158-test/eight-notebook snapshot
+  passed in a reused Linux CPython 3.12.14 environment with no algorithm blocker.
+  D1 notebook availability prose and O1/O2 improvements are reconciled locally
+  with 160 tests. This closes the technical checkpoint, not native-platform,
+  pacing, new-PDF, or publication readiness. No new sync is needed solely for
+  these demonstrated small follow-ups.
 - **Sync sooner when needed:** conflicting mathematical conclusions, unsupported
   generality/advantage claims, a substantial scope/environment change, or a
   reviewer disagreement that experiments do not resolve.
@@ -331,3 +337,15 @@ extracted final ZIP outside both checkouts using CPython 3.12. Label a reused
 environment honestly. Provide the exact ZIP hash and a separate prompt requesting
 either an unchanged-snapshot review report or actual delivered patch/ZIP bytes
 for changes. Keep the last response block for the next instruction back to Codex.
+
+## Received HHL/Shor review
+
+The report explicitly changed no files and identifies the verified 44-file ZIP,
+so no replacement archive or patch is required. The retained archive is readable;
+the former desktop copy is currently absent and was not silently recreated.
+Extra reviewer probe scripts were not delivered: distinguish equivalent local
+probes from exact reruns. The reviewer verified supplied mathematical sections;
+comparison with pre-adaptation source is separately recorded local evidence.
+Preserve the old ZIP and label all later packets with their own revision/counts.
+The D1 correction belongs in any new distribution; do not present the unchanged
+review archive as though it contains that correction.
