@@ -6,14 +6,15 @@ your computer using Python and Qiskit. You do not need Git experience, an IBM
 account, a GPU, or access to a quantum computer.
 
 **Current status:** onboarding, [Grover](notebooks/01_grover.ipynb),
-[QFT](notebooks/02_qft.ipynb), and [QPE](notebooks/03_qpe.ipynb) are implemented
+[QFT](notebooks/02_qft.ipynb), [QPE](notebooks/03_qpe.ipynb), and
+[HHL](notebooks/04_hhl.ipynb) are implemented
 and tested locally. The combined QFT/QPE independent review is accepted,
 with its optional teaching/regression improvements applied. Grover's independent review was received
 and its exercise correction was validated.
 The [Grover-only prerelease](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-grover-v0.1.0-rc1)
-and review-draft guides are published for early feedback. QFT/QPE are available
-in the development snapshot; HHL, Shor, and final classroom materials are
-still planned. Use the instructions included with your downloaded version.
+and review-draft guides are published for early feedback. QFT/QPE/HHL are
+available in the development snapshot; Shor and final classroom materials
+remain planned. HHL has local validation; its independent review follows Shor. Use the instructions included with your downloaded version.
 See [STATUS.md](STATUS.md) for validation results and remaining work.
 
 ## Before the first session
@@ -37,6 +38,9 @@ See [STATUS.md](STATUS.md) for validation results and remaining work.
    Fourier matrix and phase conventions, followed by [QPE](notebooks/03_qpe.ipynb)
    for controlled powers, counting-register decoding, and finite precision. The
    Grover-only preview has its own version-matched setup instructions.
+6. Continue with [HHL](notebooks/04_hhl.ipynb): trace a five-qubit, exact-spectrum
+   2x2 example, distinguish success probability from the conditioned solution,
+   and check its relative sign.
 
 Package installation needs internet access. The classroom validation and local
 notebooks run without internet after installation. If a check fails, keep the
@@ -48,8 +52,9 @@ not execute the code.
 - **Grover — available:** [phase marking and amplitude amplification](notebooks/01_grover.ipynb).
 - **QFT/QPE — available locally:** [Fourier transforms](notebooks/02_qft.ipynb)
   followed by [phase estimation](notebooks/03_qpe.ipynb).
-- **HHL/Shor:** small examples of linear-system solving and order finding,
-  including their assumptions and limitations.
+- **HHL — available locally:** [linear-system state preparation](notebooks/04_hhl.ipynb)
+  for a small exact-spectrum family, with postselection and limitations.
+- **Shor — planned:** compiled small-instance order finding and factor recovery.
 
 Session dates and assessment expectations are not confirmed. The
 [course plan](COURSE_PLAN.md) gives a 50-minute core and 75-minute expansion for

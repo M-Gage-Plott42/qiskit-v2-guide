@@ -16,8 +16,8 @@ prerequisites.
 Milestone 1 supplies a draft setup guide for validation. The verified v0.2
 setup/instructor PDFs are ready for initial feedback; final classroom editions
 follow platform validation and instructor feedback. Grover has since
-been implemented as milestone 2, followed by QFT and QPE; HHL
-and Shor are later work. See
+been implemented as milestone 2, followed by QFT, QPE, and the bounded HHL
+lesson; Shor is the next implementation. See
 [STATUS.md](STATUS.md) for current validation and review state.
 
 ## Scheduling and preparation
@@ -27,9 +27,16 @@ class day. These constraints were checked against the
 [official UTC academic calendar](https://www.utc.edu/academic-affairs/registrar/calendars-and-schedules/academic-calendar-fall-2026-summer-2027)
 on October 29, 2026. They do not establish dates for the invited sessions.
 
+The user sent the initial setup/Grover email on October 30; the instructor's
+reply is pending. Questions include the number of sessions and in-class topics,
+student Python/Jupyter preparation, format and assessment, teaching responsibility,
+and preferred notes/examples. See [the instructor review record](INSTRUCTOR_REVIEW_PLAN.md).
+These questions do not change the proposed three-session outline until answered.
+
 Confirm with the instructor before finalizing lesson depth and exercises:
 
-- Session dates, room, meeting lengths, and the deadline for complete materials.
+- Session dates, room, meeting lengths, teaching responsibility, and the deadline
+  for complete materials.
 - Students' Python/Jupyter experience, hands-on versus demonstration format,
   personal computers versus a managed lab, required operating systems, and
   installation restrictions.
@@ -115,13 +122,14 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
 3. **QFT/QPE independently accepted; optional follow-ups reconciled.** Compare the QFT operator with the full Fourier matrix;
    test QPE on asymmetric exact phases and a nonexact phase distribution.
    Document sign/bit conventions and verify SDK references and fresh kernels.
-4. **HHL/Shor contracts ready; implementation remains future work.** Follow
+4. **HHL locally validated; Shor contract ready for implementation.** Follow
    [HHL_PLAN.md](HHL_PLAN.md) for fixed positive evolution, exact eigenphases,
    reciprocal rotations, postselection, and count cleanup. Follow
    [SHOR_PLAN.md](SHOR_PLAN.md) for the explicitly compiled N=15 model,
    full four-bit reversible action, verified order recovery, and factor failure
-   cases. Implement HHL first, then Shor, with independent tests and fresh-kernel
-   notebooks. The current QPE target-width limit remains unchanged.
+   cases. HHL source, tests, notebook, and strict validation are recorded in
+   [HHL_VALIDATION.md](HHL_VALIDATION.md). Implement Shor next with independent
+   tests and a fresh-kernel notebook. The QPE target-width limit remains unchanged.
 5. **Teaching release.** Validate setup instructions on the claimed classroom
    platforms, obtain the matching ChatGPT-reviewed PDF, rehearse the timed
    sessions, and check every notebook from a downloaded archive. Record any
@@ -140,7 +148,7 @@ validated under [QPE_PLAN.md](QPE_PLAN.md). The original checkout remains
 preserved under [GIT_INTEGRATION_PLAN.md](GIT_INTEGRATION_PLAN.md).
 The review's October 30-November 2 feedback window and November 2-6 QFT/QPE
 target are provisional planning targets, not confirmed sessions or commitments.
-QFT/QPE review is accepted; HHL/Shor design contracts are now written and HHL
-implementation is next. No implementation evidence for either is claimed yet. Freeze each session's materials at least one
+QFT/QPE review is accepted; HHL is now locally validated and Shor implementation
+is next under its written contract. Freeze each session's materials at least one
 week before its confirmed date, after platform checks and a pacing rehearsal;
 actual dates, preparation, platform, and assessment decisions remain open.

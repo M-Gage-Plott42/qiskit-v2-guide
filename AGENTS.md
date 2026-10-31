@@ -8,7 +8,7 @@ rulesets as part of instructional work.
 ## Source and notebook conventions
 
 - Canonical reusable algorithm code belongs in `src/phys3810/`; mathematical
-  tests belong in `tests/`. Grover, QFT, and QPE are implemented there; extend this layout for
+  tests belong in `tests/`. Grover, QFT, QPE, and HHL are implemented there; extend this layout for
   the remaining algorithm milestones.
 - Course notebooks belong in `teaching/phys3810-fa2026/notebooks/`. Import
   canonical implementations instead of maintaining separate notebook copies.
@@ -161,26 +161,31 @@ repairs. The v0.2 PDF discrepancy is closed: the corrected receipt identifies
 the delivered files including appended C2PA provenance; full-file and original
 prefix hashes were verified locally. Keep those existing PDFs unchanged.
 The [instructor review plan](teaching/phys3810-fa2026/INSTRUCTOR_REVIEW_PLAN.md)
-uses the two verified v0.2 guides plus the unchanged published rc1 ZIP. Sending
-remains the user's action; the audit does not authorize external messages.
+uses the two verified v0.2 guides plus the unchanged published rc1 ZIP. The user
+reported sending the initial setup/Grover email on October 30; a reply is pending.
+Only the student setup attachment is confirmed by the supplied screenshot, not
+the entire recommended packet. Keep private correspondence out of public docs
+and do not send follow-ups without explicit authorization.
 The independent QFT/QPE review has been received and accepted: no blocking
 defects, a fresh Linux CPython 3.12.14 install, and 92 tests/six notebooks passed.
 Four optional follow-ups were reconciled locally; see the
 [review disposition](teaching/phys3810-fa2026/QFT_QPE_REVIEW_RECONCILIATION.md).
-The current 97-test revision adds regression coverage and presentation/docstring
+The reconciled 97-test phase revision adds regression coverage and presentation/docstring
 clarity without changing QFT/QPE computational logic. No new GPT Pro round is
 needed solely for those evidenced updates. Keep the final response block for
 the next instruction back to Codex. The QFT/QPE technical review bundle uses
 version-matched Markdown setup and excludes the Grover-only PDF editions;
 those reviewed PDF bytes remain unchanged in the repository. This review
 snapshot does not replace the Grover rc1 ZIP or publish a new student release.
-The [HHL contract](teaching/phys3810-fa2026/HHL_PLAN.md) and
-[Shor contract](teaching/phys3810-fa2026/SHOR_PLAN.md) are now defined, not
-implemented. HHL uses exact three-bit eigenphases for bounded 2x2 positive
-Hermitian systems. Shor is explicitly a compiled full-domain N=15 example
-with four residue qubits and a separate order-finding builder. The existing
-QPE one/two-target contract remains unchanged. HHL implementation is the next
-scoped action; Shor follows separately. Design checks are not algorithm-test
-passes, and the existing 97-test/six-notebook baseline remains unchanged.
+The [HHL contract](teaching/phys3810-fa2026/HHL_PLAN.md) is now implemented;
+[validation](teaching/phys3810-fa2026/HHL_VALIDATION.md) records 129 tests and
+seven fresh-kernel notebooks. All 97 phase-review regressions remain intact.
+HHL uses exact three-bit eigenphases for bounded 2x2 positive Hermitian systems;
+its raw success/failure amplitudes and both-branch count cleanup are tested.
+The [Shor contract](teaching/phys3810-fa2026/SHOR_PLAN.md) remains design only:
+a compiled full-domain N=15 example with four residue qubits and a separate
+order-finding builder. The existing QPE one/two-target contract is unchanged.
+Implement Shor next, then prepare the combined HHL/Shor GPT Pro checkpoint.
+Do not label HHL independently reviewed merely because local checks passed.
 No push, PR, merge, release change, external message, or hardware job is part
 of this local milestone. Preserve the original checkout/index and rc1 assets.

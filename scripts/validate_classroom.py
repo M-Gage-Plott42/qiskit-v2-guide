@@ -20,6 +20,7 @@ PREFLIGHT_NOTEBOOK = "teaching/phys3810-fa2026/notebooks/00_setup_preflight.ipyn
 GROVER_NOTEBOOK = "teaching/phys3810-fa2026/notebooks/01_grover.ipynb"
 QFT_NOTEBOOK = "teaching/phys3810-fa2026/notebooks/02_qft.ipynb"
 QPE_NOTEBOOK = "teaching/phys3810-fa2026/notebooks/03_qpe.ipynb"
+HHL_NOTEBOOK = "teaching/phys3810-fa2026/notebooks/04_hhl.ipynb"
 NOTEBOOKS = (
     PREFLIGHT_NOTEBOOK,
     "notebooks/00_local_statevector_smoke.ipynb",
@@ -27,8 +28,12 @@ NOTEBOOKS = (
     GROVER_NOTEBOOK,
     QFT_NOTEBOOK,
     QPE_NOTEBOOK,
+    HHL_NOTEBOOK,
 )
-REQUIRED_PNGS = {PREFLIGHT_NOTEBOOK: 2, GROVER_NOTEBOOK: 3, QFT_NOTEBOOK: 2, QPE_NOTEBOOK: 3}
+REQUIRED_PNGS = {
+    PREFLIGHT_NOTEBOOK: 2, GROVER_NOTEBOOK: 3, QFT_NOTEBOOK: 2,
+    QPE_NOTEBOOK: 3, HHL_NOTEBOOK: 2,
+}
 EXPECTED = {"qiskit": "2.6.1", "qiskit-aer": "0.17.2"}
 
 
@@ -168,7 +173,7 @@ def main() -> int:
         failures += 1
         print(f"FAILED: notebook runner: {type(error).__name__}: {error}", flush=True)
     print("SKIPPED: optional IBM Runtime and GPU execution (outside classroom defaults).", flush=True)
-    print("UNTESTED: HHL and Shor lessons (not implemented yet).", flush=True)
+    print("UNTESTED: Shor lesson (not implemented yet).", flush=True)
     print(f"{'FAILED' if failures else 'PASSED'}: classroom validation", flush=True)
     return int(failures != 0)
 

@@ -23,13 +23,16 @@ locally reconciled with 97 tests/six notebooks. See
 The new local revision is distinguished from the exact ZIP GPT Pro executed.
 No additional phase-algorithm implementation or dependency change was needed.
 
-The HHL/Shor design contracts are now complete: [HHL_PLAN.md](HHL_PLAN.md)
-fixes exact eigenvalue encoding, rotations, and postselection; [SHOR_PLAN.md](SHOR_PLAN.md)
-chooses a compiled full-domain N=15 model with a separate four-residue-qubit
-order finder. Neither is implemented. QPE remains bounded to one/two targets.
-The next work is HHL implementation only, then Shor as a separate milestone.
+The HHL implementation now follows [HHL_PLAN.md](HHL_PLAN.md), including raw
+success/failure amplitudes, exact-spectrum cleanup, and a strictly executed
+teaching notebook. See [HHL_VALIDATION.md](HHL_VALIDATION.md) for the executed
+checks and limitations. [SHOR_PLAN.md](SHOR_PLAN.md) remains design only: its
+compiled full-domain N=15 example uses a separate four-residue-qubit order finder.
+QPE stays bounded to one/two targets. The next scoped implementation is Shor.
 The original checkout/index, PDFs, Grover release, and reviewed phase ZIP remain
-intact. The instructor packet can support teaching feedback; sending is not assumed.
+intact. The user sent the initial setup/Grover email on October 30 and is awaiting
+the instructor's reply; only the setup PDF attachment is confirmed by the
+supplied screenshot. See [the instructor review record](INSTRUCTOR_REVIEW_PLAN.md).
 
 Keep responsibilities distinct: the course plan defines deliverables;
 `STATUS.md` records current evidence; `VALIDATION.md` records executed checks;
@@ -77,19 +80,17 @@ still need authorization covering those actions.
 
 ## Immediate next technical action
 
-Implement the exact-spectrum HHL milestone under [HHL_PLAN.md](HHL_PLAN.md).
-Preserve the declared positive evolution sign, three-bit decoding, full reciprocal
-lookup, and inversion of QPE without reversing target preparation. Verify count
-cleanup on both flag branches, unconditioned success probability, and the full
-normalized solution against independent classical expectations. The success flag
-is retained for postselection. Preserve the accepted phase source and all 97
-existing tests; register the HHL notebook with the unchanged strict runner.
+Implement Shor separately under [SHOR_PLAN.md](SHOR_PLAN.md), with compiled
+full-domain N=15 multiplication, four residue qubits, and its own bounded order
+finder. Verify all basis images, independent full joint states, conservative
+exact-rational order recovery, and factor extraction including failure outcomes.
+Preserve the HHL regression suite and existing QPE one/two-target limit.
 
-Shor follows separately under [SHOR_PLAN.md](SHOR_PLAN.md), with compiled
-full-domain N=15 multiplication, four residue qubits, and its own bounded order finder.
 Do not silently broaden QPE, support nonexact HHL spectra, or claim general
 Shor arithmetic. Any expanded scope requires a revised contract and appropriate
-new evidence before implementation. This design turn performed neither module.
+new evidence before implementation. After the complete Shor milestone, prepare
+and extract-test the combined HHL/Shor review ZIP and separate GPT Pro prompt
+before recommending that sync. The present HHL work does not implement Shor.
 
 ## Ordered work and completion checks
 
@@ -114,12 +115,14 @@ new evidence before implementation. This design turn performed neither module.
    `phase_estimation()`. Independently verify asymmetric exact phases and a
    nonexact phase distribution. Test counting-register interpretation, not
    merely a visually plausible histogram.
-5. **HHL contract ready; implementation next.** Follow [HHL_PLAN.md](HHL_PLAN.md),
+5. **HHL implemented and locally validated.** Follow [HHL_PLAN.md](HHL_PLAN.md),
    which fixes supported matrices, input preparation, phase precision, reciprocal rotation, and
    postselection procedure. Use a small, nontrivial example and independently
    check postselection probability, uncomputation, normalization, and relative
    sign against a classical solve. Restrictions belong in student explanations.
-6. **Shor contract ready; implementation follows HHL.** Follow [SHOR_PLAN.md](SHOR_PLAN.md)
+   [HHL_VALIDATION.md](HHL_VALIDATION.md) records the completed local checks;
+   this is not yet an independent GPT Pro review of HHL.
+6. **Shor contract ready; implementation next.** Follow [SHOR_PLAN.md](SHOR_PLAN.md)
    for the fixed modulus, bases, compiled full-domain model, and failure policy;
    implement and test the declared modular permutations, order recovery, and
    classical factor extraction separately, including unsuccessful cases.
@@ -159,7 +162,8 @@ platform and teaching claims provisional.
   Linux installation and 92 tests/six notebooks. No blocking defects were found;
   four optional P3 updates were adopted and locally validated with 97 tests.
   Shared phase/bit conventions are resolved. HHL eigenvalue encoding and Shor
-  register/oracle scope still require written contracts before implementation.
+  register/oracle scope now have written contracts; HHL is implemented locally
+  and Shor remains the next separate milestone.
 - **Recommended after HHL/Shor and before publication:** evaluate the combined
   mathematical evidence, limitations, setup PDF, and teaching sequence. Do not
   label a release independently reviewed until an actual response is recorded.
@@ -282,19 +286,21 @@ transfer is needed for this review. The report and verified snapshot suffice.
 
 ## Instructor feedback
 
-Use [INSTRUCTOR_REVIEW_PLAN.md](INSTRUCTOR_REVIEW_PLAN.md) for the first packet:
-two verified v0.2 PDF attachments and the named unchanged rc1 ZIP link. Explain
-that the attached setup guide supersedes the older guide inside the ZIP.
-Repository PDF integration/publication can follow separately; a dirty local
-checkout does not invalidate the already-published preview.
+The user sent the initial setup/Grover email on October 30 and is awaiting a
+reply. Use [INSTRUCTOR_REVIEW_PLAN.md](INSTRUCTOR_REVIEW_PLAN.md) to distinguish
+the confirmed setup attachment from the full recommended packet. The two
+verified v0.2 guides and unchanged rc1 ZIP remain available; do not assume
+additional delivery or repeat the initial send recommendation as unfinished work.
 
-Ask for dates/durations/deadline, prior preparation/notation, classroom format
-and operating systems, algorithm emphasis/depth, and assessment expectations.
-The five requested implementations remain deliverables; their in-class coverage
-is still a teaching decision. Request feedback on clarity, level, emphasis, and
-proposed pacing without requiring installation or manual code review. Keep
-private correspondence and message drafts out of public repository documents.
-The user sends the email; this planning update does not authorize sending tools.
+Requested decisions include session coverage, prior preparation, format,
+assessment, teaching responsibility, and preferred notes/examples. Dates,
+durations, deadlines, and required native platforms also remain open. The five
+requested implementations remain deliverables; in-class coverage is a separate
+teaching decision. Record a later reply's technical/teaching conclusions without
+publishing private correspondence, email screenshots, or addresses. No reply,
+follow-up message, or outreach schedule is assumed, and sending tools remain
+outside the local authorization. Instructor feedback does not replace assistant
+technical review or require manual code audit by the user.
 
 ## User input, when available
 

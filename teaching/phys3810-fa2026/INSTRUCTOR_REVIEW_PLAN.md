@@ -1,12 +1,23 @@
 # First instructor review packet
 
-October 30, 2026. **Ready for an initial pedagogical review.** The corrected
-PDF receipts are verified; no replacement guide or new ZIP is needed. This is
-a planning record, not an email sent or a final classroom release. The user
-will send the message. Private correspondence and the email draft stay out of
-public repository documents.
+October 30, 2026. **Initial setup/Grover email sent by the user; reply pending.**
+The user supplied a sent-message screenshot showing one student setup PDF
+attachment. The instructor guide and direct ZIP link were recommended below,
+but their delivery is not confirmed by that evidence. No attachment-byte hash
+was supplied with the email record; do not turn its filename into a new PDF
+receipt. The repository's verified v0.2 PDF bytes remain unchanged.
 
-## Packet and version instructions
+The outstanding decisions are three visits versus broader five-topic coverage,
+in-class versus outside-class work, Python/Jupyter preparation, hands-on versus
+demonstration format, assessment, possible preparation/platform survey, who will
+deliver the sessions, and preferred lecture notes or HHL/Shor examples. These
+are pending questions, not agreed changes to the course. No reply is recorded.
+Local module development continues under the bounded contracts while awaiting
+feedback. Record only teaching decisions from a later reply; keep private email
+text, addresses, and screenshots out of public repository files. The assistant
+has not sent an email or scheduled a follow-up.
+
+## Recommended packet (delivery beyond setup draft unconfirmed)
 
 - Attach the [student setup guide v0.2](handouts/PHYS3810_Student_Setup_Grover_RC1_v0.2.pdf):
   three pages covering the environment, installation, validation, and notebooks.
@@ -20,11 +31,11 @@ public repository documents.
 
 The release page also retains the v0.1 PDF assets. Direct attachment of the
 verified v0.2 guides and a direct ZIP link make the intended combination clear.
-The PDFs need not already be committed or published as release assets for this
-instructor review. Those distribution updates remain a separate planned change.
+The PDFs are tracked in the local documentation integration commit. Adding v0.2
+as public release assets remains a separate planned action.
 See [the authoritative PDF receipt](handouts/README.md).
 
-## Claims to use in the first message
+## Scope and claims for subsequent discussion
 
 - This is the **first review packet**, covering setup and Grover. The published
   download does not include QFT, QPE, HHL, or Shor.
@@ -32,7 +43,8 @@ See [the authoritative PDF receipt](handouts/README.md).
   Its default path runs locally without an IBM account or quantum hardware.
   Internet is needed for package installation.
 - QFT and QPE are implemented and locally validated, but are not in this
-  Grover download. Their combined independent review is accepted; HHL/Shor design is next.
+  Grover download. Their combined independent review is accepted; later module progress is tracked
+  in [STATUS.md](STATUS.md).
   Do not repeat the superseded instruction to begin QFT.
 - The **proposed** lesson has a 50-minute core and an expansion to 75 minutes;
   live pacing has not yet been rehearsed with this class.
@@ -88,10 +100,10 @@ unchanged. HEAD, staged content, PDFs, source, notebooks, tests, dependencies,
 and workflows match the turn's starting state. Detailed local evidence is in
 ignored `artifacts/instructor-review-audit-2026-10-30/`.
 
-Collect the instructor's teaching decisions alongside the QFT/QPE independent
-review. [Git integration](GIT_INTEGRATION_PLAN.md) is complete and preserved
-all original work and upstream fixes. QFT and QPE are now locally validated;
-HHL/Shor remain outside the current milestone. Native-platform checks and
+Await the instructor's reply; the QFT/QPE independent review is already accepted.
+[Git integration](GIT_INTEGRATION_PLAN.md) is complete and preserved
+all original work and upstream fixes. QFT, QPE, and HHL are now locally validated;
+Shor remains the next separate implementation. Native-platform checks and
 rehearsal follow confirmed teaching arrangements. The original Grover PDF
 editions remain unchanged as the first instructor packet.
 
@@ -106,4 +118,5 @@ Documentation and verified PDF bytes are tracked in local commit
 forward the existing implementation and its evidence; see
 [INTEGRATION_VALIDATION.md](INTEGRATION_VALIDATION.md) for the new execution
 results. The original checkout/index and published Grover rc1 assets remain
-intact. QPE is next. No new release or instructor message was sent.
+intact. That integration step sent no instructor message; the later user-sent
+setup email is recorded at the top of this document. No new release was made.

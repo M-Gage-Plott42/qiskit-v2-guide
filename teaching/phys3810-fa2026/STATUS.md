@@ -1,24 +1,28 @@
 # PHYS 3810 status
 
-As of October 30, 2026: **HHL and Shor design contracts are complete;
-implementation remains unstarted.** The next scoped work is HHL under
-[HHL_PLAN.md](HHL_PLAN.md), followed separately by the compiled N=15 model in
-[SHOR_PLAN.md](SHOR_PLAN.md). These are design decisions, not new algorithm
-execution evidence. The accepted QFT/QPE baseline remains **97 tests and six
-notebooks**, last executed during the review reconciliation.
+As of October 30, 2026: **HHL is implemented and locally validated: 129 tests
+and seven required fresh-kernel notebooks passed.** This retains all 97 existing
+tests and adds 23 HHL mathematical tests plus nine actual-notebook regressions.
+See [HHL_VALIDATION.md](HHL_VALIDATION.md) for commands, tolerances, artifacts,
+and limits. The next scoped implementation is Shor under [SHOR_PLAN.md](SHOR_PLAN.md).
 
-HHL admits 2x2 Hermitian positive matrices with integer eigenvalues 1-7,
-uses `exp(+i*pi*A/4)`, three count bits, one system qubit, and one success flag.
-Shor retains a full four-qubit residue register for N=15, uses explicit compiled
-modular-permutation gates, and verifies exact-rational order candidates.
-Its separate builder uses the existing QFT; the QPE helper is not widened.
+HHL follows [HHL_PLAN.md](HHL_PLAN.md): 2x2 positive Hermitian matrices with
+integer eigenvalues 1-7, positive evolution, three count bits, one system qubit,
+and one success flag. Raw success/failure amplitudes, probability, both-branch
+count cleanup, normalization, and complex relative phase are checked independently.
+Shor remains design only: compiled full-domain N=15 modular permutations with
+four residue qubits and a separate builder. The QPE contract is unchanged.
 
-The independent QFT/QPE review is accepted, and its P3 follow-ups are reconciled.
-The original checkout/index, reviewed ZIP, verified PDFs, and Grover rc1 assets
-remain intact. Only Markdown plans/context changed in this design turn; no
-circuit implementation, new notebook, dependency change, or external action
-was performed. Scalar design fixtures and documentation checks are recorded
-separately from the existing execution baseline.
+The user sent the initial setup/Grover email on October 30 and is awaiting the
+instructor's reply. The supplied screenshot confirms a student setup attachment;
+delivery of the rest of the recommended packet is not assumed. Session coverage,
+student preparation, format, assessment, teaching responsibility, and preferred
+examples remain open. See [INSTRUCTOR_REVIEW_PLAN.md](INSTRUCTOR_REVIEW_PLAN.md).
+
+The independent QFT/QPE review is accepted. HHL has local implementation review
+and execution evidence, not an independent GPT Pro review yet. The original
+checkout/index, reviewed phase ZIP, verified PDFs, and Grover rc1 assets remain
+intact. Work remains local; no Shor implementation or external action was performed.
 
 Technical review and validation are owned by the implementation assistant;
 the user is not being asked to review code manually. The latest coordination
@@ -52,7 +56,7 @@ QFT is excluded from the release; its local evidence is in [QFT_VALIDATION.md](Q
 - **QFT implemented and tested locally:** canonical exact transform on 1–6
   qubits, 14 new tests, and a seven-code-cell teaching notebook. The development
   validator passed **64 tests and five required notebooks** at the QFT-only
-  checkpoint, including two QFT figures. The combined suite is now 97 tests/six notebooks.
+  checkpoint, including two QFT figures. The HHL milestone now extends the suite to 129 tests/seven notebooks.
 - **Independent review evidence:** GPT Pro reported another Linux install on
   CPython 3.12.14 with the same 114 application-package pins, all original 19
   tests and three notebooks passing, and reproduced M1-01. The correction was
@@ -83,7 +87,11 @@ QFT is excluded from the release; its local evidence is in [QFT_VALIDATION.md](Q
   compiled full-domain N=15 order finding with 8-10 logical qubits and verified
   classical postprocessing. Independent acceptance gates and error cases are
   specified in the linked plans.
-- **Not implemented / untested:** HHL and Shor lessons.
+- **HHL implemented and tested locally:** canonical circuit and reciprocal helper,
+  23 mathematical tests (including all 28 spectral pairs), nine editable-cell
+  regressions, and a seven-code-cell notebook with three figures. All 42 required
+  code cells across seven notebooks executed; 13 PNGs were produced.
+- **Not implemented / untested:** Shor lesson.
   The original smoke notebooks do not count as those algorithm implementations.
 - **Drafts now, final later:** the original v0.1 guides remain published with
   rc1. ChatGPT supplied new v0.2 student/instructor drafts, now copied unchanged
@@ -108,40 +116,36 @@ these facts do not establish the invited-session dates.
 
 ## Recommended next actions
 
-1. **Implement HHL only as the next milestone.** Follow its exact-spectrum
-   contract, including target preparation, reciprocal lookup, both-branch count
-   cleanup, success probability, normalized solution, and relative sign/phase.
-   Add independent mathematical tests, a teaching notebook, and strict validator
-   integration; preserve all existing regression coverage.
-2. **Then implement the separate bounded Shor milestone.** Keep four residue
-   qubits, the full-domain permutation contract, conservative exact-rational
-   recovery, and honest failure outcomes. Do not widen QPE or claim general
-   reversible-arithmetic performance.
-3. **In parallel, instructor feedback:** the unchanged Grover packet is ready;
-   dates, target platforms, preparation, depth, and assessment remain open.
-4. **Before a combined teaching publication:** review completed HHL/Shor evidence,
-   validate claimed platforms/UI, rehearse pacing, and obtain matching reviewed
-   PDFs. Publication and messages require applicable authorization.
+1. **Implement the bounded Shor milestone.** Keep four residue qubits, the
+   full-domain permutation contract, conservative exact-rational recovery, and
+   honest failure outcomes. Add independent tests, a teaching notebook, and
+   strict validator integration; preserve all 129 regressions. Do not widen QPE.
+2. **Then prepare the combined HHL/Shor GPT Pro review.** Produce one runnable
+   ZIP on the desktop with a separate review prompt, enforce bundle exclusions,
+   and verify an extraction outside the checkouts. Record the exact reviewed
+   snapshot and actually received response before claiming independent acceptance.
+3. **In parallel, await instructor feedback.** The setup email is already sent;
+   no follow-up has been sent or scheduled by the assistant. Continue bounded
+   local development while teaching decisions remain provisional.
+4. **Before a combined teaching publication:** validate claimed platforms/UI,
+   rehearse pacing, and obtain matching reviewed PDFs. Publication and messages
+   require applicable authorization.
 
 Native Windows/macOS checks and instructor decisions can progress alongside
-Linux algorithm development. They limit portability and release claims; they
-do not require pausing unrelated local work. Dates and assessment expectations
-are still unknown. No implementation of QFT, QPE, HHL, or Shor was included in the
-Grover preview. Remote CI passed for Grover. A deliberately failed remote job's
-artifact-upload behavior and remote QFT checks remain untested.
+Linux algorithm development. They limit portability and release claims, not
+unrelated local work. The Grover preview still contains no later algorithms.
+Remote CI passed for Grover; remote checks for subsequent local commits and
+intentional failure-artifact upload remain untested.
 
-**GPT Pro sync: not needed solely for these bounded design contracts.** The
-pre-HHL/Shor phase review is already accepted, and QPE/environment scope is
-unchanged. Sync sooner if the contracts expand or unresolved mathematics arises;
-retain the later combined HHL/Shor review before publication. User input needed
-for the defined next local milestone: none. Instructor decisions remain open
-without being invented or assigned as manual code review.
+**GPT Pro sync: not needed for this bounded HHL implementation alone.** The
+pre-HHL/Shor phase review is accepted and the contract/environment is unchanged.
+The next planned sync follows completed Shor and the combined evidence packet;
+sync sooner for unresolved mathematics or a scope change. User input needed
+for the defined next local milestone: none. Instructor decisions are pending.
 
-Design validation: nine classical HHL fixtures, seven scalar rotation amplitudes,
-128 modular-permutation images, 1,024 composition images, and selected rational
-recovery/factor cases were checked. These calculations do not execute HHL/Shor.
-Application tests were deliberately not rerun for Markdown-only changes.
-`pre-commit run --all-files`, whitespace checks, and 56 relative documentation
-links passed. Content hashes confirmed source, tests, notebooks, QPE contract,
-dependencies, and PDFs unchanged, with the original checkout/index and release
-assets preserved. Local evidence is under `artifacts/hhl-shor-design-2026-10-30/`.
+The required Python 3.12 checks, Ruff, original smoke workflow, pre-commit,
+source-notebook cleanliness, documentation links, and preservation checks passed.
+Detailed local evidence is under `artifacts/hhl-2026-10-30/`; the public summary
+is [HHL_VALIDATION.md](HHL_VALIDATION.md). The earlier scalar-only design record
+remains under `artifacts/hhl-shor-design-2026-10-30/` and is not relabeled as
+algorithm execution.

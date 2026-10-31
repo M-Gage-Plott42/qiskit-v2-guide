@@ -9,7 +9,7 @@ yet validated for this milestone; see [STATUS.md](STATUS.md) for current
 evidence. These instructions use **64-bit CPython 3.12**, **Qiskit 2.6.1**, and
 **Aer 0.17.2**. IBM accounts, tokens, GPUs, and Git are not needed.
 
-This page follows the development snapshot, which includes Grover, QFT, and QPE.
+This page follows the development snapshot, which includes Grover, QFT, QPE, and HHL.
 The Grover-only preview ships separate version-matched instructions and a
 review-draft PDF; its four-notebook validation intentionally excludes QFT/QPE.
 The QFT/QPE review ZIP uses its own Markdown setup instructions; the existing
@@ -91,8 +91,8 @@ packages during the labs.
 
 The validator prints your interpreter path, Python `3.12.x`, `qiskit: 2.6.1`,
 and `qiskit-aer: 0.17.2`. It checks dependencies, runs offline tests, and
-executes preflight, the two local smoke notebooks, Grover, QFT, and QPE in
-fresh kernels. The current development baseline is 97 tests and six notebooks. The earlier
+executes preflight, the two local smoke notebooks, Grover, QFT, QPE, and HHL in
+fresh kernels. The current development baseline is 129 tests and seven notebooks. The earlier
 QFT/QPE review ZIP remains a distinct 92-test snapshot.
 Success ends with:
 
@@ -101,8 +101,7 @@ PASSED: classroom validation
 ```
 
 `SKIPPED` for optional IBM Runtime/GPU execution and `UNTESTED` for
-HHL and Shor are expected and are not claims that those paths
-passed. A `FAILED` line or traceback needs attention. Executed notebook copies
+Shor are expected and are not claims that those paths passed. A `FAILED` line or traceback needs attention. Executed notebook copies
 are saved under `artifacts/executed-classroom/`; source notebooks stay unchanged.
 
 ## 4. Open JupyterLab and choose the kernel
@@ -147,7 +146,10 @@ during validation; optional discussion time does not mean skipped code cells.
 The development checkout also provides `teaching/phys3810-fa2026/notebooks/02_qft.ipynb`.
 It introduces the first 20 minutes of the combined session. Continue with
 `teaching/phys3810-fa2026/notebooks/03_qpe.ipynb` for the 30-minute QPE core and
-25-minute expansion on nonexact outcomes and precision.
+25-minute expansion on nonexact outcomes and precision. Next,
+`teaching/phys3810-fa2026/notebooks/04_hhl.ipynb` supplies the 20-minute HHL core
+and 15-minute expansion on state preparation, success probability, and relative
+phase. Its supported matrices have exact eigenvalues in 1-7.
 
 ## Focused troubleshooting
 

@@ -1,16 +1,17 @@
 # HHL milestone: exact-spectrum teaching contract
 
-October 30, 2026. **Design only; implementation and circuit acceptance tests
-are untested.** This contract follows the accepted QFT/QPE conventions and
-does not modify [QPE_PLAN.md](QPE_PLAN.md). Implement HHL as a separate later
-milestone in `src/phys3810/hhl.py`, with mathematical tests in `tests/` and
-the teaching notebook `notebooks/04_hhl.ipynb`.
+October 30, 2026. **Implemented and locally validated under this contract.**
+See [HHL_VALIDATION.md](HHL_VALIDATION.md) for execution evidence and remaining
+review limits. This contract follows the accepted QFT/QPE conventions and
+does not modify [QPE_PLAN.md](QPE_PLAN.md). Canonical HHL source is
+`src/phys3810/hhl.py`, with mathematical tests in `tests/` and the teaching
+notebook `notebooks/04_hhl.ipynb`.
 
 ## Scope, interface, and inputs
 
 The first HHL example is a **one-system-qubit, exact-spectrum linear-system
 state-preparation demonstration**. It is not a general linear-system solver.
-Planned public interfaces:
+Public interfaces:
 
 - `hhl_circuit(matrix, rhs)` returns an unmeasured five-qubit circuit.
 - `hhl_reciprocal_rotation()` returns the fixed four-qubit count/flag rotation
@@ -171,7 +172,7 @@ Independent tests must:
    six-standard-error bounds plus one-shot allowance; use the actual selected
    shot count for conditional bounds. Statevector expectations remain primary.
 
-Planned numerical tolerances: `rtol=0`; full-state/operator/probability/norm
+Numerical tolerances: `rtol=0`; full-state/operator/probability/norm
 `atol=1e-10`; conditioned-state `atol=1e-9`, allowing amplification by at most
 seven during normalization. Require the norm of the nonzero-count projection
 to be at most `1e-9` (leakage probability at most `1e-18`). Normalize the success
@@ -196,7 +197,7 @@ count cleanup. Deriving every decomposition or coding HHL from scratch is not
 inside that slot. The shared session retains its five-minute QPE refresher,
 20-minute Shor core, and five-minute limitations discussion.
 
-Later implementation must import canonical source into `04_hhl.ipynb`, place
+The implementation must import canonical source into `04_hhl.ipynb`, place
 predictions before answers, exercise editable parameters, and register fresh
 execution with at least two meaningful figures (circuit and conditioned-state/
 success comparison). Preserve the existing 97-test/six-notebook baseline and
@@ -204,8 +205,9 @@ all strict runner safeguards. Commit notebooks without outputs.
 
 Classical design checks confirmed the nine fixtures above and seven rotation
 amplitudes on Python 3.12.15/NumPy 2.5.4. These are scalar/linear-algebra checks,
-not HHL execution. Detailed scratch evidence is ignored under
-`artifacts/hhl-shor-design-2026-10-30/`. **Implementation tests remain untested.**
+not HHL execution. That earlier design evidence is ignored under
+`artifacts/hhl-shor-design-2026-10-30/`. Subsequent circuit, notebook, and full
+regression executions are recorded in [HHL_VALIDATION.md](HHL_VALIDATION.md).
 The independent phase review is already closed; no additional GPT Pro round
 is required solely for this bounded design. Expand the contract or revisit
 review if nonexact/negative spectra or a different algorithmic scope is needed.
