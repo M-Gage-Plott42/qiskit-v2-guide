@@ -1,16 +1,18 @@
 # Classroom-release readiness plan
 
-October 30, 2026. **Planning only.** All five bounded lessons are implemented
-and their technical reviews are accepted. A complete classroom release is not
-yet ready: the corrected source needs fresh-install and interactive evidence,
-claimed native platforms need execution, teaching arrangements remain provisional,
-and new matching PDFs/package/publication checks remain outstanding.
+Updated October 31, 2026. **R1 passed:** fresh installation of unchanged pins
+on Linux/CPython 3.12.15 validated the corrected 160-test revision. See
+[R1_FRESH_LINUX_VALIDATION.md](R1_FRESH_LINUX_VALIDATION.md). All five bounded
+lessons and their technical reviews remain complete. **R2 interactive setup is
+next**; native-platform, teaching/pacing, matching PDF/package, and publication
+gates remain outstanding.
 
-This plan does not execute those steps. No environment installation, runtime
-rerun, upstream fetch, new archive, PDF generation, push, PR, merge, release,
-message, or hardware job is part of this planning turn. The assistant owns
-technical review, repairs, packaging, and evidence; the user is not assigned
-manual code review. Rick's reply remains pending.
+The original October 30 planning turn executed no readiness gate. The later R1
+task performed only internal source export, fresh dependency installation, and
+validation. No new student archive, PDF, upstream fetch, push, PR, merge, release,
+message, or hardware job was performed. The assistant owns technical review,
+repairs, packaging, and evidence; no manual user code audit is assigned.
+Rick's reply remains pending.
 
 ## Source identity and unpublished local inventory
 
@@ -21,7 +23,8 @@ Its recorded baseline is **160 tests, eight notebooks, 50 nonempty code cells,
 16 PNGs**. HHL and Shor each require three figures. Runtime/cloud/GPU remain
 excluded; supported algorithm inputs and QPE's one/two-target limit are fixed.
 
-Local refs show eight commits ahead and zero behind cached `origin/main`,
+At the October 30 planning baseline, local refs showed eight commits ahead
+and zero behind cached `origin/main`,
 `3894391f2026d4fd9351b346b44b5eda453a17da`, the Grover rc1 source. No remote query
 or fetch was performed here. These commits are treated as unpublished from the
 local-only session history and cached refs, not a new certification of GitHub's
@@ -44,9 +47,10 @@ live state. The old local `main` is stale; do not use it as an integration base.
    corrected lesson availability, three-figure gates, theoretical Shor recovery
    probabilities, and the current 160-test baseline.
 
-This planning update is a separate documentation change after those eight
-commits. Its final local commit is recorded in the planning receipt; it does not
-create a new algorithm-validation result or supersede the execution baseline.
+The planning update was committed separately as
+`9e73b82aa578f0264afcbf7125631774afa3eb1c` after those eight commits. R1 exported
+and validated that exact snapshot; its runtime matches `ec07359`. Later R1
+evidence/context updates are separate from the source actually installed/tested.
 
 ## Completed evidence and its limits
 
@@ -54,6 +58,12 @@ create a new algorithm-validation result or supersede the execution baseline.
   CPython 3.12.15, full required checks, 160 tests/eight fresh-kernel notebooks,
   50 code cells/16 figures. Source outputs remain empty. See
   [the reconciliation](HHL_SHOR_REVIEW_RECONCILIATION.md).
+- **Fresh installation passed, October 31:** source `9e73b82`, new isolated
+  CPython 3.12.15 environment on Linux x86_64/glibc 2.43; all 114 installed
+  application distributions match active pins, plus pip 26.2.2. All 160 tests,
+  eight notebooks, 50 cells, and 16 figures passed; 110 exported files/modes
+  remain unchanged. This reuses an existing interpreter/OS, not installed
+  application packages.
 - **Independent review accepted:** QFT/QPE's 92-test snapshot was installed
   freshly on Linux/CPython 3.12.14; the later 158-test HHL/Shor snapshot reused
   that environment. The latter passed all eight notebooks and mathematical
@@ -61,8 +71,8 @@ create a new algorithm-validation result or supersede the execution baseline.
 - **Preserved and verified:** original checkout/index and recovery checkpoint,
   Grover rc1 assets, delivered v0.2 PDFs, and immutable 92-/158-test review ZIPs.
   The previous desktop review copies are absent; retained archives are intact.
-- **Not yet executed for the corrected classroom candidate:** fresh dependency
-  installation, native Windows/macOS, interactive Jupyter/editor setup, timed
+- **Not yet executed for the corrected classroom candidate:** native
+  Windows/macOS, interactive Jupyter/editor setup, timed
   classroom rehearsal, new student-package extraction, or remote CI.
 - **Not yet supplied:** full-course, version-matched student/instructor PDFs.
   The existing v0.2 documents describe Grover-only rc1 (50 tests/four notebooks).
@@ -75,9 +85,13 @@ solely for the already demonstrated P3 corrections.
 
 ## Ordered readiness steps and completion criteria
 
-### R1. Fresh Linux installation of the corrected source — next action
+### R1. Fresh Linux installation of the corrected source — passed October 31
 
-Can proceed without Rick's reply. Export an identified committed snapshot to a
+Completed for `9e73b82`; [the evidence](R1_FRESH_LINUX_VALIDATION.md) records
+actual source/environment paths, installation, checks, and preservation. The
+procedure and criteria below remain applicable if later changes require a rerun.
+
+This step can proceed without Rick's reply. Export an identified committed snapshot to a
 new local staging directory outside both checkouts and create a new isolated
 CPython 3.12 virtual environment, without system site packages. Preserve the
 existing classroom/tool environments. This is internal validation staging, not
@@ -97,7 +111,7 @@ tools for applicable lint. Retain logs/failure artifacts outside tracked files.
 If a dependency repair is needed, scope it explicitly, regenerate evidence,
 and reassess review/platform implications; do not quietly upgrade the pins.
 
-### R2. Interactive setup and return workflow — after R1
+### R2. Interactive setup and return workflow — next action
 
 Actually launch JupyterLab from the validated environment, select the intended
 kernel, open preflight and the course lessons, restart/run all, and inspect
@@ -255,12 +269,13 @@ The verified student/instructor v0.2 full-file hashes remain recorded in
 
 For every step record source identity, environment/platform, exact command or UI
 action, artifact location, outcome, and limitations. Use **passed**, **failed**,
-**skipped with reason**, or **untested** literally. No current gate is closed
-by this planning document. Its own validation covers Markdown, relative links,
-Git scope, and unchanged source/PDF/archive/index bytes only. The existing
-160-test/eight-notebook result remains prior execution evidence, not a rerun.
+**skipped with reason**, or **untested** literally. The original planning turn closed no gate. R1 is now closed by the separately
+recorded fresh-install execution, not by prose changes. Later documentation
+checks cover Markdown, relative links, Git scope, and preserved bytes; they
+do not substitute for executing another gate.
 
-**Recommended next task:** R1, fresh Linux installation from an isolated source
-export of the corrected revision. R2 follows with actual UI access; native-host,
-PDF, pacing, and publication steps remain explicit later gates. User decisions
-are not needed to start R1. **GPT Pro sync: not needed for this planning step.**
+**Recommended next task:** R2, actual interactive setup using the retained R1
+source/environment. Verify their receipt before reuse; if temporary staging was
+removed, recreate the validated snapshot/environment rather than moving an old
+venv. Native-host, PDF, pacing, and publication steps remain later gates.
+**GPT Pro sync: not needed for unchanged-pin R1 validation.**

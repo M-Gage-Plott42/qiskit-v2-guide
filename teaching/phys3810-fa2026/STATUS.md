@@ -1,14 +1,19 @@
 # PHYS 3810 status
 
-As of October 30, 2026: **the HHL/Shor independent review is accepted and
-its follow-ups are reconciled. All five bounded algorithm lessons are implemented.**
-The reviewed snapshot passed 158 tests and eight notebooks on the reviewer's
-reused Python 3.12.14 environment. The current local revision passes **160 tests
-and eight fresh-kernel notebooks**, retaining all 158 prior tests and adding
-two figure-gate regressions. See [the review disposition](HHL_SHOR_REVIEW_RECONCILIATION.md).
-The [classroom-release readiness plan](RELEASE_READINESS_PLAN.md) is now complete.
-Next is its R1 fresh Linux installation check; no readiness step or publication
-was executed by the planning turn.
+As of October 31, 2026: **R1 fresh Linux installation passed.** Source
+`9e73b82aa578f0264afcbf7125631774afa3eb1c` was exported outside both checkouts,
+installed in a new isolated CPython 3.12.15 environment with unchanged pins,
+and passed **160 tests/eight fresh-kernel notebooks/50 code cells/16 PNGs**.
+All 110 exported file hashes/modes remain unchanged. See
+[R1_FRESH_LINUX_VALIDATION.md](R1_FRESH_LINUX_VALIDATION.md).
+The next step is R2 actual interactive setup; R1 does not establish UI/native-host
+or publication readiness.
+
+The HHL/Shor independent review remains accepted and its follow-ups reconciled.
+That review executed the earlier 158-test snapshot in a reused Python 3.12.14
+environment; the current 160-test source includes two figure-gate regressions.
+See [the review disposition](HHL_SHOR_REVIEW_RECONCILIATION.md) and
+[the readiness plan](RELEASE_READINESS_PLAN.md) for the separate evidence stages.
 
 HHL remains the exact-spectrum 2x2 demonstration under [HHL_PLAN.md](HHL_PLAN.md).
 Shor now implements [SHOR_PLAN.md](SHOR_PLAN.md): compiled full-domain N=15
@@ -28,7 +33,8 @@ notebook availability statements are corrected, all three HHL/Shor figures are
 required, and Shor displays theoretical recovery probabilities. Algorithm source
 and QPE supported inputs remain unchanged. The original
 checkout/index, reviewed phase ZIP, verified PDFs, and Grover rc1 assets remain
-intact. Work remains local; no external action was performed.
+intact. Work remains local; network activity for R1 was package installation.
+No publication, external message, or hardware job was performed.
 
 Technical review and validation are owned by the implementation assistant;
 the user is not being asked to review code manually. The latest coordination
@@ -125,24 +131,21 @@ these facts do not establish the invited-session dates.
 
 ## Recommended next actions
 
-1. **Execute R1 of the [readiness plan](RELEASE_READINESS_PLAN.md).** Validate the
-   corrected source from an isolated export and a fresh Linux Python 3.12
-   environment, preserving existing environments/checkouts. Require 160 tests,
-   eight fresh-kernel notebooks, 50 code cells, 16 figures, source cleanliness,
-   and recorded installation/version evidence. This can proceed before Rick replies.
-2. **Then perform actual interactive setup checks (R2).** Launch/select/restart/
-   run/reopen Jupyter and the intended editor workflow; headless execution is
-   not UI evidence. Keep unavailable surfaces explicitly untested.
-3. **Follow the remaining conditional readiness gates.** Native-platform claims,
+1. **Execute R2 of the [readiness plan](RELEASE_READINESS_PLAN.md).** Verify the
+   retained R1 source/environment identity, then actually launch JupyterLab,
+   select the kernel, restart/run the lessons, inspect figures, and close/reopen.
+   Exercise intended editor setup if accessible. Headless execution alone is
+   not UI evidence; record unavailable surfaces as untested.
+2. **Follow the remaining conditional gates.** Native-platform coverage,
    teaching decisions/pacing, protected upstream integration, matching PDFs,
-   a newly verified package, and separately authorized publication each have
-   concrete completion criteria. No new distribution or message is authorized.
+   a newly verified package, and separately authorized publication each retain
+   their completion criteria. Rick's reply remains pending.
 
 **GPT Pro sync: not needed now.** The HHL/Shor technical checkpoint is closed;
 D1 and the optional O1/O2 changes have direct local evidence. Sync again for
 unresolved mathematics, an expanded scope, or the matching final PDF/teaching
-checkpoint when its inputs are ready. User input needed to start the next isolated Linux
-validation step: none. Share Rick's reply when received; no manual code audit is requested.
+checkpoint when its inputs are ready. User input needed to begin the next local interactive
+check: none; report actual UI-access limitations if encountered. Share Rick's reply when received; no manual code audit is requested.
 
 At the previous reconciliation, required Python 3.12, lint, smoke, pre-commit,
 notebook cleanliness, link, and preservation checks passed. That evidence is under
@@ -151,9 +154,9 @@ notebook cleanliness, link, and preservation checks passed. That evidence is und
 desktop copy is no longer present. No replacement archive was needed or created.
 Do not distribute that historical ZIP as the corrected current student packet.
 
-The independent review reused an environment; no fresh installation for this
-snapshot, native Windows/macOS execution, interactive setup, timed teaching,
-or remote CI for these local commits is claimed. Runtime/cloud/GPU remain
+The independent review reused an environment; R1 now separately establishes
+a fresh local dependency installation of the corrected source. Native Windows/
+macOS execution, interactive setup, timed teaching, and remote CI remain untested. Runtime/cloud/GPU remain
 excluded. Original checkout/index, verified PDFs, and Grover rc1 assets are
 preserved. No push, PR, merge, publication, message, or hardware job occurred.
 
@@ -165,9 +168,22 @@ remote refresh or live ruleset check was performed; this does not establish
 current upstream state. The new planning commit is separate from that inventory.
 Existing workflows/dependency files match the cached published base.
 
-Only Markdown plans/context changed. Documentation checks and preservation
-checks passed; application tests were deliberately not rerun for this prose-only
-turn. The 160-test/eight-notebook result above remains the previous reconciliation's
-execution evidence. Fresh installation, UI/native-host checks, rehearsal, new
-PDFs/package, and publication remain unperformed. Details are retained in ignored
+In that planning turn, only Markdown plans/context changed. Documentation and
+preservation checks passed; application tests were deliberately not rerun. The 160-test/eight-notebook result above remains the previous reconciliation's
+execution evidence. At that point fresh installation, UI/native-host checks,
+rehearsal, new PDFs/package, and publication were unperformed. R1 was subsequently
+completed on October 31 as recorded above; the other gates remain open. Details are retained in ignored
 `artifacts/release-readiness-plan-2026-10-30/`.
+
+## Fresh-install evidence, October 31
+
+The new environment started with bootstrap pip only, excludes system/user site
+packages, and resolves application imports/kernels inside the new staging area.
+All 114 installed application distributions match active constraints; pip 26.2.2
+is the sole separately pinned bootstrap tool. Optional Runtime was not installed.
+Required runtime checks ran against the isolated export; Ruff used separate
+maintainer tools there, and pre-commit ran in the integration worktree because
+it requires Git metadata. Source bytes, old environment configuration/package
+metadata, original checkout/index, and immutable assets remain preserved.
+Detailed receipts/logs are under `artifacts/r1-fresh-linux-2026-10-31/`. The retained
+`/tmp` staging can support R2 but is not a durable backup or student package.

@@ -1,6 +1,6 @@
 # PHYS 3810 implementation workflow
 
-Updated October 30, 2026. This is maintainer guidance; the student entry point
+Updated October 31, 2026. This is maintainer guidance; the student entry point
 remains [README.md](README.md). The assistant owns technical review and tests.
 The user supplies teaching decisions and any external reviewer response that
 is not accessible in the current workspace.
@@ -84,18 +84,23 @@ still need authorization covering those actions.
 
 ## Immediate next technical action
 
-The [classroom-release readiness plan](RELEASE_READINESS_PLAN.md) is complete.
-Next execute R1: a fresh Linux Python 3.12 installation against an isolated
-source export of the corrected 160-test revision. Preserve current environments
-and both checkouts. Record exact source/environment identity, installed versions,
-strict execution, source cleanliness, and outcomes. This is internal validation
-staging, not a new student archive or PDF request.
+R1 of the [readiness plan](RELEASE_READINESS_PLAN.md) passed on October 31:
+source `9e73b82` installed unchanged pins into a fresh isolated Python 3.12.15
+environment and passed 160 tests/eight notebooks/50 cells/16 PNGs. See
+[R1_FRESH_LINUX_VALIDATION.md](R1_FRESH_LINUX_VALIDATION.md) for paths and receipts.
 
-Then execute R2's actual interactive setup checks. The remaining plan gates cover
-native platforms, teaching feedback/rehearsal, protected upstream integration,
-matching PDFs, final packaging, and publication. Rick's reply remains pending;
-unknown teaching decisions do not block R1. The planning turn executed none of
-those gates and did not authorize external actions.
+Next execute R2 through actual UI access: verify the retained source/environment,
+launch JupyterLab, select the correct kernel, restart/run, inspect figures, and
+close/reopen. Check the intended editor workflow if accessible. Preserve the
+source snapshot and existing environments. If the temporary staging disappeared,
+recreate it from its exact commit/pins; never move a venv and claim it remains
+validated. Unavailable UI surfaces remain explicitly untested. R1 fresh kernels
+are not interactive setup evidence.
+
+Remaining gates cover native platforms, teaching feedback/rehearsal, protected
+upstream integration, matching PDFs, final packaging, and publication. Rick's
+reply remains pending. R1 produced internal validation evidence only and did not
+authorize external publication/messages or hardware work.
 
 Do not broaden QPE, support nonexact HHL spectra, or claim general Shor arithmetic.
 Changes to supported families require a revised contract and appropriate evidence.

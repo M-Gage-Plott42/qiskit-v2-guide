@@ -27,8 +27,11 @@ QPE has [its own phase/register contract](QPE_PLAN.md) and
 are implemented and independently accepted; their
 [reconciliation](HHL_SHOR_REVIEW_RECONCILIATION.md) records the corrected
 160-test/eight-notebook baseline. Onboarding alone does not validate algorithms.
-The [readiness plan](RELEASE_READINESS_PLAN.md) separates that reused-environment
-evidence from fresh installation and native/interactive checks still needed.
+The [R1 fresh-install record](R1_FRESH_LINUX_VALIDATION.md) now adds October 31
+validation from source `9e73b82` in a new isolated CPython 3.12.15 environment:
+114 application distributions match active pins, plus pip 26.2.2; all 160 tests
+and eight notebooks pass. The [readiness plan](RELEASE_READINESS_PLAN.md) keeps
+that evidence separate from native-platform and interactive checks still needed.
 Reference interfaces for the algorithm milestones are `QFTGate`,
 `phase_estimation()`, and `grover_operator()` with V2 primitives.
 
@@ -50,7 +53,9 @@ The lock is a full version resolution, not a hash-verified artifact lock. It
 is generated across platforms rather than by freezing a Linux-only install.
 `pip==26.2.2` is the documented installer; it is not an application dependency.
 Use a fresh virtual environment to avoid unrelated packages from previous work.
-Actual installed versions and test evidence appear in [VALIDATION.md](VALIDATION.md).
+Original environment evidence is retained in [VALIDATION.md](VALIDATION.md);
+current fresh-install versions and outcomes are in
+[R1_FRESH_LINUX_VALIDATION.md](R1_FRESH_LINUX_VALIDATION.md).
 
 ## Platforms and evidence
 

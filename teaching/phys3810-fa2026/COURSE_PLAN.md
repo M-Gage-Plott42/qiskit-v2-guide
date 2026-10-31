@@ -135,7 +135,9 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    notebook status correction, and two optional improvements; current validation
    passes 160 tests and eight notebooks. Prepare release readiness next.
 5. **Teaching release.** Follow the staged
-   [readiness plan](RELEASE_READINESS_PLAN.md). Validate setup instructions on the claimed classroom
+   [readiness plan](RELEASE_READINESS_PLAN.md). R1 fresh Linux installation has
+   [passed](R1_FRESH_LINUX_VALIDATION.md); interactive setup is next. Validate
+   setup instructions on the claimed classroom
    platforms, obtain the matching ChatGPT-reviewed PDF, rehearse the timed
    sessions, and check every notebook from a downloaded archive. Record any
    intentionally unsupported platforms and unresolved teaching decisions.
