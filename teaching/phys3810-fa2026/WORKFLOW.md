@@ -122,14 +122,30 @@ on `candidate/phys3810-fa2026-v0.2.0-rc1`. Runtime checks reran with 160 tests,
 eight notebooks/50 cells/16 PNGs in the reused R1 environment; no source repair,
 new installation, or UI check was needed or claimed.
 
-Next prepare provisional R6 Markdown inputs: version-matched full-course
-student/setup and instructor companions, actual platform claims, and explicit
-pending teaching decisions. The [publication draft](CLASSROOM_PUBLICATION_DRAFT.md)
-provides the proposed identity and later entry-point/package adaptations. No
-PDF or student ZIP should be produced from unstable inputs. Prepare the GPT Pro
-document/teaching sync when those inputs are ready, with accessible bytes and
-its prompt separate from the bundle. Resume R3 when an actual authorized host
-exists; retain the native-editor and human-rehearsal gaps separately.
+R6 provisional Markdown inputs are now prepared: separate
+[student setup](handouts/FULL_COURSE_SETUP_DRAFT.md) and
+[instructor companion](instructor/FULL_COURSE_INSTRUCTOR_DRAFT.md), with actual
+platform claims, bounded algorithm scope, and explicit pending teaching choices.
+[R6_DOCUMENT_INPUTS.md](R6_DOCUMENT_INPUTS.md) records the remaining input and
+file-transfer requirements. The [publication draft](CLASSROOM_PUBLICATION_DRAFT.md)
+keeps the proposed identity distinct from published Grover.
+
+Next validate the new student guide literally on Ubuntu, using a separate source
+copy and fresh environment. Record its exact hash, commands, selected interpreter,
+ordinary `.venv`/`--sys-prefix` registration, actual Jupyter UI actions, full
+validator results, and instruction repairs. R2's external-kernelspec preservation
+adaptation does not establish the literal route. No walkthrough occurred in the
+Markdown-only turn. An internal source copy does not validate a future download
+or student ZIP. Keep existing environments/staging/checkouts and receipts intact.
+
+Keep audience-specific content separate: the student guide contains setup/help,
+not model-review coordination or an instructor key. The current notebooks still
+contain worked results; assessment and solution distribution require an actual
+decision. Prepare the GPT Pro document/teaching sync when its inputs are ready,
+with accessible bytes and the prompt separate from the bundle. A later requested
+review draft may retain declared provisional assumptions; final classroom claims
+require the relevant teaching/platform/pacing gates. Resume R3 when an actual
+authorized host exists, retaining the native-editor gap separately.
 
 For presenter work, always label proposed teaching minutes, measured machine
 seconds, actual UI execution, and human rehearsal as distinct evidence. A

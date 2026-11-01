@@ -14,7 +14,9 @@ untested because the user confirmed no extra host. See
 scope/human pacing, matching PDF/package, and publication remain open.
 **R5 protected local integration passed** with unchanged upstream and all 13
 accepted commits preserved; see [R5_CANDIDATE_VALIDATION.md](R5_CANDIDATE_VALIDATION.md).
-Continue in the new candidate worktree named there.
+Continue in the new candidate worktree named there. R6's provisional
+[Markdown document inputs](R6_DOCUMENT_INPUTS.md) are prepared; the literal
+student-command walkthrough and final PDF delivery/review remain open.
 
 The original October 30 planning turn executed no readiness gate. The later R1
 task performed internal source export, fresh dependency installation, and
@@ -253,14 +255,28 @@ publication description. Choose a distinct full-course candidate version/name;
 check availability before publication. Do not reuse the Grover rc1 tag or
 pretend a 92-/158-test review ZIP contains the 160-test corrections.
 
-### R6. Matching student and instructor PDFs — provisional Markdown next
+### R6. Matching student and instructor PDFs — Markdown prepared; PDF gate open
 
-Provisional Markdown preparation can proceed in the R5 candidate while teaching
-choices remain pending. Keep open decisions visible, use demonstrated setup
-claims, and do not turn proposed dates, scope, assessment, or delivery into
-agreements. Full-course PDFs and final R6 completion require stabilized inputs
-and the existing ChatGPT review/delivery workflow. No PDF creation is authorized
-by the R5 task.
+Provisional [student setup](handouts/FULL_COURSE_SETUP_DRAFT.md) and
+[instructor](instructor/FULL_COURSE_INSTRUCTOR_DRAFT.md) companions are prepared
+as document-v0.1 drafts for proposed code-v0.2.0-rc1. Their
+[input/readiness record](R6_DOCUMENT_INPUTS.md) distinguishes available evidence,
+open decisions, file-transfer requirements, and later PDF review. Student text
+contains no maintainer coordination or instructor key; worked notebook outputs
+and assertions still need an explicit assessment/solution-distribution decision.
+
+Next perform the literal student-guide command/UI walkthrough on the accessible
+Ubuntu host in an isolated source copy and new environment. R2's preservation-
+adapted external-kernelspec run did not test the ordinary in-folder `.venv` and
+`--sys-prefix` sequence end to end. No such walkthrough or runtime rerun occurred
+in this Markdown-only step, and no future download/package is certified by it.
+
+Keep open decisions visible and use demonstrated setup claims; do not turn
+proposed dates, scope, assessment, or delivery into agreements. Final classroom
+PDFs and R6 completion require stabilized inputs and the existing ChatGPT
+review/delivery workflow. A separately requested review-draft handoff may retain
+explicit provisional assumptions without closing missing gates. No new PDF or
+package was created in this preparation.
 
 Prepare synchronized Markdown companions using the agreed teaching scope,
 validated setup/platform claims, candidate version, notebook list, and current
@@ -342,11 +358,11 @@ recorded fresh-install execution, not by prose changes. Later documentation
 checks cover Markdown, relative links, Git scope, and preserved bytes; they
 do not substitute for executing another gate.
 
-**Recommended next task:** prepare provisional R6 full-course Markdown
-companions in the new candidate worktree, using its proposed identity and
-verified setup evidence. Keep instructor material separate and unresolved
-teaching choices explicit; preserve the old Grover PDFs and live links.
-Do not create new PDFs, a student package, or publication as part of that draft
-preparation. R3, R2's native-editor gap, and human pacing stay open.
-**GPT Pro sync: not needed for unchanged-runtime R5 integration.** Prepare the
-next document/teaching packet and exact prompt when R6 inputs stabilize.
+**Recommended next task:** validate the prepared student guide literally on
+Ubuntu in an isolated source copy/new CPython 3.12 environment, including the
+ordinary kernel registration and actual UI return workflow. Record exact guide/
+source identity and results; preserve previous environments and evidence. This
+requires no new PDF or student ZIP and cannot validate an unpublished download.
+Rick's decisions, R3, native editor UI, and human pacing remain open.
+**GPT Pro sync: not needed for provisional Markdown preparation.** Prepare the
+next document/teaching packet and exact prompt when the intended inputs are ready.

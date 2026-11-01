@@ -1,6 +1,14 @@
 # PHYS 3810 status
 
-As of October 31, 2026: **R5 protected local integration passed.** The fresh
+As of October 31, 2026: **R6 provisional Markdown companions are prepared.**
+The [student setup draft](handouts/FULL_COURSE_SETUP_DRAFT.md) and
+[instructor guide draft](instructor/FULL_COURSE_INSTRUCTOR_DRAFT.md) are separate
+document-v0.1 inputs for proposed code-v0.2.0-rc1. They keep the unpublished
+full-course download, untested platform/editor paths, and pending teaching
+choices explicit. [R6_DOCUMENT_INPUTS.md](R6_DOCUMENT_INPUTS.md) records remaining
+inputs before the document handoff. No new PDF, package, or GPT Pro sync occurred.
+
+R5 protected local integration remains passed. The fresh
 upstream check found no changes after `3894391`; all 13 accepted local commits
 through `0570863` remain intact. The new candidate worktree is
 `artifacts/local-candidate-2026-10-31/worktree` beneath the original repository,
@@ -163,13 +171,14 @@ these facts do not establish the invited-session dates.
 
 ## Recommended next actions
 
-1. **Prepare provisional R6 Markdown inputs in the new candidate worktree.**
-   Draft version-matched full-course student/setup and instructor companions
-   using the proposed identity and validated Linux path. Keep unavailable
-   platform/editor paths untested, coverage/assessment provisional, and
-   instructor answers separate. Do not create PDFs or a student package until
-   their required inputs and reviews are ready. The existing Grover editions
-   remain unchanged.
+1. **Validate the new student guide literally on Ubuntu.** Use an isolated
+   source working copy and a new Python 3.12 environment; follow its commands,
+   ordinary in-project `.venv`/`--sys-prefix` kernel registration, and actual
+   JupyterLab restart/run/inspect/save/reopen steps. Preserve existing evidence
+   and environments, record the guide hash and observations, and repair only
+   concrete instruction issues. This internal-copy check cannot certify an
+   unpublished download or replace future package verification. No PDF or
+   archive is needed for that check.
 2. **Resume R3 when actual native hosts become available.** Follow the prepared
    procedures with exact source identity, fresh environments, native architecture
    checks, full validator, and actual UI evidence. Windows x64 and each macOS
@@ -183,8 +192,8 @@ these facts do not establish the invited-session dates.
 **GPT Pro sync: not needed now.** The HHL/Shor technical checkpoint is closed;
 D1 and the optional O1/O2 changes have direct local evidence. Sync again for
 unresolved mathematics, an expanded scope, or the matching final PDF/teaching
-checkpoint when its inputs are ready. User input needed for the completed R5
-integration or provisional R6 Markdown preparation: none. Actual native host access and instructor target decisions
+checkpoint when its inputs are ready. User input needed for the completed R6
+Markdown preparation or the next isolated Ubuntu walkthrough: none. Actual native host access and instructor target decisions
 remain prerequisites for closing R3; agreed teaching scope and an observed
 presenter run-through are still needed to close R4. Share Rick's reply when
 received; no manual code audit is requested.
@@ -322,3 +331,34 @@ query; no tag or package was created, and availability must be rechecked before
 publication. Earlier R1/R2/R4 evidence retains its recorded source/method limits;
 no UI, native-platform, or human-pacing pass was added here. Rick's reply remains
 pending. No external write, publication, new PDF, or hardware job occurred.
+
+## R6 provisional Markdown evidence, October 31
+
+The drafts use candidate `d491b3b` as their source baseline. Student setup
+contains the current notebook list, unchanged package pins, validation output,
+kernel selection, return workflow, and troubleshooting without maintainer
+coordination or instructor answer cues. The instructor companion adds bounded
+contracts, answer cues, provisional session routes, and evidence limits. It
+explicitly notes that the existing notebooks already reveal worked results;
+excluding an instructor file does not make them an answer-free assessment.
+
+R2's actual JupyterLab run used a preservation-specific external kernelspec and
+sibling environment. The ordinary in-project `.venv`/`--sys-prefix` sequence
+retained in the new student draft is therefore still pending a literal complete
+walkthrough. This does not invalidate the observed R1/R2/R5 results, and those
+results do not newly certify that draft's command sequence.
+
+Documentation, command-syntax, consistency, and preservation checks are recorded
+under `artifacts/r6-markdown-2026-10-31/` in the candidate worktree. No runtime
+suite, installation, kernel registration, UI session, new PDF, package, external
+message, or hardware job was performed. The 160-test/eight-notebook/50-cell/
+16-PNG result remains R5 evidence. Existing Grover guides/links/PDFs, source,
+contracts, tests, pins, archives, both earlier checkouts/indexes, environments,
+and R5 receipts remain preserved. Final PDF rendering/visual review/OCR and
+actual delivered-byte verification await a later document handoff.
+
+Documentation checks passed: 365 local file links, five Bash syntax blocks,
+two inline Python parses, source/contract/count consistency, and pre-commit.
+Preservation checks confirmed 114 unchanged candidate files and all 51 R5
+evidence files, plus the earlier checkout/index/assets/environment receipts.
+The completion receipt records the new local commit and clean candidate status.

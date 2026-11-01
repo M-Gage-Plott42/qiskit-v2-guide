@@ -230,9 +230,19 @@ commits through `0570863` retain their IDs. Continue in the new durable
 both the original dirty checkout/index and the accepted integration checkout
 at `0570863`. Required checks reran successfully with 160 tests/eight notebooks,
 50 cells/16 PNGs; this reused R1's environment, not a fresh installation or UI run.
-The candidate version/name is provisional and no tag/package exists. Prepare
-R6 Markdown inputs next; pending teaching decisions and human pacing do not
-become agreed merely because local Git integration passed.
+The candidate version/name is provisional and no tag/package exists. R6's
+separate full-course student/instructor Markdown drafts are prepared; see
+[the document input record](teaching/phys3810-fa2026/R6_DOCUMENT_INPUTS.md).
+They are document v0.1 drafts for proposed code v0.2.0-rc1, distinct from the
+unchanged Grover editions. Next validate the new student guide literally on
+Ubuntu in an isolated working copy/new environment, including its ordinary
+in-project `.venv` and `--sys-prefix` kernel path. R2's adapted external-kernel
+UI evidence does not establish that exact route. This drafting turn does not
+execute that walkthrough, create PDFs/packages, or transfer files to GPT Pro.
+Keep student instructions free of maintainer coordination and instructor answer
+cues. Separate instructor files do not make the existing worked notebooks an
+answer-free assessment. Teaching decisions, solution distribution, and actual
+human pacing remain open; do not infer agreement from document preparation.
 Keep the separate editor gap, native-platform, PDF/package, and publication gates open.
 No push, PR, merge, release change, external message, or hardware job is part
 of this local milestone. Preserve the original checkout/index and rc1 assets.

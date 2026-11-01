@@ -167,7 +167,9 @@ does not announce a classroom-ready release or a confirmed teaching schedule.
   agree and clearly state an appropriate classroom alternative. Keep the native
   Windows/macOS/editor gaps explicit. Record instructor teaching decisions and
   a real presenter rehearsal; machine seconds do not establish human pacing.
-- **R6:** prepare version-matched student and instructor Markdown companions,
+- **R6:** the [provisional document inputs](R6_DOCUMENT_INPUTS.md) now include
+  separate version-matched student and instructor Markdown companions. Verify
+  the literal student setup sequence and resolve inputs for the intended edition,
   then receive accessible ChatGPT-authored PDFs with render/visual/OCR review
   and delivered-byte receipts. Verify provenance-inclusive hashes, metadata,
   links, and student/instructor placement. Do not change the existing PDFs.
@@ -195,7 +197,8 @@ does not announce a classroom-ready release or a confirmed teaching schedule.
   correspondence before tagging. Download published bytes independently and
   verify hashes, manifest, links, release assets, and tag target afterward.
 
-The next local task can prepare provisional R6 Markdown inputs while teaching
+The provisional R6 Markdown inputs are prepared. The next local task can verify
+the student guide's literal Ubuntu setup/UI route in isolation while teaching
 decisions remain pending; that does not create PDFs, a package, or publication.
 The next GPT Pro document/teaching sync is prepared when R6's inputs are stable,
 with one standalone runnable desktop ZIP and the prompt supplied separately.

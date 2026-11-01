@@ -151,8 +151,11 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    and human pacing rehearsal remain open while Rick's reply is pending.
    [R5 protected integration](R5_CANDIDATE_VALIDATION.md) is complete in a
    separate candidate worktree; upstream was unchanged and required checks
-   passed again. Prepare provisional R6 Markdown companions next, retaining
-   the pending teaching decisions and distinct Grover/full-course identities.
+   passed again. The [R6 Markdown inputs](R6_DOCUMENT_INPUTS.md) are now
+   prepared with separate student/instructor audiences. Next verify the student
+   guide's exact Ubuntu command/UI sequence in isolation. Teaching decisions,
+   human pacing, unavailable platforms/editor paths, and final PDFs remain open;
+   Grover and full-course document/code identities remain distinct.
    Validate setup instructions on the claimed classroom
    platforms, obtain the matching ChatGPT-reviewed PDF, rehearse the timed
    sessions, and check every notebook from a downloaded archive. Record any
