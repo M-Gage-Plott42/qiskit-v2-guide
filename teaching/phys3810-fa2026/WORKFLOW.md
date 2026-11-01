@@ -104,12 +104,29 @@ Windows/macOS commands and receipt criteria; those targets remain untested.
 Carry forward unchanged Linux evidence rather than rerunning it solely for
 procedure preparation. No infrastructure, remote session, or native pass is inferred.
 
-Next prepare provisional R4 presenter run sheets and local demonstration timings.
-Keep machine execution times separate from spoken/discussion/exercise timing and
-human rehearsal. Rick's target platforms, dates, scope, assessment, and delivery
-role remain open. Resume R3 when an actual authorized host exists; retain the
-native-editor gap separately. Matching PDFs, packaging, and publication remain
-later gates with their existing authorization boundaries.
+R4 provisional preparation is complete: the [presenter index](R4_PRESENTER_RUN_SHEETS.md)
+links three 50-minute core/75-minute expansion run sheets with predictions,
+transitions, demonstrations, exercises, and debriefs. The
+[timing record](R4_DEMONSTRATION_TIMINGS.md) reports 42 successful fresh-kernel
+executions from unchanged source `07831f4`, reusing R1's environment. The 160-test
+result remains prior unit-test evidence; it was not rerun for these prose changes.
+Human pacing remains untested and Rick's target platforms, dates, scope,
+assessment, and delivery role remain open.
+
+Next recommend separately authorized R5 protected local upstream integration:
+preserve the accepted history, refresh upstream, reconcile in a new durable
+worktree if needed, and record the candidate mapping and required checks.
+This can proceed while teaching decisions/rehearsal remain open; it does not
+freeze unsupported classroom claims or authorize publication. Resume R3 when
+an actual authorized host exists; retain the native-editor gap separately.
+Matching PDFs, packaging, and publication remain later gates.
+
+For presenter work, always label proposed teaching minutes, measured machine
+seconds, actual UI execution, and human rehearsal as distinct evidence. A
+scripted walkthrough cannot close the human pacing gate. Record timings against
+the exact source, environment, input variants, and execution method; preserve
+source notebooks and measure edits only in execution copies. Complete all
+required cells during validation even if a live core discusses a subset.
 
 Do not broaden QPE, support nonexact HHL spectra, or claim general Shor arithmetic.
 Changes to supported families require a revised contract and appropriate evidence.

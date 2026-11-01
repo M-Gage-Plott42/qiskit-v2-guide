@@ -211,8 +211,17 @@ R3 host inventory/procedure preparation is complete; see
 Only Ubuntu is accessible, and the user confirmed no additional host. Windows
 x64 and macOS ARM64/Intel remain untested; Linux evidence carries forward without
 a redundant rerun. Do not provision infrastructure or simulate a native pass.
-Next prepare provisional R4 presenter run sheets and demonstration timings while
-Rick's decisions remain pending; code timings are not human classroom rehearsal.
+R4's provisional three-session run sheets and separate demonstration timings are
+prepared; see [the presenter index](teaching/phys3810-fa2026/R4_PRESENTER_RUN_SHEETS.md)
+and [timing evidence](teaching/phys3810-fa2026/R4_DEMONSTRATION_TIMINGS.md).
+Three trials of all eight canonical notebooks and six derived cases passed
+(42 fresh-kernel runs). Algorithm source, tests, pins, and notebooks are unchanged; the
+160-test result carries forward, not a newly executed unit suite.
+Keep proposed teaching minutes, headless machine seconds, actual UI evidence,
+and human rehearsal distinct. R4's preparation is complete, but human pacing
+remains untested and Rick's teaching decisions remain pending.
+Next recommend separately authorized R5 protected local upstream integration;
+do not infer that current cached upstream refs are live or that R4 is closed.
 Keep the separate editor gap, native-platform, PDF/package, and publication gates open.
 No push, PR, merge, release change, external message, or hardware job is part
 of this local milestone. Preserve the original checkout/index and rc1 assets.

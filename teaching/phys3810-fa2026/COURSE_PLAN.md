@@ -60,6 +60,12 @@ teaching decisions without asking the instructor to install or audit the code.
 
 ## Proposed sessions
 
+The [R4 presenter run sheets](R4_PRESENTER_RUN_SHEETS.md) now expand this outline
+into predictions, notebook transitions, demonstrations, exercises, debriefs,
+and fallback choices. Their 50/75-minute allocations remain provisional.
+[Local demonstration timings](R4_DEMONSTRATION_TIMINGS.md) were measured
+separately; no human pacing rehearsal or instructor agreement is claimed.
+
 ### 1. Grover: phase oracles and amplitude amplification
 
 **50-minute core:** 5 minutes to confirm preflight and notation; 10 minutes on
@@ -140,9 +146,12 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    [Linux JupyterLab path](R2_INTERACTIVE_VALIDATION.md) also passed. Native
    editor/platform and pacing checks remain open. The
    [R3 procedures](R3_NATIVE_PLATFORM_VALIDATION.md) are prepared, with additional
-   native execution pending host access. Presenter preparation can proceed
-   provisionally while Rick's reply is pending. Validate
-   setup instructions on the claimed classroom
+   native execution pending host access. R4's provisional presenter run sheets
+   and local demonstration measurements are prepared; agreed teaching scope
+   and human pacing rehearsal remain open while Rick's reply is pending.
+   R5 protected upstream integration is the next proposed local task, with a
+   separate instruction needed before refreshing upstream or reconciling it.
+   Validate setup instructions on the claimed classroom
    platforms, obtain the matching ChatGPT-reviewed PDF, rehearse the timed
    sessions, and check every notebook from a downloaded archive. Record any
    intentionally unsupported platforms and unresolved teaching decisions.

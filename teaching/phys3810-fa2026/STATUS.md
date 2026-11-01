@@ -1,11 +1,18 @@
 # PHYS 3810 status
 
-As of October 31, 2026: **R3 host inventory and procedures are prepared;
-Windows/macOS execution remains untested.** Only Ubuntu 26.04.1 LTS x86_64 is
-accessible in this session. The user confirmed no additional host. Exact native
-procedures and evidence requirements are in
-[R3_NATIVE_PLATFORM_VALIDATION.md](R3_NATIVE_PLATFORM_VALIDATION.md); no target
-was provisioned, simulated, or reported passed without execution.
+As of October 31, 2026: **R4 provisional presenter run sheets are prepared, and
+local demonstration timing checks passed.** The [presenter index](R4_PRESENTER_RUN_SHEETS.md)
+links all three proposed sessions, each with a 50-minute core and 75-minute
+expanded route, predictions, notebook transitions, demonstrations, exercises,
+and debriefs. [Machine timing evidence](R4_DEMONSTRATION_TIMINGS.md) records
+42 fresh-kernel executions using the retained R1 environment. Human pacing
+rehearsal remains **untested**; Rick's teaching decisions remain pending.
+
+R3 host inventory and procedures remain prepared; Windows x64, macOS ARM64,
+and macOS Intel execution remain **untested**. Only Ubuntu 26.04.1 LTS x86_64
+is accessible, and the user confirmed no additional host. Exact procedures and
+evidence requirements are in [R3_NATIVE_PLATFORM_VALIDATION.md](R3_NATIVE_PLATFORM_VALIDATION.md).
+No target was provisioned, simulated, or reported passed without execution.
 
 Linux retains R1's fresh-install evidence and R2's actual Chrome/JupyterLab UI
 result: eight notebooks, 50 cells, 16 inspected figures, saving, shutdown/relaunch,
@@ -18,8 +25,10 @@ was not rerun or relabeled as a new UI test count. R2 used a separate copy;
 only its outputs/kernel metadata changed, with notebook code/Markdown intact.
 [R1 evidence](R1_FRESH_LINUX_VALIDATION.md) and the current UI evidence are distinct.
 All 57 relevant runtime/test/notebook/runner/pin/workflow files match R1 source
-`9e73b82`, so no identical Linux installation or runtime suite was repeated for
-this host-inventory/procedure turn. Next is provisional R4 presenter preparation.
+`9e73b82`. R4 reused that environment to time notebook execution; no installation
+or 160-test unit-suite rerun is claimed. Its three canonical trials each passed
+eight notebooks, 50 code cells, and 16 PNGs. Six additional demonstration cases
+were each checked three times in separate execution copies.
 
 The HHL/Shor independent review remains accepted and its follow-ups reconciled.
 That review executed the earlier 158-test snapshot in a reused Python 3.12.14
@@ -144,24 +153,30 @@ these facts do not establish the invited-session dates.
 
 ## Recommended next actions
 
-1. **Prepare provisional R4 presenter run sheets.** Use the existing 50-minute
-   core/75-minute expansion proposals, plan predictions/transitions/exercises,
-   and measure local demonstration execution separately from spoken teaching.
-   Keep Rick's dates, platforms, coverage, assessment, and delivery role open.
-   Do not label an automated or scripted walkthrough a human pacing rehearsal.
+1. **Proceed to R5 under a separate local integration instruction.** Preserve
+   the accepted history, refresh upstream read-only, inspect changes since the
+   cached Grover base, and reconcile in a new durable worktree if needed. Record
+   candidate identity and commit mapping, rerun affected/full required checks,
+   and reassess earlier platform/UI evidence. No push, PR, merge, publication,
+   or external message is implied by this recommendation.
 2. **Resume R3 when actual native hosts become available.** Follow the prepared
    procedures with exact source identity, fresh environments, native architecture
    checks, full validator, and actual UI evidence. Windows x64 and each macOS
    architecture keep separate untested entries until then.
-3. **Retain the separate editor and release gates.** Validate native VS Code/
-   Cursor only through available authorized UI; matching PDFs, final package,
-   upstream integration, and publication remain later scoped work.
+3. **Keep R4 agreement and human rehearsal open.** Use the prepared run sheets
+   when the presenter and teaching decisions are available; record observed
+   segment times and revisions. Validate native VS Code/Cursor only through
+   authorized UI. Matching PDFs, final packaging, and publication remain later
+   scoped work. Machine execution does not close those gates.
 
 **GPT Pro sync: not needed now.** The HHL/Shor technical checkpoint is closed;
 D1 and the optional O1/O2 changes have direct local evidence. Sync again for
 unresolved mathematics, an expanded scope, or the matching final PDF/teaching
-checkpoint when its inputs are ready. User input needed for provisional presenter preparation: none. Actual native
-host access and instructor target decisions remain prerequisites for closing R3. Share Rick's reply when received; no manual code audit is requested.
+checkpoint when its inputs are ready. User input needed for the completed R4
+preparation: none. Actual native host access and instructor target decisions
+remain prerequisites for closing R3; agreed teaching scope and an observed
+presenter run-through are still needed to close R4. Share Rick's reply when
+received; no manual code audit is requested.
 
 At the previous reconciliation, required Python 3.12, lint, smoke, pre-commit,
 notebook cleanliness, link, and preservation checks passed. That evidence is under
@@ -238,3 +253,35 @@ preservation, and local links passed. PowerShell/native execution remains untest
 Evidence is under `artifacts/r3-native-platform-2026-10-31/`. The platform
 procedures use actual-host constraint markers and do not impose Linux's package
 count on another OS. No source/pin/algorithm contract or reviewed archive changed.
+
+## R4 preparation and demonstration evidence, October 31
+
+The three provisional run sheets use the proposed 50/75-minute routes without
+assigning dates, assessed work, delivery roles, or confirmed in-class coverage.
+Their minute allocations are planning estimates, not observed teaching times.
+They include answer cues, prerequisite checks, explicit notebook dependencies,
+parameter restoration, bounded algorithm claims, and overrun/failure handling.
+
+The committed snapshot `07831f4c806d2c4203ea03aa589c31983cbb08de` was exported to
+`/tmp/phys3810-r4-2026-10-31-03cwfyr5/source`; its 113 files/modes remained
+unchanged during timing. Separate fresh kernels used R1's CPython 3.12.15
+environment. Three trials covered each of the eight required notebooks. Derived
+copies also exercised a changed Grover marked pair, QPE phases 1/8 and 6/8,
+scaled-matrix and complex-state HHL examples, and Shor's presenter cell order.
+All 42 executions passed their cell/error/count/figure checks: 291 repeated
+code-cell executions and 102 generated PNGs in total. These repeated totals do
+not replace the classroom baseline of eight notebooks/50 cells/16 PNGs.
+
+Evidence is under `artifacts/r4-presenter-2026-10-31/`, with execution copies in
+the separate `/tmp` staging directory. Timings cover local headless kernel/code
+execution, including figure generation; they exclude browser interaction,
+installation, explanation, learner exercises, discussion, and human rehearsal.
+The 160-test result carries forward from unchanged source. No new PDF, package,
+algorithm contract, environment installation, or external handoff was made.
+
+Run-sheet cell references and 50/75-minute intervals, all 133 local documentation
+links, source cleanliness, and pre-commit checks passed. Preservation checks
+confirmed original checkout/index, frozen R1 source, environment identity/
+distribution metadata, verified PDFs, reviewed archives, and Grover assets.
+The interruption left no failed/partial timing record; all 33 initial runs were
+retained before executing the nine additional Grover/QPE checks.

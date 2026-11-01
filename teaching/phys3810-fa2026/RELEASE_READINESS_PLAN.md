@@ -8,8 +8,10 @@ JupyterLab path passed**; see [R2_INTERACTIVE_VALIDATION.md](R2_INTERACTIVE_VALI
 Native editor UI remains untested and exact Chrome version unverified. R3
 inventory/procedure preparation is complete; additional native execution remains
 untested because the user confirmed no extra host. See
-[R3_NATIVE_PLATFORM_VALIDATION.md](R3_NATIVE_PLATFORM_VALIDATION.md). Teaching/
-pacing, matching PDF/package, and publication remain open.
+[R3_NATIVE_PLATFORM_VALIDATION.md](R3_NATIVE_PLATFORM_VALIDATION.md). R4's
+[provisional presenter preparation](R4_PRESENTER_RUN_SHEETS.md) and separate
+[machine timing checks](R4_DEMONSTRATION_TIMINGS.md) are complete. Agreed teaching
+scope/human pacing, matching PDF/package, and publication remain open.
 
 The original October 30 planning turn executed no readiness gate. The later R1
 task performed internal source export, fresh dependency installation, and
@@ -56,6 +58,12 @@ The planning update was committed separately as
 `9e73b82aa578f0264afcbf7125631774afa3eb1c` after those eight commits. R1 exported
 and validated that exact snapshot; its runtime matches `ec07359`. Later R1
 evidence/context updates are separate from the source actually installed/tested.
+
+Subsequent local documentation commits are `6b70fbd` (R1 evidence), `4c589fd`
+(R2 UI evidence), and `07831f4` (R3 procedures). R4 timings exported the exact
+`07831f4c806d2c4203ea03aa589c31983cbb08de` snapshot; its runtime remains unchanged.
+R4 run sheets/evidence form a later documentation-only change, not a new
+algorithm or student-package revision. No upstream refresh has occurred yet.
 
 ## Completed evidence and its limits
 
@@ -167,7 +175,20 @@ obtain execution evidence later or explicitly agree a supported classroom
 alternative before final support claims. Do not assume one macOS architecture
 covers another or ask students to solve an unvalidated setup during class.
 
-### R4. Teaching decisions and pacing — provisional preparation next
+### R4. Teaching decisions and pacing — preparation complete; rehearsal open
+
+The October 31 [presenter index](R4_PRESENTER_RUN_SHEETS.md) links complete
+provisional run sheets for all three sessions. Each covers predictions,
+transitions, demonstrations, exercises, and debriefs with exact notebook cell
+references and 50/75-minute stopping points. A separate local sheet audit
+checked mathematical cues, dependencies, and timing arithmetic.
+
+[Machine timing evidence](R4_DEMONSTRATION_TIMINGS.md) records three trials of
+each required notebook plus six derived demonstrations: 42 fresh-kernel runs,
+all passed. Canonical trials each executed eight notebooks/50 cells/16 PNGs.
+The R1 environment was reused, with no source/notebook/test/pin changes.
+These seconds do not establish a human rehearsal or confirm the proposed minutes.
+No new UI run or 160-test unit-suite run is claimed for this documentation turn.
 
 Pending: session count/dates/duration/deadline, five topics' in-class versus
 outside-class coverage, Python/Jupyter/quantum preparation, hands-on versus
@@ -296,9 +317,12 @@ recorded fresh-install execution, not by prose changes. Later documentation
 checks cover Markdown, relative links, Git scope, and preserved bytes; they
 do not substitute for executing another gate.
 
-**Recommended next task:** prepare provisional R4 presenter run sheets and
-measure local demonstration execution using the validated Linux environment.
-Keep installation time, code execution, discussion/exercises, and human rehearsal
-evidence distinct; no confirmed schedule/assessment is invented. R3 stays open
-for future authorized native hosts, with R2's editor gap retained separately.
-**GPT Pro sync: not needed for this unchanged-source R3 preparation.**
+**Recommended next task:** separately authorize R5 protected local upstream
+integration and candidate preparation. Preserve this accepted history, refresh
+upstream, inspect changes, reconcile in a new durable worktree if necessary,
+and rerun affected/full required checks. Keep Rick's decisions and actual human
+pacing open; R4 preparation does not close that gate. R3 stays open for future
+authorized native hosts, with R2's editor gap retained separately. Do not push,
+open a PR, merge into main, publish, or send messages as part of local integration.
+**GPT Pro sync: not needed for this unchanged-algorithm R4 preparation.** The
+next document/teaching checkpoint depends on stabilized inputs under R6.
