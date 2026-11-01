@@ -1,16 +1,16 @@
 # PHYS 3810 status
 
-November 1, 2026 update: **provisional public preview publication is explicitly
-authorized and being executed.** The [R8 audit](R8_READINESS_AUDIT.md) confirms
-unchanged upstream, an available proposed tag, and the active nine-check PR
-ruleset. A separate public builder preserves the local R7 artifact and supplied
-PDF pair while providing authoritative current setup/README wording and an
-explicit prepublication-document notice. Completion is recorded only after
-actual CI, merge, asset, and download checks. Original dirty work will be
-checkpointed and recoverably stashed before its checkout is fast-forwarded.
-After delivery, wait for Rick's reply rather than starting more unchanged
-preparation cycles. Teaching/native/editor/pacing and final classroom approval
-remain open; this is a provisional Linux preview.
+November 1, 2026 update: **the full-course provisional preview is published.**
+[Release v0.2.0-rc1](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-v0.2.0-rc1)
+uses source `f717aea`; PR #113 passed all nine required checks before normal
+merge. The merged-source ZIP passed 160/eight/50/16 plus smoke/lint, and both
+published assets were anonymously downloaded and hash-verified. The
+[publication receipt](PUBLIC_PREVIEW_RELEASE.md) records exact assets and limits.
+The original dirty checkout was preserved in verified stash `2705385` and recovery
+files, then fast-forwarded to clean main. Completion documentation is delivered
+through the normal workflow. The requested preview is delivered; **wait for
+Rick's reply or a specific new change** rather than starting another preparation
+cycle. Final classroom, teaching/native/editor/pacing, and P3-01 gates remain open.
 
 As of October 31, 2026: **R7 local preview packaging passed.** The
 [builder contract](R7_PREVIEW_PACKAGE.md) and [execution evidence](R7_PREVIEW_VALIDATION.md)
@@ -218,33 +218,18 @@ Each session has a 50-minute core and a 75-minute expansion in the course plan.
 UTC has no classes November 25–29, and November 30 is the last class day;
 these facts do not establish the invited-session dates.
 
-## Recommended next actions
+## Recommended next action
 
-1. **Prepare an R8 read-only/local readiness audit and publication proposal.**
-   Recheck current upstream, tag availability, repository rules/required checks,
-   and source/package correspondence. Identify remaining guide wording,
-   teaching/support, and final-edition decisions. Prepare a concrete local
-   proposal; do not push, open a PR, merge, tag, release, message, or submit jobs.
-   The existing local preview is evidence, not authorization to publish.
-2. **Resume R3 when actual native hosts become available.** Follow the prepared
-   procedures with exact source identity, fresh environments, native architecture
-   checks, full validator, and actual UI evidence. Windows x64 and each macOS
-   architecture keep separate untested entries until then.
-3. **Keep R4 agreement and human rehearsal open.** Use the prepared run sheets
-   when the presenter and teaching decisions are available; record observed
-   segment times and revisions. Validate native VS Code/Cursor only through
-   authorized UI. Matching PDFs, final packaging, and publication remain later
-   scoped work. Machine execution does not close those gates.
+**Wait for Rick's reply.** The user-requested provisional preview and recoverable
+Git cleanup are complete, subject to the final pushed branch-state receipt.
+Resume only for confirmed teaching/platform/assessment decisions, a concrete
+reported defect, or a specific new request. No manual code audit is assigned.
 
-**GPT Pro sync: not needed immediately.** The returned document review is
-reconciled and the supplied bytes are verified. Carry P3-01 into the next
-ChatGPT-authored instructor edition before final classroom distribution, alongside
-teaching feedback or other substantive changes; do not regenerate it locally.
-User input needed for completed R7 or a read-only/local R8 audit: none.
-Teaching and publication decisions remain separate; no manual code audit is requested. Actual native host access and instructor target decisions
-remain prerequisites for closing R3; agreed teaching scope and an observed
-presenter run-through are still needed to close R4. Share Rick's reply when
-received; no manual code audit is requested.
+**GPT Pro sync: not needed now.** The next authored instructor edition should
+include P3-01 and confirmed teaching changes before final classroom distribution.
+The unchanged review PDFs are retained with an explicit availability notice.
+User input needed for further classroom preparation: Rick's reply or a specific
+new scope; no additional implementation action is recommended in the meantime.
 
 At the previous reconciliation, required Python 3.12, lint, smoke, pre-commit,
 notebook cleanliness, link, and preservation checks passed. That evidence is under

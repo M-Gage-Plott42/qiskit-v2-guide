@@ -1,5 +1,11 @@
 # R8 preview publication readiness
 
+Completion: the [authorized preview is published and verified](PUBLIC_PREVIEW_RELEASE.md).
+The audit observations below describe the prepublication state. Original dirty
+work is retained in a verified recovery stash and its active checkout is clean
+main. Stop further preparation after completion documentation is pushed; wait
+for instructor feedback or a specific new request.
+
 Audited November 1, 2026. The initial read-only request was superseded by the
 user's explicit request to publish a new preview, push the work, and leave Git
 clean this turn. This authorizes the named provisional preview through the

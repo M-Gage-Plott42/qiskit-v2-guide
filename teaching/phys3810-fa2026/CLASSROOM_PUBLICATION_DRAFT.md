@@ -1,4 +1,11 @@
-# Authorized provisional preview publication
+# Provisional preview publication — completed
+
+Completion: [v0.2.0-rc1 is published](PUBLIC_PREVIEW_RELEASE.md) from `f717aea`
+after PR #113 and required CI. The two release assets were anonymously retrieved
+and verified. Original dirty work is preserved in recovery/stash and the active
+checkout is clean main. The plan below records that completed workflow; it is
+not authorization for another release. Wait for instructor feedback or a new
+specific request before further course work.
 
 November 1, 2026. The user requested a new preview publication, pushing the
 work, and clean Git state this turn. [R8_READINESS_AUDIT.md](R8_READINESS_AUDIT.md)
