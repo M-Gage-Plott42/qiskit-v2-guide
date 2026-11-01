@@ -206,8 +206,13 @@ figure inspection, shutdown/relaunch, and reruns; see
 Native VS Code/Cursor UI remains untested because native app control is disabled;
 exact Chrome version remains unverified after its internal version URL was blocked.
 Do not infer those results from headless execution or bypass browser policy.
-Next prepare/perform R3 on actual authorized native hosts, keeping unavailable
-platforms and the editor path untested. Instructor/pacing, PDF/package, and
-publication gates remain open.
+R3 host inventory/procedure preparation is complete; see
+[native-platform procedures](teaching/phys3810-fa2026/R3_NATIVE_PLATFORM_VALIDATION.md).
+Only Ubuntu is accessible, and the user confirmed no additional host. Windows
+x64 and macOS ARM64/Intel remain untested; Linux evidence carries forward without
+a redundant rerun. Do not provision infrastructure or simulate a native pass.
+Next prepare provisional R4 presenter run sheets and demonstration timings while
+Rick's decisions remain pending; code timings are not human classroom rehearsal.
+Keep the separate editor gap, native-platform, PDF/package, and publication gates open.
 No push, PR, merge, release change, external message, or hardware job is part
 of this local milestone. Preserve the original checkout/index and rc1 assets.

@@ -67,7 +67,15 @@ Windows x64 and macOS ARM64/Intel markers, but resolution alone does not establi
 native installation, plotting, or notebook execution. Those native platforms
 remain **untested** until a maintainer runs the setup and validator there. Do not
 advertise them as passed. Windows ARM64 and 32-bit Python are outside this
-classroom target. Keep unsupported machines on an instructor-provided environment.
+classroom target. Keep unsupported machines on an instructor-provided environment
+only after that alternative is actually agreed and validated.
+
+The October 31 [R3 inventory/protocol](R3_NATIVE_PLATFORM_VALIDATION.md) found
+only Ubuntu 26.04.1 LTS x86_64 available; the user confirmed no additional host.
+Windows/macOS procedures are prepared but not executed. Evaluate active constraint
+markers on each future target and report its actual installed inventory, rather
+than requiring Linux's 114-application-package count. R2's native-editor gap stays
+separate from automated environment compatibility.
 
 ## Maintainer updates
 

@@ -5,8 +5,11 @@ on Linux/CPython 3.12.15 validated the corrected 160-test revision. See
 [R1_FRESH_LINUX_VALIDATION.md](R1_FRESH_LINUX_VALIDATION.md). All five bounded
 lessons and their technical reviews remain complete. **R2's Linux/Chrome
 JupyterLab path passed**; see [R2_INTERACTIVE_VALIDATION.md](R2_INTERACTIVE_VALIDATION.md).
-Native editor UI remains untested and exact Chrome version unverified. R3 native
-platforms, teaching/pacing, matching PDF/package, and publication remain open.
+Native editor UI remains untested and exact Chrome version unverified. R3
+inventory/procedure preparation is complete; additional native execution remains
+untested because the user confirmed no extra host. See
+[R3_NATIVE_PLATFORM_VALIDATION.md](R3_NATIVE_PLATFORM_VALIDATION.md). Teaching/
+pacing, matching PDF/package, and publication remain open.
 
 The original October 30 planning turn executed no readiness gate. The later R1
 task performed internal source export, fresh dependency installation, and
@@ -140,7 +143,14 @@ and the specific unavailable surface; do not substitute headless execution or
 assign the user a code audit. Linux setup can progress independently of the
 remaining native-platform decisions.
 
-### R3. Native-platform coverage — next, conditional on targets and access
+### R3. Native-platform coverage — prepared; additional hosts unavailable
+
+The October 31 inventory found only the existing Ubuntu x86_64 execution host.
+The user confirmed no additional native host; exact Windows/macOS procedures
+and evidence requirements are prepared in
+[R3_NATIVE_PLATFORM_VALIDATION.md](R3_NATIVE_PLATFORM_VALIDATION.md). Their
+commands have not been executed on those targets. Existing Linux R1/R2 evidence
+remains applicable because runtime/test/notebook/pin bytes are unchanged.
 
 Linux x86_64 is the demonstrated development platform. Windows x64 and macOS
 ARM64/Intel are candidate targets in [ENVIRONMENT.md](ENVIRONMENT.md), not passed
@@ -157,7 +167,7 @@ obtain execution evidence later or explicitly agree a supported classroom
 alternative before final support claims. Do not assume one macOS architecture
 covers another or ask students to solve an unvalidated setup during class.
 
-### R4. Teaching decisions and pacing — provisional until feedback
+### R4. Teaching decisions and pacing — provisional preparation next
 
 Pending: session count/dates/duration/deadline, five topics' in-class versus
 outside-class coverage, Python/Jupyter/quantum preparation, hands-on versus
@@ -286,8 +296,9 @@ recorded fresh-install execution, not by prose changes. Later documentation
 checks cover Markdown, relative links, Git scope, and preserved bytes; they
 do not substitute for executing another gate.
 
-**Recommended next task:** prepare/perform R3 on actual authorized native hosts.
-Inventory access and keep targets provisional pending Rick's reply; unavailable
-hosts remain untested. Retain R2's editor gap separately rather than claiming it
-passed. Do not provision new infrastructure or publish without applicable scope.
-**GPT Pro sync: not needed for the bounded R1/R2 validation.**
+**Recommended next task:** prepare provisional R4 presenter run sheets and
+measure local demonstration execution using the validated Linux environment.
+Keep installation time, code execution, discussion/exercises, and human rehearsal
+evidence distinct; no confirmed schedule/assessment is invented. R3 stays open
+for future authorized native hosts, with R2's editor gap retained separately.
+**GPT Pro sync: not needed for this unchanged-source R3 preparation.**

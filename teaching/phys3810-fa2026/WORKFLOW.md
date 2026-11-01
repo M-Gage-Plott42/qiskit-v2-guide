@@ -97,12 +97,19 @@ untested because native control is unavailable, and exact Chrome version is
 unverified after the internal version URL was blocked by browser policy.
 Neither limitation is a reason to relabel headless checks as UI evidence.
 
-Next prepare/perform R3 with actual authorized native-host access. Do not assume
-Linux or WSL certifies Windows/macOS; record unavailable targets as untested and
-keep required platforms provisional pending Rick. Retain the editor gap until
-an authorized UI path exists. Later gates cover teaching/pacing, protected
-upstream integration, matching PDFs, final packaging, and publication. R2 did
-not authorize publication, external messages, new infrastructure, or hardware.
+R3 inventory/procedure preparation is complete. Only the existing Ubuntu host
+is accessible, and the user confirmed no additional host. The
+[native-platform protocol](R3_NATIVE_PLATFORM_VALIDATION.md) supplies exact
+Windows/macOS commands and receipt criteria; those targets remain untested.
+Carry forward unchanged Linux evidence rather than rerunning it solely for
+procedure preparation. No infrastructure, remote session, or native pass is inferred.
+
+Next prepare provisional R4 presenter run sheets and local demonstration timings.
+Keep machine execution times separate from spoken/discussion/exercise timing and
+human rehearsal. Rick's target platforms, dates, scope, assessment, and delivery
+role remain open. Resume R3 when an actual authorized host exists; retain the
+native-editor gap separately. Matching PDFs, packaging, and publication remain
+later gates with their existing authorization boundaries.
 
 Do not broaden QPE, support nonexact HHL spectra, or claim general Shor arithmetic.
 Changes to supported families require a revised contract and appropriate evidence.

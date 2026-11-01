@@ -138,7 +138,10 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    [readiness plan](RELEASE_READINESS_PLAN.md). R1 fresh Linux installation has
    [passed](R1_FRESH_LINUX_VALIDATION.md); the
    [Linux JupyterLab path](R2_INTERACTIVE_VALIDATION.md) also passed. Native
-   editor/platform and pacing checks remain open. Validate
+   editor/platform and pacing checks remain open. The
+   [R3 procedures](R3_NATIVE_PLATFORM_VALIDATION.md) are prepared, with additional
+   native execution pending host access. Presenter preparation can proceed
+   provisionally while Rick's reply is pending. Validate
    setup instructions on the claimed classroom
    platforms, obtain the matching ChatGPT-reviewed PDF, rehearse the timed
    sessions, and check every notebook from a downloaded archive. Record any

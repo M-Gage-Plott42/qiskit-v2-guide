@@ -1,19 +1,25 @@
 # PHYS 3810 status
 
-As of October 31, 2026: **R2's Linux/Chrome JupyterLab workflow passed.**
-All eight required notebooks ran through actual UI kernel selection and
-restart/run-all, with **50 code cells and 16 inspected PNG figures**. Saving,
-server shutdown/relaunch, and preflight/Shor reruns passed. See
-[R2_INTERACTIVE_VALIDATION.md](R2_INTERACTIVE_VALIDATION.md).
-Native VS Code/Cursor UI remains untested; exact Chrome version is unverified
-because the browser policy blocked its internal version page.
+As of October 31, 2026: **R3 host inventory and procedures are prepared;
+Windows/macOS execution remains untested.** Only Ubuntu 26.04.1 LTS x86_64 is
+accessible in this session. The user confirmed no additional host. Exact native
+procedures and evidence requirements are in
+[R3_NATIVE_PLATFORM_VALIDATION.md](R3_NATIVE_PLATFORM_VALIDATION.md); no target
+was provisioned, simulated, or reported passed without execution.
+
+Linux retains R1's fresh-install evidence and R2's actual Chrome/JupyterLab UI
+result: eight notebooks, 50 cells, 16 inspected figures, saving, shutdown/relaunch,
+and preflight/Shor reruns. Native VS Code/Cursor UI is still untested, and exact
+Chrome version remains unverified under the recorded R2 browser-policy limit.
 
 R1's fresh installation of source `9e73b82` remains preserved, including all
 110 frozen files/modes and the validated environment. Its **160-test** result
 was not rerun or relabeled as a new UI test count. R2 used a separate copy;
 only its outputs/kernel metadata changed, with notebook code/Markdown intact.
 [R1 evidence](R1_FRESH_LINUX_VALIDATION.md) and the current UI evidence are distinct.
-Next is R3 native-platform preparation/execution where authorized hosts exist.
+All 57 relevant runtime/test/notebook/runner/pin/workflow files match R1 source
+`9e73b82`, so no identical Linux installation or runtime suite was repeated for
+this host-inventory/procedure turn. Next is provisional R4 presenter preparation.
 
 The HHL/Shor independent review remains accepted and its follow-ups reconciled.
 That review executed the earlier 158-test snapshot in a reused Python 3.12.14
@@ -138,23 +144,24 @@ these facts do not establish the invited-session dates.
 
 ## Recommended next actions
 
-1. **Prepare/perform R3 of the [readiness plan](RELEASE_READINESS_PLAN.md).**
-   Inventory actual authorized native-host access, execute setup/validator/UI
-   checks only where that host is available, and retain explicit untested labels
-   elsewhere. Keep platform requirements provisional while Rick's reply is pending.
-2. **Retain the editor gap separately.** VS Code/Cursor was not accessible through
-   the available native controls. Do not substitute CLI or headless evidence for
-   editor interpreter/kernel selection; validate it when an authorized UI surface
-   exists or narrow the eventual supported workflow explicitly.
-3. **Continue the later gates without assuming completion.** Teaching decisions/
-   pacing, protected upstream integration, matching PDFs, final package, and
-   publication retain their completion criteria and authorization boundaries.
+1. **Prepare provisional R4 presenter run sheets.** Use the existing 50-minute
+   core/75-minute expansion proposals, plan predictions/transitions/exercises,
+   and measure local demonstration execution separately from spoken teaching.
+   Keep Rick's dates, platforms, coverage, assessment, and delivery role open.
+   Do not label an automated or scripted walkthrough a human pacing rehearsal.
+2. **Resume R3 when actual native hosts become available.** Follow the prepared
+   procedures with exact source identity, fresh environments, native architecture
+   checks, full validator, and actual UI evidence. Windows x64 and each macOS
+   architecture keep separate untested entries until then.
+3. **Retain the separate editor and release gates.** Validate native VS Code/
+   Cursor only through available authorized UI; matching PDFs, final package,
+   upstream integration, and publication remain later scoped work.
 
 **GPT Pro sync: not needed now.** The HHL/Shor technical checkpoint is closed;
 D1 and the optional O1/O2 changes have direct local evidence. Sync again for
 unresolved mathematics, an expanded scope, or the matching final PDF/teaching
-checkpoint when its inputs are ready. User input needed for native-host inventory/preparation: none. Actual host
-access or classroom platform decisions may be needed before native runs can pass. Share Rick's reply when received; no manual code audit is requested.
+checkpoint when its inputs are ready. User input needed for provisional presenter preparation: none. Actual native
+host access and instructor target decisions remain prerequisites for closing R3. Share Rick's reply when received; no manual code audit is requested.
 
 At the previous reconciliation, required Python 3.12, lint, smoke, pre-commit,
 notebook cleanliness, link, and preservation checks passed. That evidence is under
@@ -216,3 +223,18 @@ rejected `chrome://version` under its HTTP(S)-only policy; the version is marked
 unverified without a workaround. Evidence remains under ignored
 `artifacts/r2-interactive-2026-10-31/`. No student package or external handoff
 was created, and no additional algorithm review is due solely for these checks.
+
+## R3 inventory/procedure evidence, October 31
+
+Native host discovery was limited to this session's execution/tool inventory;
+no SSH credential/config inspection, network scan, remote login, or infrastructure
+provisioning occurred. Linux identity and unchanged runtime files were checked.
+The user confirmed no additional host and requested procedures only. Windows
+x64, macOS ARM64, and macOS Intel remain untested, not failed. No new 160-test
+or UI execution is claimed.
+
+Documentation checks, Python/Bash snippet syntax checks, source/asset/environment
+preservation, and local links passed. PowerShell/native execution remains untested.
+Evidence is under `artifacts/r3-native-platform-2026-10-31/`. The platform
+procedures use actual-host constraint markers and do not impose Linux's package
+count on another OS. No source/pin/algorithm contract or reviewed archive changed.
