@@ -1,5 +1,11 @@
 # R6 provisional document-review handoff receipt
 
+Return update, October 31: the actual Downloads ZIP and report have been
+[reconciled](R6_DOCUMENT_REVIEW_RECONCILIATION.md), and both supplied review-draft
+PDFs are integrated unchanged. The outgoing identity and preparation receipt
+below remain historical evidence; its transfer-pending language describes that
+earlier handoff, not the current status. See [STATUS.md](STATUS.md) for next steps.
+
 Prepared October 31, 2026. **One standalone runnable review ZIP is verified and
 copied to the Ubuntu desktop.** Its review prompt is supplied separately in chat,
 not inside the ZIP. This is a document-review bundle for provisional PDFs, not

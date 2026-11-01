@@ -17,9 +17,10 @@ accepted commits preserved; see [R5_CANDIDATE_VALIDATION.md](R5_CANDIDATE_VALIDA
 Continue in the new candidate worktree named there. R6's provisional
 [Markdown document inputs](R6_DOCUMENT_INPUTS.md) are prepared, and the
 [literal Ubuntu walkthrough](R6_GUIDE_WALKTHROUGH_VALIDATION.md) has passed.
-The [document-review handoff](R6_DOCUMENT_REVIEW_HANDOFF.md) is now verified
-and ready on the desktop. User transfer, received review, and final PDF
-delivery/review remain open.
+The [document-review handoff](R6_DOCUMENT_REVIEW_HANDOFF.md) has returned;
+[provisional PDFs and companions are verified and integrated](R6_DOCUMENT_REVIEW_RECONCILIATION.md).
+Final classroom editions/approval remain open, including the P3-01 instructor
+wording clarification and the teaching/platform/pacing decisions.
 
 The original October 30 planning turn executed no readiness gate. The later R1
 task performed internal source export, fresh dependency installation, and
@@ -258,11 +259,16 @@ publication description. Choose a distinct full-course candidate version/name;
 check availability before publication. Do not reuse the Grover rc1 tag or
 pretend a 92-/158-test review ZIP contains the 160-test corrections.
 
-### R6. Matching student and instructor PDFs — Markdown prepared; PDF gate open
+### R6. Matching student and instructor PDFs — review drafts integrated; final gate open
 
 Provisional [student setup](handouts/FULL_COURSE_SETUP_DRAFT.md) and
 [instructor](instructor/FULL_COURSE_INSTRUCTOR_DRAFT.md) companions are prepared
-as document-v0.1 drafts for proposed code-v0.2.0-rc1. Their
+as document-v0.1 drafts for proposed code-v0.2.0-rc1. The returned four-page
+student and six-page instructor PDFs and synchronized companions are now
+[verified and integrated](R6_DOCUMENT_REVIEW_RECONCILIATION.md) without changing
+PDF bytes. The reviewer reports fresh 160/eight/50/16 execution and rendered/
+visual/OCR QA; local receipt, metadata, page, link, font, rendered-page, and
+normalized text checks passed. The
 [input/readiness record](R6_DOCUMENT_INPUTS.md) distinguishes available evidence,
 open decisions, file-transfer requirements, and later PDF review. Student text
 contains no maintainer coordination or instructor key; worked notebook outputs
@@ -282,8 +288,10 @@ Keep open decisions visible and use demonstrated setup claims; do not turn
 proposed dates, scope, assessment, or delivery into agreements. Final classroom
 PDFs and R6 completion require stabilized inputs and the existing ChatGPT
 review/delivery workflow. A separately requested review-draft handoff may retain
-explicit provisional assumptions without closing missing gates. No new PDF or
-package was created in this preparation.
+explicit provisional assumptions without closing missing gates. Supplied review
+drafts are now integrated; no PDF was generated locally and no new student
+package was created in this reconciliation. Apply the P3-01 phase-register
+clarification in the next authored instructor edition before final distribution.
 
 Prepare synchronized Markdown companions using the agreed teaching scope,
 validated setup/platform claims, candidate version, notebook list, and current
@@ -300,12 +308,21 @@ separate identities. A planned download URL must be labeled as such until live;
 verify it after publication. Avoid a PDF containing its enclosing ZIP's checksum,
 which would create a circular artifact identity.
 
-This is the next planned GPT Pro document/teaching sync, once the evidence and
-exact prompt can be prepared. No extra algorithm-review round is due merely to
-begin R1. Earlier unresolved mathematics or a scope/environment change may justify
-an earlier sync; prepare the concrete evidence first.
+This provisional document/teaching sync is received and reconciled. No immediate
+repeat review is needed for the verified unchanged bytes. A later authored-PDF
+update should incorporate P3-01 and the relevant instructor/platform/pacing
+feedback before a final classroom edition. Substantive scope/environment changes
+still require appropriate evidence and review; do not infer new authorization.
 
 ### R7. New full-course package and extraction verification
+
+**Next local task:** prepare a clearly labeled unpublished preview package and
+builder from an identified commit, including the verified student review-draft
+PDF unchanged. Keep instructor answer guides/PDFs outside the student-facing
+payload. This preview can test packaging independently of pending teaching
+choices; it does not close final classroom distribution/platform/pacing gates.
+No R7 package is created by the present reconciliation. Final release inputs
+must be reassessed when the guide or approved teaching/support claims change.
 
 Build a new exact-revision package only after its source/version/setup inputs
 are fixed. A student-release candidate requires the matching supplied guide;
@@ -365,11 +382,12 @@ recorded fresh-install execution, not by prose changes. Later documentation
 checks cover Markdown, relative links, Git scope, and preserved bytes; they
 do not substitute for executing another gate.
 
-**Recommended next task:** transfer the verified desktop review ZIP and separate
-prompt to GPT Pro, then reconcile the actual returned report/ZIP/PDF/Markdown
-bytes locally. Use [the receipt](R6_DOCUMENT_REVIEW_HANDOFF.md) to identify the
-reviewed source and map bundle-only navigation adaptations back to repository
-companions. Keep the requested PDFs clearly labeled review drafts while Rick's
-decisions, R3, native editor UI, and human pacing remain open. No publication or
-student-release approval is inferred. **GPT Pro sync: recommended now** because
-the concrete packet, extracted checks, desktop copy, and exact prompt are ready.
+**Recommended next task:** prepare the local R7 preview builder and package,
+including unchanged verified student PDF bytes, all required runtime/test/
+notebook/dependency files, matching setup, and a manifest. Verify an isolated
+sealed extraction with 160/eight/50/16 and unchanged payload hashes; retain
+instructor answer documents separately. Keep review-draft/unpublished status and
+all pending teaching/platform/pacing gates explicit. **GPT Pro sync: not needed
+immediately.** Carry P3-01 into the next authored instructor edition before final
+classroom distribution. No publication, external message, or hardware job is
+part of this next local preparation.

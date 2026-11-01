@@ -145,10 +145,13 @@ prepared from frozen `c63381a`: one verified standalone desktop ZIP plus its
 separate chat prompt. It contains both audience-separated companions, exact
 runtime/test/notebook/dependency/student-guide bytes, and disclosed supporting
 Markdown adaptations. Extracted verification passed 160/eight/50/16 using the
-reused R6 environment. The user can transfer it to GPT Pro; no transfer or new
-review response is assumed to have occurred. This is not a student release or
-final classroom edition. Returned PDFs still require actual accessible bytes,
-render/visual/OCR receipts, and delivered-byte integration.
+reused R6 environment. The returned review now identifies that exact packet; an accessible six-file
+return ZIP has been verified and integrated under
+[R6_DOCUMENT_REVIEW_RECONCILIATION.md](R6_DOCUMENT_REVIEW_RECONCILIATION.md).
+The student/instructor PDFs remain exact delivered bytes and synchronized with
+the returned visible Markdown content. This is provisional document acceptance,
+not a student release or final classroom edition. Reviewer runtime/OCR results
+remain separately attributed from locally repeated PDF/text/hash checks.
 
 For this return, use the ZIP manifest to distinguish source originals from
 bundle-only navigation/history adapters. Review changes against the exported
@@ -156,6 +159,21 @@ inputs, then restore or map repository navigation when integrating companion
 edits. Do not blindly replace repository links with packet-only evidence paths.
 Never treat a screenshot/card/private-sandbox filename as returned-file access;
 report missing bytes and reconcile whatever actual report/files are accessible.
+
+For this return, all packet-only clickable navigation was removed in favor of
+explicit course-folder paths and five official HTTPS references. Keep that
+reviewed body synchronized with its PDF; map the literal supplied evidence
+filename through the reconciliation record. A nonrendering MD036 directive
+on each edition label is the only local companion adjustment. P3-01 is an
+instructor reading clarification now and an authored-PDF correction for the
+next final edition, not authority to modify supplied PDF bytes locally.
+
+Next prepare a local R7 preview package/builder using the verified student
+review-draft PDF and current 160-test snapshot. Keep instructor answer documents
+separate, preserve original archives/assets, and verify the sealed extraction.
+No package was created in this reconciliation. Teaching/platform/pacing and
+final-distribution gates stay open; further GPT Pro work is needed when revising
+PDF content for the next edition, not merely because these receipts were checked.
 
 Keep audience-specific content separate: the student guide contains setup/help,
 not model-review coordination or an instructor key. The current notebooks still

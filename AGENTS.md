@@ -247,12 +247,24 @@ command repair was needed; only validation-status prose changed. The subsequent
 is now prepared: a single desktop ZIP frozen at `c63381a`, 50 files/49 manifest
 entries, all canonical runtime/notebook/student-guide bytes preserved, and a
 separate chat prompt. Extracted verification passed 160 tests/eight notebooks/
-50 cells/16 PNGs using the reused walkthrough environment. GPT Pro sync is now
-recommended; user transfer and the new reviewer response remain unobserved.
-Do not call the review bundle a student release or infer new PDF approval.
-For returned Markdown, map back the manifest's bundle-only navigation changes
-before integrating edits into repository companions. Filename cards/private
-links alone do not establish accessible returned PDF or patch bytes.
+50 cells/16 PNGs using the reused walkthrough environment. The document review
+has now returned with an accessible six-file ZIP from Downloads; see
+[the reconciliation](teaching/phys3810-fa2026/R6_DOCUMENT_REVIEW_RECONCILIATION.md).
+The supplied four-page student and six-page instructor PDFs are integrated
+unchanged with verified delivered hashes, metadata, links, and synchronized
+Markdown. All six student fenced blocks are unchanged. Only nonrendering local
+MD036 annotations were added to the companions; no command or visible text changed.
+The reviewer reports a fresh Ubuntu CPython 3.12.14 run of 160 tests/eight
+notebooks/50 cells/16 PNGs; that is separate from local execution evidence.
+Accept these as provisional review drafts, not final classroom approval. P3-01
+clarifies phase-register decoding before the next final instructor edition;
+its [reading note](teaching/phys3810-fa2026/instructor/README.md) applies now
+without altering supplied PDF bytes. No immediate new GPT Pro round is needed.
+Next prepare a local R7 preview package/builder with the reviewed student PDF,
+keeping instructor answer documents separate and all remaining gates open.
+Returned packet-only clickable links were removed editorially; the remaining
+literal evidence filename is mapped to repository records in the reconciliation.
+Filename cards/private links alone still do not establish returned-file access.
 Keep student instructions free of maintainer coordination and instructor answer
 cues. Separate instructor files do not make the existing worked notebooks an
 answer-free assessment. Teaching decisions, solution distribution, and actual

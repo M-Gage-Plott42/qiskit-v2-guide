@@ -155,8 +155,9 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    prepared with separate student/instructor audiences. The
    [Ubuntu command/UI walkthrough](R6_GUIDE_WALKTHROUGH_VALIDATION.md) has passed
    in isolation. Its [provisional document-review handoff](R6_DOCUMENT_REVIEW_HANDOFF.md)
-   is now verified and ready for user transfer to GPT Pro. Teaching decisions,
-   human pacing, unavailable platforms/editor paths, and final PDFs remain open;
+   has returned and its [review-draft PDFs are verified](R6_DOCUMENT_REVIEW_RECONCILIATION.md).
+   Prepare local R7 preview packaging next. Teaching decisions, human pacing,
+   unavailable platforms/editor paths, and final classroom editions remain open;
    Grover and full-course document/code identities remain distinct.
    Validate setup instructions on the claimed classroom
    platforms, obtain the matching ChatGPT-reviewed PDF, rehearse the timed

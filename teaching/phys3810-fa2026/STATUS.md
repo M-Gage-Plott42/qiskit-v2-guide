@@ -1,11 +1,23 @@
 # PHYS 3810 status
 
-As of October 31, 2026: **The provisional GPT Pro document-review handoff is
-ready on the Ubuntu desktop.** The [handoff receipt](R6_DOCUMENT_REVIEW_HANDOFF.md)
+As of October 31, 2026: **The provisional document review is received and
+reconciled locally.** The [reconciliation](R6_DOCUMENT_REVIEW_RECONCILIATION.md)
+records the accessible return ZIP, four-page student PDF, six-page instructor
+PDF, synchronized companions, receipt checks, and scoped editorial integration.
+PDF bytes are unchanged. Student commands remain unchanged; local companion
+edits add only hidden lint annotations. A nonblocking [phase-decoding reading
+clarification](instructor/README.md) is recorded for the next instructor edition.
+Rick's reply, native/editor coverage, human pacing, and final classroom approval
+remain open. No publication or external message occurred.
+
+The earlier provisional GPT Pro document-review handoff remains preserved. The [handoff receipt](R6_DOCUMENT_REVIEW_HANDOFF.md)
 identifies the ZIP frozen at `c63381a`, source/adaptation manifest, desktop hash,
 extracted validation, and separate prompt. The 50-file archive passed 160 tests,
-eight notebooks, 50 cells, and 16 PNGs using the reused R6 environment. No new
-PDF, student release, transfer to GPT Pro, or reviewer response is claimed.
+eight notebooks, 50 cells, and 16 PNGs using the reused R6 environment. The
+subsequently supplied review identifies that exact archive/source. Its separate
+fresh Ubuntu CPython 3.12.14 execution reports the same 160/eight/50/16 result;
+raw execution logs are referenced by receipt hashes, not included in the return.
+Local document-only integration does not claim a new runtime or UI execution.
 
 The R6 Ubuntu student-guide walkthrough remains passed.
 A fresh in-project `.venv` installed unchanged pins, registered the named kernel
@@ -20,8 +32,10 @@ The [student setup draft](handouts/FULL_COURSE_SETUP_DRAFT.md) and
 [instructor guide draft](instructor/FULL_COURSE_INSTRUCTOR_DRAFT.md) are separate
 document-v0.1 inputs for proposed code-v0.2.0-rc1. They keep the unpublished
 full-course download, untested platform/editor paths, and pending teaching
-choices explicit. [R6_DOCUMENT_INPUTS.md](R6_DOCUMENT_INPUTS.md) records remaining
-inputs before the document handoff. No new PDF, package, or GPT Pro sync occurred.
+choices explicit. [R6_DOCUMENT_INPUTS.md](R6_DOCUMENT_INPUTS.md) now records the
+received review and remaining inputs before a final classroom edition. The
+initial Markdown-only preparation created no PDFs; the later supplied PDF
+editions are now integrated as recorded above.
 
 R5 protected local integration remains passed. The fresh
 upstream check found no changes after `3894391`; all 13 accepted local commits
@@ -186,13 +200,13 @@ these facts do not establish the invited-session dates.
 
 ## Recommended next actions
 
-1. **Send the prepared ZIP and separate prompt to GPT Pro.** The user transfers
-   the single desktop file and brings back the actual downloadable return ZIP
-   plus review report. No manual audit is needed. The assistant will verify
-   accessible PDF/Markdown bytes and delivered receipts, reproduce actionable
-   findings, and map packet-only navigation changes back to repository links.
-   Keep this a review-draft checkpoint, with teaching/platform/pacing choices
-   still provisional and no publication authorization inferred.
+1. **Prepare the local R7 preview package and builder.** Use an identified
+   committed snapshot, unchanged reviewed student PDF bytes, matching setup,
+   all required source/tests/notebooks, and a manifest. Exclude instructor
+   answer documents/PDFs, prompts, policies/history, caches, credentials, and
+   outputs. Verify an isolated extraction with 160/eight/50/16 and unchanged
+   payload hashes. Label it an unpublished local preview, not final classroom
+   approval. This is the next recommended task, not work performed here.
 2. **Resume R3 when actual native hosts become available.** Follow the prepared
    procedures with exact source identity, fresh environments, native architecture
    checks, full validator, and actual UI evidence. Windows x64 and each macOS
@@ -203,11 +217,12 @@ these facts do not establish the invited-session dates.
    authorized UI. Matching PDFs, final packaging, and publication remain later
    scoped work. Machine execution does not close those gates.
 
-**GPT Pro sync: recommended now.** The concrete provisional document-review
-ZIP and exact separate prompt are ready and verified. This does not reopen a
-completed algorithm review or claim final classroom readiness. User action:
-upload that ZIP with the prompt to the existing planning conversation, then
-return the actual downloadable files and report. No code audit is requested. Actual native host access and instructor target decisions
+**GPT Pro sync: not needed immediately.** The returned document review is
+reconciled and the supplied bytes are verified. Carry P3-01 into the next
+ChatGPT-authored instructor edition before final classroom distribution, alongside
+teaching feedback or other substantive changes; do not regenerate it locally.
+User input needed for this reconciliation or local preview preparation: none.
+No code audit is requested. Actual native host access and instructor target decisions
 remain prerequisites for closing R3; agreed teaching scope and an observed
 presenter run-through are still needed to close R4. Share Rick's reply when
 received; no manual code audit is requested.
@@ -435,3 +450,40 @@ handoff/status commit is distinct from the frozen source inside the ZIP.
 User upload, new review disposition, and returned PDF/Markdown bytes remain
 pending. Existing assets, environments, source staging, and prior indexes remain
 preserved. No publication, external message, or hardware job occurred.
+
+## R6 returned document reconciliation, October 31
+
+The Downloads ZIP is accessible and matches the reported 176121 bytes and
+SHA-256 `45520beb2780f713d903f225970541b35d9d71041b6bb4d1af5f77eb8916b927`.
+All six members are retained; the receipt verifies the five other members.
+The input archive/source and both exported Markdown base hashes match the
+outgoing packet. The export-based patch applies in an isolated copy and exactly
+reproduces the returned companions. All four reported editorial findings were
+reproduced and their corrections accepted.
+
+The unchanged PDFs pass local whole-file hash/size, four/six-page Letter
+geometry, title/empty-author metadata, five HTTPS annotation/rectangle checks,
+embedded-visible-font checks, and exact normalized body-text correspondence.
+All ten pages were rendered at 150 dpi and visually inspected locally. Five
+primary documentation URLs opened successfully. Reviewer-reported 300 dpi OCR
+was not rerun locally. Full PDF bytes and provenance were preserved; no PDF
+was regenerated, optimized, or stripped.
+
+The revised Markdown keeps all six student fenced blocks unchanged. Two hidden
+single-line MD036 directives preserve the authored edition labels while passing
+repository lint; their distinct repository hashes are recorded separately from
+received Markdown hashes. The P3-01 reading note qualifies phase-fraction
+conversion for phase-estimation count registers; it is nonblocking for these
+provisional review drafts and pending the next authored instructor edition.
+
+Runtime source, tests, notebooks, constraints, supported inputs, old Grover
+editions/assets, original and accepted checkouts/indexes, recovery materials,
+review archives, Downloads ZIP, and existing environments/staging remain
+preserved. No unit suite was rerun solely for document changes. The independent
+reviewer's fresh 160/eight/50/16 result remains a separately attributed report.
+Evidence is under `artifacts/r6-doc-reconciliation-2026-10-31/`.
+
+Final checks passed: 378 local file links, seven Bash syntax blocks, unchanged
+student commands, pre-commit, and preservation. The completion receipt records
+the local integration commit and clean candidate status. No original checkout
+or accepted integration index was changed.

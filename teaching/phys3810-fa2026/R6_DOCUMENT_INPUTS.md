@@ -3,9 +3,11 @@
 Prepared October 31, 2026 from candidate `d491b3b`; subsequently updated with
 [the student-guide walkthrough](R6_GUIDE_WALKTHROUGH_VALIDATION.md) of committed
 source `7b8a8e2ed74bbcd7ceea27cd377fd73802d4927a`. **The Ubuntu setup/UI path
-passed; the PDF delivery/review gate remains open.** No new PDF, student package,
-GPT Pro transfer, publication, or external message occurred. Follow the
-[readiness plan](RELEASE_READINESS_PLAN.md) for the remaining gates.
+passed; the returned review-draft PDFs are now verified and integrated.** See
+[the reconciliation](R6_DOCUMENT_REVIEW_RECONCILIATION.md) for the received ZIP,
+exact receipts, companion mapping, and P3-01 clarification. No local PDF authoring,
+student publication, or external message occurred. Final classroom approval
+remains open under [the readiness plan](RELEASE_READINESS_PLAN.md).
 
 ## Two separate companions
 
@@ -118,13 +120,15 @@ decisions or missing platform/rehearsal checks are complete. The completed walkt
 subsequent explicit handoff task authorizes this review ZIP and desktop copy,
 not local PDF generation, student publication, or outreach.
 
-## GPT Pro document handoff — prepared for transfer
+## GPT Pro document handoff — return received and reconciled
 
-All source files and both new Markdown companions are locally accessible.
-No new reviewer-produced files have been received, and no other chat is assumed
-to see these local edits. At the next sync state the exact snapshot and which
-attachments were actually transferred. Filename cards, screenshots, or private
-sandbox links alone do not establish accessible returned bytes.
+The attached report and all six members of the Downloads return ZIP are locally
+accessible, including both PDFs, two revised companions, export-based patch,
+and machine-readable receipt. The report identifies the exact outgoing archive
+and source. Reviewer raw execution logs and OCR/render artifacts are referenced
+by receipt hashes but were not delivered; their execution remains attributed
+to the reviewer. Filename cards, screenshots, or private sandbox links alone
+would not establish file access, but this integration uses verified local bytes.
 
 Prepare the evidence and exact prompt before recommending that sync. Under the
 existing [workflow](WORKFLOW.md), the later technical/document-review transfer
@@ -138,7 +142,8 @@ notebook outputs. Verify the extracted bundle and its manifest before transfer.
 The [handoff receipt](R6_DOCUMENT_REVIEW_HANDOFF.md) now identifies the verified
 50-file desktop ZIP frozen at `c63381a`, its manifest/adaptations, and extracted
 160/eight/50/16 result in the reused R6 environment. The exact prompt is supplied
-separately in chat. No new PDF is included. This coordination record and the
+separately in chat. That outgoing ZIP includes no PDF and remains unchanged.
+The subsequent document-only return contains the new supplied PDFs. This coordination record and the
 prompt are excluded; the included root README and concise evidence supply
 necessary context without exporting policy/chat history.
 
@@ -184,11 +189,13 @@ All original R5 evidence remains unchanged. The later walkthrough evidence is
 under `artifacts/r6-walkthrough-2026-10-31/`; its fresh runtime run is distinct
 from the earlier Markdown-only checks.
 
-**GPT Pro sync: recommended now.** The concrete provisional review bundle and
-separate prompt are prepared and verified. The user uploads the single desktop
-ZIP and returns the actual downloadable files/report; no evidence assembly or
-manual audit is required. The request is for clearly labeled review-draft PDFs,
-not final classroom readiness. Native-platform/editor, teaching-decision, and
-human-rehearsal gates remain open. No user transfer or reviewer response is
-assumed. Map manifested bundle-only links back to repository navigation when
-reconciling any returned companion edits.
+**GPT Pro sync: not needed immediately.** The actual report and returned files
+are reconciled, with unchanged PDF bytes and visible Markdown/PDF correspondence.
+Only hidden local lint annotations were added to the companions. Removed
+packet-only links and the remaining literal evidence reference are mapped in
+the reconciliation. P3-01 qualifies phase-fraction decoding in the next authored
+instructor edition before final classroom distribution; the current reading
+note is in [the instructor index](instructor/README.md). Native/editor, teaching,
+and human-pacing gates remain open. Next prepare a local R7 preview package and
+builder using the verified student PDF, keeping instructor material separate.
+No manual user audit or new external message is required.

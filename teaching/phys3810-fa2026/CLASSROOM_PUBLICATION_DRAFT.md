@@ -170,11 +170,12 @@ does not announce a classroom-ready release or a confirmed teaching schedule.
 - **R6:** the [provisional document inputs](R6_DOCUMENT_INPUTS.md) now include
   separate version-matched student and instructor Markdown companions. The
   [literal Ubuntu setup/UI walkthrough](R6_GUIDE_WALKTHROUGH_VALIDATION.md) passed.
-  The [provisional review handoff](R6_DOCUMENT_REVIEW_HANDOFF.md) is prepared.
-  Transfer it, reconcile the received review, and resolve inputs for the intended
-  edition, then integrate accessible ChatGPT-authored PDFs with render/visual/OCR review
-  and delivered-byte receipts. Verify provenance-inclusive hashes, metadata,
-  links, and student/instructor placement. Do not change the existing PDFs.
+  The [provisional document return](R6_DOCUMENT_REVIEW_RECONCILIATION.md) is
+  verified and integrated with delivered-byte receipts and synchronized visible
+  Markdown. The four-page student and six-page instructor PDFs remain unchanged.
+  Final editions still require the relevant teaching/platform/pacing decisions;
+  P3-01 belongs in the next authored instructor edition before final distribution.
+  Do not rewrite supplied PDF bytes locally.
 - **Entry-point adaptation:** the current course `README.md` and `SETUP.md`
   intentionally link the published Grover rc1 asset and distinguish development
   lessons. A full-course student package needs its own version-matched entry
@@ -200,13 +201,13 @@ does not announce a classroom-ready release or a confirmed teaching schedule.
   verify hashes, manifest, links, release assets, and tag target afterward.
 
 The provisional R6 Markdown inputs and literal Ubuntu setup/UI walkthrough are
-complete. The concrete provisional document-review packet is now verified and
-on the desktop while teaching decisions remain pending. Its review ZIP is
-distinct from a final student package; no publication, new PDF, or completed
-external review is implied. The next step is user transfer and local
-reconciliation of actually received files and feedback.
-The prepared GPT Pro document/teaching sync uses one standalone runnable desktop
-ZIP and a separate prompt for explicitly provisional review-draft PDFs.
+complete. The supplied review-draft PDFs and companion edits are now reconciled
+locally, while teaching decisions remain pending. The next step can build and
+verify a local R7 preview package with the unchanged student PDF; keep instructor
+answer material separate. This does not constitute final classroom approval,
+publication, or a changed Grover release.
+The completed provisional GPT Pro document/teaching sync is recorded with its
+exact outgoing and returned archive identities; final classroom gates remain open.
 Neither local file visibility nor this draft implies another chat has received
 the files. No new algorithm-review round is required solely for this unchanged
 R5 history; substantive technical or scope changes would require reassessment.
