@@ -1,70 +1,58 @@
 # PHYS 3810 · Start here
 
-Welcome to the Fall 2026 invited lecture/labs for UTC **Introduction to Quantum
-Information Science and Technology**. You will run small quantum circuits on
-your computer using Python and Qiskit. You do not need Git experience, an IBM
-account, a GPU, or access to a quantum computer.
+This provisional full-course preview contains local lessons for Grover search,
+QFT, QPE, exact-spectrum HHL, and compiled N=15 Shor order finding. It uses
+64-bit CPython 3.12, Qiskit 2.6.1, and Aer 0.17.2. No Git experience, IBM account,
+GPU, or quantum hardware is needed for the default lessons.
 
-**Current status:** onboarding, [Grover](notebooks/01_grover.ipynb),
-[QFT](notebooks/02_qft.ipynb), [QPE](notebooks/03_qpe.ipynb),
-[HHL](notebooks/04_hhl.ipynb), and [Shor](notebooks/05_shor.ipynb) are implemented
-and tested locally. The combined QFT/QPE independent review is accepted,
-with its optional teaching/regression improvements applied. Grover's independent review was received
-and its exercise correction was validated.
-The [Grover-only prerelease](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-grover-v0.1.0-rc1)
-and review-draft guides are published for early feedback. QFT/QPE/HHL/Shor are
-available in the development snapshot; final classroom materials remain planned.
-The HHL/Shor independent review is accepted and its small teaching corrections
-are applied. Use the instructions included with your downloaded version.
-See [STATUS.md](STATUS.md) for validation results and remaining work.
+## Get the full-course preview
 
-## Before the first session
+1. Download [PHYS3810-Fall2026-v0.2.0-rc1.zip](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-v0.2.0-rc1/PHYS3810-Fall2026-v0.2.0-rc1.zip)
+   and extract the complete `phys3810-fa2026` folder. The versioned link becomes
+   available when [this prerelease](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-v0.2.0-rc1)
+   is published; use the named asset rather than GitHub's source-only archive.
+2. Follow the [current setup instructions](SETUP.md), install the pinned
+   environment, and run `python scripts/validate_classroom.py` from the extracted root.
+3. Expect 160 tests, eight fresh-kernel notebooks, 50 code cells, and 16 PNGs.
+   Optional Runtime/GPU execution is skipped. A traceback or failed check needs
+   attention; do not bypass an unexecuted required cell.
+4. Open [preflight](notebooks/00_setup_preflight.ipynb) in JupyterLab, select
+   **Python (PHYS 3810)**, restart/run all, and verify its interpreter and figures.
 
-1. Download [PHYS3810-Grover-v0.1.0-rc1.zip](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-grover-v0.1.0-rc1/PHYS3810-Grover-v0.1.0-rc1.zip)
-   and extract its `phys3810-grover` folder. Keep the whole folder together;
-   this named asset matches the review setup guide.
-2. Follow the setup guide included in that ZIP to create the Python 3.12
-   environment, install the pinned packages, and run the local validator.
-   A [received setup PDF v0.2](handouts/PHYS3810_Student_Setup_Grover_RC1_v0.2.pdf)
-   and [Markdown companion](preview/SETUP_REVIEW_DRAFT.md) are also available
-   locally for that same rc1 download; publication of this revised draft is pending.
-   The [development setup guide](SETUP.md) covers the newer repository checkout.
-3. Open [the setup/preflight notebook](notebooks/00_setup_preflight.ipynb) in
-   JupyterLab, select **Python (PHYS 3810)**, and restart the kernel and run all
-   cells. Expect version checks, Bell-state probabilities, measurement counts,
-   and two figures.
-4. Continue with [Grover search](notebooks/01_grover.ipynb): predict oracle and
-   amplification behavior, inspect exact states, and sample a local circuit.
-5. In the development version, [QFT](notebooks/02_qft.ipynb) introduces the
-   Fourier matrix and phase conventions, followed by [QPE](notebooks/03_qpe.ipynb)
-   for controlled powers, counting-register decoding, and finite precision. The
-   Grover-only preview has its own version-matched setup instructions.
-6. Continue with [HHL](notebooks/04_hhl.ipynb): trace a five-qubit, exact-spectrum
-   2x2 example, distinguish success probability from the conditioned solution,
-   and check its relative sign.
-7. Follow [Shor](notebooks/05_shor.ipynb): predict counting outcomes, verify
-   candidate orders, and distinguish successful order recovery from factoring.
+The preserved [student PDF](handouts/PHYS3810_Full_Course_Student_Setup_v0.1_REVIEW_DRAFT.pdf)
+and [paired Markdown](handouts/FULL_COURSE_SETUP_DRAFT.md) are prepublication
+review drafts. Their old statement that the download is unpublished describes
+review-time availability. The current setup page governs this preview; see
+[the publication notice](handouts/PUBLICATION_NOTICE.md). No PDF was rewritten.
 
-Package installation needs internet access. The classroom validation and local
-notebooks run without internet after installation. If a check fails, keep the
-error text and ask the instructor for help; a notebook preview on GitHub does
-not execute the code.
+## Lessons and limits
 
-## Planned learning sequence
+- [Grover](notebooks/01_grover.ipynb): phase marking and amplification on 2–5 qubits.
+- [QFT](notebooks/02_qft.ipynb): exact 1–6-qubit transforms, phase, sign, and swaps.
+- [QPE](notebooks/03_qpe.ipynb): 1–6 counting qubits and one/two target qubits.
+- [HHL](notebooks/04_hhl.ipynb): a five-qubit positive-Hermitian 2x2 example with
+  exact eigenvalues 1–7, postselection, and explicit resource limitations.
+- [Shor](notebooks/05_shor.ipynb): compiled full-domain N=15 multiplication with
+  four residue qubits and conservative order/factor recovery.
 
-- **Grover — available:** [phase marking and amplitude amplification](notebooks/01_grover.ipynb).
-- **QFT/QPE — available locally:** [Fourier transforms](notebooks/02_qft.ipynb)
-  followed by [phase estimation](notebooks/03_qpe.ipynb).
-- **HHL — available locally:** [linear-system state preparation](notebooks/04_hhl.ipynb)
-  for a small exact-spectrum family, with postselection and limitations.
-- **Shor — available locally:** [compiled N=15 order finding](notebooks/05_shor.ipynb)
-  with four residue qubits, conservative order recovery, and explicit failures.
+These are bounded instructional examples, not general scalable implementations
+or demonstrations of quantum advantage. The [course plan](COURSE_PLAN.md)
+proposes three 50-minute cores and 75-minute expansions; dates, coverage,
+delivery arrangements, assessment, and solution distribution remain unconfirmed.
 
-Session dates and assessment expectations are not confirmed. The
-[course plan](COURSE_PLAN.md) gives a 50-minute core and 75-minute expansion for
-each session. The available Grover lab has a 50-minute core and 25 minutes of
-additional exercises. For environment troubleshooting, use preflight and the existing
-[Statevector smoke notebook](../../notebooks/00_local_statevector_smoke.ipynb)
-and [Aer smoke notebook](../../notebooks/01_local_aer_smoke.ipynb).
+The demonstrated path is Ubuntu/Linux with JupyterLab. Native Windows/macOS,
+native editor UI, and human pacing remain untested. This preview is not final
+classroom approval. Worked results appear in notebooks, contracts, and tests;
+excluding separate instructor guides from the named ZIP does not make it an
+answer-free assessment. The repository source also contains instructor material.
 
-For repository-wide information, see the [main README](../../README.md).
+## Earlier Grover-only edition
+
+The [Grover rc1 release](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-grover-v0.1.0-rc1),
+its [original standalone ZIP](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-grover-v0.1.0-rc1/PHYS3810-Grover-v0.1.0-rc1.zip),
+and its [version-matched guide](preview/SETUP_REVIEW_DRAFT.md) remain unchanged.
+That older download intentionally contains only onboarding and Grover.
+
+See [status and evidence](STATUS.md) for the identified validation snapshots,
+and the [repository README](../../README.md) for optional workflows outside
+classroom defaults.

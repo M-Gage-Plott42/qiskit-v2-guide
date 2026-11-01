@@ -84,6 +84,17 @@ still need authorization covering those actions.
 
 ## Immediate next technical action
 
+The user's November 1 instruction authorizes publication of the named full-course
+preview and pushing/cleaning Git this turn. Follow [R8](R8_READINESS_AUDIT.md):
+normal PR and all required checks, exact merged-source package verification,
+prerelease plus checksum, and independent published-byte verification. Preserve
+the old local R7 archive and PDF bytes; current public setup and a notice handle
+prepublication availability wording. Preserve original dirty data in the
+verified checkpoint and named stash before fast-forwarding its main checkout.
+This is distinct from the earlier read-only audit recommendation below.
+After successful delivery, pause further course preparation until instructor
+feedback, an actual defect, or a specific new request changes the inputs.
+
 R1 of the [readiness plan](RELEASE_READINESS_PLAN.md) passed on October 31:
 source `9e73b82` installed unchanged pins into a fresh isolated Python 3.12.15
 environment and passed 160 tests/eight notebooks/50 cells/16 PNGs. See

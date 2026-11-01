@@ -354,14 +354,23 @@ legitimately changes the baseline. Compare payload hashes after execution.
 Any edit to payload/setup/PDFs requires a new sealed archive and affected
 verification. Preserve the original reviewed ZIPs and Grover release unchanged.
 
-### R8. Readiness proposal next; publication remains unauthorized
+### R8. Provisional preview publication authorized November 1
 
-Next prepare only a read-only/local readiness audit and concrete publication
-proposal: verify then-current upstream, tag availability, repository rules and
-required checks, source/package correspondence, and unresolved guide/teaching/
-support gates. No such remote audit was performed during R7. Do not push, create
-a PR, merge, tag, release, send messages, or submit hardware jobs as part of this
-proposed next step.
+The [read-only audit](R8_READINESS_AUDIT.md) checked current upstream, tag
+availability, rules, required checks, and package correspondence. The user then
+explicitly authorized a new preview publication, pushing the work, and a clean
+Git state this turn. Execute the named provisional Linux preview through the
+normal PR/check/merge/release workflow; do not use admin bypass. The existing
+R7 local-only archive is preserved, and a distinct public package supplies
+current setup/README availability plus an explicit notice for unchanged
+prepublication PDFs. No PDF regeneration is authorized or needed for this
+limited preview. Final classroom support/teaching/pacing gates remain open.
+
+After successful publication, verify and retain the original dirty snapshot in
+a named stash/recovery before fast-forwarding its checkout. Keep historical
+branches and assets. No external human message, hardware job, or unrelated
+release is authorized. Stop additional course preparation after delivery until
+instructor feedback or a specific request provides new inputs.
 
 Prepare the complete candidate/evidence before requesting external publication
 authority. Verify the then-current repository rules and required checks without
@@ -371,7 +380,7 @@ include `local-smoke`, `ruff`, `markdownlint`, `yamllint`, `actionlint`,
 This local inventory is not a live ruleset check; a conditional/skipped job is
 not a pass. Existing Ubuntu CI is not Windows/macOS evidence.
 
-**Done only after separate authorization:** push/open the scoped PRs, satisfy
+**Done under the November 1 preview authorization:** push/open the scoped PRs, satisfy
 actual required checks and resolve findings, merge through the normal workflow,
 and identify the resulting source revision. If merging changes the revision,
 rebuild/revalidate the final package from it and confirm guide/version consistency
@@ -397,11 +406,9 @@ recorded fresh-install execution, not by prose changes. Later documentation
 checks cover Markdown, relative links, Git scope, and preserved bytes; they
 do not substitute for executing another gate.
 
-**Recommended next task:** prepare the R8 read-only/local readiness audit and
-publication proposal described above. Preserve the verified local preview,
-recheck current external state only when that next task is authorized, and
-identify exact remaining decisions or material changes before any publication.
-Keep preview status distinct from final classroom readiness. **GPT Pro sync:
-not needed solely for unchanged-byte packaging.** The next authored PDF edition
-must address P3-01 and any agreed teaching/publication wording changes; prepare
-that concrete request when its inputs are ready.
+**Current task:** execute the authorized provisional preview workflow and
+recoverable Git cleanup above. Do not certify completion before actual checks
+and published-byte verification. **After completion, wait for Rick's reply.**
+No additional GPT Pro round is needed solely for disclosed publication wording;
+P3-01 and any confirmed teaching changes belong to the next final instructor
+PDF edition. No speculative validation or packaging loop is recommended.

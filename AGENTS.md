@@ -75,6 +75,21 @@ data in public code, notebooks, documentation, outputs, or validation logs.
 
 ## PHYS 3810 collaboration and handoffs
 
+**Current authorization, November 1, 2026:** the user explicitly requested a new
+provisional preview publication, pushing the work, and a clean Git state this
+turn. This supersedes the earlier read-only/local-only boundary for
+`phys3810-fa2026-v0.2.0-rc1` only. Use the normal PR/required-check merge workflow;
+never bypass the ruleset. Preserve all earlier releases and PDF bytes. Public
+README/SETUP instructions and a notice explicitly identify the unchanged PDF
+as a prepublication reference with outdated availability wording. No final
+classroom approval, external human message, or hardware job is authorized.
+The original dirty checkout may be recoverably stashed and fast-forwarded only
+after its file/index/checkpoint verification and successful publication. Keep
+that stash/recovery, and never use a destructive reset or clean shortcut.
+See [R8 readiness](teaching/phys3810-fa2026/R8_READINESS_AUDIT.md).
+After delivering the preview and clean Git state, wait for Rick's reply or a
+concrete requested change; do not keep repeating unchanged validation/planning.
+
 - The assistant owns implementation, technical review, testing, repairs, and
   documentation. Do not assign manual code/diff review to the user.
 - End each substantive turn with the outcome and validation status, one
@@ -280,5 +295,7 @@ answer-free assessment. Teaching decisions, solution distribution, and actual
 human pacing remain open; do not infer agreement from document preparation.
 Editor and native-platform checks, final classroom documents, final package
 freeze, and publication approval remain open.
-No push, PR, merge, release change, external message, or hardware job is part
-of this local milestone. Preserve the original checkout/index and rc1 assets.
+Earlier local-only milestone records remain historical. The November 1
+preview authorization above permits its PR/merge/release and recoverable Git
+cleanup; it does not authorize unrelated releases, outreach, or hardware jobs.
+Preserve the original work in its verified checkpoint/stash and retain rc1 assets.

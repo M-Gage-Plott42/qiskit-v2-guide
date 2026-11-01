@@ -17,14 +17,19 @@ The classroom environment uses CPython 3.12, Qiskit 2.6.1, and Aer 0.17.2.
 The first algorithm lab, [Grover search](teaching/phys3810-fa2026/notebooks/01_grover.ipynb),
 includes reusable source, independent tests, and 50/75-minute teaching activities.
 The [QFT introduction](teaching/phys3810-fa2026/notebooks/02_qft.ipynb) is also
-available in the development checkout as the first part of the QFT/QPE session.
+included as the first part of the QFT/QPE session.
 The [QPE lesson](teaching/phys3810-fa2026/notebooks/03_qpe.ipynb) completes that
 session with declared register order, exact phases, and nonexact distributions.
 The [HHL lesson](teaching/phys3810-fa2026/notebooks/04_hhl.ipynb) adds a bounded
 2x2 linear-system state-preparation example with explicit postselection.
 The [Shor lesson](teaching/phys3810-fa2026/notebooks/05_shor.ipynb) adds compiled
 full-domain N=15 order finding and verified classical factor recovery.
-The versioned Grover preview intentionally excludes this later work.
+The [full-course provisional preview](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-v0.2.0-rc1)
+packages all five bounded lessons with 160 tests/eight notebooks. Its release
+assets become available when that prerelease is published. The earlier Grover
+preview remains unchanged and intentionally excludes the later algorithms.
+Use the [current student setup](teaching/phys3810-fa2026/SETUP.md); preserved
+PDFs are prepublication review references with an explicit availability notice.
 
 ## Quickstart
 

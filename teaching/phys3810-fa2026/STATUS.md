@@ -1,5 +1,17 @@
 # PHYS 3810 status
 
+November 1, 2026 update: **provisional public preview publication is explicitly
+authorized and being executed.** The [R8 audit](R8_READINESS_AUDIT.md) confirms
+unchanged upstream, an available proposed tag, and the active nine-check PR
+ruleset. A separate public builder preserves the local R7 artifact and supplied
+PDF pair while providing authoritative current setup/README wording and an
+explicit prepublication-document notice. Completion is recorded only after
+actual CI, merge, asset, and download checks. Original dirty work will be
+checkpointed and recoverably stashed before its checkout is fast-forwarded.
+After delivery, wait for Rick's reply rather than starting more unchanged
+preparation cycles. Teaching/native/editor/pacing and final classroom approval
+remain open; this is a provisional Linux preview.
+
 As of October 31, 2026: **R7 local preview packaging passed.** The
 [builder contract](R7_PREVIEW_PACKAGE.md) and [execution evidence](R7_PREVIEW_VALIDATION.md)
 identify source `135d5d0` and the unpublished 47-file preview. It includes the

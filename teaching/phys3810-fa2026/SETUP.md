@@ -1,187 +1,152 @@
-# PHYS 3810 · Python and Qiskit setup
+# PHYS 3810: provisional public preview setup
 
-**Draft for validation.** The [received Grover rc1 setup PDF v0.2](handouts/PHYS3810_Student_Setup_Grover_RC1_v0.2.pdf)
-is a local draft; its publication is pending. Its
-[Markdown companion](preview/SETUP_REVIEW_DRAFT.md) covers the same Grover-only
-download. The final classroom PDF follows setup validation on the intended
-platforms. Native Windows and macOS execution is not
-yet validated for this milestone; see [STATUS.md](STATUS.md) for current
-evidence. These instructions use **64-bit CPython 3.12**, **Qiskit 2.6.1**, and
-**Aer 0.17.2**. IBM accounts, tokens, GPUs, and Git are not needed.
+<!-- markdownlint-disable-next-line MD036 -->
+**Current publication instructions · Provisional course code v0.2.0-rc1**
 
-This page follows the development snapshot, which includes Grover, QFT, QPE, HHL, and Shor.
-The Grover-only preview ships separate version-matched instructions and a
-review-draft PDF; its four-notebook validation intentionally excludes QFT/QPE.
-The QFT/QPE review ZIP uses its own Markdown setup instructions; the existing
-Grover-only PDFs are not a setup guide for that six-notebook snapshot.
+Download the complete [provisional full-course preview](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-v0.2.0-rc1/PHYS3810-Fall2026-v0.2.0-rc1.zip) and extract its `phys3810-fa2026` folder. This URL becomes available when the identified prerelease is published. The earlier Grover-only package does not contain all five algorithm lessons. Session dates, classroom coverage, and assignments remain to be confirmed.
 
-## 1. Get the course folder and Python 3.12
+**Document note:** The [original companion](handouts/FULL_COURSE_SETUP_DRAFT.md) and [student PDF](handouts/PHYS3810_Full_Course_Student_Setup_v0.1_REVIEW_DRAFT.pdf) remain exact **prepublication review drafts** for reference. Their statement that the download is unpublished describes the review-time state and is outdated after this prerelease. This page and the [package README](../../README.md) govern current availability. See the [publication notice](handouts/PUBLICATION_NOTICE.md).
 
-The published [Grover standalone ZIP](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-grover-v0.1.0-rc1/PHYS3810-Grover-v0.1.0-rc1.zip)
-includes its own version-matched instructions. For additional development
-lessons, use the repository snapshot supplied by the instructor and this guide.
-Extract the complete folder and open a terminal there; it must contain
-`requirements.txt`, `scripts/`, and `teaching/`.
-For example, use `cd "path/to/extracted-folder"`, replacing the quoted path.
-Run commands in the terminal, not inside a Python prompt or notebook cell.
+These instructions use **64-bit Linux and CPython 3.12**, with Qiskit 2.6.1 and Aer 0.17.2. Recorded setup and browser checks passed on Ubuntu 26.04.1 LTS x86_64, Python 3.12.15, and JupyterLab 4.6.4, including a fresh application environment and the in-folder kernel setup below. The walkthrough used isolated Jupyter settings and a manually opened local URL; automatic browser opening was not checked.
 
-First check for Python 3.12 using your platform's command:
+Native Windows x64, macOS ARM64/Intel, and VS Code/Cursor notebook setup are **untested**. Windows ARM64 and 32-bit Python are outside this draft's target. Ask the instructor for an approved setup if needed. Git, IBM accounts, tokens, GPUs, and quantum hardware are not required.
 
-- Windows PowerShell: `py -3.12 --version`.
-- macOS/Linux terminal: `python3.12 --version`.
+## 1. Open the complete course folder
 
-Expected: `Python 3.12.x`. If it is missing, Windows users can install the
-[official Python install manager](https://docs.python.org/3/using/windows.html)
-and run `pymanager install 3.12`, then reopen PowerShell. On macOS/Linux, use a
-Python 3.12 installation provided by your instructor or operating-system
-package manager. An optional alternative is to
-[install uv](https://docs.astral.sh/uv/getting-started/installation/) and follow
-its [Python installation guide](https://docs.astral.sh/uv/guides/install-python/):
+Extract the approved folder completely and keep its files together. Individual downloaded notebooks cannot find the shared course code on their own. Open a Linux terminal in the folder containing `requirements.txt`, `constraints-ci.txt`, `src/`, `scripts/`, `tests/`, and `teaching/`. This is the **course root**, not the `teaching/` subfolder.
+
+Replace the quoted path with your actual folder:
 
 ```bash
-uv python install 3.12
-uv venv --python 3.12 --seed .venv
-source .venv/bin/activate
+cd "/path/to/phys3810-fa2026"
+ls
+python3.12 --version
 ```
 
-That alternative already creates and activates the environment; continue at
-step 3. If a managed computer blocks installation, ask the instructor for the
-approved Python 3.12 setup.
+Expected: `Python 3.12.x`. If `python3.12` is missing, or this is a managed computer, obtain the instructor-approved Python 3.12 installation before continuing. Do not change system security policy or install the course packages into the operating system's Python.
 
-## 2. Create a separate environment
+Run this guide's commands in the **terminal**, not at a Python `>>>` prompt or in a notebook cell. Installation needs internet access; default checks and lessons run locally afterward.
 
-An environment keeps the class packages separate from other Python projects.
-Create it once in the extracted repository folder.
+## 2. Create a separate Python environment
 
-**Windows PowerShell:**
-
-```powershell
-py -3.12 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
-
-**macOS/Linux:**
+Create the environment once in your course folder:
 
 ```bash
 python3.12 -m venv .venv
 source .venv/bin/activate
+python --version
+python -c "import sys; print(sys.executable)"
 ```
 
-If PowerShell blocks activation, leave its policy unchanged and use
-`.\.venv\Scripts\python.exe` in place of every `python` command below.
-For example: `.\.venv\Scripts\python.exe -m pip install -r requirements.txt`.
-On macOS/Linux, `.venv/bin/python` is the equivalent direct path.
+The version must be 3.12 and the printed interpreter must end in this course folder's `.venv/bin/python`. This environment keeps the course packages separate from other projects. If `.venv` belongs to another project or Python version, ask for help before reusing it.
 
-## 3. Install and check
+<!-- pagebreak -->
 
-In the activated environment, run:
+## 3. Install the specified packages and check the lessons
+
+With `.venv` activated, run:
 
 ```bash
-python --version
 python -m pip install --upgrade pip==26.2.2
 python -m pip install -r requirements.txt
 python scripts/validate_classroom.py
 ```
 
-The [requirements](../../requirements.txt) include JupyterLab, notebook
-execution tools, widgets, and circuit/plot dependencies. Their complete pinned
-resolution is in [constraints-ci.txt](../../constraints-ci.txt), which pip
-reads automatically. Use these files together; do not upgrade individual class
-packages during the labs.
+`requirements.txt` includes JupyterLab and the circuit, plotting, widget, and notebook-execution libraries. It automatically reads `constraints-ci.txt` to select the specified package versions. Keep both files unchanged; do not upgrade individual packages during the lessons.
 
-The validator prints your interpreter path, Python `3.12.x`, `qiskit: 2.6.1`,
-and `qiskit-aer: 0.17.2`. It checks dependencies, runs offline tests, and
-executes preflight, the two local smoke notebooks, Grover, QFT, QPE, HHL, and Shor in
-fresh kernels. The current development baseline is 160 tests and eight notebooks. The earlier
-QFT/QPE review ZIP remains a distinct 92-test snapshot.
-Success ends with:
+The validator prints your interpreter path and expected Qiskit/Aer versions, checks package consistency, runs **160 tests**, and executes **eight notebooks in separate fresh kernels**. The current lesson set has **50 nonempty code cells** and produces **16 PNG figures**. Success ends with:
 
 ```text
 PASSED: classroom validation
 ```
 
-`SKIPPED` for optional IBM Runtime/GPU execution is expected and does not mean
-those paths passed. All five bounded algorithm lessons are included. A `FAILED` line or traceback needs attention. Executed notebook copies
-are saved under `artifacts/executed-classroom/`; source notebooks stay unchanged.
+`SKIPPED: optional IBM Runtime and GPU execution` is expected. A `FAILED` line or traceback needs attention; do not bypass a failing cell. Executed copies go to `artifacts/executed-classroom/`; source notebooks are not overwritten.
 
-## 4. Open JupyterLab and choose the kernel
+## 4. Open JupyterLab and select the class kernel
 
-Run these commands in the same terminal:
+Run these commands in the same activated terminal:
 
 ```bash
 python -m ipykernel install --sys-prefix --name phys3810-fa2026 --display-name "Python (PHYS 3810)"
 python -m jupyterlab
 ```
 
-Keep the terminal open. If a browser does not open, use the local URL printed by
-JupyterLab. In its file browser, open
-`teaching/phys3810-fa2026/notebooks/00_setup_preflight.ipynb`.
-Choose **Kernel → Change Kernel → Python (PHYS 3810)**, then
-**Kernel → Restart Kernel and Run All Cells**. The first cell prints the
-interpreter path; it should point inside this repository's `.venv`.
+Keep the terminal open. If the browser does not open, use the local URL printed by JupyterLab. In its file browser, open:
 
-In VS Code/Cursor, select the project interpreter before choosing the notebook
-kernel: **Python: Select Interpreter**, then `.venv\Scripts\python.exe` on
-Windows or `.venv/bin/python` on macOS/Linux. Use that environment in the
-notebook's kernel picker too; the editor interpreter and notebook kernel can
-be different.
+`teaching/phys3810-fa2026/notebooks/00_setup_preflight.ipynb`
 
-Expect Bell probabilities `[0.5 0.  0.  0.5]`, 1024 measurements split roughly
-equally between `00` and `11`, a circuit drawing, a histogram, and `PASSED`
-messages. Exact counts can differ between computers. The notebook asserts
-the amplitudes, probabilities, correlation, shot total, and allowed outcomes.
+1. Choose **Kernel → Change Kernel → Python (PHYS 3810)**.
+2. Choose **Kernel → Restart Kernel and Run All Cells**; confirm the restart.
+3. Compare the notebook's printed interpreter with the terminal path from step 2. Both must point to the same course `.venv/bin/python`. A kernel's display name alone is not proof of its interpreter.
+4. Check that every code cell finishes without errors and preflight shows a circuit drawing and measurement histogram. The notebook checks its numerical results; sampled counts need not match another computer exactly.
+5. Save with **File → Save Notebook**.
 
-For later sessions, reopen a terminal in the same folder, activate `.venv`
-again, and run `python -m jupyterlab`. Installation and kernel registration
-normally need doing only once for that environment.
+Use the same registered environment for other lessons, with a separate kernel for each notebook. Start at the top. If you edit a parameter, rerun the calculations and plots that depend on it. Restart/run-all helps catch values left over from an earlier run.
 
-Before class, run all cells to verify setup. During class, restart the kernel
-and clear outputs, discuss each prediction, then run its code cell so results
-do not appear before the discussion.
+<!-- pagebreak -->
 
-After preflight, open `teaching/phys3810-fa2026/notebooks/01_grover.ipynb` using
-the same kernel. Expect exact probability checks, a circuit, sampled counts,
-and an iteration-probability plot. The 75-minute expansion exercises also run
-during validation; optional discussion time does not mean skipped code cells.
-The development checkout also provides `teaching/phys3810-fa2026/notebooks/02_qft.ipynb`.
-It introduces the first 20 minutes of the combined session. Continue with
-`teaching/phys3810-fa2026/notebooks/03_qpe.ipynb` for the 30-minute QPE core and
-25-minute expansion on nonexact outcomes and precision. Next,
-`teaching/phys3810-fa2026/notebooks/04_hhl.ipynb` supplies the 20-minute HHL core
-and 15-minute expansion on state preparation, success probability, and relative
-phase. Its supported matrices have exact eigenvalues in 1-7. Finish with
-`teaching/phys3810-fa2026/notebooks/05_shor.ipynb`: a 20-minute compiled N=15
-core and 10-minute expansion on order/factor recovery failures.
+## 5. Find the notebooks
 
-## Focused troubleshooting
+These are paths **inside the complete course folder**, not online download links. The six course notebooks are under:
 
-- **Cannot find `requirements.txt` or the validator:** change to the extracted
-  repository root, not `teaching/` or the ZIP file. Check with `dir` on Windows
-  or `ls` on macOS/Linux.
-- **Wrong Python version or package not found:** run
-  `python -c "import sys; print(sys.executable)"`. It must point into `.venv`.
-  Activate the environment or use its direct Python path. If `.venv` was
-  created with another Python version, create a new environment with 3.12.
-- **Terminal validation passes but the notebook fails:** choose the registered
-  class kernel and restart it. Compare the notebook's interpreter path with
-  the terminal path.
-- **Course folder or environment was moved:** recreate `.venv` in its new
-  location using Python 3.12, reinstall the pinned requirements from step 3,
-  then register the class kernel from step 4. Re-registration alone does not
-  repair a moved environment. Python's [venv guidance](https://docs.python.org/3.12/library/venv.html)
-  applies even when only the parent course folder moved.
-- **`python3.12` or `py` is not found:** complete step 1 and reopen the terminal.
-  For a Linux `venv`/`ensurepip` error, install your distribution's matching
-  Python 3.12 venv package or use the documented uv alternative.
-- **Installation fails or asks for a compiler:** check Python 3.12, 64-bit
-  architecture, internet access, and the exact error. Keep the pinned package
-  versions and bring the error to the instructor; do not mix in another Qiskit
-  installation to bypass it.
-- **Plot or circuit drawing fails:** rerun the requirements installation using
-  the notebook environment's Python, then restart the kernel and run all cells.
-  The preflight checks the required rendering dependencies.
+`teaching/phys3810-fa2026/notebooks/`
 
-For help, share the failing command, OS, Python version, and error text with the
-instructor. Do not include credentials or private account/student information.
-The approach follows [IBM's Qiskit installation guidance](https://quantum.cloud.ibm.com/docs/en/guides/install-qiskit)
-and the [Qiskit 2.6.1 package release](https://pypi.org/project/qiskit/2.6.1/).
+| Notebook | What it covers |
+| --- | --- |
+| `00_setup_preflight.ipynb` | Environment, a simple circuit, sampling, and figures. |
+| `01_grover.ipynb` | Phase marking and amplitude amplification on 2–5 search qubits. |
+| `02_qft.ipynb` | Exact Fourier transforms on 1–6 qubits, including complex phase and bit ordering. |
+| `03_qpe.ipynb` | Phase estimation with 1–6 counting qubits and a unitary on **one or two target qubits**. |
+| `04_hhl.ipynb` | A positive Hermitian 2×2 system with exact integer eigenvalues 1–7. The output is a normalized, postselected solution state; this is not a general linear-system solver. |
+| `05_shor.ipynb` | A separate compiled **N=15** example with **four residue qubits** and 4–6 counting qubits, followed by classical order/factor recovery. It is not scalable general factoring. |
+
+Two additional checks live under the root `notebooks/` directory:
+
+| Notebook | What it checks |
+| --- | --- |
+| `00_local_statevector_smoke.ipynb` | Exact local simulation. |
+| `01_local_aer_smoke.ipynb` | Local Aer sampling and a small noise example. |
+
+The full validator runs all eight notebooks. Availability does not determine what is taught or submitted; follow your instructor's eventual lesson and assessment instructions.
+
+### Use predictions during the lessons
+
+Before a lesson, run all cells to check setup. During discussion, restart the kernel and clear displayed outputs, make the requested predictions, then run the relevant cells. The instructor will identify which exercises to discuss. All required code still runs during the setup check.
+
+The notebooks already contain worked calculations, assertions, and reference results. Follow the instructor's directions about collaboration, solutions, and any assessed work.
+
+<!-- pagebreak -->
+
+## 6. Finish and return later
+
+Save the notebooks you edited. Choose **File → Shut Down** in JupyterLab, confirm, and wait for the server-stopped message before closing the browser tab. Closing a tab alone does not stop its server or kernels.
+
+Next time, open a terminal in the same course root:
+
+```bash
+source .venv/bin/activate
+python -c "import sys; print(sys.executable)"
+python -m jupyterlab
+```
+
+Reopen preflight, select **Python (PHYS 3810)**, and restart/run all to check the interpreter and figures. Installation and registration normally happen once for an environment that stays in the same location. Keep your edited notebooks separate from a fresh supplied copy so you can compare or restore the original exercises.
+
+## If something fails
+
+- **Missing file:** check `pwd` and `ls`. Work in the complete course root, not inside the ZIP or `teaching/`.
+- **Wrong Python or missing package:** print `sys.executable` again. Activate the course environment, or use `.venv/bin/python` instead of `python` in terminal commands. Check the notebook kernel separately.
+- **Terminal passes, notebook fails:** select the class kernel, compare interpreter paths, restart it, and run all cells from the top.
+- **Kernel absent or points elsewhere:** repeat step 4's registration command in the intended activated environment, relaunch JupyterLab, and select the kernel again.
+- **Plot or circuit drawing fails:** use the notebook's Python environment to rerun `python -m pip install -r requirements.txt`, then restart its kernel.
+- **Installation asks for a compiler, fails, or cannot create `venv`:** save the error and ask for the approved setup. Do not bypass pins or mix in another Qiskit installation.
+- **Folder or environment moved:** preserve your notebook work, then create a fresh environment at the new location, reinstall the specified packages, and register its kernel. Virtual environments are not portable; re-registering alone does not repair a moved environment.
+
+For help, provide the failing command, operating system, Python version, interpreter path, and error text. Omit credentials, private account details, other students' information, and the token-bearing JupyterLab URL.
+
+### Official reference links
+
+- [Python 3.12 virtual environments](https://docs.python.org/3.12/library/venv.html)
+- [IPython kernel registration](https://ipython.readthedocs.io/en/stable/install/kernel_install.html)
+- [Starting JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/starting.html)
+
+These references explain the tools. Follow the course commands and pinned versions above for this draft.
