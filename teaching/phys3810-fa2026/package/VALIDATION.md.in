@@ -1,0 +1,77 @@
+# Preview validation and limits
+
+Source: `{{SOURCE_COMMIT}}`. Archive: `{{ASSET_NAME}}`.
+This is an unpublished local preview, not a final classroom edition.
+
+## Run the included checks
+
+From the extracted root, use the environment created by the
+[student guide](teaching/phys3810-fa2026/handouts/FULL_COURSE_SETUP_DRAFT.md):
+
+```bash
+python -m pip check
+python scripts/validate_classroom.py
+```
+
+The expected inventory is **160 tests**, **eight fresh-kernel notebooks**,
+**50 nonempty code cells**, and **16 PNGs**. The validator uses the selected
+interpreter for every kernel, rejects skipped required cells and error outputs,
+and preserves partial execution copies if a notebook fails. Executed copies
+belong under `artifacts/executed-classroom/`; sources remain output-free.
+
+- Preflight: 4 code cells, 2 PNGs.
+- Local statevector smoke: 3 code cells, no PNG requirement.
+- Local Aer smoke: 4 code cells, no PNG requirement.
+- Grover: 9 code cells, 3 PNGs.
+- QFT: 7 code cells, 2 PNGs.
+- QPE: 8 code cells, 3 PNGs.
+- HHL: 7 code cells, 3 PNGs.
+- Compiled Shor: 8 code cells, 3 PNGs.
+
+The final successful line is `PASSED: classroom validation`. Runtime/cloud/GPU
+execution is explicitly skipped, not passed. Bash users can additionally run
+`bash scripts/smoke_local.sh` for the original two smoke notebooks.
+
+The builder checks source identity, guide hashes, inventory, output-free
+notebooks, links, and archive structure. It does **not** run the runtime
+validator or declare a new platform pass. The separate final extraction receipt
+records actual commands, versions, results, archive checksum, and whether the
+environment was reused or freshly installed. A source run alone does not prove
+that a subsequently assembled archive passes. Do not put this enclosing ZIP's
+checksum into its own guide or manifest.
+
+## Mathematical checks
+
+Tests use independent mathematical expectations as well as SDK comparisons:
+complete-basis oracle action and analytic amplification for Grover; the full
+signed Fourier matrix and swaps for QFT; asymmetric exact and nonexact phase
+distributions for QPE; raw branches, normalization, relative complex phase,
+postselection, and both-branch count cleanup for exact-spectrum HHL; full-domain
+reversible multiplication, independent modular/Fourier states, verified orders,
+factor extraction, and unsuccessful cases for compiled N=15 Shor.
+
+The helper QPE target limit remains one/two qubits. Shor has a separate
+four-residue-qubit order finder. Neither these small examples nor their circuit
+sizes establish general scalable arithmetic, hardware performance, or quantum
+advantage. Source, notebook, and contract bounds remain unchanged by packaging.
+
+## Evidence and remaining limits
+
+The course's documented local Ubuntu x86_64 path uses existing CPython 3.12.15,
+Qiskit 2.6.1, Aer 0.17.2, and JupyterLab 4.6.4 with unchanged pins. The student
+guide distinguishes its observed fresh application install and actual browser
+workflow from untested behavior. That earlier evidence is not a new execution
+of this particular ZIP. The reviewed PDF is supplied unchanged with document
+edition v0.1; its byte identity is in [the manifest](MANIFEST.json).
+
+Native Windows x64, macOS ARM64/Intel, native editor UI, other browser
+configurations, automatic browser opening, and human classroom pacing remain
+untested. Exact Chrome version remains unverified. A matching package resolver
+or another OS's success is not native-host evidence. Windows ARM64 and 32-bit
+Python remain outside the stated target.
+
+Teaching coverage, dates, delivery format, required platforms or an agreed
+alternative, assessment, and solution distribution remain provisional. Worked
+examples and expected results are present in notebooks/tests/contracts even
+though separate instructor answer documents are excluded. Do not treat this
+preview as an answer-free assessment or final classroom approval.
