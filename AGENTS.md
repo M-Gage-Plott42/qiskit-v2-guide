@@ -242,9 +242,17 @@ execution of all eight notebooks and shutdown/reopen reruns. R1/R2 remain
 preserved; this separate result closes the ordinary Linux guide-route gap without
 relabeling R2's adapted test. Task-local settings and manual browser opening are
 disclosed; native editor/Windows/macOS and human pacing remain untested. No guide
-command repair was needed; only validation-status prose changed. Next prepare a
-provisional GPT Pro document-review bundle/prompt; no new transfer, PDF, or student
-package has been created in the walkthrough turn.
+command repair was needed; only validation-status prose changed. The subsequent
+[document-review handoff](teaching/phys3810-fa2026/R6_DOCUMENT_REVIEW_HANDOFF.md)
+is now prepared: a single desktop ZIP frozen at `c63381a`, 50 files/49 manifest
+entries, all canonical runtime/notebook/student-guide bytes preserved, and a
+separate chat prompt. Extracted verification passed 160 tests/eight notebooks/
+50 cells/16 PNGs using the reused walkthrough environment. GPT Pro sync is now
+recommended; user transfer and the new reviewer response remain unobserved.
+Do not call the review bundle a student release or infer new PDF approval.
+For returned Markdown, map back the manifest's bundle-only navigation changes
+before integrating edits into repository companions. Filename cards/private
+links alone do not establish accessible returned PDF or patch bytes.
 Keep student instructions free of maintainer coordination and instructor answer
 cues. Separate instructor files do not make the existing worked notebooks an
 answer-free assessment. Teaching decisions, solution distribution, and actual

@@ -170,8 +170,9 @@ does not announce a classroom-ready release or a confirmed teaching schedule.
 - **R6:** the [provisional document inputs](R6_DOCUMENT_INPUTS.md) now include
   separate version-matched student and instructor Markdown companions. The
   [literal Ubuntu setup/UI walkthrough](R6_GUIDE_WALKTHROUGH_VALIDATION.md) passed.
-  Prepare the provisional review handoff and resolve inputs for the intended
-  edition, then receive accessible ChatGPT-authored PDFs with render/visual/OCR review
+  The [provisional review handoff](R6_DOCUMENT_REVIEW_HANDOFF.md) is prepared.
+  Transfer it, reconcile the received review, and resolve inputs for the intended
+  edition, then integrate accessible ChatGPT-authored PDFs with render/visual/OCR review
   and delivered-byte receipts. Verify provenance-inclusive hashes, metadata,
   links, and student/instructor placement. Do not change the existing PDFs.
 - **Entry-point adaptation:** the current course `README.md` and `SETUP.md`
@@ -199,12 +200,13 @@ does not announce a classroom-ready release or a confirmed teaching schedule.
   verify hashes, manifest, links, release assets, and tag target afterward.
 
 The provisional R6 Markdown inputs and literal Ubuntu setup/UI walkthrough are
-complete. The next local task can prepare the concrete provisional document-
-review packet while teaching decisions remain pending. That future review ZIP
-is distinct from a final student package; no publication or new PDF is created
-by the completed walkthrough.
-The next GPT Pro document/teaching sync is prepared when R6's inputs are stable,
-with one standalone runnable desktop ZIP and the prompt supplied separately.
+complete. The concrete provisional document-review packet is now verified and
+on the desktop while teaching decisions remain pending. Its review ZIP is
+distinct from a final student package; no publication, new PDF, or completed
+external review is implied. The next step is user transfer and local
+reconciliation of actually received files and feedback.
+The prepared GPT Pro document/teaching sync uses one standalone runnable desktop
+ZIP and a separate prompt for explicitly provisional review-draft PDFs.
 Neither local file visibility nor this draft implies another chat has received
 the files. No new algorithm-review round is required solely for this unchanged
 R5 history; substantive technical or scope changes would require reassessment.

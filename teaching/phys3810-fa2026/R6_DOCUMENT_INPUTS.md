@@ -114,10 +114,11 @@ additional outreach is part of this task.
 For final classroom editions, resolve the relevant decisions and support claims
 before treating the documents as final. A separately requested review-draft
 handoff may retain explicit provisional assumptions; it must not imply those
-decisions or missing platform/rehearsal checks are complete. The completed walkthrough does not authorize
-new PDFs, packages, publication, or outreach.
+decisions or missing platform/rehearsal checks are complete. The completed walkthrough did not authorize new deliverables by itself. The
+subsequent explicit handoff task authorizes this review ZIP and desktop copy,
+not local PDF generation, student publication, or outreach.
 
-## Later GPT Pro document handoff
+## GPT Pro document handoff — prepared for transfer
 
 All source files and both new Markdown companions are locally accessible.
 No new reviewer-produced files have been received, and no other chat is assumed
@@ -134,7 +135,12 @@ the two audience-separated document inputs, and concise validation evidence.
 Exclude prompts, policy/chat files (including this coordination record), unrelated
 history, duplicate exports, caches, credentials, environments, and generated
 notebook outputs. Verify the extracted bundle and its manifest before transfer.
-No handoff ZIP has yet been built or copied to the desktop for these documents.
+The [handoff receipt](R6_DOCUMENT_REVIEW_HANDOFF.md) now identifies the verified
+50-file desktop ZIP frozen at `c63381a`, its manifest/adaptations, and extracted
+160/eight/50/16 result in the reused R6 environment. The exact prompt is supplied
+separately in chat. No new PDF is included. This coordination record and the
+prompt are excluded; the included root README and concise evidence supply
+necessary context without exporting policy/chat history.
 
 The document request should state the precise draft/final purpose and open
 decisions. ChatGPT authors/renders/visually reviews/OCR-checks the PDFs and
@@ -178,9 +184,11 @@ All original R5 evidence remains unchanged. The later walkthrough evidence is
 under `artifacts/r6-walkthrough-2026-10-31/`; its fresh runtime run is distinct
 from the earlier Markdown-only checks.
 
-**GPT Pro sync: no transfer is due in this completed walkthrough turn.** Next
-prepare the concrete provisional document-review bundle and separate prompt
-under the established handoff rules. That packet can request clearly labeled
-review-draft PDFs while teaching decisions remain explicitly provisional; it
-must not announce final classroom readiness. Native-platform/editor and human-
-rehearsal gates remain open. Do not ask the user to assemble or audit the packet.
+**GPT Pro sync: recommended now.** The concrete provisional review bundle and
+separate prompt are prepared and verified. The user uploads the single desktop
+ZIP and returns the actual downloadable files/report; no evidence assembly or
+manual audit is required. The request is for clearly labeled review-draft PDFs,
+not final classroom readiness. Native-platform/editor, teaching-decision, and
+human-rehearsal gates remain open. No user transfer or reviewer response is
+assumed. Map manifested bundle-only links back to repository navigation when
+reconciling any returned companion edits.

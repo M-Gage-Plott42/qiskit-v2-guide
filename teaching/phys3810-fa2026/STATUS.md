@@ -1,6 +1,13 @@
 # PHYS 3810 status
 
-As of October 31, 2026: **The R6 Ubuntu student-guide walkthrough passed.**
+As of October 31, 2026: **The provisional GPT Pro document-review handoff is
+ready on the Ubuntu desktop.** The [handoff receipt](R6_DOCUMENT_REVIEW_HANDOFF.md)
+identifies the ZIP frozen at `c63381a`, source/adaptation manifest, desktop hash,
+extracted validation, and separate prompt. The 50-file archive passed 160 tests,
+eight notebooks, 50 cells, and 16 PNGs using the reused R6 environment. No new
+PDF, student release, transfer to GPT Pro, or reviewer response is claimed.
+
+The R6 Ubuntu student-guide walkthrough remains passed.
 A fresh in-project `.venv` installed unchanged pins, registered the named kernel
 with `--sys-prefix`, and passed 160 tests/eight notebooks/50 cells/16 PNGs.
 Actual JupyterLab UI execution covered all eight notebooks and all 16 figures;
@@ -179,13 +186,13 @@ these facts do not establish the invited-session dates.
 
 ## Recommended next actions
 
-1. **Prepare the provisional GPT Pro document-review handoff.** Build one
-   standalone runnable review ZIP from the current candidate, including separate
-   student/instructor Markdown inputs and concise evidence; verify extraction
-   and copy it to the Ubuntu desktop. Supply its exact review prompt separately.
-   Request review-draft status with open teaching/platform/pacing decisions;
-   do not call this a student release or final classroom edition. Preserve the
-   old archives/PDFs and apply the existing exclusions and file-transfer rules.
+1. **Send the prepared ZIP and separate prompt to GPT Pro.** The user transfers
+   the single desktop file and brings back the actual downloadable return ZIP
+   plus review report. No manual audit is needed. The assistant will verify
+   accessible PDF/Markdown bytes and delivered receipts, reproduce actionable
+   findings, and map packet-only navigation changes back to repository links.
+   Keep this a review-draft checkpoint, with teaching/platform/pacing choices
+   still provisional and no publication authorization inferred.
 2. **Resume R3 when actual native hosts become available.** Follow the prepared
    procedures with exact source identity, fresh environments, native architecture
    checks, full validator, and actual UI evidence. Windows x64 and each macOS
@@ -196,12 +203,11 @@ these facts do not establish the invited-session dates.
    authorized UI. Matching PDFs, final packaging, and publication remain later
    scoped work. Machine execution does not close those gates.
 
-**GPT Pro sync: not needed now.** The HHL/Shor technical checkpoint is closed;
-D1 and the optional O1/O2 changes have direct local evidence. Sync again for
-unresolved mathematics, an expanded scope, or the matching final PDF/teaching
-checkpoint when its concrete packet and prompt are ready. No new GPT Pro
-transfer occurred in this walkthrough. User input needed for the completed
-Linux check or provisional review-packet preparation: none. Actual native host access and instructor target decisions
+**GPT Pro sync: recommended now.** The concrete provisional document-review
+ZIP and exact separate prompt are ready and verified. This does not reopen a
+completed algorithm review or claim final classroom readiness. User action:
+upload that ZIP with the prompt to the existing planning conversation, then
+return the actual downloadable files and report. No code audit is requested. Actual native host access and instructor target decisions
 remain prerequisites for closing R3; agreed teaching scope and an observed
 presenter run-through are still needed to close R4. Share Rick's reply when
 received; no manual code audit is requested.
@@ -404,3 +410,28 @@ blocks, unchanged student-guide executable blocks, and pre-commit. All 114
 unchanged tracked files, ten prior Markdown evidence files, and 51 R5 evidence
 files retain their bytes. The completion receipt identifies the new local commit
 and clean candidate worktree; earlier checkout/index preservation is separate.
+
+## R6 document-review packet evidence, October 31
+
+The archive `PHYS3810-Document-Review-2026-10-31-c63381a8e6fb.zip` is 164550 bytes;
+its SHA-256 is `f0af2bfd8507a5c1c6aedc04d67bfacee86faf34d678a4e77e70fd42e853980c`.
+The desktop copy matches the sealed retained copy. All 36 canonical source/
+test/notebook/dependency/student-guide files retain exact committed bytes;
+13 guidance exports/generated entry points disclose their adaptations, and
+one manifest covers the other 49 files. No prompts, policy/chat files, old PDFs,
+archives, caches, environments, credentials, or generated outputs are included.
+
+Independent payload inspection passed, including 100 local file/fragment links
+and safe ZIP paths. The extracted archive passed dependency checks, the full
+160-test/eight-notebook validator with 50 cells/16 PNGs, and Bash smoke. Imports
+resolve inside the extracted copy; all 50 payload files and the sealed ZIP stayed
+unchanged. This reused the earlier walkthrough environment; it is not another
+fresh install or new UI execution. No source/contract repair was needed.
+
+Evidence is under `artifacts/r6-doc-review-2026-10-31/`. The included validation
+summary predates sealing and explicitly defers the final extracted-run receipt
+to the handoff record; no post-verification payload edits were made. The new
+handoff/status commit is distinct from the frozen source inside the ZIP.
+User upload, new review disposition, and returned PDF/Markdown bytes remain
+pending. Existing assets, environments, source staging, and prior indexes remain
+preserved. No publication, external message, or hardware job occurred.

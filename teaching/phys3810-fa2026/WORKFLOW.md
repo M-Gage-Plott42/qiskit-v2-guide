@@ -140,13 +140,22 @@ Task-local settings and manual browser opening are disclosed; the run does not
 validate another OS/editor, automatic browser opening, or a future download/ZIP.
 The guide commands required no repair and remain unchanged.
 
-Next prepare a provisional document-review handoff: one standalone runnable ZIP
-with the current student/instructor Markdown inputs and concise executed evidence,
-verified after extraction and copied to the desktop, plus the exact prompt in
-chat. Use the established exclusions and identify its source/manifest. This is
-a review transfer, not a student release or final classroom edition. No such
-bundle or transfer was created in the walkthrough task. Final PDFs still require
-the appropriate resolved inputs, review, and delivered-byte integration.
+The [provisional document-review handoff](R6_DOCUMENT_REVIEW_HANDOFF.md) is now
+prepared from frozen `c63381a`: one verified standalone desktop ZIP plus its
+separate chat prompt. It contains both audience-separated companions, exact
+runtime/test/notebook/dependency/student-guide bytes, and disclosed supporting
+Markdown adaptations. Extracted verification passed 160/eight/50/16 using the
+reused R6 environment. The user can transfer it to GPT Pro; no transfer or new
+review response is assumed to have occurred. This is not a student release or
+final classroom edition. Returned PDFs still require actual accessible bytes,
+render/visual/OCR receipts, and delivered-byte integration.
+
+For this return, use the ZIP manifest to distinguish source originals from
+bundle-only navigation/history adapters. Review changes against the exported
+inputs, then restore or map repository navigation when integrating companion
+edits. Do not blindly replace repository links with packet-only evidence paths.
+Never treat a screenshot/card/private-sandbox filename as returned-file access;
+report missing bytes and reconcile whatever actual report/files are accessible.
 
 Keep audience-specific content separate: the student guide contains setup/help,
 not model-review coordination or an instructor key. The current notebooks still

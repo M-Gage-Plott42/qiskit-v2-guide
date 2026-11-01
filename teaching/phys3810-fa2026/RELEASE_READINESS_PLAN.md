@@ -17,7 +17,9 @@ accepted commits preserved; see [R5_CANDIDATE_VALIDATION.md](R5_CANDIDATE_VALIDA
 Continue in the new candidate worktree named there. R6's provisional
 [Markdown document inputs](R6_DOCUMENT_INPUTS.md) are prepared, and the
 [literal Ubuntu walkthrough](R6_GUIDE_WALKTHROUGH_VALIDATION.md) has passed.
-Final PDF delivery/review remains open.
+The [document-review handoff](R6_DOCUMENT_REVIEW_HANDOFF.md) is now verified
+and ready on the desktop. User transfer, received review, and final PDF
+delivery/review remain open.
 
 The original October 30 planning turn executed no readiness gate. The later R1
 task performed internal source export, fresh dependency installation, and
@@ -363,11 +365,11 @@ recorded fresh-install execution, not by prose changes. Later documentation
 checks cover Markdown, relative links, Git scope, and preserved bytes; they
 do not substitute for executing another gate.
 
-**Recommended next task:** prepare the provisional GPT Pro document-review
-packet and exact separate prompt from the current candidate and completed Linux
-walkthrough evidence. Verify the standalone runnable review ZIP after extraction
-and copy it to the Ubuntu desktop using existing exclusions. Keep the intended
-PDFs clearly labeled review drafts while Rick's decisions, R3, native editor UI,
-and human pacing remain open. Do not present the handoff as a student release.
-**GPT Pro sync: not needed during this completed walkthrough turn.** The next
-task prepares concrete transferable evidence before requesting the sync.
+**Recommended next task:** transfer the verified desktop review ZIP and separate
+prompt to GPT Pro, then reconcile the actual returned report/ZIP/PDF/Markdown
+bytes locally. Use [the receipt](R6_DOCUMENT_REVIEW_HANDOFF.md) to identify the
+reviewed source and map bundle-only navigation adaptations back to repository
+companions. Keep the requested PDFs clearly labeled review drafts while Rick's
+decisions, R3, native editor UI, and human pacing remain open. No publication or
+student-release approval is inferred. **GPT Pro sync: recommended now** because
+the concrete packet, extracted checks, desktop copy, and exact prompt are ready.
