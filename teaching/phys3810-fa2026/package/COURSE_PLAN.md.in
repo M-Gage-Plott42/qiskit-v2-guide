@@ -1,0 +1,44 @@
+# PHYS 3810 preview lesson index
+
+All five bounded lessons are included. Their availability does not establish
+classroom coverage, dates, assessment, delivery responsibility, or required
+platforms. The proposed route is three sessions with 50-minute cores and
+optional 75-minute expansions; it has not had a human pacing rehearsal.
+
+## Prepare and open the lessons
+
+Use [setup](SETUP.md), then run the root validator before opening the lessons
+with the intended Python kernel. Start each notebook from the top. All required
+code cells execute during validation even when class discussion uses a subset.
+
+- [Preflight](notebooks/00_setup_preflight.ipynb): versions, a small circuit,
+  sampling, and plotting.
+- [Grover](notebooks/01_grover.ipynb): phase oracles and amplitude amplification.
+  Proposed core: 5 minutes readiness, 10 oracle, 10 diffusion, 20 search and
+  sampling, 5 debrief. Expansion adds 15 marked-set and 10 overshooting minutes.
+- [QFT](notebooks/02_qft.ipynb) and [QPE](notebooks/03_qpe.ipynb): phase patterns
+  and phase estimation. Proposed core: 5 minutes phase/bit order, 15 QFT,
+  10 controlled powers, 15 exact phases, 5 decoding. Expansion adds 15 nonexact
+  distribution and 10 precision minutes.
+- [HHL](notebooks/04_hhl.ipynb) and [compiled Shor](notebooks/05_shor.ipynb):
+  restricted applications and resource limits. Proposed core: 5 minutes QPE
+  refresher, 20 HHL, 20 Shor, 5 limitations. Expansion adds 15 HHL and 10 Shor
+  minutes. The core traces prepared examples, not general algorithm construction.
+
+The two root [statevector](../../notebooks/00_local_statevector_smoke.ipynb) and
+[Aer](../../notebooks/01_local_aer_smoke.ipynb) smoke notebooks are also required
+by validation; they are setup checks, not additional algorithm lessons.
+
+## Technical references and limits
+
+The [Grover](GROVER_PLAN.md), [QFT](QFT_PLAN.md), [QPE](QPE_PLAN.md),
+[HHL](HHL_PLAN.md), and [Shor](SHOR_PLAN.md) references define supported inputs,
+bit/register conventions, mathematical acceptance, and costs. They retain
+worked expectations, as do the notebooks and tests. This preview does not
+provide a concealed-answer assessment.
+
+Separate instructor guides and presenter answer documents are not included.
+Follow eventual instructor directions about solutions and submitted work.
+See [validation and platform limits](../../VALIDATION.md) for the current
+160-test/eight-notebook inventory and the distinction between code execution
+and classroom readiness.

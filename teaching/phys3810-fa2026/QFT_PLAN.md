@@ -1,9 +1,11 @@
 # QFT milestone: exact transform contract
 
-The next local module follows the reviewed Grover lesson. This contract is the
-QFT portion of the planned QFT/QPE session; QPE remains a separate subsequent
-implementation. A combined phase-convention review is due after both are tested,
-before HHL/Shor work.
+Implemented and locally validated; see [combined phase validation](QPE_VALIDATION.md).
+This contract is the QFT portion of the QFT/QPE session. The
+[QPE milestone](QPE_PLAN.md) is now locally validated as well. A combined
+phase-convention review is accepted; see
+[the reconciliation](QFT_QPE_REVIEW_RECONCILIATION.md). The later bounded
+HHL/Shor applications are also implemented and independently accepted.
 
 ## Supported API and conventions
 
@@ -48,12 +50,13 @@ Reference comparison uses current `QFTGate`, never the deprecated `QFT` class.
 
 The notebook covers the first **20 minutes of session 2**: a 5-minute phase/bit
 refresher followed by 15 minutes connecting QFT circuits with the Fourier matrix.
-QPE will complete the planned 50-minute core and 75-minute expansion. Extra QFT
+QPE completes the planned 50-minute core and 75-minute expansion. Extra QFT
 matrix exercises are follow-up practice, not uncounted scheduled minutes.
 
 The implementation uses explicit H, controlled-phase, and optional SWAP gates.
 Its circuit has quadratic controlled-phase gate count, while this small full
 matrix validation grows exponentially. Arbitrary data loading and full amplitude
 readout are not free; these examples do not demonstrate a general classical-FFT
-speedup or quantum advantage. The next substantive GPT Pro checkpoint remains
-after QFT/QPE, before HHL/Shor.
+speedup or quantum advantage. The combined QFT/QPE review is accepted;
+the later HHL/Shor checkpoint is recorded in
+[its reconciliation](HHL_SHOR_REVIEW_RECONCILIATION.md).

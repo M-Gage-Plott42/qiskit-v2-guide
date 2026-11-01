@@ -1,0 +1,79 @@
+# PHYS 3810: provisional full-course preview {{CODE_VERSION}}
+
+**Public prerelease; classroom decisions remain provisional.** This package
+contains setup and five bounded quantum-algorithm lessons. It is not final
+classroom approval. Session coverage, assessment, delivery arrangements,
+required platforms, and human pacing remain to be confirmed.
+
+Source commit: `{{SOURCE_COMMIT}}`.
+Release tag: `{{RELEASE_TAG}}`.
+Archive: `{{ASSET_NAME}}`.
+
+## Start here
+
+1. Download the [complete course ZIP]({{DOWNLOAD_URL}}) and extract its
+   `phys3810-fa2026` folder. The link is activated by this prerelease's publication.
+2. Follow the [current student setup instructions](teaching/phys3810-fa2026/SETUP.md).
+3. Use 64-bit CPython 3.12 and the supplied pinned requirements/constraints.
+4. Run `python scripts/validate_classroom.py` from the extracted course root.
+5. Open [preflight](teaching/phys3810-fa2026/notebooks/00_setup_preflight.ipynb),
+   then use the [lesson index](teaching/phys3810-fa2026/COURSE_PLAN.md).
+
+The required inventory is **160 tests, eight notebooks, 50 nonempty code cells,
+and 16 PNG figures**. All required cells, including expansion/reference cells,
+must execute without errors. See [validation and limits](VALIDATION.md) for
+what the checks establish. The builder does not execute the runtime checks;
+the release's extraction evidence records whether this particular ZIP passed.
+
+Installation needs internet access. Default execution afterward is local and
+credential-free; no Git installation, IBM account, GPU, or quantum hardware
+is needed. Do not mix packages from another Python environment or update the
+supplied pins during a lesson.
+
+## Reviewed documents and current availability
+
+Start with the [current setup page](teaching/phys3810-fa2026/SETUP.md).
+The included [student PDF](teaching/phys3810-fa2026/handouts/PHYS3810_Full_Course_Student_Setup_v0.1_REVIEW_DRAFT.pdf)
+and [original Markdown companion](teaching/phys3810-fa2026/handouts/FULL_COURSE_SETUP_DRAFT.md)
+remain exact **document v0.1 prepublication review drafts** for reference.
+Their statement that the full-course download is unpublished describes the
+review-time state and is outdated after this prerelease. This README and
+current setup page govern availability. The PDF has not been revised or
+reissued; see the [publication notice](teaching/phys3810-fa2026/handouts/PUBLICATION_NOTICE.md).
+
+This code prerelease is distinct from the unchanged Grover-only code rc1 and
+its document-v0.2 guides. The student PDF is included inside this ZIP; it is
+not offered as a separately updated PDF release asset.
+
+## Scope and remaining decisions
+
+The lessons cover Grover on 2–5 qubits; exact QFT on 1–6 qubits; QPE with 1–6
+counting qubits and one/two targets; exact-spectrum positive-Hermitian 2x2 HHL;
+and a compiled full-domain N=15 Shor example with four residue qubits. These
+are small instructional examples, without claims of general scalability or
+quantum advantage.
+
+Only the documented Ubuntu/Linux path has execution evidence. Native Windows
+x64, macOS ARM64/Intel, native editor UI, and human classroom pacing remain
+untested. Windows ARM64 and 32-bit Python are outside the stated target.
+Teaching, platform, delivery, and assessment decisions remain pending.
+
+Instructor guides, instructor PDFs, and presenter answer sheets are excluded.
+The notebooks, mathematical contracts, and tests still contain worked results
+and expected answers. This is **not an answer-free assessment package**; follow
+the instructor's eventual collaboration, solution, and submission directions.
+
+## File identity
+
+[MANIFEST.json](MANIFEST.json) records the source revision, both builder hashes,
+file hashes, modes, expected validation counts, and disclosed document adaptations.
+Runtime source, tests, eight notebooks, dependencies, license, lint configuration,
+and both reviewed student-guide files retain exact committed bytes. Technical
+contracts retain their mathematical/API/acceptance bodies; repository status
+and history framing is omitted. Current setup preserves all six reviewed
+fenced blocks and all instructions after the introductory availability paragraph.
+
+There are 47 payload files plus the manifest. Environments, credentials, Git
+metadata, generated execution outputs, prompts, policy/chat records, old
+archives, and instructor answer documents are excluded. The manifest excludes
+itself; the separate release checksum identifies the complete ZIP.

@@ -1,0 +1,530 @@
+{
+  "schema": "phys3810.document-review-receipt.v1",
+  "purpose": "Provisional document/PDF review; not a student release or final classroom approval",
+  "document_edition": "v0.1 REVIEW DRAFT",
+  "proposed_code_version": "v0.2.0-rc1",
+  "reviewed_source_commit": "c63381a8e6fbe900103b9d2053fe978310798e9a",
+  "input_archive": {
+    "filename": "PHYS3810-Document-Review-2026-10-31-c63381a8e6fb.zip",
+    "size_bytes": 164550,
+    "sha256": "f0af2bfd8507a5c1c6aedc04d67bfacee86faf34d678a4e77e70fd42e853980c",
+    "manifest_payload_files_verified": 49,
+    "original_archive_members_verified_unchanged": 50,
+    "manifest_sha256": "33cac3de0b22632ce838152e8aebf4436e5e7cbda2f458a348629f0899de5c35"
+  },
+  "disposition": "Suitable for provisional instructor/Rick review after the document-only corrections delivered here; no remaining must-fix document finding. No classroom approval or release readiness implied.",
+  "source_preservation": {
+    "original_extracted_payload_unchanged": true,
+    "runtime_source_tests_notebooks_pins_contracts_changed": false,
+    "existing_grover_editions_assets_changed": false,
+    "github_changed": false,
+    "published": false,
+    "external_messages_sent": false,
+    "hardware_jobs_submitted": false
+  },
+  "companion_base_records": [
+    {
+      "relative_path": "teaching/phys3810-fa2026/handouts/FULL_COURSE_SETUP_DRAFT.md",
+      "base_export_size_bytes": 10200,
+      "base_export_sha256": "64b1dea4493ea8aef66acbba9456391d43e4660027fbea098d76cc2cdb16f70b",
+      "source_manifest_kind": "exact committed bytes",
+      "original_committed_sha256_as_recorded": "64b1dea4493ea8aef66acbba9456391d43e4660027fbea098d76cc2cdb16f70b"
+    },
+    {
+      "relative_path": "teaching/phys3810-fa2026/instructor/FULL_COURSE_INSTRUCTOR_DRAFT.md",
+      "base_export_size_bytes": 20098,
+      "base_export_sha256": "cfe2df9646b3cb011295a5216b26cc287d461a834558425f543efa969cd9e7e3",
+      "source_manifest_kind": "navigation links only; teaching text unchanged",
+      "original_committed_sha256_as_recorded": "51c86e4bbd3069af6548d6b1e33dd4fc0254c255bee3244c9b69c51fc323be8d"
+    }
+  ],
+  "document_changes": {
+    "student": [
+      "Condensed opening and setup prose while retaining recorded platform limits and unpublished status.",
+      "Preserved all six tested fenced blocks byte-for-byte; 99-character registration command is a single PDF line.",
+      "Converted notebook inventory to tables, with full-course-relative paths rather than broken document-only-package links.",
+      "Retained interpreter/kernel, shutdown/reopen, moved-environment and troubleshooting guidance.",
+      "Added brief worked-answer disclosure and three verified official tool-reference links.",
+      "Added REVIEW DRAFT labels and page-break layout markers; no author/byline or new source date supplied."
+    ],
+    "instructor": [
+      "Removed historical-baseline and document-transfer/maintainer coordination from teaching pages.",
+      "Removed incoming-state claim that PDF rendering/visual/OCR checks had not occurred.",
+      "Corrected misleading Native procedures link claim; native-platform procedures are not included or implied.",
+      "Summarized recorded R6 installation/UI and reused validation evidence, preserving its limits and distinction from this independent run.",
+      "Reflowed proposed routes, notebook inventory and answer cues into tables.",
+      "Preserved bounded contracts, resource limits, worked-answer disclosure and pending Rick decisions.",
+      "Made exact diffusion and controlled-global-phase cues explicit; added two verified official IBM reference links."
+    ],
+    "patch": "DOCUMENT_COMPANIONS.patch is a unified patch against the supplied exported Markdown paths and bytes, not directly against the differently linked canonical instructor file.",
+    "patch_check": {
+      "command": "git apply --check DOCUMENT_COMPANIONS.patch",
+      "working_directory_basis": "Unchanged extracted input bundle root; actual patch path was absolute.",
+      "exit_code": 0
+    }
+  },
+  "student_command_blocks": {
+    "count": 6,
+    "unchanged_from_input": true,
+    "combined_contents_sha256": "b9c1b1a4f82aee389cd7ef1010bdd5e9de67a90883fa3035fc82174ba0e63d4a",
+    "hash_method": "SHA256 of UTF-8 '\\n'.join(re.findall(r'```[^\\n]*\\n(.*?)```', markdown, re.S))",
+    "longest_line_characters": 99,
+    "pdf_line_wrap": "All fenced command/output lines retain one extracted line each; none clipped or split."
+  },
+  "executed_runtime_validation": {
+    "reviewed_source_commit": "c63381a8e6fbe900103b9d2053fe978310798e9a",
+    "archive_name": "PHYS3810-Document-Review-2026-10-31-c63381a8e6fb.zip",
+    "archive_bytes": 164550,
+    "archive_sha256": "f0af2bfd8507a5c1c6aedc04d67bfacee86faf34d678a4e77e70fd42e853980c",
+    "manifest_payload_files": 49,
+    "manifest_before_execution": "49/49 sizes and SHA-256 matched",
+    "manifest_after_execution": "49/49 sizes and SHA-256 matched",
+    "all_archive_files_after_execution": "50/50 extracted files exactly equal original archive bytes, including manifest",
+    "environment": {
+      "installation": "fresh isolated application virtual environment created for this review on existing host/interpreter; no fresh OS or CPython installation",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+      "interpreter": "/tmp/phys3810-document-review-venv/bin/python",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+      "os_release": "Ubuntu 24.04.3 LTS",
+      "packages": {
+        "pip": "26.2.2",
+        "qiskit": "2.6.1",
+        "qiskit-aer": "0.17.2",
+        "jupyterlab": "4.6.4",
+        "ipykernel": "7.4.0",
+        "nbconvert": "7.17.2",
+        "nbclient": "0.11.0",
+        "nbformat": "5.10.4",
+        "numpy": "2.5.4",
+        "scipy": "1.18.1",
+        "matplotlib": "3.11.2"
+      },
+      "distribution_count": 115,
+      "installed_application_constraint_check": "114 installed application distributions match active supplied constraints, plus pip 26.2.2",
+      "bootstrap_python_resolution": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python"
+    },
+    "commands": [
+      "python -m venv /tmp/phys3810-document-review-venv",
+      "/tmp/phys3810-document-review-venv/bin/python -m pip install --upgrade pip==26.2.2",
+      "/tmp/phys3810-document-review-venv/bin/python -m pip install -r requirements.txt",
+      "env OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=2 PYTHONDONTWRITEBYTECODE=1 /tmp/phys3810-document-review-venv/bin/python scripts/validate_classroom.py"
+    ],
+    "working_directory": "/workspace/scratch/0a95cf962489/review_documents_c63381a8e6fb/phys3810-fa2026",
+    "validator_exit_code": 0,
+    "unit_tests": 160,
+    "unit_test_seconds": 32.866,
+    "notebooks": [
+      {
+        "name": "00_local_statevector_smoke.ipynb",
+        "nonempty_code_cells": 3,
+        "png_outputs": 0,
+        "all_required_cells_executed": true,
+        "errors": 0,
+        "kernel_python_version": "3.12.14"
+      },
+      {
+        "name": "00_setup_preflight.ipynb",
+        "nonempty_code_cells": 4,
+        "png_outputs": 2,
+        "all_required_cells_executed": true,
+        "errors": 0,
+        "kernel_python_version": "3.12.14"
+      },
+      {
+        "name": "01_grover.ipynb",
+        "nonempty_code_cells": 9,
+        "png_outputs": 3,
+        "all_required_cells_executed": true,
+        "errors": 0,
+        "kernel_python_version": "3.12.14"
+      },
+      {
+        "name": "01_local_aer_smoke.ipynb",
+        "nonempty_code_cells": 4,
+        "png_outputs": 0,
+        "all_required_cells_executed": true,
+        "errors": 0,
+        "kernel_python_version": "3.12.14"
+      },
+      {
+        "name": "02_qft.ipynb",
+        "nonempty_code_cells": 7,
+        "png_outputs": 2,
+        "all_required_cells_executed": true,
+        "errors": 0,
+        "kernel_python_version": "3.12.14"
+      },
+      {
+        "name": "03_qpe.ipynb",
+        "nonempty_code_cells": 8,
+        "png_outputs": 3,
+        "all_required_cells_executed": true,
+        "errors": 0,
+        "kernel_python_version": "3.12.14"
+      },
+      {
+        "name": "04_hhl.ipynb",
+        "nonempty_code_cells": 7,
+        "png_outputs": 3,
+        "all_required_cells_executed": true,
+        "errors": 0,
+        "kernel_python_version": "3.12.14"
+      },
+      {
+        "name": "05_shor.ipynb",
+        "nonempty_code_cells": 8,
+        "png_outputs": 3,
+        "all_required_cells_executed": true,
+        "errors": 0,
+        "kernel_python_version": "3.12.14"
+      }
+    ],
+    "nonempty_code_cells": 50,
+    "png_outputs": 16,
+    "source_changes": false,
+    "generated_outputs": "artifacts/executed-classroom only; logs outside extracted payload",
+    "not_executed": [
+      "Native Windows",
+      "Native macOS",
+      "Any editor or browser UI",
+      "New OS/CPython installation",
+      "IBM Runtime or hardware",
+      "GPU",
+      "Remote CI",
+      "Human pacing"
+    ],
+    "logs": {
+      "runtime_pip_install.log": {
+        "bytes": 501,
+        "sha256": "327602b0511410f235793f588ad92f5acb7a2648e93a367431e3873cfe790269"
+      },
+      "runtime_requirements_install.log": {
+        "bytes": 34817,
+        "sha256": "be85558a8d132f65e424b13d3485806294f16e584f4b8bb441589b65ecd19af8"
+      },
+      "runtime_validator.log": {
+        "bytes": 24640,
+        "sha256": "4d52c3f9ca720b34e0cce58980379d2fa88809f3afc86f7e9b23e7ecef5891b6"
+      }
+    },
+    "logs_delivery": "Logs were retained for review, not included as deliverables; hashes identify the actual executed work logs."
+  },
+  "supplied_evidence_distinction": {
+    "codex_sealed_archive": "Reported reused Ubuntu CPython 3.12.15 environment, 160 tests, eight fresh-kernel notebooks, 50 code cells, 16 PNGs; not relabeled as this review execution.",
+    "historical_ui": "R6 records actual Ubuntu/JupyterLab UI in a fresh in-project application environment with isolated settings and a manually opened URL. This review did not repeat UI checks.",
+    "human_pacing": "Untested; 50/75-minute routes remain proposals.",
+    "ricks_reply": "Pending.",
+    "full_course_student_download": "Unpublished."
+  },
+  "document_qa": {
+    "rendering": "All final PDF pages rendered using pdftoppm at 150 dpi for visual inspection and 300 dpi for OCR.",
+    "ocr": "Tesseract English, --psm 3; every page checked. OCR is corroboration, not proof of equation correctness.",
+    "ocr_difference_resolution": "Observed recognition differences concern rc1/rcl1, v0, multiplication notation/digit joining, and a small number of word joins; corresponding rendered pages and extracted source-matching text were checked.",
+    "equations": "Mathematical cues statically compared with supplied contracts/run sheets; exact PDF visible text matches Markdown after markup/whitespace normalization. The supplied unchanged runtime suite was separately executed.",
+    "fonts": "All fonts used for visible text are embedded DejaVu fonts with Unicode maps; an unused Helvetica resource may be present.",
+    "metadata": "No author was supplied: Author is empty; CreationDate and ModDate are absent. No institutional endorsement inserted.",
+    "links": "Five official HTTPS PDF annotations exactly match their Markdown destinations; no unpublished download link, file URI, or missing local target was invented. Reader click behavior was not tested.",
+    "tool_versions": {
+      "reportlab": "4.4.9",
+      "pypdf": "6.10.0",
+      "pdfplumber": "0.11.9"
+    },
+    "pdfs": [
+      {
+        "relative_path": "teaching/phys3810-fa2026/handouts/PHYS3810_Full_Course_Student_Setup_v0.1_REVIEW_DRAFT.pdf",
+        "all_pages_visually_inspected": true,
+        "markdown_text_equality_after_markup_and_whitespace_normalization": true,
+        "student_command_lines_match_exactly": true,
+        "no_replacement_characters": true,
+        "text_bounds_check": "passed",
+        "pages": [
+          {
+            "page": 1,
+            "normalized_token_recall_percent": 99.272,
+            "ocr_text_sha256": "e1559a451ef5126b22d0784f1738bd1341c8070a0f984611d3ddc6c8c48b113b",
+            "visual_render_sha256": "ca0a584410bb6df1da79242222a9e6bb1fb2ecbf2d27b3f68c785226f4fc100f",
+            "ocr_render_sha256": "de25425eec4c08733da8cd560d4fe31a1bfae3de8525ed8cd21f2de9c45a2ec5",
+            "visual_inspection": "performed; no content clipping, table splitting, code-block wrapping, or missing mathematical symbols observed"
+          },
+          {
+            "page": 2,
+            "normalized_token_recall_percent": 99.73,
+            "ocr_text_sha256": "12e2df1a81723eb48ab356fafafd0da8a8b39a03993cbebd420de59d2e575e1f",
+            "visual_render_sha256": "24fa67adc2124fcd36ffd9eb7d5efc54ccc42c0a8b98b4fdc8b9520b037b1073",
+            "ocr_render_sha256": "9888dc40f8ccdb9771b1d4d366fff20c8a9359edb0af3b2b59a2b22c71d866a4",
+            "visual_inspection": "performed; no content clipping, table splitting, code-block wrapping, or missing mathematical symbols observed"
+          },
+          {
+            "page": 3,
+            "normalized_token_recall_percent": 98.993,
+            "ocr_text_sha256": "4830f6203e802cc597989702794f9545ff6153c86626771d28c8575d97fa99d0",
+            "visual_render_sha256": "f5b0e25347edbbaedc69ed9c12e96ba4061bf2dd8a287e44e9c07544f5e4bc84",
+            "ocr_render_sha256": "1735073c12a7a2114ec9af20fa3bba863a3935bdb2c1da1f92645836351a609d",
+            "visual_inspection": "performed; no content clipping, table splitting, code-block wrapping, or missing mathematical symbols observed"
+          },
+          {
+            "page": 4,
+            "normalized_token_recall_percent": 99.733,
+            "ocr_text_sha256": "d82e6721cfed7a2612d26dadf63c54b220e2d4533d649d2eaa408a6643dc8a8e",
+            "visual_render_sha256": "88feede8c281fefcaef3c2049a2062ab687909707ffa9f7a4466b53752a615c3",
+            "ocr_render_sha256": "ca6789b6f34012d77983ffd0e48595111b3f1c22b711c9cfcfe82479afd0c231",
+            "visual_inspection": "performed; no content clipping, table splitting, code-block wrapping, or missing mathematical symbols observed"
+          }
+        ]
+      },
+      {
+        "relative_path": "teaching/phys3810-fa2026/instructor/PHYS3810_Full_Course_Instructor_Guide_v0.1_REVIEW_DRAFT.pdf",
+        "all_pages_visually_inspected": true,
+        "markdown_text_equality_after_markup_and_whitespace_normalization": true,
+        "student_command_lines_match_exactly": null,
+        "no_replacement_characters": true,
+        "text_bounds_check": "passed",
+        "pages": [
+          {
+            "page": 1,
+            "normalized_token_recall_percent": 99.261,
+            "ocr_text_sha256": "33ecb81e00dc6d09ddab2d58171ff2459f5998f1e5cae49a0ae97581c7f240b5",
+            "visual_render_sha256": "7b2bd2dc8e8cc57aba44f6c06dbdca4808bbb2bdb5e838320d713ab237e9677f",
+            "ocr_render_sha256": "0cbbdc25426cfe28ddd835ca7c6bfd4c946ba2fc28c97f787dab6520b3652b8c",
+            "visual_inspection": "performed; no content clipping, table splitting, code-block wrapping, or missing mathematical symbols observed"
+          },
+          {
+            "page": 2,
+            "normalized_token_recall_percent": 99.252,
+            "ocr_text_sha256": "f517cf0586317728897c9ba39214423d00edd6c7aa945c5474227928f1edd9ee",
+            "visual_render_sha256": "cf32f74e8c0512508b400698f50ec2cbe15c8a6197c5539227ecc6fb84e4dcd8",
+            "ocr_render_sha256": "3726f990aa0b2fbaa9333575d52edfba6ee6b147bb80c7b9ac30fea4db61f58a",
+            "visual_inspection": "performed; no content clipping, table splitting, code-block wrapping, or missing mathematical symbols observed"
+          },
+          {
+            "page": 3,
+            "normalized_token_recall_percent": 99.038,
+            "ocr_text_sha256": "8056bee1d4aea8b64fe445b7cebf313feed244391e56b4bcad0b12040d8a402b",
+            "visual_render_sha256": "a1528ad67200287a24e910f777159f467b1da5dfc5654ac3180b260e50545e26",
+            "ocr_render_sha256": "2bf3bd584c33241c28c2c95a02c015355db1bc14bf29698bc903ce03a8a726ce",
+            "visual_inspection": "performed; no content clipping, table splitting, code-block wrapping, or missing mathematical symbols observed"
+          },
+          {
+            "page": 4,
+            "normalized_token_recall_percent": 98.826,
+            "ocr_text_sha256": "ddbd561f8e4d09c2bd89fca679cf492ebdd0ddccacef402ea9b6f92c8a5d9c6e",
+            "visual_render_sha256": "aefb5cef331551b0c4d8ba1533c739c43ada864c8c4ecd2ffd9fc2bc400fecad",
+            "ocr_render_sha256": "2e6220ee424e3030f1c89dfd032d5422019510de4656fd64c7a702c9be6dded7",
+            "visual_inspection": "performed; no content clipping, table splitting, code-block wrapping, or missing mathematical symbols observed"
+          },
+          {
+            "page": 5,
+            "normalized_token_recall_percent": 99.268,
+            "ocr_text_sha256": "656141e675abfd12bb0b17dab130c4e2c462a73b99eb1bbfc0fce1005e1c1bc1",
+            "visual_render_sha256": "8c2c0a575aa44438acf8e0e50a7a50f38407f7d1e766994c8572778c6eb296f2",
+            "ocr_render_sha256": "d7498491496a4bee00f34255b7e9662d480c70f62038bae8671a44bd86fcfa46",
+            "visual_inspection": "performed; no content clipping, table splitting, code-block wrapping, or missing mathematical symbols observed"
+          },
+          {
+            "page": 6,
+            "normalized_token_recall_percent": 99.299,
+            "ocr_text_sha256": "e79ed054a8077acc4ccf4a7c110f6073334cbaa5cf3b49ea5f6cf3db185771f8",
+            "visual_render_sha256": "cfd4babe4be488ae824acd6f6f9faeaaa85853575cae345969ff34d18f725265",
+            "ocr_render_sha256": "1bbad44244255f57c185b70cd509d0fadf97f6e97e8fc0fff6ff1a975d392548",
+            "visual_inspection": "performed; no content clipping, table splitting, code-block wrapping, or missing mathematical symbols observed"
+          }
+        ]
+      }
+    ]
+  },
+  "web_references": [
+    {
+      "url": "https://docs.python.org/3.12/library/venv.html",
+      "use": "Virtual-environment isolation and recreation after moving."
+    },
+    {
+      "url": "https://ipython.readthedocs.io/en/stable/install/kernel_install.html",
+      "use": "Kernel registration and environment/display-name distinctions."
+    },
+    {
+      "url": "https://jupyterlab.readthedocs.io/en/stable/getting_started/starting.html",
+      "use": "Local JupyterLab server URL."
+    },
+    {
+      "url": "https://quantum.cloud.ibm.com/docs/en/guides/bit-ordering",
+      "use": "Rightmost bit/qubit zero and integer conventions."
+    },
+    {
+      "url": "https://quantum.cloud.ibm.com/learning/en/courses/fundamentals-of-quantum-algorithms/phase-estimation-and-factoring/phase-estimation-procedure",
+      "use": "Controlled-unitary phase estimation background."
+    }
+  ],
+  "files": [
+    {
+      "relative_path": "DOCUMENT_COMPANIONS.patch",
+      "size_bytes": 55180,
+      "sha256": "ff58dd700c787aab98c8bbae337d526ef66b596d1b43f4cc99cb4a0c559ae932",
+      "media_type": "text/x-diff; charset=utf-8"
+    },
+    {
+      "relative_path": "teaching/phys3810-fa2026/handouts/FULL_COURSE_SETUP_DRAFT.md",
+      "size_bytes": 9484,
+      "sha256": "bd7bd8c499b432307e1845af9ef806a8edf79fa52a28b93977408ee738e33875",
+      "media_type": "text/markdown; charset=utf-8",
+      "visible_text_synchronized_with_pdf": true
+    },
+    {
+      "relative_path": "teaching/phys3810-fa2026/handouts/PHYS3810_Full_Course_Student_Setup_v0.1_REVIEW_DRAFT.pdf",
+      "size_bytes": 73883,
+      "sha256": "e6a950111470dbaa1d20781f4eb17391e73b7ca247e0a4ec54c879b922ea1053",
+      "media_type": "application/pdf",
+      "page_count": 4,
+      "page_size_points": [
+        612,
+        792
+      ],
+      "metadata": {
+        "Title": "PHYS 3810 Full-Course Student Setup - v0.1 REVIEW DRAFT",
+        "Author": "",
+        "Subject": "Provisional PHYS 3810 document review; proposed code v0.2.0-rc1; not final classroom approval",
+        "Creator": "ReportLab",
+        "Producer": "ReportLab / pypdf"
+      },
+      "link_inventory": [
+        {
+          "page": 4,
+          "annotation_type": "URI",
+          "destination": "https://docs.python.org/3.12/library/venv.html",
+          "rectangle_points": [
+            66.71406,
+            165.38,
+            227.5656,
+            176.9
+          ],
+          "destination_validation": "Opened successfully through web research; official documentation. No viewer-click or native-platform behavior implied."
+        },
+        {
+          "page": 4,
+          "annotation_type": "URI",
+          "destination": "https://ipython.readthedocs.io/en/stable/install/kernel_install.html",
+          "rectangle_points": [
+            66.71406,
+            147.18,
+            194.5938,
+            158.7
+          ],
+          "destination_validation": "Opened successfully through web research; official documentation. No viewer-click or native-platform behavior implied."
+        },
+        {
+          "page": 4,
+          "annotation_type": "URI",
+          "destination": "https://jupyterlab.readthedocs.io/en/stable/getting_started/starting.html",
+          "rectangle_points": [
+            66.71406,
+            128.98,
+            159.6953,
+            140.5
+          ],
+          "destination_validation": "Opened successfully through web research; official documentation. No viewer-click or native-platform behavior implied."
+        }
+      ],
+      "font_inventory": {
+        "/Helvetica": {
+          "embedded": false,
+          "has_unicode_map": false,
+          "used_for_visible_text": false
+        },
+        "/AAAAAA+DejaVuSans-Bold": {
+          "embedded": true,
+          "has_unicode_map": true,
+          "used_for_visible_text": true
+        },
+        "/AAAAAA+DejaVuSans": {
+          "embedded": true,
+          "has_unicode_map": true,
+          "used_for_visible_text": true
+        },
+        "/AAAAAA+DejaVuSansMono": {
+          "embedded": true,
+          "has_unicode_map": true,
+          "used_for_visible_text": true
+        }
+      }
+    },
+    {
+      "relative_path": "teaching/phys3810-fa2026/instructor/FULL_COURSE_INSTRUCTOR_DRAFT.md",
+      "size_bytes": 15655,
+      "sha256": "1a2b41822632bc3335464419a97a4df143b4a2e1c57ab036717e1e70fa67d657",
+      "media_type": "text/markdown; charset=utf-8",
+      "visible_text_synchronized_with_pdf": true
+    },
+    {
+      "relative_path": "teaching/phys3810-fa2026/instructor/PHYS3810_Full_Course_Instructor_Guide_v0.1_REVIEW_DRAFT.pdf",
+      "size_bytes": 80911,
+      "sha256": "204d8cc180776cc4c4d7de024d457ec8198db62bbb38672791e0e3bc88696d71",
+      "media_type": "application/pdf",
+      "page_count": 6,
+      "page_size_points": [
+        612,
+        792
+      ],
+      "metadata": {
+        "Title": "PHYS 3810 Full-Course Instructor Guide - v0.1 REVIEW DRAFT",
+        "Author": "",
+        "Subject": "Provisional PHYS 3810 document review; proposed code v0.2.0-rc1; not final classroom approval",
+        "Creator": "ReportLab",
+        "Producer": "ReportLab / pypdf"
+      },
+      "link_inventory": [
+        {
+          "page": 3,
+          "annotation_type": "URI",
+          "destination": "https://quantum.cloud.ibm.com/docs/en/guides/bit-ordering",
+          "rectangle_points": [
+            188.1246,
+            657.36,
+            304.212,
+            669.0
+          ],
+          "destination_validation": "Opened successfully through web research; official documentation. No viewer-click or native-platform behavior implied."
+        },
+        {
+          "page": 4,
+          "annotation_type": "URI",
+          "destination": "https://quantum.cloud.ibm.com/learning/en/courses/fundamentals-of-quantum-algorithms/phase-estimation-and-factoring/phase-estimation-procedure",
+          "rectangle_points": [
+            156.8459,
+            111.46,
+            322.5227,
+            123.1
+          ],
+          "destination_validation": "Opened successfully through web research; official documentation. No viewer-click or native-platform behavior implied."
+        }
+      ],
+      "font_inventory": {
+        "/Helvetica": {
+          "embedded": false,
+          "has_unicode_map": false,
+          "used_for_visible_text": false
+        },
+        "/AAAAAA+DejaVuSans-Bold": {
+          "embedded": true,
+          "has_unicode_map": true,
+          "used_for_visible_text": true
+        },
+        "/AAAAAA+DejaVuSans": {
+          "embedded": true,
+          "has_unicode_map": true,
+          "used_for_visible_text": true
+        },
+        "/AAAAAA+DejaVuSansMono": {
+          "embedded": true,
+          "has_unicode_map": true,
+          "used_for_visible_text": true
+        }
+      }
+    }
+  ],
+  "receipt_self_hash": "Excluded: hashing the enclosing return ZIP externally identifies this receipt without a self-reference.",
+  "hash_scope": "Exact complete bytes of the named decompressed members inside the downloadable return ZIP. These hashes do not describe a separately uploaded PDF preview. No provenance is stripped.",
+  "delivery_verification": {
+    "required_final_check": "Retrieve the final downloadable ZIP and verify every listed member size/SHA-256 against this receipt; report that result and the outer ZIP checksum outside the ZIP.",
+    "result_location": "Final response accompanying the download. If retrieval cannot be completed, final-delivery status must explicitly be unverified."
+  },
+  "integration_scope": "The return ZIP contains documents and an export-based Markdown patch only. Runtime/course assets and original Grover assets are not repackaged. No publication is authorized by this receipt."
+}

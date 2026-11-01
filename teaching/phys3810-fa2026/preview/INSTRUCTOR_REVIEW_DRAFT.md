@@ -1,8 +1,11 @@
 # Grover: instructor review guide
 
-PHYS 3810 | Review draft v0.1 | October 29, 2026
+PHYS 3810 | Grover code v0.1.0-rc1 | Document review draft v0.2 | October 29, 2026
 
-> {{DOWNLOAD_NOTE}}
+Prepared by Matthew Gage Plott, PhD. This Markdown companion accompanies the
+[received instructor PDF](../instructor/PHYS3810_Grover_Instructor_Guide_RC1_v0.2.pdf),
+a local draft pending publication. Use the unchanged
+[Grover rc1 ZIP](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-grover-v0.1.0-rc1/PHYS3810-Grover-v0.1.0-rc1.zip).
 
 This outline accompanies the standalone **phys3810-grover** preview and its setup guide. It is an early teaching draft: session dates, student preparation, assessment expectations, and native platform requirements remain unconfirmed.
 
@@ -34,7 +37,7 @@ References: [IBM Grover operator](https://quantum.cloud.ibm.com/docs/en/api/qisk
 
 ## Mathematical checkpoints and review questions
 
-Review draft v0.1 | Answers for instructor preparation
+Review draft v0.2 | Answers for instructor preparation
 
 ## Answer checkpoints
 
@@ -51,9 +54,20 @@ Review draft v0.1 | Answers for instructor preparation
 
 The reusable implementation supports **2-5 qubits**, explicit distinct binary targets, and nonnegative integer iteration counts. It rejects malformed, empty, duplicate, and all-marked sets. Returned circuits have no measurements or ancillary qubits; the notebook measures a copy for V2 sampling.
 
-The preview expects {{TEST_SUMMARY}} and four required notebooks. This includes the original onboarding checks, exact Grover/operator tests, runner failure regressions, and exercise-variation coverage. The three Grover figures support distinct teaching goals: circuit structure, finite samples, and oscillatory amplification.
+The preview expects 50 passing tests and four required notebooks. This includes the original onboarding checks, exact Grover/operator tests, runner failure regressions, and five exercise-variation regressions. The three Grover figures support distinct teaching goals: circuit structure, finite samples, and oscillatory amplification.
 
-Executed evidence is local Linux simulation with pinned Python 3.12/Qiskit 2.6.1/Aer 0.17.2. Native Windows/macOS, interactive editor/browser behavior, hardware, GPU, and remote CI are not established by a PDF review. See the bundle's validation record for the precise runs and limitations.
+The independent review reports 50 tests/four fresh-kernel notebooks passing on
+Linux CPython 3.12.14, Qiskit 2.6.1, and Aer 0.17.2 in a reused pinned
+environment, not a new installation. All nine Grover code cells executed and
+three figures rendered. This closes the prior editable-target/legend findings.
+
+Observed remotely: all required [PR checks](https://github.com/M-Gage-Plott42/qiskit-v2-guide/pull/112)
+and the [merged-commit classroom run](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/runs/40985140436)
+passed; the latter used Ubuntu x64/CPython 3.12.15 and passed 50 tests/four
+notebooks. Successful artifact upload was observed. The reviewer read these
+results without triggering the runs. Deliberate remote failure-path upload,
+native Windows/macOS, interactive editor/browser use, hardware/GPU, and live
+classroom timing remain unvalidated.
 
 This enumerated oracle is a teaching construction, not an end-to-end search benchmark. Oracle construction, synthesis, preparation, and readout have costs; counting oracle calls alone does not establish quantum advantage.
 

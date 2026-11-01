@@ -63,3 +63,14 @@ The QFT implementation is not part of the Grover-only preview source snapshot.
 Detailed local logs are in ignored `artifacts/grover-review/`, including
 `g1-before.log`, `exercise-regressions.log`, and `preview-validation.log`.
 No private review correspondence is copied into public artifacts.
+
+## October 30 follow-up
+
+The preparation and next-module statements above describe the October 29
+checkpoint. PR #112 subsequently merged, and Grover rc1 is published at
+`3894391f2026d4fd9351b346b44b5eda453a17da`. The additional received audit
+independently reports 50 tests/four notebooks passing, closing the exercise
+repair. QFT is already locally validated; QPE is the next implementation after
+the planned Git integration. See [the release audit reconciliation](GROVER_RELEASE_RECONCILIATION.md)
+for current evidence, PDF ownership, and resolution of the delivery-receipt
+discrepancy. The existing v0.2 PDFs match the corrected delivered-file hashes.

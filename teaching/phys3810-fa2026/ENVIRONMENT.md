@@ -21,7 +21,20 @@ support or compatibility with future Qiskit releases.
 recommends isolated environments and explains local simulation, visualization,
 and platform support. No IBM account is needed for this course's default path.
 Grover now has its own [implementation and validation evidence](GROVER_VALIDATION.md).
-QFT, QPE, HHL, and Shor remain future work; onboarding does not validate them.
+QFT also has [separate mathematical and notebook evidence](QFT_VALIDATION.md).
+QPE has [its own phase/register contract](QPE_PLAN.md) and
+[validation evidence](QPE_VALIDATION.md). HHL and the bounded N=15 Shor lesson
+are implemented and independently accepted; their
+[reconciliation](HHL_SHOR_REVIEW_RECONCILIATION.md) records the corrected
+160-test/eight-notebook baseline. Onboarding alone does not validate algorithms.
+The [R1 fresh-install record](R1_FRESH_LINUX_VALIDATION.md) now adds October 31
+validation from source `9e73b82` in a new isolated CPython 3.12.15 environment:
+114 application distributions match active pins, plus pip 26.2.2; all 160 tests
+and eight notebooks pass. The [readiness plan](RELEASE_READINESS_PLAN.md) keeps
+that evidence separate from native-platform checks still needed. The
+[R2 record](R2_INTERACTIVE_VALIDATION.md) adds actual Linux/Chrome JupyterLab
+execution and reopening with a preservation-specific external kernelspec.
+Native editor UI remains untested; exact Chrome version is unverified.
 Reference interfaces for the algorithm milestones are `QFTGate`,
 `phase_estimation()`, and `grover_operator()` with V2 primitives.
 
@@ -43,7 +56,9 @@ The lock is a full version resolution, not a hash-verified artifact lock. It
 is generated across platforms rather than by freezing a Linux-only install.
 `pip==26.2.2` is the documented installer; it is not an application dependency.
 Use a fresh virtual environment to avoid unrelated packages from previous work.
-Actual installed versions and test evidence appear in [VALIDATION.md](VALIDATION.md).
+Original environment evidence is retained in [VALIDATION.md](VALIDATION.md);
+current fresh-install versions and outcomes are in
+[R1_FRESH_LINUX_VALIDATION.md](R1_FRESH_LINUX_VALIDATION.md).
 
 ## Platforms and evidence
 
@@ -52,7 +67,15 @@ Windows x64 and macOS ARM64/Intel markers, but resolution alone does not establi
 native installation, plotting, or notebook execution. Those native platforms
 remain **untested** until a maintainer runs the setup and validator there. Do not
 advertise them as passed. Windows ARM64 and 32-bit Python are outside this
-classroom target. Keep unsupported machines on an instructor-provided environment.
+classroom target. Keep unsupported machines on an instructor-provided environment
+only after that alternative is actually agreed and validated.
+
+The October 31 [R3 inventory/protocol](R3_NATIVE_PLATFORM_VALIDATION.md) found
+only Ubuntu 26.04.1 LTS x86_64 available; the user confirmed no additional host.
+Windows/macOS procedures are prepared but not executed. Evaluate active constraint
+markers on each future target and report its actual installed inventory, rather
+than requiring Linux's 114-application-package count. R2's native-editor gap stays
+separate from automated environment compatibility.
 
 ## Maintainer updates
 

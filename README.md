@@ -16,6 +16,20 @@ setup, preflight notebook, proposed sessions, and current delivery status.
 The classroom environment uses CPython 3.12, Qiskit 2.6.1, and Aer 0.17.2.
 The first algorithm lab, [Grover search](teaching/phys3810-fa2026/notebooks/01_grover.ipynb),
 includes reusable source, independent tests, and 50/75-minute teaching activities.
+The [QFT introduction](teaching/phys3810-fa2026/notebooks/02_qft.ipynb) is also
+included as the first part of the QFT/QPE session.
+The [QPE lesson](teaching/phys3810-fa2026/notebooks/03_qpe.ipynb) completes that
+session with declared register order, exact phases, and nonexact distributions.
+The [HHL lesson](teaching/phys3810-fa2026/notebooks/04_hhl.ipynb) adds a bounded
+2x2 linear-system state-preparation example with explicit postselection.
+The [Shor lesson](teaching/phys3810-fa2026/notebooks/05_shor.ipynb) adds compiled
+full-domain N=15 order finding and verified classical factor recovery.
+The [full-course provisional preview](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-v0.2.0-rc1)
+packages all five bounded lessons with 160 tests/eight notebooks. Its release
+assets become available when that prerelease is published. The earlier Grover
+preview remains unchanged and intentionally excludes the later algorithms.
+Use the [current student setup](teaching/phys3810-fa2026/SETUP.md); preserved
+PDFs are prepublication review references with an explicit availability notice.
 
 ## Quickstart
 
@@ -94,7 +108,7 @@ Backend inventories and names change over time; this repo intentionally avoids h
 - Cross-platform classroom validation: `python scripts/validate_classroom.py`.
 - Original local smoke test: `bash scripts/smoke_local.sh`.
 - CI retains the local smoke path (`00` and `01`) and runs offline unit tests,
-  classroom preflight, and the Grover lesson on pushes and pull requests.
+  classroom preflight, Grover, QFT, QPE, HHL, and Shor on pushes and pull requests.
 - Required workflows now use workflow-level concurrency and `merge_group`
   triggers so checks stay reusable with merge queues.
 - Dependency review runs by default on public repos; private copies can enable

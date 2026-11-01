@@ -20,7 +20,7 @@ class RequiredNotebookExecutionTests(unittest.TestCase):
         self.path = self.root / self.relative
         self.path.parent.mkdir()
 
-    def run_notebook(self, source, *, tags=()):
+    def run_notebook(self, source, *, tags=(), required_pngs=None):
         notebook = nbformat.v4.new_notebook(cells=[
             nbformat.v4.new_code_cell('print("BEFORE")'),
             nbformat.v4.new_code_cell(source, metadata={"tags": list(tags)}),
@@ -39,10 +39,13 @@ sys.path.insert(0, sys.argv[1])
 from scripts import validate_classroom as runner
 runner.ROOT = Path(sys.argv[2])
 runner.NOTEBOOKS = (sys.argv[3],)
+if sys.argv[4]:
+    runner.REQUIRED_PNGS[sys.argv[3]] = int(sys.argv[4])
 raise SystemExit(runner.execute_notebooks())
 """
         result = subprocess.run(
-            [sys.executable, "-c", command, str(validator.ROOT), str(self.root), self.relative],
+            [sys.executable, "-c", command, str(validator.ROOT), str(self.root), self.relative,
+             "" if required_pngs is None else str(required_pngs)],
             cwd=self.root, capture_output=True, text=True, timeout=90, check=False,
         )
         self.assertEqual(self.path.read_bytes(), original, "Source notebook was modified.")
@@ -89,6 +92,39 @@ raise SystemExit(runner.execute_notebooks())
         self.assertIn("skip-execution", result.stdout)
         self.assertIn("Remove that tag", result.stdout)
         self.assertTrue(all(cell.execution_count is None for cell in notebook.cells))
+
+    @staticmethod
+    def figure_source(count):
+        return f"""%matplotlib inline
+import matplotlib.pyplot as plt
+from IPython.display import display
+for number in range({count}):
+    figure, axes = plt.subplots()
+    axes.plot([0, 1], [number, number + 1])
+    display(figure)
+    plt.close(figure)
+"""
+
+    def test_two_of_three_pngs_fail_and_preserve_executed_output(self):
+        minimum = validator.REQUIRED_PNGS[validator.HHL_NOTEBOOK]
+        self.assertEqual(minimum, 3)
+        result, notebook = self.run_notebook(self.figure_source(2), required_pngs=minimum)
+        self.assert_failed(result)
+        self.assertIn("must render at least 3 PNG figures; found 2", result.stdout)
+        self.assertEqual([cell.execution_count for cell in notebook.cells], [1, 2, 3, None])
+        self.assertEqual(sum("image/png" in item.get("data", {})
+                             for cell in notebook.cells for item in cell.outputs), 2)
+        self.assertIn("AFTER", notebook.cells[2].outputs[0].text)
+
+    def test_three_pngs_meet_required_figure_gate(self):
+        minimum = validator.REQUIRED_PNGS[validator.SHOR_NOTEBOOK]
+        self.assertEqual(minimum, 3)
+        result, notebook = self.run_notebook(self.figure_source(3), required_pngs=minimum)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn(f"PASSED: {self.relative}", result.stdout)
+        self.assertEqual([cell.execution_count for cell in notebook.cells], [1, 2, 3, None])
+        self.assertEqual(sum("image/png" in item.get("data", {})
+                             for cell in notebook.cells for item in cell.outputs), 3)
 
 
 class RequiredNotebookCompletionTests(unittest.TestCase):

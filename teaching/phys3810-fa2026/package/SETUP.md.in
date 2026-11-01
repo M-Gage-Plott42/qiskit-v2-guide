@@ -1,0 +1,11 @@
+# Full-course preview setup
+
+Follow the [student setup companion](handouts/FULL_COURSE_SETUP_DRAFT.md) for
+installation, validation, kernel selection, shutdown/reopening, and
+troubleshooting. The matching [student review-draft PDF](handouts/PHYS3810_Full_Course_Student_Setup_v0.1_REVIEW_DRAFT.pdf)
+is included unchanged. Keep the complete course folder together.
+
+This entry point preserves the preflight notebook's setup link without
+duplicating the guide. [The package overview](../../README.md) identifies the
+exact source and local-preview status. The future public student download is
+unpublished; the existing Grover-only download is a different edition.

@@ -1,17 +1,21 @@
 # Grover milestone validation
 
-October 29, 2026. **Grover was independently reviewed; its small exercise
-correction is locally validated.** This record covers the Grover-only preview;
-QFT development is separate. QPE, HHL, Shor, final classroom PDFs, and publication
-remain future work. No IBM Runtime service or GPU was used.
+Initial local evidence October 29, 2026; independent audit addendum October 30.
+**The published Grover preview and its exercise repairs are independently
+retested.** This record covers the Grover-only preview;
+QFT development is separate. QPE, HHL, Shor, and final classroom PDFs remain
+future work. The Grover prerelease is now published; see [PREVIEW_PLAN.md](PREVIEW_PLAN.md)
+for the merged revision, remote checks, and public asset verification.
+No IBM Runtime service or GPU was used.
 
 ## Source and scope
 
-Work remains local on `feat/phys3810-m1-onboarding`, based on
-`fb41ae02f2ece3e093e60c9286ef72ae91686530`. Earlier uncommitted milestone-1 work
-and the existing index were preserved. There was no commit, push, PR, merge,
-or release. The original audited commit remains 12 commits ahead of that base;
-eventual upstream integration must preserve its newer fixes.
+Initial work used `feat/phys3810-m1-onboarding`, based on
+`fb41ae02f2ece3e093e60c9286ef72ae91686530`. The original development checkout
+and index were preserved while Grover was integrated in a separate checkout
+based on the newer audited main. The authorized publication workflow then
+merged PR #112 and tagged `3894391f2026d4fd9351b346b44b5eda453a17da` for the
+prerelease. QFT's uncommitted development work remains separate.
 
 - `src/phys3810/grover.py` and `__init__.py`: phase oracle, exact diffusion,
   Grover iteration, and uniformly prepared search circuits.
@@ -113,21 +117,50 @@ remain local under ignored `artifacts/milestone2-grover/`, outside the bundle.
 The independent reviewer reproduced the original 45-test/four-notebook result
 on Linux CPython 3.12.14 using the same installed pins; no new dependency install
 was claimed for that review. It confirmed the algorithm and prior M1-01 fix,
-then identified the editable-target/legend issue. The corrected preview's
-50-test result is local CPython 3.12.15 evidence, not a claim that GPT Pro
-retested the correction. Current correction logs are in `artifacts/grover-review/`.
+then identified the editable-target/legend issue. At that time, the corrected
+50-test result was local CPython 3.12.15 evidence; no independent retest was
+then claimed. Correction logs are in `artifacts/grover-review/`. The subsequent
+independent retest is recorded below.
+
+## October 30 published-snapshot audit
+
+The received independent review identifies merged commit
+`3894391f2026d4fd9351b346b44b5eda453a17da`, PR #112, tag
+`phys3810-fa2026-grover-v0.1.0-rc1`, and the released ZIP with SHA-256
+`c46d8f2ac837f2742a99384cee1bc637478b4387909a4c399e4599655b11e686`.
+It reports dependency consistency, **50 tests and four fresh-kernel notebooks
+passed** on Linux CPython 3.12.14, Qiskit 2.6.1, Aer 0.17.2. The pinned
+environment was reused. The five exercise regressions independently close G1.
+
+The reviewer also observed all nine required PR checks and the
+[PR classroom run](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/runs/40984800543)
+and [merged-commit run](https://github.com/M-Gage-Plott42/qiskit-v2-guide/actions/runs/40985140436).
+Both show Ubuntu x64/CPython 3.12.15, 50 tests, and four notebooks passing.
+Success-path artifact upload was observed. These prior executions were also
+recorded during publication; they were not rerun during this documentation turn.
+
+See [the audit reconciliation](GROVER_RELEASE_RECONCILIATION.md) for review
+disposition and the resolved v0.2 delivery-receipt discrepancy. Corrected full-file
+hashes now match both existing PDFs, including appended provenance. This does
+not change the established original rc1 ZIP identity or algorithm test results.
 
 ## Limits and next step
 
-- **Untested:** native Windows/macOS, interactive JupyterLab/editor use, remote
-  CI and failure-artifact upload, and other Python patch builds for Grover.
+- **Untested:** native Windows/macOS, interactive JupyterLab/editor use,
+  deliberate remote failure-path artifact upload, and Python patch builds
+  other than the recorded 3.12.14/3.12.15 runs.
 - **Skipped:** IBM Runtime service, hardware jobs, and GPU execution. The
   earlier fake-backend smoke is not a new Grover or hardware validation result.
-- **Not implemented:** QFT, QPE, HHL, and Shor.
-- **Pending at source preparation:** remote preview CI and final platform
-  validation. A proposed preview is not an existing public release.
+- **Not included in this preview:** QFT, QPE, HHL, and Shor. QFT is locally
+  implemented with [separate evidence](QFT_VALIDATION.md); QPE/HHL/Shor remain
+  unimplemented.
+- **Pending:** final native-platform validation and timed classroom rehearsal.
+  Grover's required PR checks and subsequent main workflows passed before
+  publication; a deliberately failed remote artifact-upload case was not exercised.
 
-The next development action is QFT, with a separate Grover-only preview prepared
-for instructor feedback. No manual code audit is assigned to the user. Keep the
-later QFT/QPE-before-HHL/Shor checkpoint; no extra review round is needed solely
-for the demonstrated small notebook corrections.
+The initial instructor review packet is ready with the existing v0.2 PDFs and
+rc1 ZIP. Follow the planned Git integration before QPE in a later turn.
+No manual code audit is assigned to the user. Keep the substantive
+QFT/QPE-before-HHL/Shor checkpoint; no further Grover algorithm repair review
+is needed. This turn changes documentation/PDF copies only and does not rerun
+the application tests or begin implementation.
