@@ -156,8 +156,10 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    [Ubuntu command/UI walkthrough](R6_GUIDE_WALKTHROUGH_VALIDATION.md) has passed
    in isolation. Its [provisional document-review handoff](R6_DOCUMENT_REVIEW_HANDOFF.md)
    has returned and its [review-draft PDFs are verified](R6_DOCUMENT_REVIEW_RECONCILIATION.md).
-   Prepare local R7 preview packaging next. Teaching decisions, human pacing,
-   unavailable platforms/editor paths, and final classroom editions remain open;
+   [R7 local preview packaging](R7_PREVIEW_VALIDATION.md) now passes its
+   acceptance/extraction checks. Prepare an R8 read-only/local readiness proposal
+   next. Teaching decisions, human pacing, unavailable platforms/editor paths,
+   and final classroom editions remain open;
    Grover and full-course document/code identities remain distinct.
    Validate setup instructions on the claimed classroom
    platforms, obtain the matching ChatGPT-reviewed PDF, rehearse the timed

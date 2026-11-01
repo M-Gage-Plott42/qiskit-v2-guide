@@ -168,12 +168,23 @@ on each edition label is the only local companion adjustment. P3-01 is an
 instructor reading clarification now and an authored-PDF correction for the
 next final edition, not authority to modify supplied PDF bytes locally.
 
-Next prepare a local R7 preview package/builder using the verified student
-review-draft PDF and current 160-test snapshot. Keep instructor answer documents
-separate, preserve original archives/assets, and verify the sealed extraction.
-No package was created in this reconciliation. Teaching/platform/pacing and
-final-distribution gates stay open; further GPT Pro work is needed when revising
-PDF content for the next edition, not merely because these receipts were checked.
+R7 local preview packaging is now complete under the
+[package contract](R7_PREVIEW_PACKAGE.md) and [evidence](R7_PREVIEW_VALIDATION.md).
+The separate full-course builder reads one committed snapshot, requires the
+verified student PDF/Markdown pair, checks inventory/link/output drift, and
+refuses overwrites. It explicitly does not execute runtime validation. The
+sealed archive's separate extraction passed 160/eight/50/16 in the reused R6
+environment, with all payload bytes/modes unchanged. Instructor guides/PDFs and
+policy/history/prompt/generated content are excluded; worked expectations in
+notebooks/tests/contracts remain and are not described as an answer-free assessment.
+
+Next prepare an R8 read-only/local readiness audit and concrete publication
+proposal. Refresh then-current upstream/tag/rules/check information only within
+that later authorized scope; retain source-to-package identity and document
+wording limitations. No push/PR/merge/tag/release, message, or hardware authority
+is inferred. Teaching/platform/pacing and final-distribution gates stay open;
+further GPT Pro work is needed when authoring the next PDF edition, not solely
+for a byte-preserving packaging step. Keep P3-01 attached to the instructor edition.
 
 Keep audience-specific content separate: the student guide contains setup/help,
 not model-review coordination or an instructor key. The current notebooks still

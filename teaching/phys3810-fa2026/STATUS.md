@@ -1,7 +1,15 @@
 # PHYS 3810 status
 
-As of October 31, 2026: **The provisional document review is received and
-reconciled locally.** The [reconciliation](R6_DOCUMENT_REVIEW_RECONCILIATION.md)
+As of October 31, 2026: **R7 local preview packaging passed.** The
+[builder contract](R7_PREVIEW_PACKAGE.md) and [execution evidence](R7_PREVIEW_VALIDATION.md)
+identify source `135d5d0` and the unpublished 47-file preview. It includes the
+verified student PDF unchanged and excludes instructor answer documents/PDFs.
+All 160 tests/eight notebooks/50 cells/16 PNGs passed from a separate extraction
+in the reused R6 environment; all payload hashes/modes stayed unchanged. Twenty
+builder acceptance cases and an identical repeat build passed. No publication,
+new PDF, environment installation, UI/native check, or hardware job occurred.
+
+The provisional document review remains received and reconciled locally. The [reconciliation](R6_DOCUMENT_REVIEW_RECONCILIATION.md)
 records the accessible return ZIP, four-page student PDF, six-page instructor
 PDF, synchronized companions, receipt checks, and scoped editorial integration.
 PDF bytes are unchanged. Student commands remain unchanged; local companion
@@ -200,13 +208,12 @@ these facts do not establish the invited-session dates.
 
 ## Recommended next actions
 
-1. **Prepare the local R7 preview package and builder.** Use an identified
-   committed snapshot, unchanged reviewed student PDF bytes, matching setup,
-   all required source/tests/notebooks, and a manifest. Exclude instructor
-   answer documents/PDFs, prompts, policies/history, caches, credentials, and
-   outputs. Verify an isolated extraction with 160/eight/50/16 and unchanged
-   payload hashes. Label it an unpublished local preview, not final classroom
-   approval. This is the next recommended task, not work performed here.
+1. **Prepare an R8 read-only/local readiness audit and publication proposal.**
+   Recheck current upstream, tag availability, repository rules/required checks,
+   and source/package correspondence. Identify remaining guide wording,
+   teaching/support, and final-edition decisions. Prepare a concrete local
+   proposal; do not push, open a PR, merge, tag, release, message, or submit jobs.
+   The existing local preview is evidence, not authorization to publish.
 2. **Resume R3 when actual native hosts become available.** Follow the prepared
    procedures with exact source identity, fresh environments, native architecture
    checks, full validator, and actual UI evidence. Windows x64 and each macOS
@@ -221,8 +228,8 @@ these facts do not establish the invited-session dates.
 reconciled and the supplied bytes are verified. Carry P3-01 into the next
 ChatGPT-authored instructor edition before final classroom distribution, alongside
 teaching feedback or other substantive changes; do not regenerate it locally.
-User input needed for this reconciliation or local preview preparation: none.
-No code audit is requested. Actual native host access and instructor target decisions
+User input needed for completed R7 or a read-only/local R8 audit: none.
+Teaching and publication decisions remain separate; no manual code audit is requested. Actual native host access and instructor target decisions
 remain prerequisites for closing R3; agreed teaching scope and an observed
 presenter run-through are still needed to close R4. Share Rick's reply when
 received; no manual code audit is requested.
@@ -487,3 +494,48 @@ Final checks passed: 378 local file links, seven Bash syntax blocks, unchanged
 student commands, pre-commit, and preservation. The completion receipt records
 the local integration commit and clean candidate status. No original checkout
 or accepted integration index was changed.
+
+## R7 local preview evidence, October 31
+
+The scoped full-course builder and its four deployment-relative Markdown
+sources were committed in `135d5d00e3197708a26b547013a0fd8105194385` before building.
+It reads only that commit's inputs, requires the exact reviewed student document
+pair, rejects inventory/output/link drift and overwrites, and records provenance.
+Two guard defects were repaired before the source commit: Git-tree inventory
+prevents export-ignore from hiding tests, and protocol-relative/hostless links
+are rejected. All 20 CLI acceptance cases passed in a disposable Git fixture;
+no protected checkout was changed to test failures.
+
+The sealed preview is `PHYS3810-Fall2026-v0.2.0-rc1-local-135d5d00e319.zip`,
+200130 bytes, SHA-256
+`7cd1cb0a75b268141a8962d512fe38deb3fe1a38911e90577d736fe445a2f79f`.
+The independent payload audit confirmed 47 safe files, 46 manifest entries,
+37 exact committed files, five retained technical bodies, four template renders,
+and 50 internal file/fragment links. The entire instructor folder and excluded
+history/policy/prompt/cache/output/credential content are absent. The tested
+student PDF/Markdown hashes are unchanged. Known expectations remain in tests,
+notebooks, and contracts; no assessment-safe claim is made.
+
+The extraction outside all checkouts passed dependency consistency, the full
+160-test/eight-notebook validator, Bash smoke, Ruff, and exported Markdown lint
+under the existing repository profile. Saved outputs verified 50 complete cells,
+zero errors, and 16 actual PNGs. The initial Markdown lint check used standalone
+defaults; selecting the unchanged repository profile resolved its long-line
+findings without changing payload bytes. Every delivered file and the sealed
+ZIP remained unchanged. An actual repeat build is byte-identical.
+
+This reused the R6 CPython 3.12.15 environment; no new fresh-install, UI/native,
+PDF, remote-CI, or classroom-readiness pass is inferred. P3-01, Rick's decisions,
+platform/editor coverage, human pacing, final document wording, and publication
+remain open. Source, old builders, reviews, PDFs, environments/staging, original
+and accepted indexes, and Grover assets remain preserved. Local evidence is
+under `artifacts/r7-preview-2026-10-31/`; the final context commit is separate
+from the build-source identity inside the archive.
+
+One preservation exception was observed at the final check: the incoming review
+ZIP's original Downloads path is now absent, although it existed at the start.
+Its verified 176121-byte retained copy inside reconciliation evidence still
+matches SHA-256 `45520beb2780f713d903f225970541b35d9d71041b6bb4d1af5f77eb8916b927`;
+the PDF/Markdown editions and outgoing review archives remain intact. The cause
+is unverified. No Downloads file was restored or deleted by R7 work. This is
+recorded explicitly and does not invalidate the committed-source preview.

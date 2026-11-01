@@ -19,8 +19,10 @@ Continue in the new candidate worktree named there. R6's provisional
 [literal Ubuntu walkthrough](R6_GUIDE_WALKTHROUGH_VALIDATION.md) has passed.
 The [document-review handoff](R6_DOCUMENT_REVIEW_HANDOFF.md) has returned;
 [provisional PDFs and companions are verified and integrated](R6_DOCUMENT_REVIEW_RECONCILIATION.md).
-Final classroom editions/approval remain open, including the P3-01 instructor
-wording clarification and the teaching/platform/pacing decisions.
+R7's [local preview package and builder](R7_PREVIEW_VALIDATION.md) now pass
+acceptance and isolated extraction checks. Final classroom editions/approval
+remain open, including P3-01 and teaching/platform/pacing decisions; publication
+has not been performed or authorized by these local steps.
 
 The original October 30 planning turn executed no readiness gate. The later R1
 task performed internal source export, fresh dependency installation, and
@@ -314,15 +316,21 @@ update should incorporate P3-01 and the relevant instructor/platform/pacing
 feedback before a final classroom edition. Substantive scope/environment changes
 still require appropriate evidence and review; do not infer new authorization.
 
-### R7. New full-course package and extraction verification
+### R7. New full-course package and extraction verification — local preview passed
 
-**Next local task:** prepare a clearly labeled unpublished preview package and
-builder from an identified commit, including the verified student review-draft
-PDF unchanged. Keep instructor answer guides/PDFs outside the student-facing
-payload. This preview can test packaging independently of pending teaching
-choices; it does not close final classroom distribution/platform/pacing gates.
-No R7 package is created by the present reconciliation. Final release inputs
-must be reassessed when the guide or approved teaching/support claims change.
+The [scoped builder](R7_PREVIEW_PACKAGE.md) and
+[unpublished preview](R7_PREVIEW_VALIDATION.md) are complete. Source `135d5d0`
+produced 47 files with 46 manifest entries and 37 exact committed payload files,
+including the verified student PDF unchanged. Instructor answer guides/PDFs are
+excluded. Twenty builder acceptance cases, actual reproducibility, independent
+payload audit, and isolated 160/eight/50/16 validation passed in the reused R6
+environment. All delivered file hashes/modes and ZIP bytes remained unchanged.
+
+This closes the authorized local-preview packaging task, not final classroom
+or public-release gates. P3-01, teacher decisions, native/editor coverage, human
+pacing, and final document wording remain open. Final release inputs must be
+reassessed when source, guide, or approved teaching/support claims change.
+The procedure below applies to each later candidate or final package.
 
 Build a new exact-revision package only after its source/version/setup inputs
 are fixed. A student-release candidate requires the matching supplied guide;
@@ -346,7 +354,14 @@ legitimately changes the baseline. Compare payload hashes after execution.
 Any edit to payload/setup/PDFs requires a new sealed archive and affected
 verification. Preserve the original reviewed ZIPs and Grover release unchanged.
 
-### R8. Normal publication and published-byte verification — not authorized now
+### R8. Readiness proposal next; publication remains unauthorized
+
+Next prepare only a read-only/local readiness audit and concrete publication
+proposal: verify then-current upstream, tag availability, repository rules and
+required checks, source/package correspondence, and unresolved guide/teaching/
+support gates. No such remote audit was performed during R7. Do not push, create
+a PR, merge, tag, release, send messages, or submit hardware jobs as part of this
+proposed next step.
 
 Prepare the complete candidate/evidence before requesting external publication
 authority. Verify the then-current repository rules and required checks without
@@ -382,12 +397,11 @@ recorded fresh-install execution, not by prose changes. Later documentation
 checks cover Markdown, relative links, Git scope, and preserved bytes; they
 do not substitute for executing another gate.
 
-**Recommended next task:** prepare the local R7 preview builder and package,
-including unchanged verified student PDF bytes, all required runtime/test/
-notebook/dependency files, matching setup, and a manifest. Verify an isolated
-sealed extraction with 160/eight/50/16 and unchanged payload hashes; retain
-instructor answer documents separately. Keep review-draft/unpublished status and
-all pending teaching/platform/pacing gates explicit. **GPT Pro sync: not needed
-immediately.** Carry P3-01 into the next authored instructor edition before final
-classroom distribution. No publication, external message, or hardware job is
-part of this next local preparation.
+**Recommended next task:** prepare the R8 read-only/local readiness audit and
+publication proposal described above. Preserve the verified local preview,
+recheck current external state only when that next task is authorized, and
+identify exact remaining decisions or material changes before any publication.
+Keep preview status distinct from final classroom readiness. **GPT Pro sync:
+not needed solely for unchanged-byte packaging.** The next authored PDF edition
+must address P3-01 and any agreed teaching/publication wording changes; prepare
+that concrete request when its inputs are ready.

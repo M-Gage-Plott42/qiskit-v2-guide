@@ -181,12 +181,14 @@ does not announce a classroom-ready release or a confirmed teaching schedule.
   lessons. A full-course student package needs its own version-matched entry
   instructions and folder name. Remove maintainer coordination/review jargon
   from that student flow; do not replace live Grover links with unbuilt URLs.
-- **R7:** build a new exact-source standalone package with all required tests,
-  helpers, eight notebooks, dependencies, license, guide, and manifest. Use
-  current counts rather than old review-builder constants. Verify an extraction
-  outside the checkouts, strict execution, output-free sources, local links,
-  exclusions, and unchanged payload hashes after execution. A GitHub-generated
-  source ZIP is not automatically the verified standalone student package.
+- **R7 local preview passed:** [the sealed package](R7_PREVIEW_VALIDATION.md)
+  from `135d5d0` includes required tests/helpers, eight notebooks, dependencies,
+  license, unchanged student guide/PDF, and manifest. Its isolated extraction
+  passed 160/eight/50/16 with unchanged payload hashes; builder acceptance,
+  reproducibility, exclusions, links, and source cleanliness also passed.
+  A final publication revision still needs its own exact-source package/guide
+  correspondence and affected checks. A GitHub-generated source ZIP is not
+  automatically the verified standalone student package.
 - **Answers and exclusions:** assessment and solution distribution are pending.
   Keep instructor guides/run-sheet answers outside a student-only bundle.
   Exclude prompts, policy/chat records, unrelated history, Git metadata,
@@ -202,10 +204,11 @@ does not announce a classroom-ready release or a confirmed teaching schedule.
 
 The provisional R6 Markdown inputs and literal Ubuntu setup/UI walkthrough are
 complete. The supplied review-draft PDFs and companion edits are now reconciled
-locally, while teaching decisions remain pending. The next step can build and
-verify a local R7 preview package with the unchanged student PDF; keep instructor
-answer material separate. This does not constitute final classroom approval,
-publication, or a changed Grover release.
+locally, while teaching decisions remain pending. R7's local preview package
+is now verified with unchanged student PDF bytes and separate instructor
+material. Next prepare a read-only/local R8 readiness audit and concrete
+publication proposal. This does not constitute final classroom approval,
+publication authorization, or a changed Grover release.
 The completed provisional GPT Pro document/teaching sync is recorded with its
 exact outgoing and returned archive identities; final classroom gates remain open.
 Neither local file visibility nor this draft implies another chat has received

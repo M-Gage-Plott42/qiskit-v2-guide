@@ -196,6 +196,7 @@ packet-only links and the remaining literal evidence reference are mapped in
 the reconciliation. P3-01 qualifies phase-fraction decoding in the next authored
 instructor edition before final classroom distribution; the current reading
 note is in [the instructor index](instructor/README.md). Native/editor, teaching,
-and human-pacing gates remain open. Next prepare a local R7 preview package and
-builder using the verified student PDF, keeping instructor material separate.
-No manual user audit or new external message is required.
+and human-pacing gates remain open. The [R7 local preview](R7_PREVIEW_VALIDATION.md)
+is now built and verified with unchanged student PDF bytes and instructor
+material excluded. Next prepare a read-only/local R8 readiness proposal; no
+manual code audit, publication, or external message is part of that proposal.

@@ -260,8 +260,17 @@ Accept these as provisional review drafts, not final classroom approval. P3-01
 clarifies phase-register decoding before the next final instructor edition;
 its [reading note](teaching/phys3810-fa2026/instructor/README.md) applies now
 without altering supplied PDF bytes. No immediate new GPT Pro round is needed.
-Next prepare a local R7 preview package/builder with the reviewed student PDF,
-keeping instructor answer documents separate and all remaining gates open.
+The [R7 builder and local preview](teaching/phys3810-fa2026/R7_PREVIEW_VALIDATION.md)
+now pass packaging acceptance and extracted validation. The ZIP is frozen at
+`135d5d0`, with 47 files/46 manifest entries/37 exact committed files, including
+unchanged reviewed student PDF/Markdown bytes. Instructor documents are excluded;
+worked notebooks/tests/contracts remain, so it is not an answer-free assessment.
+The 160-test/eight-notebook/50-cell/16-PNG extracted run reused the R6 environment;
+no new installation/UI/native-platform claim is made. Twenty actual builder
+acceptance cases and reproducibility checks passed. Keep the old Grover builder
+and all earlier archives unchanged. Next prepare only a read-only/local R8
+readiness audit and publication proposal; no push/PR/merge/release authority is
+inferred from this local package. P3-01 and teaching/platform/pacing gates stay open.
 Returned packet-only clickable links were removed editorially; the remaining
 literal evidence filename is mapped to repository records in the reconciliation.
 Filename cards/private links alone still do not establish returned-file access.
@@ -269,6 +278,7 @@ Keep student instructions free of maintainer coordination and instructor answer
 cues. Separate instructor files do not make the existing worked notebooks an
 answer-free assessment. Teaching decisions, solution distribution, and actual
 human pacing remain open; do not infer agreement from document preparation.
-Keep the separate editor gap, native-platform, PDF/package, and publication gates open.
+Editor and native-platform checks, final classroom documents, final package
+freeze, and publication approval remain open.
 No push, PR, merge, release change, external message, or hardware job is part
 of this local milestone. Preserve the original checkout/index and rc1 assets.
