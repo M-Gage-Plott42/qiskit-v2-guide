@@ -75,20 +75,23 @@ data in public code, notebooks, documentation, outputs, or validation logs.
 
 ## PHYS 3810 collaboration and handoffs
 
-**Current authorization, November 1, 2026:** the user explicitly requested a new
-provisional preview publication, pushing the work, and a clean Git state this
-turn. This supersedes the earlier read-only/local-only boundary for
-`phys3810-fa2026-v0.2.0-rc1` only. Use the normal PR/required-check merge workflow;
-never bypass the ruleset. Preserve all earlier releases and PDF bytes. Public
-README/SETUP instructions and a notice explicitly identify the unchanged PDF
-as a prepublication reference with outdated availability wording. No final
-classroom approval, external human message, or hardware job is authorized.
-The original dirty checkout may be recoverably stashed and fast-forwarded only
-after its file/index/checkpoint verification and successful publication. Keep
-that stash/recovery, and never use a destructive reset or clean shortcut.
-See [R8 readiness](teaching/phys3810-fa2026/R8_READINESS_AUDIT.md).
-After delivering the preview and clean Git state, wait for Rick's reply or a
-concrete requested change; do not keep repeating unchanged validation/planning.
+**Current position, November 1, 2026:** the explicitly authorized full-course
+preview is published at `phys3810-fa2026-v0.2.0-rc1`, source `f717aea`, after
+normal PR #113 and all nine required checks. Published ZIP/checksum bytes were
+verified anonymously. See [the publication receipt](teaching/phys3810-fa2026/PUBLIC_PREVIEW_RELEASE.md).
+The reviewed PDFs remain unchanged prepublication references; current public
+README/SETUP and a notice govern availability. No final classroom approval is
+claimed, and P3-01/teaching/native/editor/pacing decisions remain open.
+The user also explicitly requested clean Git state. The formerly dirty original
+checkout is now clean main; its exact original work/index are recoverable from
+verified stash `2705385616e21718a10b73765946e430597dc4bf` and both recovery records.
+The accepted integration checkout remains a historical snapshot. Preserve that
+recovery data; do not use old active-checkout equality checks to reject the
+intentional fast-forward or discard/pop the recovery stash.
+After final completion documentation is pushed/merged, **wait for Rick's reply,
+a concrete defect, or a specific new request**. Do not repeat unchanged tests,
+packages, PDF reviews, or readiness planning. This completed authorization does
+not cover another release, external human messages, or hardware jobs.
 
 - The assistant owns implementation, technical review, testing, repairs, and
   documentation. Do not assign manual code/diff review to the user.

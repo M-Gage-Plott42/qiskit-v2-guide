@@ -84,6 +84,15 @@ still need authorization covering those actions.
 
 ## Immediate next technical action
 
+**Current stop point:** the November 1 provisional preview is published and its
+assets verified. See [PUBLIC_PREVIEW_RELEASE.md](PUBLIC_PREVIEW_RELEASE.md).
+The original dirty work is now a verified recovery stash/checkpoint, and its
+active checkout has been fast-forwarded to main. Completion documentation and
+branch synchronization finish through the normal workflow. Then wait for Rick's
+reply, a concrete defect, or a specific request. Do not start another unchanged
+readiness, package, runtime, or PDF cycle. Earlier instructions below record the
+path to this delivery and do not authorize repeating a completed release.
+
 The user's November 1 instruction authorizes publication of the named full-course
 preview and pushing/cleaning Git this turn. Follow [R8](R8_READINESS_AUDIT.md):
 normal PR and all required checks, exact merged-source package verification,

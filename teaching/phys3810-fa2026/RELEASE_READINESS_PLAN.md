@@ -354,7 +354,16 @@ legitimately changes the baseline. Compare payload hashes after execution.
 Any edit to payload/setup/PDFs requires a new sealed archive and affected
 verification. Preserve the original reviewed ZIPs and Grover release unchanged.
 
-### R8. Provisional preview publication authorized November 1
+### R8. Provisional preview published November 1; final classroom gates open
+
+The authorized preview is [published and verified](PUBLIC_PREVIEW_RELEASE.md):
+source `f717aea`, normal PR #113 after nine required checks, merged-source
+160/eight/50/16 validation, and anonymous published-asset verification. Original
+dirty work was checkpointed/stashed and its active checkout fast-forwarded.
+This completes the requested technical preview; completion documentation and
+branch-state receipts are maintained separately from the immutable tag/ZIP.
+Final teaching/platform/pacing/document decisions remain open. Wait for the
+instructor's reply or a concrete new request before further course preparation.
 
 The [read-only audit](R8_READINESS_AUDIT.md) checked current upstream, tag
 availability, rules, required checks, and package correspondence. The user then
@@ -406,9 +415,8 @@ recorded fresh-install execution, not by prose changes. Later documentation
 checks cover Markdown, relative links, Git scope, and preserved bytes; they
 do not substitute for executing another gate.
 
-**Current task:** execute the authorized provisional preview workflow and
-recoverable Git cleanup above. Do not certify completion before actual checks
-and published-byte verification. **After completion, wait for Rick's reply.**
-No additional GPT Pro round is needed solely for disclosed publication wording;
-P3-01 and any confirmed teaching changes belong to the next final instructor
-PDF edition. No speculative validation or packaging loop is recommended.
+**Recommended next action: wait for Rick's reply.** The provisional preview
+is delivered; retain the published-byte and Git-recovery receipts. Resume for
+new decisions, a concrete defect, or explicit new scope only. **GPT Pro sync:
+not needed now.** P3-01 and confirmed teaching changes belong to the next final
+instructor edition; no speculative validation or packaging loop is recommended.
