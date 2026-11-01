@@ -1,13 +1,19 @@
 # PHYS 3810 status
 
-As of October 31, 2026: **R1 fresh Linux installation passed.** Source
-`9e73b82aa578f0264afcbf7125631774afa3eb1c` was exported outside both checkouts,
-installed in a new isolated CPython 3.12.15 environment with unchanged pins,
-and passed **160 tests/eight fresh-kernel notebooks/50 code cells/16 PNGs**.
-All 110 exported file hashes/modes remain unchanged. See
-[R1_FRESH_LINUX_VALIDATION.md](R1_FRESH_LINUX_VALIDATION.md).
-The next step is R2 actual interactive setup; R1 does not establish UI/native-host
-or publication readiness.
+As of October 31, 2026: **R2's Linux/Chrome JupyterLab workflow passed.**
+All eight required notebooks ran through actual UI kernel selection and
+restart/run-all, with **50 code cells and 16 inspected PNG figures**. Saving,
+server shutdown/relaunch, and preflight/Shor reruns passed. See
+[R2_INTERACTIVE_VALIDATION.md](R2_INTERACTIVE_VALIDATION.md).
+Native VS Code/Cursor UI remains untested; exact Chrome version is unverified
+because the browser policy blocked its internal version page.
+
+R1's fresh installation of source `9e73b82` remains preserved, including all
+110 frozen files/modes and the validated environment. Its **160-test** result
+was not rerun or relabeled as a new UI test count. R2 used a separate copy;
+only its outputs/kernel metadata changed, with notebook code/Markdown intact.
+[R1 evidence](R1_FRESH_LINUX_VALIDATION.md) and the current UI evidence are distinct.
+Next is R3 native-platform preparation/execution where authorized hosts exist.
 
 The HHL/Shor independent review remains accepted and its follow-ups reconciled.
 That review executed the earlier 158-test snapshot in a reused Python 3.12.14
@@ -33,8 +39,9 @@ notebook availability statements are corrected, all three HHL/Shor figures are
 required, and Shor displays theoretical recovery probabilities. Algorithm source
 and QPE supported inputs remain unchanged. The original
 checkout/index, reviewed phase ZIP, verified PDFs, and Grover rc1 assets remain
-intact. Work remains local; network activity for R1 was package installation.
-No publication, external message, or hardware job was performed.
+intact. Work remains local; R2 served the copied source on authenticated loopback
+and left no test server running. No publication, external message, package
+upgrade, or hardware job was performed.
 
 Technical review and validation are owned by the implementation assistant;
 the user is not being asked to review code manually. The latest coordination
@@ -131,21 +138,23 @@ these facts do not establish the invited-session dates.
 
 ## Recommended next actions
 
-1. **Execute R2 of the [readiness plan](RELEASE_READINESS_PLAN.md).** Verify the
-   retained R1 source/environment identity, then actually launch JupyterLab,
-   select the kernel, restart/run the lessons, inspect figures, and close/reopen.
-   Exercise intended editor setup if accessible. Headless execution alone is
-   not UI evidence; record unavailable surfaces as untested.
-2. **Follow the remaining conditional gates.** Native-platform coverage,
-   teaching decisions/pacing, protected upstream integration, matching PDFs,
-   a newly verified package, and separately authorized publication each retain
-   their completion criteria. Rick's reply remains pending.
+1. **Prepare/perform R3 of the [readiness plan](RELEASE_READINESS_PLAN.md).**
+   Inventory actual authorized native-host access, execute setup/validator/UI
+   checks only where that host is available, and retain explicit untested labels
+   elsewhere. Keep platform requirements provisional while Rick's reply is pending.
+2. **Retain the editor gap separately.** VS Code/Cursor was not accessible through
+   the available native controls. Do not substitute CLI or headless evidence for
+   editor interpreter/kernel selection; validate it when an authorized UI surface
+   exists or narrow the eventual supported workflow explicitly.
+3. **Continue the later gates without assuming completion.** Teaching decisions/
+   pacing, protected upstream integration, matching PDFs, final package, and
+   publication retain their completion criteria and authorization boundaries.
 
 **GPT Pro sync: not needed now.** The HHL/Shor technical checkpoint is closed;
 D1 and the optional O1/O2 changes have direct local evidence. Sync again for
 unresolved mathematics, an expanded scope, or the matching final PDF/teaching
-checkpoint when its inputs are ready. User input needed to begin the next local interactive
-check: none; report actual UI-access limitations if encountered. Share Rick's reply when received; no manual code audit is requested.
+checkpoint when its inputs are ready. User input needed for native-host inventory/preparation: none. Actual host
+access or classroom platform decisions may be needed before native runs can pass. Share Rick's reply when received; no manual code audit is requested.
 
 At the previous reconciliation, required Python 3.12, lint, smoke, pre-commit,
 notebook cleanliness, link, and preservation checks passed. That evidence is under
@@ -155,8 +164,9 @@ desktop copy is no longer present. No replacement archive was needed or created.
 Do not distribute that historical ZIP as the corrected current student packet.
 
 The independent review reused an environment; R1 now separately establishes
-a fresh local dependency installation of the corrected source. Native Windows/
-macOS execution, interactive setup, timed teaching, and remote CI remain untested. Runtime/cloud/GPU remain
+a fresh local dependency installation of the corrected source. R2 adds actual
+Linux JupyterLab execution; native Windows/macOS, native editor UI, timed
+teaching, and remote CI remain untested. Runtime/cloud/GPU remain
 excluded. Original checkout/index, verified PDFs, and Grover rc1 assets are
 preserved. No push, PR, merge, publication, message, or hardware job occurred.
 
@@ -187,3 +197,22 @@ it requires Git metadata. Source bytes, old environment configuration/package
 metadata, original checkout/index, and immutable assets remain preserved.
 Detailed receipts/logs are under `artifacts/r1-fresh-linux-2026-10-31/`. The retained
 `/tmp` staging can support R2 but is not a durable backup or student package.
+
+## Interactive evidence, October 31
+
+The R2 copy contains the same 110 source files initially; only the eight executed
+notebooks' outputs/metadata changed, with all source cells intact. All 16 figures
+were inspected in Chrome. JupyterLab's About dialog displayed 4.6.4; the named
+Python (PHYS 3810) kernel points to R1's 3.12.15 interpreter. Kernel registration
+and user/runtime settings were placed outside the frozen environment. This is a
+documented validation adaptation, not a certification of every literal setup
+command or editor path. The old environments, original checkout/index, verified
+PDFs, and archived releases/reviews remain preserved.
+
+An auxiliary per-cell timestamp comparison failed because the UI configuration
+stores no such timing metadata. Actual UI transitions, server lifecycle records,
+and completed saved outputs support the rerun result. The browser approval gate
+rejected `chrome://version` under its HTTP(S)-only policy; the version is marked
+unverified without a workaround. Evidence remains under ignored
+`artifacts/r2-interactive-2026-10-31/`. No student package or external handoff
+was created, and no additional algorithm review is due solely for these checks.

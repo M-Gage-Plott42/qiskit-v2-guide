@@ -3,13 +3,15 @@
 Updated October 31, 2026. **R1 passed:** fresh installation of unchanged pins
 on Linux/CPython 3.12.15 validated the corrected 160-test revision. See
 [R1_FRESH_LINUX_VALIDATION.md](R1_FRESH_LINUX_VALIDATION.md). All five bounded
-lessons and their technical reviews remain complete. **R2 interactive setup is
-next**; native-platform, teaching/pacing, matching PDF/package, and publication
-gates remain outstanding.
+lessons and their technical reviews remain complete. **R2's Linux/Chrome
+JupyterLab path passed**; see [R2_INTERACTIVE_VALIDATION.md](R2_INTERACTIVE_VALIDATION.md).
+Native editor UI remains untested and exact Chrome version unverified. R3 native
+platforms, teaching/pacing, matching PDF/package, and publication remain open.
 
 The original October 30 planning turn executed no readiness gate. The later R1
-task performed only internal source export, fresh dependency installation, and
-validation. No new student archive, PDF, upstream fetch, push, PR, merge, release,
+task performed internal source export, fresh dependency installation, and
+validation. R2 later used a separate copy for actual JupyterLab UI execution and
+return-workflow checks. No new student archive, PDF, upstream fetch, push, PR, merge, release,
 message, or hardware job was performed. The assistant owns technical review,
 repairs, packaging, and evidence; no manual user code audit is assigned.
 Rick's reply remains pending.
@@ -71,8 +73,13 @@ evidence/context updates are separate from the source actually installed/tested.
 - **Preserved and verified:** original checkout/index and recovery checkpoint,
   Grover rc1 assets, delivered v0.2 PDFs, and immutable 92-/158-test review ZIPs.
   The previous desktop review copies are absent; retained archives are intact.
+- **Interactive JupyterLab passed, October 31:** Chrome with JupyterLab 4.6.4,
+  explicit external named-kernel registration pointing at R1, all eight
+  notebooks/50 cells/16 figures through UI restart/run-all, save, shutdown,
+  relaunch, and preflight/Shor reruns. R1's frozen source/environment remained
+  unchanged. Native editor UI is untested; exact browser version is unverified.
 - **Not yet executed for the corrected classroom candidate:** native
-  Windows/macOS, interactive Jupyter/editor setup, timed
+  Windows/macOS, native editor setup, timed
   classroom rehearsal, new student-package extraction, or remote CI.
 - **Not yet supplied:** full-course, version-matched student/instructor PDFs.
   The existing v0.2 documents describe Grover-only rc1 (50 tests/four notebooks).
@@ -111,7 +118,12 @@ tools for applicable lint. Retain logs/failure artifacts outside tracked files.
 If a dependency repair is needed, scope it explicitly, regenerate evidence,
 and reassess review/platform implications; do not quietly upgrade the pins.
 
-### R2. Interactive setup and return workflow — next action
+### R2. Interactive setup and return workflow — JupyterLab path passed
+
+Completed for the Linux/Chrome path with documented preservation adaptations;
+see [the R2 evidence](R2_INTERACTIVE_VALIDATION.md). Native VS Code/Cursor remains
+untested, and exact Chrome version could not be inspected under browser policy.
+The original criteria below apply to any additional claimed UI/platform path.
 
 Actually launch JupyterLab from the validated environment, select the intended
 kernel, open preflight and the course lessons, restart/run all, and inspect
@@ -128,7 +140,7 @@ and the specific unavailable surface; do not substitute headless execution or
 assign the user a code audit. Linux setup can progress independently of the
 remaining native-platform decisions.
 
-### R3. Native-platform coverage — conditional on claimed classroom targets
+### R3. Native-platform coverage — next, conditional on targets and access
 
 Linux x86_64 is the demonstrated development platform. Windows x64 and macOS
 ARM64/Intel are candidate targets in [ENVIRONMENT.md](ENVIRONMENT.md), not passed
@@ -274,8 +286,8 @@ recorded fresh-install execution, not by prose changes. Later documentation
 checks cover Markdown, relative links, Git scope, and preserved bytes; they
 do not substitute for executing another gate.
 
-**Recommended next task:** R2, actual interactive setup using the retained R1
-source/environment. Verify their receipt before reuse; if temporary staging was
-removed, recreate the validated snapshot/environment rather than moving an old
-venv. Native-host, PDF, pacing, and publication steps remain later gates.
-**GPT Pro sync: not needed for unchanged-pin R1 validation.**
+**Recommended next task:** prepare/perform R3 on actual authorized native hosts.
+Inventory access and keep targets provisional pending Rick's reply; unavailable
+hosts remain untested. Retain R2's editor gap separately rather than claiming it
+passed. Do not provision new infrastructure or publish without applicable scope.
+**GPT Pro sync: not needed for the bounded R1/R2 validation.**

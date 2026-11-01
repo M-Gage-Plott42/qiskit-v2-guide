@@ -200,8 +200,14 @@ inventories the local commits and remaining gates. R1 passed on October 31:
 a fresh isolated CPython 3.12.15 environment installed unchanged pins and ran
 160 tests/eight notebooks/50 code cells/16 PNGs from source `9e73b82`. See
 [the fresh-install evidence](teaching/phys3810-fa2026/R1_FRESH_LINUX_VALIDATION.md).
-Next is R2 actual interactive setup using that retained source/environment.
-Native-platform, instructor/pacing, PDF/package, and publication gates remain
-open; fresh-kernel execution does not establish UI or fresh-OS readiness.
+R2's Linux/Chrome JupyterLab path has also passed through actual UI execution,
+figure inspection, shutdown/relaunch, and reruns; see
+[interactive evidence](teaching/phys3810-fa2026/R2_INTERACTIVE_VALIDATION.md).
+Native VS Code/Cursor UI remains untested because native app control is disabled;
+exact Chrome version remains unverified after its internal version URL was blocked.
+Do not infer those results from headless execution or bypass browser policy.
+Next prepare/perform R3 on actual authorized native hosts, keeping unavailable
+platforms and the editor path untested. Instructor/pacing, PDF/package, and
+publication gates remain open.
 No push, PR, merge, release change, external message, or hardware job is part
 of this local milestone. Preserve the original checkout/index and rc1 assets.

@@ -31,7 +31,10 @@ The [R1 fresh-install record](R1_FRESH_LINUX_VALIDATION.md) now adds October 31
 validation from source `9e73b82` in a new isolated CPython 3.12.15 environment:
 114 application distributions match active pins, plus pip 26.2.2; all 160 tests
 and eight notebooks pass. The [readiness plan](RELEASE_READINESS_PLAN.md) keeps
-that evidence separate from native-platform and interactive checks still needed.
+that evidence separate from native-platform checks still needed. The
+[R2 record](R2_INTERACTIVE_VALIDATION.md) adds actual Linux/Chrome JupyterLab
+execution and reopening with a preservation-specific external kernelspec.
+Native editor UI remains untested; exact Chrome version is unverified.
 Reference interfaces for the algorithm milestones are `QFTGate`,
 `phase_estimation()`, and `grover_operator()` with V2 primitives.
 

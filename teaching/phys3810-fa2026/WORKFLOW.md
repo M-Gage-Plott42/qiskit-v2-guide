@@ -89,18 +89,20 @@ source `9e73b82` installed unchanged pins into a fresh isolated Python 3.12.15
 environment and passed 160 tests/eight notebooks/50 cells/16 PNGs. See
 [R1_FRESH_LINUX_VALIDATION.md](R1_FRESH_LINUX_VALIDATION.md) for paths and receipts.
 
-Next execute R2 through actual UI access: verify the retained source/environment,
-launch JupyterLab, select the correct kernel, restart/run, inspect figures, and
-close/reopen. Check the intended editor workflow if accessible. Preserve the
-source snapshot and existing environments. If the temporary staging disappeared,
-recreate it from its exact commit/pins; never move a venv and claim it remains
-validated. Unavailable UI surfaces remain explicitly untested. R1 fresh kernels
-are not interactive setup evidence.
+R2's Linux/Chrome JupyterLab path has now passed through actual UI selection,
+restart/run-all, figure inspection, save, shutdown/relaunch, and preflight/Shor
+reruns. See [R2_INTERACTIVE_VALIDATION.md](R2_INTERACTIVE_VALIDATION.md).
+The frozen R1 export/environment are preserved. Native VS Code/Cursor UI is
+untested because native control is unavailable, and exact Chrome version is
+unverified after the internal version URL was blocked by browser policy.
+Neither limitation is a reason to relabel headless checks as UI evidence.
 
-Remaining gates cover native platforms, teaching feedback/rehearsal, protected
-upstream integration, matching PDFs, final packaging, and publication. Rick's
-reply remains pending. R1 produced internal validation evidence only and did not
-authorize external publication/messages or hardware work.
+Next prepare/perform R3 with actual authorized native-host access. Do not assume
+Linux or WSL certifies Windows/macOS; record unavailable targets as untested and
+keep required platforms provisional pending Rick. Retain the editor gap until
+an authorized UI path exists. Later gates cover teaching/pacing, protected
+upstream integration, matching PDFs, final packaging, and publication. R2 did
+not authorize publication, external messages, new infrastructure, or hardware.
 
 Do not broaden QPE, support nonexact HHL spectra, or claim general Shor arithmetic.
 Changes to supported families require a revised contract and appropriate evidence.

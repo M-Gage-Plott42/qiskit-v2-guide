@@ -136,7 +136,9 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    passes 160 tests and eight notebooks. Prepare release readiness next.
 5. **Teaching release.** Follow the staged
    [readiness plan](RELEASE_READINESS_PLAN.md). R1 fresh Linux installation has
-   [passed](R1_FRESH_LINUX_VALIDATION.md); interactive setup is next. Validate
+   [passed](R1_FRESH_LINUX_VALIDATION.md); the
+   [Linux JupyterLab path](R2_INTERACTIVE_VALIDATION.md) also passed. Native
+   editor/platform and pacing checks remain open. Validate
    setup instructions on the claimed classroom
    platforms, obtain the matching ChatGPT-reviewed PDF, rehearse the timed
    sessions, and check every notebook from a downloaded archive. Record any
