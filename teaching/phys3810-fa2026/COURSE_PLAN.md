@@ -1,8 +1,12 @@
 # PHYS 3810 · Fall 2026 course plan
 
-Three invited lecture/lab sessions for UTC **Introduction to Quantum Information
-Science and Technology**, planned for mid-to-late November 2026. This is a
-proposed teaching sequence; actual session dates are **not yet confirmed**.
+Invited lecture/lab sessions for UTC **Introduction to Quantum Information
+Science and Technology**. Updated November 1, 2026: the listed class period is
+**12:40–2:05 PM (85 minutes)**. Three visits remain the provisional planning
+basis; neither additional meetings nor the distribution of five topics is agreed.
+The bounded implementations and provisional preview are complete; see
+[the publication receipt](PUBLIC_PREVIEW_RELEASE.md) and
+[the current audit reconciliation](NOVEMBER_REVIEW_RECONCILIATION.md).
 
 ## Requested deliverables
 
@@ -13,14 +17,22 @@ Students will use this public repository. Downloading a release archive must
 be sufficient; Git knowledge, IBM accounts, credentials, and QPUs are not
 prerequisites.
 
-Milestone 1 supplies a draft setup guide for validation. The verified v0.2
-setup/instructor PDFs are ready for initial feedback; final classroom editions
+Milestone 1 supplied a draft setup guide for validation. The verified Grover v0.2
+setup/instructor PDFs remain historical review editions; final classroom editions
 follow platform validation and instructor feedback. Grover has since
 been implemented as milestone 2, followed by QFT, QPE, and the bounded HHL
 lesson and compiled N=15 Shor example. See
 [STATUS.md](STATUS.md) for current validation and review state.
 
 ## Scheduling and preparation
+
+The supplied course listing resolves the class length at 85 minutes and lists
+Monday/Wednesday meetings. An earlier scheduling proposal names **November 16,
+19, and 23, 2026**, retained as provisional dates. Calendar arithmetic gives
+Monday, Thursday, and Monday respectively: **November 19 conflicts with the
+regular Monday/Wednesday pattern**. Confirm whether it is an intended special
+meeting or a date correction; do not silently substitute November 18.
+No confirmed topic-to-date assignment or additional class date is recorded.
 
 UTC has no classes **November 25–29, 2026**; **November 30, 2026** is the last
 class day. These constraints were checked against the
@@ -31,12 +43,16 @@ The user sent the initial setup/Grover email on October 30; the instructor's
 reply is pending. Questions include the number of sessions and in-class topics,
 student Python/Jupyter preparation, format and assessment, teaching responsibility,
 and preferred notes/examples. See [the instructor review record](INSTRUCTOR_REVIEW_PLAN.md).
-These questions do not change the proposed three-session outline until answered.
+The earlier three-topic proposal covered QFT, Shor, and Grover; the later
+deliverables also include QPE and HHL. Confirm whether the additions belong
+inside the three visits, in extra meetings, or outside class. Keep the existing
+three-session grouping as one option rather than an instructor-approved route.
 
 Confirm with the instructor before finalizing lesson depth and exercises:
 
-- Session dates, room, meeting lengths, teaching responsibility, and the deadline
-  for complete materials.
+- Confirm the provisional dates, especially November 19, number of visits,
+  teaching responsibility, and complete-materials deadline. The listed 85-minute
+  period is resolved; do not keep asking for its duration without new evidence.
 - Students' Python/Jupyter experience, hands-on versus demonstration format,
   personal computers versus a managed lab, required operating systems, and
   installation restrictions.
@@ -62,7 +78,11 @@ teaching decisions without asking the instructor to install or audit the code.
 
 The [R4 presenter run sheets](R4_PRESENTER_RUN_SHEETS.md) now expand this outline
 into predictions, notebook transitions, demonstrations, exercises, debriefs,
-and fallback choices. Their 50/75-minute allocations remain provisional.
+and fallback choices. Their 50-minute cores and 75-minute expanded content
+routes remain provisional. Within the known 85-minute period, reserve the
+remaining **10 minutes for questions, recovery, and transition margin** instead
+of adding more content automatically. This 75+10 allocation is a planning
+option, not measured human pacing. The 50-minute core remains a fallback.
 [Local demonstration timings](R4_DEMONSTRATION_TIMINGS.md) were measured
 separately; no human pacing rehearsal or instructor agreement is claimed.
 
@@ -122,7 +142,7 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    amplification probabilities. Check SDK reference agreement and fresh-kernel
    execution in the supported environment.
    The rc1 preview is published. The corrected v0.2 delivery receipts now match
-   the existing PDFs; integrate those exact bytes in the planned documentation change;
+   the existing PDFs, which are already integrated unchanged;
    see [the release audit](GROVER_RELEASE_RECONCILIATION.md). Further publication
    remains a separately authorized action through the normal repository workflow.
 3. **QFT/QPE independently accepted; optional follow-ups reconciled.** Compare the QFT operator with the full Fourier matrix;
@@ -139,8 +159,8 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    The QPE target-width limit remains unchanged. The
    [reconciliation](HHL_SHOR_REVIEW_RECONCILIATION.md) records acceptance, the
    notebook status correction, and two optional improvements; current validation
-   passes 160 tests and eight notebooks. Prepare release readiness next.
-5. **Teaching release.** Follow the staged
+   passes 160 tests and eight notebooks. Technical implementation/review is complete.
+5. **Provisional preview published; final classroom readiness remains open.** Follow the staged
    [readiness plan](RELEASE_READINESS_PLAN.md). R1 fresh Linux installation has
    [passed](R1_FRESH_LINUX_VALIDATION.md); the
    [Linux JupyterLab path](R2_INTERACTIVE_VALIDATION.md) also passed. Native
@@ -157,15 +177,18 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    in isolation. Its [provisional document-review handoff](R6_DOCUMENT_REVIEW_HANDOFF.md)
    has returned and its [review-draft PDFs are verified](R6_DOCUMENT_REVIEW_RECONCILIATION.md).
    [R7 local preview packaging](R7_PREVIEW_VALIDATION.md) now passes its
-   acceptance/extraction checks. Prepare an R8 read-only/local readiness proposal
-   next. Teaching decisions, human pacing, unavailable platforms/editor paths,
+   acceptance/extraction checks. R8 and the separately authorized publication
+   are complete; [v0.2.0-rc1 is published](PUBLIC_PREVIEW_RELEASE.md).
+   New full-course document-v0.2 review editions are reconciled separately from
+   the frozen release's v0.1 documents. Teaching decisions, human pacing, unavailable platforms/editor paths,
    and final classroom editions remain open;
    Grover and full-course document/code identities remain distinct.
    Validate setup instructions on the claimed classroom
    platforms, obtain the matching ChatGPT-reviewed PDF, rehearse the timed
    sessions, and check every notebook from a downloaded archive. Record any
    intentionally unsupported platforms and unresolved teaching decisions.
-   Publication requires a separate maintainer action after review.
+   Any further publication requires separate authorization; do not repeat the
+   completed readiness or release sequence.
 
 Use current SDK circuits and V2 primitives. Canonical reusable implementations
 live in `src/phys3810/`, tests in `tests/`, and teaching notebooks in this
@@ -174,7 +197,7 @@ public-artifact conventions, and [STATUS.md](STATUS.md) for observed progress.
 Maintainer coordination, per-turn recommendations, and GPT Pro checkpoints are
 recorded in [WORKFLOW.md](WORKFLOW.md).
 
-Planning update, October 30: Git integration is complete and QPE is locally
+Historical planning update, October 30: Git integration is complete and QPE is locally
 validated under [QPE_PLAN.md](QPE_PLAN.md). The original checkout remains
 preserved under [GIT_INTEGRATION_PLAN.md](GIT_INTEGRATION_PLAN.md).
 The review's October 30-November 2 feedback window and November 2-6 QFT/QPE
@@ -183,4 +206,5 @@ QFT/QPE review is accepted; HHL/Shor are now locally validated under their
 written contracts, and the combined independent review is accepted. Freeze each
 session's materials at least one
 week before its confirmed date, after platform checks and a pacing rehearsal;
-actual dates, preparation, platform, and assessment decisions remain open.
+final dates, preparation, platform, and assessment decisions remain open.
+The November 1 scheduling evidence above supersedes the earlier unknown duration.

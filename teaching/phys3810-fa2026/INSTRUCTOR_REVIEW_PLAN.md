@@ -1,4 +1,51 @@
-# First instructor review packet
+# Instructor review packets and pending decisions
+
+## Current full-course packet, November 1, 2026
+
+The independent review supplies `PHYS3810_Rick_Review_2026-11-01.zip`, verified
+locally against the delivered receipt. See
+[the reconciliation](NOVEMBER_REVIEW_RECONCILIATION.md) for exact identities,
+checks, and limits. It contains the new full-course student/instructor v0.2
+review PDFs and companions, the unchanged published code ZIP/checksum, a reading
+map, and its receipt. This is an instructor-review packet, not a replacement
+student release; its instructor answers are intentional.
+
+Start with the four-page [student guide](handouts/PHYS3810_Full_Course_Student_Setup_v0.2_REVIEW_DRAFT.pdf),
+the six-page [instructor guide](instructor/PHYS3810_Full_Course_Instructor_Guide_v0.2_REVIEW_DRAFT.pdf),
+and the Grover and QPE notebooks as representative examples. The packet is ready
+for the user to send if desired. No new delivery, reply, or follow-up is recorded,
+and the assistant has no authorization to send an external message.
+
+The supplied documents predate the scheduling clarification and retain the
+50/75-minute content proposals and older open-duration wording. Keep their
+PDF/Markdown bytes synchronized and unchanged. In any later accompanying note,
+state that **the listed period is 85 minutes, 12:40–2:05 PM**; November 16, 19,
+and 23 are provisional. November 19 is Thursday, inconsistent with the listed
+Monday/Wednesday pattern. Do not repeat the audit's request for an unknown
+duration or silently rewrite the date. The [course plan](COURSE_PLAN.md) governs
+current scheduling assumptions; no extra PDF revision is needed just to ask
+for teaching clarification.
+
+Concentrate the remaining questions on decisions that change the materials:
+
+1. Confirm the three dates, especially November 19, whether more periods are
+   intended, teaching responsibility, and the complete-materials deadline.
+2. Decide how QPE/HHL relate to the earlier QFT/Shor/Grover proposal: fold into
+   three visits, add meetings, or use outside-class work; identify priorities,
+   prior coverage, and any preferred notes/examples.
+3. Confirm Python/Jupyter and mathematical preparation, student machines and
+   operating systems, installation permissions, and the delivery format.
+4. Decide guided worked examples versus assessment and when solutions may be
+   visible. Existing notebooks contain worked answers.
+
+While waiting, preserve the verified packet and avoid another readiness loop.
+A separately requested mocked GPU diagnostic repair is bounded useful code
+maintenance. A voluntary solo rehearsal can time a reusable Grover segment,
+but cannot establish student pacing; a full-course rehearsal should follow
+topic selection. No new platform work is justified without a target host and
+teaching requirement. GPT Pro sync is not needed for this reconciled audit.
+
+## Historical first setup/Grover packet
 
 October 30, 2026. **Initial setup/Grover email sent by the user; reply pending.**
 The user supplied a sent-message screenshot showing one student setup PDF
@@ -17,7 +64,7 @@ feedback. Record only teaching decisions from a later reply; keep private email
 text, addresses, and screenshots out of public repository files. The assistant
 has not sent an email or scheduled a follow-up.
 
-## Recommended packet (delivery beyond setup draft unconfirmed)
+### Recommended packet (delivery beyond setup draft unconfirmed)
 
 - Attach the [student setup guide v0.2](handouts/PHYS3810_Student_Setup_Grover_RC1_v0.2.pdf):
   three pages covering the environment, installation, validation, and notebooks.
@@ -35,7 +82,7 @@ The PDFs are tracked in the local documentation integration commit. Adding v0.2
 as public release assets remains a separate planned action.
 See [the authoritative PDF receipt](handouts/README.md).
 
-## Scope and claims for subsequent discussion
+### Scope and claims for subsequent discussion
 
 - This is the **first review packet**, covering setup and Grover. The published
   download does not include QFT, QPE, HHL, or Shor.
@@ -55,7 +102,7 @@ See [the authoritative PDF receipt](handouts/README.md).
   installing packages or auditing source. Technical review stays with Codex
   and the independent reviewer.
 
-## Decisions to request together
+### Decisions to request together
 
 1. **Schedule and delivery:** the three dates, available minutes per meeting,
    and deadline for the complete materials. Planning targets are not promises.
@@ -76,7 +123,7 @@ Do not silently reduce the requested deliverables or imply general scalable
 HHL/Shor implementations. Decide solution distribution after assessment goals
 are known; no student/instructor notebook split is implemented by this plan.
 
-## Audit evidence and subsequent work
+### Audit evidence and subsequent work
 
 The live release was rechecked on October 30: tag target
 `3894391f2026d4fd9351b346b44b5eda453a17da`, three original release assets, and
@@ -112,7 +159,7 @@ editions remain unchanged as the first instructor packet.
 receipt and independent phase-convention checkpoint are resolved. No extra technical
 audit is assigned to the user or instructor.
 
-## Subsequent local integration, October 30
+### Subsequent local integration, October 30
 
 Documentation and verified PDF bytes are tracked in local commit
 `b16d235ca01ebc9c7f610dcfeb64f081d5d6b453`. The following QFT commit carries

@@ -1,5 +1,25 @@
 # PHYS 3810 status
 
+November 1 post-publication review: **the independent audit is accepted, and
+the supplied full-course document-v0.2 review editions are reconciled locally.**
+See [the receipt and finding dispositions](NOVEMBER_REVIEW_RECONCILIATION.md).
+The reviewed baseline is `f4990b4`; published source remains `f717aea`.
+Repository navigation/status issues are repaired in documentation only. The
+optional GPU error-reporting finding is recorded for a separately scoped code
+fix. The new instructor edition resolves P3-01; the unchanged v0.1 edition still
+needs its reading note. Neither edition claims final classroom approval.
+
+The class period is now known: **12:40–2:05 PM, 85 minutes**. November 16, 19,
+and 23 remain provisional. November 19 is Thursday, inconsistent with the
+listed Monday/Wednesday schedule; confirm the date rather than substituting
+one. Session count beyond three and allocation of QPE/HHL remain unresolved.
+See [the course plan](COURSE_PLAN.md). No reply, outreach, human rehearsal,
+native-platform/editor check, commit, push, or new release occurred during the
+reconciliation. The subsequent CP-and-park instruction authorizes committing
+and pushing the documentation on `docs/phys3810-november-review`, then stopping.
+
+## Published preview and earlier milestones
+
 November 1, 2026 update: **the full-course provisional preview is published.**
 [Release v0.2.0-rc1](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-v0.2.0-rc1)
 uses source `f717aea`; PR #113 passed all nine required checks before normal
@@ -10,7 +30,7 @@ The original dirty checkout was preserved in verified stash `2705385` and recove
 files, then fast-forwarded to clean main. Completion documentation is delivered
 through the normal workflow. The requested preview is delivered; **wait for
 Rick's reply or a specific new change** rather than starting another preparation
-cycle. Final classroom, teaching/native/editor/pacing, and P3-01 gates remain open.
+cycle. Final classroom and teaching/native/editor/pacing gates remain open.
 
 As of October 31, 2026: **R7 local preview packaging passed.** The
 [builder contract](R7_PREVIEW_PACKAGE.md) and [execution evidence](R7_PREVIEW_VALIDATION.md)
@@ -208,28 +228,34 @@ QFT is excluded from the release; its local evidence is in [QFT_VALIDATION.md](Q
 
 ## Open teaching decisions
 
-Actual session dates, student preparation, session length, complete-materials
-deadline, format/platforms, and assessment expectations remain unknown. Confirm
+Final session dates/count, student preparation, complete-materials deadline,
+format/platforms, and assessment expectations remain unknown. The listed class
+length is 85 minutes; provisional dates and their conflict are recorded above. Confirm
 whether all five algorithms need in-class treatment or some support the wider
 course, and the intended depth/examples for HHL/Shor. Providing five tested
 implementations remains the requested deliverable. Proposed sequence:
 Grover; QFT/QPE; HHL/Shor.
-Each session has a 50-minute core and a 75-minute expansion in the course plan.
+Each session has a 50-minute core and a 75-minute expansion in the course plan;
+the proposed 85-minute envelope leaves 10 minutes of margin after that expansion.
 UTC has no classes November 25–29, and November 30 is the last class day;
 these facts do not establish the invited-session dates.
 
 ## Recommended next action
 
-**Wait for Rick's reply.** The user-requested provisional preview and recoverable
-Git cleanup are complete, subject to the final pushed branch-state receipt.
+**Wait for Rick's clarification; the verified review packet is available for
+the user to send if useful.** The provisional preview, Git recovery, and branch
+synchronization are complete. The documentation reconciliation is approved for
+commit and push on `docs/phys3810-november-review` by the subsequent CP-and-park
+instruction; no further preparation is scheduled.
 Resume only for confirmed teaching/platform/assessment decisions, a concrete
 reported defect, or a specific new request. No manual code audit is assigned.
 
-**GPT Pro sync: not needed now.** The next authored instructor edition should
-include P3-01 and confirmed teaching changes before final classroom distribution.
-The unchanged review PDFs are retained with an explicit availability notice.
+**GPT Pro sync: not needed now.** The received audit and v0.2 document editions
+cover the current code and close P3-01 in the new edition. A later final edition
+should incorporate confirmed teaching arrangements and the 85-minute schedule.
 User input needed for further classroom preparation: Rick's reply or a specific
-new scope; no additional implementation action is recommended in the meantime.
+new scope. One concrete optional GPU diagnostic repair remains available under
+separate code-edit authorization; no further content or readiness cycle is needed.
 
 At the previous reconciliation, required Python 3.12, lint, smoke, pre-commit,
 notebook cleanliness, link, and preservation checks passed. That evidence is under

@@ -3,8 +3,13 @@
 Prepared October 31, 2026. **Three proposed 50-minute cores and 75-minute
 expansions are ready for presenter preparation.** These are instructor notes
 with answer cues, not a confirmed schedule or assessed student handout.
-Rick's reply remains pending. The session count, dates, duration, coverage,
-background, delivery responsibility, platforms, and assessment remain open.
+Updated November 1: the listed class period is **85 minutes, 12:40–2:05 PM**.
+Retain the 75-minute content route with 10 minutes of questions/transition and
+recovery margin; the 50-minute core remains a fallback. These are proposed
+allocations, not a completed rehearsal. The provisional November 16/19/23 dates
+and November 19 weekday conflict are recorded in [COURSE_PLAN.md](COURSE_PLAN.md).
+Rick's reply remains pending. Final session count/dates, coverage, background,
+delivery responsibility, platforms, and assessment remain open.
 
 The assistant checked the mathematics, notebook dependencies, cell references,
 and minute totals. Local executable demonstrations were measured separately in
@@ -89,7 +94,7 @@ projector/readability/accessibility in the intended room; interactive latency
 of these particular parameter changes; the unavailable native platforms and
 native editor UI. Prior R2 figure inspection remains separate evidence.
 
-**Pending decisions:** agreed session lengths/count, dates, scope, preparation,
+**Pending decisions:** final session count/dates, scope, preparation,
 teaching role, delivery format, platforms, assessment/solution policy, and
 preferred examples. No email reply or agreement has been inferred.
 
@@ -98,7 +103,8 @@ preferred examples. No email reply or agreement has been inferred.
 Use one receipt per actual session/route. Do not prefill measured durations
 with the proposed minute budgets or machine timings.
 
-- Session and route (50-minute core or 75-minute expansion): pending.
+- Session and route (50-minute fallback or 75-minute content plus 10-minute
+  margin within the 85-minute period): pending.
 - Date, presenter, source commit, run-sheet revision: pending.
 - Actual host, interpreter/kernel, UI/browser/editor, room/display: pending.
 - Audience/background assumption and whether learners were present: pending.
@@ -118,13 +124,13 @@ only when the agreed scope and relevant real rehearsal evidence satisfy
 ## Next workflow step
 
 Keep these routes provisional while awaiting instructor feedback and an actual
-presenter run-through. The assistant can next perform **separately authorized
-R5 protected local upstream integration** without claiming the teaching gate
-is closed. Preserve this accepted history, refresh upstream, identify any
-changes, and validate the resulting local candidate. Native/editor checks,
-human pacing, matching PDFs, packaging, and publication remain distinct gates.
-No new PDF, student package, external message, or publication was created here.
+presenter run-through. R5 integration and the provisional publication are
+[complete](PUBLIC_PREVIEW_RELEASE.md); do not restart them from this historical
+run sheet. Select the agreed route before a full rehearsal. A voluntary solo
+rehearsal of a reusable Grover segment can inform presenter timing now, but does
+not establish class pacing or learner completion time. No new timed execution
+is needed solely for this scheduling update.
 
-GPT Pro sync is not needed for this unchanged-algorithm preparation. Prepare
-the next document/teaching sync once scope and candidate inputs stabilize, or
-earlier if a substantive unresolved technical change warrants it.
+GPT Pro sync is not needed for this documentation update. The
+[November audit](NOVEMBER_REVIEW_RECONCILIATION.md) is the current review;
+reopen it for material new requirements or an evidenced defect.

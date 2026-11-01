@@ -57,8 +57,13 @@ Run these first to validate local setup without IBM credentials:
 3. `notebooks/03_runtime_local_testing_mode.ipynb`
 
 The third notebook requires the optional Runtime install; it is not part of the
-classroom default. Run `python scripts/validate_classroom.py` for unit tests and
-fresh-kernel preflight plus notebooks `00` and `01` without credentials.
+classroom default. Run `python scripts/validate_classroom.py` for package checks,
+160 unit tests, and all eight required notebooks in separate fresh kernels:
+the two local smoke notebooks, classroom preflight, Grover, QFT, QPE, HHL, and
+Shor. The [student setup inventory](../teaching/phys3810-fa2026/SETUP.md#5-find-the-notebooks)
+lists their paths; the [validator](../scripts/validate_classroom.py) defines the
+required set. The recorded baseline is 50 nonempty code cells and 16 PNGs.
+This route runs without credentials and excludes optional Runtime/GPU execution.
 
 ## 5) IBM Runtime smoke test (optional cloud path)
 

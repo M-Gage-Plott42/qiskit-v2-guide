@@ -1,4 +1,25 @@
-# Grover document v0.2 receipt
+# Student document editions and receipts
+
+## Full-course document v0.2, November 1, 2026
+
+The new four-page [student setup review PDF](PHYS3810_Full_Course_Student_Setup_v0.2_REVIEW_DRAFT.pdf)
+and its [unchanged supplied Markdown companion](FULL_COURSE_SETUP_v0.2_REVIEW_DRAFT.md)
+identify the published full-course preview. Delivered PDF: 74,713 bytes,
+SHA-256 `4dc39dd536cf1e3c2e1a712dc92cbae6a605ba02d135e848523e78e0644a31b0`.
+The [November reconciliation](../NOVEMBER_REVIEW_RECONCILIATION.md) records
+verification and the distinct instructor edition. All six tested command/output
+blocks match the v0.1 companion. These are review drafts, not final approval or
+replacement release assets; no PDF was regenerated.
+
+The published ZIP still embeds the unchanged
+[full-course v0.1 PDF](PHYS3810_Full_Course_Student_Setup_v0.1_REVIEW_DRAFT.pdf)
+and [v0.1 companion](FULL_COURSE_SETUP_DRAFT.md), with its
+[publication notice](PUBLICATION_NOTICE.md). Their bytes and the frozen builders
+remain unchanged. New editions use new filenames; document v0.2 and code
+v0.2.0-rc1 are separate identities. Current scheduling assumptions are in the
+[course plan](../COURSE_PLAN.md), not retroactively inserted in supplied PDFs.
+
+## Historical Grover document v0.2 receipt
 
 Received and inspected October 30, 2026. These are **verified review drafts**
 for unchanged code release `phys3810-fa2026-grover-v0.1.0-rc1`, source commit

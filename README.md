@@ -26,10 +26,12 @@ The [Shor lesson](teaching/phys3810-fa2026/notebooks/05_shor.ipynb) adds compile
 full-domain N=15 order finding and verified classical factor recovery.
 The [full-course provisional preview](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-v0.2.0-rc1)
 packages all five bounded lessons with 160 tests/eight notebooks. Its release
-assets become available when that prerelease is published. The earlier Grover
+ZIP and checksum are published. The earlier Grover
 preview remains unchanged and intentionally excludes the later algorithms.
 Use the [current student setup](teaching/phys3810-fa2026/SETUP.md); preserved
-PDFs are prepublication review references with an explicit availability notice.
+v0.1 PDFs in the frozen package remain prepublication review references with an
+explicit availability notice. See the [document index](teaching/phys3810-fa2026/handouts/README.md)
+for separately supplied review editions.
 
 ## Quickstart
 

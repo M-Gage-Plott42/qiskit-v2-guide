@@ -79,19 +79,37 @@ data in public code, notebooks, documentation, outputs, or validation logs.
 preview is published at `phys3810-fa2026-v0.2.0-rc1`, source `f717aea`, after
 normal PR #113 and all nine required checks. Published ZIP/checksum bytes were
 verified anonymously. See [the publication receipt](teaching/phys3810-fa2026/PUBLIC_PREVIEW_RELEASE.md).
-The reviewed PDFs remain unchanged prepublication references; current public
-README/SETUP and a notice govern availability. No final classroom approval is
-claimed, and P3-01/teaching/native/editor/pacing decisions remain open.
+The frozen package's v0.1 student PDF and companion remain prepublication references;
+current public README/SETUP and a notice govern availability. The subsequent
+[November audit](teaching/phys3810-fa2026/NOVEMBER_REVIEW_RECONCILIATION.md)
+accepts main `f4990b4` and the published ZIP and supplies separate full-course
+document-v0.2 review editions. P3-01 is resolved in the new instructor edition;
+retain the v0.1 reading note. No final classroom approval is claimed, and
+teaching/native/editor/pacing decisions remain open.
 The user also explicitly requested clean Git state. The formerly dirty original
-checkout is now clean main; its exact original work/index are recoverable from
+checkout was restored to clean main before this docs-only update; its exact
+original work/index are recoverable from
 verified stash `2705385616e21718a10b73765946e430597dc4bf` and both recovery records.
 The accepted integration checkout remains a historical snapshot. Preserve that
 recovery data; do not use old active-checkout equality checks to reject the
 intentional fast-forward or discard/pop the recovery stash.
-After final completion documentation is pushed/merged, **wait for Rick's reply,
+Completion documentation is merged. **Wait for Rick's reply,
 a concrete defect, or a specific new request**. Do not repeat unchanged tests,
 packages, PDF reviews, or readiness planning. This completed authorization does
 not cover another release, external human messages, or hardware jobs.
+
+The November 1 reconciliation was documentation-only with no commit or push.
+The subsequent **CP and park** instruction authorizes committing and pushing
+that documentation on `docs/phys3810-november-review`, then stopping. It does
+not authorize another release, code repair, or external human message.
+Preserve all supplied PDF/companion bytes and frozen packages.
+The listed class period is **85 minutes (12:40–2:05 PM)**. November 16, 19, and
+23 remain provisional; November 19 is Thursday whereas the course listing says
+Monday/Wednesday. Do not silently correct it or infer extra meetings or how
+QPE/HHL fit the earlier three-topic proposal. Use 75 minutes of proposed content
+plus 10 minutes of margin, retaining the 50-minute fallback and untested human
+pacing. The optional GPU diagnostic finding is deferred code work, outside this
+docs-only turn. No new review, package, or algorithm work is needed just to wait.
 
 - The assistant owns implementation, technical review, testing, repairs, and
   documentation. Do not assign manual code/diff review to the user.
@@ -147,6 +165,12 @@ not cover another release, external human messages, or hardware jobs.
   revision, relative paths, and hashes of the delivered bytes, then require
   those bytes to be attached or made locally available before integrating them.
   Never claim to have read or applied an inaccessible private-sandbox copy.
+
+## Historical milestone record
+
+The dated sequence below preserves earlier decisions and evidence. Its old
+"next" instructions and checkout descriptions are superseded by the current
+position above; do not restart completed milestones from this history.
 
 Milestone 1's independent review was received and its required correction was
 demonstrated on October 29, 2026; see the

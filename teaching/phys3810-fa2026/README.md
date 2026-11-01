@@ -8,9 +8,9 @@ GPU, or quantum hardware is needed for the default lessons.
 ## Get the full-course preview
 
 1. Download [PHYS3810-Fall2026-v0.2.0-rc1.zip](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-v0.2.0-rc1/PHYS3810-Fall2026-v0.2.0-rc1.zip)
-   and extract the complete `phys3810-fa2026` folder. The versioned link becomes
-   available when [this prerelease](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-v0.2.0-rc1)
-   is published; use the named asset rather than GitHub's source-only archive.
+   and extract the complete `phys3810-fa2026` folder. This named asset is available
+   from [the published prerelease](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-v0.2.0-rc1);
+   use it rather than GitHub's source-only archive.
 2. Follow the [current setup instructions](SETUP.md), install the pinned
    environment, and run `python scripts/validate_classroom.py` from the extracted root.
 3. Expect 160 tests, eight fresh-kernel notebooks, 50 code cells, and 16 PNGs.
@@ -24,6 +24,8 @@ and [paired Markdown](handouts/FULL_COURSE_SETUP_DRAFT.md) are prepublication
 review drafts. Their old statement that the download is unpublished describes
 review-time availability. The current setup page governs this preview; see
 [the publication notice](handouts/PUBLICATION_NOTICE.md). No PDF was rewritten.
+See the [document index](handouts/README.md) for separately supplied review editions;
+they do not replace the files inside the frozen release ZIP.
 
 ## Lessons and limits
 
@@ -37,7 +39,9 @@ review-time availability. The current setup page governs this preview; see
 
 These are bounded instructional examples, not general scalable implementations
 or demonstrations of quantum advantage. The [course plan](COURSE_PLAN.md)
-proposes three 50-minute cores and 75-minute expansions; dates, coverage,
+retains 50-minute cores and 75-minute expansions as provisional activity routes
+within the now-confirmed 85-minute class period. November 16, 19, and 23 are
+provisional requested dates; the final dates, total session count, topic allocation,
 delivery arrangements, assessment, and solution distribution remain unconfirmed.
 
 The demonstrated path is Ubuntu/Linux with JupyterLab. Native Windows/macOS,
