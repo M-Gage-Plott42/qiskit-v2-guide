@@ -1,6 +1,14 @@
 # PHYS 3810 status
 
-As of October 31, 2026: **R6 provisional Markdown companions are prepared.**
+As of October 31, 2026: **The R6 Ubuntu student-guide walkthrough passed.**
+A fresh in-project `.venv` installed unchanged pins, registered the named kernel
+with `--sys-prefix`, and passed 160 tests/eight notebooks/50 cells/16 PNGs.
+Actual JupyterLab UI execution covered all eight notebooks and all 16 figures;
+shutdown/reopen with cleared-output preflight/Shor reruns also passed. See
+[R6_GUIDE_WALKTHROUGH_VALIDATION.md](R6_GUIDE_WALKTHROUGH_VALIDATION.md) for exact
+source/guide hashes, commands, UI coverage, and configuration limits.
+
+R6 provisional Markdown companions remain prepared.
 The [student setup draft](handouts/FULL_COURSE_SETUP_DRAFT.md) and
 [instructor guide draft](instructor/FULL_COURSE_INSTRUCTOR_DRAFT.md) are separate
 document-v0.1 inputs for proposed code-v0.2.0-rc1. They keep the unpublished
@@ -171,14 +179,13 @@ these facts do not establish the invited-session dates.
 
 ## Recommended next actions
 
-1. **Validate the new student guide literally on Ubuntu.** Use an isolated
-   source working copy and a new Python 3.12 environment; follow its commands,
-   ordinary in-project `.venv`/`--sys-prefix` kernel registration, and actual
-   JupyterLab restart/run/inspect/save/reopen steps. Preserve existing evidence
-   and environments, record the guide hash and observations, and repair only
-   concrete instruction issues. This internal-copy check cannot certify an
-   unpublished download or replace future package verification. No PDF or
-   archive is needed for that check.
+1. **Prepare the provisional GPT Pro document-review handoff.** Build one
+   standalone runnable review ZIP from the current candidate, including separate
+   student/instructor Markdown inputs and concise evidence; verify extraction
+   and copy it to the Ubuntu desktop. Supply its exact review prompt separately.
+   Request review-draft status with open teaching/platform/pacing decisions;
+   do not call this a student release or final classroom edition. Preserve the
+   old archives/PDFs and apply the existing exclusions and file-transfer rules.
 2. **Resume R3 when actual native hosts become available.** Follow the prepared
    procedures with exact source identity, fresh environments, native architecture
    checks, full validator, and actual UI evidence. Windows x64 and each macOS
@@ -192,8 +199,9 @@ these facts do not establish the invited-session dates.
 **GPT Pro sync: not needed now.** The HHL/Shor technical checkpoint is closed;
 D1 and the optional O1/O2 changes have direct local evidence. Sync again for
 unresolved mathematics, an expanded scope, or the matching final PDF/teaching
-checkpoint when its inputs are ready. User input needed for the completed R6
-Markdown preparation or the next isolated Ubuntu walkthrough: none. Actual native host access and instructor target decisions
+checkpoint when its concrete packet and prompt are ready. No new GPT Pro
+transfer occurred in this walkthrough. User input needed for the completed
+Linux check or provisional review-packet preparation: none. Actual native host access and instructor target decisions
 remain prerequisites for closing R3; agreed teaching scope and an observed
 presenter run-through are still needed to close R4. Share Rick's reply when
 received; no manual code audit is requested.
@@ -362,3 +370,37 @@ two inline Python parses, source/contract/count consistency, and pre-commit.
 Preservation checks confirmed 114 unchanged candidate files and all 51 R5
 evidence files, plus the earlier checkout/index/assets/environment receipts.
 The completion receipt records the new local commit and clean candidate status.
+
+## R6 literal Ubuntu walkthrough evidence, October 31
+
+Source `7b8a8e2` and the recorded student-guide bytes were exported to isolated
+staging outside both prior checkouts. Python 3.12.15 already existed; a new
+in-project `.venv` began with only bootstrap pip. Unchanged requirements installed
+114 application distributions matching active pins plus pip 26.2.2. The full
+validator and supplemental required checks passed. No command, dependency,
+algorithm, or contract repair was needed. The student guide's executable blocks
+remain identical; its introductory validation status is updated.
+
+All eight notebooks were explicitly assigned the named kernel and restarted,
+run, inspected, and saved through Chrome/JupyterLab 4.6.4. All 16 figures were
+visually inspected. The server was shut down, its tab closed, and JupyterLab
+reopened without reinstalling packages or re-registering the kernel. Preflight
+and Shor outputs were cleared and their kernels restarted/run again. Both server
+children exited zero; the first outer launcher session reported 143 during
+cleanup, with the application's shutdown independently confirmed. Final task
+server records are absent and task tabs are closed.
+
+Saved notebook counts/cell content corroborate the UI. First/final bytes are
+identical under the fixed seeds and configuration; reruns are evidenced by actual
+UI transitions and server logs, not inferred from timestamps or file changes.
+Working-copy notebook outputs/metadata changed, while source cells and the other
+115 exported files stayed intact. R1/R2 staging and existing environments,
+prior checkout/index states, PDFs, recovery material, and archives are preserved.
+No new PDF, student package, external transfer, publication, or hardware job was
+performed. Evidence is under `artifacts/r6-walkthrough-2026-10-31/`.
+
+Final documentation checks passed: 379 local file links, eight Bash syntax
+blocks, unchanged student-guide executable blocks, and pre-commit. All 114
+unchanged tracked files, ten prior Markdown evidence files, and 51 R5 evidence
+files retain their bytes. The completion receipt identifies the new local commit
+and clean candidate worktree; earlier checkout/index preservation is separate.

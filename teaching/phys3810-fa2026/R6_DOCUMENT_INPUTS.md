@@ -1,10 +1,11 @@
 # R6 provisional document inputs and handoff readiness
 
-Prepared October 31, 2026 from candidate
-`d491b3b59fe08e92aec29cfbdcb74b4eaa816556`. **Markdown input preparation only.**
-No new PDF, package, GPT Pro transfer, publication, or external message occurred.
-R6's PDF delivery/review gate remains open under the
-[readiness plan](RELEASE_READINESS_PLAN.md).
+Prepared October 31, 2026 from candidate `d491b3b`; subsequently updated with
+[the student-guide walkthrough](R6_GUIDE_WALKTHROUGH_VALIDATION.md) of committed
+source `7b8a8e2ed74bbcd7ceea27cd377fd73802d4927a`. **The Ubuntu setup/UI path
+passed; the PDF delivery/review gate remains open.** No new PDF, student package,
+GPT Pro transfer, publication, or external message occurred. Follow the
+[readiness plan](RELEASE_READINESS_PLAN.md) for the remaining gates.
 
 ## Two separate companions
 
@@ -42,8 +43,9 @@ the existing Grover-only ZIP is not a substitute for these eight-notebook notes.
   application environment using CPython 3.12.15; R5 reused it for the full
   required checks. Neither is a new operating-system/Python-installation test.
 - R5 passed **160 tests, eight required notebooks, 50 nonempty code cells,
-  and 16 PNGs**, with three figures each for HHL/Shor. This Markdown-only turn
-  carries those results forward; it does not claim a new runtime execution.
+  and 16 PNGs**, with three figures each for HHL/Shor. The original Markdown
+  preparation carried those results forward. The later R6 walkthrough separately
+  installed fresh dependencies and reproduced the full validator result.
 - The notebook inventory is six course files (`00_setup_preflight.ipynb`
   through `05_shor.ipynb`) plus the two root `notebooks/` smoke files. All are
   required by validation, even when live classroom discussion uses a subset.
@@ -58,31 +60,29 @@ the existing Grover-only ZIP is not a substitute for these eight-notebook notes.
   their existing contracts. No source, notebook, test, dependency, or supported
   input changes accompany these documents.
 
-## Literal student-command verification still needed
+## Literal student-command walkthrough — passed
 
-The student guide keeps the ordinary in-folder `.venv` and
-`ipykernel install --sys-prefix` route from existing setup documentation.
-R2 instead used a sibling R1 environment and a separately located named
-kernelspec, registered with `--user` under an isolated `JUPYTER_DATA_DIR`, to
-preserve the frozen environment. The guide states that its exact fresh-folder
-command sequence has not yet had a complete walkthrough. R2 validates observed
-Jupyter behavior, not every literal command or conventional environment path
-in this new draft. Syntax checking cannot close that distinction.
+The [walkthrough receipt](R6_GUIDE_WALKTHROUGH_VALIDATION.md) records the tested
+source/guide hashes, fresh in-folder `.venv`, unchanged dependency installation,
+ordinary `ipykernel install --sys-prefix` registration, and actual JupyterLab
+launch/select/restart/run/inspect/save/shutdown/reopen actions. All eight UI
+notebooks completed with 50 code cells and 16 inspected figures. Preflight and
+Shor were cleared, restarted, run, and saved again after reopening. Both server
+sessions stopped and the task tabs closed. No setup-command repair was needed.
 
-**Next executable check:** export an identified committed snapshot to a separate
-local working copy, then follow the new student guide in order on the accessible
-Ubuntu host with a new CPython 3.12 environment. Keep existing environments,
-R1/R2 staging, source checkouts, and evidence intact. Use the ordinary named
-kernel registration in that new environment; actually launch/select/restart/
-run/inspect/save/shut down/reopen through available browser UI. Record the guide
-hash, commands, interpreter/kernel paths, versions, saved counts/figures, observed
-UI actions, errors, and any scoped documentation repair. Run the full strict
-validator there. Do not manufacture an available download: this would validate
-an internal source copy, leaving actual package extraction/download to R7/R8.
+This is separate from R2's historical preservation-specific external kernelspec
+and sibling environment. The new run used task-local Jupyter/IPython/cache
+settings, authenticated loopback, and manual opening of the printed browser URL.
+Those isolation choices preserve existing settings; they do not certify arbitrary
+user configuration, automatic browser opening, native editor UI, or another OS.
+Python 3.12.15 already existed on the host. An internal committed-source export
+was used, so no unpublished download or sealed package extraction is certified.
 
-That check is recommended for a later authorized task and was **not executed**
-during this Markdown preparation. No new environment, package installation,
-kernel registration, or UI session was created here.
+The student guide now states this result. Its executable Bash/Python blocks
+remain identical to the tested draft; the test receipt retains the exact earlier
+whole-file hash. R1/R2 source, staging, and environments remain preserved.
+If a later reviewer changes setup commands, rerun the affected route and record
+its new guide/source identity before claiming the changed instructions passed.
 
 ## Remaining decisions and inputs
 
@@ -107,14 +107,15 @@ additional outreach is part of this task.
    Fast machine execution is not observed teaching or learner-completion time.
 5. **Document and package freeze:** confirm the final code/tag/asset identity,
    folder layout, document titles/editions, distribution scope, author/attribution
-   metadata, and which links are live versus explicitly planned. Complete the
-   literal student-command check and resolve any resulting text changes.
+   metadata, and which links are live versus explicitly planned. Keep the
+   completed Linux walkthrough linked to unchanged commands and recheck any
+   instruction changes introduced during document review.
 
 For final classroom editions, resolve the relevant decisions and support claims
 before treating the documents as final. A separately requested review-draft
 handoff may retain explicit provisional assumptions; it must not imply those
-decisions or missing platform/rehearsal checks are complete. This turn authorizes
-neither a new PDF nor a package.
+decisions or missing platform/rehearsal checks are complete. The completed walkthrough does not authorize
+new PDFs, packages, publication, or outreach.
 
 ## Later GPT Pro document handoff
 
@@ -133,7 +134,7 @@ the two audience-separated document inputs, and concise validation evidence.
 Exclude prompts, policy/chat files (including this coordination record), unrelated
 history, duplicate exports, caches, credentials, environments, and generated
 notebook outputs. Verify the extracted bundle and its manifest before transfer.
-Nothing is packaged or copied to the desktop in this turn.
+No handoff ZIP has yet been built or copied to the desktop for these documents.
 
 The document request should state the precise draft/final purpose and open
 decisions. ChatGPT authors/renders/visually reviews/OCR-checks the PDFs and
@@ -152,14 +153,16 @@ review/publication claims. Avoid a guide containing the checksum of the ZIP
 that contains that guide. Published links and final package bytes require their
 own later verification.
 
-## This turn's checks and boundary
+## Preparation checks and current boundary
 
-Local checks cover Markdown lint, relative file links, command syntax, notebook/
-contract/count/pin consistency, student/instructor separation, Git scope, and
-preservation. They do not execute the new setup sequence or certify rendered
-PDF layout, OCR, URL availability, native platforms, or human pacing.
+The original Markdown preparation checked lint, links, command syntax,
+notebook/contract/count/pin consistency, audience separation, Git scope, and
+preservation. It did not execute the setup sequence. The later walkthrough adds
+actual fresh-install/validator/UI evidence in its separate receipt. Neither
+step certifies rendered PDF layout, OCR, future URL availability, unavailable
+native platforms, or human pacing.
 
-**Passed:** all 365 local file links across tracked Markdown/notebook prose,
+**Passed at the original Markdown checkpoint:** all 365 local file links across tracked Markdown/notebook prose,
 five Bash block syntax checks and two inline Python command parses, the source-
 based notebook/count/pin checks, assistant content review, and the configured
 pre-commit hooks (Ruff, yamllint, markdownlint). All 114 unchanged candidate
@@ -171,9 +174,13 @@ distribution metadata. It does not hash every installed code/cache/OS byte.
 Evidence is retained under the candidate's ignored
 `artifacts/r6-markdown-2026-10-31/`, including the pre-edit source/R5-evidence
 hashes, checks, preservation receipts, and final commit/clean-state receipt.
-All original R5 evidence remains unchanged. Runtime checks are deliberately
-not repeated solely for prose edits; their last complete execution remains R5.
+All original R5 evidence remains unchanged. The later walkthrough evidence is
+under `artifacts/r6-walkthrough-2026-10-31/`; its fresh runtime run is distinct
+from the earlier Markdown-only checks.
 
-**GPT Pro sync: not needed for this provisional Markdown step.** The next
-recommendation is the literal Ubuntu guide walkthrough above; teaching feedback
-and unavailable-platform/human-rehearsal gates remain open in parallel.
+**GPT Pro sync: no transfer is due in this completed walkthrough turn.** Next
+prepare the concrete provisional document-review bundle and separate prompt
+under the established handoff rules. That packet can request clearly labeled
+review-draft PDFs while teaching decisions remain explicitly provisional; it
+must not announce final classroom readiness. Native-platform/editor and human-
+rehearsal gates remain open. Do not ask the user to assemble or audit the packet.

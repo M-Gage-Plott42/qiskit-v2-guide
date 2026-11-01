@@ -130,13 +130,23 @@ platform claims, bounded algorithm scope, and explicit pending teaching choices.
 file-transfer requirements. The [publication draft](CLASSROOM_PUBLICATION_DRAFT.md)
 keeps the proposed identity distinct from published Grover.
 
-Next validate the new student guide literally on Ubuntu, using a separate source
-copy and fresh environment. Record its exact hash, commands, selected interpreter,
-ordinary `.venv`/`--sys-prefix` registration, actual Jupyter UI actions, full
-validator results, and instruction repairs. R2's external-kernelspec preservation
-adaptation does not establish the literal route. No walkthrough occurred in the
-Markdown-only turn. An internal source copy does not validate a future download
-or student ZIP. Keep existing environments/staging/checkouts and receipts intact.
+The [literal Ubuntu guide walkthrough](R6_GUIDE_WALKTHROUGH_VALIDATION.md) now
+passed separately from the original Markdown-only preparation. It used a new
+in-folder `.venv`, unchanged pins, ordinary `--sys-prefix` registration, the
+full 160-test/eight-notebook validator, and actual UI execution of all eight
+notebooks with 50 cells/16 inspected figures. Shutdown/reopen and cleared-output
+preflight/Shor reruns passed. R2's historical adapted evidence is preserved.
+Task-local settings and manual browser opening are disclosed; the run does not
+validate another OS/editor, automatic browser opening, or a future download/ZIP.
+The guide commands required no repair and remain unchanged.
+
+Next prepare a provisional document-review handoff: one standalone runnable ZIP
+with the current student/instructor Markdown inputs and concise executed evidence,
+verified after extraction and copied to the desktop, plus the exact prompt in
+chat. Use the established exclusions and identify its source/manifest. This is
+a review transfer, not a student release or final classroom edition. No such
+bundle or transfer was created in the walkthrough task. Final PDFs still require
+the appropriate resolved inputs, review, and delivered-byte integration.
 
 Keep audience-specific content separate: the student guide contains setup/help,
 not model-review coordination or an instructor key. The current notebooks still

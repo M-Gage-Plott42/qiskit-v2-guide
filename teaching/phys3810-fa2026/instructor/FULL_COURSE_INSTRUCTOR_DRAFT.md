@@ -58,13 +58,23 @@ subsequent default validation and demonstrations are local.
   `ipykernel install --user`, with the kernelspec pointing to the retained
   interpreter in a sibling `venv`. It did not execute the ordinary
   `--sys-prefix` registration in a newly created in-project `.venv` through UI.
-  Do not describe every literal command in a new student setup draft as already
-  observed end to end. Verify that final student path before final support claims.
+  That historical R2 result does not certify the ordinary path; the later R6
+  walkthrough below supplies separate evidence for the student-guide sequence.
 - **Current runtime checks passed:** [R5](../R5_CANDIDATE_VALIDATION.md) reused
   the R1 environment and reran the required checks on unchanged runtime source:
   160 tests, eight fresh-kernel notebooks, 50 nonempty code cells, and 16 PNGs.
   It did not reinstall packages, perform a new UI run, or test a sealed student
   archive. The separate unit and validator invocations repeat the same 160 tests.
+- **Student-guide walkthrough passed:**
+  [R6](../R6_GUIDE_WALKTHROUGH_VALIDATION.md) used a new in-project `.venv`,
+  installed the unchanged pins, registered the named kernel with `--sys-prefix`,
+  and passed the full 160-test/eight-notebook/50-cell/16-PNG validator. Actual
+  JupyterLab UI execution also covered all eight notebooks and all 16 figures;
+  shutdown/reopening and cleared-output preflight/Shor reruns passed. Jupyter
+  settings were isolated to preserve existing user configuration, and the local
+  browser URL was opened manually. Automatic browser opening, a fresh Python/OS
+  install, and an unpublished package download were not tested. No setup-command
+  repair was needed; later guide edits record evidence without changing commands.
 - **Untested:** native Windows x64, macOS ARM64 and Intel, native VS Code/Cursor
   interpreter/kernel selection, and human pacing rehearsal. Exact Chrome version
   remains unverified. [Native procedures](../R3_NATIVE_PLATFORM_VALIDATION.md)
@@ -290,13 +300,11 @@ and record the presenter rehearsal; settle solution distribution; and freeze
 the intended source, document edition, package layout, and download wording.
 Keep unvalidated targets explicitly untested if a provisional review occurs.
 
-The next local verification can follow the new student guide literally on
-Ubuntu in a separate source copy and fresh CPython 3.12 environment, including
-the in-project `.venv`, ordinary `--sys-prefix` named-kernel registration, and
-actual JupyterLab launch/select/restart/run/save/reopen actions. That closes a
-different question from R2's preservation-adapted UI path. Preserve R1/R2 and
-record the new source, commands, UI observations, and any repairs; no ZIP or PDF
-is needed to perform that check.
+The literal Ubuntu student-guide walkthrough has now passed in an isolated
+working copy, with R1/R2 preserved. Keep its exact source/guide identity and
+configuration limits in the linked receipt. The next local step can prepare a
+provisional document-review handoff; no final teaching decision or unsupported
+platform claim should be inferred from the successful Linux setup check.
 
 The subsequent GPT Pro document handoff must contain actually accessible files
 and identify the exact reviewed snapshot. Rendering, visual inspection, OCR,

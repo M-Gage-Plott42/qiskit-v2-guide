@@ -10,9 +10,11 @@ lesson set. Use the complete folder your instructor approves for these lessons.
 These draft instructions use **64-bit CPython 3.12**, **Qiskit 2.6.1**, and
 **Aer 0.17.2** on Linux. Package installation and browser notebook use have
 passed on Ubuntu 26.04.1 LTS x86_64 with Python 3.12.15 and JupyterLab 4.6.4.
-The exact new-folder commands below still await a complete walkthrough: the
-observed browser run used a separately registered kernel. This remains a draft,
-not a promise that every computer or setup path has been tested.
+The in-folder `.venv`, installation, named-kernel registration, notebook
+execution, and shutdown/reopen steps below passed on that Ubuntu host with a
+fresh environment. The walkthrough used isolated Jupyter settings and opened
+the printed local URL manually; automatic browser opening was not checked.
+This remains a draft for the proposed course version.
 
 Native Windows x64, macOS ARM64/Intel, and VS Code/Cursor notebook setup are
 **untested** for this course version. Windows ARM64 and 32-bit Python are outside

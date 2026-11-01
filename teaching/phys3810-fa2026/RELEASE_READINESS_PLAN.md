@@ -15,8 +15,9 @@ scope/human pacing, matching PDF/package, and publication remain open.
 **R5 protected local integration passed** with unchanged upstream and all 13
 accepted commits preserved; see [R5_CANDIDATE_VALIDATION.md](R5_CANDIDATE_VALIDATION.md).
 Continue in the new candidate worktree named there. R6's provisional
-[Markdown document inputs](R6_DOCUMENT_INPUTS.md) are prepared; the literal
-student-command walkthrough and final PDF delivery/review remain open.
+[Markdown document inputs](R6_DOCUMENT_INPUTS.md) are prepared, and the
+[literal Ubuntu walkthrough](R6_GUIDE_WALKTHROUGH_VALIDATION.md) has passed.
+Final PDF delivery/review remains open.
 
 The original October 30 planning turn executed no readiness gate. The later R1
 task performed internal source export, fresh dependency installation, and
@@ -265,11 +266,15 @@ open decisions, file-transfer requirements, and later PDF review. Student text
 contains no maintainer coordination or instructor key; worked notebook outputs
 and assertions still need an explicit assessment/solution-distribution decision.
 
-Next perform the literal student-guide command/UI walkthrough on the accessible
-Ubuntu host in an isolated source copy and new environment. R2's preservation-
-adapted external-kernelspec run did not test the ordinary in-folder `.venv` and
-`--sys-prefix` sequence end to end. No such walkthrough or runtime rerun occurred
-in this Markdown-only step, and no future download/package is certified by it.
+The later [literal student-guide walkthrough](R6_GUIDE_WALKTHROUGH_VALIDATION.md)
+passed on the accessible Ubuntu host using an isolated source copy and new
+in-project `.venv`, unchanged pins, and ordinary `--sys-prefix` kernel registration.
+It passed 160 tests/eight notebooks/50 cells/16 PNGs and actual UI execution of
+all eight notebooks, plus shutdown/reopen reruns. This new evidence closes the
+ordinary Linux route gap left by R2's preservation-adapted external kernelspec;
+it does not retroactively change R2's method. Task-local settings and manual
+browser opening are disclosed. No future download, other platform/editor,
+automatic browser launch, or classroom pacing is certified by this result.
 
 Keep open decisions visible and use demonstrated setup claims; do not turn
 proposed dates, scope, assessment, or delivery into agreements. Final classroom
@@ -358,11 +363,11 @@ recorded fresh-install execution, not by prose changes. Later documentation
 checks cover Markdown, relative links, Git scope, and preserved bytes; they
 do not substitute for executing another gate.
 
-**Recommended next task:** validate the prepared student guide literally on
-Ubuntu in an isolated source copy/new CPython 3.12 environment, including the
-ordinary kernel registration and actual UI return workflow. Record exact guide/
-source identity and results; preserve previous environments and evidence. This
-requires no new PDF or student ZIP and cannot validate an unpublished download.
-Rick's decisions, R3, native editor UI, and human pacing remain open.
-**GPT Pro sync: not needed for provisional Markdown preparation.** Prepare the
-next document/teaching packet and exact prompt when the intended inputs are ready.
+**Recommended next task:** prepare the provisional GPT Pro document-review
+packet and exact separate prompt from the current candidate and completed Linux
+walkthrough evidence. Verify the standalone runnable review ZIP after extraction
+and copy it to the Ubuntu desktop using existing exclusions. Keep the intended
+PDFs clearly labeled review drafts while Rick's decisions, R3, native editor UI,
+and human pacing remain open. Do not present the handoff as a student release.
+**GPT Pro sync: not needed during this completed walkthrough turn.** The next
+task prepares concrete transferable evidence before requesting the sync.

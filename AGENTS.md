@@ -234,11 +234,17 @@ The candidate version/name is provisional and no tag/package exists. R6's
 separate full-course student/instructor Markdown drafts are prepared; see
 [the document input record](teaching/phys3810-fa2026/R6_DOCUMENT_INPUTS.md).
 They are document v0.1 drafts for proposed code v0.2.0-rc1, distinct from the
-unchanged Grover editions. Next validate the new student guide literally on
-Ubuntu in an isolated working copy/new environment, including its ordinary
-in-project `.venv` and `--sys-prefix` kernel path. R2's adapted external-kernel
-UI evidence does not establish that exact route. This drafting turn does not
-execute that walkthrough, create PDFs/packages, or transfer files to GPT Pro.
+unchanged Grover editions. The later
+[student-guide walkthrough](teaching/phys3810-fa2026/R6_GUIDE_WALKTHROUGH_VALIDATION.md)
+passed on Ubuntu with a fresh in-project `.venv` and ordinary `--sys-prefix`
+kernel registration: 160 tests/eight notebooks/50 cells/16 PNGs, plus actual UI
+execution of all eight notebooks and shutdown/reopen reruns. R1/R2 remain
+preserved; this separate result closes the ordinary Linux guide-route gap without
+relabeling R2's adapted test. Task-local settings and manual browser opening are
+disclosed; native editor/Windows/macOS and human pacing remain untested. No guide
+command repair was needed; only validation-status prose changed. Next prepare a
+provisional GPT Pro document-review bundle/prompt; no new transfer, PDF, or student
+package has been created in the walkthrough turn.
 Keep student instructions free of maintainer coordination and instructor answer
 cues. Separate instructor files do not make the existing worked notebooks an
 answer-free assessment. Teaching decisions, solution distribution, and actual
