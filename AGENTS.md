@@ -220,8 +220,19 @@ Three trials of all eight canonical notebooks and six derived cases passed
 Keep proposed teaching minutes, headless machine seconds, actual UI evidence,
 and human rehearsal distinct. R4's preparation is complete, but human pacing
 remains untested and Rick's teaching decisions remain pending.
-Next recommend separately authorized R5 protected local upstream integration;
-do not infer that current cached upstream refs are live or that R4 is closed.
+R5 protected local integration is complete; see
+[the candidate evidence](teaching/phys3810-fa2026/R5_CANDIDATE_VALIDATION.md) and
+[publication draft](teaching/phys3810-fa2026/CLASSROOM_PUBLICATION_DRAFT.md).
+The October 31 fetch confirmed origin/main remains `3894391`; all 13 accepted
+commits through `0570863` retain their IDs. Continue in the new durable
+`artifacts/local-candidate-2026-10-31/worktree` on
+`candidate/phys3810-fa2026-v0.2.0-rc1`, relative to the original repo. Preserve
+both the original dirty checkout/index and the accepted integration checkout
+at `0570863`. Required checks reran successfully with 160 tests/eight notebooks,
+50 cells/16 PNGs; this reused R1's environment, not a fresh installation or UI run.
+The candidate version/name is provisional and no tag/package exists. Prepare
+R6 Markdown inputs next; pending teaching decisions and human pacing do not
+become agreed merely because local Git integration passed.
 Keep the separate editor gap, native-platform, PDF/package, and publication gates open.
 No push, PR, merge, release change, external message, or hardware job is part
 of this local milestone. Preserve the original checkout/index and rc1 assets.

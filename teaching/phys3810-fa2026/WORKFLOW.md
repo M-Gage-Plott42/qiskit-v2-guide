@@ -113,13 +113,23 @@ result remains prior unit-test evidence; it was not rerun for these prose change
 Human pacing remains untested and Rick's target platforms, dates, scope,
 assessment, and delivery role remain open.
 
-Next recommend separately authorized R5 protected local upstream integration:
-preserve the accepted history, refresh upstream, reconcile in a new durable
-worktree if needed, and record the candidate mapping and required checks.
-This can proceed while teaching decisions/rehearsal remain open; it does not
-freeze unsupported classroom claims or authorize publication. Resume R3 when
-an actual authorized host exists; retain the native-editor gap separately.
-Matching PDFs, packaging, and publication remain later gates.
+R5 protected local integration is complete; see
+[R5_CANDIDATE_VALIDATION.md](R5_CANDIDATE_VALIDATION.md). Refreshed upstream is
+still `3894391`, so all 13 accepted commits keep their IDs. The accepted
+integration checkout stays at `0570863`. Continue in the new durable candidate
+`artifacts/local-candidate-2026-10-31/worktree` relative to the original repo,
+on `candidate/phys3810-fa2026-v0.2.0-rc1`. Runtime checks reran with 160 tests,
+eight notebooks/50 cells/16 PNGs in the reused R1 environment; no source repair,
+new installation, or UI check was needed or claimed.
+
+Next prepare provisional R6 Markdown inputs: version-matched full-course
+student/setup and instructor companions, actual platform claims, and explicit
+pending teaching decisions. The [publication draft](CLASSROOM_PUBLICATION_DRAFT.md)
+provides the proposed identity and later entry-point/package adaptations. No
+PDF or student ZIP should be produced from unstable inputs. Prepare the GPT Pro
+document/teaching sync when those inputs are ready, with accessible bytes and
+its prompt separate from the bundle. Resume R3 when an actual authorized host
+exists; retain the native-editor and human-rehearsal gaps separately.
 
 For presenter work, always label proposed teaching minutes, measured machine
 seconds, actual UI execution, and human rehearsal as distinct evidence. A

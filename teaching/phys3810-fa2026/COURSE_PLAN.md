@@ -149,8 +149,10 @@ examples; explain state preparation, readout, and arithmetic costs explicitly.
    native execution pending host access. R4's provisional presenter run sheets
    and local demonstration measurements are prepared; agreed teaching scope
    and human pacing rehearsal remain open while Rick's reply is pending.
-   R5 protected upstream integration is the next proposed local task, with a
-   separate instruction needed before refreshing upstream or reconciling it.
+   [R5 protected integration](R5_CANDIDATE_VALIDATION.md) is complete in a
+   separate candidate worktree; upstream was unchanged and required checks
+   passed again. Prepare provisional R6 Markdown companions next, retaining
+   the pending teaching decisions and distinct Grover/full-course identities.
    Validate setup instructions on the claimed classroom
    platforms, obtain the matching ChatGPT-reviewed PDF, rehearse the timed
    sessions, and check every notebook from a downloaded archive. Record any

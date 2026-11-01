@@ -12,12 +12,16 @@ untested because the user confirmed no extra host. See
 [provisional presenter preparation](R4_PRESENTER_RUN_SHEETS.md) and separate
 [machine timing checks](R4_DEMONSTRATION_TIMINGS.md) are complete. Agreed teaching
 scope/human pacing, matching PDF/package, and publication remain open.
+**R5 protected local integration passed** with unchanged upstream and all 13
+accepted commits preserved; see [R5_CANDIDATE_VALIDATION.md](R5_CANDIDATE_VALIDATION.md).
+Continue in the new candidate worktree named there.
 
 The original October 30 planning turn executed no readiness gate. The later R1
 task performed internal source export, fresh dependency installation, and
 validation. R2 later used a separate copy for actual JupyterLab UI execution and
-return-workflow checks. No new student archive, PDF, upstream fetch, push, PR, merge, release,
-message, or hardware job was performed. The assistant owns technical review,
+return-workflow checks. R5 subsequently performed the authorized read-only
+upstream fetch and protected local candidate preparation. No new student archive,
+PDF, push, PR, merge, release, message, or hardware job was performed. The assistant owns technical review,
 repairs, packaging, and evidence; no manual user code audit is assigned.
 Rick's reply remains pending.
 
@@ -63,7 +67,11 @@ Subsequent local documentation commits are `6b70fbd` (R1 evidence), `4c589fd`
 (R2 UI evidence), and `07831f4` (R3 procedures). R4 timings exported the exact
 `07831f4c806d2c4203ea03aa589c31983cbb08de` snapshot; its runtime remains unchanged.
 R4 run sheets/evidence form a later documentation-only change, not a new
-algorithm or student-package revision. No upstream refresh has occurred yet.
+algorithm or student-package revision. R4 was committed as `0570863`. R5 then
+refreshed upstream on October 31 and found `3894391` unchanged. Its separate
+candidate preserves all 13 local commit IDs; the complete mapping is in the
+[R5 evidence](R5_CANDIDATE_VALIDATION.md). The original integration checkout
+remains at `0570863`; R5 documentation is committed only on the candidate branch.
 
 ## Completed evidence and its limits
 
@@ -210,8 +218,18 @@ without assigning manual code review. Keep all required cells in validation even
 if only core discussion fits the session. Resolve solution distribution before
 shipping assessed variants; do not invent grading or duplicate notebooks now.
 
-### R5. Protected upstream integration and candidate identity — later local work
+### R5. Protected upstream integration and candidate identity — passed locally
 
+Completed October 31 in a separate durable candidate worktree. The
+[evidence](R5_CANDIDATE_VALIDATION.md) records the pre-fetch recovery bundle and
+restoration check, unchanged upstream, identity commit mapping, required Python
+3.12 checks, preserved bytes, and earlier-evidence assessment. The
+[publication draft](CLASSROOM_PUBLICATION_DRAFT.md) supplies a provisional
+full-course identity and concrete PR/release description without publishing.
+Both prior checkouts/indexes remain intact. Teaching/platform/PDF/package and
+publication gates remain open; this is not a classroom-ready declaration.
+
+The procedure below applies again if later upstream changes require integration.
 Before freezing publication inputs, preserve this accepted history and recovery
 material, then refresh upstream during a separately authorized integration task.
 Inspect changes since cached `3894391`; do not assume it is still current.
@@ -235,7 +253,14 @@ publication description. Choose a distinct full-course candidate version/name;
 check availability before publication. Do not reuse the Grover rc1 tag or
 pretend a 92-/158-test review ZIP contains the 160-test corrections.
 
-### R6. Matching student and instructor PDFs — when inputs stabilize
+### R6. Matching student and instructor PDFs — provisional Markdown next
+
+Provisional Markdown preparation can proceed in the R5 candidate while teaching
+choices remain pending. Keep open decisions visible, use demonstrated setup
+claims, and do not turn proposed dates, scope, assessment, or delivery into
+agreements. Full-course PDFs and final R6 completion require stabilized inputs
+and the existing ChatGPT review/delivery workflow. No PDF creation is authorized
+by the R5 task.
 
 Prepare synchronized Markdown companions using the agreed teaching scope,
 validated setup/platform claims, candidate version, notebook list, and current
@@ -317,12 +342,11 @@ recorded fresh-install execution, not by prose changes. Later documentation
 checks cover Markdown, relative links, Git scope, and preserved bytes; they
 do not substitute for executing another gate.
 
-**Recommended next task:** separately authorize R5 protected local upstream
-integration and candidate preparation. Preserve this accepted history, refresh
-upstream, inspect changes, reconcile in a new durable worktree if necessary,
-and rerun affected/full required checks. Keep Rick's decisions and actual human
-pacing open; R4 preparation does not close that gate. R3 stays open for future
-authorized native hosts, with R2's editor gap retained separately. Do not push,
-open a PR, merge into main, publish, or send messages as part of local integration.
-**GPT Pro sync: not needed for this unchanged-algorithm R4 preparation.** The
-next document/teaching checkpoint depends on stabilized inputs under R6.
+**Recommended next task:** prepare provisional R6 full-course Markdown
+companions in the new candidate worktree, using its proposed identity and
+verified setup evidence. Keep instructor material separate and unresolved
+teaching choices explicit; preserve the old Grover PDFs and live links.
+Do not create new PDFs, a student package, or publication as part of that draft
+preparation. R3, R2's native-editor gap, and human pacing stay open.
+**GPT Pro sync: not needed for unchanged-runtime R5 integration.** Prepare the
+next document/teaching packet and exact prompt when R6 inputs stabilize.

@@ -1,7 +1,17 @@
 # PHYS 3810 status
 
-As of October 31, 2026: **R4 provisional presenter run sheets are prepared, and
-local demonstration timing checks passed.** The [presenter index](R4_PRESENTER_RUN_SHEETS.md)
+As of October 31, 2026: **R5 protected local integration passed.** The fresh
+upstream check found no changes after `3894391`; all 13 accepted local commits
+through `0570863` remain intact. The new candidate worktree is
+`artifacts/local-candidate-2026-10-31/worktree` beneath the original repository,
+on `candidate/phys3810-fa2026-v0.2.0-rc1`. Required Python 3.12 checks passed:
+160 tests, eight fresh-kernel notebooks, 50 code cells, and 16 PNGs. The existing
+R1 environment was reused, not reinstalled. See
+[R5_CANDIDATE_VALIDATION.md](R5_CANDIDATE_VALIDATION.md) and the
+[provisional publication draft](CLASSROOM_PUBLICATION_DRAFT.md).
+
+R4 provisional presenter run sheets are prepared, and local demonstration
+timing checks passed. The [presenter index](R4_PRESENTER_RUN_SHEETS.md)
 links all three proposed sessions, each with a 50-minute core and 75-minute
 expanded route, predictions, notebook transitions, demonstrations, exercises,
 and debriefs. [Machine timing evidence](R4_DEMONSTRATION_TIMINGS.md) records
@@ -153,12 +163,13 @@ these facts do not establish the invited-session dates.
 
 ## Recommended next actions
 
-1. **Proceed to R5 under a separate local integration instruction.** Preserve
-   the accepted history, refresh upstream read-only, inspect changes since the
-   cached Grover base, and reconcile in a new durable worktree if needed. Record
-   candidate identity and commit mapping, rerun affected/full required checks,
-   and reassess earlier platform/UI evidence. No push, PR, merge, publication,
-   or external message is implied by this recommendation.
+1. **Prepare provisional R6 Markdown inputs in the new candidate worktree.**
+   Draft version-matched full-course student/setup and instructor companions
+   using the proposed identity and validated Linux path. Keep unavailable
+   platform/editor paths untested, coverage/assessment provisional, and
+   instructor answers separate. Do not create PDFs or a student package until
+   their required inputs and reviews are ready. The existing Grover editions
+   remain unchanged.
 2. **Resume R3 when actual native hosts become available.** Follow the prepared
    procedures with exact source identity, fresh environments, native architecture
    checks, full validator, and actual UI evidence. Windows x64 and each macOS
@@ -172,8 +183,8 @@ these facts do not establish the invited-session dates.
 **GPT Pro sync: not needed now.** The HHL/Shor technical checkpoint is closed;
 D1 and the optional O1/O2 changes have direct local evidence. Sync again for
 unresolved mathematics, an expanded scope, or the matching final PDF/teaching
-checkpoint when its inputs are ready. User input needed for the completed R4
-preparation: none. Actual native host access and instructor target decisions
+checkpoint when its inputs are ready. User input needed for the completed R5
+integration or provisional R6 Markdown preparation: none. Actual native host access and instructor target decisions
 remain prerequisites for closing R3; agreed teaching scope and an observed
 presenter run-through are still needed to close R4. Share Rick's reply when
 received; no manual code audit is requested.
@@ -285,3 +296,29 @@ confirmed original checkout/index, frozen R1 source, environment identity/
 distribution metadata, verified PDFs, reviewed archives, and Grover assets.
 The interruption left no failed/partial timing record; all 33 initial runs were
 retained before executing the nine additional Grover/QPE checks.
+
+## R5 protected candidate evidence, October 31
+
+The accepted integration worktree remains at `0570863` and its original raw
+index/status/files are preserved. The new candidate adds only Markdown R5
+context/evidence/publication planning. There were no upstream commits to replay,
+conflicts to repair, or algorithm changes. A complete pre-fetch Git bundle was
+verified, restored into an isolated bare repository, and checked against all
+118 accepted file hashes; the older recovery materials remain unchanged.
+
+R5 reran dependency, standalone unit, classroom-validator, Ruff, and Bash-smoke
+checks. Both unit invocations ran the same 160 tests; saved classroom outputs
+independently verify eight notebooks/50 cells/16 PNGs. The selected interpreter
+was R1's retained CPython 3.12.15. Source notebooks, dependency pins, workflows,
+verified PDF bytes, original Grover assets, and reviewed archives are unchanged.
+Final lint, all 311 local file links, Git-scope, and preservation checks passed;
+the completion receipt records the committed candidate's clean status.
+Evidence is under the original repository's
+`artifacts/local-candidate-2026-10-31/evidence/`.
+
+The provisional full-course identity is `v0.2.0-rc1`, separate from Grover rc1
+and document-v0.2. No matching remote tag was advertised by the exact read-only
+query; no tag or package was created, and availability must be rechecked before
+publication. Earlier R1/R2/R4 evidence retains its recorded source/method limits;
+no UI, native-platform, or human-pacing pass was added here. Rick's reply remains
+pending. No external write, publication, new PDF, or hardware job occurred.
