@@ -63,6 +63,10 @@ The corrected run-sheet positions are **4, 6, 8, 10, 12** for Grover;
 explicit in every affected explanation. Visible notebook section titles and
 first-code-line cues make those positions easier to find. The quickstart's
 already-correct parameter-first rule remains intact. Notebook code is unchanged.
+The final consistency scan also corrected the same ambiguity in Day 1's closing
+note and the current setup/course summaries. Those entry points now agree with
+the detailed sequences. Day 1 was rerun through the strict engine afterward;
+its code cells and all mathematical behavior remain unchanged.
 
 Four actual-cell regressions preserve pending edited code separately from the
 running namespace, show the stale-result negative control, then verify the
@@ -117,14 +121,13 @@ acceptance tests, Ruff/Markdown/YAML hooks including new files, whitespace, and
 through direct CLI and isolated-file import; no Git-backed code execution is
 used to discover historical profile requirements.
 
-**Refreshed visual/OCR checks passed:** two affected Markdown documents and two
-freshly executed guided notebooks, eleven screenshot tiles, and all seven
-affected figures. OCR token recall was 97.41–99.64%; recognition substitutions
-were checked against source/HTML/rendering. All fifteen affected code cells
+**Refreshed visual/OCR checks:** two affected Markdown documents and all three
+freshly executed guided notebooks, including the final Day 1 clarification.
+Recognition substitutions are checked against source/HTML/rendering. All 24 code cells
 match the rendered HTML. Nine student terminal command lines matched OCR after
 whitespace normalization; an instructor-command underscore substitution was
 checked visually. No clipping, overlap, or remaining rendering defect was found.
-Unchanged entrance, agenda, and Day 1 source bytes match the previous snapshot;
+Unchanged entrance and agenda source bytes match the previous snapshot;
 their prior visual/OCR evidence carries forward, not a new rendering claim.
 HTML/PNG rendering is neither new PDF production nor interactive UI testing.
 

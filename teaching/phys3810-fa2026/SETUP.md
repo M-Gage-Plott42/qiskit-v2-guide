@@ -88,7 +88,7 @@ Keep the terminal open. If the browser does not open, use the local URL printed 
 4. Check that every code cell finishes without errors and preflight shows a circuit drawing and measurement histogram. The notebook checks its numerical results; sampled counts need not match another computer exactly.
 5. Save with **File → Save Notebook**.
 
-Use the same registered environment for other lessons, with a separate kernel for each notebook. Start at the top. If you edit a parameter, rerun the calculations and plots that depend on it. Restart/run-all helps catch values left over from an earlier run.
+Use the same registered environment for other lessons, with a separate kernel for each notebook. Start at the top. If you edit a parameter, execute that parameter cell itself with Shift+Enter, then rerun the calculations and plots that depend on it. Restart/run-all helps catch values left over from an earlier run.
 
 <!-- pagebreak -->
 

@@ -31,7 +31,8 @@ stopping point in the presenter run sheet.
 2. **Day 2: Grover follow-along.** Use two qubits and one target among four
    candidates. Compare zero, one, and two iterations, with exact target
    probabilities 1/4, 1, and 1/4. Change the target and iteration count together
-   with the instructor, rerunning the dependent cells and captions.
+   with the instructor, executing the edited parameter cell first and then
+   rerunning its dependent calculations and captions.
 3. **Day 3, if available: QFT and QPE.** Inspect a two-qubit phase pattern,
    undo QFT, then prepare a target eigenstate for three-counting-qubit QPE.
    Use exact phases 3/8 and 1/8, yielding `011` and `001`. A probability
