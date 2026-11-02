@@ -11,8 +11,12 @@ artifact. Algorithm source, notebook code, pins, and strict runtime policy are
 unchanged. No additional GPT Pro round is needed solely for these repairs.
 The corrected source passes **205 tests, eleven fresh-kernel notebooks,
 74 code cells, and 27 PNGs** in the reused CPython 3.12.15 environment. Exact
-v0.2 export/extraction and refreshed affected render/OCR evidence are recorded
-in the reconciliation; prior 197-test results retain their own source identity.
+v0.2 export/extraction and refreshed affected render/OCR checks also passed.
+The [corrected packet](GUIDED_REVIEW_RECONCILIATION.md#corrected-desktop-packet)
+is on the Ubuntu desktop, frozen at `b393f63`; prior 197-test results and the
+original v0.1 archive retain their own source identities. Use the v0.2 packet
+for the walkthrough and await feedback. PR #122's actual-head checks remain
+the source of remote CI status; no merge or release is implied.
 
 ## Original guided-kit delivery
 

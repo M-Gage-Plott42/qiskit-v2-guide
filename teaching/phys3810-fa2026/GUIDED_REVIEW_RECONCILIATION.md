@@ -121,8 +121,10 @@ acceptance tests, Ruff/Markdown/YAML hooks including new files, whitespace, and
 through direct CLI and isolated-file import; no Git-backed code execution is
 used to discover historical profile requirements.
 
-**Refreshed visual/OCR checks:** two affected Markdown documents and all three
+**Refreshed visual/OCR checks passed:** two affected Markdown documents and all three
 freshly executed guided notebooks, including the final Day 1 clarification.
+Fourteen screenshot tiles and all eleven guided figures were visually inspected;
+OCR token recall was 97.41–99.64%.
 Recognition substitutions are checked against source/HTML/rendering. All 24 code cells
 match the rendered HTML. Nine student terminal command lines matched OCR after
 whitespace normalization; an instructor-command underscore substitution was
@@ -138,6 +140,30 @@ The kit still contains three guided plus eight reference notebooks; no new
 PDF, GPU repair, dependency update, hardware job, or external human message is
 part of this reconciliation. Current attribution remains **Gage Plott**, and
 student/instructor prose stays free of internal model/coordination notes.
+
+## Corrected desktop packet
+
+**Final exact extraction passed:** 205 tests, eleven fresh-kernel notebooks,
+74 code cells, 27 PNGs, no errors. Extraction used a separate path containing
+spaces and no Git metadata, with the same reused CPython 3.12.15 environment.
+All five course modules imported from that extraction; `PYTHONPATH` was unset.
+All 54 payload sizes, SHA-256 hashes, and modes remained unchanged afterward.
+Safe paths/CRC, output-free sources, 44 package-relative links, twelve exported
+Markdown files, and name/internal-terminology exclusions passed.
+
+- ZIP source: `b393f63fd8b3935db2195a57efa4046709d6643a`.
+- Name: `PHYS3810-Guided-Review-v0.2-b393f63fd8b3.zip`.
+- Size: **169,749 bytes**, 55 files / 54 manifested payloads.
+- SHA-256: `e18da8a5400aafe61e34ab530242bb0dcdc540a48c620c0c98f37062965652d1`.
+- The Ubuntu desktop copy matches the verified export exactly. The earlier
+  reviewed v0.1 archive remains unchanged beside it.
+
+An intermediate export preceded the final Day 1 wording scan and was not
+delivered. The final identified archive above received its own complete
+extraction validation. Results describe 205 distinct tests per full run, not
+the sum of repeated executions. This receipt-only follow-up does not alter
+the frozen packet source; current-head CI is recorded separately on PR #122.
+No new broad review, PDF round, or publication is performed by this delivery.
 
 ## Next action
 
