@@ -2,7 +2,10 @@
 
 This guide replaces the older PDF setup notes and aligns with current IBM Quantum/Qiskit documentation.
 
-For UTC PHYS 3810, use the shorter [student setup guide](../teaching/phys3810-fa2026/SETUP.md).
+For UTC PHYS 3810, use the [guided student quickstart](../teaching/phys3810-fa2026/guided/STUDENT_QUICKSTART.md)
+for the beginner review kit, or [published-preview setup](../teaching/phys3810-fa2026/SETUP.md)
+for the frozen full-course release. Only the documented Linux classroom path
+has execution evidence; native Windows/macOS and editor setup remain untested.
 The supported classroom stack is CPython 3.12, Qiskit 2.6.1, and Aer 0.17.2;
 the [environment decision](../teaching/phys3810-fa2026/ENVIRONMENT.md) records
 resolution and platform limits.
@@ -58,12 +61,17 @@ Run these first to validate local setup without IBM credentials:
 
 The third notebook requires the optional Runtime install; it is not part of the
 classroom default. Run `python scripts/validate_classroom.py` for package checks,
-160 unit tests, and all eight required notebooks in separate fresh kernels:
+the current checkout's complete unit suite, and the original eight required
+notebooks in separate fresh kernels:
 the two local smoke notebooks, classroom preflight, Grover, QFT, QPE, HHL, and
 Shor. The [student setup inventory](../teaching/phys3810-fa2026/SETUP.md#5-find-the-notebooks)
 lists their paths; the [validator](../scripts/validate_classroom.py) defines the
-required set. The recorded baseline is 50 nonempty code cells and 16 PNGs.
-This route runs without credentials and excludes optional Runtime/GPU execution.
+required set. The frozen public preview records 160 tests, 50 nonempty code
+cells, and 16 PNGs. The newer guided revision adds three teaching notebooks:
+`python scripts/validate_classroom.py --profile all` runs all eleven through the
+same strict engine. Its actual totals are recorded in [current evidence](../teaching/phys3810-fa2026/STATUS.md),
+not inferred from the earlier release. Both profiles run without credentials
+and exclude optional Runtime/GPU execution.
 
 ## 5) IBM Runtime smoke test (optional cloud path)
 

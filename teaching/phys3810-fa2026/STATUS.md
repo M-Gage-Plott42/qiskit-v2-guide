@@ -1,5 +1,29 @@
 # PHYS 3810 status
 
+November 2, 2026: **the beginner guided route is implemented and source validation
+passed: 197 tests, eleven fresh-kernel notebooks, 74 nonempty code cells, 27 PNGs.**
+The [contract](GUIDED_TEACHING_PLAN.md), [review entrance](guided/START_HERE.md),
+and [validation record](GUIDED_VALIDATION.md) identify the scope and evidence.
+The current task is completing rendering/OCR, exact exported-package checks,
+desktop delivery, and commit/push with CI. This is an instructor review kit,
+not a replacement release or final classroom approval.
+
+The received planning return reports two or three classes, no Python experience,
+no grading/evaluation/assignments/submissions, and demonstrations repeated on
+laptops. Material receipt is acknowledged; the instructor offers to deliver
+following a walkthrough, with detailed review and delivery arrangements still
+open. The proposed route is Python/Qiskit, Grover, QFT/QPE; the two-day fallback
+uses Python/Qiskit plus one algorithm day, default Grover. HHL and full compiled
+Shor remain references. All five implementations and their contracts are preserved.
+
+The current author name is **Gage Plott**. New audience-facing material excludes
+internal model/workflow notes. Historical PDF/companion bytes remain unchanged
+and excluded from this new packet. The original release at `f717aea`, reviewed
+documentation at `7600e85`, and recovery stash remain preserved. The optional GPU
+repair and dependency-update PRs are outside this scope.
+
+## Historical November 1 position
+
 November 1 post-publication review: **the independent audit is accepted, and
 the supplied full-course document-v0.2 review editions are reconciled locally.**
 See [the receipt and finding dispositions](NOVEMBER_REVIEW_RECONCILIATION.md).
@@ -228,34 +252,22 @@ QFT is excluded from the release; its local evidence is in [QFT_VALIDATION.md](Q
 
 ## Open teaching decisions
 
-Final session dates/count, student preparation, complete-materials deadline,
-format/platforms, and assessment expectations remain unknown. The listed class
-length is 85 minutes; provisional dates and their conflict are recorded above. Confirm
-whether all five algorithms need in-class treatment or some support the wider
-course, and the intended depth/examples for HHL/Shor. Providing five tested
-implementations remains the requested deliverable. Proposed sequence:
-Grover; QFT/QPE; HHL/Shor.
-Each session has a 50-minute core and a 75-minute expansion in the course plan;
-the proposed 85-minute envelope leaves 10 minutes of margin after that expansion.
-UTC has no classes November 25–29, and November 30 is the last class day;
-these facts do not establish the invited-session dates.
+Confirm final dates/count, algorithm priorities or substitutions, laptop/setup
+arrangements, prior quantum coverage, and delivery responsibility after the
+walkthrough. The listed period is 85 minutes, with 75 planned plus ten margin.
+November 16/19/23 remain provisional; November 19 is Thursday, conflicting with
+the listed Monday/Wednesday pattern. No substitute date or mandatory guest
+attendance has been inferred. Zero Python, laptop follow-along, and absence of
+assessment are now settled requirements, not open questions.
 
 ## Recommended next action
 
-**Wait for Rick's clarification; the verified review packet is available for
-the user to send if useful.** The provisional preview, Git recovery, and branch
-synchronization are complete. The documentation reconciliation is approved for
-commit and push on `docs/phys3810-november-review` by the subsequent CP-and-park
-instruction; no further preparation is scheduled.
-Resume only for confirmed teaching/platform/assessment decisions, a concrete
-reported defect, or a specific new request. No manual code audit is assigned.
-
-**GPT Pro sync: not needed now.** The received audit and v0.2 document editions
-cover the current code and close P3-01 in the new edition. A later final edition
-should incorporate confirmed teaching arrangements and the 85-minute schedule.
-User input needed for further classroom preparation: Rick's reply or a specific
-new scope. One concrete optional GPU diagnostic repair remains available under
-separate code-edit authorization; no further content or readiness cycle is needed.
+Complete and provide the focused beginner-kit review, then use its concise
+agenda for the walkthrough. No broad algorithm reaudit is needed. **GPT Pro sync:
+recommended after the verified kit is ready**, focused on novice explanations,
+editable-cell behavior, strict profile integration, and short documents.
+No user technical audit or further input is needed to finish this authorized
+scope. Teaching decisions above remain provisional until discussed.
 
 At the previous reconciliation, required Python 3.12, lint, smoke, pre-commit,
 notebook cleanliness, link, and preservation checks passed. That evidence is under

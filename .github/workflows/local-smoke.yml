@@ -39,7 +39,7 @@ jobs:
           bash scripts/smoke_local.sh artifacts/executed-local-smoke
 
       - name: Validate classroom environment and notebooks
-        run: python scripts/validate_classroom.py
+        run: python scripts/validate_classroom.py --profile all
 
       - name: Upload executed notebooks
         if: ${{ !cancelled() }}

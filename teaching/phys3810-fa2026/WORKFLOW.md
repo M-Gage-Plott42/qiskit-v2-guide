@@ -1,64 +1,50 @@
 # PHYS 3810 implementation workflow
 
-Updated November 1, 2026. This is maintainer guidance; the student entry point
+Updated November 2, 2026. This is maintainer guidance; the student entry point
 remains [README.md](README.md). The assistant owns technical review and tests.
 The user supplies teaching decisions and any external reviewer response that
 is not accessible in the current workspace.
 
 ## Source of truth and current position
 
-The current state is the published `phys3810-fa2026-v0.2.0-rc1` at `f717aea`,
-with completion documentation on main `f4990b4`. The
-[November audit reconciliation](NOVEMBER_REVIEW_RECONCILIATION.md) records
-independent source/archive validation and newly supplied document-v0.2 editions.
-P3-01 is resolved in that new instructor edition; preserve the earlier edition
-and its reading note. The reconciliation was documentation-only. The subsequent
-CP-and-park instruction authorizes its commit and push on
-`docs/phys3810-november-review`, followed by a stop pending new input.
-The older milestone descriptions below are historical evidence, not active
-instructions to repeat implementation, integration, publication, or testing.
+November 2, 2026: the accessible planning return reports the instructor's new
+requirements: two or three meetings, zero Python experience, live laptop
+follow-along, and no grading/evaluation/assignments/submissions. It reports
+receipt of materials and an offer to teach after a walkthrough; detailed
+approval and the final delivery arrangement are not established. The raw email
+and private calendar records were not independently accessed in this turn.
 
-Scheduling now uses an 85-minute period. The three November dates are
-provisional, with the November 19 weekday conflict retained explicitly in
-[COURSE_PLAN.md](COURSE_PLAN.md). Update teaching decisions from evidence;
-never promote an old proposal to confirmed coverage or invent additional visits.
+The [guided contract](GUIDED_TEACHING_PLAN.md) defines the new beginner layer:
+Python/Qiskit, Grover, QFT/QPE, and a two-day fallback. The canonical five-algorithm
+library, original notebooks, pins, frozen builders, PDFs, and releases remain
+unchanged. The default validator still selects eight reference notebooks;
+`--profile all` adds the three guided lessons through the same strict engine.
+The validator already includes pip check and unit discovery; run the full suite
+once for source acceptance, then again only for the distinct exact ZIP extraction.
 
-The available planning baseline is the supplied GPT Pro milestone brief,
-[COURSE_PLAN.md](COURSE_PLAN.md), and the milestone-1 implementation/validation
-report. GPT Pro's review of source manifest `06e22d9b5d2a` was received on
-October 29, 2026. It found no planning conflict, required one validator fix, and
-recommended proceeding to Grover after an evidenced correction without another
-approval round. [REVIEW_RECONCILIATION.md](REVIEW_RECONCILIATION.md) records the
-subsequent local reproduction, fix, tests, and remaining limitations.
+The user requests implementation, correctness and OCR checks, a runnable review
+ZIP copied to the Ubuntu desktop, commit/push, clean Git, and CI checks. This
+supersedes the quoted return's local-only boundary for those actions. Open a
+normal PR to trigger CI, retaining all existing required job names and pins;
+no merge, new release, external human message, dependency upgrade, or GPU repair
+is authorized. No unchanged-snapshot review loop is needed.
 
-Historical phase milestone: the independent QFT/QPE review was received and accepted
-with no blocking defects. It executed the immutable 92-test/six-notebook snapshot
-in a fresh Linux CPython 3.12.14 environment. Four optional follow-ups are now
-locally reconciled with 97 tests/six notebooks. See
-[QFT_QPE_REVIEW_RECONCILIATION.md](QFT_QPE_REVIEW_RECONCILIATION.md).
-The new local revision is distinguished from the exact ZIP GPT Pro executed.
-No additional phase-algorithm implementation or dependency change was needed.
+Audience-facing files use **Gage Plott** and exclude internal model names,
+review-transfer instructions, and maintainer coordination. Historical supplied
+PDF/companion bytes remain immutable and are excluded from the new kit. The old
+Grover attribution requires a corrected supplied edition before reuse. Current
+Markdown is rendered to HTML/PNG and OCR-checked without generating new PDFs.
+Record source identity, visual/OCR coverage, actual test/cell/figure counts,
+extraction imports/hashes, environment reuse, desktop receipt, and exact CI head
+in [the guided evidence](GUIDED_VALIDATION.md). Headless rendering is not UI or
+human-pacing evidence. Provide a focused GPT Pro prompt separately from the ZIP.
 
-The HHL implementation now follows [HHL_PLAN.md](HHL_PLAN.md), including raw
-success/failure amplitudes, exact-spectrum cleanup, and a strictly executed
-teaching notebook. See [HHL_VALIDATION.md](HHL_VALIDATION.md) for the executed
-checks and limitations. [SHOR_PLAN.md](SHOR_PLAN.md) is now implemented with a
-compiled full-domain N=15 example and a separate four-residue-qubit order finder.
-QPE stays bounded to one/two targets. The HHL/Shor independent review is
-accepted and its D1/O1/O2 follow-ups are reconciled; see
-[HHL_SHOR_REVIEW_RECONCILIATION.md](HHL_SHOR_REVIEW_RECONCILIATION.md).
-The current suite passes 160 tests and eight notebooks. The original reviewed
-158-test ZIP remains unchanged; a later distribution must identify its own revision.
-The original checkout/index, PDFs, Grover release, and reviewed phase ZIP remain
-intact. The user sent the initial setup/Grover email on October 30 and is awaiting
-the instructor's reply; only the setup PDF attachment is confirmed by the
-supplied screenshot. See [the instructor review record](INSTRUCTOR_REVIEW_PLAN.md).
-
-Keep responsibilities distinct: the course plan defines deliverables;
-`STATUS.md` records current evidence; `VALIDATION.md` records executed checks;
-this file defines the collaboration process. A new user instruction can change
-the plan. Record the resulting technical decision without publishing private
-correspondence. Reviewer suggestions require evaluation against code and tests.
+Remaining decisions: exact dates/count, priorities, laptop/setup support, prior
+quantum coverage, and delivery after the walkthrough. Retain 85 minutes as 75+10
+and the November 19 weekday caveat. Do not ask again whether grading/assignments
+are intended. Stop after the completed review kit and await walkthrough feedback
+or the focused review. The earlier parked-state passages below are historical;
+this new user request authorizes the bounded teaching adaptation.
 
 ## Every implementation turn
 

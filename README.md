@@ -10,28 +10,35 @@
 
 Minimal Qiskit 2.x smoke-test repo for reproducible workflow checks: local exact simulation (reference primitives), local Aer simulation (Aer primitives), and optional IBM Runtime hardware execution in job mode.
 
-**UTC PHYS 3810 (Fall 2026):** start at the
-[student landing page](teaching/phys3810-fa2026/README.md) for the release-download
-setup, preflight notebook, proposed sessions, and current delivery status.
+**UTC PHYS 3810 (Fall 2026):** material development by **Gage Plott**.
+Start with the [guided review kit](teaching/phys3810-fa2026/guided/START_HERE.md)
+for the beginner route: Python/Qiskit, Grover, then QFT/QPE. The two-day fallback
+is Python/Qiskit plus Grover. The instructor demonstrates complete worked
+examples and students repeat them on laptops; there is no grading, evaluation,
+assignment, or submitted work. Exact dates, laptop setup, algorithm priorities,
+and delivery following the walkthrough remain to be confirmed.
+
 The classroom environment uses CPython 3.12, Qiskit 2.6.1, and Aer 0.17.2.
-The first algorithm lab, [Grover search](teaching/phys3810-fa2026/notebooks/01_grover.ipynb),
-includes reusable source, independent tests, and 50/75-minute teaching activities.
-The [QFT introduction](teaching/phys3810-fa2026/notebooks/02_qft.ipynb) is also
-included as the first part of the QFT/QPE session.
-The [QPE lesson](teaching/phys3810-fa2026/notebooks/03_qpe.ipynb) completes that
-session with declared register order, exact phases, and nonexact distributions.
-The [HHL lesson](teaching/phys3810-fa2026/notebooks/04_hhl.ipynb) adds a bounded
-2x2 linear-system state-preparation example with explicit postselection.
-The [Shor lesson](teaching/phys3810-fa2026/notebooks/05_shor.ipynb) adds compiled
-full-domain N=15 order finding and verified classical factor recovery.
-The [full-course provisional preview](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-v0.2.0-rc1)
-packages all five bounded lessons with 160 tests/eight notebooks. Its release
-ZIP and checksum are published. The earlier Grover
-preview remains unchanged and intentionally excludes the later algorithms.
-Use the [current student setup](teaching/phys3810-fa2026/SETUP.md); preserved
-v0.1 PDFs in the frozen package remain prepublication review references with an
-explicit availability notice. See the [document index](teaching/phys3810-fa2026/handouts/README.md)
-for separately supplied review editions.
+The new review kit includes eleven notebooks: three guided lessons and eight
+reference/validation notebooks. Run `python scripts/validate_classroom.py --profile all`
+from the repository root, or the extracted kit's `runtime` folder. Default
+validator membership remains the original eight notebooks. See
+[current evidence](teaching/phys3810-fa2026/STATUS.md) for measured revision totals.
+
+The complete library still covers bounded [Grover](teaching/phys3810-fa2026/notebooks/01_grover.ipynb),
+[QFT](teaching/phys3810-fa2026/notebooks/02_qft.ipynb),
+[QPE](teaching/phys3810-fa2026/notebooks/03_qpe.ipynb),
+[HHL](teaching/phys3810-fa2026/notebooks/04_hhl.ipynb), and
+[compiled N=15 Shor](teaching/phys3810-fa2026/notebooks/05_shor.ipynb).
+HHL and full Shor are supporting references outside the proposed beginner core.
+
+The [published full-course preview](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-v0.2.0-rc1)
+remains an unchanged, separately identified archive with 160 tests/eight notebooks.
+Its ZIP/checksum and earlier Grover assets are preserved; the new guided review
+kit is not a replacement release. Use [published-preview setup](teaching/phys3810-fa2026/SETUP.md)
+for that frozen ZIP and the [guided quickstart](teaching/phys3810-fa2026/guided/STUDENT_QUICKSTART.md)
+for the new kit. Existing [PDF editions](teaching/phys3810-fa2026/handouts/README.md)
+remain historical references.
 
 ## Quickstart
 
@@ -107,10 +114,12 @@ Backend inventories and names change over time; this repo intentionally avoids h
 
 ## Automation
 
-- Cross-platform classroom validation: `python scripts/validate_classroom.py`.
+- Classroom validation: `python scripts/validate_classroom.py` retains the original
+  eight notebooks; `--profile all` also includes the three guided lessons.
 - Original local smoke test: `bash scripts/smoke_local.sh`.
 - CI retains the local smoke path (`00` and `01`) and runs offline unit tests,
-  classroom preflight, Grover, QFT, QPE, HHL, and Shor on pushes and pull requests.
+  classroom preflight, Grover, QFT, QPE, HHL, Shor, and the three guided lessons
+  under the all profile on main pushes and pull requests.
 - Required workflows now use workflow-level concurrency and `merge_group`
   triggers so checks stay reusable with merge queues.
 - Dependency review runs by default on public repos; private copies can enable

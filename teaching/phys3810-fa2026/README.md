@@ -5,7 +5,23 @@ QFT, QPE, exact-spectrum HHL, and compiled N=15 Shor order finding. It uses
 64-bit CPython 3.12, Qiskit 2.6.1, and Aer 0.17.2. No Git experience, IBM account,
 GPU, or quantum hardware is needed for the default lessons.
 
-## Get the full-course preview
+## Beginner follow-along route
+
+Material development: **Gage Plott**. For the new two- or three-day teaching
+proposal, start with the [guided review kit](guided/START_HERE.md):
+Python/Qiskit first, Grover next, then QFT/QPE if a third day is available.
+The two-day fallback uses Python/Qiskit plus Grover. Lessons are complete worked
+examples demonstrated by the instructor and repeated on laptops, with no
+assignments, grading, evaluation, or submissions.
+
+The guided kit is separate from the frozen public release below. Its complete
+support tree includes three guided notebooks plus the eight original
+reference/validation notebooks. Use its [quickstart](guided/STUDENT_QUICKSTART.md)
+and run `python scripts/validate_classroom.py --profile all` from its `runtime`
+folder to check all eleven. In this repository, run the same command from the
+repository root. [Current evidence](STATUS.md) records actual revision totals.
+
+## Get the unchanged full-course preview
 
 1. Download [PHYS3810-Fall2026-v0.2.0-rc1.zip](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-v0.2.0-rc1/PHYS3810-Fall2026-v0.2.0-rc1.zip)
    and extract the complete `phys3810-fa2026` folder. This named asset is available
@@ -13,7 +29,8 @@ GPU, or quantum hardware is needed for the default lessons.
    use it rather than GitHub's source-only archive.
 2. Follow the [current setup instructions](SETUP.md), install the pinned
    environment, and run `python scripts/validate_classroom.py` from the extracted root.
-3. Expect 160 tests, eight fresh-kernel notebooks, 50 code cells, and 16 PNGs.
+3. In this frozen release ZIP, expect 160 tests, eight fresh-kernel notebooks,
+   50 code cells, and 16 PNGs.
    Optional Runtime/GPU execution is skipped. A traceback or failed check needs
    attention; do not bypass an unexecuted required cell.
 4. Open [preflight](notebooks/00_setup_preflight.ipynb) in JupyterLab, select
@@ -39,10 +56,11 @@ they do not replace the files inside the frozen release ZIP.
 
 These are bounded instructional examples, not general scalable implementations
 or demonstrations of quantum advantage. The [course plan](COURSE_PLAN.md)
-retains 50-minute cores and 75-minute expansions as provisional activity routes
-within the now-confirmed 85-minute class period. November 16, 19, and 23 are
-provisional requested dates; the final dates, total session count, topic allocation,
-delivery arrangements, assessment, and solution distribution remain unconfirmed.
+now starts with zero Python experience and uses 75-minute activity routes plus
+ten minutes of margin within the listed 85-minute class period. November 16, 19,
+and 23 remain provisional; November 19 conflicts with the Monday/Wednesday
+pattern. Final dates/count, priorities, laptop setup, prior quantum coverage,
+and delivery after the walkthrough remain open. Assessment is resolved: none.
 
 The demonstrated path is Ubuntu/Linux with JupyterLab. Native Windows/macOS,
 native editor UI, and human pacing remain untested. This preview is not final

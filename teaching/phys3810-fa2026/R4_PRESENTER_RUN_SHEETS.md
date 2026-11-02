@@ -1,4 +1,21 @@
-# R4 provisional presenter run sheets
+# Earlier presenter routes and current beginner direction
+
+## Current route, November 2, 2026
+
+Material development: **Gage Plott**. The instructor's reply establishes zero
+Python experience, two or three classes, live laptop follow-along, and no
+grading, evaluation, assignments, or submissions. Use the new
+[guided presenter run sheet](guided/INSTRUCTOR_RUN_SHEET.md): Python/Qiskit,
+Grover, then QFT/QPE, with Python/Qiskit plus Grover as the two-day fallback.
+HHL and full Shor remain references. Rick offers to teach after a walkthrough;
+exact dates, algorithm priorities, laptop setup, prior quantum coverage, and
+final delivery remain open.
+
+## Historical R4 preparation, October 31, 2026
+
+The following records the earlier route and measurements. It is retained as
+reference material rather than the active beginner schedule. Its unknown
+programming background and assessment questions were answered on November 2.
 
 Prepared October 31, 2026. **Three proposed 50-minute cores and 75-minute
 expansions are ready for presenter preparation.** These are instructor notes
@@ -8,8 +25,8 @@ Retain the 75-minute content route with 10 minutes of questions/transition and
 recovery margin; the 50-minute core remains a fallback. These are proposed
 allocations, not a completed rehearsal. The provisional November 16/19/23 dates
 and November 19 weekday conflict are recorded in [COURSE_PLAN.md](COURSE_PLAN.md).
-Rick's reply remains pending. Final session count/dates, coverage, background,
-delivery responsibility, platforms, and assessment remain open.
+At that preparation date, the instructor's reply was pending. The current
+requirements and remaining decisions are stated above.
 
 The assistant checked the mathematics, notebook dependencies, cell references,
 and minute totals. Local executable demonstrations were measured separately in
@@ -17,7 +34,7 @@ and minute totals. Local executable demonstrations were measured separately in
 rehearsal remains untested.** Fast code does not establish that explanations,
 prediction pauses, learner work, or transitions fit these proposed budgets.
 
-## Choose the provisional route
+## Earlier route inventory
 
 1. [Session 1: Grover](instructor/R4_SESSION_1_GROVER.md). Core: readiness and
    notation 0–5, oracle 5–15, diffusion 15–25, small search and sampled outcomes
@@ -72,9 +89,9 @@ teaching time inside the stated blocks, even when the machine runs quickly.
   run fails, say so; a retained plot can support explanation but does not prove
   the current run passed. Never replace a failed demonstration with an invented
   timing or claim that the learners completed it.
-- The answer cues are instructor material. Until assessment and solution
-  distribution are agreed, do not create graded variants, move answers into a
-  student package, or assume an exercise is homework or a submitted assessment.
+- The earlier sheets contain instructor answer cues. In the current guided
+  route, complete worked results are visible and no grading or submission is
+  expected. Do not reinterpret these reference exercises as assignments.
 
 ## Separate evidence categories
 
@@ -94,9 +111,10 @@ projector/readability/accessibility in the intended room; interactive latency
 of these particular parameter changes; the unavailable native platforms and
 native editor UI. Prior R2 figure inspection remains separate evidence.
 
-**Pending decisions:** final session count/dates, scope, preparation,
-teaching role, delivery format, platforms, assessment/solution policy, and
-preferred examples. No email reply or agreement has been inferred.
+**Current pending decisions:** final session count/dates, algorithm priorities,
+prior quantum coverage, laptop/setup arrangements, and delivery after the
+walkthrough. Programming background, laptop follow-along format, and absence
+of assessment are now established.
 
 ## Presenter rehearsal receipt — blank until a real run occurs
 
@@ -121,16 +139,11 @@ does not establish learner completion time. Record that distinction. R4 closes
 only when the agreed scope and relevant real rehearsal evidence satisfy
 [RELEASE_READINESS_PLAN.md](RELEASE_READINESS_PLAN.md), with revisions recorded.
 
-## Next workflow step
+## Next teaching step
 
-Keep these routes provisional while awaiting instructor feedback and an actual
-presenter run-through. R5 integration and the provisional publication are
-[complete](PUBLIC_PREVIEW_RELEASE.md); do not restart them from this historical
-run sheet. Select the agreed route before a full rehearsal. A voluntary solo
-rehearsal of a reusable Grover segment can inform presenter timing now, but does
-not establish class pacing or learner completion time. No new timed execution
-is needed solely for this scheduling update.
-
-GPT Pro sync is not needed for this documentation update. The
-[November audit](NOVEMBER_REVIEW_RECONCILIATION.md) is the current review;
-reopen it for material new requirements or an evidenced defect.
+Use the concise [walkthrough agenda](guided/REVIEW_AGENDA.md) and current run
+sheet to settle the remaining teaching choices. A real presenter run-through
+can establish that presenter's timing; it does not establish learner completion.
+The preserved machine timings do not close the human-pacing question. Do not
+repeat old integration, publication, or validation work merely because these
+reference sheets remain available.

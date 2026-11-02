@@ -30,16 +30,18 @@ rulesets as part of instructional work.
 Use the documented Python 3.12 classroom environment. From the repository root:
 
 ```bash
-python -m pip check
-python -m unittest discover -s tests -v
-python scripts/validate_classroom.py
+python scripts/validate_classroom.py --profile all
 python -m ruff check src scripts tests teaching/phys3810-fa2026/notebooks notebooks/00_local_statevector_smoke.ipynb notebooks/01_local_aer_smoke.ipynb
 bash scripts/smoke_local.sh
 pre-commit run --all-files
 ```
 
 The Python validator is the cross-platform classroom entry point; the Bash
-command retains the existing smoke workflow. Run each required notebook from a
+command retains the existing smoke workflow. The validator includes pip check
+and the complete unit suite: do not immediately repeat unittest discovery.
+Its default inventory remains eight reference notebooks; `--profile all` also
+executes the three beginner guided notebooks and is required for that route.
+Run each required notebook from a
 fresh kernel, with the selected environment's interpreter, and fail on cell
 errors. Printed output and stored notebook output are not proof of correctness.
 Required nonempty code cells must all execute: reject `skip-execution`, force
@@ -74,6 +76,35 @@ Do not put private correspondence, credentials, account identifiers, or student
 data in public code, notebooks, documentation, outputs, or validation logs.
 
 ## PHYS 3810 collaboration and handoffs
+
+**Current position, November 2, 2026:** the instructor response establishes two
+or three classes, zero Python experience, no grading/evaluation/assignments or
+submissions, and live demonstrations repeated on laptops. The instructor offers
+to deliver after a walkthrough; detailed approval and final delivery remain open.
+The [guided teaching contract](teaching/phys3810-fa2026/GUIDED_TEACHING_PLAN.md)
+supersedes the earlier classroom route: Python/Qiskit, Grover, QFT/QPE, with a
+genuine two-day fallback of Python/Qiskit plus one algorithm day. HHL and full
+compiled-Shor remain references. Preserve all canonical algorithm bounds/pins.
+
+The user authorizes implementation, a standalone desktop review ZIP, commit and
+push, and CI checks. A normal PR triggers required CI; no merge, new release,
+human message, hardware job, dependency upgrade, or GPU repair is authorized.
+Finish exact extracted-package verification and visual/OCR checks before delivery.
+Keep new teaching files free of internal model names and coordination notes;
+attribute current material to **Gage Plott**. Historical supplied PDF/companion
+bytes remain unchanged and excluded from this kit; obtain corrected editions
+before reusing the old Grover attribution as current handouts. No new PDF is
+generated locally; HTML/PNG rendering and OCR check this Markdown-first packet.
+
+Remaining instructor decisions are exact dates/count, priorities, laptop/setup
+support, prior quantum coverage, and delivery after the walkthrough. Retain
+85 minutes as 75+10 and the November 19 weekday caveat; do not keep asking about
+resolved grading, assignment submission, or laptop follow-along. Receipt is
+acknowledged, not detailed approval. The current handoff return is accessible
+text only; no newly supplied files or private reviewer execution paths are claimed.
+After completing this scope, request a focused review of the new teaching layer
+and wait for the walkthrough outcome. The earlier parked-state instructions
+below are historical and do not cancel this authorized work.
 
 **Current position, November 1, 2026:** the explicitly authorized full-course
 preview is published at `phys3810-fa2026-v0.2.0-rc1`, source `f717aea`, after

@@ -3,7 +3,14 @@
 <!-- markdownlint-disable-next-line MD036 -->
 **Current publication instructions · Provisional course code v0.2.0-rc1**
 
-Download the complete [provisional full-course preview](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-v0.2.0-rc1/PHYS3810-Fall2026-v0.2.0-rc1.zip) and extract its `phys3810-fa2026` folder. This named download is published. The earlier Grover-only package does not contain all five algorithm lessons. Final session dates, classroom coverage, and assignments remain to be confirmed.
+Download the complete [provisional full-course preview](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-v0.2.0-rc1/PHYS3810-Fall2026-v0.2.0-rc1.zip) and extract its `phys3810-fa2026` folder. This named download is published. The earlier Grover-only package does not contain all five algorithm lessons. Final session dates and classroom emphasis remain to be confirmed. The beginner route uses worked demonstrations on laptops, with no assignments, grading, evaluation, or submissions.
+
+For the newer beginner review kit, follow the [guided quickstart](guided/STUDENT_QUICKSTART.md).
+Its three guided lessons begin with Python and Qiskit; its `--profile all`
+validation includes eleven notebooks. The instructions below describe the
+unchanged published full-course ZIP, which contains eight reference/validation
+notebooks. Assisted setup must be arranged with the instructor; it is not
+assumed independent homework or part of a fifteen-minute launch segment.
 
 **Document note:** The [original companion](handouts/FULL_COURSE_SETUP_DRAFT.md) and [student PDF](handouts/PHYS3810_Full_Course_Student_Setup_v0.1_REVIEW_DRAFT.pdf) remain exact **prepublication review drafts** for reference. Their statement that the download is unpublished describes the review-time state and is outdated after this prerelease. This page and the [course landing page](README.md) govern current availability. See the [publication notice](handouts/PUBLICATION_NOTICE.md) and [document index](handouts/README.md).
 
@@ -54,7 +61,7 @@ python scripts/validate_classroom.py
 
 `requirements.txt` includes JupyterLab and the circuit, plotting, widget, and notebook-execution libraries. It automatically reads `constraints-ci.txt` to select the specified package versions. Keep both files unchanged; do not upgrade individual packages during the lessons.
 
-The validator prints your interpreter path and expected Qiskit/Aer versions, checks package consistency, runs **160 tests**, and executes **eight notebooks in separate fresh kernels**. The current lesson set has **50 nonempty code cells** and produces **16 PNG figures**. Success ends with:
+In the frozen public release ZIP, the validator prints your interpreter path and expected Qiskit/Aer versions, checks package consistency, runs **160 tests**, and executes **eight notebooks in separate fresh kernels**, with **50 nonempty code cells** and **16 PNG figures**. In a newer repository checkout, it runs that checkout's complete test suite; default notebook membership remains eight, while `--profile all` also runs the three guided lessons. See [current evidence](STATUS.md) for measured revision totals. Success ends with:
 
 ```text
 PASSED: classroom validation
@@ -107,13 +114,13 @@ Two additional checks live under the root `notebooks/` directory:
 | `00_local_statevector_smoke.ipynb` | Exact local simulation. |
 | `01_local_aer_smoke.ipynb` | Local Aer sampling and a small noise example. |
 
-The full validator runs all eight notebooks. Availability does not determine what is taught or submitted; follow your instructor's eventual lesson and assessment instructions.
+The default validator runs these eight reference/validation notebooks. The newer guided route uses three additional notebooks; `--profile all` runs all eleven. Follow the instructor's selected route. There is no submitted or assessed work.
 
 ### Use predictions during the lessons
 
 Before a lesson, run all cells to check setup. During discussion, restart the kernel and clear displayed outputs, make the requested predictions, then run the relevant cells. The instructor will identify which exercises to discuss. All required code still runs during the setup check.
 
-The notebooks already contain worked calculations, assertions, and reference results. Follow the instructor's directions about collaboration, solutions, and any assessed work.
+The notebooks contain worked calculations, software assertions, and reference results. Use them openly during guided discussion; the assertions validate the material, not the student. Nothing is graded or submitted.
 
 <!-- pagebreak -->
 
