@@ -4,9 +4,12 @@ November 2, 2026: **the beginner guided route is implemented and source validati
 passed: 197 tests, eleven fresh-kernel notebooks, 74 nonempty code cells, 27 PNGs.**
 The [contract](GUIDED_TEACHING_PLAN.md), [review entrance](guided/START_HERE.md),
 and [validation record](GUIDED_VALIDATION.md) identify the scope and evidence.
-The current task is completing rendering/OCR, exact exported-package checks,
-desktop delivery, and commit/push with CI. This is an instructor review kit,
-not a replacement release or final classroom approval.
+Rendering/OCR and the exact exported-package checks passed; the verified ZIP
+is on the Ubuntu desktop, frozen at `e4fea10e5f280d0d5f79f53739321a1e608e7bec`.
+See the [delivery receipt](GUIDED_VALIDATION.md#verified-delivery-receipt).
+Commit/push and a normal PR provide CI for this new route; the check result must
+be read at the PR's actual head. This is an instructor review kit, not a
+replacement release or final classroom approval.
 
 The received planning return reports two or three classes, no Python experience,
 no grading/evaluation/assignments/submissions, and demonstrations repeated on

@@ -113,7 +113,32 @@ course imports must resolve inside that extraction, and payload bytes must
 remain unchanged. The archive excludes PDFs, prompts, correspondence, policy/
 history, environments, caches, credentials, and generated execution outputs.
 Its committed source identity and delivered checksum are recorded in the final
-delivery receipt below when verification completes.
+delivery receipt below.
+
+## Verified delivery receipt
+
+**Passed:** exact archive extraction at a separate `/tmp` path containing spaces,
+without Git metadata, using the same reused CPython 3.12.15 environment.
+The extracted all-profile validator passed **197 tests, eleven notebooks,
+74 code cells, 27 PNGs, zero errors**. All five course modules resolved inside
+the extracted `runtime/`; `PYTHONPATH` was unset. All 54 payload file sizes,
+hashes, and modes remained unchanged after execution. Source notebooks are
+output-free, 44 package-relative links resolve, and all twelve exported Markdown
+files pass lint. Package safety, CRC, exact inventory, exclusions, and the
+audience-language/name scan passed.
+
+- ZIP source: `e4fea10e5f280d0d5f79f53739321a1e608e7bec`.
+- Name: `PHYS3810-Guided-Review-v0.1-e4fea10e5f28.zip`.
+- Size: **167,563 bytes**; 55 files including `MANIFEST.json` and 54 payloads.
+- SHA-256: `fac5fff2122ae1da5a21a7df8ff0d7db13f4ae6a77c81b6ffc7af28806f08c6a`.
+- The Ubuntu desktop copy matches the verified export byte-for-byte.
+
+The ZIP is an instructor-review artifact and has not been sent to anyone or
+published as a release. The subsequent receipt-only commit does not change its
+source bytes; the manifest identifies the implementation commit above. The
+source and exact-extraction runs are separate checks in one reused environment,
+not two fresh installs. The current PR's checks provide remote CI evidence for
+its actual head; no CI result is inferred from these local passes.
 
 Local logs and receipts are under ignored `artifacts/guided-review-2026-11-02/`.
 Repository `main`, the historical integration worktree, and recovery stash
