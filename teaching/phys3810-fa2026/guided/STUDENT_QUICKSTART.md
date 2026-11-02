@@ -6,7 +6,8 @@ whenever an instruction or result is unclear.
 
 ## Get a working environment with help
 
-Your instructor will arrange the laptop setup. The demonstrated route is Ubuntu
+Ask your instructor which supported setup to use and when assisted setup will
+be available. The demonstrated route is Ubuntu
 Linux with 64-bit CPython 3.12 and JupyterLab. Windows, macOS, and native-editor
 workflows have not been tested for this kit. Installation requires internet;
 the examples run locally without an IBM account or quantum hardware.

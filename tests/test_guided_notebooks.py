@@ -45,7 +45,8 @@ class GuidedNotebookTests(unittest.TestCase):
         self.figures = []
         self.addCleanup(plt.close, "all")
 
-    def run_cell(self, cell_id, **parameters):
+    def cell_program(self, cell_id, **parameters):
+        """Prepare an edited cell without changing the running Python namespace."""
         # A direct-cell regression uses Agg; only the display-backend magic is
         # omitted here. The strict validator executes the original whole cells.
         source = self.cells[cell_id].replace("%matplotlib inline\n", "")
@@ -58,12 +59,21 @@ class GuidedNotebookTests(unittest.TestCase):
                         node.value = ast.parse(repr(parameters[target.id]), mode="eval").body
                         changed.add(target.id)
         self.assertEqual(changed, set(parameters), "An advertised editable parameter disappeared.")
+        return compile(ast.fix_missing_locations(tree), cell_id, "exec")
+
+    def execute_cell_program(self, program):
         output = io.StringIO()
         with redirect_stdout(output):
-            exec(compile(ast.fix_missing_locations(tree), cell_id, "exec"), self.namespace)
+            exec(program, self.namespace)
         if "display" in self.namespace:
             self.namespace["display"] = self.figures.append
         return output.getvalue()
+
+    def run_cell(self, cell_id, **parameters):
+        return self.execute_cell_program(self.cell_program(cell_id, **parameters))
+
+    def run_cells(self, *cell_ids):
+        return "".join(self.run_cell(cell_id) for cell_id in cell_ids)
 
     def test_all_sources_are_output_free_and_cell_ids_are_unique(self):
         all_ids = []
@@ -181,6 +191,56 @@ class GuidedNotebookTests(unittest.TestCase):
         self.assertEqual(self.namespace["counts"], counts)
         self.assertEqual(self.namespace["search"].num_clbits, 0)
 
+    def test_grover_target_edit_requires_parameter_execution_before_downstream_cells(self):
+        self.prepare_grover()
+        pending_edit = self.cell_program("guided-grover-parameters", target="10")
+        downstream = ("guided-grover-build", "guided-grover-circuit",
+                      "guided-grover-sampling", "guided-grover-comparison")
+        # Editing document text alone leaves a consistent, stale calculation.
+        self.run_cells(*downstream)
+        stale_counts = self.namespace["counts"].copy()
+        self.assertEqual(stale_counts, {"01": 512})
+        self.assertEqual(self.namespace["target"], "01")
+        self.assertIn("Target 01", self.namespace["histogram_title"])
+        self.execute_cell_program(pending_edit)
+        self.run_cells(*downstream)
+        self.assertEqual(self.namespace["counts"], {"10": 512})
+        self.assertAlmostEqual(self.namespace["target_probability"], 1.0)
+        for title in ("circuit_title", "histogram_title", "comparison_title"):
+            self.assertIn("Target 10", self.namespace[title])
+        self.last_probe_result = {
+            "case": "Grover target 01 to 10",
+            "downstream_only": {"counts": stale_counts, "target": "01"},
+            "parameter_then_downstream": {"counts": self.namespace["counts"], "target": "10"},
+        }
+
+    def test_grover_iteration_edit_requires_parameter_execution_before_downstream_cells(self):
+        self.prepare_grover()
+        pending_edit = self.cell_program("guided-grover-parameters", iterations=2)
+        downstream = ("guided-grover-build", "guided-grover-circuit",
+                      "guided-grover-sampling", "guided-grover-comparison")
+        self.run_cells(*downstream)
+        stale_probability = self.namespace["target_probability"]
+        self.assertAlmostEqual(stale_probability, 1.0)
+        self.assertEqual(self.namespace["counts"], {"01": 512})
+        self.assertIn("iterations=1", self.namespace["histogram_title"])
+        self.execute_cell_program(pending_edit)
+        self.run_cells(*downstream)
+        self.assertAlmostEqual(self.namespace["target_probability"], 0.25)
+        self.assertEqual(self.namespace["expected_probability"], 0.25)
+        self.assertLessEqual(abs(self.namespace["counts"].get("01", 0) - 128),
+                             6 * np.sqrt(512 * 0.25 * 0.75))
+        self.assertIn("iterations=2", self.namespace["histogram_title"])
+        self.assertIn("exact P=0.25", self.namespace["histogram_title"])
+        self.last_probe_result = {
+            "case": "Grover iterations 1 to 2",
+            "downstream_only": {"target_probability": stale_probability, "iterations": 1},
+            "parameter_then_downstream": {
+                "target_probability": self.namespace["target_probability"],
+                "iterations": 2, "counts": self.namespace["counts"],
+            },
+        }
+
     def prepare_phase(self):
         if "qpe_circuit" not in self.namespace:
             self.run_cell("guided-phase-support")
@@ -226,6 +286,30 @@ class GuidedNotebookTests(unittest.TestCase):
             np.testing.assert_allclose(self.namespace["recovery_probabilities"], [0, 1, 0, 0],
                                        rtol=0, atol=1e-12)
 
+    def test_qft_basis_edit_requires_parameter_execution_before_downstream_cells(self):
+        self.prepare_phase()
+        self.run_cell("guided-qft-parameters")
+        pending_edit = self.cell_program("guided-qft-parameters", basis_label="10")
+        downstream = ("guided-qft-forward", "guided-qft-pattern", "guided-qft-inverse")
+        self.run_cells(*downstream)
+        np.testing.assert_allclose(self.namespace["recovery_probabilities"], [0, 1, 0, 0],
+                                   rtol=0, atol=1e-12)
+        self.assertIn("01", self.namespace["phase_title"])
+        self.assertIn("01", self.namespace["recovery_title"])
+        self.execute_cell_program(pending_edit)
+        self.run_cells(*downstream)
+        np.testing.assert_allclose(self.namespace["fourier_state"].data, [0.5, -0.5, 0.5, -0.5],
+                                   rtol=0, atol=1e-12)
+        np.testing.assert_allclose(self.namespace["recovery_probabilities"], [0, 0, 1, 0],
+                                   rtol=0, atol=1e-12)
+        self.assertIn("10", self.namespace["phase_title"])
+        self.assertIn("10", self.namespace["recovery_title"])
+        self.last_probe_result = {
+            "case": "QFT basis 01 to 10",
+            "downstream_only": {"recovered_index": 1},
+            "parameter_then_downstream": {"recovered_index": 2},
+        }
+
     def test_qpe_both_exact_phase_edits_prepare_eigenstate_and_preserve_bit_order(self):
         self.prepare_phase()
         for phase, label in ((3 / 8, "011"), (1 / 8, "001")):
@@ -261,6 +345,31 @@ class GuidedNotebookTests(unittest.TestCase):
                                    rtol=0, atol=1e-12)
         self.assertEqual(self.namespace["phase_counts"], {"001": 512})
         self.assertEqual(self.namespace["qpe_prepared"].num_clbits, 0)
+
+    def test_qpe_phase_edit_requires_parameter_execution_before_downstream_cells(self):
+        self.prepare_phase()
+        self.run_cell("guided-qpe-parameters")
+        pending_edit = self.cell_program("guided-qpe-parameters", exact_phase=1 / 8)
+        downstream = ("guided-qpe-build", "guided-qpe-circuit", "guided-qpe-sampling")
+        self.run_cells(*downstream)
+        stale_counts = self.namespace["phase_counts"].copy()
+        stale_phase = self.namespace["decoded_phase"]
+        self.assertEqual(stale_counts, {"011": 512})
+        self.assertEqual(stale_phase, 3 / 8)
+        self.assertIn("011", self.namespace["phase_histogram_title"])
+        self.execute_cell_program(pending_edit)
+        self.run_cells(*downstream)
+        self.assertEqual(self.namespace["phase_counts"], {"001": 512})
+        self.assertEqual(self.namespace["decoded_phase"], 1 / 8)
+        self.assertIn("001", self.namespace["phase_histogram_title"])
+        self.last_probe_result = {
+            "case": "QPE phase 3/8 to 1/8",
+            "downstream_only": {"counts": stale_counts, "decoded_phase": stale_phase},
+            "parameter_then_downstream": {
+                "counts": self.namespace["phase_counts"],
+                "decoded_phase": self.namespace["decoded_phase"],
+            },
+        }
 
     def test_import_bootstrap_resolves_only_inside_a_git_free_copy_with_spaces(self):
         with tempfile.TemporaryDirectory(prefix="phys3810 guided import ") as directory:

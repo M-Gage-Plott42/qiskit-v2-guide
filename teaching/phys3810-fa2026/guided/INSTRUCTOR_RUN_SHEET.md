@@ -26,6 +26,10 @@ During teaching, discuss only the chosen route. Start fresh before a rehearsal;
 keep earlier outputs only as clearly identified fallback pictures. They do not
 prove a new execution succeeded. Stop on an unexplained error and preserve it.
 
+After editing a parameter, run the parameter cell itself with **Shift+Enter**.
+Then run the following code cells in order. Editing the text alone does not
+update Python's variables; downstream calculations can still show the old result.
+
 ## Day 1: Python and Qiskit
 
 Open [01_python_and_qiskit](../notebooks/guided/01_python_and_qiskit.ipynb).
@@ -68,11 +72,13 @@ Open [02_grover_follow_along](../notebooks/guided/02_grover_follow_along.ipynb).
 - **10–25:** explain the four candidates `00`, `01`, `10`, `11`. Rightmost bit
   is qubit 0. The oracle marks the chosen label's phase; diffusion changes the
   amplitudes. The chosen target is built into this tiny instructional oracle.
-- **25–45:** cell 4 chooses `target = "01"`, `iterations = 1`; cells 6, 8, 10
+- **25–45:** under **Choose the two guided values**, run cell 4 beginning
+  `target = "01"`, with `iterations = 1`; then run cells 6, 8, 10 to
   build, draw, and sample. Expect target probability 1 and only `01` counts.
   One iteration means one oracle-plus-diffusion pair after uniform preparation.
-- **45–65:** change cell 4's target to `"10"`, rerun cells 6 through 12, then
-  change iterations to 2 and rerun again. Expected marked probability drops
+- **45–65:** change cell 4's target to `"10"`, run **cell 4 itself**, then
+  **6, 8, 10, 12** in order. Next change iterations to 2 and repeat that complete
+  sequence, starting with **cell 4**. Expected marked probability drops
   to 1/4. Zero iterations also gives 1/4. Cell 12 compares all three cases.
   Safe edits are exactly four two-bit targets and iteration counts 0, 1, 2.
 - **65–75:** discuss amplification versus overshooting and sample fluctuations.
@@ -80,7 +86,7 @@ Open [02_grover_follow_along](../notebooks/guided/02_grover_follow_along.ipynb).
   follow the current parameters. More iterations need not improve success.
 
 Common mistakes: dropping the quotes; using a three-bit target; changing the
-parameter without rerunning later cells; reading a bitstring as a phase.
+parameter without executing that cell and its dependent cells; reading a bitstring as a phase.
 The label is a basis-state index here. Restart/run-all restores a consistent
 example. Exact simulation and finite sampled counts are different observations.
 
@@ -97,20 +103,24 @@ Open [03_qft_qpe_follow_along](../notebooks/guided/03_qft_qpe_follow_along.ipynb
 
 - **0–10:** run cell 2 (`guided-phase-support`); recap phase and rightmost-bit
   ordering. The read-only display machinery is not a matrix-programming task.
-- **10–30:** cells 4, 6, 8 choose basis `"01"`, apply forward QFT, and plot real
+- **10–30:** under **QFT: select a known input label**, cell 4 begins
+  `basis_label = "01"`. Run **4, 6, 8** to choose the input, apply QFT, and plot real
   and imaginary amplitudes. Expected amplitudes are (1, i, -1, -i)/2 at indices
   0–3, with the positive Fourier sign. Every measurement probability is 1/4;
   those probabilities alone cannot reveal this complex phase pattern.
 - **30–50:** cell 10 applies inverse QFT and recovers the original basis label
-  with probability 1. Change cell 4 to `"10"` and rerun following cells: the
+  with probability 1. Change cell 4 to `"10"`, run **cell 4 itself**, then
+  **6, 8, 10** in order. The
   amplitudes become (1, -1, 1, -1)/2 and recovery gives index 2. Both transforms
   include their full swaps. This known-state transformation/undoing is not QPE.
-- **50–65:** cells 12, 14, 15, 17 choose phase 3/8, prepare/build, draw, and
+- **50–65:** under **QPE: choose an exact eigenphase**, cell 12 begins
+  `exact_phase = 3 / 8`. Run **12, 14, 15, 17** to choose, prepare/build, draw, and
   sample QPE. Three counting qubits precede one target qubit, explicitly flipped
   from |0> to eigenstate |1>. The target phase operation and controlled powers
   encode the eigenphase; inverse QFT decodes the counting register. Only that
   register is measured, yielding `011`; `int("011", 2) / 8` is 3/8.
-- **65–75:** change cell 12 to `exact_phase = 1 / 8`, rerun cells 14–17, and
+- **65–75:** change cell 12 to `exact_phase = 1 / 8`, run **cell 12 itself**,
+  then **14, 15, 17** in order, and
   observe `001`. Contrast input basis labels with counting-register phase labels.
   Three counting bits resolve multiples of 1/8; nonexact phases are outside
   this guided example. All 512 ideal samples have the exact expected label.
@@ -121,8 +131,9 @@ claiming that a flat histogram means phases are absent. Do not edit register
 widths or support code. Rebuild after every phase edit; restart if state is unclear.
 
 **50-minute fallback:** 10 phase recap; 20 phase-pattern display; 15 inverse
-recovery; 5 discussion. Defer QPE rather than compressing its eigenstate and
-register explanation. The QFT examples are simulator inspections of amplitudes,
+recovery; 5 discussion. Stop after QFT recovery and defer QPE. Only if additional
+time is available, offer the default QPE example as a presenter-only demonstration;
+it is outside the 50-minute route. The QFT examples are simulator inspections of amplitudes,
 not a way to read a full quantum state from one device measurement.
 
 ## Two meetings and final choices

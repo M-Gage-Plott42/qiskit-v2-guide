@@ -21,6 +21,7 @@ TIMESTAMP = 1793613600
 def fixture_inputs():
     """Use minimal synthetic inputs; these tests need neither Git nor Qiskit."""
     files = {name: b"fixture\n" for name in builder.RUNTIME_FILES}
+    files[builder.VALIDATOR_PATH] = builder.VALIDATOR_SOURCE
     files.update({name: b"# Test fixture\n" for name in builder.EXPECTED_BASELINE_TESTS})
     files["src/phys3810/__init__.py"] = b"# fixture\n"
     files["tests/test_extra_regression.py"] = b"# a newly committed regression\n"
@@ -180,6 +181,36 @@ class GuidedReviewPackageTests(unittest.TestCase):
         self.assertIn("post-export execution receipt is recorded outside", text)
         self.assertIn("not final classroom approval", text)
 
+    def test_evidence_png_threshold_rejects_16_and_26_and_accepts_27(self):
+        for count in (16, 26, 27):
+            with self.subTest(pngs=count):
+                evidence = copy.deepcopy(self.evidence)
+                evidence["counts"]["pngs"] = count
+                if count < 27:
+                    with self.assertRaisesRegex(ValueError, "notebook/cell inventory"):
+                        builder.validate_evidence(evidence, COMMIT, 11)
+                else:
+                    builder.validate_evidence(evidence, COMMIT, 11)
+
+    def test_evidence_png_threshold_tracks_selected_profile_requirements(self):
+        # A changed included requirement must change the threshold; an unrelated
+        # notebook's requirement must not. This catches a new hard-coded 27.
+        requirements = dict(validator.REQUIRED_PNGS)
+        requirements[validator.GUIDED_NOTEBOOKS[0]] += 1
+        requirements["notebooks/not-in-all-profile.ipynb"] = 99
+        with patch.dict(builder.classroom_validator.REQUIRED_PNGS, requirements, clear=True):
+            with self.assertRaisesRegex(ValueError, "notebook/cell inventory"):
+                builder.validate_evidence(self.evidence, COMMIT, 11)
+            evidence = copy.deepcopy(self.evidence)
+            evidence["counts"]["pngs"] = 28
+            builder.validate_evidence(evidence, COMMIT, 11)
+
+    def test_evidence_rejects_divergent_all_profile_inventory(self):
+        profile = (*validator.notebooks_for_profile("all"), "notebooks/new-required.ipynb")
+        with patch.object(builder.classroom_validator, "notebooks_for_profile", return_value=profile):
+            with self.assertRaisesRegex(ValueError, "inventory differs"):
+                builder.validate_evidence(self.evidence, COMMIT, 11)
+
     def test_unsafe_case_colliding_and_excluded_paths_rejected(self):
         for name in ("../escape", "/absolute", "a\\b", "a:b", "runtime/.env", "runtime/.venv/x",
                      "runtime/artifacts/result.json", "old.pdf", "old.zip", "AGENTS.md"):
@@ -210,9 +241,12 @@ class GuidedReviewPackageTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "timestamp"):
             builder.zip_bytes({}, 0)
 
-    def snapshot_response(self, *, changed_builder=False, symlink=False, missing_regression=False):
+    def snapshot_response(self, *, changed_builder=False, changed_validator=False,
+                          symlink=False, missing_regression=False):
         files = copy.copy(self.inputs)
         files[builder.BUILDER_PATH] = b"wrong" if changed_builder else Path(builder.__file__).read_bytes()
+        if changed_validator:
+            files[builder.VALIDATOR_PATH] = b"# another revision's validator\n"
         if missing_regression:
             del files[sorted(builder.EXPECTED_BASELINE_TESTS)[0]]
         blobs = {str(number).zfill(40): data for number, data in enumerate(files.values())}
@@ -243,6 +277,11 @@ class GuidedReviewPackageTests(unittest.TestCase):
     def test_snapshot_rejects_wrong_executing_builder(self):
         with patch.object(builder, "git_output", side_effect=self.snapshot_response(changed_builder=True)):
             with self.assertRaisesRegex(ValueError, "Executing builder differs"):
+                builder.source_snapshot("HEAD")
+
+    def test_snapshot_rejects_wrong_validator_revision(self):
+        with patch.object(builder, "git_output", side_effect=self.snapshot_response(changed_validator=True)):
+            with self.assertRaisesRegex(ValueError, "Imported validator differs"):
                 builder.source_snapshot("HEAD")
 
     def test_snapshot_rejects_symlinks_and_lost_baseline_tests(self):

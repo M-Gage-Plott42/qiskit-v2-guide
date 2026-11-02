@@ -7,6 +7,16 @@ is not accessible in the current workspace.
 
 ## Source of truth and current position
 
+The [focused guided review](GUIDED_REVIEW_RECONCILIATION.md) is received. It
+independently executed the unchanged e4fea10 kit and identified the parameter-cell
+instruction defect, now reproduced and repaired. Preserve its 197-test archive
+as historical review evidence and identify the corrected v0.2 kit separately.
+Written edit sequences must execute the changed parameter cell before downstream
+calculations; fresh-kernel correctness alone does not validate that instruction.
+The small document/export consistency follow-ups preserve algorithm source,
+pins, notebook code, and strict execution policy. No further broad review is
+needed solely for those demonstrated repairs.
+
 November 2, 2026: the accessible planning return reports the instructor's new
 requirements: two or three meetings, zero Python experience, live laptop
 follow-along, and no grading/evaluation/assignments/submissions. It reports
@@ -37,13 +47,14 @@ Markdown is rendered to HTML/PNG and OCR-checked without generating new PDFs.
 Record source identity, visual/OCR coverage, actual test/cell/figure counts,
 extraction imports/hashes, environment reuse, desktop receipt, and exact CI head
 in [the guided evidence](GUIDED_VALIDATION.md). Headless rendering is not UI or
-human-pacing evidence. Provide a focused GPT Pro prompt separately from the ZIP.
+human-pacing evidence. The focused review is already received; do not request
+another round solely for its demonstrated wording and receipt-check repairs.
 
 Remaining decisions: exact dates/count, priorities, laptop/setup support, prior
 quantum coverage, and delivery after the walkthrough. Retain 85 minutes as 75+10
 and the November 19 weekday caveat. Do not ask again whether grading/assignments
 are intended. Stop after the completed review kit and await walkthrough feedback
-or the focused review. The earlier parked-state passages below are historical;
+after this reconciliation. The earlier parked-state passages below are historical;
 this new user request authorizes the bounded teaching adaptation.
 
 ## Every implementation turn

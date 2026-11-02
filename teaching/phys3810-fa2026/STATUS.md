@@ -1,5 +1,21 @@
 # PHYS 3810 status
 
+November 2 focused-review update: **the required parameter-cell instruction
+repair is reproduced and applied**. The independent reviewer freshly installed
+and executed the unchanged 197-test kit; that passing computational result does
+not negate the stale-value teaching defect. The [reconciliation](GUIDED_REVIEW_RECONCILIATION.md)
+records four negative controls and their corrected execution sequences, aligned
+short-route/setup wording, and the exporter's derived figure-count guard.
+The old v0.1 kit remains preserved; the corrected v0.2 packet is a new review
+artifact. Algorithm source, notebook code, pins, and strict runtime policy are
+unchanged. No additional GPT Pro round is needed solely for these repairs.
+The corrected source passes **205 tests, eleven fresh-kernel notebooks,
+74 code cells, and 27 PNGs** in the reused CPython 3.12.15 environment. Exact
+v0.2 export/extraction and refreshed affected render/OCR evidence are recorded
+in the reconciliation; prior 197-test results retain their own source identity.
+
+## Original guided-kit delivery
+
 November 2, 2026: **the beginner guided route is implemented and source validation
 passed: 197 tests, eleven fresh-kernel notebooks, 74 nonempty code cells, 27 PNGs.**
 The [contract](GUIDED_TEACHING_PLAN.md), [review entrance](guided/START_HERE.md),
@@ -265,12 +281,12 @@ assessment are now settled requirements, not open questions.
 
 ## Recommended next action
 
-Complete and provide the focused beginner-kit review, then use its concise
-agenda for the walkthrough. No broad algorithm reaudit is needed. **GPT Pro sync:
-recommended after the verified kit is ready**, focused on novice explanations,
-editable-cell behavior, strict profile integration, and short documents.
-No user technical audit or further input is needed to finish this authorized
-scope. Teaching decisions above remain provisional until discussed.
+Use the corrected v0.2 packet and its concise agenda for the walkthrough, then
+await teaching feedback. The focused review is received and its actionable
+findings are reconciled. **GPT Pro sync: not needed again solely for these
+demonstrated repairs.** No user technical audit or further input is needed to
+finish this authorized scope. Teaching decisions above remain provisional
+until discussed; a new material runtime/scope change may warrant another review.
 
 At the previous reconciliation, required Python 3.12, lint, smoke, pre-commit,
 notebook cleanliness, link, and preservation checks passed. That evidence is under

@@ -5,8 +5,8 @@
 Use the [student quickstart](../guided/STUDENT_QUICKSTART.md) for the new
 Python/Qiskit, Grover, and QFT/QPE follow-along route. Material development is
 credited to **Gage Plott**. There is no grading, evaluation, assignment, or
-submitted work. The instructor will arrange assisted setup; independent
-setup homework is not assumed.
+submitted work. Ask the instructor to confirm the supported setup and available
+assistance; independent setup homework is not assumed.
 
 The PDF editions below are preserved historical references. They predate the
 new beginner route and are not included in its concise review kit. The archived

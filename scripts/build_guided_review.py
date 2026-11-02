@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 from datetime import datetime, timezone
 import hashlib
+import importlib.util
 import io
 import json
 import os
@@ -20,12 +21,20 @@ import subprocess
 from urllib.parse import unquote, urlsplit
 import zipfile
 
-
 ROOT = Path(__file__).resolve().parents[1]
 COURSE = "teaching/phys3810-fa2026"
 BUILDER_PATH = "scripts/build_guided_review.py"
+VALIDATOR_PATH = "scripts/validate_classroom.py"
+# Bind profile requirements to the validator beside this builder, never execute
+# Python recovered from a historical Git blob. source_snapshot checks identity.
+VALIDATOR_SOURCE = (ROOT / VALIDATOR_PATH).read_bytes()
+_validator_spec = importlib.util.spec_from_file_location(
+    "_guided_export_validator", ROOT / VALIDATOR_PATH,
+)
+classroom_validator = importlib.util.module_from_spec(_validator_spec)
+_validator_spec.loader.exec_module(classroom_validator)
 TOP_DIRECTORY = "phys3810-guided-review"
-REVIEW_VERSION = "v0.1"
+REVIEW_VERSION = "v0.2"
 ENTRANCE_NAMES = (
     "START_HERE.md", "REVIEW_AGENDA.md", "STUDENT_QUICKSTART.md", "INSTRUCTOR_RUN_SHEET.md",
 )
@@ -42,7 +51,7 @@ GUIDED_NOTEBOOKS = tuple(f"{COURSE}/notebooks/guided/{name}.ipynb" for name in (
 NOTEBOOKS = (*REFERENCE_NOTEBOOKS, *GUIDED_NOTEBOOKS)
 RUNTIME_FILES = (
     "LICENSE", "ruff.toml", "requirements.txt", "requirements-ci.txt", "constraints-ci.txt",
-    "scripts/validate_classroom.py", "scripts/smoke_local.sh", BUILDER_PATH, *NOTEBOOKS,
+    VALIDATOR_PATH, "scripts/smoke_local.sh", BUILDER_PATH, *NOTEBOOKS,
 )
 CONTRACT_END_MARKERS = {
     "GROVER": "The completed lesson's independent review",
@@ -105,6 +114,8 @@ def source_snapshot(reference: str) -> tuple[str, str, int, dict[str, bytes]]:
         inputs[name] = git_output("cat-file", "blob", blob)
     if inputs[BUILDER_PATH] != Path(__file__).read_bytes():
         raise ValueError("Executing builder differs from selected commit; use its committed builder.")
+    if inputs[VALIDATOR_PATH] != VALIDATOR_SOURCE:
+        raise ValueError("Imported validator differs from selected commit; use its committed validator.")
     return commit, tree, timestamp, inputs
 
 
@@ -131,7 +142,11 @@ def validate_source_notebooks(inputs: dict[str, bytes]) -> int:
 
 
 def validate_evidence(evidence: dict, commit: str, cells: int) -> None:
-    """Check evidence identity/counts without pretending to execute its commands."""
+    """Check receipt counts against the profile matched by source_snapshot."""
+    profile = classroom_validator.notebooks_for_profile("all")
+    if len(profile) != len(NOTEBOOKS) or set(profile) != set(NOTEBOOKS):
+        raise ValueError("Exporter notebook inventory differs from the validator's all profile.")
+    minimum_pngs = sum(classroom_validator.REQUIRED_PNGS.get(name, 0) for name in profile)
     if evidence.get("source_commit") != commit:
         raise ValueError("Validation evidence must identify the selected full commit.")
     for field in ("python", "platform", "environment_details"):
@@ -144,9 +159,9 @@ def validate_evidence(evidence: dict, commit: str, cells: int) -> None:
     if evidence.get("results", {}).get("all_profile_validator") != "passed":
         raise ValueError("The all-profile source validator must have passed.")
     counts = evidence.get("counts", {})
-    if (counts.get("notebooks") != 11 or counts.get("nonempty_code_cells") != cells
+    if (counts.get("notebooks") != len(profile) or counts.get("nonempty_code_cells") != cells
             or not isinstance(counts.get("tests"), int) or counts["tests"] < 160
-            or not isinstance(counts.get("pngs"), int) or counts["pngs"] < 16):
+            or not isinstance(counts.get("pngs"), int) or counts["pngs"] < minimum_pngs):
         raise ValueError("Executed evidence does not match the required notebook/cell inventory.")
     for field in ("commands", "limitations"):
         if (not isinstance(evidence.get(field), list) or not evidence[field]

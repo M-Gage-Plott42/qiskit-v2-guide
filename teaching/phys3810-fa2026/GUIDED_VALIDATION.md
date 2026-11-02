@@ -6,6 +6,12 @@ commit `7600e85c773db53cf0e99c9642dc85b806bd8a29`. The published release remains
 `f717aea99c68a25ad1c68597f11d1ca12c45c56a`; it is not replaced by this review kit.
 Material development: **Gage Plott**.
 
+The e4fea10 packet below is preserved historical execution evidence. The later
+[focused review and corrections](GUIDED_REVIEW_RECONCILIATION.md) record the
+required parameter-cell instruction fix and the separately identified v0.2
+packet. Do not treat the original wording as corrected merely because its
+mathematical and execution checks passed.
+
 ## Accessible requirements and scope
 
 The supplied November 2 planning return is accessible text. It reports the

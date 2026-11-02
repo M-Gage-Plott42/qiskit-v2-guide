@@ -21,6 +21,10 @@ rulesets as part of instructional work.
 - Declare bit order, register roles, supported inputs, approximation choices,
   and random seeds. Commit notebooks without execution outputs or counts;
   write executed copies to ignored `artifacts/` for review.
+- When inviting parameter edits, explicitly run the edited parameter cell
+  before its dependent cells. Editing document text does not update kernel
+  state; passing assertions can still describe stale values. Verify the written
+  sequence with a persistent-namespace negative control as well as fresh runs.
 - Default runs must be local and credential-free. IBM Runtime and GPU paths
   remain optional and excluded from classroom validation. Never submit jobs
   or contact IBM during offline tests; mock service construction in tests.
@@ -77,6 +81,17 @@ data in public code, notebooks, documentation, outputs, or validation logs.
 
 ## PHYS 3810 collaboration and handoffs
 
+**Focused guided review received, November 2:** the external review verified
+the unchanged e4fea10 kit and independently passed a fresh application install
+with 197 tests/eleven notebooks/74 cells/27 PNGs. Its required R1 parameter-cell
+execution correction is reproduced and repaired; O1/O2 clarify the stopping
+point/setup wording, and O3 tightens the export receipt's derived figure minimum.
+See [the reconciliation](teaching/phys3810-fa2026/GUIDED_REVIEW_RECONCILIATION.md).
+Preserve the old reviewed ZIP; deliver a separately identified v0.2 review kit.
+No new broad review or PDF round is needed solely for these evidenced repairs;
+await walkthrough feedback after validation, desktop delivery, and the existing
+authorized commit/push/CI workflow. Do not merge or change published releases.
+
 **Current position, November 2, 2026:** the instructor response establishes two
 or three classes, zero Python experience, no grading/evaluation/assignments or
 submissions, and live demonstrations repeated on laptops. The instructor offers
@@ -102,8 +117,8 @@ support, prior quantum coverage, and delivery after the walkthrough. Retain
 resolved grading, assignment submission, or laptop follow-along. Receipt is
 acknowledged, not detailed approval. The current handoff return is accessible
 text only; no newly supplied files or private reviewer execution paths are claimed.
-After completing this scope, request a focused review of the new teaching layer
-and wait for the walkthrough outcome. The earlier parked-state instructions
+The requested focused review has now returned; after reconciling it, wait for
+the walkthrough outcome. The earlier parked-state instructions
 below are historical and do not cancel this authorized work.
 
 **Current position, November 1, 2026:** the explicitly authorized full-course
