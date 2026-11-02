@@ -1,5 +1,95 @@
 # PHYS 3810 status
 
+November 2 consolidated acceptance: **the corrected guided v0.2 kit is accepted
+with no remaining must-fix issue; its three supplied REVIEW DRAFT PDFs match
+the accepted guides.** The return reports 205 tests/eleven notebooks/74 cells/
+27 PNGs in a reused Linux CPython 3.12.14 environment; its PDF-only turn did not
+repeat that execution. Local document checks and the receipt limitation are
+recorded in [the reconciliation](GUIDED_REVIEW_RECONCILIATION.md).
+
+The reading order is agenda, instructor run sheet, then quickstart to skim;
+guided notebooks are optional before the walkthrough. The three PDFs accompany
+the unchanged `PHYS3810-Guided-Review-v0.2-b393f63fd8b3.zip`; they are not added
+to that sealed archive. No code, notebook, test, contract, pin, or builder
+changes belong to this integration. PR #122 carries the accepted teaching work
+and document integration through the required checks and normal merge.
+
+**Park after integration until the walkthrough or further instructor email
+feedback.** No new content, review cycle, package, or PDF production is needed
+in the meantime. Sending the planned email is not assumed; no message was sent
+by the assistant. Final dates/count, priorities, supported laptop setup,
+prior quantum coverage, delivery arrangement, and human pacing remain open.
+No-assessment and zero-Python requirements are already settled.
+
+## Earlier focused repair
+
+November 2 focused-review update: **the required parameter-cell instruction
+repair is reproduced and applied**. The independent reviewer freshly installed
+and executed the unchanged 197-test kit; that passing computational result does
+not negate the stale-value teaching defect. The [reconciliation](GUIDED_REVIEW_RECONCILIATION.md)
+records four negative controls and their corrected execution sequences, aligned
+short-route/setup wording, and the exporter's derived figure-count guard.
+The old v0.1 kit remains preserved; the corrected v0.2 packet is a new review
+artifact. Algorithm source, notebook code, pins, and strict runtime policy are
+unchanged. No additional GPT Pro round is needed solely for these repairs.
+The corrected source passes **205 tests, eleven fresh-kernel notebooks,
+74 code cells, and 27 PNGs** in the reused CPython 3.12.15 environment. Exact
+v0.2 export/extraction and refreshed affected render/OCR checks also passed.
+The [corrected packet](GUIDED_REVIEW_RECONCILIATION.md#corrected-desktop-packet)
+is on the Ubuntu desktop, frozen at `b393f63`; prior 197-test results and the
+original v0.1 archive retain their own source identities. Use the v0.2 packet
+for the walkthrough and await feedback. PR #122's actual-head checks remain
+the source of remote CI status; no merge or release is implied.
+
+## Original guided-kit delivery
+
+November 2, 2026: **the beginner guided route is implemented and source validation
+passed: 197 tests, eleven fresh-kernel notebooks, 74 nonempty code cells, 27 PNGs.**
+The [contract](GUIDED_TEACHING_PLAN.md), [review entrance](guided/START_HERE.md),
+and [validation record](GUIDED_VALIDATION.md) identify the scope and evidence.
+Rendering/OCR and the exact exported-package checks passed; the verified ZIP
+is on the Ubuntu desktop, frozen at `e4fea10e5f280d0d5f79f53739321a1e608e7bec`.
+See the [delivery receipt](GUIDED_VALIDATION.md#verified-delivery-receipt).
+Commit/push and a normal PR provide CI for this new route; the check result must
+be read at the PR's actual head. This is an instructor review kit, not a
+replacement release or final classroom approval.
+
+The received planning return reports two or three classes, no Python experience,
+no grading/evaluation/assignments/submissions, and demonstrations repeated on
+laptops. Material receipt is acknowledged; the instructor offers to deliver
+following a walkthrough, with detailed review and delivery arrangements still
+open. The proposed route is Python/Qiskit, Grover, QFT/QPE; the two-day fallback
+uses Python/Qiskit plus one algorithm day, default Grover. HHL and full compiled
+Shor remain references. All five implementations and their contracts are preserved.
+
+The current author name is **Gage Plott**. New audience-facing material excludes
+internal model/workflow notes. Historical PDF/companion bytes remain unchanged
+and excluded from this new packet. The original release at `f717aea`, reviewed
+documentation at `7600e85`, and recovery stash remain preserved. The optional GPU
+repair and dependency-update PRs are outside this scope.
+
+## Historical November 1 position
+
+November 1 post-publication review: **the independent audit is accepted, and
+the supplied full-course document-v0.2 review editions are reconciled locally.**
+See [the receipt and finding dispositions](NOVEMBER_REVIEW_RECONCILIATION.md).
+The reviewed baseline is `f4990b4`; published source remains `f717aea`.
+Repository navigation/status issues are repaired in documentation only. The
+optional GPU error-reporting finding is recorded for a separately scoped code
+fix. The new instructor edition resolves P3-01; the unchanged v0.1 edition still
+needs its reading note. Neither edition claims final classroom approval.
+
+The class period is now known: **12:40–2:05 PM, 85 minutes**. November 16, 19,
+and 23 remain provisional. November 19 is Thursday, inconsistent with the
+listed Monday/Wednesday schedule; confirm the date rather than substituting
+one. Session count beyond three and allocation of QPE/HHL remain unresolved.
+See [the course plan](COURSE_PLAN.md). No reply, outreach, human rehearsal,
+native-platform/editor check, commit, push, or new release occurred during the
+reconciliation. The subsequent CP-and-park instruction authorizes committing
+and pushing the documentation on `docs/phys3810-november-review`, then stopping.
+
+## Published preview and earlier milestones
+
 November 1, 2026 update: **the full-course provisional preview is published.**
 [Release v0.2.0-rc1](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-v0.2.0-rc1)
 uses source `f717aea`; PR #113 passed all nine required checks before normal
@@ -10,7 +100,7 @@ The original dirty checkout was preserved in verified stash `2705385` and recove
 files, then fast-forwarded to clean main. Completion documentation is delivered
 through the normal workflow. The requested preview is delivered; **wait for
 Rick's reply or a specific new change** rather than starting another preparation
-cycle. Final classroom, teaching/native/editor/pacing, and P3-01 gates remain open.
+cycle. Final classroom and teaching/native/editor/pacing gates remain open.
 
 As of October 31, 2026: **R7 local preview packaging passed.** The
 [builder contract](R7_PREVIEW_PACKAGE.md) and [execution evidence](R7_PREVIEW_VALIDATION.md)
@@ -208,28 +298,22 @@ QFT is excluded from the release; its local evidence is in [QFT_VALIDATION.md](Q
 
 ## Open teaching decisions
 
-Actual session dates, student preparation, session length, complete-materials
-deadline, format/platforms, and assessment expectations remain unknown. Confirm
-whether all five algorithms need in-class treatment or some support the wider
-course, and the intended depth/examples for HHL/Shor. Providing five tested
-implementations remains the requested deliverable. Proposed sequence:
-Grover; QFT/QPE; HHL/Shor.
-Each session has a 50-minute core and a 75-minute expansion in the course plan.
-UTC has no classes November 25–29, and November 30 is the last class day;
-these facts do not establish the invited-session dates.
+Confirm final dates/count, algorithm priorities or substitutions, laptop/setup
+arrangements, prior quantum coverage, and delivery responsibility after the
+walkthrough. The listed period is 85 minutes, with 75 planned plus ten margin.
+November 16/19/23 remain provisional; November 19 is Thursday, conflicting with
+the listed Monday/Wednesday pattern. No substitute date or mandatory guest
+attendance has been inferred. Zero Python, laptop follow-along, and absence of
+assessment are now settled requirements, not open questions.
 
 ## Recommended next action
 
-**Wait for Rick's reply.** The user-requested provisional preview and recoverable
-Git cleanup are complete, subject to the final pushed branch-state receipt.
-Resume only for confirmed teaching/platform/assessment decisions, a concrete
-reported defect, or a specific new request. No manual code audit is assigned.
-
-**GPT Pro sync: not needed now.** The next authored instructor edition should
-include P3-01 and confirmed teaching changes before final classroom distribution.
-The unchanged review PDFs are retained with an explicit availability notice.
-User input needed for further classroom preparation: Rick's reply or a specific
-new scope; no additional implementation action is recommended in the meantime.
+Use the corrected v0.2 packet and its concise agenda for the walkthrough, then
+await teaching feedback. The focused review is received and its actionable
+findings are reconciled. **GPT Pro sync: not needed again solely for these
+demonstrated repairs.** No user technical audit or further input is needed to
+finish this authorized scope. Teaching decisions above remain provisional
+until discussed; a new material runtime/scope change may warrant another review.
 
 At the previous reconciliation, required Python 3.12, lint, smoke, pre-commit,
 notebook cleanliness, link, and preservation checks passed. That evidence is under

@@ -6,6 +6,11 @@ include explanation, prediction pauses, transitions, exercises, and debriefs.
 The clock allocations are planning estimates; measured code execution belongs
 in [the separate timing record](../R4_DEMONSTRATION_TIMINGS.md).
 
+November 1 scheduling update: the class period is 85 minutes. The 75-minute
+content route leaves 10 minutes for questions, transitions, and recovery;
+the 50-minute core remains a fallback. See [the schedule caveat](../COURSE_PLAN.md)
+for provisional November 16/19/23 dates and the November 19 weekday conflict.
+
 Rick's dates, number of visits, in-class topic coverage, student preparation,
 hands-on versus demonstration format, assessment, and presenter assignment
 remain unresolved. This sheet assigns no grading or delivery commitment.
