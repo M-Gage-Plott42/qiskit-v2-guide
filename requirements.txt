@@ -2,7 +2,7 @@
 # Full transitive resolution (including platform markers) lives in constraints-ci.txt.
 -c constraints-ci.txt
 qiskit[visualization]==2.6.1
-qiskit-aer==0.17.2
+qiskit-aer==0.18.2
 jupyterlab==4.6.4
 ipykernel==7.4.0
 nbconvert==7.17.2
