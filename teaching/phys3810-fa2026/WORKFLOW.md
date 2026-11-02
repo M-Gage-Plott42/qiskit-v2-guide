@@ -7,6 +7,30 @@ is not accessible in the current workspace.
 
 ## Source of truth and current position
 
+The consolidated return accepts the corrected b393f63 v0.2 kit with no remaining
+must-fix issue and reports a reused-CPython-3.12.14 execution of 205/eleven/74/27.
+The three supplied guided PDFs render its unchanged Markdown and remain REVIEW
+DRAFTS. The separate delivery JSON was not supplied and the user requested
+skipping it: retain a clearly labeled local verification record rather than
+inventing authoritative hash agreement. See the latest section of
+[the reconciliation](GUIDED_REVIEW_RECONCILIATION.md).
+
+This user instruction authorizes documentation/PDF integration, CP, and normal
+required-check merging of PR #122, overriding the handoff's older no-merge line.
+Leave runtime/source/tests/notebooks/contracts/pins/builders unchanged. Retain
+the sealed v0.2 ZIP; send PDFs alongside it, not by rebuilding the archive.
+After integration, keep the active main checkout clean and park until the
+walkthrough or further instructor feedback. No unrelated dependency PR, new
+release, external human message, or hardware action is authorized.
+
+The review entrance should ask for agenda and run sheet first, quickstart to
+skim, and guided notebooks only as time permits. Technical support files are
+not part of the instructor's reading task. Preserve the three accepted guide
+bodies; add companion navigation in the entry point. Immutable HTTPS PDF links
+also keep the existing export link contract intact without changing code.
+
+### Earlier implementation and repair checkpoints
+
 The [focused guided review](GUIDED_REVIEW_RECONCILIATION.md) is received. It
 independently executed the unchanged e4fea10 kit and identified the parameter-cell
 instruction defect, now reproduced and repaired. Preserve its 197-test archive
@@ -36,8 +60,9 @@ The user requests implementation, correctness and OCR checks, a runnable review
 ZIP copied to the Ubuntu desktop, commit/push, clean Git, and CI checks. This
 supersedes the quoted return's local-only boundary for those actions. Open a
 normal PR to trigger CI, retaining all existing required job names and pins;
-no merge, new release, external human message, dependency upgrade, or GPU repair
-is authorized. No unchanged-snapshot review loop is needed.
+the later instruction above permits its merge. No new release, external human
+message, dependency upgrade, or GPU repair is authorized. No unchanged-snapshot
+review loop is needed.
 
 Audience-facing files use **Gage Plott** and exclude internal model names,
 review-transfer instructions, and maintainer coordination. Historical supplied
@@ -95,18 +120,20 @@ push/PR, required-check merge, and prerelease workflow. Do not request that
 authorization again. Other releases, instructor messages, and hardware jobs
 still need authorization covering those actions.
 
-## Immediate next technical action
+## Parked state after integration
 
-**Current stop point:** the November 1 provisional preview is published and its
-assets verified. See [PUBLIC_PREVIEW_RELEASE.md](PUBLIC_PREVIEW_RELEASE.md).
-The original dirty work is now a verified recovery stash/checkpoint, and its
-active checkout has been fast-forwarded to main. Completion documentation and
-branch synchronization are complete. Wait for Rick's
-reply, a concrete defect, or a specific request. Do not start another unchanged
-readiness, package, runtime, or PDF cycle. The user's subsequent instruction authorizes
-only documentation reconciliation; it does not authorize the
-optional GPU code repair or another external action. Earlier instructions below record the
-path to this delivery and do not authorize repeating a completed release.
+The current integration is PR #122: complete its required-check merge, retain
+clean main and the PDF/ZIP receipts, then stop until the walkthrough or further
+instructor email feedback. No new technical milestone, PDF production, package,
+or unchanged validation cycle is recommended while waiting. Sending a planned
+email is not inferred and remains the user's action.
+
+### Historical delivery sequence
+
+The November 1 preview publication and recoverable Git cleanup are complete;
+[PUBLIC_PREVIEW_RELEASE.md](PUBLIC_PREVIEW_RELEASE.md) preserves that receipt.
+The older steps below record how the materials reached the present state,
+not new instructions to repeat completed preparation.
 
 The earlier November 1 instruction authorized and completed publication of the
 named full-course preview and recoverable Git cleanup under [R8](R8_READINESS_AUDIT.md):

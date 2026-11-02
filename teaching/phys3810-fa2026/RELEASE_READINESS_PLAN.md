@@ -1,6 +1,15 @@
 # Classroom-release readiness plan
 
-Current disposition, November 1, 2026: the provisional full-course preview
+Current disposition, November 2: the corrected guided v0.2 kit is independently
+accepted and its supplied review-draft PDFs provide a short reading route.
+See [the review entrance](guided/START_HERE.md) and
+[reconciliation](GUIDED_REVIEW_RECONCILIATION.md). The authorized documentation
+integration and PR #122 merge do not create a new release or rebuild the ZIP.
+Afterward, park for the walkthrough or further instructor feedback. Assessment
+is settled as none; final dates/count, priorities, setup support, prior quantum
+coverage, delivery arrangements, and human pacing remain open.
+
+Historical publication disposition, November 1, 2026: the provisional full-course preview
 is [published and verified](PUBLIC_PREVIEW_RELEASE.md); completion documentation
 and Git synchronization are complete at `f4990b4`. The
 [subsequent independent audit](NOVEMBER_REVIEW_RECONCILIATION.md) accepts that
@@ -9,7 +18,7 @@ availability wording and P3-01 without replacing the frozen v0.1 documents.
 The listed class period is 85 minutes. November 16/19/23 are provisional, and
 the Thursday November 19 date conflicts with the listed Monday/Wednesday
 pattern. See [the scheduling decisions](COURSE_PLAN.md). Final session count,
-topic allocation, classroom platforms/editor coverage, assessment, and human
+topic allocation, classroom platforms/editor coverage, and human
 pacing remain open. No new readiness cycle is needed for this docs-only update.
 
 ## Historical readiness preparation through R7

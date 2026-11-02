@@ -22,17 +22,24 @@ not prove students will complete every segment at that pace.
 
 ## What to open together
 
-1. The [student quickstart](guided/STUDENT_QUICKSTART.md), covering assisted
-   setup, notebook cells, saving, restarting, and dependent-cell reruns.
-2. The [presenter run sheet](guided/INSTRUCTOR_RUN_SHEET.md), with cell references,
+1. The one-page [review agenda](guided/REVIEW_AGENDA.md), covering the route and
+   decisions to settle. The [review entrance](guided/START_HERE.md) links its PDF.
+2. The three-page [presenter run sheet](guided/INSTRUCTOR_RUN_SHEET.md), with cell references,
    expected observations, common mistakes, and 50-minute stopping points.
-3. The three [guided notebooks](guided/START_HERE.md#the-small-classroom-route).
-   The complete five-algorithm library and eight reference/validation notebooks
-   remain in the runnable support tree, but they are not the first reading task.
+3. Skim the two-page [student quickstart](guided/STUDENT_QUICKSTART.md), covering
+   assisted setup, notebook cells, saving, restarting, and dependent-cell reruns.
+
+The agenda and run sheet are sufficient for a first pass. Open the three
+[guided notebooks](guided/START_HERE.md#the-small-classroom-route) only as time
+permits. Implementation, tests, receipts, logs, and the eight reference/validation
+notebooks support running the kit; they are not assigned review reading.
 
 The review kit is a new instructor-review artifact. Earlier PDFs are preserved
 as historical references and are not included simply to enlarge the packet.
-No new PDF is needed to use the concise Markdown and runnable notebooks.
+The three supplied review-draft PDFs accompany the unchanged v0.2 ZIP; their
+Markdown bodies and terminal commands match its accepted source. Do not rebuild
+that archive merely to embed them. These are review drafts, not final classroom
+approval, and no new technical review is required just to read them.
 The prior full-course and Grover releases remain unchanged.
 
 ## Decisions for the walkthrough

@@ -14,6 +14,12 @@ The two-day fallback uses Python/Qiskit plus Grover. Lessons are complete worked
 examples demonstrated by the instructor and repeated on laptops, with no
 assignments, grading, evaluation, or submissions.
 
+For the walkthrough, read the linked one-page agenda and three-page instructor
+run sheet first, then skim the two-page student quickstart. Their PDF and Markdown
+versions are together in the [review entrance](guided/START_HERE.md). Guided
+notebooks are optional first-pass reading; implementation and validation files
+are support material. The PDFs accompany the sealed v0.2 ZIP separately.
+
 The guided kit is separate from the frozen public release below. Its complete
 support tree includes three guided notebooks plus the eight original
 reference/validation notebooks. Use its [quickstart](guided/STUDENT_QUICKSTART.md)

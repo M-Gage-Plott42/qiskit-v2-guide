@@ -1,5 +1,64 @@
 # Focused guided-route review reconciliation
 
+## Consolidated v0.2 acceptance and supplied PDF companions
+
+November 2, 2026: the latest accessible return incorporates a subsequent
+independent acceptance of the corrected b393f63 v0.2 kit, with no remaining
+must-fix finding. It reports **205 tests, eleven fresh-kernel notebooks,
+74 code cells, and 27 PNGs** using a **reused Linux CPython 3.12.14 environment**.
+This is distinct from the earlier fresh-install 197-test review below and the
+local reused-3.12.15 checks. The separate earlier acceptance report/raw logs were
+not supplied independently; its disposition is conveyed by this consolidated
+return. The PDF conversion turn did not repeat runtime validation.
+
+All three PDFs were actually available in Ubuntu Downloads and were imported
+unchanged under `guided/pdf/`. The named external delivery-receipt JSON was not
+supplied; the user requested skipping it. The
+[local verification record](validation/GUIDED_PDF_v0.2_LOCAL_VERIFICATION.json)
+therefore records computed full-file hashes and content checks, **not** an
+invented comparison with an authoritative external receipt. Private library
+links alone were not treated as file access.
+
+- Agenda: **72,102 bytes**, one page, SHA-256
+  `fb83bcb48c97480b46023a5e05cfcf6fda831f8754e6d2baf5721d11a38195cf`.
+- Instructor run sheet: **97,854 bytes**, three pages, SHA-256
+  `4d94a7caec7cf6053a0dc3d85b330bf0a9def8efc4608bd60951f1a6199ab115`.
+- Student quickstart: **91,455 bytes**, two pages, SHA-256
+  `8e5be410550c774eca39b277724546638a7c3efeffb8a6dc72356c5d96b0a673`.
+
+Local inspection passed all six rendered pages, all 74 source blocks in order,
+all ten complete unwrapped terminal-command lines, Gage Plott author metadata,
+review-draft titles, visible-font embedding/Unicode maps, and all seven valid
+link annotations targeting existing b393f63 files. The three Markdown bodies
+still match their accepted source exactly. Provenance bytes are preserved;
+no cryptographic provenance validation or PDF rewriting was performed.
+The reviewer reports 300-dpi OCR and post-download appearance/text comparison;
+local verification did not repeat OCR or claim access to its private originals.
+No content defect blocking the planned review email was found.
+
+The [entry point](guided/START_HERE.md) now gives agenda, run sheet, quickstart
+reading order with PDF/Markdown alternatives. Immutable HTTPS PDF links point
+to their import commit, preserving usable export navigation without editing
+the existing builder. The three guided notebooks are the classroom route;
+implementation, tests, receipts, and the other eight notebooks are supporting
+material outside the instructor's first reading task.
+
+The sealed v0.2 ZIP remains **169,749 bytes**, SHA-256
+`e18da8a5400aafe61e34ab530242bb0dcdc540a48c620c0c98f37062965652d1`;
+its Desktop and Downloads copies were checked unchanged. Attach the three PDFs
+alongside it rather than rebuilding that archive. Existing PDF editions and
+published assets remain unchanged. Runtime/source/tests/notebooks/contracts/
+dependency pins/builders were not changed during this documentation integration.
+
+The latest user instruction authorizes CP and normal required-check merge of
+PR #122, superseding the handoff's old no-merge line for this teaching work.
+No unrelated dependency PR or release is included. PR #122 records the final
+head/merge/check history. After integration, remain parked until the walkthrough
+or further instructor email feedback; no further planning/package/PDF cycle is
+needed. No email is assumed sent and no external human message was performed.
+
+## Earlier focused repair and execution evidence
+
 November 2, 2026. The independent review accepts the computational examples
 and strict validator, but identifies a required beginner instruction repair
 before student follow-along. This record separates the unchanged reviewed kit,

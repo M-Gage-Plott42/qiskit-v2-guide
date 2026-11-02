@@ -81,6 +81,33 @@ data in public code, notebooks, documentation, outputs, or validation logs.
 
 ## PHYS 3810 collaboration and handoffs
 
+**Current consolidated acceptance and park instruction, November 2:** the
+reviewer accepts the corrected b393f63 guided v0.2 kit with no remaining
+must-fix finding and reports 205 tests/eleven notebooks/74 cells/27 PNGs in a
+reused Linux CPython 3.12.14 environment. Its later PDF-only turn did not rerun
+those checks. Three supplied guided REVIEW DRAFT PDFs are available locally;
+keep their exact bytes/provenance and the three synchronized Markdown bodies.
+The supplied delivery JSON was not received; the user requested skipping it.
+Record locally computed hashes and content checks as local evidence, without
+claiming comparison with the unavailable authoritative receipt.
+
+The latest user instruction explicitly authorizes documentation/PDF integration,
+commit/push, and normal required-check merge of **PR #122**. It supersedes prior
+no-merge wording for that teaching work only. Do not change source, notebooks,
+tests, contracts, pins, builders, or sealed ZIPs; do not merge unrelated dependency
+updates. Preserve published release tags/assets, historical worktrees, and the
+recovery stash. After this integration, keep main clean and **park until the
+walkthrough or further instructor email feedback**. No repeat review, package,
+runtime test cycle, or new PDF production is needed just to wait.
+
+Rick's reading task is the one-page agenda, three-page instructor run sheet,
+then the two-page student quickstart to skim; guided notebooks are optional
+before the walkthrough. Implementation, tests, receipts, and eight reference
+notebooks are support material, not assigned reading. No external message or
+new release is authorized, and no planned email is assumed sent.
+
+### Earlier November 2 milestones
+
 **Focused guided review received, November 2:** the external review verified
 the unchanged e4fea10 kit and independently passed a fresh application install
 with 197 tests/eleven notebooks/74 cells/27 PNGs. Its required R1 parameter-cell
@@ -90,7 +117,8 @@ See [the reconciliation](teaching/phys3810-fa2026/GUIDED_REVIEW_RECONCILIATION.m
 Preserve the old reviewed ZIP; deliver a separately identified v0.2 review kit.
 No new broad review or PDF round is needed solely for these evidenced repairs;
 await walkthrough feedback after validation, desktop delivery, and the existing
-authorized commit/push/CI workflow. Do not merge or change published releases.
+authorized workflow. The later integration authorization above governs merging;
+published releases remain unchanged.
 
 **Current position, November 2, 2026:** the instructor response establishes two
 or three classes, zero Python experience, no grading/evaluation/assignments or
@@ -102,8 +130,9 @@ genuine two-day fallback of Python/Qiskit plus one algorithm day. HHL and full
 compiled-Shor remain references. Preserve all canonical algorithm bounds/pins.
 
 The user authorizes implementation, a standalone desktop review ZIP, commit and
-push, and CI checks. A normal PR triggers required CI; no merge, new release,
-human message, hardware job, dependency upgrade, or GPU repair is authorized.
+push, and CI checks. A normal PR triggers required CI; the later authorization
+above permits its merge. No new release, human message, hardware job, dependency
+upgrade, or GPU repair is authorized.
 Finish exact extracted-package verification and visual/OCR checks before delivery.
 Keep new teaching files free of internal model names and coordination notes;
 attribute current material to **Gage Plott**. Historical supplied PDF/companion
@@ -115,8 +144,9 @@ Remaining instructor decisions are exact dates/count, priorities, laptop/setup
 support, prior quantum coverage, and delivery after the walkthrough. Retain
 85 minutes as 75+10 and the November 19 weekday caveat; do not keep asking about
 resolved grading, assignment submission, or laptop follow-along. Receipt is
-acknowledged, not detailed approval. The current handoff return is accessible
-text only; no newly supplied files or private reviewer execution paths are claimed.
+acknowledged, not detailed approval. That handoff initially provided text only;
+the later PDF delivery above supersedes that access status.
+Private reviewer execution paths are not claimed accessible.
 The requested focused review has now returned; after reconciling it, wait for
 the walkthrough outcome. The earlier parked-state instructions
 below are historical and do not cancel this authorized work.

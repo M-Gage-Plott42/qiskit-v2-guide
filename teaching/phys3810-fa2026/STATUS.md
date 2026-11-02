@@ -1,5 +1,28 @@
 # PHYS 3810 status
 
+November 2 consolidated acceptance: **the corrected guided v0.2 kit is accepted
+with no remaining must-fix issue; its three supplied REVIEW DRAFT PDFs match
+the accepted guides.** The return reports 205 tests/eleven notebooks/74 cells/
+27 PNGs in a reused Linux CPython 3.12.14 environment; its PDF-only turn did not
+repeat that execution. Local document checks and the receipt limitation are
+recorded in [the reconciliation](GUIDED_REVIEW_RECONCILIATION.md).
+
+The reading order is agenda, instructor run sheet, then quickstart to skim;
+guided notebooks are optional before the walkthrough. The three PDFs accompany
+the unchanged `PHYS3810-Guided-Review-v0.2-b393f63fd8b3.zip`; they are not added
+to that sealed archive. No code, notebook, test, contract, pin, or builder
+changes belong to this integration. PR #122 carries the accepted teaching work
+and document integration through the required checks and normal merge.
+
+**Park after integration until the walkthrough or further instructor email
+feedback.** No new content, review cycle, package, or PDF production is needed
+in the meantime. Sending the planned email is not assumed; no message was sent
+by the assistant. Final dates/count, priorities, supported laptop setup,
+prior quantum coverage, delivery arrangement, and human pacing remain open.
+No-assessment and zero-Python requirements are already settled.
+
+## Earlier focused repair
+
 November 2 focused-review update: **the required parameter-cell instruction
 repair is reproduced and applied**. The independent reviewer freshly installed
 and executed the unchanged 197-test kit; that passing computational result does
