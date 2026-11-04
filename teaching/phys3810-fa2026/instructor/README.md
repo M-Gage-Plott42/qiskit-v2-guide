@@ -1,4 +1,31 @@
-# Instructor document editions
+# Instructor route and historical document editions
+
+For the current beginner proposal, use the [guided presenter run sheet](../guided/INSTRUCTOR_RUN_SHEET.md)
+and [walkthrough agenda](../guided/REVIEW_AGENDA.md). Material development:
+**Gage Plott**. Start with Python/Qiskit, then Grover, with QFT/QPE as a third
+day if available. Use complete worked examples, no assignments or assessment.
+Rick has offered to teach after the walkthrough; final delivery remains open.
+
+The PDFs below are historical references, not the current route. They remain
+unchanged and are excluded from the new concise kit. Archived Grover documents
+retain their original byline; new material uses the credit above.
+
+The [full-course document v0.2 review draft](PHYS3810_Full_Course_Instructor_Guide_v0.2_REVIEW_DRAFT.pdf)
+has six pages and an [unchanged supplied Markdown companion](FULL_COURSE_INSTRUCTOR_v0.2_REVIEW_DRAFT.md).
+Delivered PDF: 84,527 bytes, SHA-256
+`0255da43e512d36582bb33451fcc8027f9b0cbccbe8217afdfa8f256147dd896`.
+It identifies the published preview, fixes former-bundle navigation, and
+**clarifies phase decoding in this edition** by limiting phase-fraction decoding to
+the phase-estimation counting register. See
+[the November reconciliation](../NOVEMBER_REVIEW_RECONCILIATION.md).
+
+The supplied v0.2 documents predate the scheduling clarification. Their
+50/75-minute routes remain proposed content budgets; current planning uses an
+85-minute class period with 10 minutes of margin after the expanded route.
+November 16/19/23 are provisional, and November 19 conflicts with the listed
+Monday/Wednesday schedule. See [the current course plan](../COURSE_PLAN.md).
+Keep the supplied PDF and synchronized companion unchanged; no new edition
+is needed solely to communicate this scheduling caveat during review.
 
 The [full-course document v0.1 review draft](PHYS3810_Full_Course_Instructor_Guide_v0.1_REVIEW_DRAFT.pdf)
 has six pages and a [synchronized Markdown companion](FULL_COURSE_INSTRUCTOR_DRAFT.md).
@@ -20,7 +47,7 @@ that integer yields the phase estimate `int(bits, 2)/2**m`; HHL then applies its
 stated phase-to-eigenvalue conversion. Grover/QFT basis labels remain integer
 indices. See the canonical [QPE convention](../QPE_PLAN.md).
 
-This is the nonblocking P3-01 clarification for the next authored instructor
-edition before final classroom distribution. It does not modify the delivered
-PDF or its synchronized body text. Keep instructor answer material outside a
-student-only package; the existing notebooks still contain worked results.
+This reading clarification is retained for v0.1; the newer v0.2
+edition incorporates it. It does not modify the delivered v0.1
+PDF or its synchronized body text. The new guided route contains complete
+worked results for open demonstration and follow-along, with no assessment.

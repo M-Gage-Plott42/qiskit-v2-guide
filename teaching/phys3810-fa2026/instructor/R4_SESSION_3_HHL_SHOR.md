@@ -6,6 +6,13 @@ They are not measured human teaching times or a completed pacing rehearsal.
 Rick's dates, number of sessions, in-class coverage, student background,
 assessment, and delivery responsibility remain unconfirmed.
 
+November 1 scheduling update: the class period is 85 minutes. The 75-minute
+content route leaves 10 minutes for questions, transitions, and recovery;
+the 50-minute core remains a fallback. See [the schedule caveat](../COURSE_PLAN.md)
+for provisional November 16/19/23 dates and the November 19 weekday conflict.
+Having both examples ready does not establish that two hands-on labs fit;
+choose emphasis after the instructor resolves topic allocation.
+
 Use the [run-sheet index](../R4_PRESENTER_RUN_SHEETS.md),
 [demonstration timing evidence](../R4_DEMONSTRATION_TIMINGS.md), and
 [course plan](../COURSE_PLAN.md). Machine execution measurements do not reserve

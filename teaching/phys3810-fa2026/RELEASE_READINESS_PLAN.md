@@ -1,5 +1,28 @@
 # Classroom-release readiness plan
 
+Current disposition, November 2: the corrected guided v0.2 kit is independently
+accepted and its supplied review-draft PDFs provide a short reading route.
+See [the review entrance](guided/START_HERE.md) and
+[reconciliation](GUIDED_REVIEW_RECONCILIATION.md). The authorized documentation
+integration and PR #122 merge do not create a new release or rebuild the ZIP.
+Afterward, park for the walkthrough or further instructor feedback. Assessment
+is settled as none; final dates/count, priorities, setup support, prior quantum
+coverage, delivery arrangements, and human pacing remain open.
+
+Historical publication disposition, November 1, 2026: the provisional full-course preview
+is [published and verified](PUBLIC_PREVIEW_RELEASE.md); completion documentation
+and Git synchronization are complete at `f4990b4`. The
+[subsequent independent audit](NOVEMBER_REVIEW_RECONCILIATION.md) accepts that
+source and the unchanged release ZIP. New document-v0.2 review editions resolve
+availability wording and P3-01 without replacing the frozen v0.1 documents.
+The listed class period is 85 minutes. November 16/19/23 are provisional, and
+the Thursday November 19 date conflicts with the listed Monday/Wednesday
+pattern. See [the scheduling decisions](COURSE_PLAN.md). Final session count,
+topic allocation, classroom platforms/editor coverage, and human
+pacing remain open. No new readiness cycle is needed for this docs-only update.
+
+## Historical readiness preparation through R7
+
 Updated October 31, 2026. **R1 passed:** fresh installation of unchanged pins
 on Linux/CPython 3.12.15 validated the corrected 160-test revision. See
 [R1_FRESH_LINUX_VALIDATION.md](R1_FRESH_LINUX_VALIDATION.md). All five bounded
@@ -206,14 +229,17 @@ The R1 environment was reused, with no source/notebook/test/pin changes.
 These seconds do not establish a human rehearsal or confirm the proposed minutes.
 No new UI run or 160-test unit-suite run is claimed for this documentation turn.
 
-Pending: session count/dates/duration/deadline, five topics' in-class versus
+November 1 update: the listed period is 85 minutes; final dates/count remain
+unconfirmed, with the November 19 conflict recorded in the course plan.
+Pending: final session count/dates/deadline, five topics' in-class versus
 outside-class coverage, Python/Jupyter/quantum preparation, hands-on versus
 demonstration format, delivery responsibility, required platforms, assessment,
 and preferred notes/HHL/Shor examples. No answer or new outreach is assumed.
 All five tested implementations are available locally; eventual classroom
 emphasis does not remove that deliverable.
 
-The current proposal is three 50-minute cores with 75-minute expansions:
+The content proposal remains three 50-minute cores with 75-minute expansions
+inside 85-minute periods, leaving 10 minutes of margin rather than new content:
 Grover; QFT/QPE; HHL/Shor. Session 3 allocates 5 minutes QPE refresher, 20 HHL,
 20 Shor, and 5 limitations; expansion adds 15 HHL and 10 Shor minutes.
 
@@ -403,7 +429,11 @@ No earlier Grover authorization covers this new release or instructor outreach.
 Keep the original recovery bundle, staged/unstaged patches, untracked archive,
 raw index, and restored-file/mode evidence at
 `artifacts/local-integration-2026-10-30/recovery` in the original repository.
-Never reset, clean, stash, or switch that dirty checkout as a cleanup shortcut.
+The original dirty state was subsequently preserved through the explicitly
+authorized recovery stash `2705385616e21718a10b73765946e430597dc4bf`, then its
+checkout was fast-forwarded to main. Preserve that stash and both recovery
+records; do not pop/drop it or use obsolete dirty-checkout equality checks to
+reject that intentional transition. See [the receipt](PUBLIC_PREVIEW_RELEASE.md).
 The verified student/instructor v0.2 full-file hashes remain recorded in
 [handouts/README.md](handouts/README.md); the Grover release receipt is in
 [PREVIEW_PLAN.md](PREVIEW_PLAN.md). Retain both earlier review archives unchanged.
@@ -418,5 +448,7 @@ do not substitute for executing another gate.
 **Recommended next action: wait for Rick's reply.** The provisional preview
 is delivered; retain the published-byte and Git-recovery receipts. Resume for
 new decisions, a concrete defect, or explicit new scope only. **GPT Pro sync:
-not needed now.** P3-01 and confirmed teaching changes belong to the next final
-instructor edition; no speculative validation or packaging loop is recommended.
+not needed now.** P3-01 is resolved in the supplied full-course instructor v0.2
+review edition; the v0.1 note remains necessary. Confirmed teaching changes and
+the 85-minute schedule belong to a later final edition. No speculative validation
+or packaging loop is recommended.

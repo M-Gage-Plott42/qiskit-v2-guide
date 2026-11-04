@@ -2,10 +2,15 @@
 
 October 31, 2026. **Proposed 50-minute core, extended to 75 minutes by adding
 25 minutes.** This is presenter preparation, not a completed human rehearsal or
-a confirmed teaching assignment. Rick's dates, meeting length, topic emphasis,
+a confirmed teaching assignment. Final dates, topic emphasis,
 student preparation, assessment, and presenter role remain pending. Do not treat
 these exercises as graded work or distribute instructor answers as an assessed
 student variant before those decisions are made.
+
+November 1 scheduling update: the class period is 85 minutes. The 75-minute
+content route leaves 10 minutes for questions, transitions, and recovery;
+the 50-minute core remains a fallback. See [the schedule caveat](../COURSE_PLAN.md)
+for provisional November 16/19/23 dates and the November 19 weekday conflict.
 
 Use [the presenter index](../R4_PRESENTER_RUN_SHEETS.md) and
 [demonstration timing evidence](../R4_DEMONSTRATION_TIMINGS.md) alongside this
