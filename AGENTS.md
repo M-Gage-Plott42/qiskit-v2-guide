@@ -21,6 +21,10 @@ rulesets as part of instructional work.
 - Declare bit order, register roles, supported inputs, approximation choices,
   and random seeds. Commit notebooks without execution outputs or counts;
   write executed copies to ignored `artifacts/` for review.
+- When inviting parameter edits, explicitly run the edited parameter cell
+  before its dependent cells. Editing document text does not update kernel
+  state; passing assertions can still describe stale values. Verify the written
+  sequence with a persistent-namespace negative control as well as fresh runs.
 - Default runs must be local and credential-free. IBM Runtime and GPU paths
   remain optional and excluded from classroom validation. Never submit jobs
   or contact IBM during offline tests; mock service construction in tests.
@@ -30,16 +34,18 @@ rulesets as part of instructional work.
 Use the documented Python 3.12 classroom environment. From the repository root:
 
 ```bash
-python -m pip check
-python -m unittest discover -s tests -v
-python scripts/validate_classroom.py
+python scripts/validate_classroom.py --profile all
 python -m ruff check src scripts tests teaching/phys3810-fa2026/notebooks notebooks/00_local_statevector_smoke.ipynb notebooks/01_local_aer_smoke.ipynb
 bash scripts/smoke_local.sh
 pre-commit run --all-files
 ```
 
 The Python validator is the cross-platform classroom entry point; the Bash
-command retains the existing smoke workflow. Run each required notebook from a
+command retains the existing smoke workflow. The validator includes pip check
+and the complete unit suite: do not immediately repeat unittest discovery.
+Its default inventory remains eight reference notebooks; `--profile all` also
+executes the three beginner guided notebooks and is required for that route.
+Run each required notebook from a
 fresh kernel, with the selected environment's interpreter, and fail on cell
 errors. Printed output and stored notebook output are not proof of correctness.
 Required nonempty code cells must all execute: reject `skip-execution`, force
@@ -75,23 +81,111 @@ data in public code, notebooks, documentation, outputs, or validation logs.
 
 ## PHYS 3810 collaboration and handoffs
 
+**Current consolidated acceptance and park instruction, November 2:** the
+reviewer accepts the corrected b393f63 guided v0.2 kit with no remaining
+must-fix finding and reports 205 tests/eleven notebooks/74 cells/27 PNGs in a
+reused Linux CPython 3.12.14 environment. Its later PDF-only turn did not rerun
+those checks. Three supplied guided REVIEW DRAFT PDFs are available locally;
+keep their exact bytes/provenance and the three synchronized Markdown bodies.
+The supplied delivery JSON was not received; the user requested skipping it.
+Record locally computed hashes and content checks as local evidence, without
+claiming comparison with the unavailable authoritative receipt.
+
+The latest user instruction explicitly authorizes documentation/PDF integration,
+commit/push, and normal required-check merge of **PR #122**. It supersedes prior
+no-merge wording for that teaching work only. Do not change source, notebooks,
+tests, contracts, pins, builders, or sealed ZIPs; do not merge unrelated dependency
+updates. Preserve published release tags/assets, historical worktrees, and the
+recovery stash. After this integration, keep main clean and **park until the
+walkthrough or further instructor email feedback**. No repeat review, package,
+runtime test cycle, or new PDF production is needed just to wait.
+
+Rick's reading task is the one-page agenda, three-page instructor run sheet,
+then the two-page student quickstart to skim; guided notebooks are optional
+before the walkthrough. Implementation, tests, receipts, and eight reference
+notebooks are support material, not assigned reading. No external message or
+new release is authorized, and no planned email is assumed sent.
+
+### Earlier November 2 milestones
+
+**Focused guided review received, November 2:** the external review verified
+the unchanged e4fea10 kit and independently passed a fresh application install
+with 197 tests/eleven notebooks/74 cells/27 PNGs. Its required R1 parameter-cell
+execution correction is reproduced and repaired; O1/O2 clarify the stopping
+point/setup wording, and O3 tightens the export receipt's derived figure minimum.
+See [the reconciliation](teaching/phys3810-fa2026/GUIDED_REVIEW_RECONCILIATION.md).
+Preserve the old reviewed ZIP; deliver a separately identified v0.2 review kit.
+No new broad review or PDF round is needed solely for these evidenced repairs;
+await walkthrough feedback after validation, desktop delivery, and the existing
+authorized workflow. The later integration authorization above governs merging;
+published releases remain unchanged.
+
+**Current position, November 2, 2026:** the instructor response establishes two
+or three classes, zero Python experience, no grading/evaluation/assignments or
+submissions, and live demonstrations repeated on laptops. The instructor offers
+to deliver after a walkthrough; detailed approval and final delivery remain open.
+The [guided teaching contract](teaching/phys3810-fa2026/GUIDED_TEACHING_PLAN.md)
+supersedes the earlier classroom route: Python/Qiskit, Grover, QFT/QPE, with a
+genuine two-day fallback of Python/Qiskit plus one algorithm day. HHL and full
+compiled-Shor remain references. Preserve all canonical algorithm bounds/pins.
+
+The user authorizes implementation, a standalone desktop review ZIP, commit and
+push, and CI checks. A normal PR triggers required CI; the later authorization
+above permits its merge. No new release, human message, hardware job, dependency
+upgrade, or GPU repair is authorized.
+Finish exact extracted-package verification and visual/OCR checks before delivery.
+Keep new teaching files free of internal model names and coordination notes;
+attribute current material to **Gage Plott**. Historical supplied PDF/companion
+bytes remain unchanged and excluded from this kit; obtain corrected editions
+before reusing the old Grover attribution as current handouts. No new PDF is
+generated locally; HTML/PNG rendering and OCR check this Markdown-first packet.
+
+Remaining instructor decisions are exact dates/count, priorities, laptop/setup
+support, prior quantum coverage, and delivery after the walkthrough. Retain
+85 minutes as 75+10 and the November 19 weekday caveat; do not keep asking about
+resolved grading, assignment submission, or laptop follow-along. Receipt is
+acknowledged, not detailed approval. That handoff initially provided text only;
+the later PDF delivery above supersedes that access status.
+Private reviewer execution paths are not claimed accessible.
+The requested focused review has now returned; after reconciling it, wait for
+the walkthrough outcome. The earlier parked-state instructions
+below are historical and do not cancel this authorized work.
+
 **Current position, November 1, 2026:** the explicitly authorized full-course
 preview is published at `phys3810-fa2026-v0.2.0-rc1`, source `f717aea`, after
 normal PR #113 and all nine required checks. Published ZIP/checksum bytes were
 verified anonymously. See [the publication receipt](teaching/phys3810-fa2026/PUBLIC_PREVIEW_RELEASE.md).
-The reviewed PDFs remain unchanged prepublication references; current public
-README/SETUP and a notice govern availability. No final classroom approval is
-claimed, and P3-01/teaching/native/editor/pacing decisions remain open.
+The frozen package's v0.1 student PDF and companion remain prepublication references;
+current public README/SETUP and a notice govern availability. The subsequent
+[November audit](teaching/phys3810-fa2026/NOVEMBER_REVIEW_RECONCILIATION.md)
+accepts main `f4990b4` and the published ZIP and supplies separate full-course
+document-v0.2 review editions. P3-01 is resolved in the new instructor edition;
+retain the v0.1 reading note. No final classroom approval is claimed, and
+teaching/native/editor/pacing decisions remain open.
 The user also explicitly requested clean Git state. The formerly dirty original
-checkout is now clean main; its exact original work/index are recoverable from
+checkout was restored to clean main before this docs-only update; its exact
+original work/index are recoverable from
 verified stash `2705385616e21718a10b73765946e430597dc4bf` and both recovery records.
 The accepted integration checkout remains a historical snapshot. Preserve that
 recovery data; do not use old active-checkout equality checks to reject the
 intentional fast-forward or discard/pop the recovery stash.
-After final completion documentation is pushed/merged, **wait for Rick's reply,
+Completion documentation is merged. **Wait for Rick's reply,
 a concrete defect, or a specific new request**. Do not repeat unchanged tests,
 packages, PDF reviews, or readiness planning. This completed authorization does
 not cover another release, external human messages, or hardware jobs.
+
+The November 1 reconciliation was documentation-only with no commit or push.
+The subsequent **CP and park** instruction authorizes committing and pushing
+that documentation on `docs/phys3810-november-review`, then stopping. It does
+not authorize another release, code repair, or external human message.
+Preserve all supplied PDF/companion bytes and frozen packages.
+The listed class period is **85 minutes (12:40–2:05 PM)**. November 16, 19, and
+23 remain provisional; November 19 is Thursday whereas the course listing says
+Monday/Wednesday. Do not silently correct it or infer extra meetings or how
+QPE/HHL fit the earlier three-topic proposal. Use 75 minutes of proposed content
+plus 10 minutes of margin, retaining the 50-minute fallback and untested human
+pacing. The optional GPU diagnostic finding is deferred code work, outside this
+docs-only turn. No new review, package, or algorithm work is needed just to wait.
 
 - The assistant owns implementation, technical review, testing, repairs, and
   documentation. Do not assign manual code/diff review to the user.
@@ -147,6 +241,12 @@ not cover another release, external human messages, or hardware jobs.
   revision, relative paths, and hashes of the delivered bytes, then require
   those bytes to be attached or made locally available before integrating them.
   Never claim to have read or applied an inaccessible private-sandbox copy.
+
+## Historical milestone record
+
+The dated sequence below preserves earlier decisions and evidence. Its old
+"next" instructions and checkout descriptions are superseded by the current
+position above; do not restart completed milestones from this history.
 
 Milestone 1's independent review was received and its required correction was
 demonstrated on October 29, 2026; see the

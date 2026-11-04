@@ -6,6 +6,7 @@ Executed notebooks are written to artifacts/executed-classroom, never over sourc
 
 from __future__ import annotations
 
+import argparse
 import importlib.metadata
 import json
 import os
@@ -32,11 +33,30 @@ NOTEBOOKS = (
     HHL_NOTEBOOK,
     SHOR_NOTEBOOK,
 )
+GUIDED_NOTEBOOKS = (
+    "teaching/phys3810-fa2026/notebooks/guided/01_python_and_qiskit.ipynb",
+    "teaching/phys3810-fa2026/notebooks/guided/02_grover_follow_along.ipynb",
+    "teaching/phys3810-fa2026/notebooks/guided/03_qft_qpe_follow_along.ipynb",
+)
 REQUIRED_PNGS = {
     PREFLIGHT_NOTEBOOK: 2, GROVER_NOTEBOOK: 3, QFT_NOTEBOOK: 2,
     QPE_NOTEBOOK: 3, HHL_NOTEBOOK: 3, SHOR_NOTEBOOK: 3,
+    GUIDED_NOTEBOOKS[0]: 4, GUIDED_NOTEBOOKS[1]: 3, GUIDED_NOTEBOOKS[2]: 4,
 }
 EXPECTED = {"qiskit": "2.6.1", "qiskit-aer": "0.17.2"}
+
+
+def notebooks_for_profile(profile: str = "default") -> tuple[str, ...]:
+    """Select the original inventory or that inventory plus the guided route.
+
+    Read globals at call time: regression fixtures replace ROOT/NOTEBOOKS with
+    isolated copies, and the all profile must never bypass the original eight.
+    """
+    if profile == "default":
+        return tuple(NOTEBOOKS)
+    if profile == "all":
+        return (*NOTEBOOKS, *GUIDED_NOTEBOOKS)
+    raise ValueError(f"Unknown classroom profile: {profile!r}")
 
 
 def validate_required_cells(notebook, *, executed: bool = False) -> None:
@@ -71,7 +91,7 @@ def check_environment() -> None:
     subprocess.run([sys.executable, "-m", "pip", "check"], check=True, cwd=ROOT)
 
 
-def execute_notebooks() -> int:
+def execute_notebooks(profile: str = "default") -> int:
     """Give every notebook a new kernel bound to sys.executable, not a saved kernel."""
     import nbformat
     from jupyter_client import KernelManager
@@ -109,7 +129,7 @@ def execute_notebooks() -> int:
             path.mkdir()
             environment[variable] = str(path)
         environment["MPLBACKEND"] = "Agg"
-        for relative in NOTEBOOKS:
+        for relative in notebooks_for_profile(profile):
             notebook = nbformat.read(ROOT / relative, as_version=4)
             # Strip stale output before execution, even if a contributor saved it.
             for cell in notebook.cells:
@@ -154,7 +174,14 @@ def execute_notebooks() -> int:
     return failures
 
 
-def main() -> int:
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--profile", choices=("default", "all"), default="default",
+        help="default: eight reference notebooks; all: references plus three guided notebooks",
+    )
+    arguments = parser.parse_args(argv)
+    print(f"Notebook profile: {arguments.profile}", flush=True)
     try:
         check_environment()
     except Exception as error:
@@ -170,7 +197,7 @@ def main() -> int:
     failures = int(result.returncode != 0)
     print(f"{'FAILED' if failures else 'PASSED'}: offline unit tests", flush=True)
     try:
-        failures += execute_notebooks()
+        failures += execute_notebooks(arguments.profile)
     except Exception as error:
         failures += 1
         print(f"FAILED: notebook runner: {type(error).__name__}: {error}", flush=True)

@@ -1,4 +1,39 @@
-# Grover document v0.2 receipt
+# Student guides and historical document editions
+
+## Current beginner route, November 2, 2026
+
+Use the [student quickstart](../guided/STUDENT_QUICKSTART.md) for the new
+Python/Qiskit, Grover, and QFT/QPE follow-along route. Material development is
+credited to **Gage Plott**. There is no grading, evaluation, assignment, or
+submitted work. Ask the instructor to confirm the supported setup and available
+assistance; independent setup homework is not assumed.
+
+The PDF editions below are preserved historical references. They predate the
+new beginner route and are not included in its concise review kit. The archived
+Grover PDFs retain their original byline; use the current credit above for new
+material. New editions require distinct filenames rather than rewriting old
+published or reviewed bytes.
+
+## Full-course document v0.2, November 1, 2026
+
+The new four-page [student setup review PDF](PHYS3810_Full_Course_Student_Setup_v0.2_REVIEW_DRAFT.pdf)
+and its [unchanged supplied Markdown companion](FULL_COURSE_SETUP_v0.2_REVIEW_DRAFT.md)
+identify the published full-course preview. Delivered PDF: 74,713 bytes,
+SHA-256 `4dc39dd536cf1e3c2e1a712dc92cbae6a605ba02d135e848523e78e0644a31b0`.
+The [November reconciliation](../NOVEMBER_REVIEW_RECONCILIATION.md) records
+verification and the distinct instructor edition. All six tested command/output
+blocks match the v0.1 companion. These are review drafts, not final approval or
+replacement release assets; no PDF was regenerated.
+
+The published ZIP still embeds the unchanged
+[full-course v0.1 PDF](PHYS3810_Full_Course_Student_Setup_v0.1_REVIEW_DRAFT.pdf)
+and [v0.1 companion](FULL_COURSE_SETUP_DRAFT.md), with its
+[publication notice](PUBLICATION_NOTICE.md). Their bytes and the frozen builders
+remain unchanged. New editions use new filenames; document v0.2 and code
+v0.2.0-rc1 are separate identities. Current scheduling assumptions are in the
+[course plan](../COURSE_PLAN.md), not retroactively inserted in supplied PDFs.
+
+## Historical Grover document v0.2 receipt
 
 Received and inspected October 30, 2026. These are **verified review drafts**
 for unchanged code release `phys3810-fa2026-grover-v0.1.0-rc1`, source commit
@@ -41,12 +76,12 @@ Both have meaningful `/Title` and `/Author` metadata. Ten student and seven
 instructor link annotations use expected HTTPS destinations with valid
 rectangles; no out-of-page glyphs or replacement characters were found.
 This checks embedded targets and geometry, not every website's availability.
-The reviewer reports OCR; Codex did not rerun it.
+OCR was reported by the independent reviewer; the local receipt did not repeat it.
 
 ## Corrected receipt and cause
 
 The initial comparison failed against the handoff's pre-delivery hashes; that
-historical result is retained. ChatGPT subsequently retrieved the final
+historical result is retained. The document author subsequently retrieved the final
 downloadable copies, reproduced the delivered-file hashes above, and supplied
 them as the authoritative integration receipts. No replacement PDFs are needed.
 
@@ -60,7 +95,7 @@ not resolve it. Full delivered-file hashes now govern integration/publication.
 The reviewer independently reports identical per-page extracted text,
 title/author metadata, 17 link annotations, and pixel-identical renders of all
 five pages at 150 dpi versus the pre-delivery originals. Those comparison runs
-are reviewer evidence; Codex verified the full-file/prefix hashes and preserved
+are reviewer evidence; local checks verified the full-file/prefix hashes and preserved
 the earlier local visual checks. No C2PA signature validation is claimed.
 
 Do not regenerate, optimize, alter metadata, or strip appended provenance from
