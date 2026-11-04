@@ -1,48 +1,86 @@
 # PHYS 3810 implementation workflow
 
-Updated October 31, 2026. This is maintainer guidance; the student entry point
+Updated November 2, 2026. This is maintainer guidance; the student entry point
 remains [README.md](README.md). The assistant owns technical review and tests.
 The user supplies teaching decisions and any external reviewer response that
 is not accessible in the current workspace.
 
 ## Source of truth and current position
 
-The available planning baseline is the supplied GPT Pro milestone brief,
-[COURSE_PLAN.md](COURSE_PLAN.md), and the milestone-1 implementation/validation
-report. GPT Pro's review of source manifest `06e22d9b5d2a` was received on
-October 29, 2026. It found no planning conflict, required one validator fix, and
-recommended proceeding to Grover after an evidenced correction without another
-approval round. [REVIEW_RECONCILIATION.md](REVIEW_RECONCILIATION.md) records the
-subsequent local reproduction, fix, tests, and remaining limitations.
+The consolidated return accepts the corrected b393f63 v0.2 kit with no remaining
+must-fix issue and reports a reused-CPython-3.12.14 execution of 205/eleven/74/27.
+The three supplied guided PDFs render its unchanged Markdown and remain REVIEW
+DRAFTS. The separate delivery JSON was not supplied and the user requested
+skipping it: retain a clearly labeled local verification record rather than
+inventing authoritative hash agreement. See the latest section of
+[the reconciliation](GUIDED_REVIEW_RECONCILIATION.md).
 
-Current position: the independent QFT/QPE review has been received and accepted
-with no blocking defects. It executed the immutable 92-test/six-notebook snapshot
-in a fresh Linux CPython 3.12.14 environment. Four optional follow-ups are now
-locally reconciled with 97 tests/six notebooks. See
-[QFT_QPE_REVIEW_RECONCILIATION.md](QFT_QPE_REVIEW_RECONCILIATION.md).
-The new local revision is distinguished from the exact ZIP GPT Pro executed.
-No additional phase-algorithm implementation or dependency change was needed.
+This user instruction authorizes documentation/PDF integration, CP, and normal
+required-check merging of PR #122, overriding the handoff's older no-merge line.
+Leave runtime/source/tests/notebooks/contracts/pins/builders unchanged. Retain
+the sealed v0.2 ZIP; send PDFs alongside it, not by rebuilding the archive.
+After integration, keep the active main checkout clean and park until the
+walkthrough or further instructor feedback. No unrelated dependency PR, new
+release, external human message, or hardware action is authorized.
 
-The HHL implementation now follows [HHL_PLAN.md](HHL_PLAN.md), including raw
-success/failure amplitudes, exact-spectrum cleanup, and a strictly executed
-teaching notebook. See [HHL_VALIDATION.md](HHL_VALIDATION.md) for the executed
-checks and limitations. [SHOR_PLAN.md](SHOR_PLAN.md) is now implemented with a
-compiled full-domain N=15 example and a separate four-residue-qubit order finder.
-QPE stays bounded to one/two targets. The HHL/Shor independent review is
-accepted and its D1/O1/O2 follow-ups are reconciled; see
-[HHL_SHOR_REVIEW_RECONCILIATION.md](HHL_SHOR_REVIEW_RECONCILIATION.md).
-The current suite passes 160 tests and eight notebooks. The original reviewed
-158-test ZIP remains unchanged; a later distribution must identify its own revision.
-The original checkout/index, PDFs, Grover release, and reviewed phase ZIP remain
-intact. The user sent the initial setup/Grover email on October 30 and is awaiting
-the instructor's reply; only the setup PDF attachment is confirmed by the
-supplied screenshot. See [the instructor review record](INSTRUCTOR_REVIEW_PLAN.md).
+The review entrance should ask for agenda and run sheet first, quickstart to
+skim, and guided notebooks only as time permits. Technical support files are
+not part of the instructor's reading task. Preserve the three accepted guide
+bodies; add companion navigation in the entry point. Immutable HTTPS PDF links
+also keep the existing export link contract intact without changing code.
 
-Keep responsibilities distinct: the course plan defines deliverables;
-`STATUS.md` records current evidence; `VALIDATION.md` records executed checks;
-this file defines the collaboration process. A new user instruction can change
-the plan. Record the resulting technical decision without publishing private
-correspondence. Reviewer suggestions require evaluation against code and tests.
+### Earlier implementation and repair checkpoints
+
+The [focused guided review](GUIDED_REVIEW_RECONCILIATION.md) is received. It
+independently executed the unchanged e4fea10 kit and identified the parameter-cell
+instruction defect, now reproduced and repaired. Preserve its 197-test archive
+as historical review evidence and identify the corrected v0.2 kit separately.
+Written edit sequences must execute the changed parameter cell before downstream
+calculations; fresh-kernel correctness alone does not validate that instruction.
+The small document/export consistency follow-ups preserve algorithm source,
+pins, notebook code, and strict execution policy. No further broad review is
+needed solely for those demonstrated repairs.
+
+November 2, 2026: the accessible planning return reports the instructor's new
+requirements: two or three meetings, zero Python experience, live laptop
+follow-along, and no grading/evaluation/assignments/submissions. It reports
+receipt of materials and an offer to teach after a walkthrough; detailed
+approval and the final delivery arrangement are not established. The raw email
+and private calendar records were not independently accessed in this turn.
+
+The [guided contract](GUIDED_TEACHING_PLAN.md) defines the new beginner layer:
+Python/Qiskit, Grover, QFT/QPE, and a two-day fallback. The canonical five-algorithm
+library, original notebooks, pins, frozen builders, PDFs, and releases remain
+unchanged. The default validator still selects eight reference notebooks;
+`--profile all` adds the three guided lessons through the same strict engine.
+The validator already includes pip check and unit discovery; run the full suite
+once for source acceptance, then again only for the distinct exact ZIP extraction.
+
+The user requests implementation, correctness and OCR checks, a runnable review
+ZIP copied to the Ubuntu desktop, commit/push, clean Git, and CI checks. This
+supersedes the quoted return's local-only boundary for those actions. Open a
+normal PR to trigger CI, retaining all existing required job names and pins;
+the later instruction above permits its merge. No new release, external human
+message, dependency upgrade, or GPU repair is authorized. No unchanged-snapshot
+review loop is needed.
+
+Audience-facing files use **Gage Plott** and exclude internal model names,
+review-transfer instructions, and maintainer coordination. Historical supplied
+PDF/companion bytes remain immutable and are excluded from the new kit. The old
+Grover attribution requires a corrected supplied edition before reuse. Current
+Markdown is rendered to HTML/PNG and OCR-checked without generating new PDFs.
+Record source identity, visual/OCR coverage, actual test/cell/figure counts,
+extraction imports/hashes, environment reuse, desktop receipt, and exact CI head
+in [the guided evidence](GUIDED_VALIDATION.md). Headless rendering is not UI or
+human-pacing evidence. The focused review is already received; do not request
+another round solely for its demonstrated wording and receipt-check repairs.
+
+Remaining decisions: exact dates/count, priorities, laptop/setup support, prior
+quantum coverage, and delivery after the walkthrough. Retain 85 minutes as 75+10
+and the November 19 weekday caveat. Do not ask again whether grading/assignments
+are intended. Stop after the completed review kit and await walkthrough feedback
+after this reconciliation. The earlier parked-state passages below are historical;
+this new user request authorizes the bounded teaching adaptation.
 
 ## Every implementation turn
 
@@ -82,19 +120,23 @@ push/PR, required-check merge, and prerelease workflow. Do not request that
 authorization again. Other releases, instructor messages, and hardware jobs
 still need authorization covering those actions.
 
-## Immediate next technical action
+## Parked state after integration
 
-**Current stop point:** the November 1 provisional preview is published and its
-assets verified. See [PUBLIC_PREVIEW_RELEASE.md](PUBLIC_PREVIEW_RELEASE.md).
-The original dirty work is now a verified recovery stash/checkpoint, and its
-active checkout has been fast-forwarded to main. Completion documentation and
-branch synchronization finish through the normal workflow. Then wait for Rick's
-reply, a concrete defect, or a specific request. Do not start another unchanged
-readiness, package, runtime, or PDF cycle. Earlier instructions below record the
-path to this delivery and do not authorize repeating a completed release.
+The current integration is PR #122: complete its required-check merge, retain
+clean main and the PDF/ZIP receipts, then stop until the walkthrough or further
+instructor email feedback. No new technical milestone, PDF production, package,
+or unchanged validation cycle is recommended while waiting. Sending a planned
+email is not inferred and remains the user's action.
 
-The user's November 1 instruction authorizes publication of the named full-course
-preview and pushing/cleaning Git this turn. Follow [R8](R8_READINESS_AUDIT.md):
+### Historical delivery sequence
+
+The November 1 preview publication and recoverable Git cleanup are complete;
+[PUBLIC_PREVIEW_RELEASE.md](PUBLIC_PREVIEW_RELEASE.md) preserves that receipt.
+The older steps below record how the materials reached the present state,
+not new instructions to repeat completed preparation.
+
+The earlier November 1 instruction authorized and completed publication of the
+named full-course preview and recoverable Git cleanup under [R8](R8_READINESS_AUDIT.md):
 normal PR and all required checks, exact merged-source package verification,
 prerelease plus checksum, and independent published-byte verification. Preserve
 the old local R7 archive and PDF bytes; current public setup and a notice handle
@@ -184,9 +226,9 @@ For this return, all packet-only clickable navigation was removed in favor of
 explicit course-folder paths and five official HTTPS references. Keep that
 reviewed body synchronized with its PDF; map the literal supplied evidence
 filename through the reconciliation record. A nonrendering MD036 directive
-on each edition label is the only local companion adjustment. P3-01 is an
-instructor reading clarification now and an authored-PDF correction for the
-next final edition, not authority to modify supplied PDF bytes locally.
+on each edition label is the only local companion adjustment. This historical
+v0.1 edition still needs the P3-01 reading clarification; the later supplied
+v0.2 edition incorporates the correction. Neither permits local PDF rewriting.
 
 R7 local preview packaging is now complete under the
 [package contract](R7_PREVIEW_PACKAGE.md) and [evidence](R7_PREVIEW_VALIDATION.md).
@@ -198,13 +240,12 @@ environment, with all payload bytes/modes unchanged. Instructor guides/PDFs and
 policy/history/prompt/generated content are excluded; worked expectations in
 notebooks/tests/contracts remain and are not described as an answer-free assessment.
 
-Next prepare an R8 read-only/local readiness audit and concrete publication
-proposal. Refresh then-current upstream/tag/rules/check information only within
-that later authorized scope; retain source-to-package identity and document
-wording limitations. No push/PR/merge/tag/release, message, or hardware authority
-is inferred. Teaching/platform/pacing and final-distribution gates stay open;
-further GPT Pro work is needed when authoring the next PDF edition, not solely
-for a byte-preserving packaging step. Keep P3-01 attached to the instructor edition.
+R8's readiness audit and separately authorized publication are complete; retain
+their exact source/package identities and document-wording disclosures. No new
+push/PR/merge/tag/release, message, or hardware authority is inferred from the
+finished milestones. Teaching/platform/pacing and final-distribution gates stay
+open. The later supplied v0.2 review editions are reconciled; another PDF round
+should wait for material teaching changes or an actual document defect.
 
 Keep audience-specific content separate: the student guide contains setup/help,
 not model-review coordination or an instructor key. The current notebooks still
@@ -428,6 +469,12 @@ transfer is needed for this review. The report and verified snapshot suffice.
 
 ## Instructor feedback
 
+The [current review packet and decisions](INSTRUCTOR_REVIEW_PLAN.md) supersede
+the initial Grover-only reading recommendation. It is locally accessible and
+verified; no later send or reply is inferred. The new document editions retain
+their supplied pacing text; the 85-minute period and provisional-date caveat
+live in current planning rather than silently rewriting their synchronized text.
+
 The user sent the initial setup/Grover email on October 30 and is awaiting a
 reply. Use [INSTRUCTOR_REVIEW_PLAN.md](INSTRUCTOR_REVIEW_PLAN.md) to distinguish
 the confirmed setup attachment from the full recommended packet. The two
@@ -435,8 +482,9 @@ verified v0.2 guides and unchanged rc1 ZIP remain available; do not assume
 additional delivery or repeat the initial send recommendation as unfinished work.
 
 Requested decisions include session coverage, prior preparation, format,
-assessment, teaching responsibility, and preferred notes/examples. Dates,
-durations, deadlines, and required native platforms also remain open. The five
+assessment, teaching responsibility, and preferred notes/examples. Final dates,
+session count, deadlines, and required native platforms also remain open. The
+listed 85-minute period is resolved. The five
 requested implementations remain deliverables; in-class coverage is a separate
 teaching decision. Record a later reply's technical/teaching conclusions without
 publishing private correspondence, email screenshots, or addresses. No reply,
@@ -446,11 +494,13 @@ technical review or require manual code audit by the user.
 
 ## User input, when available
 
-Only the instructor/user can confirm session dates, student preparation,
+Only the instructor/user can confirm final session dates/count, student preparation,
 assessment expectations, and which native platforms must be supported. Ask
 for these together when their answers change implementation. Until then, use
-the documented 50-minute cores and optional 75-minute expansions with small,
-local, credential-free examples. Do not invent dates or a grading scheme.
+the documented 50-minute cores and optional 75-minute expansions within the
+known 85-minute period, leaving 10 minutes of margin. Preserve November 16/19/23
+as provisional and explicitly retain the Thursday-versus-Monday/Wednesday
+conflict. Do not invent confirmed dates, topic assignments, or a grading scheme.
 
 ## Combined HHL/Shor technical packet
 

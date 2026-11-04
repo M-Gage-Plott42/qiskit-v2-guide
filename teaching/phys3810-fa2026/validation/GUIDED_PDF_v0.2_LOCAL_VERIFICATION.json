@@ -1,0 +1,348 @@
+{
+  "schema": "phys3810.guided-pdf.local-verification.v1",
+  "status": "local_checks_passed",
+  "document_edition": "v0.2 REVIEW DRAFT",
+  "receipt_origin": "Locally computed verification record; not the absent externally supplied delivery receipt.",
+  "supplied_delivery_receipt_comparison": "not performed: receipt JSON not supplied; user instructed to skip it",
+  "source_revision": "b393f63fd8b3935db2195a57efa4046709d6643a",
+  "code_archive_sha256": "e18da8a5400aafe61e34ab530242bb0dcdc540a48c620c0c98f37062965652d1",
+  "total_pages": 6,
+  "source_blocks_matched": 74,
+  "source_blocks_method": "HTML-parsed Markdown heading/paragraph/list/code blocks found in order in PDF text after whitespace and typographic quotation/dash normalization. All wording/numbers retained.",
+  "command_lines_matched": 10,
+  "total_hyperlink_annotations": 7,
+  "metadata_reader": "pypdf 6.21.4",
+  "python": "3.12.15",
+  "documents": [
+    {
+      "file_name": "PHYS3810_Guided_Review_Agenda_v0.2_REVIEW_DRAFT.pdf",
+      "size_bytes": 72102,
+      "sha256": "fb83bcb48c97480b46023a5e05cfcf6fda831f8754e6d2baf5721d11a38195cf",
+      "source_revision": "b393f63fd8b3935db2195a57efa4046709d6643a",
+      "source_markdown_path": "teaching/phys3810-fa2026/guided/REVIEW_AGENDA.md",
+      "source_markdown_sha256": "a6ddb0321638dff50419ecde07e431c1b525d2cf8f4cf27d9472e8a12bab28c6",
+      "source_markdown_matches_current_checkout": true,
+      "page_count": 1,
+      "page_size_points": [
+        612,
+        792
+      ],
+      "metadata": {
+        "/Author": "Gage Plott",
+        "/CreationDate": "D:20261102170745-06'00'",
+        "/Creator": "PHYS 3810 guided review PDF conversion",
+        "/Keywords": "",
+        "/ModDate": "D:20261102170745-06'00'",
+        "/Producer": "ReportLab PDF Library - (opensource)",
+        "/Subject": "Review-draft rendering of REVIEW_AGENDA.md; guided source b393f63fd8b3935db2195a57efa4046709d6643a",
+        "/Title": "Walkthrough agenda: choose a usable beginner route | PHYS 3810 | Guided v0.2 REVIEW DRAFT",
+        "/Trapped": "/False"
+      },
+      "hyperlink_annotations": [
+        {
+          "page": 1,
+          "uri": "https://github.com/M-Gage-Plott42/qiskit-v2-guide/blob/b393f63fd8b3935db2195a57efa4046709d6643a/teaching/phys3810-fa2026/guided/INSTRUCTOR_RUN_SHEET.md",
+          "rect": [
+            85.52271,
+            174.7,
+            135.6489,
+            187.3
+          ],
+          "target_path": "teaching/phys3810-fa2026/guided/INSTRUCTOR_RUN_SHEET.md",
+          "target_blob_sha256": "14a0ce4c50b687361f7dbd2cbbb60377914a29a2ab4ab2b367b9647bff445ca1",
+          "target_exists_at_source": true
+        },
+        {
+          "page": 1,
+          "uri": "https://github.com/M-Gage-Plott42/qiskit-v2-guide/blob/b393f63fd8b3935db2195a57efa4046709d6643a/teaching/phys3810-fa2026/guided/STUDENT_QUICKSTART.md",
+          "rect": [
+            310.5703,
+            174.7,
+            363.1165,
+            187.3
+          ],
+          "target_path": "teaching/phys3810-fa2026/guided/STUDENT_QUICKSTART.md",
+          "target_blob_sha256": "c3eaf7fb10dd63d2c44acd2246075166b3e512454e24d198343f49db96994c4b",
+          "target_exists_at_source": true
+        }
+      ],
+      "source_blocks_matched_in_order": 16,
+      "source_blocks_total": 16,
+      "command_lines": [],
+      "visible_text_fonts": {
+        "/AAAAAA+DejaVuSans-Bold": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "unicode_map": true
+        },
+        "/AAAAAA+DejaVuSans": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "unicode_map": true
+        }
+      },
+      "provenance_marker_present": true,
+      "pdf_bytes_unchanged": true,
+      "local_visual_review": {
+        "status": "passed",
+        "pages_inspected": 1,
+        "renderer": "pdftoppm -scale-to 1400 -png",
+        "findings": "No visible clipping, overlap, missing glyphs, truncation, incorrect bitstrings, or code-line wrapping defect. All command lines complete.",
+        "rendered_pages": [
+          {
+            "file_name": "agenda-1.png",
+            "sha256": "94138e5bf3dce98de4be4f063c0ba8d3519950f4c1093fac72f0a6854fc802dd"
+          }
+        ]
+      }
+    },
+    {
+      "file_name": "PHYS3810_Guided_Instructor_Run_Sheet_v0.2_REVIEW_DRAFT.pdf",
+      "size_bytes": 97854,
+      "sha256": "4d94a7caec7cf6053a0dc3d85b330bf0a9def8efc4608bd60951f1a6199ab115",
+      "source_revision": "b393f63fd8b3935db2195a57efa4046709d6643a",
+      "source_markdown_path": "teaching/phys3810-fa2026/guided/INSTRUCTOR_RUN_SHEET.md",
+      "source_markdown_sha256": "14a0ce4c50b687361f7dbd2cbbb60377914a29a2ab4ab2b367b9647bff445ca1",
+      "source_markdown_matches_current_checkout": true,
+      "page_count": 3,
+      "page_size_points": [
+        612,
+        792
+      ],
+      "metadata": {
+        "/Author": "Gage Plott",
+        "/CreationDate": "D:20261102170745-06'00'",
+        "/Creator": "PHYS 3810 guided review PDF conversion",
+        "/Keywords": "",
+        "/ModDate": "D:20261102170745-06'00'",
+        "/Producer": "ReportLab PDF Library - (opensource)",
+        "/Subject": "Review-draft rendering of INSTRUCTOR_RUN_SHEET.md; guided source b393f63fd8b3935db2195a57efa4046709d6643a",
+        "/Title": "Presenter route: Python, Grover, and phase | PHYS 3810 | Guided v0.2 REVIEW DRAFT",
+        "/Trapped": "/False"
+      },
+      "hyperlink_annotations": [
+        {
+          "page": 1,
+          "uri": "https://github.com/M-Gage-Plott42/qiskit-v2-guide/blob/b393f63fd8b3935db2195a57efa4046709d6643a/teaching/phys3810-fa2026/guided/STUDENT_QUICKSTART.md",
+          "rect": [
+            83.4502,
+            617.0,
+            133.4941,
+            629.0
+          ],
+          "target_path": "teaching/phys3810-fa2026/guided/STUDENT_QUICKSTART.md",
+          "target_blob_sha256": "c3eaf7fb10dd63d2c44acd2246075166b3e512454e24d198343f49db96994c4b",
+          "target_exists_at_source": true
+        },
+        {
+          "page": 1,
+          "uri": "https://github.com/M-Gage-Plott42/qiskit-v2-guide/blob/b393f63fd8b3935db2195a57efa4046709d6643a/teaching/phys3810-fa2026/notebooks/guided/01_python_and_qiskit.ipynb",
+          "rect": [
+            71.8877,
+            380.0,
+            180.2324,
+            392.0
+          ],
+          "target_path": "teaching/phys3810-fa2026/notebooks/guided/01_python_and_qiskit.ipynb",
+          "target_blob_sha256": "0a7ad61cff0864eb822dbf7dedb0cdbe2ec325283b831690eec099980d7f6117",
+          "target_exists_at_source": true
+        },
+        {
+          "page": 2,
+          "uri": "https://github.com/M-Gage-Plott42/qiskit-v2-guide/blob/b393f63fd8b3935db2195a57efa4046709d6643a/teaching/phys3810-fa2026/notebooks/guided/02_grover_follow_along.ipynb",
+          "rect": [
+            71.8877,
+            708.0,
+            189.5732,
+            720.0
+          ],
+          "target_path": "teaching/phys3810-fa2026/notebooks/guided/02_grover_follow_along.ipynb",
+          "target_blob_sha256": "4aeee6bd9e90331ed8680ddc60aa08ddeb1740f1f6fca7964cb20b6a50cc23f7",
+          "target_exists_at_source": true
+        },
+        {
+          "page": 3,
+          "uri": "https://github.com/M-Gage-Plott42/qiskit-v2-guide/blob/b393f63fd8b3935db2195a57efa4046709d6643a/teaching/phys3810-fa2026/notebooks/guided/03_qft_qpe_follow_along.ipynb",
+          "rect": [
+            71.8877,
+            708.0,
+            194.4512,
+            720.0
+          ],
+          "target_path": "teaching/phys3810-fa2026/notebooks/guided/03_qft_qpe_follow_along.ipynb",
+          "target_blob_sha256": "34ec7e50fef10a8012313a5c0a8a653ec4c927bb1941ef532cd81f2910f9490a",
+          "target_exists_at_source": true
+        },
+        {
+          "page": 3,
+          "uri": "https://github.com/M-Gage-Plott42/qiskit-v2-guide/blob/b393f63fd8b3935db2195a57efa4046709d6643a/teaching/phys3810-fa2026/guided/REVIEW_AGENDA.md",
+          "rect": [
+            328.1865,
+            255.0,
+            365.6279,
+            267.0
+          ],
+          "target_path": "teaching/phys3810-fa2026/guided/REVIEW_AGENDA.md",
+          "target_blob_sha256": "a6ddb0321638dff50419ecde07e431c1b525d2cf8f4cf27d9472e8a12bab28c6",
+          "target_exists_at_source": true
+        }
+      ],
+      "source_blocks_matched_in_order": 37,
+      "source_blocks_total": 37,
+      "command_lines": [
+        {
+          "command": "python scripts/validate_classroom.py --profile all",
+          "single_extracted_line": true
+        }
+      ],
+      "visible_text_fonts": {
+        "/AAAAAA+DejaVuSans-Bold": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "unicode_map": true
+        },
+        "/AAAAAA+DejaVuSans": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "unicode_map": true
+        },
+        "/AAAAAA+DejaVuSansMono": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "unicode_map": true
+        }
+      },
+      "provenance_marker_present": true,
+      "pdf_bytes_unchanged": true,
+      "local_visual_review": {
+        "status": "passed",
+        "pages_inspected": 3,
+        "renderer": "pdftoppm -scale-to 1400 -png",
+        "findings": "No visible clipping, overlap, missing glyphs, truncation, incorrect bitstrings, or code-line wrapping defect. All command lines complete.",
+        "rendered_pages": [
+          {
+            "file_name": "instructor-1.png",
+            "sha256": "ce40ddcb902c790000c6671720032f983ba8c9adc9dd8d4a97fe14a872bcffa2"
+          },
+          {
+            "file_name": "instructor-2.png",
+            "sha256": "3bbc6ae03a00faeaf2d0fce84a8335b369dd8dd2b88f0262e58f53a4eb933832"
+          },
+          {
+            "file_name": "instructor-3.png",
+            "sha256": "f76022e7ca8c2d1dedd4e4d9264a5507e3d93a6a545450442e2644696a2feb3b"
+          }
+        ]
+      }
+    },
+    {
+      "file_name": "PHYS3810_Guided_Student_Quickstart_v0.2_REVIEW_DRAFT.pdf",
+      "size_bytes": 91455,
+      "sha256": "8e5be410550c774eca39b277724546638a7c3efeffb8a6dc72356c5d96b0a673",
+      "source_revision": "b393f63fd8b3935db2195a57efa4046709d6643a",
+      "source_markdown_path": "teaching/phys3810-fa2026/guided/STUDENT_QUICKSTART.md",
+      "source_markdown_sha256": "c3eaf7fb10dd63d2c44acd2246075166b3e512454e24d198343f49db96994c4b",
+      "source_markdown_matches_current_checkout": true,
+      "page_count": 2,
+      "page_size_points": [
+        612,
+        792
+      ],
+      "metadata": {
+        "/Author": "Gage Plott",
+        "/CreationDate": "D:20261102170745-06'00'",
+        "/Creator": "PHYS 3810 guided review PDF conversion",
+        "/Keywords": "",
+        "/ModDate": "D:20261102170745-06'00'",
+        "/Producer": "ReportLab PDF Library - (opensource)",
+        "/Subject": "Review-draft rendering of STUDENT_QUICKSTART.md; guided source b393f63fd8b3935db2195a57efa4046709d6643a",
+        "/Title": "Open, run, and change a quantum notebook | PHYS 3810 | Guided v0.2 REVIEW DRAFT",
+        "/Trapped": "/False"
+      },
+      "hyperlink_annotations": [],
+      "source_blocks_matched_in_order": 21,
+      "source_blocks_total": 21,
+      "command_lines": [
+        {
+          "command": "cd runtime",
+          "single_extracted_line": true
+        },
+        {
+          "command": "python3.12 -m venv .venv",
+          "single_extracted_line": true
+        },
+        {
+          "command": "source .venv/bin/activate",
+          "single_extracted_line": true
+        },
+        {
+          "command": "python -m pip install --upgrade pip==26.2.2",
+          "single_extracted_line": true
+        },
+        {
+          "command": "python -m pip install -r requirements.txt",
+          "single_extracted_line": true
+        },
+        {
+          "command": "python -m ipykernel install --sys-prefix --name phys3810-guided --display-name \"Python (PHYS 3810 Guided)\"",
+          "single_extracted_line": true
+        },
+        {
+          "command": "python -m jupyterlab",
+          "single_extracted_line": true
+        },
+        {
+          "command": "source .venv/bin/activate",
+          "single_extracted_line": true
+        },
+        {
+          "command": "python -m jupyterlab",
+          "single_extracted_line": true
+        }
+      ],
+      "visible_text_fonts": {
+        "/AAAAAA+DejaVuSans-Bold": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "unicode_map": true
+        },
+        "/AAAAAA+DejaVuSans": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "unicode_map": true
+        },
+        "/AAAAAA+DejaVuSansMono": {
+          "subtype": "/TrueType",
+          "embedded": true,
+          "unicode_map": true
+        }
+      },
+      "provenance_marker_present": true,
+      "pdf_bytes_unchanged": true,
+      "local_visual_review": {
+        "status": "passed",
+        "pages_inspected": 2,
+        "renderer": "pdftoppm -scale-to 1400 -png",
+        "findings": "No visible clipping, overlap, missing glyphs, truncation, incorrect bitstrings, or code-line wrapping defect. All command lines complete.",
+        "rendered_pages": [
+          {
+            "file_name": "student-1.png",
+            "sha256": "d4c2c97de02497e5fc15c4b5ce1a8e05e5b7403396fc6f7d070165f4cd227e29"
+          },
+          {
+            "file_name": "student-2.png",
+            "sha256": "55661fa7c6050d6c074d6809bc307498e8d5ff9ff9969ae5be0ea6c5bbfef6ea"
+          }
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Authoritative external PDF receipt hashes were not compared because the JSON was not supplied and the user waived it.",
+    "PDF hyperlinks verified against local Git source objects and annotation rectangles, not live-clicked in a browser.",
+    "C2PA marker/provenance bytes preserved; no cryptographic provenance validation performed.",
+    "No new OCR run: the reviewer reports 300-dpi OCR; local verification used rendered-page inspection and full text/command correspondence.",
+    "No runtime tests, dependency changes in classroom environments, platform/UI/hardware, or human pacing execution.",
+    "PDFs remain review drafts, not final classroom approval."
+  ]
+}
