@@ -4,9 +4,12 @@ This notice accompanies provisional public code **v0.2.0-rc1**, release
 tag `phys3810-fa2026-v0.2.0-rc1`, with source identity recorded by the release tag and manifest.
 
 Start with the [current setup instructions](../SETUP.md) and
-[package README](../../../README.md). They govern current download availability.
-The [full-course ZIP](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-v0.2.0-rc1/PHYS3810-Fall2026-v0.2.0-rc1.zip) becomes available when this identified
-prerelease is published.
+[course landing page](../README.md). They govern current download availability.
+The [full-course ZIP](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-v0.2.0-rc1/PHYS3810-Fall2026-v0.2.0-rc1.zip) is published.
+The [publication receipt](../PUBLIC_PREVIEW_RELEASE.md) records its source,
+delivered bytes, and validation. This repository notice describes the frozen
+package's v0.1 documents; see the [document index](README.md) for newer separate
+review editions.
 
 ## The reviewed pair remains unchanged
 
@@ -32,8 +35,9 @@ SHA-256 of the delivered PDF, including provenance:
 SHA-256 of the original Markdown companion:
 `f26919ac85fd8bd4419e19ac118a9cb0eca4e1f72348cf84e3a65fa91deaa631`.
 
-[The manifest](../../../MANIFEST.json) records these exact bytes, the public
-navigation adaptations, and both builder hashes. The student PDF is supplied
+The `MANIFEST.json` inside the extracted release ZIP records these exact bytes,
+the public navigation adaptations, and both builder hashes. It is an archive
+member, not a file at the repository root. The student PDF is supplied
 inside the ZIP; no separately updated PDF release asset accompanies this
 prerelease. The older Grover release and its document editions remain distinct.
 
@@ -42,11 +46,11 @@ prerelease. The older Grover release and its document editions remain distinct.
 Only the documented Ubuntu/Linux path has execution evidence. Native
 Windows/macOS, native editor UI, and human classroom pacing remain untested.
 Teaching, delivery, platform, and assessment decisions remain pending.
-See [validation and limits](../../../VALIDATION.md).
+See [published-package validation and limits](../PUBLIC_PREVIEW_RELEASE.md).
 
-Separate instructor materials are excluded. The outstanding instructor-only
-phase-register decoding clarification belongs to the next final instructor
-edition; it does not alter this student setup or block this provisional student
-preview. No instructor-edition correction or final classroom approval is
-claimed here. Notebooks, tests, and contracts contain worked answers, so this
+Separate instructor materials are excluded. The instructor-only phase-register
+decoding clarification applies to the older v0.1 instructor guide and is resolved
+in the separate [v0.2 instructor edition](../instructor/README.md). It does not
+alter this frozen student package or establish final classroom approval.
+Notebooks, tests, and contracts contain worked answers, so this
 preview is not an answer-free assessment package.

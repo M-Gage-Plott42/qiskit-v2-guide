@@ -7,6 +7,13 @@ checkout is clean main. The plan below records that completed workflow; it is
 not authorization for another release. Wait for instructor feedback or a new
 specific request before further course work.
 
+November 2 update: the [guided review kit and PDF companions](guided/START_HERE.md)
+are a separate accepted review route. PR #122 integrates that teaching work;
+the published release and sealed review ZIP remain unchanged. Assessment is
+settled as none, and phase-decoding wording is corrected in the newer instructor
+edition. Use [current status](STATUS.md) for remaining teaching/platform/pacing
+decisions. The workflow below is publication history, not a new release task.
+
 November 1, 2026. The user requested a new preview publication, pushing the
 work, and clean Git state this turn. [R8_READINESS_AUDIT.md](R8_READINESS_AUDIT.md)
 records the live repository gates and scope. This authorizes the normal workflow
@@ -58,13 +65,14 @@ documentation through the normal workflow. Preserve original dirty work in a
 verified named stash/checkpoint before switching/fast-forwarding its main branch.
 No destructive reset, clean, or stash pop is part of that cleanup.
 
-## Remaining classroom gates
+## Classroom gates recorded at publication
 
 The evidence supports the documented Ubuntu/Linux path. Native Windows/macOS,
 native editor UI, automatic browser opening, and human pacing remain untested.
 Rick's dates, coverage, delivery, preparation, platform, assessment, and solution
-policy decisions remain pending. P3-01 applies to the next final instructor
-edition and is not a blocker for this student preview. The guide and final
+policy decisions were pending then; the current update above supersedes the
+assessment question. P3-01 applied to the older instructor edition and has since
+been corrected in the newer edition. The guide and final
 classroom package must be revisited when those inputs change.
 
 After this authorized delivery, wait for instructor feedback or a specific
