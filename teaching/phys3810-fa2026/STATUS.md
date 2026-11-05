@@ -1,5 +1,20 @@
 # PHYS 3810 status
 
+## November 4 dependency maintenance
+
+PR #117 aligns the terminal and source-notebook version checks with its Aer
+0.18.2 pin. [Dependency validation](DEPENDENCY_VALIDATION_2026-11-04.md) records
+the separate execution evidence for this checkout. Algorithm implementations,
+lesson explanations/exercises, accepted guide bodies, supplied PDFs, release assets and
+sealed review kits remain unchanged. Locally saved notebook execution state
+is excluded from this maintenance commit.
+
+Teaching work remains parked pending the walkthrough or further instructor
+feedback. This dependency repair does not create a new review packet, release,
+human message or IBM hardware job.
+
+## November 2 teaching acceptance
+
 November 2 consolidated acceptance: **the corrected guided v0.2 kit is accepted
 with no remaining must-fix issue; its three supplied REVIEW DRAFT PDFs match
 the accepted guides.** The return reports 205 tests/eleven notebooks/74 cells/
