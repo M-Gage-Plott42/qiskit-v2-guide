@@ -2,7 +2,7 @@
 
 This provisional full-course preview contains local lessons for Grover search,
 QFT, QPE, exact-spectrum HHL, and compiled N=15 Shor order finding. It uses
-64-bit CPython 3.12, Qiskit 2.6.1, and Aer 0.17.2. No Git experience, IBM account,
+64-bit CPython 3.12, Qiskit 2.6.1, and Aer 0.18.2. No Git experience, IBM account,
 GPU, or quantum hardware is needed for the default lessons.
 
 ## Beginner follow-along route

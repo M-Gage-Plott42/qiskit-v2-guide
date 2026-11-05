@@ -18,6 +18,11 @@ These instructions use **64-bit Linux and CPython 3.12**, with Qiskit 2.6.1 and 
 
 Native Windows x64, macOS ARM64/Intel, and VS Code/Cursor notebook setup are **untested**. Windows ARM64 and 32-bit Python are outside this draft's target. Ask the instructor for an approved setup if needed. Git, IBM accounts, tokens, GPUs, and quantum hardware are not required.
 
+For a current repository checkout, PR #117 uses Aer 0.18.2; see the
+[checkout environment](ENVIRONMENT.md) and its separate validation record.
+The published ZIP and accepted review kits described above keep their original
+pins and supplied documents.
+
 ## 1. Open the complete course folder
 
 Extract the approved folder completely and keep its files together. Individual downloaded notebooks cannot find the shared course code on their own. Open a Linux terminal in the folder containing `requirements.txt`, `constraints-ci.txt`, `src/`, `scripts/`, `tests/`, and `teaching/`. This is the **course root**, not the `teaching/` subfolder.
