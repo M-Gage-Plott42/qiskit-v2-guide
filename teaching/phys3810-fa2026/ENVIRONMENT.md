@@ -63,7 +63,7 @@ Reference interfaces for the algorithm milestones are `QFTGate`,
   CPython 3.12. Platform markers retain macOS/Windows-only dependencies.
   Constraints do not install optional packages by themselves.
 - `requirements-ci.txt`: uses the same classroom requirements as students.
-- `requirements-runtime.txt`: adds Runtime 0.49.0 explicitly for optional
+- `requirements-runtime.txt`: adds Runtime 0.51.0 explicitly for optional
   fake-backend or hardware notebooks. GPU packages are not installed by either
   path. Optional execution is excluded from the classroom validator.
 
