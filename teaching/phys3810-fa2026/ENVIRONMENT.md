@@ -1,5 +1,20 @@
 # Classroom environment decision
 
+## Current repository checkout — November 4, 2026
+
+PR #117 updates the repository checkout to **Qiskit Aer 0.18.2**, retaining
+**64-bit CPython 3.12** and **Qiskit 2.6.1**. The terminal validator and source
+preflight notebook enforce that exact pair; dependency updates must not bypass
+these checks. Current validation is recorded separately in
+[the dependency maintenance evidence](DEPENDENCY_VALIDATION_2026-11-04.md).
+
+Published preview ZIPs, accepted review-kit ZIPs, supplied PDFs and their
+synchronized companions retain their original Aer 0.17.2 environment. Their
+historical results below are not relabeled as tests of this update. No package
+rebuild or teaching-content revision accompanies this maintenance change.
+
+## Historical October 29 decision
+
 Decision date: October 29, 2026. Use **64-bit CPython 3.12**, **Qiskit 2.6.1**,
 and **Qiskit Aer 0.17.2** for local CPU execution. The tested interpreter is
 3.12.15. The independent reviewer additionally reported a passing initial
@@ -48,7 +63,7 @@ Reference interfaces for the algorithm milestones are `QFTGate`,
   CPython 3.12. Platform markers retain macOS/Windows-only dependencies.
   Constraints do not install optional packages by themselves.
 - `requirements-ci.txt`: uses the same classroom requirements as students.
-- `requirements-runtime.txt`: adds Runtime 0.49.0 explicitly for optional
+- `requirements-runtime.txt`: adds Runtime 0.51.0 explicitly for optional
   fake-backend or hardware notebooks. GPU packages are not installed by either
   path. Optional execution is excluded from the classroom validator.
 
@@ -57,8 +72,9 @@ is generated across platforms rather than by freezing a Linux-only install.
 `pip==26.2.2` is the documented installer; it is not an application dependency.
 Use a fresh virtual environment to avoid unrelated packages from previous work.
 Original environment evidence is retained in [VALIDATION.md](VALIDATION.md);
-current fresh-install versions and outcomes are in
-[R1_FRESH_LINUX_VALIDATION.md](R1_FRESH_LINUX_VALIDATION.md).
+the earlier fresh-install versions and outcomes are in
+[R1_FRESH_LINUX_VALIDATION.md](R1_FRESH_LINUX_VALIDATION.md). The November 4
+repository-checkout validation is linked above.
 
 ## Platforms and evidence
 
