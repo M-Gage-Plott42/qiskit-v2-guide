@@ -106,6 +106,7 @@ pyzmq==27.2.0
 qiskit==2.6.1
 qiskit-aer==0.17.2
 qiskit-ibm-runtime==0.51.0
+qiskit-mitigation==0.1.1
 qiskit-qasm3-import==0.6.0
 referencing==0.37.0
 requests==2.34.2
