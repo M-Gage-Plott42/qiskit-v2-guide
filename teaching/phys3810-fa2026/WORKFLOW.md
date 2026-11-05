@@ -7,6 +7,13 @@ is not accessible in the current workspace.
 
 ## Source of truth and current position
 
+The November 4 dependency-maintenance request separately authorizes fixing
+PR #117's Aer version checks and refreshing dependency PRs #117–121. Its
+[validation record](DEPENDENCY_VALIDATION_2026-11-04.md) governs that bounded
+checkout change. It does not reopen teaching revisions, sealed packages,
+supplied PDF/companion edits, releases, outreach or hardware execution. The
+teaching acceptance and park instructions below remain in force.
+
 The consolidated return accepts the corrected b393f63 v0.2 kit with no remaining
 must-fix issue and reports a reused-CPython-3.12.14 execution of 205/eleven/74/27.
 The three supplied guided PDFs render its unchanged Markdown and remain REVIEW

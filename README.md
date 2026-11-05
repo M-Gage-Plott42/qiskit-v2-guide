@@ -18,7 +18,7 @@ examples and students repeat them on laptops; there is no grading, evaluation,
 assignment, or submitted work. Exact dates, laptop setup, algorithm priorities,
 and delivery following the walkthrough remain to be confirmed.
 
-The classroom environment uses CPython 3.12, Qiskit 2.6.1, and Aer 0.17.2.
+The classroom environment uses CPython 3.12, Qiskit 2.6.1, and Aer 0.18.2.
 The new review kit includes eleven notebooks: three guided lessons and eight
 reference/validation notebooks. Run `python scripts/validate_classroom.py --profile all`
 from the repository root, or the extracted kit's `runtime` folder. Default
