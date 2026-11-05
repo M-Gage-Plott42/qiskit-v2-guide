@@ -43,7 +43,7 @@ REQUIRED_PNGS = {
     QPE_NOTEBOOK: 3, HHL_NOTEBOOK: 3, SHOR_NOTEBOOK: 3,
     GUIDED_NOTEBOOKS[0]: 4, GUIDED_NOTEBOOKS[1]: 3, GUIDED_NOTEBOOKS[2]: 4,
 }
-EXPECTED = {"qiskit": "2.6.1", "qiskit-aer": "0.17.2"}
+EXPECTED = {"qiskit": "2.6.1", "qiskit-aer": "0.18.2"}
 
 
 def notebooks_for_profile(profile: str = "default") -> tuple[str, ...]:
