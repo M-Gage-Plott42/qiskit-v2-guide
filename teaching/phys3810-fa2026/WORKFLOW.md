@@ -1,11 +1,41 @@
 # PHYS 3810 implementation workflow
 
-Updated November 2, 2026. This is maintainer guidance; the student entry point
+Updated November 16, 2026. This is maintainer guidance; the student entry point
 remains [README.md](README.md). The assistant owns technical review and tests.
 The user supplies teaching decisions and any external reviewer response that
 is not accessible in the current workspace.
 
 ## Source of truth and current position
+
+The November 16 instruction reopens teaching work for one prerecorded beginner
+class: setup (15–20 minutes), RNG, Bell states, and optional algorithms. The
+current route is [the intro quickstart](intro/START_HERE.md). Earlier multi-day
+plans and park instructions below are historical for this bounded revision.
+Keep all five algorithm implementations and contracts, dependency pins, supplied
+document editions, sealed archives, published assets, and recovery data intact.
+
+Implement the two independent intro notebooks, mathematical and edit/rerun
+regressions, thirteen-notebook all-profile inventory, and existing review
+exporter together. The default eight-notebook inventory must stay unchanged.
+Run the full validator once for source acceptance, then separately against the
+exact package extracted outside the checkout into a path with spaces. Preserve
+failed/partial artifacts; do not equate stored output with executed acceptance.
+
+Use the confirmed Ubuntu/Linux recording host and the established Python 3.12
+venv/JupyterLab route. Report existing interpreter, fresh or reused packages,
+headless runs, actual UI checks, and human recording/pacing separately. The
+Windows PowerPoint directions in the received narrative need an Ubuntu revision;
+research ONLYOFFICE/recorder capabilities and carry the findings to the focused
+recording-script review. Do not install or claim a recorder pilot by inference.
+
+Prepare a locally committed, versioned runnable candidate and standalone desktop
+ZIP with concise validation evidence and an external copyable review prompt.
+No push, PR, merge, publication, external human message, or hardware execution is
+requested. The next review is beginner usability and exact script alignment,
+not another broad algorithm audit. Only the pasted sync was received; its linked
+Word script and fuller handoff are not locally accessible attachments.
+
+### Earlier accepted states
 
 The November 4 dependency-maintenance request separately authorizes fixing
 PR #117's Aer version checks and refreshing dependency PRs #117–121. Its

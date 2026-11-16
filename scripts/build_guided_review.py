@@ -1,6 +1,6 @@
-"""Export one committed, runnable PHYS 3810 guided-practice review snapshot.
+"""Export one committed, runnable PHYS 3810 single-class review snapshot.
 
-This dedicated exporter does not modify the frozen release builders or execute
+This existing review exporter does not modify the frozen release builders or execute
 notebooks. The caller supplies measured source-validation evidence, then must
 validate the exact extracted ZIP separately before handing it over.
 """
@@ -33,22 +33,14 @@ _validator_spec = importlib.util.spec_from_file_location(
 )
 classroom_validator = importlib.util.module_from_spec(_validator_spec)
 _validator_spec.loader.exec_module(classroom_validator)
-TOP_DIRECTORY = "phys3810-guided-review"
-REVIEW_VERSION = "v0.2"
-ENTRANCE_NAMES = (
-    "START_HERE.md", "REVIEW_AGENDA.md", "STUDENT_QUICKSTART.md", "INSTRUCTOR_RUN_SHEET.md",
-)
-ENTRANCE_PATHS = tuple(f"{COURSE}/guided/{name}" for name in ENTRANCE_NAMES)
-REFERENCE_NOTEBOOKS = (
-    "notebooks/00_local_statevector_smoke.ipynb", "notebooks/01_local_aer_smoke.ipynb",
-    *(f"{COURSE}/notebooks/{name}.ipynb" for name in (
-        "00_setup_preflight", "01_grover", "02_qft", "03_qpe", "04_hhl", "05_shor",
-    )),
-)
-GUIDED_NOTEBOOKS = tuple(f"{COURSE}/notebooks/guided/{name}.ipynb" for name in (
-    "01_python_and_qiskit", "02_grover_follow_along", "03_qft_qpe_follow_along",
-))
-NOTEBOOKS = (*REFERENCE_NOTEBOOKS, *GUIDED_NOTEBOOKS)
+TOP_DIRECTORY = "phys3810-single-class-review"
+REVIEW_VERSION = "v0.1"
+ENTRANCE_NAMES = ("START_HERE.md",)
+ENTRANCE_PATHS = tuple(f"{COURSE}/intro/{name}" for name in ENTRANCE_NAMES)
+REFERENCE_NOTEBOOKS = tuple(classroom_validator.NOTEBOOKS)
+GUIDED_NOTEBOOKS = tuple(classroom_validator.GUIDED_NOTEBOOKS)
+INTRO_NOTEBOOKS = tuple(classroom_validator.INTRO_NOTEBOOKS)
+NOTEBOOKS = (*REFERENCE_NOTEBOOKS, *GUIDED_NOTEBOOKS, *INTRO_NOTEBOOKS)
 RUNTIME_FILES = (
     "LICENSE", "ruff.toml", "requirements.txt", "requirements-ci.txt", "constraints-ci.txt",
     VALIDATOR_PATH, "scripts/smoke_local.sh", BUILDER_PATH, *NOTEBOOKS,
@@ -65,7 +57,8 @@ EXPECTED_BASELINE_TESTS = {
     f"tests/test_{name}.py" for name in (
         "backend_select", "classroom", "validate_classroom", "grover", "grover_notebook",
         "qft", "qft_notebook", "qpe", "qpe_notebook", "hhl", "hhl_notebook",
-        "shor", "shor_notebook",
+        "shor", "shor_notebook", "guided_notebooks", "guided_validation",
+        "guided_review_package", "intro_notebooks",
     )
 }
 
@@ -120,7 +113,7 @@ def source_snapshot(reference: str) -> tuple[str, str, int, dict[str, bytes]]:
 
 
 def validate_source_notebooks(inputs: dict[str, bytes]) -> int:
-    """Require the complete eleven-notebook inventory and output-free source."""
+    """Require the complete selected inventory and output-free source."""
     cells = 0
     for name in NOTEBOOKS:
         notebook = json.loads(inputs[name])
@@ -205,7 +198,7 @@ def contract_body(original: bytes, stem: str) -> bytes:
 def validation_markdown(evidence: dict) -> bytes:
     counts = evidence["counts"]
     lines = [
-        "# Guided-review validation evidence", "",
+        "# Single-class review validation evidence", "",
         "This is an instructor review kit, not final classroom approval or a replacement release.",
         f"Source commit: `{evidence['source_commit']}`.", "",
         "## Recorded source execution", "",
@@ -214,7 +207,9 @@ def validation_markdown(evidence: dict) -> bytes:
         f"Environment: **{evidence['environment_status']}**. {evidence['environment_details']}", "",
         f"Passed source inventory: **{counts['tests']} tests, {counts['notebooks']} notebooks, "
         f"{counts['nonempty_code_cells']} nonempty code cells, {counts['pngs']} PNGs**.",
-        "Three notebooks are the proposed classroom route; eight remain reference/validation material.",
+        f"The {len(INTRO_NOTEBOOKS)} intro notebooks form the single-class route; "
+        f"{len(REFERENCE_NOTEBOOKS)} reference and {len(GUIDED_NOTEBOOKS)} earlier guided notebooks "
+        "remain optional/support material.",
         "All five bounded algorithm implementations remain available.", "",
         "Commands run:", "", "```text", *evidence["commands"], "```", "",
         "Results:", "", *[f"- {name}: {value}." for name, value in sorted(evidence["results"].items())],
@@ -258,8 +253,8 @@ def payload_files(inputs: dict[str, bytes], commit: str, evidence: dict) -> tupl
         header = (
             inputs[source].decode("utf-8").splitlines()[0] + "\n\n"
             f"Technical reference from `{commit}`. Older lesson timing and regression counts\n"
-            "inside these reference contracts do not define the new guided route.\n"
-            "Use [the instructor run sheet](../../../INSTRUCTOR_RUN_SHEET.md) for that route\n"
+            "inside these reference contracts do not define the single-class route.\n"
+            "Use [the quickstart](../../../START_HERE.md) for that route\n"
             "and [current validation evidence](../../../VALIDATION.md) for measured totals.\n\n"
         )
         target = destinations[source]
@@ -268,17 +263,26 @@ def payload_files(inputs: dict[str, bytes], commit: str, evidence: dict) -> tupl
                            "source_path": source, "source_sha256": digest(inputs[source]),
                            "retained_body_sha256": digest(body)}
     for name, title, destination in (
-        ("SETUP", "Runtime setup", "STUDENT_QUICKSTART.md"),
-        ("COURSE_PLAN", "Guided classroom route", "START_HERE.md"),
+        ("SETUP", "Runtime setup", "../../../START_HERE.md"),
+        ("COURSE_PLAN", "Single-class route", "../../../START_HERE.md"),
+        ("intro/START_HERE", "Single-class quickstart", "../../../../START_HERE.md"),
     ):
         target = f"runtime/{COURSE}/{name}.md"
         files[target] = (
-            f"# {title}\n\nSee [the review entrance](../../../{destination}) for the current guided route.\n"
-            "This runtime tree contains all eleven teaching/reference notebooks and the complete\n"
-            "bounded five-algorithm library. The three guided notebooks define the proposed classes;\n"
-            "the remaining notebooks are reference/validation support. Exact dates and delivery\n"
+            f"# {title}\n\nSee [the quickstart]({destination}) for the current single-class route.\n"
+            f"This runtime tree contains all {len(NOTEBOOKS)} teaching/reference notebooks and the complete\n"
+            f"bounded five-algorithm library. The {len(INTRO_NOTEBOOKS)} intro notebooks form the class;\n"
+            "the remaining notebooks are optional/reference support. Exact dates and delivery\n"
             "arrangements remain provisional. This is not final classroom approval.\n"
         ).encode("utf-8")
+        if name == "intro/START_HERE":
+            # Preserve section anchors used by exact notebook links without
+            # duplicating the student guide body inside the runtime tree.
+            headings = re.findall(r"^## (.+)$", inputs[ENTRANCE_PATHS[0]].decode("utf-8"), re.MULTILINE)
+            for heading in headings:
+                files[target] += (
+                    f"\n## {heading}\n\nSee [the complete quickstart]({destination}).\n"
+                ).encode("utf-8")
         origins[target] = {"kind": "generated standalone navigation", "source_path": BUILDER_PATH,
                            "source_sha256": digest(inputs[BUILDER_PATH])}
     files["VALIDATION.md"] = validation_markdown(evidence)
@@ -308,7 +312,7 @@ def validate_payload(files: dict[str, bytes]) -> int:
                 or "\\" in name or ":" in name or name.casefold() in folded):
             raise ValueError(f"Unsafe or case-colliding path: {name}")
         if (forbidden.intersection(parts) or any(part.startswith(".") for part in parts)
-                or name.lower().endswith((".pdf", ".zip", ".pyc"))
+                or name.lower().endswith((".pdf", ".docx", ".zip", ".pyc"))
                 or any(part.upper() in ("AGENTS.MD", "WORKFLOW.MD") for part in parts)):
             raise ValueError(f"Excluded review payload: {name}")
         folded.add(name.casefold())
@@ -369,10 +373,11 @@ def build(reference: str, output_directory: Path, evidence: dict) -> dict:
     files, origins = payload_files(inputs, commit, evidence)
     links = validate_payload(files)
     manifest = {
-        "schema": "phys3810.guided-review.v1", "review_version": REVIEW_VERSION,
+        "schema": "phys3810.single-class-review.v1", "review_version": REVIEW_VERSION,
         "purpose": "instructor review and rehearsal; not final classroom approval or replacement release",
         "source_commit": commit, "source_tree": tree, "working_tree_payload": False,
-        "top_directory": TOP_DIRECTORY, "classroom_notebooks": 3, "total_notebooks": 11,
+        "top_directory": TOP_DIRECTORY, "classroom_notebooks": len(INTRO_NOTEBOOKS),
+        "total_notebooks": len(NOTEBOOKS),
         "manifest_excludes_itself_and_archive": True,
         "builder": {"source_path": BUILDER_PATH, "source_sha256": digest(inputs[BUILDER_PATH])},
         "source_execution_counts": evidence["counts"],
@@ -390,7 +395,7 @@ def build(reference: str, output_directory: Path, evidence: dict) -> dict:
             if archive.read(f"{TOP_DIRECTORY}/{name}") != data:
                 raise ValueError(f"Generated archive payload differs: {name}")
     output_directory = output_directory.resolve()
-    asset_name = f"PHYS3810-Guided-Review-{REVIEW_VERSION}-{commit[:12]}.zip"
+    asset_name = f"PHYS3810-Single-Class-Review-{REVIEW_VERSION}-{commit[:12]}.zip"
     archive_path = output_directory / asset_name
     metadata_path = archive_path.with_suffix(".metadata.json")
     if any(path.exists() or path.is_symlink() for path in (archive_path, metadata_path)):
@@ -417,7 +422,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--ref", required=True, help="Commit containing this exact builder and all review inputs.")
     parser.add_argument("--evidence", type=Path, required=True, help="Measured source-execution JSON receipt.")
-    parser.add_argument("--output-dir", type=Path, default=Path("artifacts/guided-review"))
+    parser.add_argument("--output-dir", type=Path, default=Path("artifacts/single-class-review"))
     args = parser.parse_args()
     try:
         evidence = json.loads(args.evidence.read_text(encoding="utf-8"))
@@ -426,7 +431,7 @@ def main() -> None:
         detail = error.stderr.decode("utf-8", errors="replace").strip() if error.stderr else str(error)
         parser.exit(2, f"Git source snapshot failed: {detail}\n")
     except (OSError, ValueError, KeyError, TypeError, SyntaxError, zipfile.BadZipFile) as error:
-        parser.exit(2, f"Guided review export failed: {error}\n")
+        parser.exit(2, f"Single-class review export failed: {error}\n")
     print(json.dumps(metadata, indent=2))
 
 

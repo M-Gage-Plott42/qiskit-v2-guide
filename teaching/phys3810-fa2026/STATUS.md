@@ -1,5 +1,43 @@
 # PHYS 3810 status
 
+## November 16 single-class revision
+
+The current route is **one prerecorded beginner class by Gage Plott**:
+15–20 minutes of setup, quantum random-bit simulation, Bell-state preparation,
+and a brief tour of optional algorithm notebooks. Laptop follow-along remains
+ungraded, with no assignments or submissions and no assumed Python experience.
+This supersedes the multi-session route and waiting-for-feedback state below.
+No new class date or total class window is confirmed; 43 minutes is a proposed
+recording target whose human pacing has not been tested.
+
+The new [quickstart](intro/START_HERE.md) is the current student entrance.
+Implementation and checkout validation passed on a local candidate based on
+`1f33830674490ecbe411cb9a8e86ca52abf7cae8`; no remote publication is authorized.
+The original eight reference notebooks and three earlier guided lessons remain,
+alongside two independent intro lessons. The default validator stays at eight;
+the all-profile inventory becomes thirteen. Historical counts below retain
+their original revision and environment and are not new results.
+
+[Current validation](SINGLE_CLASS_VALIDATION.md) records **221 tests, thirteen
+fresh-kernel notebooks, 85 code cells, and 32 PNGs** with the current pins in a
+fresh application environment. Exact package extraction and the delivery receipt
+remain a separate gate. The next focused review aligns beginner flow and the
+recording script with the resulting immutable candidate.
+
+Ubuntu/Linux is the confirmed recording platform. The existing CPython 3.12.15
+interpreter can support a fresh pinned environment; Python installation on a
+new computer, native Windows/macOS, screen/audio recording, export, and human
+pacing need their own evidence. The next focused review must replace the
+Windows PowerPoint recording assumption with an Ubuntu-appropriate workflow,
+including the distinction between ONLYOFFICE slide export and live capture.
+The received sync text is accessible; the linked Word script and separate
+full handoff are referenced only, not received document bytes.
+
+Preserve all historical algorithms/contracts, supplied documents, sealed kits,
+release assets, recovery data, and historical worktrees. The next step is local
+implementation, measured validation, and an exact review candidate; no external
+message, push, PR, merge, release, or hardware job is part of this revision.
+
 ## November 4 dependency maintenance
 
 PR #117 aligns the terminal and source-notebook version checks with its Aer

@@ -1,4 +1,4 @@
-"""Offline acceptance cases for the separate, committed-source guided exporter."""
+"""Offline acceptance cases for the committed-source single-class review exporter."""
 
 import copy
 import io
@@ -16,6 +16,8 @@ from scripts import validate_classroom as validator
 COMMIT = "a" * 40
 TREE = "b" * 40
 TIMESTAMP = 1793613600
+NOTEBOOK_COUNT = len(builder.NOTEBOOKS)
+MINIMUM_PNGS = sum(validator.REQUIRED_PNGS.get(name, 0) for name in builder.NOTEBOOKS)
 
 
 def fixture_inputs():
@@ -33,8 +35,9 @@ def fixture_inputs():
     for source, target in zip(builder.ENTRANCE_PATHS, builder.ENTRANCE_NAMES, strict=True):
         files[source] = f"# {target.removesuffix('.md')}\n\n[Next](START_HERE.md)\n".encode()
     files[builder.ENTRANCE_PATHS[0]] += (
-        "[Guided notebook](../notebooks/guided/02_grover_follow_along.ipynb)\n"
+        "[RNG notebook](../notebooks/intro/01_quantum_rng.ipynb)\n"
         "[Setup](../SETUP.md)\n"
+        "\n## 5. Optional exploration\n\nOptional examples.\n"
     ).encode()
     for stem, marker in builder.CONTRACT_END_MARKERS.items():
         text = f"# {stem}\n\nDated opening not exported.\n\n## Inputs\n\nExact mathematics.\n"
@@ -48,10 +51,11 @@ def fixture_evidence():
     return {
         "source_commit": COMMIT, "python": "3.12.15", "platform": "synthetic test fixture",
         "environment_status": "reused", "environment_details": "Fixture evidence; not execution.",
-        "versions": {"qiskit": "2.6.1", "qiskit-aer": "0.17.2"},
+        "versions": {"qiskit": "2.6.1", "qiskit-aer": "0.18.2"},
         "commands": ["python scripts/validate_classroom.py --profile all"],
         "results": {"all_profile_validator": "passed"},
-        "counts": {"tests": 160, "notebooks": 11, "nonempty_code_cells": 11, "pngs": 27},
+        "counts": {"tests": 160, "notebooks": NOTEBOOK_COUNT,
+                   "nonempty_code_cells": NOTEBOOK_COUNT, "pngs": MINIMUM_PNGS},
         "limitations": ["Synthetic fixture; no native-platform or runtime execution."],
     }
 
@@ -65,10 +69,12 @@ class GuidedReviewPackageTests(unittest.TestCase):
         with patch.object(builder, "source_snapshot", return_value=(COMMIT, TREE, TIMESTAMP, self.inputs)):
             return builder.build("test-fixture", Path(directory), self.evidence)
 
-    def test_reference_and_guided_inventories_match_runner(self):
+    def test_reference_guided_and_intro_inventories_match_runner(self):
         self.assertEqual(set(builder.REFERENCE_NOTEBOOKS), set(validator.NOTEBOOKS))
         self.assertEqual(set(builder.GUIDED_NOTEBOOKS), set(validator.GUIDED_NOTEBOOKS))
-        self.assertEqual(len(set(builder.NOTEBOOKS)), 11)
+        self.assertEqual(builder.INTRO_NOTEBOOKS, validator.INTRO_NOTEBOOKS)
+        self.assertEqual(builder.NOTEBOOKS, validator.notebooks_for_profile("all"))
+        self.assertEqual(len(set(builder.NOTEBOOKS)), 13)
 
     def test_manifest_hashes_origins_and_safe_exact_inventory(self):
         with tempfile.TemporaryDirectory(prefix="guided packet test ") as directory:
@@ -78,6 +84,12 @@ class GuidedReviewPackageTests(unittest.TestCase):
                 manifest = json.loads(archive.read(prefix + "MANIFEST.json"))
                 self.assertEqual(manifest["source_commit"], COMMIT)
                 self.assertEqual(manifest["source_tree"], TREE)
+                self.assertEqual(manifest["schema"], "phys3810.single-class-review.v1")
+                self.assertEqual(manifest["classroom_notebooks"], len(builder.INTRO_NOTEBOOKS))
+                self.assertEqual(manifest["total_notebooks"], NOTEBOOK_COUNT)
+                self.assertTrue(Path(result["archive"]).name.startswith("PHYS3810-Single-Class-Review-v0.1-"))
+                self.assertNotIn("STUDENT_QUICKSTART.md", manifest["files"])
+                self.assertNotIn("INSTRUCTOR_RUN_SHEET.md", manifest["files"])
                 self.assertNotIn("MANIFEST.json", manifest["files"])
                 self.assertEqual(len(archive.namelist()), len(manifest["files"]) + 1)
                 self.assertIsNone(archive.testzip())
@@ -117,9 +129,20 @@ class GuidedReviewPackageTests(unittest.TestCase):
     def test_exported_links_remap_to_runtime_and_root_documents(self):
         files, _ = builder.payload_files(self.inputs, COMMIT, self.evidence)
         text = files["START_HERE.md"].decode()
-        self.assertIn("(runtime/teaching/phys3810-fa2026/notebooks/guided/02_grover_follow_along.ipynb)", text)
+        self.assertIn("(runtime/teaching/phys3810-fa2026/notebooks/intro/01_quantum_rng.ipynb)", text)
         self.assertIn("(runtime/teaching/phys3810-fa2026/SETUP.md)", text)
         self.assertIn("(START_HERE.md)", text)
+        adapter = files[f"runtime/{builder.COURSE}/intro/START_HERE.md"].decode()
+        self.assertIn("(../../../../START_HERE.md)", adapter)
+        self.assertNotIn("eleven", adapter)
+        self.assertIn("## 5. Optional exploration", adapter)
+        intro_notebook = f"runtime/{builder.INTRO_NOTEBOOKS[1]}"
+        notebook = json.loads(files[intro_notebook])
+        notebook["cells"].append({
+            "cell_type": "markdown",
+            "source": "[Optional menu](../../intro/START_HERE.md#5-optional-exploration)",
+        })
+        files[intro_notebook] = json.dumps(notebook).encode()
         self.assertGreater(builder.validate_payload(files), 0)
 
     def test_entrance_link_to_excluded_document_fails(self):
@@ -139,32 +162,35 @@ class GuidedReviewPackageTests(unittest.TestCase):
             builder.contract_body(b"# QFT\n\n## Inputs\n\nChanged body.\n", "QFT")
 
     def test_output_or_execution_count_in_source_rejected(self):
-        for value in (7, [{"output_type": "stream", "text": "stale"}]):
-            with self.subTest(value=value):
-                inputs = dict(self.inputs)
-                notebook = json.loads(inputs[builder.GUIDED_NOTEBOOKS[0]])
-                key = "execution_count" if isinstance(value, int) else "outputs"
-                notebook["cells"][0][key] = value
-                inputs[builder.GUIDED_NOTEBOOKS[0]] = json.dumps(notebook).encode()
-                with self.assertRaisesRegex(ValueError, "stored execution"):
-                    builder.validate_source_notebooks(inputs)
+        for name in builder.NOTEBOOKS:
+            for value in (7, [{"output_type": "stream", "text": "stale"}]):
+                with self.subTest(notebook=name, value=value):
+                    inputs = dict(self.inputs)
+                    notebook = json.loads(inputs[name])
+                    key = "execution_count" if isinstance(value, int) else "outputs"
+                    notebook["cells"][0][key] = value
+                    inputs[name] = json.dumps(notebook).encode()
+                    with self.assertRaisesRegex(ValueError, "stored execution"):
+                        builder.validate_source_notebooks(inputs)
 
     def test_required_skip_tag_and_missing_notebook_rejected(self):
-        inputs = dict(self.inputs)
-        notebook = json.loads(inputs[builder.GUIDED_NOTEBOOKS[0]])
-        notebook["cells"][0]["metadata"] = {"tags": ["skip-execution"]}
-        inputs[builder.GUIDED_NOTEBOOKS[0]] = json.dumps(notebook).encode()
-        with self.assertRaisesRegex(ValueError, "skip-execution"):
-            builder.validate_source_notebooks(inputs)
-        del inputs[builder.GUIDED_NOTEBOOKS[0]]
-        with self.assertRaises(KeyError):
-            builder.validate_source_notebooks(inputs)
+        for name in builder.NOTEBOOKS:
+            with self.subTest(notebook=name):
+                inputs = dict(self.inputs)
+                notebook = json.loads(inputs[name])
+                notebook["cells"][0]["metadata"] = {"tags": ["skip-execution"]}
+                inputs[name] = json.dumps(notebook).encode()
+                with self.assertRaisesRegex(ValueError, "skip-execution"):
+                    builder.validate_source_notebooks(inputs)
+                del inputs[name]
+                with self.assertRaises(KeyError):
+                    builder.validate_source_notebooks(inputs)
 
     def test_evidence_rejects_wrong_commit_counts_and_unpassed_source(self):
         variants = [
             {"source_commit": "c" * 40},
-            {"counts": {"tests": 160, "notebooks": 8, "nonempty_code_cells": 11, "pngs": 27}},
-            {"counts": {"tests": 160, "notebooks": 11, "nonempty_code_cells": 12, "pngs": 27}},
+            {"counts": dict(self.evidence["counts"], notebooks=8)},
+            {"counts": dict(self.evidence["counts"], nonempty_code_cells=NOTEBOOK_COUNT + 1)},
             {"results": {"all_profile_validator": "untested"}},
             {"python": "3.14.4"}, {"environment_status": "unknown"}, {"commands": []},
         ]
@@ -172,7 +198,7 @@ class GuidedReviewPackageTests(unittest.TestCase):
             with self.subTest(variant=variant):
                 evidence = dict(self.evidence, **variant)
                 with self.assertRaises(ValueError):
-                    builder.validate_evidence(evidence, COMMIT, 11)
+                    builder.validate_evidence(evidence, COMMIT, NOTEBOOK_COUNT)
 
     def test_validation_text_does_not_claim_post_export_execution(self):
         text = builder.validation_markdown(self.evidence).decode()
@@ -181,39 +207,39 @@ class GuidedReviewPackageTests(unittest.TestCase):
         self.assertIn("post-export execution receipt is recorded outside", text)
         self.assertIn("not final classroom approval", text)
 
-    def test_evidence_png_threshold_rejects_16_and_26_and_accepts_27(self):
-        for count in (16, 26, 27):
+    def test_evidence_png_threshold_rejects_old_inventory_and_accepts_current_minimum(self):
+        for count in (27, MINIMUM_PNGS - 1, MINIMUM_PNGS):
             with self.subTest(pngs=count):
                 evidence = copy.deepcopy(self.evidence)
                 evidence["counts"]["pngs"] = count
-                if count < 27:
+                if count < MINIMUM_PNGS:
                     with self.assertRaisesRegex(ValueError, "notebook/cell inventory"):
-                        builder.validate_evidence(evidence, COMMIT, 11)
+                        builder.validate_evidence(evidence, COMMIT, NOTEBOOK_COUNT)
                 else:
-                    builder.validate_evidence(evidence, COMMIT, 11)
+                    builder.validate_evidence(evidence, COMMIT, NOTEBOOK_COUNT)
 
     def test_evidence_png_threshold_tracks_selected_profile_requirements(self):
         # A changed included requirement must change the threshold; an unrelated
-        # notebook's requirement must not. This catches a new hard-coded 27.
+        # notebook's requirement must not. This catches a hard-coded threshold.
         requirements = dict(validator.REQUIRED_PNGS)
-        requirements[validator.GUIDED_NOTEBOOKS[0]] += 1
+        requirements[validator.INTRO_NOTEBOOKS[0]] += 1
         requirements["notebooks/not-in-all-profile.ipynb"] = 99
         with patch.dict(builder.classroom_validator.REQUIRED_PNGS, requirements, clear=True):
             with self.assertRaisesRegex(ValueError, "notebook/cell inventory"):
-                builder.validate_evidence(self.evidence, COMMIT, 11)
+                builder.validate_evidence(self.evidence, COMMIT, NOTEBOOK_COUNT)
             evidence = copy.deepcopy(self.evidence)
-            evidence["counts"]["pngs"] = 28
-            builder.validate_evidence(evidence, COMMIT, 11)
+            evidence["counts"]["pngs"] = MINIMUM_PNGS + 1
+            builder.validate_evidence(evidence, COMMIT, NOTEBOOK_COUNT)
 
     def test_evidence_rejects_divergent_all_profile_inventory(self):
         profile = (*validator.notebooks_for_profile("all"), "notebooks/new-required.ipynb")
         with patch.object(builder.classroom_validator, "notebooks_for_profile", return_value=profile):
             with self.assertRaisesRegex(ValueError, "inventory differs"):
-                builder.validate_evidence(self.evidence, COMMIT, 11)
+                builder.validate_evidence(self.evidence, COMMIT, NOTEBOOK_COUNT)
 
     def test_unsafe_case_colliding_and_excluded_paths_rejected(self):
         for name in ("../escape", "/absolute", "a\\b", "a:b", "runtime/.env", "runtime/.venv/x",
-                     "runtime/artifacts/result.json", "old.pdf", "old.zip", "AGENTS.md"):
+                     "runtime/artifacts/result.json", "old.pdf", "old.docx", "old.zip", "AGENTS.md"):
             with self.subTest(name=name):
                 with self.assertRaises(ValueError):
                     builder.validate_payload({name: b""})

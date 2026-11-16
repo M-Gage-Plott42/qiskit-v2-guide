@@ -1,13 +1,18 @@
 # PHYS 3810: provisional public preview setup
 
+**For the current prerecorded RNG/Bell class, use the
+[single-class quickstart](intro/START_HERE.md).** It gives the two lessons and
+Ubuntu/Linux setup. This page retains the setup for the older published
+full-course preview; that frozen ZIP does not contain the RNG/Bell additions.
+
 <!-- markdownlint-disable-next-line MD036 -->
 **Current publication instructions · Provisional course code v0.2.0-rc1**
 
 Download the complete [provisional full-course preview](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-v0.2.0-rc1/PHYS3810-Fall2026-v0.2.0-rc1.zip) and extract its `phys3810-fa2026` folder. This named download is published. The earlier Grover-only package does not contain all five algorithm lessons. Final session dates and classroom emphasis remain to be confirmed. The beginner route uses worked demonstrations on laptops, with no assignments, grading, evaluation, or submissions.
 
-For the newer beginner review kit, follow the [guided quickstart](guided/STUDENT_QUICKSTART.md).
-Its three guided lessons begin with Python and Qiskit; its `--profile all`
-validation includes eleven notebooks. The instructions below describe the
+The earlier [guided quickstart](guided/STUDENT_QUICKSTART.md) describes its
+separate three-lesson kit and historical eleven-notebook inventory.
+The instructions below describe the
 unchanged published full-course ZIP, which contains eight reference/validation
 notebooks. Assisted setup must be arranged with the instructor; it is not
 assumed independent homework or part of a fifteen-minute launch segment.
@@ -66,7 +71,7 @@ python scripts/validate_classroom.py
 
 `requirements.txt` includes JupyterLab and the circuit, plotting, widget, and notebook-execution libraries. It automatically reads `constraints-ci.txt` to select the specified package versions. Keep both files unchanged; do not upgrade individual packages during the lessons.
 
-In the frozen public release ZIP, the validator prints your interpreter path and expected Qiskit/Aer versions, checks package consistency, runs **160 tests**, and executes **eight notebooks in separate fresh kernels**, with **50 nonempty code cells** and **16 PNG figures**. In a newer repository checkout, it runs that checkout's complete test suite; default notebook membership remains eight, while `--profile all` also runs the three guided lessons. See [current evidence](STATUS.md) for measured revision totals. Success ends with:
+In the frozen public release ZIP, the validator prints your interpreter path and expected Qiskit/Aer versions, checks package consistency, runs **160 tests**, and executes **eight notebooks in separate fresh kernels**, with **50 nonempty code cells** and **16 PNG figures**. In a newer repository checkout, it runs that checkout's complete test suite; default notebook membership remains eight, while `--profile all` also runs three guided and two intro lessons. See [current evidence](STATUS.md) for measured revision totals. Success ends with:
 
 ```text
 PASSED: classroom validation
@@ -119,7 +124,11 @@ Two additional checks live under the root `notebooks/` directory:
 | `00_local_statevector_smoke.ipynb` | Exact local simulation. |
 | `01_local_aer_smoke.ipynb` | Local Aer sampling and a small noise example. |
 
-The default validator runs these eight reference/validation notebooks. The newer guided route uses three additional notebooks; `--profile all` runs all eleven. Follow the instructor's selected route. There is no submitted or assessed work.
+The default validator runs these eight reference/validation notebooks. The
+current repository's `--profile all` adds three guided and two intro notebooks,
+for thirteen total; this does not change the historical release ZIP. Use the
+[single-class quickstart](intro/START_HERE.md) for the current video. There is
+no submitted or assessed work.
 
 ### Use predictions during the lessons
 

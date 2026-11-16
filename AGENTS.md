@@ -44,7 +44,8 @@ The Python validator is the cross-platform classroom entry point; the Bash
 command retains the existing smoke workflow. The validator includes pip check
 and the complete unit suite: do not immediately repeat unittest discovery.
 Its default inventory remains eight reference notebooks; `--profile all` also
-executes the three beginner guided notebooks and is required for that route.
+executes the three earlier guided notebooks and two single-class intro notebooks
+and is required for the current route (thirteen notebooks in total).
 Run each required notebook from a
 fresh kernel, with the selected environment's interpreter, and fail on cell
 errors. Printed output and stored notebook output are not proof of correctness.
@@ -80,6 +81,41 @@ Do not put private correspondence, credentials, account identifiers, or student
 data in public code, notebooks, documentation, outputs, or validation logs.
 
 ## PHYS 3810 collaboration and handoffs
+
+**Current single-class instruction, November 16:** implement one prerecorded
+beginner class presented by Gage Plott: 15–20 minutes of setup, quantum RNG,
+Bell-state preparation, then a brief optional-algorithm tour. Students follow
+on laptops with zero assumed Python; nothing is assigned, graded, evaluated,
+or submitted. This supersedes the earlier multi-session plan and parked state.
+No new date or total class duration is confirmed. The proposed 43-minute video
+is an untested production target, not measured classroom pacing.
+
+The current entrance is `teaching/phys3810-fa2026/intro/START_HERE.md`; the two
+independent lessons are under `notebooks/intro/`. Keep direct SDK H/CX calls
+visible, use local V2 sampling, and preserve all existing algorithm bounds.
+Use shots 128 and seed 2026, with explicit parameter-first 128 → 1024 → 128
+reruns, independent mathematics, asymmetric bit-order checks, and persistent
+kernel negative controls. Integrate both lessons into strict all-profile
+validation and the existing review exporter; do not add another exporter.
+
+The user confirms Ubuntu/Linux for recording. Validate its actual Python 3.12
+environment and Jupyter route, distinguishing a pre-existing interpreter from
+a fresh package installation. Native Windows/macOS and recording/audio/export
+remain untested without actual evidence. Carry the Ubuntu/ONLYOFFICE versus
+Windows PowerPoint recording consideration into the next focused review;
+slide-video export alone does not demonstrate live screen/audio capture.
+
+Local implementation, validation, a versioned standalone desktop review kit,
+and a local candidate commit are in scope. No push, PR, merge, publication,
+external message, hardware job, or dependency refresh is requested. Preserve
+old tags, ZIPs, PDFs/companions, Word editions, historical worktrees, and recovery
+data. Review is due after the new lessons and edit/rerun regressions pass,
+focused on beginner usability and matching the recording script to the exact
+tested candidate. The supplied sync text is accessible; its linked Word script
+and fuller text handoff were not supplied as accessible files. Do not claim to
+have read or integrated them. Keep prompts outside the runnable ZIP.
+
+### Historical November 2 acceptance
 
 **Current consolidated acceptance and park instruction, November 2:** the
 reviewer accepts the corrected b393f63 guided v0.2 kit with no remaining

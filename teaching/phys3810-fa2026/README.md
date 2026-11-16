@@ -1,39 +1,45 @@
 # PHYS 3810 · Start here
 
-This provisional full-course preview contains local lessons for Grover search,
-QFT, QPE, exact-spectrum HHL, and compiled N=15 Shor order finding. It uses
-64-bit CPython 3.12, Qiskit 2.6.1, and Aer 0.18.2. No Git experience, IBM account,
-GPU, or quantum hardware is needed for the default lessons.
+The current beginner route is **one prerecorded class by Gage Plott**, with
+laptop follow-along and zero assumed Python experience. Start with the
+[single-class quickstart](intro/START_HERE.md): Ubuntu/Linux setup, quantum
+random-bit generation, then Bell-state preparation. Other algorithms are
+optional exploration. Nothing is assigned, graded, evaluated, or submitted.
 
-## Beginner follow-along route
+The classroom environment uses 64-bit CPython 3.12, Qiskit 2.6.1, Aer 0.18.2,
+and JupyterLab 4.6.5. No Git experience, IBM account, GPU, or quantum hardware is
+needed for the local lessons. The video reserves 15–20 minutes for setup;
+installation and student pauses may take longer. The total class window, date,
+and video/kit delivery location remain unconfirmed.
 
-Material development: **Gage Plott**. For the new two- or three-day teaching
-proposal, start with the [guided review kit](guided/START_HERE.md):
-Python/Qiskit first, Grover next, then QFT/QPE if a third day is available.
-The two-day fallback uses Python/Qiskit plus Grover. Lessons are complete worked
-examples demonstrated by the instructor and repeated on laptops, with no
-assignments, grading, evaluation, or submissions.
+## Follow the current class
 
-For the walkthrough, read the linked one-page agenda and three-page instructor
-run sheet first, then skim the two-page student quickstart. Their PDF and Markdown
-versions are together in the [review entrance](guided/START_HERE.md). Guided
-notebooks are optional first-pass reading; implementation and validation files
-are support material. The PDFs accompany the sealed v0.2 ZIP separately.
+1. Use the [single-class quickstart](intro/START_HERE.md) and the complete matching
+   kit supplied with the video. No new public student download is published yet.
+2. Open [Quantum random bits](notebooks/intro/01_quantum_rng.ipynb), check the
+   kernel, and run the one-qubit demonstration.
+3. Open [Prepare a Bell state](notebooks/intro/02_bell_state.ipynb) in its own
+   kernel and run the two-qubit demonstration.
 
-The guided kit is separate from the frozen public release below. Its complete
-support tree includes three guided notebooks plus the eight original
-reference/validation notebooks. Use its [quickstart](guided/STUDENT_QUICKSTART.md)
-and run `python scripts/validate_classroom.py --profile all` from its `runtime`
-folder to check all eleven. In this repository, run the same command from the
-repository root. [Current evidence](STATUS.md) records actual revision totals.
+The earlier [guided review entrance](guided/START_HERE.md), three guided
+notebooks, and all supplied PDF/Markdown editions retain their original scope.
+Their multi-session route is historical. The frozen downloads below do not
+contain the two new intro notebooks.
 
-## Get the unchanged full-course preview
+For maintainer validation, `python scripts/validate_classroom.py --profile all`
+runs thirteen notebooks: two intro, three guided, and eight reference/validation
+notebooks. Run it from the repository root or the matching extracted kit's
+`runtime` folder. The default profile still selects the original eight.
+[Current evidence](STATUS.md) records measured results; tests are support
+material, not the student's video setup checkpoint.
+
+## Historical full-course preview
 
 1. Download [PHYS3810-Fall2026-v0.2.0-rc1.zip](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/download/phys3810-fa2026-v0.2.0-rc1/PHYS3810-Fall2026-v0.2.0-rc1.zip)
    and extract the complete `phys3810-fa2026` folder. This named asset is available
    from [the published prerelease](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-v0.2.0-rc1);
    use it rather than GitHub's source-only archive.
-2. Follow the [current setup instructions](SETUP.md), install the pinned
+2. Follow the [published-preview setup instructions](SETUP.md), install the pinned
    environment, and run `python scripts/validate_classroom.py` from the extracted root.
 3. In this frozen release ZIP, expect 160 tests, eight fresh-kernel notebooks,
    50 code cells, and 16 PNGs.
@@ -50,7 +56,7 @@ review-time availability. The current setup page governs this preview; see
 See the [document index](handouts/README.md) for separately supplied review editions;
 they do not replace the files inside the frozen release ZIP.
 
-## Lessons and limits
+## Optional algorithms and limits
 
 - [Grover](notebooks/01_grover.ipynb): phase marking and amplification on 2–5 qubits.
 - [QFT](notebooks/02_qft.ipynb): exact 1–6-qubit transforms, phase, sign, and swaps.
@@ -61,16 +67,13 @@ they do not replace the files inside the frozen release ZIP.
   four residue qubits and conservative order/factor recovery.
 
 These are bounded instructional examples, not general scalable implementations
-or demonstrations of quantum advantage. The [course plan](COURSE_PLAN.md)
-now starts with zero Python experience and uses 75-minute activity routes plus
-ten minutes of margin within the listed 85-minute class period. November 16, 19,
-and 23 remain provisional; November 19 conflicts with the Monday/Wednesday
-pattern. Final dates/count, priorities, laptop setup, prior quantum coverage,
-and delivery after the walkthrough remain open. Assessment is resolved: none.
+or demonstrations of quantum advantage. They are optional after the RNG/Bell
+class. The [earlier course plan](COURSE_PLAN.md) preserves the superseded
+multi-session proposal and its provisional dates; those dates and durations
+are not confirmed constraints for the prerecorded class.
 
-The demonstrated path is Ubuntu/Linux with JupyterLab. Native Windows/macOS,
-native editor UI, and human pacing remain untested. This preview is not final
-classroom approval. Worked results appear in notebooks, contracts, and tests;
+The selected recording path is Ubuntu/Linux with JupyterLab. Native Windows/macOS,
+native editor UI, and human pacing remain untested. Worked results appear in notebooks, contracts, and tests;
 excluding separate instructor guides from the named ZIP does not make it an
 answer-free assessment. The repository source also contains instructor material.
 
