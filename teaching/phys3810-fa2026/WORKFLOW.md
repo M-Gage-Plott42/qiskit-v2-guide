@@ -7,6 +7,19 @@ is not accessible in the current workspace.
 
 ## Source of truth and current position
 
+The latest November 16 instruction authorizes pushing and merging the existing
+single-class branch through the normal required-check PR workflow, then leaving
+main clean and synchronized. Earlier local-only statements below are historical
+for this operation. Keep unrelated dependency updates, rulesets, releases,
+frozen archives/documents, historical worktrees, and recovery data unchanged.
+Carry forward the exact `2dcda95` source/extraction evidence without another
+unchanged local runtime/package cycle; required remote checks must pass at the
+actual PR head. Record the resulting PR, head, merge commit, and synchronization
+outcome. User-reported pilot observations and later archive-audit findings are
+summarized in [current status](STATUS.md); no raw private evidence is published.
+
+### Earlier focused review workflow
+
 The focused review of candidate `754ec33` has returned with accessible script
 and receipt bytes. Reproduce and fix M1's exported navigation within Jupyter's
 `runtime/` root, add realistic guide/menu/content/anchor regressions, and build

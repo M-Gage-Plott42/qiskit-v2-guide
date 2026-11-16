@@ -1,5 +1,29 @@
 # PHYS 3810 status
 
+## November 16 Git integration and operational update
+
+The user authorizes push, normal PR checks, and merge of the single-class
+teaching branch, followed by a clean, synchronized main checkout. This applies
+to the teaching work only. Dependency PRs, rulesets, releases, frozen packages,
+supplied document bytes, and recovery data remain outside this integration.
+The immutable runnable candidate remains `2dcda95`; completion of Git integration
+does not rebuild or relabel its archive or establish final classroom approval.
+
+The later review closes M1 on that exact candidate. It reports 218/224 tests
+passing in a reused Debian CPython 3.12.14 environment, with six kernel-related
+failures and zero completed notebook kernels under its transport restriction.
+The existing Ubuntu source and exact-extraction **224/13/85/32** results carry
+forward separately. The received archive/member/PDF checks passed locally;
+raw review material, supplied documents, and private pilot evidence stay local.
+
+The operator reported working notebook navigation after opening the guide with
+**Markdown Preview**, and successful recording/playback, voice, and pause checks.
+The first capture showed a framing issue; Fit to Screen was subsequently
+confirmed by the operator. A new corrected-framing video was not inspected.
+Confirm the full fitted view and a dedicated browser window before the final
+take. Video duration is flexible; the old 43-minute outline is a proposal.
+No further broad technical review is needed solely for this integration.
+
 ## November 16 focused review reconciliation
 
 The focused review of unchanged `754ec33` is received with the actual return

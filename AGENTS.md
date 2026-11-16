@@ -82,6 +82,25 @@ data in public code, notebooks, documentation, outputs, or validation logs.
 
 ## PHYS 3810 collaboration and handoffs
 
+**Current Git integration instruction, November 16:** the user authorizes
+bringing the single-class teaching branch up to date, pushing it, opening its
+normal PR, and merging after required checks. This supersedes earlier local-only
+wording for this scoped integration. Keep unrelated dependency PRs separate;
+do not change rulesets, release assets, sealed archives, or supplied documents.
+Preserve historical worktrees and recovery data, then return to clean main.
+
+The later review of exact candidate `2dcda95` closes M1. Its reused Debian
+environment passed 218 of 224 tests and failed six kernel integration tests;
+zero complete fresh-kernel notebooks ran there. The existing successful Ubuntu
+source/extraction receipt remains separate. The local document/ZIP audit passed.
+The user reported successful browser navigation through Markdown Preview and
+successful voice/pause/playback checks. The first capture needed framing/privacy
+adjustments; Fit to Screen was user-confirmed, without a new captured framing
+check. These are operational observations, not new runtime or full-lecture
+pacing evidence. No further technical review is needed solely for Git integration.
+
+### Earlier focused single-class review
+
 **Focused single-class review received, November 16:** the actual local return
 ZIP identifies unchanged candidate `754ec33` and supplies an Ubuntu/OBS Word
 script, synchronized Markdown, detailed review, and receipt. Verify exact
