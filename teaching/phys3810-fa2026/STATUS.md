@@ -8,8 +8,11 @@ required export-navigation correction, **M1**: the inner quickstart/menu links
 leave Jupyter's documented `runtime/` served root. The defect is reproduced and
 fixed with three new regressions. [Source validation](SINGLE_CLASS_REVIEW_RECONCILIATION.md)
 passed **224 tests / 13 notebooks / 85 cells / 32 PNGs** in the reused Ubuntu
-environment; a new candidate's exact extraction is the remaining delivery gate.
-No additional blocking
+environment. The exact new extraction passed the same counts in a fresh
+application `.venv`, with all payload hashes unchanged. The verified desktop
+kit is `PHYS3810-Single-Class-Review-v0.2-2dcda953e8fb.zip`, source `2dcda95`.
+Actual authenticated Jupyter navigation passed 27 link traversals across 16
+documents; outside-root access remains 404. No additional blocking
 scientific or advertised-rerun defect was reported.
 
 The reviewer's fresh Debian 13 application environment used existing CPython
@@ -20,9 +23,11 @@ direct IPython execution passed eleven intro cells/five figures. These results
 remain distinct from the prior successful Ubuntu source/extraction checks.
 
 The supplied Ubuntu/OBS script is preserved unchanged as a local recording
-draft. The script still identifies the old candidate and pending navigation
-fix, so a separate reconciliation records the correction and unchanged lesson
-paths/commands. Actual browser click-through and native recording remain
+draft. All ten pages passed local render/visual/OCR inspection; its body and
+ten terminal commands match the companion and reviewed quickstart. The script
+still identifies the old candidate and pending navigation fix, so the
+reconciliation records the correction and unchanged lesson paths/commands.
+Actual browser click-through and native recording remain
 untested: the browser access host and native app control are unavailable here.
 The next human step is a 30–60 second recording/playback pilot and core
 rehearsal; final class window, delivery location, and student setup assistance

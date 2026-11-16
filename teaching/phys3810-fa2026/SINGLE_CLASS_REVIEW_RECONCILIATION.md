@@ -122,6 +122,66 @@ personal settings. Source logs and exact per-notebook counts/hashes are in
 preserved before this run. New source acceptance does not establish exact
 archive execution; the separate delivery receipt follows that gate.
 
+## Corrected candidate and exact extraction
+
+**Passed and delivered locally:** the existing exporter produced a new v0.2
+archive, retaining the original v0.1 archive and return package unchanged.
+
+- Source commit: `2dcda953e8fbd03d85a6b11bedc4b6f9cd4c2d0e`.
+- Source tree: `d38d4c0e5b5849c501d98c7e307da540b18beed0`.
+- ZIP: `PHYS3810-Single-Class-Review-v0.2-2dcda953e8fb.zip`.
+- Size: **184,190 bytes**; **56 files / 55 manifest entries**.
+- ZIP SHA-256: `737d5c200e2732732ba124e662973d65a53680c65cd51f0ab93261d4e0b64173`.
+- Manifest SHA-256: `a5fe43884ec5ba234a2087ebf9ab4c659c177aabb140e51eef333f4886455140`.
+- Static relative-link checks: **49**.
+
+The exact archive was extracted outside the checkout into
+`/tmp/PHYS3810 single class v0.2 2dcda95/phys3810-single-class-review`.
+A **fresh application `.venv`** was created inside its `runtime/`, using the
+existing CPython 3.12.15 interpreter, pip 26.2.2, and the unchanged requirements.
+All 114 application distributions match their active pins. This is separate
+from the reused source environment and is not a new Python installation.
+
+From the extracted `runtime/`, its own interpreter ran
+`python scripts/validate_classroom.py --profile all` with no inherited
+`PYTHONPATH`: **224 tests / 13 fresh-kernel notebooks / 85 code cells / 32
+PNGs passed**. Required execution counts and absence of error output were
+checked. Canonical imports resolve inside this extraction's `runtime/src/`.
+All 55 payload sizes, hashes, and modes match before and after validation;
+the manifest remains unchanged. The new ZIP was copied to the Ubuntu desktop
+and verified byte-for-byte, without replacing the earlier ZIP.
+
+The full inner quickstart and all notebooks are unchanged source bytes, so
+their earlier visual/OCR evidence carries forward; this navigation fix did not
+reproduce unchanged figures or claim a new lesson-render review. The supplied
+Word script's separate local ten-page QA is recorded above. Recording documents
+and prompts remain outside the runnable ZIP.
+
+## Authenticated Jupyter navigation
+
+**Passed:** a real JupyterLab server started from the extracted environment
+with `runtime/` as its served root and authentication enabled. HTTP contents
+and file requests followed **27 link traversals across 16 documents**, including
+both intro titles, Bell's finish/menu anchor, substantive setup/recovery text,
+all five optional notebook destinations, and the generated setup/plan/contract
+links. Contract evidence resolves to the served `runtime/VALIDATION.md`.
+The actual outside-root HTTP request still returns **404**. No root restriction
+was relaxed. The registered `phys3810-intro` kernel points to the extraction's
+exact `.venv/bin/python`; authenticated test-server shutdown succeeded.
+
+The startup command used `python -m jupyterlab --no-browser --ip=127.0.0.1
+--port=8880 --ServerApp.port_retries=0`, with task-local Jupyter/IPython/Matplotlib
+paths. These are disclosed test adaptations, not extra student setup commands.
+The navigation evidence is real authenticated HTTP, not a browser click-through.
+The browser access host was unavailable, so **interactive UI remains untested**.
+
+M1 is reproduced, corrected, regression-covered, and verified in the exact
+package through contents-manager and HTTP checks. The remaining operational
+check is the human browser/recording walkthrough. Receipts, logs, exact received
+documents, a current script-reading note, and extracted executed copies are
+preserved under `artifacts/single-class-review-2026-11-16/`; private tokens and
+raw review coordination are excluded from shareable artifacts.
+
 ## Independent review evidence and its limits
 
 The reviewer reports a **fresh application installation** from supplied pins
@@ -160,7 +220,7 @@ rerun whenever already displayed. Section 3 does not depend on shots; section
 
 **Untested:** browser click-through and native recording/audio/playback here;
 the browser access host is unavailable and native application control is
-disabled. Authenticated HTTP checks will be identified separately. Human pacing,
+disabled. The passed authenticated HTTP checks above are separate. Human pacing,
 the total class window including pauses, delivery location, and assistance for
 students lacking the required Python environment remain open. The 43-minute
 target is proposed, not measured. No new broad review is needed solely for an

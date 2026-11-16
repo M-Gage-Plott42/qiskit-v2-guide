@@ -27,6 +27,15 @@ pilot and core rehearsal. No new broad review cycle is needed solely for an
 evidenced navigation correction. No push, publication, merge, outreach, or
 hardware execution is authorized.
 
+The completed M1 correction is frozen at `2dcda95`. The [reconciliation and
+delivery receipt](SINGLE_CLASS_REVIEW_RECONCILIATION.md) records source and exact
+extraction passes of 224 tests/thirteen notebooks/85 cells/32 PNGs, unchanged
+payload hashes, and 27 authenticated HTTP navigation traversals with outside-root
+404 preserved. The separate v0.2 kit is on the desktop. No further broad review
+or unchanged runtime/package cycle is needed solely for M1; proceed to the
+human recording/browser pilot and rehearsal, retaining their untested status
+until actual outcomes are supplied or observed.
+
 ### Earlier November 16 candidate workflow
 
 The November 16 instruction reopens teaching work for one prerecorded beginner

@@ -108,6 +108,17 @@ Native app control and the current browser access host are unavailable; report
 real HTTP checks separately from untested browser clicks and recording.
 No push, publication, merge, external message, or hardware job is authorized.
 
+M1 is now fixed at `2dcda95`. Source validation (reused environment) and exact
+extraction (fresh application environment) each passed 224 tests/thirteen
+notebooks/85 cells/32 PNGs. Authenticated Jupyter HTTP navigation passed 27
+traversals across sixteen documents; outside-root access remains 404. The
+verified v0.2 ZIP is on the desktop, and the supplied ten-page Word/Markdown
+script passed local render/visual/OCR/body/command/link verification unchanged.
+See [the reconciliation](teaching/phys3810-fa2026/SINGLE_CLASS_REVIEW_RECONCILIATION.md).
+No new broad review is needed solely for this evidenced correction. Next is
+the human Ubuntu/OBS pilot and core rehearsal; UI clicks, microphone capture,
+playback, and human pacing remain untested. Preserve the old scripts and ZIPs.
+
 ### Earlier November 16 candidate delivery
 
 **Current single-class instruction, November 16:** implement one prerecorded
