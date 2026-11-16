@@ -7,6 +7,28 @@ is not accessible in the current workspace.
 
 ## Source of truth and current position
 
+The focused review of candidate `754ec33` has returned with accessible script
+and receipt bytes. Reproduce and fix M1's exported navigation within Jupyter's
+`runtime/` root, add realistic guide/menu/content/anchor regressions, and build
+a new v0.2 candidate through the existing exporter. Preserve the old archive,
+notebooks, pins, algorithm implementations, and mathematical contract bodies.
+Keep the reviewer's failed Debian fresh-kernel run distinct from its narrower
+direct-cell success and from local Ubuntu validation. Do not relax kernel
+failure gates for another environment's restrictions.
+
+Verify and retain the supplied Word/Markdown recording draft unchanged locally.
+Its old-candidate M1 notes and maintainer coordination are not rewritten or
+copied into public student material. Update reconciliation evidence and check
+source plus the exact new extraction, using real authenticated HTTP navigation
+checks when UI access is unavailable. Browser clicks, native recording, audio,
+playback, and human pacing require actual observed evidence; no API or headless
+pass substitutes for them. The immediate human follow-up is the Ubuntu/OBS
+pilot and core rehearsal. No new broad review cycle is needed solely for an
+evidenced navigation correction. No push, publication, merge, outreach, or
+hardware execution is authorized.
+
+### Earlier November 16 candidate workflow
+
 The November 16 instruction reopens teaching work for one prerecorded beginner
 class: setup (15–20 minutes), RNG, Bell states, and optional algorithms. The
 current route is [the intro quickstart](intro/START_HERE.md). Earlier multi-day

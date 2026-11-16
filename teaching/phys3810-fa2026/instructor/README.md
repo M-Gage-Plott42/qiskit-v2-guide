@@ -1,5 +1,17 @@
 # Instructor route and historical document editions
 
+The current route is one prerecorded beginner class presented by **Gage Plott**:
+setup, RNG, Bell states, then a short optional-algorithm tour. Start with the
+[single-class quickstart](../intro/START_HERE.md). The separately supplied
+Ubuntu/OBS recording-script v0.2 is a local recording draft; its exact bytes
+and source identity are recorded in the
+[focused reconciliation](../SINGLE_CLASS_REVIEW_RECONCILIATION.md).
+The remaining human step is a 30–60 second recording/playback pilot and core
+rehearsal. No class date or total window is newly confirmed, and nothing is
+assigned, graded, evaluated, or submitted.
+
+## Earlier guided and full-course editions
+
 For the current beginner proposal, use the [guided presenter run sheet](../guided/INSTRUCTOR_RUN_SHEET.md)
 and [walkthrough agenda](../guided/REVIEW_AGENDA.md). Material development:
 **Gage Plott**. Start with Python/Qiskit, then Grover, with QFT/QPE as a third

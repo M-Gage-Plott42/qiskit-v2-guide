@@ -4,10 +4,15 @@ import copy
 import io
 import json
 from pathlib import Path
+import re
 import tempfile
 import unittest
 from unittest.mock import patch
+from urllib.parse import unquote, urlsplit
 import zipfile
+
+from jupyter_server.services.contents.filemanager import FileContentsManager
+from tornado.web import HTTPError
 
 from scripts import build_guided_review as builder
 from scripts import validate_classroom as validator
@@ -87,7 +92,7 @@ class GuidedReviewPackageTests(unittest.TestCase):
                 self.assertEqual(manifest["schema"], "phys3810.single-class-review.v1")
                 self.assertEqual(manifest["classroom_notebooks"], len(builder.INTRO_NOTEBOOKS))
                 self.assertEqual(manifest["total_notebooks"], NOTEBOOK_COUNT)
-                self.assertTrue(Path(result["archive"]).name.startswith("PHYS3810-Single-Class-Review-v0.1-"))
+                self.assertTrue(Path(result["archive"]).name.startswith("PHYS3810-Single-Class-Review-v0.2-"))
                 self.assertNotIn("STUDENT_QUICKSTART.md", manifest["files"])
                 self.assertNotIn("INSTRUCTOR_RUN_SHEET.md", manifest["files"])
                 self.assertNotIn("MANIFEST.json", manifest["files"])
@@ -132,10 +137,13 @@ class GuidedReviewPackageTests(unittest.TestCase):
         self.assertIn("(runtime/teaching/phys3810-fa2026/notebooks/intro/01_quantum_rng.ipynb)", text)
         self.assertIn("(runtime/teaching/phys3810-fa2026/SETUP.md)", text)
         self.assertIn("(START_HERE.md)", text)
-        adapter = files[f"runtime/{builder.COURSE}/intro/START_HERE.md"].decode()
-        self.assertIn("(../../../../START_HERE.md)", adapter)
-        self.assertNotIn("eleven", adapter)
-        self.assertIn("## 5. Optional exploration", adapter)
+        inner = files[f"runtime/{builder.COURSE}/intro/START_HERE.md"]
+        self.assertEqual(inner, self.inputs[builder.ENTRANCE_PATHS[0]])
+        self.assertIn(b"## 5. Optional exploration\n\nOptional examples.", inner)
+        self.assertIn(b"(../notebooks/intro/01_quantum_rng.ipynb)", inner)
+        self.assertNotIn(b"../../../../START_HERE.md", inner)
+        self.assertIn("runtime/VALIDATION.md", files)
+        self.assertNotIn("VALIDATION.md", files)
         intro_notebook = f"runtime/{builder.INTRO_NOTEBOOKS[1]}"
         notebook = json.loads(files[intro_notebook])
         notebook["cells"].append({
@@ -144,6 +152,99 @@ class GuidedReviewPackageTests(unittest.TestCase):
         })
         files[intro_notebook] = json.dumps(notebook).encode()
         self.assertGreater(builder.validate_payload(files), 0)
+
+    def test_exported_notebook_guide_menu_routes_are_readable_with_runtime_served(self):
+        # Exercise real guide text and the advertised links in the unchanged
+        # intro cells. The same files are present when this suite runs from an
+        # extracted kit; no Git checkout or outside-root document is needed.
+        for name in (*builder.ENTRANCE_PATHS, *builder.INTRO_NOTEBOOKS):
+            self.inputs[name] = (builder.ROOT / name).read_bytes()
+        self.evidence["counts"]["nonempty_code_cells"] = builder.validate_source_notebooks(self.inputs)
+        with tempfile.TemporaryDirectory(prefix="served classroom kit ") as temporary:
+            result = self.build_fixture(Path(temporary) / "export")
+            with zipfile.ZipFile(result["archive"]) as archive:
+                archive.extractall(Path(temporary) / "unpacked")
+            outer = Path(temporary) / "unpacked" / builder.TOP_DIRECTORY
+            runtime = outer / "runtime"
+            manager = FileContentsManager(root_dir=str(runtime))
+
+            def follow(relative, text):
+                destinations = []
+                for target in re.findall(r"\[[^]]*\]\(([^\s)]+)\)", text):
+                    link = urlsplit(target)
+                    if link.scheme or link.netloc:
+                        continue
+                    destination = ((runtime / relative).parent / unquote(link.path)).resolve()
+                    if not link.path:
+                        destination = runtime / relative
+                    self.assertTrue(destination.is_relative_to(runtime), (relative, target))
+                    served_path = destination.relative_to(runtime).as_posix()
+                    manager.get(served_path, content=False)
+                    if link.fragment:
+                        self.assertIn(unquote(link.fragment),
+                                      builder.markdown_anchors(destination.read_text()), (relative, target))
+                    destinations.append(served_path)
+                return destinations
+
+            guide_path = builder.ENTRANCE_PATHS[0]
+            advertised = {
+                "intro-rng-title": builder.INTRO_NOTEBOOKS[0],
+                "intro-bell-title": builder.INTRO_NOTEBOOKS[1],
+                "intro-bell-finish": builder.INTRO_NOTEBOOKS[1],
+            }
+            for cell_id, notebook_path in advertised.items():
+                notebook = json.loads((runtime / notebook_path).read_bytes())
+                cell = next(cell for cell in notebook["cells"] if cell["id"] == cell_id)
+                self.assertIn(guide_path, follow(notebook_path, "".join(cell["source"])))
+
+            guide = manager.get(guide_path, content=True)["content"]
+            self.assertEqual(guide, self.inputs[guide_path].decode())
+            self.assertIn("python3.12 -m venv .venv", guide)
+            self.assertIn("python -m jupyterlab", guide)
+            self.assertIn("## 6. Save, stop, and recover", guide)
+            menu = guide.split("## 5. Optional exploration\n", 1)[1].split("\n## ", 1)[0]
+            algorithms = {
+                f"{builder.COURSE}/notebooks/{name}.ipynb" for name in
+                ("01_grover", "02_qft", "03_qpe", "04_hhl", "05_shor")
+            }
+            self.assertEqual(set(follow(guide_path, menu)), algorithms)
+            follow(guide_path, guide)
+            for path in (*builder.CONTRACT_PATHS, f"{builder.COURSE}/SETUP.md",
+                         f"{builder.COURSE}/COURSE_PLAN.md"):
+                destinations = follow(path, manager.get(path, content=True)["content"])
+                self.assertIn(guide_path, destinations)
+                if path in builder.CONTRACT_PATHS:
+                    self.assertIn("VALIDATION.md", destinations)
+
+            # The outer guide may exist for offline review, but Jupyter must
+            # still deny it. Correct links, rather than relaxing its root.
+            self.assertTrue((outer / "START_HERE.md").is_file())
+            with self.assertRaises(HTTPError) as error:
+                manager.get("../START_HERE.md", content=False)
+            self.assertEqual(error.exception.status_code, 404)
+
+    def test_original_outside_root_stub_is_rejected_even_when_outer_file_exists(self):
+        files, _ = builder.payload_files(self.inputs, COMMIT, self.evidence)
+        path = f"runtime/{builder.COURSE}/intro/START_HERE.md"
+        # This is the defective route in frozen candidate 754ec33. Mere file
+        # existence and a matching menu anchor previously allowed it through.
+        files[path] = (
+            b"# Single-class quickstart\n\n"
+            b"See [the quickstart](../../../../START_HERE.md).\n\n"
+            b"## 5. Optional exploration\n\n"
+            b"See [the complete quickstart](../../../../START_HERE.md).\n"
+        )
+        self.assertIn("START_HERE.md", files)
+        with self.assertRaisesRegex(ValueError, "Jupyter runtime root"):
+            builder.validate_payload(files)
+
+    def test_runtime_links_reject_encoded_traversal_and_absolute_local_paths(self):
+        for target in ("%2e%2e/START_HERE.md", "/START_HERE.md"):
+            with self.subTest(target=target):
+                files = {"START_HERE.md": b"# Outer guide\n",
+                         "runtime/inside.md": f"[Outside]({target})".encode()}
+                with self.assertRaisesRegex(ValueError, "Jupyter runtime root"):
+                    builder.validate_payload(files)
 
     def test_entrance_link_to_excluded_document_fails(self):
         with self.assertRaisesRegex(ValueError, "excluded input"):

@@ -34,7 +34,7 @@ _validator_spec = importlib.util.spec_from_file_location(
 classroom_validator = importlib.util.module_from_spec(_validator_spec)
 _validator_spec.loader.exec_module(classroom_validator)
 TOP_DIRECTORY = "phys3810-single-class-review"
-REVIEW_VERSION = "v0.1"
+REVIEW_VERSION = "v0.2"
 ENTRANCE_NAMES = ("START_HERE.md",)
 ENTRANCE_PATHS = tuple(f"{COURSE}/intro/{name}" for name in ENTRANCE_NAMES)
 REFERENCE_NOTEBOOKS = tuple(classroom_validator.NOTEBOOKS)
@@ -247,6 +247,13 @@ def payload_files(inputs: dict[str, bytes], commit: str, evidence: dict) -> tupl
         files[target] = adapt_entrance_links(inputs[source].decode("utf-8"), source, destinations).encode("utf-8")
         origins[target] = {"kind": "committed Markdown; standalone navigation adapted",
                            "source_path": source, "source_sha256": digest(inputs[source])}
+        # Jupyter starts in runtime/, so a notebook cannot follow a redirect
+        # to the outer review guide. The original layout keeps all source
+        # quickstart/menu links usable inside that served directory.
+        inner = f"runtime/{source}"
+        files[inner] = inputs[source]
+        origins[inner] = {"kind": "exact committed bytes", "source_path": source,
+                          "source_sha256": digest(inputs[source])}
     for stem in CONTRACT_END_MARKERS:
         source = f"{COURSE}/{stem}_PLAN.md"
         body = contract_body(inputs[source], stem)
@@ -254,40 +261,31 @@ def payload_files(inputs: dict[str, bytes], commit: str, evidence: dict) -> tupl
             inputs[source].decode("utf-8").splitlines()[0] + "\n\n"
             f"Technical reference from `{commit}`. Older lesson timing and regression counts\n"
             "inside these reference contracts do not define the single-class route.\n"
-            "Use [the quickstart](../../../START_HERE.md) for that route\n"
-            "and [current validation evidence](../../../VALIDATION.md) for measured totals.\n\n"
+            "Use [the quickstart](intro/START_HERE.md) for that route\n"
+            "and [current validation evidence](../../VALIDATION.md) for measured totals.\n\n"
         )
         target = destinations[source]
         files[target] = header.encode("utf-8") + body
         origins[target] = {"kind": "technical body exact; navigation/history adapted",
                            "source_path": source, "source_sha256": digest(inputs[source]),
                            "retained_body_sha256": digest(body)}
-    for name, title, destination in (
-        ("SETUP", "Runtime setup", "../../../START_HERE.md"),
-        ("COURSE_PLAN", "Single-class route", "../../../START_HERE.md"),
-        ("intro/START_HERE", "Single-class quickstart", "../../../../START_HERE.md"),
+    for name, title in (
+        ("SETUP", "Runtime setup"),
+        ("COURSE_PLAN", "Single-class route"),
     ):
         target = f"runtime/{COURSE}/{name}.md"
         files[target] = (
-            f"# {title}\n\nSee [the quickstart]({destination}) for the current single-class route.\n"
+            f"# {title}\n\nSee [the quickstart](intro/START_HERE.md) for the current single-class route.\n"
             f"This runtime tree contains all {len(NOTEBOOKS)} teaching/reference notebooks and the complete\n"
             f"bounded five-algorithm library. The {len(INTRO_NOTEBOOKS)} intro notebooks form the class;\n"
             "the remaining notebooks are optional/reference support. Exact dates and delivery\n"
             "arrangements remain provisional. This is not final classroom approval.\n"
         ).encode("utf-8")
-        if name == "intro/START_HERE":
-            # Preserve section anchors used by exact notebook links without
-            # duplicating the student guide body inside the runtime tree.
-            headings = re.findall(r"^## (.+)$", inputs[ENTRANCE_PATHS[0]].decode("utf-8"), re.MULTILINE)
-            for heading in headings:
-                files[target] += (
-                    f"\n## {heading}\n\nSee [the complete quickstart]({destination}).\n"
-                ).encode("utf-8")
         origins[target] = {"kind": "generated standalone navigation", "source_path": BUILDER_PATH,
                            "source_sha256": digest(inputs[BUILDER_PATH])}
-    files["VALIDATION.md"] = validation_markdown(evidence)
-    origins["VALIDATION.md"] = {"kind": "generated from supplied execution receipt",
-                                "evidence_sha256": digest(json.dumps(evidence, sort_keys=True).encode())}
+    files["runtime/VALIDATION.md"] = validation_markdown(evidence)
+    origins["runtime/VALIDATION.md"] = {"kind": "generated from supplied execution receipt",
+                                        "evidence_sha256": digest(json.dumps(evidence, sort_keys=True).encode())}
     return files, origins
 
 
@@ -303,7 +301,7 @@ def markdown_anchors(text: str) -> set[str]:
 
 
 def validate_payload(files: dict[str, bytes]) -> int:
-    """Reject excluded paths and broken relative Markdown/notebook navigation."""
+    """Reject excluded paths and broken or outside-served-root navigation."""
     folded = set()
     forbidden = {"artifacts", "__pycache__", "node_modules", "instructor", "handouts"}
     for name in files:
@@ -339,6 +337,8 @@ def validate_payload(files: dict[str, bytes]) -> int:
                 continue
             destination = (posixpath.normpath(posixpath.join(posixpath.dirname(name), unquote(link.path)))
                            if link.path else name)
+            if name.startswith("runtime/") and not destination.startswith("runtime/"):
+                raise ValueError(f"Local link leaves the Jupyter runtime root: {name}: {target}")
             if destination not in files and destination != "MANIFEST.json":
                 raise ValueError(f"Missing local link target: {name}: {target}")
             if (link.fragment and destination.endswith(".md")

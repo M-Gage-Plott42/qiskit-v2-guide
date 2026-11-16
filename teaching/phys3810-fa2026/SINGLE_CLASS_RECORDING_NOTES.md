@@ -36,10 +36,13 @@ on documented capabilities; no recorder installation, source permission,
 microphone capture, encoder performance, or exported-video test was performed.
 The exact capture-source choice must be checked on the actual Wayland session.
 
-## Next recording-script revision
+## Supplied recording-script revision
 
-Replace the Windows desktop PowerPoint assumption with an Ubuntu workflow.
-Keep four replaceable chapters, the invitation to pause, and the two notebook
+The supplied recording-script v0.2 now replaces the Windows desktop PowerPoint
+assumption with an Ubuntu/OBS workflow. Its exact Word/Markdown bytes are
+retained locally; see the [focused reconciliation](SINGLE_CLASS_REVIEW_RECONCILIATION.md)
+for receipt verification and the old-candidate navigation correction. Keep
+four replaceable chapters, the invitation to pause, and the two notebook
 shot-count changes. Match narration to the exact reviewed candidate, current
 quickstart commands, stable cell headings, default shots/seed, and figures.
 Do not use a historical release download that lacks the intro lessons.

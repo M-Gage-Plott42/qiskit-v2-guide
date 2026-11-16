@@ -82,6 +82,34 @@ data in public code, notebooks, documentation, outputs, or validation logs.
 
 ## PHYS 3810 collaboration and handoffs
 
+**Focused single-class review received, November 16:** the actual local return
+ZIP identifies unchanged candidate `754ec33` and supplies an Ubuntu/OBS Word
+script, synchronized Markdown, detailed review, and receipt. Verify exact
+delivered bytes. M1 requires repairing exported navigation that leaves the
+documented Jupyter `runtime/` root: keep the complete quickstart/menu inside
+that root, repair analogous generated links, and add served-root/content/anchor
+regressions. Do not weaken Jupyter root restrictions. Rebuild a separately
+identified candidate and validate source plus exact extraction; preserve the
+v0.1 archive and all existing notebooks, pins, algorithms, and contract bodies.
+
+The reviewer reports a fresh application install on Debian 13 with existing
+CPython 3.12.14: 221 tests ran, 215 passed and six failed under local kernel
+transport restrictions; all thirteen notebook launches failed before code
+execution (zero cells/PNGs). All fifteen intro actual-cell tests passed, and
+separate direct IPython processes ran eleven intro cells/five figures. This is
+not an independent full fresh-kernel pass and does not replace Ubuntu evidence.
+
+Preserve the supplied recording draft unchanged locally; it contains maintainer
+coordination and statements about M1 in the old candidate, so do not silently
+rewrite it or place those exact bytes in public student material. Record the
+fix and source correspondence in a separate reconciliation. The next human
+step is the 30–60 second Ubuntu/OBS recording/playback pilot and core rehearsal.
+Native app control and the current browser access host are unavailable; report
+real HTTP checks separately from untested browser clicks and recording.
+No push, publication, merge, external message, or hardware job is authorized.
+
+### Earlier November 16 candidate delivery
+
 **Current single-class instruction, November 16:** implement one prerecorded
 beginner class presented by Gage Plott: 15–20 minutes of setup, quantum RNG,
 Bell-state preparation, then a brief optional-algorithm tour. Students follow
