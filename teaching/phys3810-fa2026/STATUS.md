@@ -20,9 +20,14 @@ their original revision and environment and are not new results.
 
 [Current validation](SINGLE_CLASS_VALIDATION.md) records **221 tests, thirteen
 fresh-kernel notebooks, 85 code cells, and 32 PNGs** with the current pins in a
-fresh application environment. Exact package extraction and the delivery receipt
-remain a separate gate. The next focused review aligns beginner flow and the
-recording script with the resulting immutable candidate.
+fresh application environment. A separate fresh `.venv` in the exact extracted
+candidate passed the same **221/13/85/32** inventory, with all payload hashes
+unchanged. The verified desktop kit is
+`PHYS3810-Single-Class-Review-v0.1-754ec33d6200.zip`, frozen at `754ec33`.
+Complete new-route visual/OCR inspection and local Jupyter startup/kernel-path
+checks passed. Actual browser UI remains untested because browser access was
+unavailable. The next focused review aligns beginner flow and the recording
+script with this immutable candidate, including the Ubuntu recording workflow.
 
 Ubuntu/Linux is the confirmed recording platform. The existing CPython 3.12.15
 interpreter can support a fresh pinned environment; Python installation on a
@@ -34,8 +39,9 @@ The received sync text is accessible; the linked Word script and separate
 full handoff are referenced only, not received document bytes.
 
 Preserve all historical algorithms/contracts, supplied documents, sealed kits,
-release assets, recovery data, and historical worktrees. The next step is local
-implementation, measured validation, and an exact review candidate; no external
+release assets, recovery data, and historical worktrees. Local implementation,
+validation, and desktop candidate delivery are complete. The next step is the
+focused review; no external
 message, push, PR, merge, release, or hardware job is part of this revision.
 
 ## November 4 dependency maintenance

@@ -3,7 +3,8 @@
 November 16, 2026. The new route is one prerecorded class presented by Gage
 Plott: setup, quantum RNG, Bell-state preparation, and optional algorithm
 exploration. The [quickstart](intro/START_HERE.md) is the student entrance.
-This record concerns the local candidate based on
+This record concerns immutable local candidate
+`754ec33d620033faf1d2f3754cba811e04d22ad5`, based on
 `1f33830674490ecbe411cb9a8e86ca52abf7cae8`; it is not a publication, final
 classroom approval, or a new acceptance claim for historical archives.
 
@@ -91,10 +92,65 @@ The earlier 205/11/74/27 results retain their original sources and environments.
 
 ## Rendering and exact delivery
 
-Render/OCR inspection and exact archive extraction are recorded separately from
-the source execution above. A final delivery receipt will identify the immutable
-candidate commit, ZIP/manifest hashes, extracted execution, and observed UI
-checks. No builder-generated receipt alone establishes runtime execution.
+**Passed:** complete HTML/PNG visual inspection and corroborative OCR of the
+current quickstart and both executed intro notebooks, including all five new
+figures. Seven overlapping screenshot tiles cover all content (2 quickstart,
+2 RNG, 3 Bell). Google Chrome **157.0.8103.78** rendered at 2× scale; Tesseract
+**5.5.0** OCR token recall against rendered text was 99.45%, 96.78%, and 97.98%,
+respectively. Code, math, and bit-label OCR substitutions were resolved through
+source/visual comparison and actual-cell checks. This is corroborative evidence,
+not mathematical proof or an interactive UI/recording-size test. No PDF or Word
+document was produced or modified.
+
+The existing builder exported:
+
+- ZIP: `PHYS3810-Single-Class-Review-v0.1-754ec33d6200.zip`.
+- Source commit: `754ec33d620033faf1d2f3754cba811e04d22ad5`.
+- Source tree: `77f27bee186493cae493e0ed2e81ba004b1af4a2`.
+- Size: **179,296 bytes**; **56 files / 55 manifest entries**.
+- ZIP SHA-256: `477e7a8aced1cd516f90714437137bfcc06ad2edd2b7660d4cc80e75c0b47274`.
+- Manifest SHA-256: `c2c15bfd5f4f51302b57f75c80a288069d281bfc74736124efe142079529bb1f`.
+- Relative navigation: **49 checked links**.
+
+**Passed separately:** extract outside the checkout into
+`/tmp/PHYS3810 single class 754ec33/phys3810-single-class-review`, then run the
+quickstart's Python/64-bit checks, create `runtime/.venv`, install pip 26.2.2 and
+`requirements.txt`, and register `phys3810-intro` with `--sys-prefix`. This second
+application environment is **fresh**, using the same pre-existing CPython
+3.12.15 interpreter. Its 114 application distributions match the current pins.
+
+From that extraction's `runtime/`, with its own interpreter and no inherited
+`PYTHONPATH`, `python scripts/validate_classroom.py --profile all` **passed 221
+tests / 13 notebooks / 85 code cells / 32 PNGs**. Every required code cell
+executed without error. All canonical algorithm imports resolve inside the
+extracted `runtime/src/`. All 55 payload hashes and modes match before and after
+execution; the manifest is unchanged. The ZIP was then copied to the Ubuntu
+desktop and byte/hash-verified. The sealed archive has no prompts, policy/chat
+documents, private correspondence, old PDFs/Word files, caches, or executed output.
+Source execution evidence inside it is explicitly separate from this later
+extraction receipt.
+
+The complete local delivery receipt is
+`artifacts/single-class-2026-11-16/extraction-receipt.json`; full extraction logs
+and copied executed outputs remain in that ignored task directory. Historical
+archives were not overwritten or relabeled.
+
+## Jupyter startup and UI boundary
+
+**Passed:** JupyterLab starts from the extracted `.venv`, with authentication
+enabled and loopback binding. Authenticated local requests return HTTP 200 for
+`/lab`, `/api/status`, and `/api/kernelspecs`. The named **Python (PHYS 3810
+Intro)** kernel resolves to the extraction's exact `.venv/bin/python`. The test
+server shut down successfully through its authenticated local API.
+
+For this check, `python -m jupyterlab` used `--no-browser --ip=127.0.0.1
+--port=8879 --ServerApp.port_retries=0` and task-local Jupyter/IPython/Matplotlib
+directories. These are disclosed test adaptations, not extra student commands.
+**Untested:** actual interactive browser selection/execution, automatic browser
+opening, and UI shutdown/reopening. The computer-use inventory reported that
+the browser access host was unavailable; native application control is also
+unavailable. API readiness and headless notebook execution do not close that
+UI gap. Private server tokens are omitted from shareable evidence.
 
 ## Limits and next review
 

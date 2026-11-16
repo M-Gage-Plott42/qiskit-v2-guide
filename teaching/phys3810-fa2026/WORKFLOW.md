@@ -35,6 +35,15 @@ requested. The next review is beginner usability and exact script alignment,
 not another broad algorithm audit. Only the pasted sync was received; its linked
 Word script and fuller handoff are not locally accessible attachments.
 
+The completed local candidate is `754ec33`; its [validation and delivery
+record](SINGLE_CLASS_VALIDATION.md) reports separate source/extraction passes
+of 221 tests, thirteen notebooks, 85 cells, and 32 PNGs, plus new-route visual/OCR
+and authenticated Jupyter startup checks. The verified desktop ZIP is ready for
+focused review. Interactive UI remains untested because browser access was
+unavailable. Carry the [Ubuntu recording notes](SINGLE_CLASS_RECORDING_NOTES.md)
+into script alignment; no new broad algorithm review or repeat package run is
+needed while waiting for that response.
+
 ### Earlier accepted states
 
 The November 4 dependency-maintenance request separately authorizes fixing

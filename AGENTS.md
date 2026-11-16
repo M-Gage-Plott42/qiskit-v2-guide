@@ -115,6 +115,15 @@ tested candidate. The supplied sync text is accessible; its linked Word script
 and fuller text handoff were not supplied as accessible files. Do not claim to
 have read or integrated them. Keep prompts outside the runnable ZIP.
 
+The local candidate is now frozen at `754ec33`; source and exact extraction
+each passed 221 tests/thirteen notebooks/85 cells/32 PNGs. The new-route render,
+visual/OCR and authenticated Jupyter startup/kernel-path checks passed. Actual
+browser UI is untested because its access host was unavailable. See
+[current evidence](teaching/phys3810-fa2026/SINGLE_CLASS_VALIDATION.md).
+The verified single-class v0.1 ZIP is on the Ubuntu desktop. Next await the
+focused beginner/script review, carrying the Ubuntu/ONLYOFFICE recording issue;
+do not repeat unchanged validation or infer that the sync has been sent.
+
 ### Historical November 2 acceptance
 
 **Current consolidated acceptance and park instruction, November 2:** the
