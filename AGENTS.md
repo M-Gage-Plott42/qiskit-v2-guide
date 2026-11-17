@@ -82,6 +82,21 @@ data in public code, notebooks, documentation, outputs, or validation logs.
 
 ## PHYS 3810 collaboration and handoffs
 
+**Current merge instruction, November 16:** the user reports that Rick has
+been emailed and printing is complete. Treat both as completed user-reported
+actions; do not repeat those requests or assume access to the email itself.
+The user now explicitly authorizes normal required-check merging of **PR #132**,
+then leaving main clean and synchronized. This supersedes the earlier CP-only
+boundary for that PR. Preserve the frozen `d998b69` Canvas kit, exact supplied
+guides, historical assets/worktrees, and recovery stash. Do not create a release,
+send messages, publish recordings, or merge unrelated dependency updates.
+No repeat runtime/package/pilot cycle is needed for this status-only update;
+required remote checks must pass at the actual PR head before normal merge.
+Next is recording against the fixed kit with the printed guide and ordinary
+final-file checks. No new technical review is required solely for the merge.
+
+### Earlier expanded-route integration
+
 **Current expanded recording route, November 16:** the new audit of merged
 `727cb98` and its accessible recording packet govern this update. Record one
 ungraded, zero-Python-assumed class: 15–20 minutes of setup, QRNG, Bell, QFT,

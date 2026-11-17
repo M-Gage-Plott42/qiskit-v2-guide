@@ -1,5 +1,21 @@
 # PHYS 3810 status
 
+## November 16 delivery acknowledgement and PR integration
+
+The user reports **Rick has been emailed and printing is complete**. These are
+completed user-reported actions; no email contents or delivery receipt were
+independently accessed. The remaining human work is recording against the
+fixed Canvas kit and checking the final saved video, not another email,
+approval questionnaire, or pilot milestone.
+
+The user authorizes [PR #132](https://github.com/M-Gage-Plott42/qiskit-v2-guide/pull/132)
+to merge through the normal required checks and the checkout to return to clean,
+synchronized main. The frozen `d998b69` kit, supplied guides, and historical
+assets remain unchanged. The existing source/extraction **227/13/85/32**
+evidence carries forward; no local runtime rerun is claimed for these status
+updates. No release, assistant-sent message, recording publication, or unrelated
+dependency merge is part of this operation.
+
 ## November 16 expanded recording route
 
 The current route is **setup (15–20 minutes), QRNG, Bell, QFT, QPE, HHL**,

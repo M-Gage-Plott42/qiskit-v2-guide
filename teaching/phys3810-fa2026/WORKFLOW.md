@@ -7,6 +7,18 @@ is not accessible in the current workspace.
 
 ## Source of truth and current position
 
+The user reports that the Rick email and printing are complete and explicitly
+authorizes normal required-check merging of PR #132, followed by clean,
+synchronized main. Update only this completion/authorization context, verify
+the actual head and required checks, and preserve the frozen Canvas kit,
+supplied guide bytes, historical assets/worktrees, and recovery data. Earlier
+CP-only wording below is superseded for this merge. No release, external
+message, recording publication, unrelated dependency merge, or repeat unchanged
+runtime/package/pilot cycle is requested. After integration, the user proceeds
+with recording against the fixed kit and ordinary final-file checks.
+
+### Earlier expanded-route preparation
+
 The new November 16 recording packet supersedes the RNG/Bell-only route.
 Reconcile its exact documentation/kernel patch and supplied PDF/Markdown bytes,
 then export the matching complete Canvas kit. The five demonstrated notebooks
