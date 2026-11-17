@@ -1,7 +1,7 @@
 # One class: Qiskit setup and quantum demonstrations
 
-Presented by **Gage Plott**. Follow the prerecorded video on your laptop and
-pause whenever you need more time. No Python experience is assumed. Nothing
+Presented by **Gage Plott**. Follow the video on your laptop and
+pause whenever you need more time. No Python experience is needed. Nothing
 is assigned, graded, evaluated, or submitted.
 
 Start with setup, then follow these notebooks with the video:
@@ -25,16 +25,16 @@ Windows/macOS and other notebook editors have not been validated for it.
 
 ## 1. Open the complete matching kit
 
-Use the complete single-class kit supplied with the video and extract it before
-opening a notebook. Keep all its folders together. The older full-course
-`v0.2.0-rc1` and guided `v0.2` ZIPs do **not** contain the RNG/Bell lessons. A new
-public student download has not been published; ask for the matching kit if it
-has not been supplied.
+Download the complete matching kit supplied with the video through Canvas.
+Extract the whole ZIP before opening a notebook, and keep its folders together.
+The older public full-course `v0.2.0-rc1` and guided `v0.2` ZIPs do **not** contain
+this route. If the matching kit is missing, contact Gage using section 6.
 
 Open a terminal in the folder containing `requirements.txt`, `constraints-ci.txt`,
-`src/`, and `teaching/`. In the extracted review kit, this is its **`runtime/`
+`src/`, and `teaching/`. In the extracted kit, this is its **`runtime/`
 folder**. In a repository checkout, it is the **repository root**. The following
-blocks are terminal commands, not notebook cells. Run each line and wait for it
+blocks are terminal commands. A terminal is where you enter setup commands;
+a notebook is where you run the lesson examples. Run each line and wait for it
 to finish before entering the next. Installation needs internet; the lessons
 then run locally without an IBM account or quantum hardware.
 
@@ -48,13 +48,11 @@ python3.12 --version
 python3.12 -c "import struct; print(struct.calcsize('P') * 8)"
 ```
 
-Expect `Python 3.12.x` and `64`. If the command is missing or gives a different
-result, pause for assisted setup. Ask the instructor to install **64-bit
-CPython 3.12 with `venv` support for your Ubuntu release**, then repeat these
-checks. Ubuntu's default `python3` version varies by release; installing its
-default Python package does not always install 3.12. Keep the operating
-system's Python intact. See the official [Ubuntu Python installation guide](https://ubuntu.com/developers/docs/howto/python-setup/).
-These course commands start from an available Python 3.12 installation.
+Expect `Python 3.12.x` and `64`. These commands check an existing Python
+installation; they do not install Python itself. If the command is missing or
+either result differs, stop before installing packages and use section 6.
+Python versions vary between Ubuntu releases. Keep the operating system's
+Python intact. See the official [Ubuntu Python installation guide](https://ubuntu.com/developers/docs/howto/python-setup/).
 
 Create a separate environment once in the requirements folder:
 
@@ -70,8 +68,8 @@ python -m pip install -r requirements.txt
 The version must still be 3.12. Save the printed interpreter path: it should end
 in this folder's **`.venv/bin/python`**. The environment keeps course packages
 separate from other projects. Keep the supplied requirements and constraints
-unchanged. If this folder already has an environment from another kit, ask for
-help before reusing it.
+unchanged. If this folder already has an environment from another kit, contact
+Gage before reusing it. Installation errors should be resolved before continuing.
 
 ## 3. Open JupyterLab and check the kernel
 
@@ -106,7 +104,8 @@ first cell; the video's student route does not require the maintainer test suite
 Read each short explanation, then use **Shift+Enter** on the following code
 cell. The RNG notebook shows a simulated one-qubit measurement; the Bell
 notebook shows a correlated two-qubit state. Both use `shots = 128` and
-`seed = 2026`. Seeded laptop samples are classical simulation, not physical
+`seed = 2026`. A **shot** is one fresh preparation and measurement. The **seed**
+makes the simulation repeatable. Seeded laptop samples are classical simulation, not physical
 quantum entropy or cryptographic randomness. Finite counts need not split evenly.
 
 In **each intro notebook (RNG and Bell)**, make the one advertised edit:
@@ -136,16 +135,20 @@ for the first pass, run cells from top to bottom, and pause the video whenever
 you need time. The extra prediction prompts and worked examples are optional
 exploration, not assignments.
 
-- **QFT** changes the basis of a quantum state, exactly on 1–6 qubits here.
-  The example starts from a known label and shows its complex phase pattern
-  and inverse recovery.
-- **QPE** uses a prepared eigenstate and controlled powers to estimate an
-  eigenphase. It uses inverse QFT, but QFT by itself does not estimate an
-  unknown eigenphase. This helper supports 1–6 counting qubits and one or
-  two target qubits.
-- **HHL** demonstrates a restricted positive Hermitian 2×2 system with exact
-  integer eigenvalues 1–7. Its output is a normalized solution state after
-  selecting successful measurements, not a classical list of solution values.
+- **QFT** changes a state's phase pattern. Start from the supplied `"011"`
+  label and watch the inverse transform recover it. Equal measurement
+  probabilities do not mean equal complex amplitudes.
+- **QPE** estimates a phase using a prepared target state and repeated
+  controlled operations. It uses inverse QFT, but QFT alone is not the entire
+  phase-estimation task. Read the supplied bit strings without reversing them.
+- **HHL** prepares a solution state for the supplied small linear system.
+  It keeps successful measurements and compares the result with a classical
+  calculation. It does not return a complete classical solution vector from
+  one measurement. Keep the supplied matrix and defaults for the first pass.
+
+The notebooks retain the technical details and input limits: QFT uses 1–6
+qubits; QPE uses 1–6 counting qubits and one/two target qubits; HHL supports
+the stated positive Hermitian 2×2 family with exact integer eigenvalues 1–7.
 
 ## 5. Optional exploration
 
@@ -179,18 +182,39 @@ source .venv/bin/activate
 python -m jupyterlab
 ```
 
-- **Missing variable or stale plot:** choose **Kernel → Restart Kernel**, then
-  **Run → Run All Cells**. Restarting forgets values; running rebuilds them.
-- **Wrong interpreter or missing import:** activate the intended `.venv`, repeat
-  section 3's kernel registration, select it in the notebook, and compare paths.
-- **Missing file:** check that the entire kit was extracted and the terminal is
-  in the folder containing `requirements.txt`.
-- **Install error, missing `venv`, or figure failure:** keep the error and ask
-  for help. Do not skip failing cells or change the package pins.
-- **Moved folder:** preserve your notebooks and recreate the environment in its
-  new location with sections 2–3; a virtual environment is not portable.
+- **Python is missing, not 3.12, or not 64-bit:** stop before installing
+  packages. Send Gage the two check results and your Ubuntu version so the
+  setup matches your machine. Do not remove or replace system Python.
+- **Missing `requirements.txt` or `.venv/bin/activate`:** extract the whole ZIP
+  and open the terminal in `runtime/`, beside `requirements.txt`. If `.venv`
+  was never created successfully, return to section 2. Do not run inside an
+  unopened ZIP.
+- **Installation error:** check the connection and folder. After an interrupted
+  download, retry the same install command when connected again. For repeated
+  errors or missing `venv` support, keep the error and contact Gage. Do not
+  continue past a failed install or change the package pins.
+- **Wrong kernel or missing import:** activate this kit's `.venv`, repeat
+  section 3's kernel registration, select **Python (PHYS 3810 Intro)**, and
+  compare interpreter paths. Different paths mean different Python environments.
+  Keep the error if matching paths do not resolve it.
+- **Missing variable, stale plot, or cells out of order:** save the intended
+  edit, choose **Kernel → Restart Kernel**, then **Run → Run All Cells**.
+  Restarting forgets values; running rebuilds them. Run All displays Bell
+  section 7 too. Later shot edits need **2 → 4 → 5**, plus Bell **7** whenever
+  already displayed.
+- **Markdown symbols instead of usable links:** right-click the guide file in
+  JupyterLab and choose **Open With → Markdown Preview**. For missing links or
+  notebooks, check that the kit's folders are still together.
+- **Moved kit or different operating system:** preserve your notebooks and
+  contact Gage before reusing an environment. Virtual environments are not
+  portable; these Ubuntu commands are not validated Windows/macOS instructions.
 
-For help, share the failing command, Ubuntu/Python versions, interpreter path,
-and error text. Omit private account details and the token-bearing Jupyter URL.
+### Still stuck? Contact Gage
+
+Email `gage-plott@utc.edu` with your operating system/version, Python version,
+notebook filename and section, failing command or cell, exact error, and the
+fix you tried. A clear, cropped screenshot can help. Omit token-bearing Jupyter
+URLs, passwords, API keys, and unrelated account information. Pause and return
+after the issue is resolved; nothing is submitted or graded.
 Tool references: [Python environments](https://docs.python.org/3.12/library/venv.html)
 and [IPython kernels](https://ipython.readthedocs.io/en/stable/install/kernel_install.html).

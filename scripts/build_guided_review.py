@@ -34,7 +34,7 @@ _validator_spec = importlib.util.spec_from_file_location(
 classroom_validator = importlib.util.module_from_spec(_validator_spec)
 _validator_spec.loader.exec_module(classroom_validator)
 TOP_DIRECTORY = "phys3810-canvas-kit"
-KIT_VERSION = "v0.1"
+KIT_VERSION = "v0.2"
 ENTRANCE_NAMES = ("START_HERE.md",)
 ENTRANCE_PATHS = tuple(f"{COURSE}/intro/{name}" for name in ENTRANCE_NAMES)
 REFERENCE_NOTEBOOKS = tuple(classroom_validator.NOTEBOOKS)
@@ -50,13 +50,13 @@ DEMONSTRATED_NOTEBOOKS = (
 OPTIONAL_ALGORITHM_NOTEBOOKS = (
     classroom_validator.GROVER_NOTEBOOK, classroom_validator.SHOR_NOTEBOOK,
 )
-STUDENT_PDF = f"{COURSE}/handouts/recording-v0.2/PHYS3810_Student_Guide_v0.2.pdf"
-STUDENT_MARKDOWN = f"{COURSE}/handouts/recording-v0.2/PHYS3810_Student_Guide_v0.2.md"
+STUDENT_PDF = f"{COURSE}/handouts/recording-v0.3/PHYS3810_Student_Guide_v0.3.pdf"
+STUDENT_MARKDOWN = f"{COURSE}/handouts/recording-v0.3/PHYS3810_Student_Guide_v0.3.md"
 # Full delivered bytes, including any provenance; these identify the matching
-# edition in the supplied 727cb98 recording-packet DELIVERY_RECEIPT.json.
+# edition in the supplied d669587 student-support DELIVERY_RECEIPT.json.
 STUDENT_GUIDE_HASHES = {
-    STUDENT_PDF: "fbfeed02287a5edfe472c19e607fbffc584a73d827893bd36dc3f8ab9e587bad",
-    STUDENT_MARKDOWN: "ae4ef2380af869481e8b1c4af38a2e6c45de41e5874ac7eca4b9f7d6e1c19830",
+    STUDENT_PDF: "8587c80456183d3c6298d7afbec07304cb0f5b707580d8f229a40b3dfe887169",
+    STUDENT_MARKDOWN: "dd9bda882ebefdeee823a5189ad657bf6d80d191a828f396f68c030b9e6a5293",
 }
 RUNTIME_FILES = (
     "LICENSE", "ruff.toml", "requirements.txt", "requirements-ci.txt", "constraints-ci.txt",
@@ -311,8 +311,8 @@ def payload_files(inputs: dict[str, bytes], commit: str, evidence: dict) -> tupl
             "follow QRNG → Bell → QFT → QPE → HHL. Grover and compiled N=15 Shor remain optional;\n"
             "the earlier guided notebooks are support material. Setup targets 15–20 minutes;\n"
             "total video duration is flexible. The matching kit and video are delivered through Canvas.\n\n"
-            "See the [student guide PDF](handouts/recording-v0.2/PHYS3810_Student_Guide_v0.2.pdf)\n"
-            "and [synchronized Markdown](handouts/recording-v0.2/PHYS3810_Student_Guide_v0.2.md).\n"
+            "See the [student guide PDF](handouts/recording-v0.3/PHYS3810_Student_Guide_v0.3.pdf)\n"
+            "and [synchronized Markdown](handouts/recording-v0.3/PHYS3810_Student_Guide_v0.3.md).\n"
         ).encode("utf-8")
         origins[target] = {"kind": "generated standalone navigation", "source_path": BUILDER_PATH,
                            "source_sha256": digest(inputs[BUILDER_PATH])}

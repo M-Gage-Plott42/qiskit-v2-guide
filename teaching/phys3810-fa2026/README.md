@@ -7,11 +7,13 @@ random-bit generation, Bell-state preparation, then QFT, QPE, and HHL
 demonstrations using the full reference notebooks. Grover and compiled N=15
 Shor remain optional. Nothing is assigned, graded, evaluated, or submitted.
 
-Use the supplied four-page [student guide](handouts/recording-v0.2/PHYS3810_Student_Guide_v0.2.pdf)
+Use the supplied four-page [student guide](handouts/recording-v0.3/PHYS3810_Student_Guide_v0.3.pdf)
 for setup and follow-along, and the separate four-page
 [recording guide](instructor/recording-v0.2/PHYS3810_Recording_Guide_v0.2.pdf)
 for presenter cues. Their exact synchronized companions and document receipt
 are linked from the [student](handouts/README.md) and [presenter](instructor/README.md) indexes.
+The new [one-page support insert](instructor/support-v0.1/PHYS3810_Recording_Support_Insert_v0.1.pdf)
+adds plain-language setup and recovery cues; the existing recording guide stays usable.
 
 The classroom environment uses 64-bit CPython 3.12, Qiskit 2.6.1, Aer 0.18.2,
 and JupyterLab 4.6.5. No Git experience, IBM account, GPU, or quantum hardware is

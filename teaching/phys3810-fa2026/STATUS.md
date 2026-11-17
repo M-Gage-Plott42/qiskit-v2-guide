@@ -1,5 +1,33 @@
 # PHYS 3810 status
 
+## November 16 student-support edition
+
+The audit of `d669587` found no glaring runtime, archive, navigation, algorithm,
+or merge defect. Its new student guide v0.3 adds simpler wording, expanded help,
+and the explicitly supplied support contact. A one-page presenter insert
+supplements the existing four-page recording guide. The update preserves all
+tested commands, notebook code/IDs, mathematical contracts, and pinned software.
+The matching Canvas kit needs a new identity because the included guide changes;
+the sealed v0.1 kit remains historical and intact.
+
+The received audit records the advance v0.2 guide and a support follow-up as
+already emailed. The advance material was held from student distribution;
+final recording and delivery of video/kit/v0.3 guide remain pending. Printing
+was independently reported by the user. No private email body or image is
+copied into project documentation, and no incoming approval is inferred.
+
+[Source acceptance](STUDENT_SUPPORT_RECONCILIATION.md) passed **228 tests /
+13 fresh-kernel notebooks / 85 cells / 32 PNGs** in the reused Ubuntu
+CPython 3.12.15 environment. All five supplied PDF pages and exact PDF/Markdown
+bytes passed local checks. A new v0.2 Canvas export and its separate exact
+extraction remain the delivery gate; the old v0.1 archive stays unchanged.
+
+The user authorizes this reconciliation, documentation updates, new-kit
+acceptance and **commit/push without a new PR**. A scoped branch will be pushed;
+main protection remains intact. No new release, message, Canvas upload,
+hardware job, or repeat recording pilot is requested. The next walkthrough is
+complete and non-interactive, using the exact replacement desktop kit.
+
 ## November 16 delivery acknowledgement and PR integration
 
 The user reports **Rick has been emailed and printing is complete**. These are

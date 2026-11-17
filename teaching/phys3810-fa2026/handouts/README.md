@@ -2,6 +2,20 @@
 
 ## Current recording route, November 16, 2026
 
+Use the four-page [student guide v0.3](recording-v0.3/PHYS3810_Student_Guide_v0.3.pdf)
+and its [exact Markdown companion](recording-v0.3/PHYS3810_Student_Guide_v0.3.md).
+This edition adds simpler wording, practical troubleshooting, and the intended
+support contact `gage-plott@utc.edu`, retaining all twelve tested terminal
+commands and the established notebook route/edits. It supersedes the advance
+v0.2 copy for final student use and belongs with the matching Canvas kit.
+
+See [current integration evidence](STUDENT_SUPPORT_v0.3_RECEIPT.json) and
+[reconciliation](../STUDENT_SUPPORT_RECONCILIATION.md). Exact PDF/Markdown bytes
+are preserved. The advance materials have already been emailed; the next
+delivery is the finished video, matching kit, and v0.3 guide for Canvas.
+
+## Earlier recording edition v0.2
+
 Use the four-page [student guide, recording edition v0.2](recording-v0.2/PHYS3810_Student_Guide_v0.2.pdf)
 and its [synchronized Markdown companion](recording-v0.2/PHYS3810_Student_Guide_v0.2.md).
 The route is setup, quantum random bits, Bell preparation, QFT, QPE, then HHL;

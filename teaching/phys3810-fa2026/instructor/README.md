@@ -9,10 +9,16 @@ Print the four-page [recording guide, edition v0.2](recording-v0.2/PHYS3810_Reco
 single-sided. Its [synchronized Markdown companion](recording-v0.2/PHYS3810_Recording_Guide_v0.2.md)
 contains the same narration cues, stable cell IDs, edits/restores, expected
 results, and recovery steps. Both supplied files are preserved unchanged.
-The separate [student guide](../handouts/recording-v0.2/PHYS3810_Student_Guide_v0.2.pdf) is the
-advance copy for Rick; the matching complete kit follows the
+Keep the [one-page support insert](support-v0.1/PHYS3810_Recording_Support_Insert_v0.1.pdf)
+and its [exact companion](support-v0.1/PHYS3810_Recording_Support_Insert_v0.1.md)
+beside that guide for the simpler setup, rerun, recovery, and contact cues.
+Only this additional page needs printing if paper cues are wanted.
+
+The separate [student guide v0.3](../handouts/recording-v0.3/PHYS3810_Student_Guide_v0.3.pdf)
+is the final support edition; the matching complete kit follows the
 [current quickstart](../intro/START_HERE.md) and [delivery status](../STATUS.md).
-The [document receipt](../RECORDING_GUIDES_v0.2_RECEIPT.json) records exact
+The [original guide receipt](../RECORDING_GUIDES_v0.2_RECEIPT.json) and
+[support-update receipt](../handouts/STUDENT_SUPPORT_v0.3_RECEIPT.json) record exact
 delivered bytes. In JupyterLab, use **Open With → Markdown Preview** when a
 guide opens as source text and you need to follow its links.
 

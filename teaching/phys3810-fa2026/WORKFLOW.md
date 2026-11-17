@@ -7,6 +7,23 @@ is not accessible in the current workspace.
 
 ## Source of truth and current position
 
+The latest instruction requires the v0.3 student-support update and matching
+new Canvas kit, followed by CP **without creating a new PR**. Preserve exact
+supplied documents and all old editions, align the entrance and exporter paths/
+hashes/tests, run source plus exact-extraction acceptance, and push the scoped
+branch. Do not bypass protected main, alter rulesets, or create a PR/release.
+
+Advance emailing and the support promise are already recorded by the received
+audit; printing is user-reported. Final video/kit/guide delivery is still a
+future user action. Keep private correspondence and all recording media out
+of repository changes. There is no new pilot, approval, duration, Canvas, or
+broad algorithm-review gate. Replace the desktop kit with a newly identified
+version while archiving the old ZIP/checksum unchanged. Return detailed CLI/UI
+instructions from extraction to reset, launch, recording, playback, and final
+delivery, without an interactive wait for user responses.
+
+### Earlier merge workflow
+
 The user reports that the Rick email and printing are complete and explicitly
 authorizes normal required-check merging of PR #132, followed by clean,
 synchronized main. Update only this completion/authorization context, verify

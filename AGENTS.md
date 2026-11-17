@@ -82,6 +82,36 @@ data in public code, notebooks, documentation, outputs, or validation logs.
 
 ## PHYS 3810 collaboration and handoffs
 
+**Current student-support update, November 16:** reconcile the accessible
+audit of `d669587` and its v0.3 student guide/one-page presenter insert. The
+existing v0.1 Canvas kit is sound; its student-document change requires a
+newly identified v0.2 kit. Preserve all previous editions and sealed bytes.
+Keep the support address `gage-plott@utc.edu` as deliberately supplied plain
+text, align the entrance's troubleshooting, and retain every tested command,
+kernel name, numbered anchor, parameter-first rerun, and Bell section 7 rule.
+Numerical source, notebook code cells, pins, and contracts remain unchanged.
+
+The user authorizes documentation/package updates, acceptance checks, commit
+and push **with no new PRs**. Use a scoped pushed branch rather than bypassing
+main protection or changing rules. Do not create a PR, merge, release, external
+message, Canvas upload, or hardware job. Replace the active desktop kit only
+because this supplied guide changes its payload; archive the old desktop
+ZIP/checksum intact and reference the new exact kit in the walkthrough.
+
+The advance guide and support follow-up emails are already sent according to
+the received audit; printing was separately user-reported. Do not copy private
+email bodies/images into public docs or claim access to images not supplied
+locally. Final recording, playback, and delivery remain pending. No further
+advance-copy email, approval questionnaire, pilot, or broad algorithm review
+is needed. Route/duration/Canvas decisions remain settled. The deleted private
+test recording must remain absent from source, packages, and publication.
+
+Give a detailed, non-interactive recording walkthrough from the new desktop
+extraction through environment setup, safe notebook resets, Jupyter launch,
+OBS recording, and final-file delivery. Do not wait for operator replies.
+
+### Earlier PR 132 merge instruction
+
 **Current merge instruction, November 16:** the user reports that Rick has
 been emailed and printing is complete. Treat both as completed user-reported
 actions; do not repeat those requests or assume access to the email itself.

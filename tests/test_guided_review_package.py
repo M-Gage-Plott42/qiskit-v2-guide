@@ -103,7 +103,7 @@ class GuidedReviewPackageTests(unittest.TestCase):
                 self.assertEqual(manifest["source_commit"], COMMIT)
                 self.assertEqual(manifest["source_tree"], TREE)
                 self.assertEqual(manifest["schema"], "phys3810.canvas-kit.v1")
-                self.assertEqual(manifest["kit_version"], "v0.1")
+                self.assertEqual(manifest["kit_version"], "v0.2")
                 self.assertEqual(manifest["classroom_notebooks"], 5)
                 self.assertEqual(manifest["total_notebooks"], NOTEBOOK_COUNT)
                 self.assertEqual(manifest["demonstrated_notebooks"],
@@ -114,7 +114,7 @@ class GuidedReviewPackageTests(unittest.TestCase):
                 self.assertEqual(manifest["student_guides"],
                                  {"runtime/" + name: expected
                                   for name, expected in builder.STUDENT_GUIDE_HASHES.items()})
-                self.assertTrue(Path(result["archive"]).name.startswith("PHYS3810-Canvas-Kit-v0.1-"))
+                self.assertTrue(Path(result["archive"]).name.startswith("PHYS3810-Canvas-Kit-v0.2-"))
                 self.assertNotIn("STUDENT_QUICKSTART.md", manifest["files"])
                 self.assertNotIn("INSTRUCTOR_RUN_SHEET.md", manifest["files"])
                 self.assertNotIn("MANIFEST.json", manifest["files"])
@@ -155,6 +155,24 @@ class GuidedReviewPackageTests(unittest.TestCase):
                 self.assertNotIn("2 intro notebooks form", text)
                 self.assertNotIn("arrangements remain provisional", text)
 
+    def test_v03_support_entrance_matches_delivered_commands_and_contact(self):
+        # Check the real entrance and supplied edition together. The same paths
+        # exist in the exported kit, so this needs neither Git nor outside files.
+        entrance = (builder.ROOT / builder.ENTRANCE_PATHS[0]).read_text()
+        supplied = self.inputs[builder.STUDENT_MARKDOWN].decode()
+        def commands(text):
+            return [line for block in re.findall(r"```bash\n(.*?)```", text, re.S)
+                    for line in block.strip().splitlines()]
+        self.assertEqual(len(commands(entrance)), 12)
+        self.assertEqual(commands(entrance), commands(supplied))
+        for text in (entrance, supplied):
+            self.assertIn("gage-plott@utc.edu", text)
+            self.assertIn("Markdown Preview", text)
+            self.assertNotIn("mailto:", text)
+        self.assertEqual(builder.KIT_VERSION, "v0.2")
+        self.assertIn("recording-v0.3/PHYS3810_Student_Guide_v0.3.pdf", builder.STUDENT_PDF)
+        self.assertIn("recording-v0.3/PHYS3810_Student_Guide_v0.3.md", builder.STUDENT_MARKDOWN)
+
     def test_student_guide_pair_is_exact_and_readable_inside_served_root(self):
         with tempfile.TemporaryDirectory(prefix="student guide kit ") as temporary:
             result = self.build_fixture(Path(temporary) / "export")
@@ -171,8 +189,8 @@ class GuidedReviewPackageTests(unittest.TestCase):
             self.assertTrue((outer / "runtime" / builder.STUDENT_PDF).read_bytes().startswith(b"%PDF-"))
             self.assertIn("Canvas", manager.get(builder.STUDENT_MARKDOWN, content=True)["content"])
             setup = manager.get(f"{builder.COURSE}/SETUP.md", content=True)["content"]
-            self.assertIn("(handouts/recording-v0.2/PHYS3810_Student_Guide_v0.2.pdf)", setup)
-            self.assertIn("(handouts/recording-v0.2/PHYS3810_Student_Guide_v0.2.md)", setup)
+            self.assertIn("(handouts/recording-v0.3/PHYS3810_Student_Guide_v0.3.pdf)", setup)
+            self.assertIn("(handouts/recording-v0.3/PHYS3810_Student_Guide_v0.3.md)", setup)
 
     def test_changed_or_missing_student_editions_are_rejected_before_export(self):
         originals = dict(self.inputs)
@@ -424,6 +442,8 @@ class GuidedReviewPackageTests(unittest.TestCase):
                      "runtime/artifacts/result.json", "old.pdf", "old.docx", "old.zip", "AGENTS.md",
                      f"runtime/{builder.COURSE}/handouts/other.pdf",
                      f"runtime/{builder.COURSE}/handouts/other.md",
+                     f"runtime/{builder.COURSE}/handouts/recording-v0.2/PHYS3810_Student_Guide_v0.2.pdf",
+                     f"runtime/{builder.COURSE}/handouts/recording-v0.3/.markdownlint.yaml",
                      f"runtime/{builder.COURSE}/handouts/recording-v0.2/.markdownlint.yaml",
                      f"runtime/{builder.COURSE}/instructor/PHYS3810_Recording_Guide_v0.2.pdf"):
             with self.subTest(name=name):

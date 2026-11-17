@@ -1,0 +1,35 @@
+{
+  "schema": "phys3810.student-support-integration.v1",
+  "date": "2026-11-16",
+  "reviewed_source": "d669587b0120ff6e684f07f6a405c23397ad46fb",
+  "incoming_zip": "PHYS3810_Student_Support_Update_2026-11-16_d669587.zip",
+  "incoming_zip_bytes": 148221,
+  "incoming_zip_sha256": "01b51e81db8e684020c3d8690a8ea7e9da09226f1e7a7cb0d63fb959cb58f0e5",
+  "files": [
+    {
+      "delivered_member": "STUDENT/PHYS3810_Student_Guide_v0.3.pdf",
+      "repository_path": "teaching/phys3810-fa2026/handouts/recording-v0.3/PHYS3810_Student_Guide_v0.3.pdf",
+      "bytes": 73552,
+      "sha256": "8587c80456183d3c6298d7afbec07304cb0f5b707580d8f229a40b3dfe887169"
+    },
+    {
+      "delivered_member": "CODEX/markdown/PHYS3810_Student_Guide_v0.3.md",
+      "repository_path": "teaching/phys3810-fa2026/handouts/recording-v0.3/PHYS3810_Student_Guide_v0.3.md",
+      "bytes": 11377,
+      "sha256": "dd9bda882ebefdeee823a5189ad657bf6d80d191a828f396f68c030b9e6a5293"
+    },
+    {
+      "delivered_member": "PRINT/PHYS3810_Recording_Support_Insert_v0.1.pdf",
+      "repository_path": "teaching/phys3810-fa2026/instructor/support-v0.1/PHYS3810_Recording_Support_Insert_v0.1.pdf",
+      "bytes": 47538,
+      "sha256": "751cb11626484f1caf630a66afc361449d08a4db224b087ddc09a41d5f97a8bd"
+    },
+    {
+      "delivered_member": "CODEX/markdown/PHYS3810_Recording_Support_Insert_v0.1.md",
+      "repository_path": "teaching/phys3810-fa2026/instructor/support-v0.1/PHYS3810_Recording_Support_Insert_v0.1.md",
+      "bytes": 3211,
+      "sha256": "53798f6dbc569240fae3df989952454dfb30da5031e562fd390ba0fa3b276567"
+    }
+  ],
+  "preservation": "Exact supplied bytes and PDF Info/XMP retained. Original full receipt retained locally; no PDF regeneration or provenance stripping."
+}

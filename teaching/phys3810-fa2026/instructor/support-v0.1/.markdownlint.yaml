@@ -1,0 +1,3 @@
+# Preserve the supplied narration's deliberately plain support email.
+extends: ../../../../.markdownlint.yaml
+MD034: false

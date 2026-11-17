@@ -1,0 +1,5 @@
+# Preserve exact supplied page-based Markdown headings.
+extends: ../../../../.markdownlint.yaml
+MD025: false
+# The immutable supplied edition intentionally gives a plain support email.
+MD034: false
