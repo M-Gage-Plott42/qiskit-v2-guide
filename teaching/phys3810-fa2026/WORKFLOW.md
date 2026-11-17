@@ -22,6 +22,14 @@ version while archiving the old ZIP/checksum unchanged. Return detailed CLI/UI
 instructions from extraction to reset, launch, recording, playback, and final
 delivery, without an interactive wait for user responses.
 
+The `f5ec2e4` kit has passed source and exact-extraction acceptance at
+228/13/85/32, with all payload hashes/modes and local imports verified.
+The replacement ZIP/checksum is on the desktop and the old v0.1 pair is archived
+intact. The [recording walkthrough](instructor/RECORDING_WALKTHROUGH.md) uses the
+exact new identity, retains authentication, keeps recordings outside Git, and
+provides tested baseline restore/backup commands. Finish CP on the scoped branch
+without a PR, then proceed directly to the user's recording workflow.
+
 ### Earlier merge workflow
 
 The user reports that the Rick email and printing are complete and explicitly

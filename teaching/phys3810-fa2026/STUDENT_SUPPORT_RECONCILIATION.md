@@ -122,13 +122,64 @@ the edition folders and MD034 remains enforced elsewhere. The corrected gates
 passed. No failure was relabeled as an earlier pass, and no duplicate unittest
 discovery followed the validator. Exact new archive acceptance is separate.
 
+## Exact replacement kit
+
+**Exact extraction passed independently: 228 tests / 13 fresh-kernel notebooks /
+85 nonempty code cells / 32 PNGs.** The new archive was extracted outside the
+checkout into `/tmp/PHYS3810 support kit f5ec2e4/phys3810-canvas-kit` and installed
+into a **fresh application `.venv`**, using the existing CPython 3.12.15 interpreter.
+All 114 application distributions match the supplied active pins; pip is 26.2.2.
+This is separate from the reused source environment and does not claim a fresh
+Python installation, native-platform pass, or new human recording result.
+
+The extracted interpreter ran `python scripts/validate_classroom.py --profile all`
+from its own `runtime/` with no inherited `PYTHONPATH`. All required cells have
+execution counts and no errors. All 57 payload sizes/hashes/modes and the
+manifest stayed unchanged; canonical imports resolve under this extraction's
+`runtime/src/`.
+
+- Source commit: `f5ec2e4649de34ed567f7694c497dfc874e14584`.
+- Source tree: `1543c568a1116c91c0283ce7d6df6e72e8cfa3ac`.
+- ZIP: `PHYS3810-Canvas-Kit-v0.2-f5ec2e4649de.zip`.
+- ZIP size: **259,111 bytes**, **58 files / 57 manifest entries**.
+- ZIP SHA-256: `e37d1c7051b3a1b9ea48004f73c22c13b60afc467e0ce488982c4feb138459f9`.
+- Manifest SHA-256: `122cbd02d2b9b7e22c4392ac47c36ad3a94cea3980e2ce9c3025f8b7b19bba5f`.
+- Five demonstrated notebooks / thirteen total; **75 static local links** checked.
+- Exact included student PDF SHA-256:
+  `8587c80456183d3c6298d7afbec07304cb0f5b707580d8f229a40b3dfe887169`.
+- Exact included student Markdown SHA-256:
+  `dd9bda882ebefdeee823a5189ad657bf6d80d191a828f396f68c030b9e6a5293`.
+
+Authenticated Jupyter HTTP checks passed 37 traversals across 18 documents,
+plus exact v0.3 PDF response bytes and companion text. The registered Intro
+kernel points to this `.venv`; five demonstrated metadata labels match.
+Outside-root access remains 404 and authentication stayed enabled. The local
+test used `--no-browser`, loopback port 8883, and task-local Jupyter/cache paths;
+its server shut down through the authenticated API. This is package verification,
+not a new interactive pilot.
+
+The verified ZIP and standard checksum sidecar replace the active desktop kit.
+The previous v0.1 ZIP/checksum were moved intact to
+`Desktop/PHYS3810_Previous_Kits/`, with the original archive hash verified.
+All older repository editions, release assets, and canonical artifact copies
+remain unchanged. Raw receipts/logs/executed copies are preserved under the
+ignored task directory; no test video or private correspondence is included.
+
+## Non-interactive recording handoff and CP
+
+The [mechanical walkthrough](instructor/RECORDING_WALKTHROUGH.md) names this
+exact kit and provides extraction paths, CLI setup, a safe notebook reset,
+authenticated launch, OBS mechanics, lesson order, playback and final delivery.
+Its actual reset code block was run in a disposable copy: all five notebook
+baselines restored, changed copies backed up byte-for-byte, and a wrong archive
+rejected before overwrite. User notebooks were not reset by that verification.
+The walkthrough is an instructor document outside the sealed student package;
+adding it and this completion record does not require another export.
+
 The user requests source/extraction validation and CP with **no new PRs**.
 Work is committed and pushed on a scoped branch; protected main and rulesets
-are not bypassed. The replacement desktop kit must pass its exact extraction
-before the old desktop ZIP/checksum is archived intact. The final walkthrough
-will use that replacement's exact identity and give the complete non-interactive
-CLI/UI sequence from extraction through clean notebook resets, launch,
-recording, and private final-file review.
+are not bypassed. No new PR-triggered remote CI run is claimed for this branch.
+The existing main CI and new local source/extraction evidence are kept distinct.
 
 No new broad review, pilot, approval questionnaire, release, external message,
 Canvas upload, dependency campaign, or hardware job is needed or performed.

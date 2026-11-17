@@ -13,6 +13,9 @@ Keep the [one-page support insert](support-v0.1/PHYS3810_Recording_Support_Inser
 and its [exact companion](support-v0.1/PHYS3810_Recording_Support_Insert_v0.1.md)
 beside that guide for the simpler setup, rerun, recovery, and contact cues.
 Only this additional page needs printing if paper cues are wanted.
+The [complete mechanical walkthrough](RECORDING_WALKTHROUGH.md) gives the exact
+new desktop-kit identity, safe baseline reset, CLI setup/launch, OBS sequence,
+and final-file delivery steps without an interactive back-and-forth.
 
 The separate [student guide v0.3](../handouts/recording-v0.3/PHYS3810_Student_Guide_v0.3.pdf)
 is the final support edition; the matching complete kit follows the

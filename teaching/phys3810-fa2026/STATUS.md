@@ -19,14 +19,18 @@ copied into project documentation, and no incoming approval is inferred.
 [Source acceptance](STUDENT_SUPPORT_RECONCILIATION.md) passed **228 tests /
 13 fresh-kernel notebooks / 85 cells / 32 PNGs** in the reused Ubuntu
 CPython 3.12.15 environment. All five supplied PDF pages and exact PDF/Markdown
-bytes passed local checks. A new v0.2 Canvas export and its separate exact
-extraction remain the delivery gate; the old v0.1 archive stays unchanged.
+bytes passed local checks. The exact new extraction passed the same **228/13/85/32**
+inventory in a fresh application environment, with all 57 payload entries
+unchanged. The active desktop kit is now
+`PHYS3810-Canvas-Kit-v0.2-f5ec2e4649de.zip` plus checksum. The previous v0.1
+ZIP/checksum is archived intact under `Desktop/PHYS3810_Previous_Kits/`.
 
 The user authorizes this reconciliation, documentation updates, new-kit
 acceptance and **commit/push without a new PR**. A scoped branch will be pushed;
 main protection remains intact. No new release, message, Canvas upload,
 hardware job, or repeat recording pilot is requested. The next walkthrough is
-complete and non-interactive, using the exact replacement desktop kit.
+[complete and non-interactive](instructor/RECORDING_WALKTHROUGH.md), using the
+exact replacement desktop kit and a verified backup/reset procedure.
 
 ## November 16 delivery acknowledgement and PR integration
 

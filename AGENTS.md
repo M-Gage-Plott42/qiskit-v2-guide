@@ -110,6 +110,15 @@ Give a detailed, non-interactive recording walkthrough from the new desktop
 extraction through environment setup, safe notebook resets, Jupyter launch,
 OBS recording, and final-file delivery. Do not wait for operator replies.
 
+The new kit is now frozen at `f5ec2e4`: source and exact extraction each passed
+228 tests/13 notebooks/85 cells/32 PNGs. The active desktop ZIP/checksum is
+`PHYS3810-Canvas-Kit-v0.2-f5ec2e4649de.zip`; the previous v0.1 files are archived
+intact under `Desktop/PHYS3810_Previous_Kits/`. The exact v0.3 guide is included;
+the presenter insert remains separate. The
+[mechanical walkthrough](teaching/phys3810-fa2026/instructor/RECORDING_WALKTHROUGH.md)
+references this source and contains a verified backup/reset procedure. No new
+PR or repeat review is required for this completed scoped acceptance.
+
 ### Earlier PR 132 merge instruction
 
 **Current merge instruction, November 16:** the user reports that Rick has
