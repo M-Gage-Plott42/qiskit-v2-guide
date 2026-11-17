@@ -1,16 +1,25 @@
-# One class: quantum random bits and a Bell state
+# One class: Qiskit setup and quantum demonstrations
 
 Presented by **Gage Plott**. Follow the prerecorded video on your laptop and
 pause whenever you need more time. No Python experience is assumed. Nothing
 is assigned, graded, evaluated, or submitted.
 
-Start with setup, then run these two notebooks in order:
+Start with setup, then follow these notebooks with the video:
 
 1. [Quantum random bits](../notebooks/intro/01_quantum_rng.ipynb).
 2. [Prepare a Bell state](../notebooks/intro/02_bell_state.ipynb).
+3. [QFT: phase patterns and bit order](../notebooks/02_qft.ipynb).
+4. [QPE: estimating an eigenphase](../notebooks/03_qpe.ipynb).
+5. [HHL: a restricted linear-system example](../notebooks/04_hhl.ipynb).
+
+Grover and compiled N=15 Shor remain optional exploration. Use the same
+**Python (PHYS 3810 Intro)** environment for all seven notebooks, including
+those two optional references. Each open notebook has its own Python session;
+run its initial setup/import cells and compare its printed interpreter path
+with the setup terminal. A new environment is not needed for each notebook.
 
 The setup chapter targets 15–20 minutes of video; installation and your pauses
-may take longer. The total class window and date are not fixed by this guide.
+may take longer. The video and matching kit will be shared through Canvas.
 Use **Ubuntu/Linux, 64-bit CPython 3.12, and JupyterLab** for this route. Native
 Windows/macOS and other notebook editors have not been validated for it.
 
@@ -18,7 +27,7 @@ Windows/macOS and other notebook editors have not been validated for it.
 
 Use the complete single-class kit supplied with the video and extract it before
 opening a notebook. Keep all its folders together. The older full-course
-`v0.2.0-rc1` and guided `v0.2` ZIPs do **not** contain these two lessons. A new
+`v0.2.0-rc1` and guided `v0.2` ZIPs do **not** contain the RNG/Bell lessons. A new
 public student download has not been published; ask for the matching kit if it
 has not been supplied.
 
@@ -100,7 +109,7 @@ notebook shows a correlated two-qubit state. Both use `shots = 128` and
 `seed = 2026`. Seeded laptop samples are classical simulation, not physical
 quantum entropy or cryptographic randomness. Finite counts need not split evenly.
 
-In **each notebook**, make the one advertised edit:
+In **each intro notebook (RNG and Bell)**, make the one advertised edit:
 
 1. Under **2. Choose the shot count**, change `shots = 128` to `shots = 1024`
    and **run that parameter cell**.
@@ -117,23 +126,43 @@ figure. The fixed preparation in section 3 does not depend on the shot count.
 If anything looks stale, save your edit, restart the kernel, and run all cells
 from the top. Open the Bell notebook in its own kernel and repeat the environment
 check before starting it. The optional Bell extension can be skipped during
-the video; the two main demonstrations are sufficient.
+the video.
+
+### Continue with QFT, QPE and HHL
+
+Use the full reference notebooks linked above in that order; the earlier
+guided QFT/QPE notebook is a separate historical route. Keep the defaults
+for the first pass, run cells from top to bottom, and pause the video whenever
+you need time. The extra prediction prompts and worked examples are optional
+exploration, not assignments.
+
+- **QFT** changes the basis of a quantum state, exactly on 1–6 qubits here.
+  The example starts from a known label and shows its complex phase pattern
+  and inverse recovery.
+- **QPE** uses a prepared eigenstate and controlled powers to estimate an
+  eigenphase. It uses inverse QFT, but QFT by itself does not estimate an
+  unknown eigenphase. This helper supports 1–6 counting qubits and one or
+  two target qubits.
+- **HHL** demonstrates a restricted positive Hermitian 2×2 system with exact
+  integer eigenvalues 1–7. Its output is a normalized solution state after
+  selecting successful measurements, not a classical list of solution values.
 
 ## 5. Optional exploration
+
+When a guide opens as Markdown source in JupyterLab, right-click its file and
+choose **Open With → Markdown Preview** to use its links.
 
 Explore these later only if interested; there is nothing to submit:
 
 - [Grover](../notebooks/01_grover.ipynb): amplify marked outcomes in a small
   search example on 2–5 qubits.
-- [QFT](../notebooks/02_qft.ipynb): a quantum change of basis, shown exactly on
-  1–6 qubits.
-- [QPE](../notebooks/03_qpe.ipynb): estimate an eigenphase using controlled
-  powers and an inverse QFT, with 1–6 counting qubits and one or two target qubits.
-- [HHL](../notebooks/04_hhl.ipynb): a restricted positive Hermitian 2×2 system
-  with exact integer eigenvalues 1–7; the output is a normalized, postselected
-  solution state.
 - [Shor](../notebooks/05_shor.ipynb): a compiled `N=15` example with four residue
   qubits and 4–6 counting qubits, followed by classical order and factor recovery.
+
+For additional worked examples after the video, return to
+[QFT](../notebooks/02_qft.ipynb), [QPE](../notebooks/03_qpe.ipynb), or
+[HHL](../notebooks/04_hhl.ipynb). Their main demonstrations are already in
+the video route; further exploration is optional.
 
 These are bounded teaching examples, not general scalable implementations or
 demonstrations of quantum advantage.

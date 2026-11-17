@@ -1,8 +1,9 @@
 # PHYS 3810: provisional public preview setup
 
-**For the current prerecorded RNG/Bell class, use the
-[single-class quickstart](intro/START_HERE.md).** It gives the two lessons and
-Ubuntu/Linux setup. This page retains the setup for the older published
+**For the current prerecorded QRNG/Bell/QFT/QPE/HHL class, use the
+[single-class quickstart](intro/START_HERE.md).** It gives the five demonstrated
+notebooks and Ubuntu/Linux setup with **Python (PHYS 3810 Intro)**. The matching
+complete kit is for Canvas delivery. This page retains setup for the older published
 full-course preview; that frozen ZIP does not contain the RNG/Bell additions.
 
 <!-- markdownlint-disable-next-line MD036 -->

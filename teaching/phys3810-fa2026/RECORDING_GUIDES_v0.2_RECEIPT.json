@@ -1,0 +1,39 @@
+{
+  "schema": "phys3810.supplied-guides-integration.v1",
+  "date": "2026-11-16",
+  "audited_code_base": "727cb98c468bdd338c8fabc3b453e17738d1fce7",
+  "audited_tree": "db437f6b4c12c1df2d41747eda2629919319ad5b",
+  "delivery_zip": "PHYS3810_Recording_Packet_2026-11-16_727cb98.zip",
+  "delivery_zip_bytes": 210396,
+  "delivery_zip_sha256": "bfd6fcd7f444a94a9e4ed5e8e9d9ee5b96026644c085f1714b821facd25a3ce7",
+  "supplied_receipt_sha256": "a3258efbebc0927fefda00e5000b4b373648a41aa567ca3a5dea8ac7dcfde858",
+  "files": [
+    {
+      "delivered_member": "CODEX/markdown/PHYS3810_Recording_Guide_v0.2.md",
+      "repository_path": "teaching/phys3810-fa2026/instructor/recording-v0.2/PHYS3810_Recording_Guide_v0.2.md",
+      "bytes": 13087,
+      "sha256": "1f4f2b4ace42698d2a33b67958f8feccd49eaa06f93719e3436ea56dcbfc991f"
+    },
+    {
+      "delivered_member": "CODEX/markdown/PHYS3810_Student_Guide_v0.2.md",
+      "repository_path": "teaching/phys3810-fa2026/handouts/recording-v0.2/PHYS3810_Student_Guide_v0.2.md",
+      "bytes": 11397,
+      "sha256": "ae4ef2380af869481e8b1c4af38a2e6c45de41e5874ac7eca4b9f7d6e1c19830"
+    },
+    {
+      "delivered_member": "PRINT/PHYS3810_Recording_Guide_v0.2.pdf",
+      "repository_path": "teaching/phys3810-fa2026/instructor/recording-v0.2/PHYS3810_Recording_Guide_v0.2.pdf",
+      "bytes": 74384,
+      "sha256": "16836eb35c3763eaa7e2c8493fac543744d0dde76f3ceff1b05b3e0f3e604acf"
+    },
+    {
+      "delivered_member": "SEND_TO_RICK/PHYS3810_Student_Guide_v0.2.pdf",
+      "repository_path": "teaching/phys3810-fa2026/handouts/recording-v0.2/PHYS3810_Student_Guide_v0.2.pdf",
+      "bytes": 73915,
+      "sha256": "fbfeed02287a5edfe472c19e607fbffc584a73d827893bd36dc3f8ab9e587bad"
+    }
+  ],
+  "preservation": "Complete delivered bytes including PDF Info/XMP metadata retained unchanged. No regeneration or provenance stripping.",
+  "local_verification": "Eight pages rendered/visually inspected/OCR checked; metadata, twelve link annotations, synchronized body tokens and exact terminal commands verified.",
+  "scope": "Locally derived public index. Original full delivery receipt and coordination materials retained unchanged in ignored task artifacts."
+}

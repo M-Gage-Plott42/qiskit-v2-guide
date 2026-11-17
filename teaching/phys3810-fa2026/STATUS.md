@@ -1,5 +1,63 @@
 # PHYS 3810 status
 
+## November 16 delivery acknowledgement and PR integration
+
+The user reports **Rick has been emailed and printing is complete**. These are
+completed user-reported actions; no email contents or delivery receipt were
+independently accessed. The remaining human work is recording against the
+fixed Canvas kit and checking the final saved video, not another email,
+approval questionnaire, or pilot milestone.
+
+The user authorizes [PR #132](https://github.com/M-Gage-Plott42/qiskit-v2-guide/pull/132)
+to merge through the normal required checks and the checkout to return to clean,
+synchronized main. The frozen `d998b69` kit, supplied guides, and historical
+assets remain unchanged. The existing source/extraction **227/13/85/32**
+evidence carries forward; no local runtime rerun is claimed for these status
+updates. No release, assistant-sent message, recording publication, or unrelated
+dependency merge is part of this operation.
+
+## November 16 expanded recording route
+
+The current route is **setup (15–20 minutes), QRNG, Bell, QFT, QPE, HHL**,
+presented by Gage Plott in one prerecorded class. Grover and compiled N=15
+Shor remain optional. The class assumes no Python experience and has no
+assignments, grading, evaluation, or submissions. **Total duration is flexible;
+Canvas delivery is settled.** The completed Ubuntu recording test is carried
+forward as operator-reported evidence, with ordinary final-file checks before
+delivery. Earlier approval questionnaires and repeat-pilot gates do not apply.
+
+The audit of merged `727cb98` supplies an accessible ten-file documentation/
+kernel patch and two four-page PDF/Markdown guides. Integration preserves all
+numerical code, code-cell objects/IDs, mathematical contracts, pins, and old
+assets. Five demonstrated notebooks share the already registered Intro kernel;
+the full strict validation inventory remains thirteen. A newly identified
+complete Canvas kit is prepared through the existing exporter, including
+the exact student guide and excluding presenter/coordination material.
+
+[Source acceptance](EXPANDED_RECORDING_RECONCILIATION.md) passed **227 tests,
+thirteen fresh-kernel notebooks, 85 code cells, and 32 PNGs** in the reused
+Ubuntu CPython 3.12.15 environment. All eight supplied PDF pages passed local
+render/visual/OCR/content checks; exact PDF/Markdown bytes are integrated.
+The exact extracted kit passed the same **227/13/85/32** inventory in a fresh
+application environment, with all 57 payload entries unchanged. The verified
+desktop delivery is `PHYS3810-Canvas-Kit-v0.1-d998b69170ad.zip` plus checksum,
+source `d998b69`, with five demonstrated and thirteen total notebooks. Exact
+student PDF/Markdown bytes are included; presenter material stays separate.
+Authenticated HTTP navigation, guide responses, and kernel-path checks passed.
+
+The reviewer found no blocking mathematical defect in the documented families.
+Its reused Debian attempt passed 218/224 tests and failed six kernel tests,
+with no completed fresh-kernel notebook runs. Separately, the reviewer inspected
+the actual merged-head Ubuntu CI and downloaded its artifact: 224 tests,
+thirteen notebooks, 85 cells, and 32 PNGs passed. These remain source-specific
+evidence, not a new pass for the forthcoming export.
+
+The user authorizes commit/push after reconciliation and validation. No new
+release, merge, external message, printing action, or hardware job is requested.
+The student guide may be emailed as an advance copy; the recording guide is
+for Gage to print single-sided. The finished video, matching complete kit, and
+student guide will be delivered through Rick for Canvas. No send/print is assumed.
+
 ## November 16 Git integration and operational update
 
 The user authorizes push, normal PR checks, and merge of the single-class

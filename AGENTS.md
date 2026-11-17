@@ -82,6 +82,67 @@ data in public code, notebooks, documentation, outputs, or validation logs.
 
 ## PHYS 3810 collaboration and handoffs
 
+**Current merge instruction, November 16:** the user reports that Rick has
+been emailed and printing is complete. Treat both as completed user-reported
+actions; do not repeat those requests or assume access to the email itself.
+The user now explicitly authorizes normal required-check merging of **PR #132**,
+then leaving main clean and synchronized. This supersedes the earlier CP-only
+boundary for that PR. Preserve the frozen `d998b69` Canvas kit, exact supplied
+guides, historical assets/worktrees, and recovery stash. Do not create a release,
+send messages, publish recordings, or merge unrelated dependency updates.
+No repeat runtime/package/pilot cycle is needed for this status-only update;
+required remote checks must pass at the actual PR head before normal merge.
+Next is recording against the fixed kit with the printed guide and ordinary
+final-file checks. No new technical review is required solely for the merge.
+
+### Earlier expanded-route integration
+
+**Current expanded recording route, November 16:** the new audit of merged
+`727cb98` and its accessible recording packet govern this update. Record one
+ungraded, zero-Python-assumed class: 15–20 minutes of setup, QRNG, Bell, QFT,
+QPE, then HHL. Grover and compiled N=15 Shor are optional. Use the standalone
+reference QFT/QPE/HHL notebooks. Duration is flexible and Canvas delivery is
+settled; do not reopen approval/duration/delivery questions or require another
+recording pilot. The Ubuntu browser/voice/pause/playback test is completed
+operator-reported evidence. Use ordinary framing/audio/final-file checks.
+
+Apply and verify the supplied documentation/kernel-metadata patch; preserve
+numerical implementations, code-cell JSON, IDs, mathematical spans, pins,
+contracts, and historical assets. Use `phys3810-intro` / **Python (PHYS 3810
+Intro)** consistently, with independent notebook sessions. The existing
+exporter must identify five demonstrated notebooks and thirteen total, retain
+served-root navigation/strict gates, and include the exact new student guide.
+Integrate the two supplied four-page PDFs and synchronized Markdown unchanged;
+student assets belong under `handouts/`, presenter assets under `instructor/`.
+
+The user authorizes reconciliation, a newly identified complete Canvas kit,
+required source/extraction validation, commit and push. A normal PR provides
+required CI; this CP instruction does not request another merge or release.
+No external message, printing action, hardware job, dependency upgrade, or new
+algorithm is authorized. Advise the user to email the student PDF as an advance
+copy and print the recording guide; do not assume either action occurred.
+The private pilot video and derived media were deleted at the user's request;
+do not recover, commit, publish, or package them.
+
+The reviewer's reused Debian validator failed six kernel-dependent tests
+(218/224 passed; no complete notebook run). Its independently inspected
+merged-head Ubuntu CI passed 224 tests/thirteen notebooks/85 cells/32 PNGs.
+Keep those evidence categories distinct from new local acceptance. No new
+broad algorithm review is needed if this scoped integration preserves numerical
+behavior and passes its gates. Return the exact kit identity and next actions.
+
+The matching Canvas kit is now frozen at `d998b69`, with five demonstrated
+notebooks and thirteen total. Source acceptance (reused environment) and exact
+extraction (fresh application environment) each passed 227 tests/13 notebooks/
+85 cells/32 PNGs. Both supplied four-page PDF/Markdown pairs are integrated
+unchanged; the student pair is included in the verified desktop kit. See
+[the expanded reconciliation](teaching/phys3810-fa2026/EXPANDED_RECORDING_RECONCILIATION.md).
+Proceed with the requested CP/PR-check workflow, then advise emailing the
+advance student PDF, printing the presenter guide, and recording against this
+fixed kit. No further broad review or repeat pilot is required solely for it.
+
+### Earlier Git integration instruction
+
 **Current Git integration instruction, November 16:** the user authorizes
 bringing the single-class teaching branch up to date, pushing it, opening its
 normal PR, and merging after required checks. This supersedes earlier local-only

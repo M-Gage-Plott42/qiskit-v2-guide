@@ -7,6 +7,49 @@ is not accessible in the current workspace.
 
 ## Source of truth and current position
 
+The user reports that the Rick email and printing are complete and explicitly
+authorizes normal required-check merging of PR #132, followed by clean,
+synchronized main. Update only this completion/authorization context, verify
+the actual head and required checks, and preserve the frozen Canvas kit,
+supplied guide bytes, historical assets/worktrees, and recovery data. Earlier
+CP-only wording below is superseded for this merge. No release, external
+message, recording publication, unrelated dependency merge, or repeat unchanged
+runtime/package/pilot cycle is requested. After integration, the user proceeds
+with recording against the fixed kit and ordinary final-file checks.
+
+### Earlier expanded-route preparation
+
+The new November 16 recording packet supersedes the RNG/Bell-only route.
+Reconcile its exact documentation/kernel patch and supplied PDF/Markdown bytes,
+then export the matching complete Canvas kit. The five demonstrated notebooks
+are QRNG, Bell, standalone QFT, QPE, and HHL; Grover/Shor are optional. Keep
+all thirteen validation notebooks and the existing bounded implementations.
+The registered kernel is `phys3810-intro` / **Python (PHYS 3810 Intro)**.
+
+Duration is flexible, Canvas is settled, and the guided Ubuntu recording test
+is completed operator-reported evidence. Do not reopen those questions or a
+pilot milestone. Preserve prior detailed observations as history. The next
+user actions are an informational student-guide email to Rick, printing the
+four-page presenter guide, and recording against the fixed validated kit.
+The assistant does not send, print, or publish on the user's behalf here.
+
+Run source acceptance and a separate exact extracted-package acceptance with
+hash/import checks; keep fresh versus reused environments explicit. Commit
+and push the scoped branch and obtain normal PR checks. Stop short of another
+merge/release, which this CP instruction does not request. No broad algorithm
+review is needed for a passing documentation/metadata/export alignment.
+
+The exact `d998b69` Canvas kit has passed source and extracted acceptance at
+227 tests/13 notebooks/85 cells/32 PNGs, with unchanged payload hashes and
+successful authenticated navigation/document/kernel checks. The source
+environment was reused and the extracted application environment was fresh.
+The desktop ZIP/checksum and [delivery evidence](EXPANDED_RECORDING_RECONCILIATION.md)
+are prepared. Complete CP and normal PR checks; the next human actions use the
+new student and presenter guides, without another approval questionnaire or
+technical-review loop.
+
+### Earlier single-class Git integration
+
 The latest November 16 instruction authorizes pushing and merging the existing
 single-class branch through the normal required-check PR workflow, then leaving
 main clean and synchronized. Earlier local-only statements below are historical

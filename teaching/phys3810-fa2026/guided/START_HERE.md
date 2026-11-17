@@ -1,8 +1,9 @@
 # PHYS 3810 guided-practice review kit
 
 **Historical multi-session route:** the current prerecorded class starts at the
-[single-class quickstart](../intro/START_HERE.md), with quantum random bits and
-Bell-state preparation. The November 2 review text and linked guides below are
+[single-class quickstart](../intro/START_HERE.md), with quantum random bits,
+Bell-state preparation, QFT, QPE, and HHL. Grover and Shor are optional. The
+November 2 review text and linked guides below are
 preserved for their original kit; their dates, reading order, and three-day
 plan do not define the current class.
 
