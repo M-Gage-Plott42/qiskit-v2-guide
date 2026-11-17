@@ -27,6 +27,15 @@ and push the scoped branch and obtain normal PR checks. Stop short of another
 merge/release, which this CP instruction does not request. No broad algorithm
 review is needed for a passing documentation/metadata/export alignment.
 
+The exact `d998b69` Canvas kit has passed source and extracted acceptance at
+227 tests/13 notebooks/85 cells/32 PNGs, with unchanged payload hashes and
+successful authenticated navigation/document/kernel checks. The source
+environment was reused and the extracted application environment was fresh.
+The desktop ZIP/checksum and [delivery evidence](EXPANDED_RECORDING_RECONCILIATION.md)
+are prepared. Complete CP and normal PR checks; the next human actions use the
+new student and presenter guides, without another approval questionnaire or
+technical-review loop.
+
 ### Earlier single-class Git integration
 
 The latest November 16 instruction authorizes pushing and merging the existing

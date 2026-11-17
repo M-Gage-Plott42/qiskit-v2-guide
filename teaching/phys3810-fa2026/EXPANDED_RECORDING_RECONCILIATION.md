@@ -150,8 +150,51 @@ preserved, and the final-path targeted run passed all thirty package cases.
 That transient fixture-path failure is not relabeled as a pass or a runtime
 defect. Source and document evidence is retained in the ignored task directory.
 
-Exact extracted-package validation is a separate gate for the new kit; its
-receipt will record environment freshness, hashes, and import paths. The prior
-224/13/85/32 baseline is not relabeled as a new execution. No new broad algorithm review is required for passing scoped
+## Exact Canvas kit delivery
+
+**Passed separately:** the frozen export was extracted outside the checkout
+into `/tmp/PHYS3810 Canvas kit d998b69/phys3810-canvas-kit`. Its `runtime/.venv`
+was installed **fresh** from the unchanged supplied pins, using the existing
+CPython 3.12.15 interpreter. All 114 application distributions match active
+constraints; pip is 26.2.2. This is separate from the reused source environment
+and is not a new Python-interpreter installation or native-platform claim.
+
+From that extraction's `runtime/`, its own interpreter ran
+`python scripts/validate_classroom.py --profile all` with no inherited
+`PYTHONPATH`: **227 tests / 13 fresh-kernel notebooks / 85 code cells / 32 PNGs
+passed**. Every required code cell executed without error. Canonical imports
+resolve inside the extracted `runtime/src/`; all 57 payload sizes, hashes and
+modes remain unchanged, as does the manifest.
+
+- Source commit: `d998b69170adce201b21ee333348b369a28e4e11`.
+- Source tree: `f4770c53022a9e710bb5cc3ad6c24fe05d2047e4`.
+- ZIP: `PHYS3810-Canvas-Kit-v0.1-d998b69170ad.zip`.
+- ZIP size: **257,832 bytes**, **58 files / 57 manifest entries**.
+- ZIP SHA-256: `64b44615825c915e57add92d111261a7f32534e01f6f4d73a2ae8fce35763a3b`.
+- Manifest SHA-256: `2ef986e2610baf4759b9b9825ab5930242b8461c1c8a941c95d2cce49c73242f`.
+- Manifest route: **five demonstrated / thirteen total notebooks**.
+- Static relative-link checks: **75**.
+
+The exact kit and a standard `.zip.sha256` sidecar were copied to the Ubuntu
+desktop and verified byte-for-byte. The student guide and companion are exact
+supplied bytes under `runtime/teaching/phys3810-fa2026/handouts/recording-v0.2/`.
+The root entrance and generated setup link them visibly. Instructor guides,
+private coordination, email drafts, policy files, caches, and executed outputs
+are excluded. Existing archives/releases are unchanged.
+
+**Authenticated HTTP package checks passed:** 37 link traversals across 18
+documents, plus exact student-PDF response bytes and companion text. The five
+demonstrated notebook metadata labels align with the registered
+`phys3810-intro` kernel, whose interpreter is this extraction's `.venv/bin/python`.
+The actual outside-root request still returns 404. Jupyter authentication
+remained enabled; the test server shut down through its authenticated API.
+The test used loopback port 8882, `--no-browser`, and task-local Jupyter/cache
+directories. This is package/server verification, not a repeated human pilot.
+
+Full logs, versions, import locations, per-file receipts and copied executed
+notebooks are preserved in `artifacts/expanded-recording-route-2026-11-16/`.
+The prior 224/13/85/32 baseline is not relabeled as this new execution.
+
+No new broad algorithm review is required for passing scoped
 documentation/kernel/export alignment. This turn authorizes commit and push;
 it does not request a new release, merge, external message, or hardware job.

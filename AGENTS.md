@@ -116,6 +116,16 @@ Keep those evidence categories distinct from new local acceptance. No new
 broad algorithm review is needed if this scoped integration preserves numerical
 behavior and passes its gates. Return the exact kit identity and next actions.
 
+The matching Canvas kit is now frozen at `d998b69`, with five demonstrated
+notebooks and thirteen total. Source acceptance (reused environment) and exact
+extraction (fresh application environment) each passed 227 tests/13 notebooks/
+85 cells/32 PNGs. Both supplied four-page PDF/Markdown pairs are integrated
+unchanged; the student pair is included in the verified desktop kit. See
+[the expanded reconciliation](teaching/phys3810-fa2026/EXPANDED_RECORDING_RECONCILIATION.md).
+Proceed with the requested CP/PR-check workflow, then advise emailing the
+advance student PDF, printing the presenter guide, and recording against this
+fixed kit. No further broad review or repeat pilot is required solely for it.
+
 ### Earlier Git integration instruction
 
 **Current Git integration instruction, November 16:** the user authorizes
