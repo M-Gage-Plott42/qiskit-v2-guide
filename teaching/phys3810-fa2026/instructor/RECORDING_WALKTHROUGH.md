@@ -19,40 +19,45 @@ adds the simpler terminology/recovery/contact narration. The new
 is the standalone student copy and is also inside the kit. No further advance
 email is needed; the next transfer is the completed video, kit, and v0.3 guide.
 
-## 1. Establish the extracted folder off camera
+## 1. Use the verified recording folder off camera
 
-Use a fresh Desktop destination named `PHYS3810-Recording-v0.2`. The ZIP contains
-one top-level `phys3810-canvas-kit` folder, so the working directory is:
+The November 17 filesystem check found extra archive-name wrapper folders.
+The expected direct path was absent. The correct frozen ZIP/checksum has been
+restored and a new working copy prepared at the exact location used below.
+Existing files were not overwritten. Do not extract, rename, or move this
+working folder again; virtual environments are tied to their installation path.
 
-```text
-~/Desktop/PHYS3810-Recording-v0.2/phys3810-canvas-kit/runtime
-```
+**Copy commands from the Bash blocks. A folder path by itself is not a shell
+command. `cd` means change directory. Do not copy the terminal prompt.**
 
-If your Files extraction is already in that destination, skip the `unzip` line
-below. Otherwise the command creates that exact layout without overwriting
-existing files. An existing extraction somewhere else can remain untouched.
-Do not move an already-created virtual environment into this folder.
-
-Open an Ubuntu terminal, then set these variables. They apply to this terminal
-session; repeat them if you open a new one later.
+Open a fresh terminal (the course terminal) and paste this block:
 
 ```bash
-export PHYS3810_ZIP="$HOME/Desktop/PHYS3810-Canvas-Kit-v0.2-f5ec2e4649de.zip"
-export PHYS3810_BASE="$HOME/Desktop/PHYS3810-Recording-v0.2"
-export PHYS3810_RUNTIME="$PHYS3810_BASE/phys3810-canvas-kit/runtime"
-
-cd "$HOME/Desktop"
-sha256sum -c "$(basename "$PHYS3810_ZIP").sha256"
-mkdir -p "$PHYS3810_BASE"
-unzip -n "$PHYS3810_ZIP" -d "$PHYS3810_BASE"
-cd "$PHYS3810_RUNTIME"
+cd -- "/home/gage/Desktop/PHYS3810-Recording-v0.2/phys3810-canvas-kit/runtime"
 pwd
 ls requirements.txt constraints-ci.txt src teaching
+source .venv/bin/activate
+python --version
+python -c "import sys; print(sys.executable)"
 ```
 
-The checksum must say **OK**. The final directory must be the new kit's
-`runtime/`, beside the listed files. Stop at a checksum/path error; do not
-continue from a different folder. Keep the original ZIP/checksum unchanged.
+The folder now exists, the requirements are present, and the pinned application
+packages are installed there. Python should report 3.12 and the interpreter
+path should end with `PHYS3810-Recording-v0.2/phys3810-canvas-kit/runtime/.venv/bin/python`.
+Keep this terminal for the lesson. Repeat the `cd` and activation commands if
+using another terminal later. There are no extraction commands to run now.
+
+The active sealed ZIP is still the same v0.2-f5ec2e4649de archive. To check it
+separately, these are executable commands:
+
+```bash
+cd -- "/home/gage/Desktop"
+sha256sum -c "PHYS3810-Canvas-Kit-v0.2-f5ec2e4649de.zip.sha256"
+cd -- "/home/gage/Desktop/PHYS3810-Recording-v0.2/phys3810-canvas-kit/runtime"
+```
+
+Expect **OK**. The archive itself remains unchanged. Work only in its extracted
+recording copy; do not mix in the earlier wrapper-folder extractions.
 
 ## 2. Reset rehearsal notebooks off camera
 
@@ -64,13 +69,14 @@ Closing a tab alone leaves its kernel alive. Do not run this file reset while
 the same notebooks are open in a running server: its autosave could restore
 stale content.
 
-Run the following from the new `runtime/` folder, with `PHYS3810_ZIP` set above.
+Run the following from the verified `runtime/` folder. Its first line sets the
+ZIP path for this command, so it does not depend on earlier shell variables.
 It restores the five demonstrated notebook files from the exact frozen ZIP.
 It backs up any changed working copy before replacement. It does not alter the
 ZIP, dependencies, source modules, or other notebooks.
 
 ```bash
-python3.12 - <<'PY'
+PHYS3810_ZIP="/home/gage/Desktop/PHYS3810-Canvas-Kit-v0.2-f5ec2e4649de.zip" python3.12 - <<'PY'
 from datetime import datetime
 from pathlib import Path
 import hashlib
@@ -148,12 +154,18 @@ Keep the same working capture/audio configuration unless something is wrong.
 
 ## 4. Begin recording and show setup
 
+The environment was prepared during the path repair. Keep that verified
+environment. When you demonstrate setup, explain that your machine already
+has the packages; first-time student installations take longer. Re-running the
+pinned install command may report that requirements are already satisfied.
+
 Use **Start Recording** in OBS, then switch to the course terminal. Introduce
 the route and invite pauses. Explain terminal versus notebook, and that the
 first two commands check an existing Python installation. There is no grading
 or submission. Run one line at a time from `runtime/`:
 
 ```bash
+cd -- "/home/gage/Desktop/PHYS3810-Recording-v0.2/phys3810-canvas-kit/runtime"
 python3.12 --version
 python3.12 -c "import struct; print(struct.calcsize('P') * 8)"
 python3.12 -m venv .venv
@@ -275,12 +287,11 @@ Use the unchanged sealed ZIP, not a newly zipped working folder with `.venv`,
 executed copies, or personal recording files. From the same terminal session:
 
 ```bash
-export PHYS3810_DELIVERY="$HOME/Desktop/PHYS3810-Final-Delivery-v0.3"
-mkdir -p "$PHYS3810_DELIVERY"
-cp -n -- "$PHYS3810_ZIP" "$PHYS3810_DELIVERY/"
-cp -n -- "$PHYS3810_ZIP.sha256" "$PHYS3810_DELIVERY/"
-cp -n -- "$PHYS3810_RUNTIME/teaching/phys3810-fa2026/handouts/recording-v0.3/PHYS3810_Student_Guide_v0.3.pdf" "$PHYS3810_DELIVERY/"
-xdg-open "$PHYS3810_DELIVERY"
+mkdir -p "/home/gage/Desktop/PHYS3810-Final-Delivery-v0.3"
+cp -n -- "/home/gage/Desktop/PHYS3810-Canvas-Kit-v0.2-f5ec2e4649de.zip" "/home/gage/Desktop/PHYS3810-Final-Delivery-v0.3/"
+cp -n -- "/home/gage/Desktop/PHYS3810-Canvas-Kit-v0.2-f5ec2e4649de.zip.sha256" "/home/gage/Desktop/PHYS3810-Final-Delivery-v0.3/"
+cp -n -- "/home/gage/Desktop/PHYS3810-Recording-v0.2/phys3810-canvas-kit/runtime/teaching/phys3810-fa2026/handouts/recording-v0.3/PHYS3810_Student_Guide_v0.3.pdf" "/home/gage/Desktop/PHYS3810-Final-Delivery-v0.3/"
+xdg-open "/home/gage/Desktop/PHYS3810-Final-Delivery-v0.3"
 ```
 
 Copy the verified finished video into that folder using Files. If a file with
@@ -294,7 +305,13 @@ presenter notes, private test footage, or a new approval questionnaire.
 
 The reset procedure was checked in a disposable copy: five exact baselines
 restored, changed copies backed up, wrong ZIP rejected before overwrite.
-The normal environment/kernel route is covered by the exact-kit acceptance.
+The November 17 path repair also verified the literal desktop `cd` command,
+the installed application pins, one fresh named-kernel import/path probe, and
+authenticated server access to all five notebooks. The test server used
+`--no-browser --port=8896` and was shut down; automatic browser opening and
+native UI clicks were not inferred from it. All 57 source payload hashes and
+blank notebook outputs/counts remained unchanged. The prior full acceptance
+is carried forward, not rerun or relabeled for this path repair.
 These checks do not claim the user's future reset, recording, or delivery has
 already occurred. No source repository notebook or frozen ZIP is reset by
 these instructions.

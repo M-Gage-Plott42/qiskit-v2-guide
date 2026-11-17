@@ -1,5 +1,26 @@
 # PHYS 3810 status
 
+## November 17 recording-path repair
+
+The operator reported that the initial terminal paths did not work. The local
+check found two valid extractions with additional archive-name wrapper folders,
+so the previously stated direct path was absent; entering a path alone also
+does not change the shell directory. The frozen ZIP/checksum was restored from
+its verified canonical copy, and a clean working extraction was established at
+the exact path in the [corrected walkthrough](instructor/RECORDING_WALKTHROUGH.md).
+The walkthrough now begins with a literal `cd` command rather than path-only
+examples or a choice of extraction layouts.
+
+The pinned environment is installed in that desktop working copy. Dependency
+consistency and all 114 application pins passed; the registered Intro kernel
+started and imported the local modules from this folder. Authenticated Jupyter
+startup and access to all five recording notebooks passed. The diagnostic
+server was shut down afterward. All 57 payload hashes remain unchanged, and
+the five lesson notebooks still have blank outputs/counts. These are targeted
+path/environment checks, not a repeat full algorithm suite or a recording pass.
+The earlier 228/13/85/32 acceptance carries forward. No new kit, PR, release,
+message, or recording publication is needed for this filesystem correction.
+
 ## November 16 student-support edition
 
 The audit of `d669587` found no glaring runtime, archive, navigation, algorithm,

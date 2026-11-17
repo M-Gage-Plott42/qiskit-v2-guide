@@ -7,6 +7,17 @@ is not accessible in the current workspace.
 
 ## Source of truth and current position
 
+The November 17 recording-start correction establishes the exact desktop
+working directory and its own verified pinned environment. The corrected
+walkthrough begins with executable `cd`/activation commands; do not substitute
+bare paths or assume a graphical extractor's wrapper layout. The sealed
+`f5ec2e4` ZIP is unchanged, and targeted dependency/kernel/server checks passed
+without rerunning the unchanged full suite. The working notebook sources remain
+clean. Use the known folder for the user's complete non-interactive recording
+guide. No new PR, package, pilot, or review cycle is required.
+
+### Earlier student-support integration
+
 The latest instruction requires the v0.3 student-support update and matching
 new Canvas kit, followed by CP **without creating a new PR**. Preserve exact
 supplied documents and all old editions, align the entrance and exporter paths/
