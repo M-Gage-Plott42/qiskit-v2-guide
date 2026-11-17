@@ -1,5 +1,42 @@
 # PHYS 3810 status
 
+## November 16 expanded recording route
+
+The current route is **setup (15–20 minutes), QRNG, Bell, QFT, QPE, HHL**,
+presented by Gage Plott in one prerecorded class. Grover and compiled N=15
+Shor remain optional. The class assumes no Python experience and has no
+assignments, grading, evaluation, or submissions. **Total duration is flexible;
+Canvas delivery is settled.** The completed Ubuntu recording test is carried
+forward as operator-reported evidence, with ordinary final-file checks before
+delivery. Earlier approval questionnaires and repeat-pilot gates do not apply.
+
+The audit of merged `727cb98` supplies an accessible ten-file documentation/
+kernel patch and two four-page PDF/Markdown guides. Integration preserves all
+numerical code, code-cell objects/IDs, mathematical contracts, pins, and old
+assets. Five demonstrated notebooks share the already registered Intro kernel;
+the full strict validation inventory remains thirteen. A newly identified
+complete Canvas kit is being prepared through the existing exporter, including
+the exact student guide and excluding presenter/coordination material.
+
+[Source acceptance](EXPANDED_RECORDING_RECONCILIATION.md) passed **227 tests,
+thirteen fresh-kernel notebooks, 85 code cells, and 32 PNGs** in the reused
+Ubuntu CPython 3.12.15 environment. All eight supplied PDF pages passed local
+render/visual/OCR/content checks; exact PDF/Markdown bytes are integrated.
+The new kit's exact extraction remains a separate delivery gate.
+
+The reviewer found no blocking mathematical defect in the documented families.
+Its reused Debian attempt passed 218/224 tests and failed six kernel tests,
+with no completed fresh-kernel notebook runs. Separately, the reviewer inspected
+the actual merged-head Ubuntu CI and downloaded its artifact: 224 tests,
+thirteen notebooks, 85 cells, and 32 PNGs passed. These remain source-specific
+evidence, not a new pass for the forthcoming export.
+
+The user authorizes commit/push after reconciliation and validation. No new
+release, merge, external message, printing action, or hardware job is requested.
+The student guide may be emailed as an advance copy; the recording guide is
+for Gage to print single-sided. The finished video, matching complete kit, and
+student guide will be delivered through Rick for Canvas. No send/print is assumed.
+
 ## November 16 Git integration and operational update
 
 The user authorizes push, normal PR checks, and merge of the single-class

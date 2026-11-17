@@ -13,10 +13,12 @@ Minimal Qiskit 2.x smoke-test repo for reproducible workflow checks: local exact
 **UTC PHYS 3810 (Fall 2026):** material development by **Gage Plott**.
 Start with the [single-class quickstart](teaching/phys3810-fa2026/intro/START_HERE.md):
 one prerecorded class with Ubuntu/Linux laptop follow-along, no assumed Python
-experience, 15–20 minutes of setup video, then quantum random bits and Bell-state
-preparation. The algorithm notebooks are optional exploration. Nothing is
-assigned, graded, evaluated, or submitted. The class date, total window, and
-video/kit delivery location remain to be confirmed.
+experience, 15–20 minutes of setup video, then quantum random bits, Bell-state
+preparation, and QFT, QPE, and HHL demonstrations using the full reference
+notebooks. Grover and compiled N=15 Shor remain optional. Use the same
+**Python (PHYS 3810 Intro)** environment throughout. Nothing is assigned,
+graded, evaluated, or submitted. The video and matching kit will be shared
+through Canvas.
 
 The classroom environment uses CPython 3.12, Qiskit 2.6.1, and Aer 0.18.2.
 The current all-profile inventory includes thirteen notebooks: two intro lessons,
@@ -31,7 +33,8 @@ The complete library still covers bounded [Grover](teaching/phys3810-fa2026/note
 [QPE](teaching/phys3810-fa2026/notebooks/03_qpe.ipynb),
 [HHL](teaching/phys3810-fa2026/notebooks/04_hhl.ipynb), and
 [compiled N=15 Shor](teaching/phys3810-fa2026/notebooks/05_shor.ipynb).
-All five algorithms are optional references outside the two-demonstration core.
+QFT, QPE, and HHL follow RNG/Bell in the current video; Grover and Shor are
+optional references. All five retain their bounded teaching scopes.
 
 The [published full-course preview](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-v0.2.0-rc1)
 remains an unchanged, separately identified archive with 160 tests/eight notebooks.

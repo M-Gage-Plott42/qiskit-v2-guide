@@ -28,6 +28,7 @@ MINIMUM_PNGS = sum(validator.REQUIRED_PNGS.get(name, 0) for name in builder.NOTE
 def fixture_inputs():
     """Use minimal synthetic inputs; these tests need neither Git nor Qiskit."""
     files = {name: b"fixture\n" for name in builder.RUNTIME_FILES}
+    files.update({name: (builder.ROOT / name).read_bytes() for name in builder.STUDENT_GUIDE_HASHES})
     files[builder.VALIDATOR_PATH] = builder.VALIDATOR_SOURCE
     files.update({name: b"# Test fixture\n" for name in builder.EXPECTED_BASELINE_TESTS})
     files["src/phys3810/__init__.py"] = b"# fixture\n"
@@ -80,6 +81,18 @@ class GuidedReviewPackageTests(unittest.TestCase):
         self.assertEqual(builder.INTRO_NOTEBOOKS, validator.INTRO_NOTEBOOKS)
         self.assertEqual(builder.NOTEBOOKS, validator.notebooks_for_profile("all"))
         self.assertEqual(len(set(builder.NOTEBOOKS)), 13)
+        expected_demonstrated = (
+            f"{builder.COURSE}/notebooks/intro/01_quantum_rng.ipynb",
+            f"{builder.COURSE}/notebooks/intro/02_bell_state.ipynb",
+            f"{builder.COURSE}/notebooks/02_qft.ipynb",
+            f"{builder.COURSE}/notebooks/03_qpe.ipynb",
+            f"{builder.COURSE}/notebooks/04_hhl.ipynb",
+        )
+        self.assertEqual(builder.DEMONSTRATED_NOTEBOOKS, expected_demonstrated)
+        self.assertEqual(len(set(builder.DEMONSTRATED_NOTEBOOKS)), 5)
+        self.assertTrue(set(builder.DEMONSTRATED_NOTEBOOKS) <= set(builder.NOTEBOOKS))
+        self.assertEqual(builder.OPTIONAL_ALGORITHM_NOTEBOOKS,
+                         (validator.GROVER_NOTEBOOK, validator.SHOR_NOTEBOOK))
 
     def test_manifest_hashes_origins_and_safe_exact_inventory(self):
         with tempfile.TemporaryDirectory(prefix="guided packet test ") as directory:
@@ -89,10 +102,19 @@ class GuidedReviewPackageTests(unittest.TestCase):
                 manifest = json.loads(archive.read(prefix + "MANIFEST.json"))
                 self.assertEqual(manifest["source_commit"], COMMIT)
                 self.assertEqual(manifest["source_tree"], TREE)
-                self.assertEqual(manifest["schema"], "phys3810.single-class-review.v1")
-                self.assertEqual(manifest["classroom_notebooks"], len(builder.INTRO_NOTEBOOKS))
+                self.assertEqual(manifest["schema"], "phys3810.canvas-kit.v1")
+                self.assertEqual(manifest["kit_version"], "v0.1")
+                self.assertEqual(manifest["classroom_notebooks"], 5)
                 self.assertEqual(manifest["total_notebooks"], NOTEBOOK_COUNT)
-                self.assertTrue(Path(result["archive"]).name.startswith("PHYS3810-Single-Class-Review-v0.2-"))
+                self.assertEqual(manifest["demonstrated_notebooks"],
+                                 ["runtime/" + name for name in builder.DEMONSTRATED_NOTEBOOKS])
+                self.assertEqual(manifest["optional_algorithm_notebooks"],
+                                 ["runtime/" + name for name in builder.OPTIONAL_ALGORITHM_NOTEBOOKS])
+                self.assertTrue(all(name in manifest["files"] for name in manifest["demonstrated_notebooks"]))
+                self.assertEqual(manifest["student_guides"],
+                                 {"runtime/" + name: expected
+                                  for name, expected in builder.STUDENT_GUIDE_HASHES.items()})
+                self.assertTrue(Path(result["archive"]).name.startswith("PHYS3810-Canvas-Kit-v0.1-"))
                 self.assertNotIn("STUDENT_QUICKSTART.md", manifest["files"])
                 self.assertNotIn("INSTRUCTOR_RUN_SHEET.md", manifest["files"])
                 self.assertNotIn("MANIFEST.json", manifest["files"])
@@ -116,6 +138,65 @@ class GuidedReviewPackageTests(unittest.TestCase):
                     self.assertEqual(files["runtime/" + name], data)
                     self.assertEqual(origins["runtime/" + name]["source_sha256"], builder.digest(data))
         self.assertIn("runtime/tests/test_extra_regression.py", files)
+
+    def test_generated_route_text_identifies_five_demonstrations_and_canvas_delivery(self):
+        files, _ = builder.payload_files(self.inputs, COMMIT, self.evidence)
+        for path in (f"runtime/{builder.COURSE}/SETUP.md",
+                     f"runtime/{builder.COURSE}/COURSE_PLAN.md", "runtime/VALIDATION.md"):
+            with self.subTest(path=path):
+                text = files[path].decode()
+                self.assertIn("5 demonstrated notebooks", text)
+                self.assertIn("13", text)
+                for subject in ("QRNG", "Bell", "QFT", "QPE", "HHL", "Grover", "Shor"):
+                    self.assertIn(subject, text)
+                self.assertIn("optional", text)
+                self.assertIn("Canvas", text)
+                self.assertIn("duration is flexible", text)
+                self.assertNotIn("2 intro notebooks form", text)
+                self.assertNotIn("arrangements remain provisional", text)
+
+    def test_student_guide_pair_is_exact_and_readable_inside_served_root(self):
+        with tempfile.TemporaryDirectory(prefix="student guide kit ") as temporary:
+            result = self.build_fixture(Path(temporary) / "export")
+            with zipfile.ZipFile(result["archive"]) as archive:
+                archive.extractall(Path(temporary) / "unpacked")
+            outer = Path(temporary) / "unpacked" / builder.TOP_DIRECTORY
+            manager = FileContentsManager(root_dir=str(outer / "runtime"))
+            for name, expected in builder.STUDENT_GUIDE_HASHES.items():
+                data = (outer / "runtime" / name).read_bytes()
+                self.assertEqual(data, self.inputs[name])
+                self.assertEqual(builder.digest(data), expected)
+                manager.get(name, content=False)
+                self.assertIn(f"(runtime/{name})", (outer / "START_HERE.md").read_text())
+            self.assertTrue((outer / "runtime" / builder.STUDENT_PDF).read_bytes().startswith(b"%PDF-"))
+            self.assertIn("Canvas", manager.get(builder.STUDENT_MARKDOWN, content=True)["content"])
+            setup = manager.get(f"{builder.COURSE}/SETUP.md", content=True)["content"]
+            self.assertIn("(handouts/recording-v0.2/PHYS3810_Student_Guide_v0.2.pdf)", setup)
+            self.assertIn("(handouts/recording-v0.2/PHYS3810_Student_Guide_v0.2.md)", setup)
+
+    def test_changed_or_missing_student_editions_are_rejected_before_export(self):
+        originals = dict(self.inputs)
+        for name in builder.STUDENT_GUIDE_HASHES:
+            for change in ("missing", "changed"):
+                with self.subTest(name=name, change=change), tempfile.TemporaryDirectory() as directory:
+                    self.inputs = dict(originals)
+                    if change == "missing":
+                        del self.inputs[name]
+                    else:
+                        self.inputs[name] += b"unexpected rewrite"
+                    with self.assertRaisesRegex(ValueError, "Student guide does not match"):
+                        self.build_fixture(Path(directory))
+                    self.assertEqual(list(Path(directory).iterdir()), [])
+        self.inputs = originals
+        files, _ = builder.payload_files(self.inputs, COMMIT, self.evidence)
+        for name in builder.STUDENT_GUIDE_HASHES:
+            changed = dict(files)
+            changed["runtime/" + name] += b"unexpected rewrite"
+            with self.assertRaisesRegex(ValueError, "Student guide payload differs"):
+                builder.validate_payload(changed)
+            del changed["runtime/" + name]
+            with self.assertRaisesRegex(ValueError, "included together"):
+                builder.validate_payload(changed)
 
     def test_same_inputs_produce_identical_zip_bytes(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -306,7 +387,7 @@ class GuidedReviewPackageTests(unittest.TestCase):
         self.assertIn("**reused**", text)
         self.assertIn("caller supplied", text)
         self.assertIn("post-export execution receipt is recorded outside", text)
-        self.assertIn("not final classroom approval", text)
+        self.assertIn("not a public release", text)
 
     def test_evidence_png_threshold_rejects_old_inventory_and_accepts_current_minimum(self):
         for count in (27, MINIMUM_PNGS - 1, MINIMUM_PNGS):
@@ -340,7 +421,11 @@ class GuidedReviewPackageTests(unittest.TestCase):
 
     def test_unsafe_case_colliding_and_excluded_paths_rejected(self):
         for name in ("../escape", "/absolute", "a\\b", "a:b", "runtime/.env", "runtime/.venv/x",
-                     "runtime/artifacts/result.json", "old.pdf", "old.docx", "old.zip", "AGENTS.md"):
+                     "runtime/artifacts/result.json", "old.pdf", "old.docx", "old.zip", "AGENTS.md",
+                     f"runtime/{builder.COURSE}/handouts/other.pdf",
+                     f"runtime/{builder.COURSE}/handouts/other.md",
+                     f"runtime/{builder.COURSE}/handouts/recording-v0.2/.markdownlint.yaml",
+                     f"runtime/{builder.COURSE}/instructor/PHYS3810_Recording_Guide_v0.2.pdf"):
             with self.subTest(name=name):
                 with self.assertRaises(ValueError):
                     builder.validate_payload({name: b""})

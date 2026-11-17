@@ -1,6 +1,26 @@
 # Student guides and historical document editions
 
-## Current beginner route, November 2, 2026
+## Current recording route, November 16, 2026
+
+Use the four-page [student guide, recording edition v0.2](recording-v0.2/PHYS3810_Student_Guide_v0.2.pdf)
+and its [synchronized Markdown companion](recording-v0.2/PHYS3810_Student_Guide_v0.2.md).
+The route is setup, quantum random bits, Bell preparation, QFT, QPE, then HHL;
+Grover and Shor are optional exploration. Material development is credited to
+**Gage Plott**. No Python experience is assumed and nothing is assigned, graded,
+evaluated, or submitted.
+
+Use this guide with the matching complete notebook kit supplied for Canvas.
+The older public rc1 release predates this route. The Ubuntu setup assumes an
+existing 64-bit Python 3.12 installation; the guide preserves all twelve tested
+terminal commands and uses **Python (PHYS 3810 Intro)** throughout. Its exact
+supplied PDF and Markdown bytes are retained unchanged. The separate
+[recording guide](../instructor/recording-v0.2/PHYS3810_Recording_Guide_v0.2.pdf) is for the presenter.
+See [current status](../STATUS.md) for the matching kit's delivery evidence.
+The [document receipt](../RECORDING_GUIDES_v0.2_RECEIPT.json) records the exact
+delivered bytes; [reconciliation](../EXPANDED_RECORDING_RECONCILIATION.md) keeps
+the received review and local integration checks separate.
+
+## Historical beginner route, November 2, 2026
 
 Use the [student quickstart](../guided/STUDENT_QUICKSTART.md) for the new
 Python/Qiskit, Grover, and QFT/QPE follow-along route. Material development is

@@ -1,14 +1,29 @@
 # Instructor route and historical document editions
 
 The current route is one prerecorded beginner class presented by **Gage Plott**:
-setup, RNG, Bell states, then a short optional-algorithm tour. Start with the
-[single-class quickstart](../intro/START_HERE.md). The separately supplied
-Ubuntu/OBS recording-script v0.2 is a local recording draft; its exact bytes
-and source identity are recorded in the
-[focused reconciliation](../SINGLE_CLASS_REVIEW_RECONCILIATION.md).
-The remaining human step is a 30–60 second recording/playback pilot and core
-rehearsal. No class date or total window is newly confirmed, and nothing is
-assigned, graded, evaluated, or submitted.
+15–20 minutes of setup, quantum random bits, Bell states, QFT, QPE, then HHL.
+Grover and Shor remain optional; total duration is flexible and Canvas is the
+delivery destination. Nothing is assigned, graded, evaluated, or submitted.
+
+Print the four-page [recording guide, edition v0.2](recording-v0.2/PHYS3810_Recording_Guide_v0.2.pdf)
+single-sided. Its [synchronized Markdown companion](recording-v0.2/PHYS3810_Recording_Guide_v0.2.md)
+contains the same narration cues, stable cell IDs, edits/restores, expected
+results, and recovery steps. Both supplied files are preserved unchanged.
+The separate [student guide](../handouts/recording-v0.2/PHYS3810_Student_Guide_v0.2.pdf) is the
+advance copy for Rick; the matching complete kit follows the
+[current quickstart](../intro/START_HERE.md) and [delivery status](../STATUS.md).
+The [document receipt](../RECORDING_GUIDES_v0.2_RECEIPT.json) records exact
+delivered bytes. In JupyterLab, use **Open With → Markdown Preview** when a
+guide opens as source text and you need to follow its links.
+
+The guided Ubuntu recording test is completed evidence by operator report.
+Use the working OBS configuration and check the ordinary final take's framing,
+audio, readable code/plots, and saved-file playback. Keep authentication enabled
+and token-bearing launch output off camera. Do not restart a pilot milestone
+or send another duration/Canvas approval questionnaire solely for this edition.
+
+The earlier Word recording draft remains a separate local edition with its
+source identity in the [focused reconciliation](../SINGLE_CLASS_REVIEW_RECONCILIATION.md).
 
 ## Earlier guided and full-course editions
 

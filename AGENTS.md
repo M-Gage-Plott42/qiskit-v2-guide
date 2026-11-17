@@ -82,6 +82,42 @@ data in public code, notebooks, documentation, outputs, or validation logs.
 
 ## PHYS 3810 collaboration and handoffs
 
+**Current expanded recording route, November 16:** the new audit of merged
+`727cb98` and its accessible recording packet govern this update. Record one
+ungraded, zero-Python-assumed class: 15–20 minutes of setup, QRNG, Bell, QFT,
+QPE, then HHL. Grover and compiled N=15 Shor are optional. Use the standalone
+reference QFT/QPE/HHL notebooks. Duration is flexible and Canvas delivery is
+settled; do not reopen approval/duration/delivery questions or require another
+recording pilot. The Ubuntu browser/voice/pause/playback test is completed
+operator-reported evidence. Use ordinary framing/audio/final-file checks.
+
+Apply and verify the supplied documentation/kernel-metadata patch; preserve
+numerical implementations, code-cell JSON, IDs, mathematical spans, pins,
+contracts, and historical assets. Use `phys3810-intro` / **Python (PHYS 3810
+Intro)** consistently, with independent notebook sessions. The existing
+exporter must identify five demonstrated notebooks and thirteen total, retain
+served-root navigation/strict gates, and include the exact new student guide.
+Integrate the two supplied four-page PDFs and synchronized Markdown unchanged;
+student assets belong under `handouts/`, presenter assets under `instructor/`.
+
+The user authorizes reconciliation, a newly identified complete Canvas kit,
+required source/extraction validation, commit and push. A normal PR provides
+required CI; this CP instruction does not request another merge or release.
+No external message, printing action, hardware job, dependency upgrade, or new
+algorithm is authorized. Advise the user to email the student PDF as an advance
+copy and print the recording guide; do not assume either action occurred.
+The private pilot video and derived media were deleted at the user's request;
+do not recover, commit, publish, or package them.
+
+The reviewer's reused Debian validator failed six kernel-dependent tests
+(218/224 passed; no complete notebook run). Its independently inspected
+merged-head Ubuntu CI passed 224 tests/thirteen notebooks/85 cells/32 PNGs.
+Keep those evidence categories distinct from new local acceptance. No new
+broad algorithm review is needed if this scoped integration preserves numerical
+behavior and passes its gates. Return the exact kit identity and next actions.
+
+### Earlier Git integration instruction
+
 **Current Git integration instruction, November 16:** the user authorizes
 bringing the single-class teaching branch up to date, pushing it, opening its
 normal PR, and merging after required checks. This supersedes earlier local-only

@@ -1,11 +1,12 @@
 # PHYS 3810 · Fall 2026 course plan
 
 **Historical plan, superseded November 16:** the current route is one
-prerecorded class presented by Gage Plott, with Ubuntu/Linux laptop follow-along,
-15–20 minutes of setup video, quantum random bits, and Bell-state preparation.
-Start at the [single-class quickstart](intro/START_HERE.md). Other algorithms are
-optional, and nothing is assigned, graded, evaluated, or submitted. No total
-class duration or new date is confirmed. The earlier plan below is retained as
+prerecorded class presented by Gage Plott, with Ubuntu/Linux laptop follow-along:
+15–20 minutes of setup video, quantum random bits, Bell-state preparation,
+QFT, QPE, and HHL. Start at the [single-class quickstart](intro/START_HERE.md).
+Grover and Shor are optional, and nothing is assigned, graded, evaluated, or
+submitted. Total duration is flexible and Canvas delivery is settled. The
+guided Ubuntu recording test is complete by operator report. The plan below is retained as
 history; its session counts, dates, and teaching roles do not govern this route.
 
 Updated November 2, 2026. Material development: **Gage Plott**.

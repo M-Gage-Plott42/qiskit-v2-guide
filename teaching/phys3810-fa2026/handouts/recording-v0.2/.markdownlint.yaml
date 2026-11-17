@@ -1,0 +1,3 @@
+# Preserve the supplied companion's page-based H1 headings byte for byte.
+extends: ../../../../.markdownlint.yaml
+MD025: false

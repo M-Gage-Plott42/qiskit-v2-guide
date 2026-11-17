@@ -3,14 +3,22 @@
 The current beginner route is **one prerecorded class by Gage Plott**, with
 laptop follow-along and zero assumed Python experience. Start with the
 [single-class quickstart](intro/START_HERE.md): Ubuntu/Linux setup, quantum
-random-bit generation, then Bell-state preparation. Other algorithms are
-optional exploration. Nothing is assigned, graded, evaluated, or submitted.
+random-bit generation, Bell-state preparation, then QFT, QPE, and HHL
+demonstrations using the full reference notebooks. Grover and compiled N=15
+Shor remain optional. Nothing is assigned, graded, evaluated, or submitted.
+
+Use the supplied four-page [student guide](handouts/recording-v0.2/PHYS3810_Student_Guide_v0.2.pdf)
+for setup and follow-along, and the separate four-page
+[recording guide](instructor/recording-v0.2/PHYS3810_Recording_Guide_v0.2.pdf)
+for presenter cues. Their exact synchronized companions and document receipt
+are linked from the [student](handouts/README.md) and [presenter](instructor/README.md) indexes.
 
 The classroom environment uses 64-bit CPython 3.12, Qiskit 2.6.1, Aer 0.18.2,
 and JupyterLab 4.6.5. No Git experience, IBM account, GPU, or quantum hardware is
 needed for the local lessons. The video reserves 15–20 minutes for setup;
-installation and student pauses may take longer. The total class window, date,
-and video/kit delivery location remain unconfirmed.
+installation and student pauses may take longer. The video and matching kit
+will be shared through Canvas. Use **Python (PHYS 3810 Intro)** for all seven
+intro/reference notebooks and verify the printed interpreter path each time.
 
 ## Follow the current class
 
@@ -20,9 +28,13 @@ and video/kit delivery location remain unconfirmed.
    kernel, and run the one-qubit demonstration.
 3. Open [Prepare a Bell state](notebooks/intro/02_bell_state.ipynb) in its own
    kernel and run the two-qubit demonstration.
+4. Continue through the full [QFT](notebooks/02_qft.ipynb),
+   [QPE](notebooks/03_qpe.ipynb), and [HHL](notebooks/04_hhl.ipynb)
+   reference notebooks with the video. Keep defaults for the first pass;
+   additional prompts and worked examples are optional and ungraded.
 
 The earlier [guided review entrance](guided/START_HERE.md), three guided
-notebooks, and all supplied PDF/Markdown editions retain their original scope.
+notebooks, and earlier supplied PDF/Markdown editions retain their original scope.
 Their multi-session route is historical. The frozen downloads below do not
 contain the two new intro notebooks.
 
@@ -56,7 +68,7 @@ review-time availability. The current setup page governs this preview; see
 See the [document index](handouts/README.md) for separately supplied review editions;
 they do not replace the files inside the frozen release ZIP.
 
-## Optional algorithms and limits
+## Reference algorithms and limits
 
 - [Grover](notebooks/01_grover.ipynb): phase marking and amplification on 2–5 qubits.
 - [QFT](notebooks/02_qft.ipynb): exact 1–6-qubit transforms, phase, sign, and swaps.
@@ -67,9 +79,9 @@ they do not replace the files inside the frozen release ZIP.
   four residue qubits and conservative order/factor recovery.
 
 These are bounded instructional examples, not general scalable implementations
-or demonstrations of quantum advantage. They are optional after the RNG/Bell
-class. The [earlier course plan](COURSE_PLAN.md) preserves the superseded
-multi-session proposal and its provisional dates; those dates and durations
+or demonstrations of quantum advantage. QFT/QPE/HHL are in the current video
+route; Grover/Shor are optional. The [earlier course plan](COURSE_PLAN.md)
+preserves the superseded multi-session proposal and its provisional dates; those dates and durations
 are not confirmed constraints for the prerecorded class.
 
 The selected recording path is Ubuntu/Linux with JupyterLab. Native Windows/macOS,

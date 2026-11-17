@@ -7,6 +7,28 @@ is not accessible in the current workspace.
 
 ## Source of truth and current position
 
+The new November 16 recording packet supersedes the RNG/Bell-only route.
+Reconcile its exact documentation/kernel patch and supplied PDF/Markdown bytes,
+then export the matching complete Canvas kit. The five demonstrated notebooks
+are QRNG, Bell, standalone QFT, QPE, and HHL; Grover/Shor are optional. Keep
+all thirteen validation notebooks and the existing bounded implementations.
+The registered kernel is `phys3810-intro` / **Python (PHYS 3810 Intro)**.
+
+Duration is flexible, Canvas is settled, and the guided Ubuntu recording test
+is completed operator-reported evidence. Do not reopen those questions or a
+pilot milestone. Preserve prior detailed observations as history. The next
+user actions are an informational student-guide email to Rick, printing the
+four-page presenter guide, and recording against the fixed validated kit.
+The assistant does not send, print, or publish on the user's behalf here.
+
+Run source acceptance and a separate exact extracted-package acceptance with
+hash/import checks; keep fresh versus reused environments explicit. Commit
+and push the scoped branch and obtain normal PR checks. Stop short of another
+merge/release, which this CP instruction does not request. No broad algorithm
+review is needed for a passing documentation/metadata/export alignment.
+
+### Earlier single-class Git integration
+
 The latest November 16 instruction authorizes pushing and merging the existing
 single-class branch through the normal required-check PR workflow, then leaving
 main clean and synchronized. Earlier local-only statements below are historical
