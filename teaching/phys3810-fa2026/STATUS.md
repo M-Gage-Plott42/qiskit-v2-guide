@@ -1,5 +1,107 @@
 # PHYS 3810 status
 
+## November 16 Git integration and operational update
+
+The user authorizes push, normal PR checks, and merge of the single-class
+teaching branch, followed by a clean, synchronized main checkout. This applies
+to the teaching work only. Dependency PRs, rulesets, releases, frozen packages,
+supplied document bytes, and recovery data remain outside this integration.
+The immutable runnable candidate remains `2dcda95`; completion of Git integration
+does not rebuild or relabel its archive or establish final classroom approval.
+
+The later review closes M1 on that exact candidate. It reports 218/224 tests
+passing in a reused Debian CPython 3.12.14 environment, with six kernel-related
+failures and zero completed notebook kernels under its transport restriction.
+The existing Ubuntu source and exact-extraction **224/13/85/32** results carry
+forward separately. The received archive/member/PDF checks passed locally;
+raw review material, supplied documents, and private pilot evidence stay local.
+
+The operator reported working notebook navigation after opening the guide with
+**Markdown Preview**, and successful recording/playback, voice, and pause checks.
+The first capture showed a framing issue; Fit to Screen was subsequently
+confirmed by the operator. A new corrected-framing video was not inspected.
+Confirm the full fitted view and a dedicated browser window before the final
+take. Video duration is flexible; the old 43-minute outline is a proposal.
+No further broad technical review is needed solely for this integration.
+
+## November 16 focused review reconciliation
+
+The focused review of unchanged `754ec33` is received with the actual return
+ZIP, Word recording script, Markdown companion, and receipt. It identifies one
+required export-navigation correction, **M1**: the inner quickstart/menu links
+leave Jupyter's documented `runtime/` served root. The defect is reproduced and
+fixed with three new regressions. [Source validation](SINGLE_CLASS_REVIEW_RECONCILIATION.md)
+passed **224 tests / 13 notebooks / 85 cells / 32 PNGs** in the reused Ubuntu
+environment. The exact new extraction passed the same counts in a fresh
+application `.venv`, with all payload hashes unchanged. The verified desktop
+kit is `PHYS3810-Single-Class-Review-v0.2-2dcda953e8fb.zip`, source `2dcda95`.
+Actual authenticated Jupyter navigation passed 27 link traversals across 16
+documents; outside-root access remains 404. No additional blocking
+scientific or advertised-rerun defect was reported.
+
+The reviewer's fresh Debian 13 application environment used existing CPython
+3.12.14. Its full validator **failed**: 215 of 221 tests passed, six kernel
+integration tests failed, and all thirteen notebook launches failed before
+code execution because of a reported local transport restriction. Separate
+direct IPython execution passed eleven intro cells/five figures. These results
+remain distinct from the prior successful Ubuntu source/extraction checks.
+
+The supplied Ubuntu/OBS script is preserved unchanged as a local recording
+draft. All ten pages passed local render/visual/OCR inspection; its body and
+ten terminal commands match the companion and reviewed quickstart. The script
+still identifies the old candidate and pending navigation fix, so the
+reconciliation records the correction and unchanged lesson paths/commands.
+Actual browser click-through and native recording remain
+untested: the browser access host and native app control are unavailable here.
+The next human step is a 30–60 second recording/playback pilot and core
+rehearsal; final class window, delivery location, and student setup assistance
+remain open. This work stays local with no push, publication, merge, external
+message, or hardware job.
+
+## November 16 single-class revision
+
+The current route is **one prerecorded beginner class by Gage Plott**:
+15–20 minutes of setup, quantum random-bit simulation, Bell-state preparation,
+and a brief tour of optional algorithm notebooks. Laptop follow-along remains
+ungraded, with no assignments or submissions and no assumed Python experience.
+This supersedes the multi-session route and waiting-for-feedback state below.
+No new class date or total class window is confirmed; 43 minutes is a proposed
+recording target whose human pacing has not been tested.
+
+The new [quickstart](intro/START_HERE.md) is the current student entrance.
+Implementation and checkout validation passed on a local candidate based on
+`1f33830674490ecbe411cb9a8e86ca52abf7cae8`; no remote publication is authorized.
+The original eight reference notebooks and three earlier guided lessons remain,
+alongside two independent intro lessons. The default validator stays at eight;
+the all-profile inventory becomes thirteen. Historical counts below retain
+their original revision and environment and are not new results.
+
+[Current validation](SINGLE_CLASS_VALIDATION.md) records **221 tests, thirteen
+fresh-kernel notebooks, 85 code cells, and 32 PNGs** with the current pins in a
+fresh application environment. A separate fresh `.venv` in the exact extracted
+candidate passed the same **221/13/85/32** inventory, with all payload hashes
+unchanged. The verified desktop kit is
+`PHYS3810-Single-Class-Review-v0.1-754ec33d6200.zip`, frozen at `754ec33`.
+Complete new-route visual/OCR inspection and local Jupyter startup/kernel-path
+checks passed. Actual browser UI remains untested because browser access was
+unavailable. The next focused review aligns beginner flow and the recording
+script with this immutable candidate, including the Ubuntu recording workflow.
+
+Ubuntu/Linux is the confirmed recording platform. The existing CPython 3.12.15
+interpreter can support a fresh pinned environment; Python installation on a
+new computer, native Windows/macOS, screen/audio recording, export, and human
+pacing need their own evidence. The next focused review must replace the
+Windows PowerPoint recording assumption with an Ubuntu-appropriate workflow,
+including the distinction between ONLYOFFICE slide export and live capture.
+The received sync text is accessible; the linked Word script and separate
+full handoff are referenced only, not received document bytes.
+
+Preserve all historical algorithms/contracts, supplied documents, sealed kits,
+release assets, recovery data, and historical worktrees. Local implementation,
+validation, and desktop candidate delivery are complete. The next step is the
+focused review; no external
+message, push, PR, merge, release, or hardware job is part of this revision.
+
 ## November 4 dependency maintenance
 
 PR #117 aligns the terminal and source-notebook version checks with its Aer

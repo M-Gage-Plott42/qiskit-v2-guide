@@ -44,7 +44,8 @@ The Python validator is the cross-platform classroom entry point; the Bash
 command retains the existing smoke workflow. The validator includes pip check
 and the complete unit suite: do not immediately repeat unittest discovery.
 Its default inventory remains eight reference notebooks; `--profile all` also
-executes the three beginner guided notebooks and is required for that route.
+executes the three earlier guided notebooks and two single-class intro notebooks
+and is required for the current route (thirteen notebooks in total).
 Run each required notebook from a
 fresh kernel, with the selected environment's interpreter, and fail on cell
 errors. Printed output and stored notebook output are not proof of correctness.
@@ -80,6 +81,108 @@ Do not put private correspondence, credentials, account identifiers, or student
 data in public code, notebooks, documentation, outputs, or validation logs.
 
 ## PHYS 3810 collaboration and handoffs
+
+**Current Git integration instruction, November 16:** the user authorizes
+bringing the single-class teaching branch up to date, pushing it, opening its
+normal PR, and merging after required checks. This supersedes earlier local-only
+wording for this scoped integration. Keep unrelated dependency PRs separate;
+do not change rulesets, release assets, sealed archives, or supplied documents.
+Preserve historical worktrees and recovery data, then return to clean main.
+
+The later review of exact candidate `2dcda95` closes M1. Its reused Debian
+environment passed 218 of 224 tests and failed six kernel integration tests;
+zero complete fresh-kernel notebooks ran there. The existing successful Ubuntu
+source/extraction receipt remains separate. The local document/ZIP audit passed.
+The user reported successful browser navigation through Markdown Preview and
+successful voice/pause/playback checks. The first capture needed framing/privacy
+adjustments; Fit to Screen was user-confirmed, without a new captured framing
+check. These are operational observations, not new runtime or full-lecture
+pacing evidence. No further technical review is needed solely for Git integration.
+
+### Earlier focused single-class review
+
+**Focused single-class review received, November 16:** the actual local return
+ZIP identifies unchanged candidate `754ec33` and supplies an Ubuntu/OBS Word
+script, synchronized Markdown, detailed review, and receipt. Verify exact
+delivered bytes. M1 requires repairing exported navigation that leaves the
+documented Jupyter `runtime/` root: keep the complete quickstart/menu inside
+that root, repair analogous generated links, and add served-root/content/anchor
+regressions. Do not weaken Jupyter root restrictions. Rebuild a separately
+identified candidate and validate source plus exact extraction; preserve the
+v0.1 archive and all existing notebooks, pins, algorithms, and contract bodies.
+
+The reviewer reports a fresh application install on Debian 13 with existing
+CPython 3.12.14: 221 tests ran, 215 passed and six failed under local kernel
+transport restrictions; all thirteen notebook launches failed before code
+execution (zero cells/PNGs). All fifteen intro actual-cell tests passed, and
+separate direct IPython processes ran eleven intro cells/five figures. This is
+not an independent full fresh-kernel pass and does not replace Ubuntu evidence.
+
+Preserve the supplied recording draft unchanged locally; it contains maintainer
+coordination and statements about M1 in the old candidate, so do not silently
+rewrite it or place those exact bytes in public student material. Record the
+fix and source correspondence in a separate reconciliation. The next human
+step is the 30–60 second Ubuntu/OBS recording/playback pilot and core rehearsal.
+Native app control and the current browser access host are unavailable; report
+real HTTP checks separately from untested browser clicks and recording.
+No push, publication, merge, external message, or hardware job is authorized.
+
+M1 is now fixed at `2dcda95`. Source validation (reused environment) and exact
+extraction (fresh application environment) each passed 224 tests/thirteen
+notebooks/85 cells/32 PNGs. Authenticated Jupyter HTTP navigation passed 27
+traversals across sixteen documents; outside-root access remains 404. The
+verified v0.2 ZIP is on the desktop, and the supplied ten-page Word/Markdown
+script passed local render/visual/OCR/body/command/link verification unchanged.
+See [the reconciliation](teaching/phys3810-fa2026/SINGLE_CLASS_REVIEW_RECONCILIATION.md).
+No new broad review is needed solely for this evidenced correction. Next is
+the human Ubuntu/OBS pilot and core rehearsal; UI clicks, microphone capture,
+playback, and human pacing remain untested. Preserve the old scripts and ZIPs.
+
+### Earlier November 16 candidate delivery
+
+**Current single-class instruction, November 16:** implement one prerecorded
+beginner class presented by Gage Plott: 15–20 minutes of setup, quantum RNG,
+Bell-state preparation, then a brief optional-algorithm tour. Students follow
+on laptops with zero assumed Python; nothing is assigned, graded, evaluated,
+or submitted. This supersedes the earlier multi-session plan and parked state.
+No new date or total class duration is confirmed. The proposed 43-minute video
+is an untested production target, not measured classroom pacing.
+
+The current entrance is `teaching/phys3810-fa2026/intro/START_HERE.md`; the two
+independent lessons are under `notebooks/intro/`. Keep direct SDK H/CX calls
+visible, use local V2 sampling, and preserve all existing algorithm bounds.
+Use shots 128 and seed 2026, with explicit parameter-first 128 → 1024 → 128
+reruns, independent mathematics, asymmetric bit-order checks, and persistent
+kernel negative controls. Integrate both lessons into strict all-profile
+validation and the existing review exporter; do not add another exporter.
+
+The user confirms Ubuntu/Linux for recording. Validate its actual Python 3.12
+environment and Jupyter route, distinguishing a pre-existing interpreter from
+a fresh package installation. Native Windows/macOS and recording/audio/export
+remain untested without actual evidence. Carry the Ubuntu/ONLYOFFICE versus
+Windows PowerPoint recording consideration into the next focused review;
+slide-video export alone does not demonstrate live screen/audio capture.
+
+Local implementation, validation, a versioned standalone desktop review kit,
+and a local candidate commit are in scope. No push, PR, merge, publication,
+external message, hardware job, or dependency refresh is requested. Preserve
+old tags, ZIPs, PDFs/companions, Word editions, historical worktrees, and recovery
+data. Review is due after the new lessons and edit/rerun regressions pass,
+focused on beginner usability and matching the recording script to the exact
+tested candidate. The supplied sync text is accessible; its linked Word script
+and fuller text handoff were not supplied as accessible files. Do not claim to
+have read or integrated them. Keep prompts outside the runnable ZIP.
+
+The local candidate is now frozen at `754ec33`; source and exact extraction
+each passed 221 tests/thirteen notebooks/85 cells/32 PNGs. The new-route render,
+visual/OCR and authenticated Jupyter startup/kernel-path checks passed. Actual
+browser UI is untested because its access host was unavailable. See
+[current evidence](teaching/phys3810-fa2026/SINGLE_CLASS_VALIDATION.md).
+The verified single-class v0.1 ZIP is on the Ubuntu desktop. Next await the
+focused beginner/script review, carrying the Ubuntu/ONLYOFFICE recording issue;
+do not repeat unchanged validation or infer that the sync has been sent.
+
+### Historical November 2 acceptance
 
 **Current consolidated acceptance and park instruction, November 2:** the
 reviewer accepts the corrected b393f63 guided v0.2 kit with no remaining

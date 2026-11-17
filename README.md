@@ -11,16 +11,17 @@
 Minimal Qiskit 2.x smoke-test repo for reproducible workflow checks: local exact simulation (reference primitives), local Aer simulation (Aer primitives), and optional IBM Runtime hardware execution in job mode.
 
 **UTC PHYS 3810 (Fall 2026):** material development by **Gage Plott**.
-Start with the [guided review kit](teaching/phys3810-fa2026/guided/START_HERE.md)
-for the beginner route: Python/Qiskit, Grover, then QFT/QPE. The two-day fallback
-is Python/Qiskit plus Grover. The instructor demonstrates complete worked
-examples and students repeat them on laptops; there is no grading, evaluation,
-assignment, or submitted work. Exact dates, laptop setup, algorithm priorities,
-and delivery following the walkthrough remain to be confirmed.
+Start with the [single-class quickstart](teaching/phys3810-fa2026/intro/START_HERE.md):
+one prerecorded class with Ubuntu/Linux laptop follow-along, no assumed Python
+experience, 15–20 minutes of setup video, then quantum random bits and Bell-state
+preparation. The algorithm notebooks are optional exploration. Nothing is
+assigned, graded, evaluated, or submitted. The class date, total window, and
+video/kit delivery location remain to be confirmed.
 
 The classroom environment uses CPython 3.12, Qiskit 2.6.1, and Aer 0.18.2.
-The new review kit includes eleven notebooks: three guided lessons and eight
-reference/validation notebooks. Run `python scripts/validate_classroom.py --profile all`
+The current all-profile inventory includes thirteen notebooks: two intro lessons,
+three earlier guided lessons, and eight reference/validation notebooks.
+For maintainer checks, run `python scripts/validate_classroom.py --profile all`
 from the repository root, or the extracted kit's `runtime` folder. Default
 validator membership remains the original eight notebooks. See
 [current evidence](teaching/phys3810-fa2026/STATUS.md) for measured revision totals.
@@ -30,24 +31,27 @@ The complete library still covers bounded [Grover](teaching/phys3810-fa2026/note
 [QPE](teaching/phys3810-fa2026/notebooks/03_qpe.ipynb),
 [HHL](teaching/phys3810-fa2026/notebooks/04_hhl.ipynb), and
 [compiled N=15 Shor](teaching/phys3810-fa2026/notebooks/05_shor.ipynb).
-HHL and full Shor are supporting references outside the proposed beginner core.
+All five algorithms are optional references outside the two-demonstration core.
 
 The [published full-course preview](https://github.com/M-Gage-Plott42/qiskit-v2-guide/releases/tag/phys3810-fa2026-v0.2.0-rc1)
 remains an unchanged, separately identified archive with 160 tests/eight notebooks.
-Its ZIP/checksum and earlier Grover assets are preserved; the new guided review
-kit is not a replacement release. Use [published-preview setup](teaching/phys3810-fa2026/SETUP.md)
-for that frozen ZIP and the [guided quickstart](teaching/phys3810-fa2026/guided/STUDENT_QUICKSTART.md)
-for the new kit. Existing [PDF editions](teaching/phys3810-fa2026/handouts/README.md)
+Its ZIP/checksum, earlier guided kits, and Grover assets are preserved; none
+contains the new RNG/Bell lessons. The local single-class candidate is not a
+published student release. Use [published-preview setup](teaching/phys3810-fa2026/SETUP.md)
+only for that frozen ZIP. Existing [PDF editions](teaching/phys3810-fa2026/handouts/README.md)
+and the [earlier guided entrance](teaching/phys3810-fa2026/guided/START_HERE.md)
 remain historical references.
 
-## Quickstart
+## Repository maintainer quickstart
+
+Students following the video use the [single-class quickstart](teaching/phys3810-fa2026/intro/START_HERE.md).
 
 ```bash
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip==26.2.2
 python -m pip install -r requirements.txt
-python scripts/validate_classroom.py
+python scripts/validate_classroom.py --profile all
 ```
 
 Run notebooks:
@@ -115,10 +119,10 @@ Backend inventories and names change over time; this repo intentionally avoids h
 ## Automation
 
 - Classroom validation: `python scripts/validate_classroom.py` retains the original
-  eight notebooks; `--profile all` also includes the three guided lessons.
+  eight notebooks; `--profile all` also includes three guided and two intro lessons.
 - Original local smoke test: `bash scripts/smoke_local.sh`.
 - CI retains the local smoke path (`00` and `01`) and runs offline unit tests,
-  classroom preflight, Grover, QFT, QPE, HHL, Shor, and the three guided lessons
+  classroom preflight, Grover, QFT, QPE, HHL, Shor, three guided lessons, and two intro lessons
   under the all profile on main pushes and pull requests.
 - Required workflows now use workflow-level concurrency and `merge_group`
   triggers so checks stay reusable with merge queues.

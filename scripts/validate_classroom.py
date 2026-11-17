@@ -38,16 +38,21 @@ GUIDED_NOTEBOOKS = (
     "teaching/phys3810-fa2026/notebooks/guided/02_grover_follow_along.ipynb",
     "teaching/phys3810-fa2026/notebooks/guided/03_qft_qpe_follow_along.ipynb",
 )
+INTRO_NOTEBOOKS = (
+    "teaching/phys3810-fa2026/notebooks/intro/01_quantum_rng.ipynb",
+    "teaching/phys3810-fa2026/notebooks/intro/02_bell_state.ipynb",
+)
 REQUIRED_PNGS = {
     PREFLIGHT_NOTEBOOK: 2, GROVER_NOTEBOOK: 3, QFT_NOTEBOOK: 2,
     QPE_NOTEBOOK: 3, HHL_NOTEBOOK: 3, SHOR_NOTEBOOK: 3,
     GUIDED_NOTEBOOKS[0]: 4, GUIDED_NOTEBOOKS[1]: 3, GUIDED_NOTEBOOKS[2]: 4,
+    INTRO_NOTEBOOKS[0]: 2, INTRO_NOTEBOOKS[1]: 3,
 }
 EXPECTED = {"qiskit": "2.6.1", "qiskit-aer": "0.18.2"}
 
 
 def notebooks_for_profile(profile: str = "default") -> tuple[str, ...]:
-    """Select the original inventory or that inventory plus the guided route.
+    """Select the original inventory or all reference, guided, and intro lessons.
 
     Read globals at call time: regression fixtures replace ROOT/NOTEBOOKS with
     isolated copies, and the all profile must never bypass the original eight.
@@ -55,7 +60,7 @@ def notebooks_for_profile(profile: str = "default") -> tuple[str, ...]:
     if profile == "default":
         return tuple(NOTEBOOKS)
     if profile == "all":
-        return (*NOTEBOOKS, *GUIDED_NOTEBOOKS)
+        return (*NOTEBOOKS, *GUIDED_NOTEBOOKS, *INTRO_NOTEBOOKS)
     raise ValueError(f"Unknown classroom profile: {profile!r}")
 
 
@@ -178,7 +183,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--profile", choices=("default", "all"), default="default",
-        help="default: eight reference notebooks; all: references plus three guided notebooks",
+        help="default: eight reference notebooks; all: references, three guided and two intro notebooks",
     )
     arguments = parser.parse_args(argv)
     print(f"Notebook profile: {arguments.profile}", flush=True)

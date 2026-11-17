@@ -1,11 +1,94 @@
 # PHYS 3810 implementation workflow
 
-Updated November 2, 2026. This is maintainer guidance; the student entry point
+Updated November 16, 2026. This is maintainer guidance; the student entry point
 remains [README.md](README.md). The assistant owns technical review and tests.
 The user supplies teaching decisions and any external reviewer response that
 is not accessible in the current workspace.
 
 ## Source of truth and current position
+
+The latest November 16 instruction authorizes pushing and merging the existing
+single-class branch through the normal required-check PR workflow, then leaving
+main clean and synchronized. Earlier local-only statements below are historical
+for this operation. Keep unrelated dependency updates, rulesets, releases,
+frozen archives/documents, historical worktrees, and recovery data unchanged.
+Carry forward the exact `2dcda95` source/extraction evidence without another
+unchanged local runtime/package cycle; required remote checks must pass at the
+actual PR head. Record the resulting PR, head, merge commit, and synchronization
+outcome. User-reported pilot observations and later archive-audit findings are
+summarized in [current status](STATUS.md); no raw private evidence is published.
+
+### Earlier focused review workflow
+
+The focused review of candidate `754ec33` has returned with accessible script
+and receipt bytes. Reproduce and fix M1's exported navigation within Jupyter's
+`runtime/` root, add realistic guide/menu/content/anchor regressions, and build
+a new v0.2 candidate through the existing exporter. Preserve the old archive,
+notebooks, pins, algorithm implementations, and mathematical contract bodies.
+Keep the reviewer's failed Debian fresh-kernel run distinct from its narrower
+direct-cell success and from local Ubuntu validation. Do not relax kernel
+failure gates for another environment's restrictions.
+
+Verify and retain the supplied Word/Markdown recording draft unchanged locally.
+Its old-candidate M1 notes and maintainer coordination are not rewritten or
+copied into public student material. Update reconciliation evidence and check
+source plus the exact new extraction, using real authenticated HTTP navigation
+checks when UI access is unavailable. Browser clicks, native recording, audio,
+playback, and human pacing require actual observed evidence; no API or headless
+pass substitutes for them. The immediate human follow-up is the Ubuntu/OBS
+pilot and core rehearsal. No new broad review cycle is needed solely for an
+evidenced navigation correction. No push, publication, merge, outreach, or
+hardware execution is authorized.
+
+The completed M1 correction is frozen at `2dcda95`. The [reconciliation and
+delivery receipt](SINGLE_CLASS_REVIEW_RECONCILIATION.md) records source and exact
+extraction passes of 224 tests/thirteen notebooks/85 cells/32 PNGs, unchanged
+payload hashes, and 27 authenticated HTTP navigation traversals with outside-root
+404 preserved. The separate v0.2 kit is on the desktop. No further broad review
+or unchanged runtime/package cycle is needed solely for M1; proceed to the
+human recording/browser pilot and rehearsal, retaining their untested status
+until actual outcomes are supplied or observed.
+
+### Earlier November 16 candidate workflow
+
+The November 16 instruction reopens teaching work for one prerecorded beginner
+class: setup (15–20 minutes), RNG, Bell states, and optional algorithms. The
+current route is [the intro quickstart](intro/START_HERE.md). Earlier multi-day
+plans and park instructions below are historical for this bounded revision.
+Keep all five algorithm implementations and contracts, dependency pins, supplied
+document editions, sealed archives, published assets, and recovery data intact.
+
+Implement the two independent intro notebooks, mathematical and edit/rerun
+regressions, thirteen-notebook all-profile inventory, and existing review
+exporter together. The default eight-notebook inventory must stay unchanged.
+Run the full validator once for source acceptance, then separately against the
+exact package extracted outside the checkout into a path with spaces. Preserve
+failed/partial artifacts; do not equate stored output with executed acceptance.
+
+Use the confirmed Ubuntu/Linux recording host and the established Python 3.12
+venv/JupyterLab route. Report existing interpreter, fresh or reused packages,
+headless runs, actual UI checks, and human recording/pacing separately. The
+Windows PowerPoint directions in the received narrative need an Ubuntu revision;
+research ONLYOFFICE/recorder capabilities and carry the findings to the focused
+recording-script review. Do not install or claim a recorder pilot by inference.
+
+Prepare a locally committed, versioned runnable candidate and standalone desktop
+ZIP with concise validation evidence and an external copyable review prompt.
+No push, PR, merge, publication, external human message, or hardware execution is
+requested. The next review is beginner usability and exact script alignment,
+not another broad algorithm audit. Only the pasted sync was received; its linked
+Word script and fuller handoff are not locally accessible attachments.
+
+The completed local candidate is `754ec33`; its [validation and delivery
+record](SINGLE_CLASS_VALIDATION.md) reports separate source/extraction passes
+of 221 tests, thirteen notebooks, 85 cells, and 32 PNGs, plus new-route visual/OCR
+and authenticated Jupyter startup checks. The verified desktop ZIP is ready for
+focused review. Interactive UI remains untested because browser access was
+unavailable. Carry the [Ubuntu recording notes](SINGLE_CLASS_RECORDING_NOTES.md)
+into script alignment; no new broad algorithm review or repeat package run is
+needed while waiting for that response.
+
+### Earlier accepted states
 
 The November 4 dependency-maintenance request separately authorizes fixing
 PR #117's Aer version checks and refreshing dependency PRs #117–121. Its

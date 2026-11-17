@@ -1,5 +1,15 @@
 # Classroom environment decision
 
+## Single-class candidate — November 16, 2026
+
+The new local single-class candidate uses unchanged current pins: Qiskit 2.6.1,
+Aer 0.18.2, JupyterLab 4.6.5, and ipykernel 7.4.0 with 64-bit CPython 3.12.
+[Current execution evidence](SINGLE_CLASS_VALIDATION.md) records a fresh
+application environment using the existing CPython 3.12.15 interpreter on
+Ubuntu 26.04.1 x86_64. This is distinct from historical package environments
+and from installing Python itself on a new student's machine. No dependency
+refresh accompanies the lesson revision.
+
 ## Current repository checkout — November 4, 2026
 
 PR #117 updates the repository checkout to **Qiskit Aer 0.18.2**, retaining
