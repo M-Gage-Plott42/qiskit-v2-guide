@@ -90,7 +90,7 @@ pure-eval==0.2.4
 pybase64==1.5.1
 pycparser==3.12 ; implementation_name != 'PyPy'
 pydantic==2.14.2
-pydantic-core==2.50.2
+pydantic-core==2.50.4
 pydot==4.0.1
 pygments==2.21.0
 pyjwt==2.15.1
