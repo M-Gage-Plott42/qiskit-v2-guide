@@ -28,7 +28,7 @@ debugpy==1.8.22
 defusedxml==0.7.1
 dill==0.4.1
 executing==2.3.0
-fastjsonschema==2.22.2
+fastjsonschema==2.22.3
 fonttools==4.68.0
 fqdn==1.6.0
 h11==0.16.0
